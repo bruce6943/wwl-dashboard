@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "total_records": 1075,
+    "total_records": 843,
     "actual_consignees": 2439,
     "nvocc_records": 287,
     "created_at": "2026-03-19 22:48:45",
@@ -153,38 +153,6 @@
         "无"
       ],
       "last_updated": "2026-03-28T16:00:00+08:00",
-      "bcg_position": "观察"
-    },
-    {
-      "company_name": "NAN",
-      "customer_category": "实际贸易收货人",
-      "value_score": 50,
-      "value_level": "B级普通客户",
-      "risk_score": 0,
-      "risk_level": "无风险",
-      "physical_address": "ELITE SOLAR INCORPORATED 5000 HOPYARD ROAD SUITE 420 PLEASANTON, CA 94588 CONTACT: MAY.KHASEM@ELITE-SOLAR.COM/JIA.HE@ELITE-SOLAR.COM /MAGGIE.YIN@ELITE-SOLAR.COM/YAN.MA@ELITE-SOLAR.COM TEL:510.396.6667",
-      "phone": "+16174823826",
-      "email": "may.khasem@elite-solar.com;jia.he@elite-solar.com;maggie.yin@elite-solar.com;yan.ma@elite-solar.com",
-      "contact_person": "MAY",
-      "ein": "99-2708392",
-      "total_order_count": 9440,
-      "risk_tags": [
-        "无"
-      ],
-      "last_updated": "2026-03-28T16:00:00+08:00",
-      "hbl_enrichment": {
-        "hbl_count_15d": 2,
-        "loading_ports": [
-          "NAPOLI"
-        ],
-        "discharge_ports": [
-          "QINGDAO"
-        ],
-        "goods": [],
-        "shippers": [
-          "Consignee :"
-        ]
-      },
       "bcg_position": "观察"
     },
     {
@@ -656,7 +624,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 34,
       "value_level": "C级低活客户",
-      "risk_score": -5,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "GALAXY HOME FURNISHING CORPORATION 270 MARKET STREET, SADDLE BROOK, NEW JERSEY, 07663 PHONE: 551-277-4590 - 103 / 104 EMAIL: GALAXYUSA24@GMAIL.COM",
       "phone": "+12774590103",
@@ -1174,7 +1142,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 22,
       "value_level": "D级沉默客户",
-      "risk_score": -5,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "TO ORDER OF CONTEXT CREDIT HOLDINGS, LP ONE BELMONT AVENUE, SUITE 630 BALA CYNWYD, PENNSYLVANIA 19004",
       "phone": "",
@@ -1995,7 +1963,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 12,
       "value_level": "D级沉默客户",
-      "risk_score": -5,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "TO ORDER",
       "phone": "",
@@ -4844,7 +4812,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 13,
       "value_level": "D级沉默客户",
-      "risk_score": -2,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "ROSEMARY NEW ENERGY INCORPORATED 100 N HOWARD STREET STE R, SPOKANE,WA 99201-0508 UNITED STATES CHENEY : +1 3465264800 LOGISTICS@ROSEMARYNE.COM, RUIZE.XU@ALLIANZ-SOLAR.COM",
       "phone": "",
@@ -6067,7 +6035,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 13,
       "value_level": "D级沉默客户",
-      "risk_score": -5,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "FULLOVE INCORPORATED 1834 S HILL STREET LOS ANGELES,CA 90015 CSTEAM.LIST@WORLDWIDE-LOGISTICS.CN",
       "phone": "",
@@ -7953,7 +7921,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 17,
       "value_level": "D级沉默客户",
-      "risk_score": -5,
+      "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "COVERALL STONE, INCORPORATED. 19050 13TH PL. S. 102 SEATAC, WA 98148 TEL:206-937-5200 FAX:206-935-5310",
       "phone": "+12069375200",

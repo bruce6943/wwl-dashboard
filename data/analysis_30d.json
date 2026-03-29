@@ -431,26 +431,6 @@
       "emails": 29,
       "active_days": 14
     },
-    "HITHIUM": {
-      "emails": 26,
-      "active_days": 12
-    },
-    "HAILIANG": {
-      "emails": 24,
-      "active_days": 10
-    },
-    "FCC USA": {
-      "emails": 31,
-      "active_days": 13
-    },
-    "HAIROBOT": {
-      "emails": 60,
-      "active_days": 16
-    },
-    "JINGZHOU": {
-      "emails": 27,
-      "active_days": 16
-    },
     "PACIFIC T&T": {
       "emails": 3,
       "active_days": 3
@@ -466,14 +446,6 @@
     "NEXTERA": {
       "emails": 3,
       "active_days": 2
-    },
-    "YES": {
-      "emails": 33,
-      "active_days": 9
-    },
-    "ASTRONERGY": {
-      "emails": 147,
-      "active_days": 6
     }
   },
   "carriers": {
