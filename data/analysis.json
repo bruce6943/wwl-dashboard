@@ -1,194 +1,34 @@
 {
-  "scan_time": "2026-03-30T00:44:29.533075+08:00",
-  "total_emails": 51,
-  "business_emails": 42,
-  "pdf_count": 27,
-  "categories": {
-    "other_biz": 9,
-    "booking": 5,
-    "delivery": 2,
-    "inspection": 4,
-    "charge_confirm": 18,
-    "arrival": 2,
-    "invoice": 2
-  },
+  "scan_time": "2026-03-30T01:15:06.112165+08:00",
+  "total_emails": 1,
+  "business_emails": 0,
+  "pdf_count": 0,
+  "categories": {},
   "customers": {},
-  "carriers": {
-    "MSC": 8,
-    "COSCO": 1,
-    "OOCL": 5,
-    "ONE": 1,
-    "CMA-CGM": 8,
-    "ZIM": 1,
-    "Hapag-Lloyd": 2
-  },
+  "carriers": {},
   "carrier_fees": {},
-  "hbl_total": 18,
-  "mbl_total": 22,
-  "all_hbls": [
-    "WLC50805801",
-    "WLC60120505",
-    "WLC60121085",
-    "WLC60124381",
-    "WLC60124865",
-    "WLC60125060",
-    "WLC60126359",
-    "WLC60205753",
-    "WLC60213560",
-    "WLC60213673",
-    "WLC60216400",
-    "WLC60216402",
-    "WLC60216403",
-    "WLC60216466",
-    "WLC60301625",
-    "WLC60301626",
-    "WLC60301627",
-    "WLC60307413"
-  ],
-  "all_mbls": [
-    "CMDUCHN3095178",
-    "CMDUCHN3116145",
-    "CMDUTHD1466676",
-    "CMDUTHD1483494",
-    "CMDUTHD1483914",
-    "CMDUTHD1483918",
-    "COSU6444625540",
-    "HLCUNHN250731902",
-    "MEDUWA866914",
-    "MEDUWG692272",
-    "MEDUWG959531",
-    "MEDUWK478768",
-    "MEDUWK745968",
-    "MEDUYL789706",
-    "MEDUYL886908",
-    "ONEYBKKG38865600",
-    "OOLU2166524280",
-    "OOLU2166784670",
-    "OOLU2166784680",
-    "OOLU2166784690",
-    "OOLU2320126090",
-    "ZIMUBKK80440481"
-  ],
+  "hbl_total": 0,
+  "mbl_total": 0,
+  "all_hbls": [],
+  "all_mbls": [],
   "daily_counts": {
-    "2026-03-28": 4,
-    "2026-03-29": 44
+    "2026-03-29": 1
   },
-  "inspection_mbls": [
-    "COSU6444625540",
-    "ONEYBKKG38865600",
-    "OOLU2166524280",
-    "OOLU2320126090"
-  ],
+  "inspection_mbls": [],
   "hold_count": 0,
-  "inspection_count": 4,
+  "inspection_count": 0,
   "overdue_count": 0,
   "cancel_count": 0,
   "top_senders": [
     [
-      "assistant@pltplt.com",
-      22
-    ],
-    [
-      "\"Bene\" <jkt.bene@wwl.sg>",
-      11
-    ],
-    [
-      "us038-importpickupnotification@msc.com",
-      3
-    ],
-    [
-      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
-      3
-    ],
-    [
-      "\"Cloudflare\" <noreply@notify.cloudflare.com>",
-      2
-    ],
-    [
-      "BTLCS@SWITCHBL.COM",
-      2
-    ],
-    [
-      "LinkedIn <messages-noreply@linkedin.com>",
-      1
-    ],
-    [
-      "Alan Lo <Alan.Lo@idcintl.com>",
-      1
-    ],
-    [
-      "Bruce Huang <bruce@wwl.cn>",
-      1
-    ],
-    [
-      "Serkan Kavas <Serkan@mtsnyc.com>",
-      1
-    ],
-    [
-      "\"Sam Wilcox - Project Cargo Network\" <sam@projectcargonetwor",
-      1
-    ],
-    [
-      "noreply@emodal.com",
-      1
-    ],
-    [
-      "\"gm2datainfo@worldwide-logistics.cn\"\r\n <gm2datainfo@worldwid",
-      1
-    ],
-    [
-      "us.docs@wwl.sg",
+      "LinkedIn <notifications-noreply@linkedin.com>",
       1
     ]
   ],
   "bl_status": {
-    "no_tlx_mbl": [
-      "CMDUTHD1483494",
-      "HLCUNHN250731902",
-      "MEDUYL886908",
-      "ZIMUBKK80440481",
-      "MEDUWA866914",
-      "CMDUTHD1466676",
-      "MEDUWK478768",
-      "MEDUWG692272",
-      "CMDUTHD1483914",
-      "CMDUCHN3095178",
-      "CMDUTHD1483918",
-      "COSU6444625540",
-      "MEDUWK745968",
-      "CMDUCHN3116145",
-      "OOLU2166784670",
-      "MEDUWG959531",
-      "OOLU2320126090",
-      "OOLU2166524280",
-      "ONEYBKKG38865600",
-      "OOLU2166784690",
-      "OOLU2166784680",
-      "MEDUYL789706"
-    ],
-    "no_tlx_hbl": [
-      "WLC50805801",
-      "WLC60307413",
-      "WLC60121085",
-      "WLC60213560",
-      "WLC60124865",
-      "WLC60301627",
-      "WLC60213673",
-      "WLC60216403",
-      "WLC60205753",
-      "WLC60301626",
-      "WLC60216402",
-      "WLC60126359",
-      "WLC60125060",
-      "WLC60301625",
-      "WLC60216466",
-      "WLC60120505",
-      "WLC60216400",
-      "WLC60124381"
-    ],
-    "an_no_prealert": [
-      "MEDUYL886908"
-    ],
+    "no_tlx_mbl": [],
+    "no_tlx_hbl": [],
+    "an_no_prealert": [],
     "hold_bl": [],
     "tlx_confirmed_mbl": 0,
     "tlx_confirmed_hbl": 0
@@ -198,24 +38,15 @@
     "cod": [],
     "non_standard": [],
     "stolen": [],
-    "urgent": [
-      {
-        "subject": "Automatic reply: Project Delivery from Houston",
-        "from": "Serkan Kavas <Serkan@mtsnyc.co",
-        "urgency": 3,
-        "date": "Sat, 28 Mar 2026 22:10:07"
-      }
-    ]
+    "urgent": []
   },
   "neural_network": {
-    "entities": 86,
+    "entities": 85,
     "relationships": 0,
     "contacts_new": 0,
     "contacts_total": 228,
     "daily_connections": 0,
-    "new_domains": [
-      "mtsnyc.com"
-    ]
+    "new_domains": []
   },
   "daily_connections": []
 }
