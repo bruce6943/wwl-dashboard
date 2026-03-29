@@ -20,6 +20,7 @@ st.set_page_config(
     page_icon="🏢",
     layout="wide",
     initial_sidebar_state="collapsed",
+)
 
 
 # ─── Password Protection ───
@@ -52,8 +53,6 @@ def check_password():
 if not check_password():
     st.stop()
 
-
-)
 
 # ─── Dark Gradient Theme CSS ───
 st.markdown("""
