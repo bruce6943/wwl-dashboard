@@ -1,88 +1,134 @@
 {
-  "period": "2026-01-27 ~ 2026-03-29",
-  "total_days": 62,
-  "total_emails": 9374,
+  "period": "2026-02-26 ~ 2026-03-29",
+  "total_days": 32,
+  "total_emails": 5169,
+  "pdf_count": 2886,
   "customers": {
-    "REACH INDUSTRY": 289,
-    "HAIROBOT": 156,
-    "ASTRONERGY": 136,
-    "FCC USA": 129,
-    "BTL": 92,
-    "HAILIANG": 55,
-    "PTS INC": 46,
-    "CLOU": 46,
-    "MING HAO XIN": 41,
-    "TERRASOULSUPERFOODS": 38,
-    "YES CHB": 35,
-    "KORNET": 31,
-    "HITHIUM": 22,
-    "DTC SA": 17,
-    "JINGZHOU": 15,
-    "PREVALON": 9,
-    "MERSY CORP": 7,
-    "KELUO SHUANGYU": 7,
-    "HORIZON SOLAR": 6,
-    "HOUNEN": 4,
-    "VITA COCO": 4,
-    "MAG SPECIALTIES": 4,
-    "BYSON": 4,
-    "PACIFIC T&T": 3,
-    "YES": 1
+    "PTS INC": {
+      "emails": 29,
+      "active_days": 14
+    },
+    "HITHIUM": {
+      "emails": 26,
+      "active_days": 12
+    },
+    "HAILIANG": {
+      "emails": 24,
+      "active_days": 10
+    },
+    "FCC USA": {
+      "emails": 31,
+      "active_days": 13
+    },
+    "ELITE SOLAR": {
+      "emails": 3,
+      "active_days": 3
+    },
+    "HAIROBOT": {
+      "emails": 60,
+      "active_days": 16
+    },
+    "JINGZHOU": {
+      "emails": 27,
+      "active_days": 16
+    },
+    "HORIZON SOLAR": {
+      "emails": 10,
+      "active_days": 7
+    },
+    "KORNET": {
+      "emails": 44,
+      "active_days": 16
+    },
+    "REACH INDUSTRY": {
+      "emails": 103,
+      "active_days": 19
+    },
+    "PACIFIC T&T": {
+      "emails": 3,
+      "active_days": 3
+    },
+    "HOUNEN": {
+      "emails": 8,
+      "active_days": 3
+    },
+    "MING HAO XIN": {
+      "emails": 20,
+      "active_days": 8
+    },
+    "AVANTIX": {
+      "emails": 2,
+      "active_days": 2
+    },
+    "CLOU(含双鱼)": {
+      "emails": 54,
+      "active_days": 15
+    },
+    "MAG SPECIALTIES": {
+      "emails": 15,
+      "active_days": 5
+    },
+    "MERSY CORP": {
+      "emails": 6,
+      "active_days": 5
+    },
+    "VITA COCO": {
+      "emails": 9,
+      "active_days": 4
+    },
+    "NEXTERA": {
+      "emails": 3,
+      "active_days": 2
+    },
+    "YES": {
+      "emails": 33,
+      "active_days": 9
+    },
+    "TERRASOULSUPERFOODS": {
+      "emails": 38,
+      "active_days": 6
+    },
+    "PREVALON": {
+      "emails": 11,
+      "active_days": 4
+    },
+    "ASTRONERGY": {
+      "emails": 147,
+      "active_days": 6
+    },
+    "BYSON": {
+      "emails": 4,
+      "active_days": 1
+    }
   },
   "carriers": {
-    "ONE": 1065,
-    "OOCL": 1031,
-    "MSC": 994,
-    "COSCO": 915,
-    "ZIM": 607,
-    "CMA-CGM": 495,
-    "Hapag-Lloyd": 374,
-    "WAN HAI": 47,
-    "Evergreen": 2
+    "Hapag-Lloyd": 203,
+    "OOCL": 445,
+    "ZIM": 351,
+    "MSC": 955,
+    "COSCO": 421,
+    "ONE": 471,
+    "WAN HAI": 49,
+    "CMA-CGM": 250,
+    "YML": 19,
+    "HMM": 13,
+    "Evergreen": 1,
+    "MAERSK": 1
   },
   "categories": {
-    "other": 6984,
-    "cc": 1345,
-    "delivery": 272,
-    "inspection": 152,
-    "overdue": 177,
-    "hold": 43,
-    "prealert": 252,
-    "booking": 99,
-    "cancel": 14,
-    "arrival": 36
+    "other": 2711,
+    "invoice": 118,
+    "prealert": 707,
+    "booking": 345,
+    "arrival": 270,
+    "delivery": 197,
+    "hold": 31,
+    "charge_confirm": 605,
+    "cancel": 25,
+    "overdue": 107,
+    "inspection": 53
   },
   "daily_counts": {
-    "2026-01-27": 39,
-    "2026-01-28": 193,
-    "2026-01-29": 190,
-    "2026-01-30": 191,
-    "2026-01-31": 45,
-    "2026-02-01": 80,
-    "2026-02-02": 307,
-    "2026-02-03": 289,
-    "2026-02-04": 185,
-    "2026-02-05": 169,
-    "2026-02-06": 142,
-    "2026-02-07": 45,
-    "2026-02-08": 38,
-    "2026-02-09": 261,
-    "2026-02-10": 174,
-    "2026-02-11": 213,
-    "2026-02-12": 157,
-    "2026-02-13": 197,
-    "2026-02-14": 133,
-    "2026-02-15": 70,
-    "2026-02-16": 118,
-    "2026-02-17": 131,
-    "2026-02-18": 100,
-    "2026-02-19": 80,
-    "2026-02-20": 102,
-    "2026-02-21": 85,
-    "2026-02-22": 49,
-    "2026-02-23": 171,
-    "2026-02-24": 307,
-    "2026-02-25": 235,
     "2026-02-26": 122,
     "2026-02-27": 322,
     "2026-02-28": 161,
@@ -115,5 +161,107 @@
     "2026-03-27": 219,
     "2026-03-28": 29,
     "2026-03-29": 15
-  }
+  },
+  "top_senders": [
+    [
+      "assistant@pltplt.com",
+      658
+    ],
+    [
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      542
+    ],
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      462
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      215
+    ],
+    [
+      "\"nathia\" <jkt.nathia@wwl.sg>",
+      155
+    ],
+    [
+      "\"rita tang\" <rita.tang@wwl.cn>",
+      155
+    ],
+    [
+      "us038-arrival.notices@msc.com",
+      143
+    ],
+    [
+      "<us.ops@wwl.sg>",
+      127
+    ],
+    [
+      "BTLCS@SWITCHBL.COM",
+      120
+    ],
+    [
+      "<bkk.guide@wwl.sg>",
+      94
+    ],
+    [
+      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      86
+    ],
+    [
+      "US038-noreply@msc.com",
+      84
+    ],
+    [
+      "\"Bene\" <jkt.bene@wwl.sg>",
+      81
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      74
+    ],
+    [
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      60
+    ],
+    [
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      60
+    ],
+    [
+      "us038-importpickupnotification@msc.com",
+      55
+    ],
+    [
+      "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
+      52
+    ],
+    [
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
+      50
+    ],
+    [
+      "Will Sun <willsun@wwl.cn>",
+      49
+    ],
+    [
+      "Team3 YES <team3@yeschb.com>",
+      48
+    ],
+    [
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
+      48
+    ],
+    [
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      47
+    ],
+    [
+      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
+      43
+    ],
+    [
+      "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      37
+    ]
+  ]
 }
