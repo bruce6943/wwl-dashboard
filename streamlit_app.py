@@ -353,6 +353,21 @@ def alert_card(style, content):
     st.markdown(f'<div class="alert-{style}">{content}</div>', unsafe_allow_html=True)
 
 
+def safe_tab(tab_name):
+    """Decorator to wrap tab content in try/except and show full error details."""
+    import functools, traceback as tb_mod
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                st.error(f"{tab_name} 加载出错: {type(e).__name__}: {e}")
+                st.code(tb_mod.format_exc(), language="text")
+        return wrapper
+    return decorator
+
+
 def parse_sender_name(raw):
     """Extract clean name from email sender string."""
     if not raw:
@@ -1216,6 +1231,7 @@ with tabs[5]:
 # TAB 7: 供应商全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[6]:
+  try:
     section_header("供应商全景")
 
     coach_box("教练总结: 供应商管理要点", """
@@ -1376,6 +1392,10 @@ with tabs[6]:
                         showlegend=False,
                     )
                     st.plotly_chart(fig, use_container_width=True, key=f"radar_{name}")
+  except Exception as _e7:
+    import traceback as _tb7
+    st.error(f"供应商全景 加载出错: {type(_e7).__name__}: {_e7}")
+    st.code(_tb7.format_exc(), language="text")
 
 
 
@@ -1383,6 +1403,7 @@ with tabs[6]:
 # TAB 8: 船公司全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[7]:
+  try:
     section_header("船公司全景")
 
     coach_box("教练总结: 船公司选择的全成本思维", """
@@ -1487,6 +1508,10 @@ with tabs[7]:
             title="活跃船公司能力雷达图",
         )
         st.plotly_chart(fig, use_container_width=True, key="pchart_7")
+  except Exception as _e8:
+    import traceback as _tb8
+    st.error(f"船公司全景 加载出错: {type(_e8).__name__}: {_e8}")
+    st.code(_tb8.format_exc(), language="text")
 
 
 
@@ -1494,6 +1519,7 @@ with tabs[7]:
 # TAB 9: 目的港全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[8]:
+  try:
     section_header("美国目的港全景地图")
 
     coach_box("教练总结: 区域差异决定操作策略", """
@@ -1613,6 +1639,10 @@ with tabs[8]:
         ),
     } for p in port_data])
     st.dataframe(port_detail_df, use_container_width=True, hide_index=True, key="tbl_11")
+  except Exception as _e9:
+    import traceback as _tb9
+    st.error(f"目的港全景 加载出错: {type(_e9).__name__}: {_e9}")
+    st.code(_tb9.format_exc(), language="text")
 
 
 
@@ -1620,6 +1650,7 @@ with tabs[8]:
 # TAB 10: 联系人搜索
 # ══════════════════════════════════════════════════════════════════
 with tabs[9]:
+  try:
     section_header("联系人搜索")
 
     contacts = CON.get("contacts", [])
@@ -1674,6 +1705,10 @@ with tabs[9]:
             st.markdown(metric_card(meta.get("total_companies", 0), "关联公司", "#9c27b0"), unsafe_allow_html=True)
     else:
         st.info("联系人数据库为空或加载失败")
+  except Exception as _e10:
+    import traceback as _tb10
+    st.error(f"联系人搜索 加载出错: {type(_e10).__name__}: {_e10}")
+    st.code(_tb10.format_exc(), language="text")
 
 
 # ─── Footer ───
