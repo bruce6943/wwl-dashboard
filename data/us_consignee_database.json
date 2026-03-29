@@ -1405,8 +1405,8 @@
     {
       "company_name": "MING HAO XIN TRADING COMPANY LIMITED",
       "customer_category": "实际贸易收货人",
-      "value_score": 50,
-      "value_level": "B级普通客户",
+      "value_score": 36,
+      "value_level": "C级低活客户",
       "risk_score": 19,
       "risk_level": "低风险",
       "physical_address": "MING HAO XIN TRADING COMPANY LIMITED 310 MARKET STREET BASALT, COMPANY 81621 JSJBGGYXYW@JSJB-GLOBAL.COM",
@@ -3271,7 +3271,7 @@
     {
       "company_name": "THE VITA COCO COMPANY, INCORPORATED.",
       "customer_category": "实际贸易收货人",
-      "value_score": 24,
+      "value_score": 20,
       "value_level": "D级沉默客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -5358,7 +5358,7 @@
     {
       "company_name": "HOUNEN SOLAR AMERICA INCORPORATED",
       "customer_category": "实际贸易收货人",
-      "value_score": 24,
+      "value_score": 20,
       "value_level": "D级沉默客户",
       "risk_score": 6,
       "risk_level": "无风险",
@@ -10985,8 +10985,8 @@
     {
       "company_name": "HAI ROBOTICS U.S.A. INCORPORATED",
       "customer_category": "实际贸易收货人",
-      "value_score": 55,
-      "value_level": "B级普通客户",
+      "value_score": 70,
+      "value_level": "A级高潜客户",
       "risk_score": 63,
       "risk_level": "高风险",
       "physical_address": "HAI ROBOTICS U.S.A. INCORPORATED 1745 CORPORATE DR STE 200 NORCROSS GA 30093",
@@ -11012,7 +11012,7 @@
         },
         "periods": 11
       },
-      "bcg_position": "瘦狗",
+      "bcg_position": "问题",
       "email_activity": {
         "emails_15d": 18,
         "active_days": 7,
@@ -17258,8 +17258,8 @@
     {
       "company_name": "HITHIUM TECH USA INCORPORATED.",
       "customer_category": "实际贸易收货人",
-      "value_score": 40,
-      "value_level": "C级低活客户",
+      "value_score": 57,
+      "value_level": "B级普通客户",
       "risk_score": 0,
       "risk_level": "无风险",
       "physical_address": "HITHIUM TECH USA INCORPORATED. 11955 FM 2932, FORNEY, TEXAS 75126 YANCEY.CONRY TEL: 303 260 8706 YANCEY.CONRY@HITHIUM.COM",
@@ -17272,7 +17272,7 @@
         "无"
       ],
       "last_updated": "2026-03-29",
-      "bcg_position": "观察",
+      "bcg_position": "明星",
       "email_activity": {
         "emails_15d": 4,
         "active_days": 3,
@@ -20406,7 +20406,7 @@
     {
       "company_name": "ASTRONERGY SOLAR TECHNOLOGY CO., LTD.",
       "customer_category": "实际贸易收货人",
-      "value_score": 65,
+      "value_score": 61,
       "value_level": "B级普通客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20444,7 +20444,7 @@
     {
       "company_name": "SHENZHEN CLOU ELECTRONICS CO., LTD. (含双鱼项目)",
       "customer_category": "实际贸易收货人",
-      "value_score": 53,
+      "value_score": 52,
       "value_level": "B级普通客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20484,8 +20484,8 @@
     {
       "company_name": "REACH INDUSTRY (THAILAND) CO., LTD.",
       "customer_category": "实际贸易收货人",
-      "value_score": 55,
-      "value_level": "B级普通客户",
+      "value_score": 85,
+      "value_level": "S级核心客户",
       "risk_score": 0,
       "risk_level": "无风险",
       "bcg_position": "明星",
@@ -20522,7 +20522,7 @@
     {
       "company_name": "TERRASOULSUPERFOODS",
       "customer_category": "实际贸易收货人",
-      "value_score": 40,
+      "value_score": 39,
       "value_level": "C级低活客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20620,11 +20620,11 @@
     {
       "company_name": "HAILIANG COPPER TEXAS INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 40,
-      "value_level": "C级低活客户",
+      "value_score": 58,
+      "value_level": "B级普通客户",
       "risk_score": 18,
       "risk_level": "低风险",
-      "bcg_position": "观察",
+      "bcg_position": "明星",
       "physical_address": "",
       "phone": "",
       "email": "",
@@ -20667,7 +20667,7 @@
     {
       "company_name": "PREVALON ENERGY INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 22,
+      "value_score": 20,
       "value_level": "D级沉默客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20705,8 +20705,8 @@
     {
       "company_name": "MAG SPECIALTIES INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 28,
-      "value_level": "D级沉默客户",
+      "value_score": 31,
+      "value_level": "C级低活客户",
       "risk_score": 26,
       "risk_level": "低风险",
       "bcg_position": "观察",
@@ -20751,7 +20751,7 @@
     {
       "company_name": "JINGZHOU CHEMICAL INDUSTRIAL CO., LTD.",
       "customer_category": "实际贸易收货人",
-      "value_score": 32,
+      "value_score": 46,
       "value_level": "C级低活客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20789,7 +20789,7 @@
     {
       "company_name": "HORIZON SOLAR INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 22,
+      "value_score": 18,
       "value_level": "D级沉默客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20832,7 +20832,7 @@
     {
       "company_name": "MERSY CORP SA DE CV",
       "customer_category": "实际贸易收货人",
-      "value_score": 14,
+      "value_score": 15,
       "value_level": "D级沉默客户",
       "risk_score": 38,
       "risk_level": "中风险",
@@ -20879,7 +20879,7 @@
     {
       "company_name": "BYSON ELECTRONICS INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 8,
+      "value_score": 5,
       "value_level": "D级沉默客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -20917,7 +20917,7 @@
     {
       "company_name": "NEXTERA ENERGY CONSTRUCTORS, LLC",
       "customer_category": "实际贸易收货人",
-      "value_score": 8,
+      "value_score": 15,
       "value_level": "D级沉默客户",
       "risk_score": 48,
       "risk_level": "中风险",
@@ -20965,7 +20965,7 @@
     {
       "company_name": "AVANTIX INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 8,
+      "value_score": 15,
       "value_level": "D级沉默客户",
       "risk_score": 48,
       "risk_level": "中风险",
