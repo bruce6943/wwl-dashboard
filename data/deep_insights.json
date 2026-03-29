@@ -1,0 +1,445 @@
+{
+  "people_connections": {
+    "Effy Huo": {
+      "Jason/us.ops": 148,
+      "Everlyn Shaw": 139,
+      "Team3 YES": 89,
+      "Maggie Wu": 75,
+      "Adam Sum": 60
+    },
+    "Adam Sum": {
+      "Effy Huo": 60,
+      "Maggie Wu": 32,
+      "Jason/us.ops": 32,
+      "Will Sun": 19,
+      "Kelly Prevalon": 14
+    },
+    "Maggie Wu": {
+      "Everlyn Shaw": 256,
+      "Jason/us.ops": 126,
+      "Will Sun": 102,
+      "Effy Huo": 75,
+      "Rita Tang": 44
+    },
+    "Jason/us.ops": {
+      "Effy Huo": 148,
+      "Everlyn Shaw": 135,
+      "Maggie Wu": 126,
+      "Adam Sum": 32,
+      "Team3 YES": 26
+    },
+    "Team3 YES": {
+      "Effy Huo": 89,
+      "Will Sun": 29,
+      "Jason/us.ops": 26,
+      "马亚红 科陆": 24,
+      "Maggie Wu": 13
+    },
+    "Will Sun": {
+      "Maggie Wu": 102,
+      "Effy Huo": 52,
+      "Team3 YES": 29,
+      "Jason/us.ops": 24,
+      "Everlyn Shaw": 24
+    },
+    "Everlyn Shaw": {
+      "Maggie Wu": 256,
+      "Effy Huo": 139,
+      "Jason/us.ops": 135,
+      "Rita Tang": 61,
+      "Will Sun": 24
+    },
+    "Rita Tang": {
+      "Everlyn Shaw": 61,
+      "Maggie Wu": 44,
+      "Jason/us.ops": 22,
+      "Effy Huo": 8,
+      "Will Sun": 6
+    },
+    "Dongni AirSea": {
+      "Everlyn Shaw": 4,
+      "Maggie Wu": 4
+    },
+    "Sam Kim PTS": {
+      "Maggie Wu": 2,
+      "Jason/us.ops": 1
+    },
+    "Elaine Horizon": {
+      "Effy Huo": 11,
+      "Jason/us.ops": 10,
+      "Everlyn Shaw": 3,
+      "Salvina WFS": 2
+    },
+    "Adrian FCC": {
+      "Effy Huo": 29,
+      "Everlyn Shaw": 18
+    },
+    "Gloria SCC": {
+      "Everlyn Shaw": 4,
+      "Maggie Wu": 4
+    },
+    "Yancy Yu深圳": {
+      "Everlyn Shaw": 7,
+      "Maggie Wu": 3
+    },
+    "Kelly Prevalon": {
+      "Effy Huo": 28,
+      "Adam Sum": 14
+    },
+    "Jim Wen佛山": {
+      "Will Sun": 5,
+      "Everlyn Shaw": 3,
+      "Maggie Wu": 3
+    },
+    "Bobc/COO": {
+      "Effy Huo": 11
+    },
+    "马亚红 科陆": {
+      "Effy Huo": 24,
+      "Team3 YES": 24,
+      "Will Sun": 3
+    },
+    "Salvina WFS": {
+      "Effy Huo": 2,
+      "Jason/us.ops": 2,
+      "Elaine Horizon": 2
+    },
+    "Jack PTT": {
+      "Jason/us.ops": 22,
+      "Effy Huo": 15
+    },
+    "Marcus CMA": {
+      "Everlyn Shaw": 11,
+      "Maggie Wu": 1
+    }
+  },
+  "people_topics": {
+    "Effy Huo": {
+      "Delivery": 73,
+      "Hold": 13,
+      "Arrival": 18,
+      "询价": 52,
+      "Booking": 14
+    },
+    "Maggie Wu": {
+      "Delivery": 27,
+      "Booking": 72,
+      "Overdue": 39,
+      "询价": 14,
+      "Arrival": 6
+    },
+    "Adam Sum": {
+      "Delivery": 11,
+      "Overdue": 2,
+      "询价": 16
+    },
+    "Jason/us.ops": {
+      "Delivery": 34,
+      "Booking": 5,
+      "Hold": 9,
+      "Overdue": 7,
+      "Arrival": 1,
+      "询价": 23
+    },
+    "Team3 YES": {
+      "Delivery": 45
+    },
+    "Everlyn Shaw": {
+      "Booking": 73,
+      "Overdue": 30,
+      "Arrival": 39,
+      "Hold": 14,
+      "询价": 10,
+      "CC": 2
+    },
+    "Dongni AirSea": {
+      "Overdue": 4
+    },
+    "Sam Kim PTS": {
+      "Delivery": 1
+    },
+    "Elaine Horizon": {
+      "Hold": 10
+    },
+    "Rita Tang": {
+      "Booking": 3
+    },
+    "Will Sun": {
+      "Overdue": 8,
+      "Delivery": 54,
+      "Booking": 12,
+      "询价": 1,
+      "CC": 2
+    },
+    "Yancy Yu深圳": {
+      "Overdue": 3
+    },
+    "Gloria SCC": {
+      "Overdue": 3
+    },
+    "Jim Wen佛山": {
+      "Overdue": 5
+    },
+    "Adrian FCC": {
+      "询价": 1,
+      "Booking": 18
+    },
+    "Salvina WFS": {
+      "Hold": 2
+    },
+    "马亚红 科陆": {
+      "Delivery": 21
+    },
+    "Jack PTT": {
+      "Delivery": 22
+    },
+    "Bobc/COO": {
+      "Hold": 4
+    },
+    "Marcus CMA": {
+      "Hold": 9
+    }
+  },
+  "customer_contacts": {
+    "海柔": {
+      "team3@yeschb.com": {
+        "count": 5,
+        "phone": "+86-21-6132 2333 (",
+        "title": "Specialists For Dry & Tank Con",
+        "email": "",
+        "name": "Team3 YES"
+      }
+    },
+    "Vita Coco": {
+      "rpatti@vitacoco.com": {
+        "count": 2,
+        "phone": "",
+        "title": "",
+        "email": "",
+        "name": "Ricky Patti"
+      },
+      "mbasir@vitacoco.com": {
+        "count": 2,
+        "phone": "",
+        "title": "",
+        "email": "",
+        "name": "Marlina Basir"
+      }
+    },
+    "HORIZON": {
+      "horizonsolar001@gmail.com": {
+        "count": 7,
+        "phone": "1 888 4282673",
+        "title": "Manager",
+        "email": ""
+      }
+    },
+    "海亮": {
+      "operation.us@scc-supplychain.com": {
+        "count": 1,
+        "phone": "+86-21-6132 2333 (",
+        "title": "Specialists For Dry & Tank Con",
+        "email": "",
+        "name": "operation.us@scc-supplychain.com"
+      },
+      "mary@hailiang.com": {
+        "count": 1,
+        "phone": "+1 626 715 8171",
+        "title": "",
+        "email": "",
+        "name": "mary@hailiang.com"
+      },
+      "wangqili@hailiang.com": {
+        "count": 3,
+        "phone": "+1 626 715 8171",
+        "title": "",
+        "email": "",
+        "name": "wangqili@hailiang.com"
+      }
+    },
+    "HITHIUM": {
+      "steven.harris@hithium.com": {
+        "count": 2,
+        "phone": "+01 909-267-4941",
+        "title": "Manager",
+        "email": "",
+        "name": "Steven Harris"
+      },
+      "yancey.conry@hithium.com": {
+        "count": 1,
+        "phone": "+86-21-6132 2333 (",
+        "title": "Specialists For Dry & Tank Con",
+        "email": "",
+        "name": "Yancey Conry"
+      }
+    },
+    "科陆": {
+      "kelly.hiatt@prevalonenergy.com": {
+        "count": 4,
+        "phone": "+01 909-267-4941",
+        "title": "Specialist",
+        "email": "",
+        "name": "Kelly Hiatt"
+      },
+      "shaun@pacifictandt.com": {
+        "count": 1,
+        "phone": "",
+        "title": "",
+        "email": "",
+        "name": "Shaun PTT"
+      },
+      "jack@pacifictandt.com": {
+        "count": 6,
+        "phone": "",
+        "title": "Manager",
+        "email": "",
+        "name": "Jack PTT"
+      },
+      "mayh114@szclou.com": {
+        "count": 6,
+        "phone": "626-999-5855",
+        "title": "经理 | 美国分公司",
+        "email": "",
+        "name": "Yahong.Ma 马亚红"
+      },
+      "team3@yeschb.com": {
+        "count": 2,
+        "phone": "626-999-5855",
+        "title": "Specialist",
+        "email": "",
+        "name": "Team3 YES"
+      },
+      "sophia@pacifictandt.com": {
+        "count": 3,
+        "phone": "",
+        "title": "Manager",
+        "email": "",
+        "name": "Sophia PTT"
+      }
+    },
+    "PREVALON": {
+      "team3@yeschb.com": {
+        "count": 2,
+        "phone": "626-999-5855",
+        "title": "Manager",
+        "email": "",
+        "name": "Team3 YES"
+      },
+      "kelly.hiatt@prevalonenergy.com": {
+        "count": 6,
+        "phone": "+01 909-267-4941",
+        "title": "Manager",
+        "email": "",
+        "name": "Kelly Hiatt"
+      }
+    },
+    "正泰新能": {
+      "liushengying@eshippinggateway.com": {
+        "count": 11,
+        "phone": "15901827923",
+        "title": "",
+        "email": "",
+        "name": "刘圣婴"
+      },
+      "joyce.jiang@eplusisc.com": {
+        "count": 6,
+        "phone": "+1 626 715 8171",
+        "title": "",
+        "email": "",
+        "name": "Joyce Jiang"
+      },
+      "chenyang.han@astronergy.com": {
+        "count": 1,
+        "phone": "",
+        "title": "",
+        "email": "",
+        "name": "韩晨阳"
+      }
+    },
+    "HOUNEN": {
+      "monica@hounenus.com": {
+        "count": 3,
+        "phone": "513-526-0401",
+        "title": "Director of Renewable Energy T",
+        "email": "",
+        "name": "Monica Wang"
+      }
+    },
+    "MAG": {
+      "dliu@airseachicago.com": {
+        "count": 1,
+        "phone": "",
+        "title": "",
+        "email": "",
+        "name": "Dongni Liu"
+      },
+      "rdunleavy@airseachicago.com": {
+        "count": 1,
+        "phone": "847-640-6590",
+        "title": "",
+        "email": "",
+        "name": "Ryan Dunleavy"
+      }
+    }
+  },
+  "weekly_patterns": {
+    "周五": {
+      "其他": 408,
+      "CC": 54,
+      "查验": 9,
+      "Overdue": 8,
+      "Delivery": 27,
+      "Hold": 14,
+      "Arrival": 10
+    },
+    "周四": {
+      "其他": 328,
+      "Delivery": 15,
+      "CC": 37,
+      "Hold": 6,
+      "查验": 7,
+      "Overdue": 4,
+      "Arrival": 17
+    },
+    "周六": {
+      "其他": 72,
+      "Hold": 1,
+      "CC": 48,
+      "查验": 9,
+      "Delivery": 5,
+      "Overdue": 1
+    },
+    "周日": {
+      "CC": 28,
+      "查验": 5,
+      "其他": 25
+    },
+    "周一": {
+      "查验": 5,
+      "其他": 354,
+      "CC": 31,
+      "Overdue": 15,
+      "Delivery": 25,
+      "Hold": 1
+    },
+    "周二": {
+      "CC": 34,
+      "Delivery": 33,
+      "其他": 324,
+      "Arrival": 3,
+      "查验": 6,
+      "Overdue": 10,
+      "Hold": 3
+    },
+    "周三": {
+      "Delivery": 26,
+      "CC": 38,
+      "其他": 324,
+      "查验": 7,
+      "Arrival": 6,
+      "Hold": 3,
+      "Overdue": 3
+    }
+  },
+  "opportunities": 7
+}

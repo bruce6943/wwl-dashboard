@@ -1,0 +1,267 @@
+{
+  "period": "2026-02-26 ~ 2026-03-29",
+  "total_days": 32,
+  "total_emails": 5169,
+  "pdf_count": 2886,
+  "customers": {
+    "PTS INC": {
+      "emails": 29,
+      "active_days": 14
+    },
+    "HITHIUM": {
+      "emails": 26,
+      "active_days": 12
+    },
+    "HAILIANG": {
+      "emails": 24,
+      "active_days": 10
+    },
+    "FCC USA": {
+      "emails": 31,
+      "active_days": 13
+    },
+    "ELITE SOLAR": {
+      "emails": 3,
+      "active_days": 3
+    },
+    "HAIROBOT": {
+      "emails": 60,
+      "active_days": 16
+    },
+    "JINGZHOU": {
+      "emails": 27,
+      "active_days": 16
+    },
+    "HORIZON SOLAR": {
+      "emails": 10,
+      "active_days": 7
+    },
+    "KORNET": {
+      "emails": 44,
+      "active_days": 16
+    },
+    "REACH INDUSTRY": {
+      "emails": 103,
+      "active_days": 19
+    },
+    "PACIFIC T&T": {
+      "emails": 3,
+      "active_days": 3
+    },
+    "HOUNEN": {
+      "emails": 8,
+      "active_days": 3
+    },
+    "MING HAO XIN": {
+      "emails": 20,
+      "active_days": 8
+    },
+    "AVANTIX": {
+      "emails": 2,
+      "active_days": 2
+    },
+    "CLOU(含双鱼)": {
+      "emails": 54,
+      "active_days": 15
+    },
+    "MAG SPECIALTIES": {
+      "emails": 15,
+      "active_days": 5
+    },
+    "MERSY CORP": {
+      "emails": 6,
+      "active_days": 5
+    },
+    "VITA COCO": {
+      "emails": 9,
+      "active_days": 4
+    },
+    "NEXTERA": {
+      "emails": 3,
+      "active_days": 2
+    },
+    "YES": {
+      "emails": 33,
+      "active_days": 9
+    },
+    "TERRASOULSUPERFOODS": {
+      "emails": 38,
+      "active_days": 6
+    },
+    "PREVALON": {
+      "emails": 11,
+      "active_days": 4
+    },
+    "ASTRONERGY": {
+      "emails": 147,
+      "active_days": 6
+    },
+    "BYSON": {
+      "emails": 4,
+      "active_days": 1
+    }
+  },
+  "carriers": {
+    "Hapag-Lloyd": 203,
+    "OOCL": 445,
+    "ZIM": 351,
+    "MSC": 955,
+    "COSCO": 421,
+    "ONE": 471,
+    "WAN HAI": 49,
+    "CMA-CGM": 250,
+    "YML": 19,
+    "HMM": 13,
+    "Evergreen": 1,
+    "MAERSK": 1
+  },
+  "categories": {
+    "other": 2711,
+    "invoice": 118,
+    "prealert": 707,
+    "booking": 345,
+    "arrival": 270,
+    "delivery": 197,
+    "hold": 31,
+    "charge_confirm": 605,
+    "cancel": 25,
+    "overdue": 107,
+    "inspection": 53
+  },
+  "daily_counts": {
+    "2026-02-26": 122,
+    "2026-02-27": 322,
+    "2026-02-28": 161,
+    "2026-03-01": 39,
+    "2026-03-02": 256,
+    "2026-03-03": 203,
+    "2026-03-04": 188,
+    "2026-03-05": 217,
+    "2026-03-06": 190,
+    "2026-03-07": 60,
+    "2026-03-08": 75,
+    "2026-03-09": 230,
+    "2026-03-10": 205,
+    "2026-03-11": 206,
+    "2026-03-12": 11,
+    "2026-03-13": 118,
+    "2026-03-14": 79,
+    "2026-03-15": 39,
+    "2026-03-16": 224,
+    "2026-03-17": 214,
+    "2026-03-18": 188,
+    "2026-03-19": 154,
+    "2026-03-20": 193,
+    "2026-03-21": 28,
+    "2026-03-22": 19,
+    "2026-03-23": 207,
+    "2026-03-24": 199,
+    "2026-03-25": 219,
+    "2026-03-26": 249,
+    "2026-03-27": 219,
+    "2026-03-28": 29,
+    "2026-03-29": 15
+  },
+  "top_senders": [
+    [
+      "assistant@pltplt.com",
+      658
+    ],
+    [
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      542
+    ],
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      462
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      215
+    ],
+    [
+      "\"nathia\" <jkt.nathia@wwl.sg>",
+      155
+    ],
+    [
+      "\"rita tang\" <rita.tang@wwl.cn>",
+      155
+    ],
+    [
+      "us038-arrival.notices@msc.com",
+      143
+    ],
+    [
+      "<us.ops@wwl.sg>",
+      127
+    ],
+    [
+      "BTLCS@SWITCHBL.COM",
+      120
+    ],
+    [
+      "<bkk.guide@wwl.sg>",
+      94
+    ],
+    [
+      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      86
+    ],
+    [
+      "US038-noreply@msc.com",
+      84
+    ],
+    [
+      "\"Bene\" <jkt.bene@wwl.sg>",
+      81
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      74
+    ],
+    [
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      60
+    ],
+    [
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      60
+    ],
+    [
+      "us038-importpickupnotification@msc.com",
+      55
+    ],
+    [
+      "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
+      52
+    ],
+    [
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
+      50
+    ],
+    [
+      "Will Sun <willsun@wwl.cn>",
+      49
+    ],
+    [
+      "Team3 YES <team3@yeschb.com>",
+      48
+    ],
+    [
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
+      48
+    ],
+    [
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      47
+    ],
+    [
+      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
+      43
+    ],
+    [
+      "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      37
+    ]
+  ]
+}

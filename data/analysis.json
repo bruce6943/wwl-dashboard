@@ -1,0 +1,205 @@
+{
+  "scan_time": "2026-03-29T12:06:03.996310+08:00",
+  "total_emails": 41,
+  "business_emails": 36,
+  "pdf_count": 23,
+  "categories": {
+    "other_biz": 7,
+    "booking": 5,
+    "delivery": 2,
+    "inspection": 4,
+    "charge_confirm": 18
+  },
+  "customers": {},
+  "carriers": {
+    "MSC": 6,
+    "COSCO": 1,
+    "OOCL": 5,
+    "ONE": 1,
+    "CMA-CGM": 8,
+    "ZIM": 1
+  },
+  "carrier_fees": {
+    "ONE": {
+      "count": 11,
+      "total": 0,
+      "avg": 0
+    },
+    "MSC": {
+      "count": 1,
+      "total": 20.0,
+      "avg": 20.0
+    }
+  },
+  "hbl_total": 16,
+  "mbl_total": 25,
+  "all_hbls": [
+    "WLC60120505",
+    "WLC60124381",
+    "WLC60124865",
+    "WLC60125060",
+    "WLC60126359",
+    "WLC60205753",
+    "WLC60213560",
+    "WLC60213673",
+    "WLC60216400",
+    "WLC60216402",
+    "WLC60216403",
+    "WLC60216466",
+    "WLC60301625",
+    "WLC60301626",
+    "WLC60301627",
+    "WLC60307413"
+  ],
+  "all_mbls": [
+    "CMDUCHN3095178",
+    "CMDUCHN3116145",
+    "CMDUTHD1466676",
+    "CMDUTHD1483494",
+    "CMDUTHD1483914",
+    "CMDUTHD1483918",
+    "COSU6444625540",
+    "MEDURQ527968",
+    "MEDURQ527984",
+    "MEDURQ528008",
+    "MEDURQ528065",
+    "MEDURQ528115",
+    "MEDUWA866914",
+    "MEDUWG692272",
+    "MEDUWG959531",
+    "MEDUWK478768",
+    "MEDUWK745968",
+    "MEDUYL789706",
+    "ONEYBKKG38865600",
+    "OOLU2166524280",
+    "OOLU2166784670",
+    "OOLU2166784680",
+    "OOLU2166784690",
+    "OOLU2320126090",
+    "ZIMUBKK80440481"
+  ],
+  "daily_counts": {
+    "2026-03-28": 4,
+    "2026-03-29": 36
+  },
+  "inspection_mbls": [
+    "COSU6444625540",
+    "ONEYBKKG38865600",
+    "OOLU2166524280",
+    "OOLU2320126090"
+  ],
+  "hold_count": 0,
+  "inspection_count": 4,
+  "overdue_count": 0,
+  "cancel_count": 0,
+  "top_senders": [
+    [
+      "assistant@pltplt.com",
+      22
+    ],
+    [
+      "\"Bene\" <jkt.bene@wwl.sg>",
+      11
+    ],
+    [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      3
+    ],
+    [
+      "LinkedIn <messages-noreply@linkedin.com>",
+      1
+    ],
+    [
+      "Alan Lo <Alan.Lo@idcintl.com>",
+      1
+    ],
+    [
+      "us038-importpickupnotification@msc.com",
+      1
+    ],
+    [
+      "Bruce Huang <bruce@wwl.cn>",
+      1
+    ],
+    [
+      "Serkan Kavas <Serkan@mtsnyc.com>",
+      1
+    ]
+  ],
+  "bl_status": {
+    "no_tlx_mbl": [
+      "MEDURQ528065",
+      "CMDUTHD1466676",
+      "CMDUCHN3095178",
+      "MEDURQ527968",
+      "MEDUYL789706",
+      "OOLU2166784680",
+      "MEDURQ528008",
+      "ONEYBKKG38865600",
+      "MEDUWK478768",
+      "OOLU2166784690",
+      "COSU6444625540",
+      "ZIMUBKK80440481",
+      "MEDURQ527984",
+      "MEDUWG959531",
+      "CMDUTHD1483494",
+      "OOLU2166524280",
+      "OOLU2166784670",
+      "MEDUWK745968",
+      "CMDUTHD1483914",
+      "MEDUWA866914",
+      "OOLU2320126090",
+      "MEDURQ528115",
+      "CMDUTHD1483918",
+      "MEDUWG692272",
+      "CMDUCHN3116145"
+    ],
+    "no_tlx_hbl": [
+      "WLC60120505",
+      "WLC60301626",
+      "WLC60125060",
+      "WLC60216466",
+      "WLC60307413",
+      "WLC60301625",
+      "WLC60213560",
+      "WLC60205753",
+      "WLC60124865",
+      "WLC60216402",
+      "WLC60216400",
+      "WLC60124381",
+      "WLC60213673",
+      "WLC60216403",
+      "WLC60126359",
+      "WLC60301627"
+    ],
+    "an_no_prealert": [],
+    "hold_bl": [],
+    "tlx_confirmed_mbl": 0,
+    "tlx_confirmed_hbl": 0
+  },
+  "anomalies": {
+    "cancel_it": [],
+    "cod": [],
+    "non_standard": [],
+    "stolen": [],
+    "urgent": [
+      {
+        "subject": "Automatic reply: Project Delivery from Houston",
+        "from": "Serkan Kavas <Serkan@mtsnyc.co",
+        "urgency": 3,
+        "date": "Sat, 28 Mar 2026 22:10:07"
+      }
+    ]
+  },
+  "neural_network": {
+    "entities": 86,
+    "relationships": 0,
+    "contacts_new": 0,
+    "contacts_total": 228,
+    "daily_connections": 0,
+    "new_domains": [
+      "mtsnyc.com"
+    ]
+  },
+  "daily_connections": []
+}

@@ -1,0 +1,138 @@
+{
+  "customer_carrier": {},
+  "customer_service": {},
+  "supply_chains": {
+    "海柔": {
+      "carriers": {
+        "ZIM": 9,
+        "WAN HAI": 2,
+        "MSC": 6
+      },
+      "brokers": {
+        "YES报关行": 17
+      },
+      "truckers": {},
+      "agents": {}
+    },
+    "REACH INDUSTRY": {
+      "carriers": {
+        "CMA-CGM": 17,
+        "ZIM": 15,
+        "ONE": 3,
+        "OOCL": 2,
+        "COSCO": 8
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "MAG SPECIALTIES": {
+      "carriers": {
+        "Hapag-Lloyd": 7,
+        "MSC": 1
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "Vita Coco": {
+      "carriers": {
+        "ONE": 9
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HORIZON SOLAR": {
+      "carriers": {
+        "OOCL": 5,
+        "MSC": 2
+      },
+      "brokers": {
+        "WFS Customs": 6
+      },
+      "truckers": {},
+      "agents": {}
+    },
+    "科陆电子": {
+      "carriers": {
+        "COSCO": 15,
+        "ZIM": 40
+      },
+      "brokers": {
+        "YES报关行": 26
+      },
+      "truckers": {
+        "PTT卡车": 22
+      },
+      "agents": {}
+    },
+    "海亮": {
+      "carriers": {
+        "MSC": 4
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {
+        "SCC Supply Chain": 13
+      }
+    },
+    "PREVALON": {
+      "carriers": {
+        "COSCO": 9,
+        "ZIM": 22
+      },
+      "brokers": {
+        "YES报关行": 3
+      },
+      "truckers": {},
+      "agents": {}
+    },
+    "MERSY CORP": {
+      "carriers": {
+        "MSC": 5
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "AVANTIX": {
+      "carriers": {
+        "ONE": 5,
+        "WAN HAI": 8,
+        "COSCO": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HITHIUM海辰": {
+      "carriers": {
+        "ZIM": 4,
+        "MSC": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "MING HAO XIN": {
+      "carriers": {
+        "ONE": 5,
+        "OOCL": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HOUNEN SOLAR": {
+      "carriers": {
+        "WAN HAI": 1,
+        "MSC": 9
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    }
+  },
+  "last_updated": "2026-03-29T12:06:03.996310+08:00"
+}

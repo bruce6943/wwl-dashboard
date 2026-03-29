@@ -1,0 +1,88 @@
+{
+  "MERSY CORP SA": {
+    "mbl": "MEDUKH457914",
+    "amount": "$83,898(MSC)+$5,985(目的港)",
+    "status": "MSC第3次催收,final warning",
+    "maggie_action": "3/17催Jim Wen处理",
+    "jim_action": "3/18回复正在处理",
+    "will_sun": "3/27警告月底不付扣所有放单,准备佛山垫付",
+    "t_status": "T+30+已过(3月初产生)",
+    "sinosure_ready": "需检查: 协议? 通知? 催收记录? 垫付凭证?",
+    "risk": "极高—可能影响WWL全线MSC业务"
+  },
+  "ARTISARY INC": {
+    "mbl": "MAEU260834246",
+    "amount": "$3,100(Detention)",
+    "maggie_action": "3/16催Alan \"settle overdue asap\"",
+    "t_status": "估计T+15~T+30",
+    "sinosure_ready": "需确认: 书面确认? 7日默认认可?"
+  },
+  "CASEY CATON LOGISTICS": {
+    "mbl": "CMDUTHD1424156",
+    "amount": "Detention费用",
+    "maggie_action": "3/16催Amy",
+    "t_status": "估计T+15~T+30"
+  },
+  "CAYEPORS": {
+    "mbl": "OOLU2164911242 + CMDUQGD2605616/605",
+    "amount": "$54.95(WWL已垫付)",
+    "maggie_action": "3/16催收, 3/18 Ada Zhang指示垫付",
+    "resolution": "WWL已PayCargo垫付$54.95,费用向WWL-TAO收取",
+    "t_status": "已解决(WWL垫付)",
+    "sinosure_ready": "垫付凭证已有"
+  },
+  "CHAINVALUE US CO": {
+    "mbl": "ONEYBKKG01171700",
+    "amount": "Demurrage",
+    "maggie_action": "3/16催李丽丽(合肥)催收货人",
+    "t_status": "估计T+15+"
+  },
+  "CSCL GLOBAL LIMITED": {
+    "mbl": "MEDUR2341408",
+    "amount": "目的港费用未付",
+    "maggie_action": "3/16催Ada \"文瑶的这票怎么处理?\" 第2次催收",
+    "t_status": "T+30(第2次催收)",
+    "sinosure_ready": "需确认: 正式追偿函已发?"
+  },
+  "ES FOUNDRY CORP": {
+    "mbl": "ONEYBKKG01937300",
+    "amount": "$2,970(Demurrage 3柜)",
+    "maggie_action": "3/16催Stella,附了最新未结清明细",
+    "t_status": "估计T+15~T+30"
+  },
+  "LIUGONG CONSTRUCTION": {
+    "mbl": "ONEYSZPFY7242300",
+    "amount": "$1,800(Detention)",
+    "maggie_action": "3/16-17催Yancy Yu",
+    "resolution": "Yancy回复\"发货人反馈收货人已支付\"",
+    "pending": "等水单(已拖1周+)",
+    "t_status": "T+30(等水单核销)"
+  },
+  "MAG SPECIALTIES INC": {
+    "mbl": "多票",
+    "amount": "$1,520",
+    "maggie_action": "3/13确认,3/26问Dongni Liu是否已付,要bank slip",
+    "t_status": "T+30+"
+  },
+  "MING HAO XIN TRADING": {
+    "mbl": "CMDUTHD1466680/WLC60124859",
+    "amount": "$150(On Carriage)",
+    "maggie_action": "W2继续催,鲸宝系统也推送",
+    "t_status": "T+15+"
+  },
+  "HAI ROBOTICS": {
+    "mbl": "3票",
+    "amount": "$6,200→$6,420(Detention)",
+    "maggie_action": "3/17催高远\"这3票怎么付?\"",
+    "resolution": "高远:\"你们先垫付,我找ADAM和车队协商\"",
+    "t_status": "T+15~T+30",
+    "sinosure_ready": "需确认: 垫付后向谁追偿? 协议有费用条款?"
+  },
+  "HAILIANG COPPER TEXAS": {
+    "mbl": "多票",
+    "amount": "Chassis Usage",
+    "maggie_action": "3/17催Qili,Gloria Ni发了bank slip",
+    "resolution": "已付(bank slip已收)",
+    "t_status": "已解决"
+  }
+}

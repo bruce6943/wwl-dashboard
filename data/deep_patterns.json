@@ -1,0 +1,254 @@
+{
+  "reply_chains_top20": [
+    [
+      "Customs clearance & delivery ZIMUSHH32077175 1×40HC",
+      {
+        "length": 31,
+        "participants": 6
+      }
+    ],
+    [
+      "SE1-Astronergy-16 containers release",
+      {
+        "length": 26,
+        "participants": 6
+      }
+    ],
+    [
+      "Project Delivery from Houston / WL2603171SA",
+      {
+        "length": 23,
+        "participants": 3
+      }
+    ],
+    [
+      "Project Quote  / ZTLO260031  OTR inquiry CA-NC",
+      {
+        "length": 22,
+        "participants": 5
+      }
+    ],
+    [
+      "Customs clearance for COSU6446478520",
+      {
+        "length": 21,
+        "participants": 5
+      }
+    ],
+    [
+      "ZIMUSHH32077175 / ZIMUSHH32074171",
+      {
+        "length": 21,
+        "participants": 2
+      }
+    ],
+    [
+      "Project Delivery from Houston",
+      {
+        "length": 17,
+        "participants": 7
+      }
+    ],
+    [
+      "3/24 // Project   / ZTLO260031  OTR CA-NC  7CTNS",
+      {
+        "length": 16,
+        "participants": 3
+      }
+    ],
+    [
+      "Packing list & Commercial Invoice  MBL# COSU6442043070  HBL#",
+      {
+        "length": 13,
+        "participants": 3
+      }
+    ],
+    [
+      "REQ ADD IT# CLEAR @ DEST 12 BLs CRM:0000170000041920",
+      {
+        "length": 13,
+        "participants": 2
+      }
+    ],
+    [
+      "TRANSFAR CHAS PL#HU26031101 95 G USD 435.59 DOC#520002607158",
+      {
+        "length": 11,
+        "participants": 2
+      }
+    ],
+    [
+      "DTC ACCOUNT || [PRE-ALERT] - ATD FEB 19 - HBL#WLC60211885A -",
+      {
+        "length": 11,
+        "participants": 5
+      }
+    ],
+    [
+      "DTC ACCOUNT || [PRE-ALERT] - ATD FEB 19 - HBL#WLC60211861A -",
+      {
+        "length": 11,
+        "participants": 5
+      }
+    ],
+    [
+      "Mar 25th - SE1-Astronergy-loading plan",
+      {
+        "length": 11,
+        "participants": 2
+      }
+    ],
+    [
+      "PRE-ALERT - MBL : CMDUTHD1466680 l HBL : WLC60124859 l LCH T",
+      {
+        "length": 10,
+        "participants": 5
+      }
+    ],
+    [
+      "OOCL Regulatory Hold Notifications/ MBL#OOLU2320126090 / HBL",
+      {
+        "length": 9,
+        "participants": 3
+      }
+    ],
+    [
+      "\"terrasoulsuperfoods海外/BetterBodyFoods海外旗\"/FCL/Los Angeles -",
+      {
+        "length": 9,
+        "participants": 2
+      }
+    ],
+    [
+      "3/25 PICKUP SCHEDULE/ Project / ZTLO260031 OTR CA-NC 2 CNTRS",
+      {
+        "length": 9,
+        "participants": 4
+      }
+    ],
+    [
+      "回复：回复：回复：回复：SE1-长迈释放",
+      {
+        "length": 9,
+        "participants": 1
+      }
+    ],
+    [
+      "CNC-E-032L // Terra Solar 62x40HC// import clearance\r\n docs/",
+      {
+        "length": 8,
+        "participants": 2
+      }
+    ]
+  ],
+  "amount_by_context": {
+    "其他": {
+      "count": 390,
+      "total": 3700537.5484,
+      "avg": 9488.557816410257,
+      "max": 742250.0
+    },
+    "付款": {
+      "count": 133,
+      "total": 745950.05,
+      "avg": 5608.646992481204,
+      "max": 136800.0
+    },
+    "Chassis": {
+      "count": 13,
+      "total": 1701865.0,
+      "avg": 130912.69230769231,
+      "max": 278208.0
+    },
+    "D&D": {
+      "count": 6,
+      "total": 52345.0,
+      "avg": 8724.166666666666,
+      "max": 27560.0
+    },
+    "询价": {
+      "count": 66,
+      "total": 101247.0,
+      "avg": 1534.0454545454545,
+      "max": 6650.0
+    },
+    "Invoice": {
+      "count": 14,
+      "total": 28166.0,
+      "avg": 2011.857142857143,
+      "max": 4240.0
+    },
+    "Overdue": {
+      "count": 7,
+      "total": 16149.95,
+      "avg": 2307.1357142857146,
+      "max": 6200.0
+    },
+    "Delivery": {
+      "count": 23,
+      "total": 144947.0,
+      "avg": 6302.04347826087,
+      "max": 70481.0
+    },
+    "ChargeConfirm": {
+      "count": 5,
+      "total": 158.0,
+      "avg": 31.6,
+      "max": 40.0
+    }
+  },
+  "geo_mentions": {
+    "SAVANNAH, GA": 96,
+    "HOUSTON, TX": 179,
+    "KATY, TX": 11,
+    "CHINO, CA": 33,
+    "LOS ANGELES, CA": 106,
+    "ONTARIO, CA": 5,
+    "TAMPA, FL": 11,
+    "NEW YORK, NY": 107,
+    "LONG BEACH, CA": 139,
+    "ATLANTA, GA": 16,
+    "LAREDO, TX": 7,
+    "DENVER, CO": 10,
+    "CHARLESTON, SC": 44,
+    "NORFOLK, VA": 8,
+    "CHICAGO, IL": 42,
+    "BENSENVILLE, IL": 4,
+    "SEATTLE, WA": 1,
+    "MIAMI, FL": 7,
+    "DALLAS, TX": 9,
+    "PASADENA, TX": 2,
+    "NEWARK, NJ": 1,
+    "COMPTON, CA": 3,
+    "ELIZABETH, NJ": 2,
+    "JACKSONVILLE, FL": 2,
+    "ROMEO, MI": 1
+  },
+  "state_totals": {
+    "GA": 112,
+    "TX": 208,
+    "CA": 286,
+    "FL": 20,
+    "NY": 107,
+    "CO": 10,
+    "SC": 44,
+    "VA": 8,
+    "IL": 46,
+    "WA": 1,
+    "NJ": 3,
+    "MI": 1
+  },
+  "language": {
+    "中文": 118,
+    "英文": 2274,
+    "混合": 203
+  },
+  "risk_signals": {
+    "Complaint/投诉": 150,
+    "Cancel/取消": 14,
+    "Lost/丢失": 5,
+    "Suspend/暂停": 1
+  },
+  "urgent_count": 12,
+  "broadcast_count": 560
+}

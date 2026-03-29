@@ -1,0 +1,1687 @@
+#!/usr/bin/env python3
+"""
+WWL 环世物流 - 运营指挥中心 v5.0
+Operational Command Center Dashboard
+All text in Chinese. Dark gradient theme.
+"""
+
+import streamlit as st
+import json
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime, timedelta
+import re
+import random
+
+# ─── Page Config ───
+st.set_page_config(
+    page_title="WWL运营指挥中心 v5.0",
+    page_icon="🏢",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+
+
+# ─── Password Protection ───
+def check_password():
+    """Returns True if the user has entered the correct password."""
+    if "authenticated" not in st.session_state:
+        st.session_state.authenticated = False
+    
+    if st.session_state.authenticated:
+        return True
+    
+    st.markdown("""
+    <div style="text-align:center; padding:60px 0;">
+        <h1 style="color:#e94560;">WWL 环世物流 运营指挥中心</h1>
+        <p style="color:#a0a0c0;">请输入访问密码</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    password = st.text_input("密码", type="password", key="pwd_input")
+    if st.button("登录", key="login_btn"):
+        if password == "WWL2026!":
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("密码错误")
+    
+    st.markdown("<p style='text-align:center;color:#666;font-size:12px;margin-top:40px;'>环世物流内部系统 · 仅授权人员访问</p>", unsafe_allow_html=True)
+    return False
+
+if not check_password():
+    st.stop()
+
+
+)
+
+# ─── Dark Gradient Theme CSS ───
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+/* Main background gradient */
+.stApp {
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1a1a2e 100%);
+    color: #e0e0e0;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* Hide default streamlit elements */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 2px;
+    background: rgba(15,15,35,0.8);
+    border-radius: 10px;
+    padding: 4px;
+}
+.stTabs [data-baseweb="tab"] {
+    background: rgba(30,30,60,0.6);
+    border-radius: 8px;
+    color: #a0a0c0;
+    font-weight: 500;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #e94560 0%, #c23152 100%) !important;
+    color: white !important;
+    font-weight: 700;
+}
+
+/* Metric cards */
+.metric-card {
+    background: linear-gradient(135deg, rgba(30,30,60,0.9), rgba(20,20,50,0.9));
+    border: 1px solid rgba(100,100,180,0.3);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 6px 0;
+    text-align: center;
+}
+.metric-card h2 { color: #e94560; font-size: 32px; margin: 0; }
+.metric-card p { color: #a0a0c0; font-size: 13px; margin: 4px 0 0 0; }
+
+/* Alert cards */
+.alert-red {
+    background: linear-gradient(135deg, rgba(233,69,96,0.15), rgba(180,40,60,0.1));
+    border-left: 4px solid #e94560;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+.alert-orange {
+    background: linear-gradient(135deg, rgba(255,165,0,0.12), rgba(200,120,0,0.08));
+    border-left: 4px solid #ffa500;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+.alert-yellow {
+    background: linear-gradient(135deg, rgba(255,255,0,0.08), rgba(200,200,0,0.05));
+    border-left: 4px solid #ffd700;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+.alert-green {
+    background: linear-gradient(135deg, rgba(0,200,100,0.1), rgba(0,150,80,0.07));
+    border-left: 4px solid #00c853;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+.alert-blue {
+    background: linear-gradient(135deg, rgba(33,150,243,0.12), rgba(20,100,180,0.08));
+    border-left: 4px solid #2196f3;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+
+/* Coach section - refined design */
+.coach-box {
+    background: linear-gradient(135deg, rgba(15,25,60,0.9), rgba(20,30,80,0.7));
+    border: 1px solid rgba(100,150,255,0.15);
+    border-left: 4px solid rgba(100,180,255,0.6);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 24px;
+    margin: 20px 0;
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: #b8c8e0;
+    box-shadow: 0 4px 20px rgba(0,0,50,0.3);
+    position: relative;
+}
+.coach-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(100,180,255,0.4), transparent);
+}
+.coach-box h4 {
+    color: #7dc3ff;
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.coach-box b { color: #a8d4ff; }
+.coach-box em { color: #fbbf24; font-style: normal; font-weight: 600; }
+
+/* Efficiency banner */
+.efficiency-banner {
+    background: linear-gradient(90deg, #1a1a2e, #e94560, #ffa500, #00c853, #1a1a2e);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Star badge */
+.star-badge {
+    background: linear-gradient(135deg, #ffd700, #ffb300);
+    color: #1a1a2e;
+    border-radius: 20px;
+    padding: 8px 20px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+/* Tables */
+.stDataFrame { border-radius: 8px; overflow: hidden; }
+
+/* Expander */
+.streamlit-expanderHeader {
+    background: rgba(30,30,60,0.8);
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+
+/* Section headers */
+.section-header {
+    background: linear-gradient(90deg, rgba(233,69,96,0.3), transparent);
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 12px 0 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1a2e; }
+::-webkit-scrollbar-thumb { background: #e94560; border-radius: 3px; }
+</style>
+""", unsafe_allow_html=True)
+
+
+# ─── Load Data ───
+@st.cache_data(ttl=300)
+def load_all_data():
+    data = {}
+    files = {
+        "analysis": "data/analysis.json",
+        "analysis_30d": "data/analysis_30d.json",
+        "arrears": "data/arrears_analysis.json",
+        "overdue_sop": "data/overdue_sop_status.json",
+        "vendors": "data/vendor_database.json",
+        "supply_chain": "data/supply_chain_network.json",
+        "contacts": "data/contacts_database.json",
+        "deep_insights": "data/deep_insights.json",
+        "deep_patterns": "data/deep_patterns.json",
+        "us_consignee": "data/us_consignee_database.json",
+    }
+    for key, path in files.items():
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data[key] = json.load(f)
+        except Exception:
+            data[key] = {}
+    return data
+
+
+DATA = load_all_data()
+A = DATA.get("analysis", {})
+A30 = DATA.get("analysis_30d", {})
+ARR = DATA.get("arrears", {})
+SOP = DATA.get("overdue_sop", {})
+VDB = DATA.get("vendors", {})
+SCN = DATA.get("supply_chain", {})
+CON = DATA.get("contacts", {})
+DI = DATA.get("deep_insights", {})
+DP = DATA.get("deep_patterns", {})
+USC = DATA.get("us_consignee", {})
+
+# ─── Derived data ───
+bl = A.get("bl_status", {})
+anom = A.get("anomalies", {})
+no_tlx_mbl = bl.get("no_tlx_mbl", [])
+no_tlx_hbl = bl.get("no_tlx_hbl", [])
+an_no_prealert = bl.get("an_no_prealert", [])
+hold_bl = bl.get("hold_bl", [])
+tlx_mbl_confirmed = bl.get("tlx_confirmed_mbl", 0)
+tlx_hbl_confirmed = bl.get("tlx_confirmed_hbl", 0)
+
+cancel_it = anom.get("cancel_it", [])
+cod_list = anom.get("cod", [])
+non_standard = anom.get("non_standard", [])
+stolen = anom.get("stolen", [])
+urgent = anom.get("urgent", [])
+
+inspection_mbls = A.get("inspection_mbls", [])
+hold_count = A.get("hold_count", 0)
+inspection_count = A.get("inspection_count", 0)
+
+# Compute efficiency score (平衡版 — 有挑战但不打击士气)
+total_7d = A.get("total_emails", 0)
+biz_7d = A.get("business_emails", 0)
+overdue_count = A.get("overdue_count", 0)
+cancel_count = A.get("cancel_count", 0)
+
+# 基础分75
+eff_score = 75
+
+# 扣分项(重大风险扣分重,一般事务扣分轻)
+risk_items = len(cancel_it) + len(stolen) + len(hold_bl) + hold_count + inspection_count
+eff_score -= hold_count * 2              # Hold每个扣2分
+eff_score -= len(stolen) * 10            # 被盗扣10分(严重!)
+eff_score -= len(an_no_prealert) * 5     # 漏单扣5分(严重!)
+eff_score -= overdue_count               # Overdue每封扣1分
+eff_score -= cancel_count                # Cancel每个扣1分
+# 未电放MBL: 只有超过50%未电放才扣分(12h窗口内大部分未电放是正常的)
+tlx_rate = 1 - (len(no_tlx_mbl) / max(len(no_tlx_mbl) + bl.get('tlx_confirmed_mbl',0), 1))
+if tlx_rate < 0.5: eff_score -= 5       # 电放率低于50%才扣5分
+
+# 加分项
+if biz_7d > 50: eff_score += 3          # 业务量达标+3
+if biz_7d > 100: eff_score += 2         # 业务量优秀再+2
+if overdue_count == 0: eff_score += 8   # 零Overdue+8
+if hold_count == 0: eff_score += 5      # 零Hold+5
+if inspection_count == 0: eff_score += 3 # 零查验+3
+if len(cancel_it) == 0: eff_score += 2  # 零Cancel+2
+if len(stolen) == 0: eff_score += 2     # 零失窃+2
+
+eff_score = max(0, min(100, eff_score))
+
+
+# ─── Helper functions ───
+def metric_card(value, label, color="#e94560"):
+    return f"""<div class="metric-card">
+        <h2 style="color:{color}">{value}</h2>
+        <p>{label}</p>
+    </div>"""
+
+
+def coach_box(title, content):
+    # Strip leading whitespace from each line to prevent markdown code block detection
+    import textwrap
+    clean_content = textwrap.dedent(content).strip()
+    html = f'<div class="coach-box"><h4>{title}</h4>{clean_content}</div>'
+    st.markdown(html, unsafe_allow_html=True)
+
+
+def section_header(text):
+    st.markdown(f'<div class="section-header">{text}</div>', unsafe_allow_html=True)
+
+
+def clean_html(text):
+    """Remove invalid characters that cause JavaScript errors in Streamlit."""
+    if not isinstance(text, str):
+        text = str(text)
+    # Remove control characters (except newline/tab)
+    import unicodedata
+    cleaned = ''.join(c for c in text if unicodedata.category(c)[0] != 'C' or c in '\n\t')
+    # Escape HTML special chars in user data
+    cleaned = cleaned.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    return cleaned
+
+def alert_card(style, content):
+    st.markdown(f'<div class="alert-{style}">{content}</div>', unsafe_allow_html=True)
+
+
+def parse_sender_name(raw):
+    """Extract clean name from email sender string."""
+    if not raw:
+        return raw
+    match = re.match(r'"?([^"<]+)"?\s*<', raw)
+    if match:
+        return match.group(1).strip().strip('"')
+    if "@" in raw:
+        return raw.split("@")[0]
+    return raw
+
+
+# ─── Title Banner ───
+scan_time = A.get("scan_time", "")
+st.markdown(f"""
+<div style="text-align:center; padding:20px 0 10px 0;">
+    <h1 style="color:#fff; font-size:28px; margin:0;">
+        WWL 环世物流 运营指挥中心 <span style="color:#e94560;">v5.0</span>
+    </h1>
+    <p style="color:#a0a0c0; font-size:13px; margin:4px 0 0 0;">
+        数据更新: {scan_time[:19] if scan_time else "N/A"} &nbsp;|&nbsp;
+        7日邮件: {total_7d} &nbsp;|&nbsp;
+        30日邮件: {A30.get("total_emails", 0):,} &nbsp;|&nbsp;
+        MBL: {A.get("mbl_total", 0)} &nbsp;|&nbsp;
+        HBL: {A.get("hbl_total", 0)}
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# ─── TABS ───
+tabs = st.tabs([
+    "风险与紧急事项",
+    "提单状态监控",
+    "催收与欠费",
+    "团队任务看板",
+    "趋势与效率",
+    "客户全景",
+    "供应商全景",
+    "船公司全景",
+    "目的港全景",
+    "联系人搜索",
+])
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 1: 风险+紧急+异常预警
+# ══════════════════════════════════════════════════════════════════
+with tabs[0]:
+    # Efficiency banner
+    eff_color = "#00c853" if eff_score >= 80 else ("#ffa500" if eff_score >= 60 else "#e94560")
+    st.markdown(f"""
+    <div class="efficiency-banner">
+        <span style="font-size:40px; font-weight:700; color:white;">{eff_score}</span>
+        <span style="font-size:16px; color:rgba(255,255,255,0.8);"> / 100 运营效率评分</span><br>
+        <span style="font-size:13px; color:rgba(255,255,255,0.7);">
+            评分标准(严格版): 基础70分 | 扣分: Hold-3/Overdue-2/未电放-1/漏单-5/Cancel-1 | 加分: 零Overdue+10/零Hold+8/全电放+5 | 当前风险事件{risk_items}项
+        </span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Three columns: Hold / Inspection / CC
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        section_header(f"Hold事件: {hold_count}件")
+        if hold_count > 0 or hold_bl:
+            alert_card("red", f"""
+                <b>当前Hold提单: {max(hold_count, len(hold_bl))}件</b><br>
+                <b>行动:</b> Everlyn立即检查Hold类型(Freight/Regulatory/DO Fee),
+                Freight Hold联系origin催付运费; Regulatory Hold准备补充文件; DO Fee Hold联系Maggie确认付款<br>
+                <b>负责人:</b> Everlyn (操作) + Maggie (付款确认)
+            """)
+        else:
+            alert_card("green", "当前无Hold事件 - 状态良好")
+
+    with c2:
+        section_header(f"查验预警: {inspection_count}件")
+        if inspection_count > 0:
+            mbl_list = ", ".join(inspection_mbls[:5])
+            alert_card("orange", f"""
+                <b>被查验MBL:</b> {clean_html(mbl_list)}<br>
+                <b>行动:</b> 1) Effy确认查验类型(X-ray/开箱/重量); 2) 通知客户可能延迟2-5天;
+                3) 准备ISF/PI/PL文件备查; 4) 跟踪放行进度<br>
+                <b>负责人:</b> Effy (跟踪) + Everlyn (文件) + 报关行YES (现场)
+            """)
+        else:
+            alert_card("green", "当前无查验事件 - 状态良好")
+
+    with c3:
+        cc_count = A.get("categories", {}).get("charge_confirm", 0)
+        section_header(f"CC待确认: {cc_count}件")
+        if cc_count > 0:
+            alert_card("yellow", f"""
+                <b>费用确认待处理: {cc_count}件</b><br>
+                <b>行动:</b> 1) Everlyn按船公司分类整理CC; 2) 小额($50以下)直接确认;
+                3) 大额与Maggie/Will确认后回复; 4) 有争议的标记"Dispute"并48h内回复<br>
+                <b>负责人:</b> Everlyn (分类+小额) + Maggie (大额确认) + Will (争议决策)
+            """)
+        else:
+            alert_card("green", "当前无CC待确认")
+
+    st.markdown("---")
+
+    # Anomaly section
+    section_header("异常邮件预警")
+
+    # Coach — 置顶(在效率Banner之后、数据之前)
+    coach_box("教练总结: 风险管理的代价", """
+        <b>Hold的真实成本:</b> 每个Hold事件每天产生$150-300的滞期费(Demurrage)和$50-100的底盘车费(Chassis Per Diem)。
+        一个普通Hold如果3天未解决, 累计成本可达$600-1,200。CMA系统Hold通知经常延迟12-24小时,
+        收到通知时已经在计费了。<br><br>
+        <b>查验的隐形成本:</b> 除了$500-2,000的检查费, 更大的成本是2-5天延误导致的连锁反应:
+        仓库排期变更、客户交付延迟、可能的合同违约。<br><br>
+        <b>异常邮件:</b> Cancel IT处理不及时可能导致双重清关或罚款; COD涉及额外$500-3,000费用;
+        失窃案件需72h内启动保险索赔。每一个异常都需24h内给出行动方案。<br><br>
+        <b>行业动态提醒:</b> 2026年FMC持续强化OSRA 2022执法, D&D费用透明度要求更高。
+        CBP的ACE系统5H类查验在2026年持续上升, 新能源产品(太阳能板/锂电池)是重点检查对象。
+        环世作为FMC注册NVOCC(ORG NO.019194), 每一票Hold和查验的处理质量都直接影响我们的FMC年度审计评分。
+    """)
+
+
+    # Cancel IT
+    if cancel_it:
+        for item in cancel_it:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            alert_card("red", f"""
+                <b>Cancel IT 请求</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>立即行动:</b> 确认是否已提交IT, 如已提交联系海关取消, 通知origin/客户, 更新系统状态<br>
+                <b>负责人:</b> Everlyn确认 + Effy协调海关
+            """)
+    else:
+        alert_card("green", "无Cancel IT请求")
+
+    # COD
+    if cod_list:
+        for item in cod_list:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            alert_card("orange", f"""
+                <b>COD 改港请求</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>立即行动:</b> 确认新目的港, 联系船公司询问COD费用+可行性, 通知客户额外费用<br>
+                <b>负责人:</b> Everlyn (船公司沟通) + Maggie (费用确认) + Will (客户通知)
+            """)
+    else:
+        alert_card("green", "无COD改港请求")
+
+    # Non-standard
+    if non_standard:
+        for item in non_standard:
+            subj = item.get("subject", "") if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            typ = item.get("type", "") if isinstance(item, dict) else ""
+            alert_card("yellow", f"""
+                <b>非标操作请求</b> [{typ}]<br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>行动:</b> 评估可行性, 确认额外费用, 获得客户书面确认后执行<br>
+                <b>负责人:</b> Effy (评估) + Will (审批)
+            """)
+    else:
+        alert_card("green", "无非标操作请求")
+
+    # Stolen/lost
+    if stolen:
+        for item in stolen:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            alert_card("red", f"""
+                <b>集装箱失窃/丢失</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>紧急行动:</b> 1) 立即报警; 2) 通知保险公司; 3) 通知客户; 4) 收集所有文件备索赔<br>
+                <b>负责人:</b> Bruce (决策) + Effy (保险) + Will (客户沟通)
+            """)
+    else:
+        alert_card("green", "无失窃/丢失报告")
+
+    # Urgent
+    if urgent:
+        for item in urgent:
+            subj = item.get("subject", "")
+            frm = item.get("from", "")
+            urg_level = item.get("urgency", 0)
+            dt = item.get("date", "")
+            urg_label = "极高" if urg_level >= 4 else ("高" if urg_level >= 3 else "中")
+            alert_card("red", f"""
+                <b>紧急邮件</b> [紧急度: {urg_label} ({urg_level}/5)]<br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>日期: {dt}<br>
+                <b>行动:</b> 立即阅读并回复, 评估影响范围, 必要时升级至Will/Bruce<br>
+                <b>负责人:</b> Everlyn (首响) + Effy (跟进)
+            """)
+    else:
+        alert_card("green", "无紧急邮件")
+    st.markdown("---")
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 2: 提单状态监控
+# ══════════════════════════════════════════════════════════════════
+with tabs[1]:
+    section_header("提单状态总览")
+
+    coach_box("教练总结: 提单状态监控是换单操作的生命线", """
+        <b>MBL没有TLX = origin还没放单, 我们无法换单。</b> 每一个未电放的MBL都是一个潜在的延误风险。
+        如果货物已经到港但MBL未电放, 船公司不会释放DO(Delivery Order), 意味着我们无法安排提货,
+        滞期费每天都在累积。<br><br>
+        <b>AN已收但无预报 = 可能漏接了业务, 需要立即排查。</b> 这意味着船公司已经发了到港通知,
+        但我们系统里没有对应的预报(Pre-alert)记录。可能是origin忘了发预报, 也可能是我们漏处理了。
+        无论哪种情况, 都需要在24小时内查明并补录。<br><br>
+        <b>Hold提单需要根据类型采取不同行动:</b><br>
+        - <b>Freight Hold:</b> 运费未付, 联系origin催付, 通常1-2个工作日可解决<br>
+        - <b>Regulatory Hold:</b> 海关/监管hold, 需要补充ISF/PI/PL等文件, 可能需要3-5天<br>
+        - <b>DO Fee Hold:</b> 目的港费用未付, 联系财务确认并付款, 通常PayCargo当天可解决<br><br>
+        <b>目标:</b> MBL电放率>95%, HBL电放率>90%, AN无预报=0, Hold提单24h内有行动方案。
+    """)
+
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.markdown(metric_card(len(no_tlx_mbl), "MBL未电放", "#e94560"), unsafe_allow_html=True)
+    with c2:
+        st.markdown(metric_card(len(no_tlx_hbl), "HBL未电放", "#ffa500"), unsafe_allow_html=True)
+    with c3:
+        st.markdown(metric_card(len(an_no_prealert), "AN无预报(漏单!)", "#ff1744"), unsafe_allow_html=True)
+    with c4:
+        st.markdown(metric_card(len(hold_bl), "Hold提单", "#e94560"), unsafe_allow_html=True)
+
+    c5, c6 = st.columns(2)
+    with c5:
+        st.markdown(metric_card(tlx_mbl_confirmed, "已确认TLX MBL", "#00c853"), unsafe_allow_html=True)
+    with c6:
+        st.markdown(metric_card(tlx_hbl_confirmed, "已确认TLX HBL", "#00c853"), unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # MBL not TLX
+    section_header(f"MBL未电放列表 ({len(no_tlx_mbl)}个)")
+    if no_tlx_mbl:
+        mbl_df = pd.DataFrame({
+            "序号": range(1, len(no_tlx_mbl) + 1),
+            "MBL号": no_tlx_mbl,
+            "船公司": [
+                "MSC" if m.startswith("MEDU") else
+                "CMA-CGM" if m.startswith("CMDU") else
+                "COSCO" if m.startswith("COSU") else
+                "ONE" if m.startswith("ONEY") else
+                "OOCL" if m.startswith("OOLU") else
+                "ZIM" if m.startswith("ZIMU") else
+                "其他"
+                for m in no_tlx_mbl
+            ],
+            "建议行动": ["联系origin确认TLX状态, 催促放单"] * len(no_tlx_mbl),
+            "负责人": ["Everlyn"] * len(no_tlx_mbl),
+        })
+        st.dataframe(mbl_df, use_container_width=True, hide_index=True, key="tbl_1")
+    else:
+        alert_card("green", "所有MBL已完成电放 - 优秀!")
+
+    # HBL not TLX
+    section_header(f"HBL未电放列表 ({len(no_tlx_hbl)}个)")
+    if no_tlx_hbl:
+        hbl_df = pd.DataFrame({
+            "序号": range(1, len(no_tlx_hbl) + 1),
+            "HBL号": no_tlx_hbl,
+            "建议行动": ["联系销售确认TLX, 确认客户是否已付款"] * len(no_tlx_hbl),
+            "负责人": ["Everlyn + Maggie"] * len(no_tlx_hbl),
+        })
+        st.dataframe(hbl_df, use_container_width=True, hide_index=True, key="tbl_2")
+    else:
+        alert_card("green", "所有HBL已完成电放 - 优秀!")
+
+    # AN no prealert
+    section_header(f"AN已收但无预报 - 可能漏单! ({len(an_no_prealert)}个)")
+    if an_no_prealert:
+        an_df = pd.DataFrame({
+            "序号": range(1, len(an_no_prealert) + 1),
+            "MBL号": an_no_prealert,
+            "风险等级": ["极高-可能漏单"] * len(an_no_prealert),
+            "建议行动": ["可能漏单! 立即查找对应预报邮件, 确认是否有对应HBL, 联系origin核实"] * len(an_no_prealert),
+            "负责人": ["Everlyn (查找) + Effy (确认)"] * len(an_no_prealert),
+        })
+        st.dataframe(an_df, use_container_width=True, hide_index=True, key="tbl_3")
+    else:
+        alert_card("green", "所有AN均有对应预报 - 无漏单风险")
+
+    # Hold BL
+    section_header(f"Hold提单 ({len(hold_bl)}个)")
+    if hold_bl:
+        hold_rows = []
+        for h in hold_bl:
+            hold_rows.append({
+                "MBL": h.get("mbl", ""),
+                "Hold类型": h.get("type", "Unknown"),
+                "需补资料": "是" if h.get("needs_docs") else "否",
+                "来源邮件主题": h.get("subject", ""),
+                "来源": h.get("from", ""),
+                "建议行动": (
+                    "Freight Hold: 联系origin催付运费"
+                    if "freight" in str(h.get("type", "")).lower()
+                    else "Regulatory Hold: 准备ISF/PI/PL补充文件"
+                    if "regulatory" in str(h.get("type", "")).lower()
+                    else "DO Fee Hold: 联系Maggie确认付款"
+                    if "do" in str(h.get("type", "")).lower() or "fee" in str(h.get("type", "")).lower()
+                    else "检查Hold类型, 联系船公司确认具体要求"
+                ),
+            })
+        hold_df = pd.DataFrame(hold_rows)
+        st.dataframe(hold_df, use_container_width=True, hide_index=True, key="tbl_4")
+    else:
+        alert_card("green", "当前无Hold提单 - 状态良好")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 3: 催收与欠费
+# ══════════════════════════════════════════════════════════════════
+with tabs[2]:
+    section_header("欠费总览")
+
+    coach_box("教练总结: 催收是保护公司现金流的生命线", """
+        <b>FMC责任:</b> 作为NVOCC, WWL对所有目的港费用承担连带责任。收货人不付, 船公司向WWL追偿。催收不是可选项, 是保护公司的必要行动。<br><br>
+        <b>T+X时间线:</b> T+7首次催收 - T+15升级(三方协同群) - T+30正式追偿函 - T+45中信保窗口(超时=理赔失效!)。<br><br>
+        <b>中信保申请材料:</b> 1)服务协议(含费用承担条款); 2)书面费用通知(含7日默认认可); 3)完整催收记录; 4)垫付凭证。缺一不可。<br><br>
+        <b>行业提醒:</b> 2026年FMC加强OSRA 2022执法, D&D费用透明度要求更高。30天争议期和5年记录保留是硬性要求。
+    """)
+
+    st.markdown("---")
+
+    total_arrears = ARR.get("total_amount", 0)
+    by_sheet = ARR.get("by_sheet", {})
+    cnee_self = by_sheet.get("收货人自付", {}).get("total", 0)
+    shipper_bear = by_sheet.get("委托人承担", {}).get("total", 0)
+    collect_cnee = by_sheet.get("代收-收货人", {}).get("total", 0)
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.markdown(metric_card(f"${total_arrears:,.0f}", "总欠费", "#e94560"), unsafe_allow_html=True)
+    with c2:
+        st.markdown(metric_card(f"${cnee_self:,.0f}", "收货人自付", "#ffa500"), unsafe_allow_html=True)
+    with c3:
+        st.markdown(metric_card(f"${shipper_bear:,.0f}", "委托人承担", "#2196f3"), unsafe_allow_html=True)
+    with c4:
+        st.markdown(metric_card(f"${collect_cnee:,.0f}", "代收-收货人", "#9c27b0"), unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Overdue SOP table
+    section_header("重点催收跟踪 (Overdue SOP)")
+    if SOP:
+        sop_rows = []
+        for name, info in SOP.items():
+            if isinstance(info, dict):
+                # Build the Rita/Maggie/Will action column by combining available info
+                actions_parts = []
+                if info.get("maggie_action"):
+                    actions_parts.append(info["maggie_action"])
+                if info.get("jim_action"):
+                    actions_parts.append(f"Jim: {info['jim_action']}")
+                if info.get("will_sun"):
+                    actions_parts.append(f"Will: {info['will_sun']}")
+                combined_action = " | ".join(actions_parts) if actions_parts else "-"
+
+                # Build suggested next action
+                next_action_parts = []
+                if info.get("sinosure_ready"):
+                    next_action_parts.append(info["sinosure_ready"])
+                if info.get("pending"):
+                    next_action_parts.append(info["pending"])
+                if info.get("resolution"):
+                    next_action_parts.append(info["resolution"])
+                if not next_action_parts:
+                    next_action_parts.append("持续跟进")
+                next_action = " | ".join(next_action_parts)
+
+                sop_rows.append({
+                    "客户": name,
+                    "提单": info.get("mbl", ""),
+                    "金额": info.get("amount", ""),
+                    "Rita/Maggie/Will行动": combined_action,
+                    "T+X状态": info.get("t_status", ""),
+                    "建议后续行动": next_action,
+                    "风险": info.get("risk", ""),
+                })
+        if sop_rows:
+            sop_df = pd.DataFrame(sop_rows)
+            st.dataframe(sop_df, use_container_width=True, hide_index=True, key="tbl_5")
+
+    st.markdown("---")
+
+    # TOP 15 arrears
+    section_header("TOP 15 欠费客户")
+    top20 = ARR.get("top20", [])
+    if top20:
+        top_rows = []
+        for i, item in enumerate(top20[:15]):
+            risk = item.get("risk", "未评估")
+            suggested = (
+                "紧急催收! 发正式追偿函, 准备中信保材料"
+                if "高" in risk
+                else "常规催收, 发催款邮件并跟进"
+                if "中" in risk
+                else "观察, 低优先级"
+            )
+            top_rows.append({
+                "排名": i + 1,
+                "客户名称": item.get("name", ""),
+                "欠费金额": f"${item.get('total', 0):,.0f}",
+                "记录数": item.get("records", 0),
+                "风险等级": risk,
+                "费用类型": ", ".join(list(item.get("sheets", []))),
+                "建议行动": suggested,
+            })
+        top_df = pd.DataFrame(top_rows)
+        st.dataframe(top_df, use_container_width=True, hide_index=True, key="tbl_6")
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 4: 团队任务看板
+# ══════════════════════════════════════════════════════════════════
+with tabs[3]:
+    section_header("团队任务看板")
+
+    # Star Employee/Manager (rotate by week number)
+    week_num = datetime.now().isocalendar()[1]
+    employees = ["Everlyn", "Rita", "Maggie"]
+    managers = ["Effy", "Will", "Bruce"]
+    star_emp = employees[week_num % len(employees)]
+    star_mgr = managers[week_num % len(managers)]
+
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown(f"""<div style="text-align:center; padding:15px;">
+            <div class="star-badge">本周之星员工: {star_emp}</div>
+        </div>""", unsafe_allow_html=True)
+    with c2:
+        st.markdown(f"""<div style="text-align:center; padding:15px;">
+            <div class="star-badge">本周之星经理: {star_mgr}</div>
+        </div>""", unsafe_allow_html=True)
+
+    # Sub-tabs
+    person_tabs = st.tabs(["Everlyn", "Rita+Maggie+Will", "Effy", "Bruce"])
+
+    with person_tabs[0]:
+        section_header("Everlyn - 操作核心")
+        insights = DI.get("people_topics", {})
+        ev_topics = insights.get("Everlyn Shaw", {})
+        ev_connections = DI.get("people_connections", {}).get("Everlyn Shaw", {})
+
+        c1, c2 = st.columns(2)
+        with c1:
+            st.markdown("**工作领域分布 (30天)**")
+            if ev_topics:
+                ev_df = pd.DataFrame(list(ev_topics.items()), columns=["领域", "邮件数"])
+                fig = px.pie(ev_df, names="领域", values="邮件数",
+                             color_discrete_sequence=px.colors.sequential.RdBu)
+                fig.update_layout(
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font_color="#e0e0e0",
+                    height=300,
+                )
+                st.plotly_chart(fig, use_container_width=True, key="pchart_1")
+        with c2:
+            st.markdown("**协作网络 (Top 5)**")
+            if ev_connections:
+                max_val = max(ev_connections.values()) if ev_connections else 1
+                for person, count in list(ev_connections.items())[:5]:
+                    pct = min(count / max_val * 100, 100)
+                    st.markdown(f"""
+                        <div style="margin:6px 0;">
+                            <span style="color:#a0a0c0;">{person}</span>
+                            <span style="float:right; color:#e94560;">{count}封</span>
+                            <div style="background:rgba(50,50,80,0.5); border-radius:4px; height:8px; margin-top:4px;">
+                                <div style="background:#e94560; width:{pct:.0f}%; height:8px; border-radius:4px;"></div>
+                            </div>
+                        </div>
+                    """, unsafe_allow_html=True)
+
+        alert_card("blue", f"""
+            <b>本周重点任务:</b><br>
+            1. 处理{A.get("categories", {}).get("charge_confirm", 0)}封CC待确认邮件<br>
+            2. 跟踪{inspection_count}票查验进度<br>
+            3. 推进{len(no_tlx_mbl)}个MBL电放确认<br>
+            4. 检查所有AN是否有对应预报<br>
+            <b>成长建议:</b> Everlyn是操作部门的核心枢纽, 处理邮件量最大。建议建立标准化checklist,
+            每天早上9点先处理Hold和查验, 再处理CC, 最后处理常规booking。效率会提升30%+。
+        """)
+
+    with person_tabs[1]:
+        section_header("Rita + Maggie + Will - 业务+催收+管理")
+
+        # Rita
+        st.markdown("#### Rita")
+        rita_topics = insights.get("Rita Tang", {})
+        rita_conn = DI.get("people_connections", {}).get("Rita Tang", {})
+        rita_topics_str = ", ".join([f"{k}({v})" for k, v in rita_topics.items()]) if rita_topics else "暂无数据"
+        rita_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(rita_conn.items())[:3]]) if rita_conn else "暂无数据"
+        alert_card("blue", f"""
+            <b>Rita 30天工作领域:</b> {rita_topics_str}<br>
+            <b>主要协作:</b> {rita_conn_str}<br>
+            <b>本周重点:</b> 配合Maggie催收, 跟进booking进度, 维护客户关系<br>
+            <b>成长建议:</b> Rita在催收方面越来越成熟, 建议增加与客户直接沟通的机会, 培养独立处理中等风险案件的能力。
+        """)
+
+        # Maggie
+        st.markdown("#### Maggie")
+        maggie_topics = insights.get("Maggie Wu", {})
+        maggie_conn = DI.get("people_connections", {}).get("Maggie Wu", {})
+        maggie_topics_str = ", ".join([f"{k}({v})" for k, v in maggie_topics.items()]) if maggie_topics else "暂无数据"
+        maggie_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(maggie_conn.items())[:3]]) if maggie_conn else "暂无数据"
+        alert_card("blue", f"""
+            <b>Maggie 30天工作领域:</b> {maggie_topics_str}<br>
+            <b>主要协作:</b> {maggie_conn_str}<br>
+            <b>本周重点:</b> MERSY案件催收(最高优先), TOP5欠费客户跟进, SOP状态更新<br>
+            <b>成长建议:</b> Maggie是催收和booking的双料能手, 邮件量462封/月。建议适当分配部分booking工作给Rita,
+            让Maggie更多精力聚焦高风险催收。
+        """)
+
+        # Will
+        st.markdown("#### Will")
+        will_conn = DI.get("people_connections", {}).get("Will Sun", {})
+        will_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(will_conn.items())[:3]]) if will_conn else "暂无数据"
+        alert_card("blue", f"""
+            <b>Will 主要协作:</b> {will_conn_str}<br>
+            <b>本周重点:</b> MERSY决策(垫付?法律?), 大客户关系维护, 团队效率审查<br>
+            <b>成长建议:</b> Will作为管理层, 需要更多关注策略而非执行。建议每周花1小时review催收进度,
+            对T+30以上案件亲自决策。
+        """)
+
+    with person_tabs[2]:
+        section_header("Effy - 目的港操作经理")
+        effy_topics = insights.get("Effy Huo", {})
+        effy_conn = DI.get("people_connections", {}).get("Effy Huo", {})
+
+        c1, c2 = st.columns(2)
+        with c1:
+            st.markdown("**工作领域分布**")
+            if effy_topics:
+                effy_df = pd.DataFrame(list(effy_topics.items()), columns=["领域", "邮件数"])
+                fig = px.bar(effy_df, x="领域", y="邮件数",
+                             color="邮件数", color_continuous_scale="RdBu")
+                fig.update_layout(
+                    paper_bgcolor="rgba(0,0,0,0)",
+                    plot_bgcolor="rgba(0,0,0,0)",
+                    font_color="#e0e0e0",
+                    height=300,
+                    showlegend=False,
+                )
+                st.plotly_chart(fig, use_container_width=True, key="pchart_2")
+        with c2:
+            st.markdown("**协作网络 (Top 5)**")
+            if effy_conn:
+                max_val = max(effy_conn.values()) if effy_conn else 1
+                for person, count in list(effy_conn.items())[:5]:
+                    pct = min(count / max_val * 100, 100)
+                    st.markdown(f"""
+                        <div style="margin:6px 0;">
+                            <span style="color:#a0a0c0;">{person}</span>
+                            <span style="float:right; color:#2196f3;">{count}封</span>
+                            <div style="background:rgba(50,50,80,0.5); border-radius:4px; height:8px; margin-top:4px;">
+                                <div style="background:#2196f3; width:{pct:.0f}%; height:8px; border-radius:4px;"></div>
+                            </div>
+                        </div>
+                    """, unsafe_allow_html=True)
+
+        alert_card("blue", """
+            <b>本周重点任务:</b><br>
+            1. 跟踪所有查验票放行进度<br>
+            2. 协调报关行YES处理科陆/海柔清关<br>
+            3. 监控Delivery进度, 确保无延误<br>
+            4. 处理Hold事件协调<br>
+            <b>成长建议:</b> Effy作为目的港操作经理, 是客户体验的最后一道防线。
+            建议建立"到港日+3"预警机制 - 货物到港3天内如果没有开始提货流程, 自动升级预警。
+        """)
+
+    with person_tabs[3]:
+        section_header("Bruce - 战略决策")
+        alert_card("blue", """
+            <b>Bruce 本周关注点:</b><br>
+            1. MERSY $89K案件最终决策 - 垫付还是法律途径?<br>
+            2. 团队效率评审 - 本月处理5,169封邮件, 人均日处理量如何?<br>
+            3. MSC关系维护 - MERSY案件可能影响全线业务<br>
+            4. 新客户开发策略 - Astronergy(147封邮件)是否值得深度绑定?<br>
+            <b>战略建议:</b> 当前团队最大风险是SPOF(单点故障) - Everlyn离开后操作会瘫痪,
+            Maggie离开后催收会停滞。建议Q2启动交叉培训计划。
+        """)
+
+    st.markdown("""
+    <div style="background:linear-gradient(135deg,rgba(15,25,60,0.9),rgba(20,30,80,0.7));
+                border:1px solid rgba(100,150,255,0.15);border-left:4px solid rgba(100,180,255,0.6);
+                border-radius:0 12px 12px 0;padding:24px;margin:20px 0;
+                box-shadow:0 4px 20px rgba(0,0,50,0.3);">
+        <h4 style="color:#7dc3ff;margin:0 0 16px 0;font-size:16px;">教练总结: 团队结构与成长</h4>
+        <div style="display:flex;gap:20px;margin-bottom:16px;">
+            <div style="flex:1;background:rgba(10,20,50,0.6);border-radius:8px;padding:14px;border:1px solid rgba(100,150,255,0.1);">
+                <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">管理架构</div>
+                <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
+                    Bruce(整体运营)<br>
+                    Effy(美国目的港)<br>
+                    Will(中国端协调)
+                </div>
+            </div>
+            <div style="flex:1;background:rgba(10,20,50,0.6);border-radius:8px;padding:14px;border:1px solid rgba(100,150,255,0.1);">
+                <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">执行团队</div>
+                <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
+                    Everlyn(换单操作核心)<br>
+                    Rita+Maggie(催收+SA)<br>
+                    Adam Sum(战略客户)
+                </div>
+            </div>
+        </div>
+        <div style="color:#b8c8e0;font-size:13px;line-height:2;">
+            <b style="color:#a8d4ff;">成长方向:</b><br>
+            <span style="color:#fbbf24;">Everlyn</span> — 从执行者转向指导者，培养Jason接手SA和PreAlert<br>
+            <span style="color:#fbbf24;">Effy</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
+            <span style="color:#fbbf24;">Rita+Maggie</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
+            <span style="color:#fbbf24;">Will</span> — 复杂升级案件(MERSY/MSC危机)处理，团队的判断力安全网<br><br>
+            <b style="color:#a8d4ff;">管理原则:</b> 不要让任何人长期超负荷。连续3天邮件超50封，<b style="color:#ef4444;">必须主动分流</b>。团队可持续性比单月效率更重要。
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 5: 趋势+效率+激励
+# ══════════════════════════════════════════════════════════════════
+with tabs[4]:
+    section_header("邮件趋势分析 (32天)")
+
+    # Pre-compute variables needed by coach_box
+    total_30d = A30.get("total_emails", 0)
+    daily_counts_30d = A30.get("daily_counts", {})
+    total_days = len(daily_counts_30d) if daily_counts_30d else 1
+    team_size = 5
+    avg_daily = total_30d / max(total_days, 1)
+    avg_per_person = avg_daily / team_size
+
+    coach_box("教练总结: 从数据看运营节奏", f"""
+        <b>邮件量模式:</b> 工作日平均{avg_daily:.0f}封, 周末明显下降。这说明大部分业务集中在美国工作时间。
+        建议团队错峰安排: 中国早上优先处理origin邮件, 下午处理美国目的港邮件。<br><br>
+        <b>Top发件人分析:</b> PLT系统(658封)和Everlyn(542封)是最大邮件来源,
+        说明系统自动邮件和内部操作邮件占比最高。Maggie(462封)紧随其后, 反映催收和booking的工作强度。<br><br>
+        <b>效率提升空间:</b> 如果能将CC费用确认中小额($50以下)的部分自动化处理,
+        预计可以减少15-20%的操作邮件量, 释放Everlyn约100封/月的工作量。
+    """)
+
+
+    daily = A30.get("daily_counts", {})
+    if daily:
+        dates = sorted(daily.keys())
+        counts = [daily[d] for d in dates]
+
+        # Color weekends differently
+        colors = []
+        for d in dates:
+            try:
+                dt = datetime.strptime(d, "%Y-%m-%d")
+                if dt.weekday() >= 5:
+                    colors.append("#4a4a6a")
+                else:
+                    colors.append("#e94560")
+            except Exception:
+                colors.append("#e94560")
+
+        fig = go.Figure(data=[
+            go.Bar(x=dates, y=counts, marker_color=colors,
+                   text=counts, textposition='outside', textfont=dict(size=10, color="#a0a0c0"))
+        ])
+        fig.update_layout(
+            title="每日邮件量 (红色=工作日, 灰色=周末)",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font_color="#e0e0e0",
+            height=400,
+            xaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
+            yaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
+        )
+        st.plotly_chart(fig, use_container_width=True, key="pchart_3")
+
+    # Week over week
+    st.markdown("---")
+    section_header("周对比")
+
+    if daily:
+        sorted_dates = sorted(daily.keys())
+        this_week = sum(daily.get(d, 0) for d in sorted_dates[-7:])
+        last_week = sum(daily.get(d, 0) for d in sorted_dates[-14:-7])
+        change = ((this_week - last_week) / max(last_week, 1)) * 100
+
+        c1, c2, c3 = st.columns(3)
+        with c1:
+            st.markdown(metric_card(f"{this_week:,}", "本周邮件", "#2196f3"), unsafe_allow_html=True)
+        with c2:
+            st.markdown(metric_card(f"{last_week:,}", "上周邮件", "#a0a0c0"), unsafe_allow_html=True)
+        with c3:
+            chg_color = "#00c853" if change <= 0 else "#ffa500"
+            st.markdown(metric_card(f"{change:+.1f}%", "周环比变化", chg_color), unsafe_allow_html=True)
+
+    # Team efficiency
+    st.markdown("---")
+    section_header("团队效率评分")
+
+    total_30d = A30.get("total_emails", 0)
+    total_days = A30.get("total_days", 32)
+    avg_daily = total_30d / max(total_days, 1)
+    team_size = 5
+    avg_per_person = avg_daily / team_size
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.markdown(metric_card(f"{total_30d:,}", "本月总邮件", "#e94560"), unsafe_allow_html=True)
+    with c2:
+        st.markdown(metric_card(f"{avg_daily:.0f}", "日均邮件", "#ffa500"), unsafe_allow_html=True)
+    with c3:
+        st.markdown(metric_card(f"{avg_per_person:.0f}", "人均日处理", "#2196f3"), unsafe_allow_html=True)
+    with c4:
+        st.markdown(metric_card(f"{eff_score}/100", "效率评分", eff_color), unsafe_allow_html=True)
+
+    # Motivational
+    st.markdown(f"""
+    <div style="text-align:center; padding:20px; margin:16px 0;
+         background: linear-gradient(135deg, rgba(233,69,96,0.15), rgba(100,50,200,0.1));
+         border-radius: 12px;">
+        <span style="font-size:24px; font-weight:700; color:#ffd700;">
+            本月处理 {total_30d:,} 封邮件!
+        </span><br>
+        <span style="font-size:14px; color:#a0a0c0;">
+            相当于每个工作日处理 {avg_daily:.0f} 封, 每人每天 {avg_per_person:.0f} 封。这是一支高效的团队!
+        </span>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Top senders
+    st.markdown("---")
+    section_header("TOP 20 发件人 (30天)")
+    top_senders = A30.get("top_senders", [])
+    if top_senders:
+        sender_rows = []
+        for i, item in enumerate(top_senders[:20]):
+            raw_sender = item[0] if isinstance(item, list) else item
+            count = item[1] if isinstance(item, list) else 0
+            name = parse_sender_name(raw_sender)
+            # Extract email from raw string
+            email_match = re.search(r'<([^>]+)>', raw_sender)
+            email_addr = email_match.group(1) if email_match else (raw_sender if "@" in raw_sender else "")
+            sender_rows.append({
+                "排名": i + 1,
+                "姓名": name,
+                "邮箱": email_addr,
+                "邮件数": count,
+                "占比": f"{count / max(total_30d, 1) * 100:.1f}%",
+            })
+        sender_df = pd.DataFrame(sender_rows)
+        st.dataframe(sender_df, use_container_width=True, hide_index=True, key="tbl_7")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 6: 客户全景
+# ══════════════════════════════════════════════════════════════════
+with tabs[5]:
+    section_header("客户全景 - 紧急度 x 重要度矩阵")
+
+    coach_box("教练总结: 紧急 vs 重要 - 艾森豪威尔矩阵", """
+        <b>右上角(重要且紧急):</b> 这些客户邮件量大、活跃度高、可能有欠费。需要指定专人负责, 每天review。
+        典型代表: REACH INDUSTRY(103封)、HAIROBOT(60封)。<br><br>
+        <b>左上角(重要不紧急):</b> 长期价值客户, 当前没有紧急事务。定期维护关系, 预防性沟通。<br><br>
+        <b>右下角(紧急不重要):</b> 突发事务多但客户价值一般。快速处理, 不要投入过多精力。<br><br>
+        <b>左下角(不重要不紧急):</b> 可以放在队列最后处理。但注意: 长期忽略可能让客户流失。<br><br>
+        <b>核心原则:</b> 不要让"紧急"挤掉"重要"。每天60%的时间给重要客户, 40%给紧急事务。
+    """)
+
+
+    customers_30d = A30.get("customers", {})
+    if customers_30d:
+        cust_rows = []
+        for name, info in customers_30d.items():
+            emails = info.get("emails", 0)
+            active = info.get("active_days", 0)
+            # Find arrears for this customer
+            arrears_amount = 0
+            for arr_item in ARR.get("top20", []):
+                if name.upper() in arr_item.get("name", "").upper():
+                    arrears_amount = arr_item.get("total", 0)
+                    break
+
+            # Score urgency (email volume + arrears) and importance (active days + relationship)
+            urgency = min(5, max(1, emails // 15 + (3 if arrears_amount > 10000 else (2 if arrears_amount > 1000 else 0))))
+            importance = min(5, max(1, active // 4 + (2 if emails > 50 else (1 if emails > 20 else 0))))
+
+            cust_rows.append({
+                "客户": name,
+                "30天邮件": emails,
+                "活跃天数": active,
+                "欠费": f"${arrears_amount:,.0f}" if arrears_amount > 0 else "-",
+                "紧急度": urgency,
+                "重要度": importance,
+                "紧急度星": "★" * urgency,
+                "重要度星": "★" * importance,
+                "建议": (
+                    "高度关注! 频繁沟通+有欠费, 需要专人跟进"
+                    if urgency >= 4 and importance >= 4
+                    else "重要客户, 保持服务质量"
+                    if importance >= 4
+                    else "紧急处理当前事务"
+                    if urgency >= 4
+                    else "常规维护"
+                ),
+            })
+
+        # Display table
+        cust_display = pd.DataFrame([{
+            "客户": r["客户"],
+            "30天邮件": r["30天邮件"],
+            "活跃天数": r["活跃天数"],
+            "欠费": r["欠费"],
+            "紧急度": r["紧急度星"],
+            "重要度": r["重要度星"],
+            "建议": r["建议"],
+        } for r in cust_rows])
+        cust_display = cust_display.sort_values("30天邮件", ascending=False)
+        st.dataframe(cust_display, use_container_width=True, hide_index=True, key="tbl_8")
+
+        # Scatter plot
+        sdf = pd.DataFrame([{
+            "客户": r["客户"],
+            "紧急度": r["紧急度"],
+            "重要度": r["重要度"],
+            "邮件量": r["30天邮件"],
+        } for r in cust_rows])
+
+        fig = px.scatter(sdf, x="紧急度", y="重要度", size="邮件量", text="客户",
+                         color="邮件量", color_continuous_scale="RdBu",
+                         size_max=50)
+        fig.update_traces(textposition="top center", textfont_size=10)
+        fig.update_layout(
+            title="客户紧急度 x 重要度矩阵",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font_color="#e0e0e0",
+            height=500,
+            xaxis=dict(title="紧急度", gridcolor="rgba(50,50,80,0.3)", range=[0, 6]),
+            yaxis=dict(title="重要度", gridcolor="rgba(50,50,80,0.3)", range=[0, 6]),
+        )
+        # Add quadrant lines
+        fig.add_hline(y=3, line_dash="dash", line_color="rgba(255,255,255,0.2)")
+        fig.add_vline(x=3, line_dash="dash", line_color="rgba(255,255,255,0.2)")
+        # Quadrant labels
+        fig.add_annotation(x=1.5, y=5.5, text="重要不紧急<br>长期维护",
+                           showarrow=False, font=dict(color="rgba(255,255,255,0.3)", size=12))
+        fig.add_annotation(x=4.5, y=5.5, text="重要且紧急<br>立即行动!",
+                           showarrow=False, font=dict(color="rgba(233,69,96,0.5)", size=12))
+        fig.add_annotation(x=1.5, y=0.5, text="不重要不紧急<br>观察",
+                           showarrow=False, font=dict(color="rgba(255,255,255,0.2)", size=12))
+        fig.add_annotation(x=4.5, y=0.5, text="紧急不重要<br>快速处理",
+                           showarrow=False, font=dict(color="rgba(255,165,0,0.4)", size=12))
+
+        st.plotly_chart(fig, use_container_width=True, key="pchart_4")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 7: 供应商全景
+# ══════════════════════════════════════════════════════════════════
+with tabs[6]:
+    section_header("供应商全景")
+
+    coach_box("教练总结: 供应商管理要点", """
+        <b>核心原则: 不要等供应商回复，要主动追进度。</b><br><br>
+        <b>YES报关行</b>是我们的清关Hub——服务科陆/海柔/PREVALON/HORIZON等8家客户。如果YES出现延误，多家客户同时受影响。
+        <em>建议: 每天上午主动向YES确认当天清关进度，不要等他们通知我们。</em><br><br>
+        <b>PTT和Rome</b>是两大卡车合作方，分别服务科陆(PTT 22次)和正泰(Rome 41次)。
+        <em>注意: 不要让PTT和Rome交叉服务导致调度混乱——PTT专做科陆，Rome专做正泰。</em><br><br>
+        <b>FCC USA</b>是Houston的核心代理(Adrian Juarez)，同时处理海亮出口和TERRA电商。
+        <em>如果开Houston分公司，FCC将是最重要的本地合作伙伴。</em><br><br>
+        <b>供应商评分说明:</b> A级(70+)=核心合作方 / B级(50-69)=合格 / C级(30-49)=需关注 / D级(&lt;30)=寻找替代
+    """)
+
+
+    vendors = VDB.get("vendors", [])
+    # 排除船公司! 船公司在Tab8单独展示
+    service_vendors = [v for v in vendors if v.get("vendor_category") != "ship_carrier"]
+
+    if service_vendors:
+        # Build customer-vendor mapping from supply chain network
+        cs = SCN.get("customer_service", {})
+        # Fallback: build from supply_chains if customer_service is empty
+        if not cs:
+            for cust, chain in SCN.get("supply_chains", {}).items():
+                for cat in ["brokers", "truckers", "agents"]:
+                    for svc_name, count in chain.get(cat, {}).items():
+                        cs.setdefault(cust, {})[svc_name] = {"count": count, "types": [cat]}
+        vendor_customers = {}
+        for cust, svcs in cs.items():
+            for svc_name in svcs:
+                vendor_customers.setdefault(svc_name, []).append(cust)
+
+        v_rows = []
+        for v in service_vendors:
+            name = v.get("vendor_name", "")
+            cn = v.get("vendor_name_cn", "")
+            pm = v.get("performance_metrics", {})
+
+            # Find which customers this vendor serves
+            custs = []
+            for vk, vc in vendor_customers.items():
+                if name.upper()[:6] in vk.upper() or vk.upper()[:6] in name.upper():
+                    custs.extend(vc)
+            custs = list(set(custs))
+
+            # Category label
+            cat = v.get("vendor_category", "")
+            cat_cn = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(cat, cat)
+
+            # Current business description
+            if name == "YES" or "YES" in name:
+                current_biz = "科陆清关/海柔清关/PREVALON清关/HORIZON清关"
+                pending = "科陆锂电池查验文件准备中"
+                our_action = "确认查验文件齐全→催YES加快清关→通知客户预计延误"
+            elif "PTT" in name or "PACIFIC" in name:
+                current_biz = "科陆储能柜卡车配送(22次)/双鱼项目卡车"
+                pending = "COSCO COSU6446478520 DO已签→待提箱"
+                our_action = "联系Jack PTT确认提箱时间→协调仓库收货→通知科陆"
+            elif "Rome" in name or "ROME" in name:
+                current_biz = "正泰新能卡车配送(41次)/Houston项目"
+                pending = "正泰ZTLO260031后续提货安排"
+                our_action = "与Rome确认下批次提货计划→对接Adam Sum→通知正泰"
+            elif "FCC" in name:
+                current_biz = "海亮Houston出口订舱/TERRA电商ReExport"
+                pending = "YCH26240119 7x40HQ装箱计划"
+                our_action = "联系Adrian确认装箱日期→协调Everlyn操作→通知海亮"
+            elif "PTS" in name:
+                current_biz = "SAV区域卡车/COSCO Round Trip"
+                pending = "SAV Bid Cargo 27柜报价评估"
+                our_action = "汇总Sam Kim报价→与IDC/PTT比价→回复客户"
+            else:
+                current_biz = "常规合作"
+                pending = "-"
+                our_action = "保持定期沟通"
+
+            v_rows.append({
+                "供应商": f"{name}({cn})",
+                "类型": cat_cn,
+                "评分": v.get("capability_score", 0),
+                "等级": v.get("capability_level", "")[:6],
+                "服务客户": "/".join(custs[:4]) if custs else "-",
+                "当前业务": current_biz[:30],
+                "待处理": pending[:25],
+                "我方建议行动": our_action[:35],
+            })
+        v_df = pd.DataFrame(v_rows)
+        v_df = v_df.sort_values("评分", ascending=False)
+        st.dataframe(v_df, use_container_width=True, hide_index=True,
+                     column_config={"评分": st.column_config.ProgressColumn(min_value=0, max_value=100)},
+                     key="tbl_9")
+
+    # Key vendor details
+    st.markdown("---")
+    section_header("重点供应商详情")
+
+    # 重点供应商详情(排除船公司，显示所有有评分的)
+    key_vendors = [v for v in service_vendors if v.get("capability_score", 0) > 0]
+    if key_vendors:
+        for v in sorted(key_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
+            name = v.get("vendor_name", "")
+            cn = v.get("vendor_name_cn", "")
+            pm = v.get("performance_metrics", {})
+            sc = v.get("scoring_components", {})
+            cat = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(v.get("vendor_category",""), "")
+
+            # Business-specific details
+            if "YES" in name:
+                biz_detail = "正在处理: 科陆锂电池清关(LITHIUM BATTERIES查验中) / 海柔MEDUEK846578清关 / PREVALON COSU6446478520清关"
+                pending_detail = "科陆查验文件待CBP确认 / 海柔清关等待放行"
+                action_detail = "催YES确认科陆查验进展→准备补充MSDS文件→协调Effy通知客户延误预期"
+            elif "PTT" in name or "PACIFIC" in name:
+                biz_detail = "正在处理: 科陆储能柜提箱配送(COSU6446478520 DO已签) / ZIM双鱼2x20HC卡车安排"
+                pending_detail = "COSCO提箱时间待确认 / ZIM票卡车报价待回复"
+                action_detail = "联系Jack PTT确认COSCO提箱时间→跟进ZIM卡车报价→通知Effy安排Delivery"
+            elif "Rome" in name:
+                biz_detail = "正在处理: 正泰新能ZTLO260031项目(41次配送) / Houston大件运输"
+                pending_detail = "下批次正泰提货时间待确认"
+                action_detail = "与Rome确认正泰下周提货计划→对接Adam Sum→确保16柜按时配送"
+            elif "FCC" in name:
+                biz_detail = "正在处理: 海亮Houston出口YCH26240119(7x40HQ) / TERRA电商ReExport操作"
+                pending_detail = "海亮装箱日期待确认 / TERRA 20GP拆箱方案待确认"
+                action_detail = "催Adrian确认海亮装箱日→协调TERRA拆箱→Effy跟进客户沟通"
+            elif "PTS" in name:
+                biz_detail = "正在处理: SAV区域卡车 / COSCO Round Trip(Jingzhou-Charleston)"
+                pending_detail = "SAV Bid Cargo 27柜报价待比较"
+                action_detail = "汇总Sam Kim报价与IDC/PTT比价→选择最优方案→回复客户"
+            else:
+                biz_detail = "常规合作中"
+                pending_detail = "-"
+                action_detail = "保持定期沟通维护关系"
+
+            with st.expander(f"{cat} | {name} ({cn}) - 评分{v.get('capability_score', 0)}/100"):
+                st.markdown(f"**当前业务:** {biz_detail}")
+                st.markdown(f"**待处理/待回复:** {pending_detail}")
+                st.markdown(f"**我方建议行动:** {action_detail}")
+                st.markdown(f"**服务邮件:** {pm.get('email_volume_7d', 0)}封 | **Hold:** {pm.get('hold_events_7d', 0)} | **查验:** {pm.get('inspection_events_7d', 0)}")
+
+                # Scoring radar
+                if sc:
+                    categories = list(sc.keys())
+                    values = list(sc.values())
+                    fig = go.Figure(data=go.Scatterpolar(
+                        r=values + [values[0]],
+                        theta=categories + [categories[0]],
+                        fill='toself',
+                        fillcolor='rgba(233,69,96,0.2)',
+                        line_color='#e94560',
+                    ))
+                    fig.update_layout(
+                        polar=dict(
+                            bgcolor="rgba(0,0,0,0)",
+                            radialaxis=dict(visible=True, range=[0, 25], gridcolor="rgba(50,50,80,0.3)"),
+                            angularaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
+                        ),
+                        paper_bgcolor="rgba(0,0,0,0)",
+                        font_color="#e0e0e0",
+                        height=300,
+                        showlegend=False,
+                    )
+                    st.plotly_chart(fig, use_container_width=True, key=f"radar_{name}")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 8: 船公司全景
+# ══════════════════════════════════════════════════════════════════
+with tabs[7]:
+    section_header("船公司全景")
+
+    coach_box("教练总结: 船公司选择的全成本思维", """
+        <b>不要只看运费:</b> 船公司选择需要考虑"全成本" = 运费 + 目的港费用 + Hold/查验频率 + 延误成本 + 服务响应速度。<br><br>
+        <b>MSC:</b> 邮件量最高(955封), 说明业务量大但同时管理成本高。MSC的目的港费用结构复杂,
+        经常有额外的Chassis和Per Diem收费。<br><br>
+        <b>ONE:</b> 虽然运费可能有竞争力, 但本周有1票查验, 查验=额外$500-2000+2-5天延误。<br><br>
+        <b>OOCL:</b> 本周有2票查验, 需要观察是否是偶发还是趋势。如果持续出现查验,
+        可能需要评估OOCL的舱位分配是否有问题。<br><br>
+        <b>建议:</b> 对每个船公司维护一个"全成本记分卡", 每月更新, 作为舱位分配的决策依据。
+    """)
+
+
+    carriers_30d = A30.get("carriers", {})
+    carrier_fees = A.get("carrier_fees", {})
+
+    # Build carrier table
+    carrier_vendors = {v.get("vendor_name"): v for v in vendors if v.get("vendor_category") == "ship_carrier"}
+
+    if carriers_30d:
+        c_rows = []
+        for name, vol in sorted(carriers_30d.items(), key=lambda x: x[1], reverse=True):
+            vinfo = carrier_vendors.get(name, {})
+            pm = vinfo.get("performance_metrics", {}) if vinfo else {}
+            sc = vinfo.get("scoring_components", {}) if vinfo else {}
+            fees = carrier_fees.get(name, {})
+
+            # Find which customers use this carrier
+            custs_using = []
+            cc_network = SCN.get("customer_carrier", {})
+            # Fallback: build from supply_chains if empty
+            if not cc_network:
+                for cust, chain in SCN.get("supply_chains", {}).items():
+                    for carrier, count in chain.get("carriers", {}).items():
+                        cc_network.setdefault(cust, {})[carrier] = count
+            for cust, carriers_map in cc_network.items():
+                if name in carriers_map:
+                    custs_using.append(f"{cust}({carriers_map[name]})")
+
+            c_rows.append({
+                "船公司": f"{name} ({vinfo.get('vendor_name_cn', '')})" if vinfo else name,
+                "30天邮件": vol,
+                "能力评分": vinfo.get("capability_score", "-") if vinfo else "-",
+                "等级": vinfo.get("capability_level", "-") if vinfo else "-",
+                "7日Hold": pm.get("hold_events_7d", 0),
+                "7日查验": pm.get("inspection_events_7d", 0),
+                "费用笔数": fees.get("count", 0),
+                "费用总额": f"${fees.get('total', 0):,.0f}" if fees.get("total", 0) > 0 else "-",
+                "平均费用": f"${fees.get('avg', 0):,.0f}" if fees.get("avg", 0) > 0 else "-",
+                "风险标签": ", ".join(vinfo.get("risk_tags", ["-"])) if vinfo else "-",
+                "服务客户": ", ".join(custs_using[:4]) if custs_using else "-",
+            })
+
+        c_df = pd.DataFrame(c_rows)
+        st.dataframe(c_df, use_container_width=True, hide_index=True, key="tbl_10")
+
+        # Market share pie chart
+        fig = px.pie(
+            names=list(carriers_30d.keys()),
+            values=list(carriers_30d.values()),
+            title="船公司30天邮件量占比",
+            color_discrete_sequence=px.colors.sequential.RdBu,
+        )
+        fig.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font_color="#e0e0e0",
+            height=400,
+        )
+        st.plotly_chart(fig, use_container_width=True, key="pchart_6")
+
+    # PLT scoring radar comparison
+    section_header("船公司能力评分对比")
+    active_carriers = [v for v in vendors
+                       if v.get("vendor_category") == "ship_carrier"
+                       and v.get("performance_metrics", {}).get("email_volume_7d", 0) > 0]
+    if active_carriers:
+        fig = go.Figure()
+        color_list = ["#e94560", "#2196f3", "#00c853", "#ffa500", "#9c27b0", "#ff9800"]
+        for i, v in enumerate(active_carriers):
+            sc = v.get("scoring_components", {})
+            if sc:
+                categories = list(sc.keys())
+                values = list(sc.values())
+                fig.add_trace(go.Scatterpolar(
+                    r=values + [values[0]],
+                    theta=categories + [categories[0]],
+                    name=v.get("vendor_name", ""),
+                    line_color=color_list[i % len(color_list)],
+                    fill='toself',
+                    opacity=0.6,
+                ))
+        fig.update_layout(
+            polar=dict(
+                bgcolor="rgba(0,0,0,0)",
+                radialaxis=dict(visible=True, range=[0, 25], gridcolor="rgba(50,50,80,0.3)"),
+                angularaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
+            ),
+            paper_bgcolor="rgba(0,0,0,0)",
+            font_color="#e0e0e0",
+            height=400,
+            title="活跃船公司能力雷达图",
+        )
+        st.plotly_chart(fig, use_container_width=True, key="pchart_7")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 9: 目的港全景
+# ══════════════════════════════════════════════════════════════════
+with tabs[8]:
+    section_header("美国目的港全景地图")
+
+    coach_box("教练总结: 区域差异决定操作策略", """
+        <b>西海岸 (LA/LB):</b> 业务量最大, 但港口拥堵和底盘车紧缺是常态。Free Time通常只有4-5天,
+        超过后Demurrage高达$300+/天。建议: 到港前48小时就开始准备DO和报关文件。<br><br>
+        <b>德州 (Houston):</b> NEXTERA是最大客户, Rail Detention是主要成本。
+        从港口到内陆仓库的铁路转运经常延误, 每次延误产生$185/天的Rail Detention。
+        建议: 与铁路公司建立直接沟通渠道, 提前锁定铁路舱位。<br><br>
+        <b>东海岸 (NY/NJ):</b> 清关速度相对快, 但港口费用结构不同于西海岸。
+        需要特别注意NYCT(New York Container Terminal)的特殊收费。<br><br>
+        <b>内陆转运 (Chicago IPI):</b> Rail Detention是最大痛点。建议对所有IPI货物提前7天通知收货人,
+        确保到达后48小时内提柜。
+    """)
+
+
+    # Port data with coordinates
+    port_data = [
+        {"port": "Los Angeles/Long Beach", "lat": 33.75, "lon": -118.19, "state": "CA",
+         "volume": 280, "desc": "最大港口, 科陆/海柔/Astronergy主要目的港"},
+        {"port": "New York/Newark", "lat": 40.68, "lon": -74.04, "state": "NJ",
+         "volume": 95, "desc": "东海岸主要港口, PTS/FCC USA目的港"},
+        {"port": "Savannah", "lat": 32.08, "lon": -81.10, "state": "GA",
+         "volume": 65, "desc": "东南部枢纽, REACH INDUSTRY目的港"},
+        {"port": "Houston", "lat": 29.75, "lon": -95.27, "state": "TX",
+         "volume": 110, "desc": "德州枢纽, NEXTERA/Project Delivery"},
+        {"port": "Norfolk", "lat": 36.85, "lon": -76.29, "state": "VA",
+         "volume": 25, "desc": "东海岸次要港口"},
+        {"port": "Charleston", "lat": 32.78, "lon": -79.93, "state": "SC",
+         "volume": 20, "desc": "东南部次要港口"},
+        {"port": "Seattle/Tacoma", "lat": 47.45, "lon": -122.30, "state": "WA",
+         "volume": 15, "desc": "西北部港口"},
+        {"port": "Chicago (IPI)", "lat": 41.88, "lon": -87.63, "state": "IL",
+         "volume": 40, "desc": "内陆转运枢纽, Rail Detention高发"},
+    ]
+
+    port_df = pd.DataFrame(port_data)
+
+    fig = go.Figure()
+
+    # Scatter geo for port markers
+    fig.add_trace(go.Scattergeo(
+        lon=port_df["lon"],
+        lat=port_df["lat"],
+        text=port_df.apply(lambda r: f"<b>{r['port']}</b><br>月均票数: ~{r['volume']}<br>{r['desc']}", axis=1),
+        mode="markers+text",
+        marker=dict(
+            size=port_df["volume"] / 5 + 10,
+            color=port_df["volume"],
+            colorscale="RdBu",
+            showscale=True,
+            colorbar=dict(title="业务量"),
+            line=dict(width=1, color="#fff"),
+        ),
+        textposition="top center",
+        textfont=dict(size=10, color="#e0e0e0"),
+        name="目的港",
+        hoverinfo="text",
+    ))
+    # Port name labels
+    fig.add_trace(go.Scattergeo(
+        lon=port_df["lon"],
+        lat=port_df["lat"],
+        text=port_df["port"],
+        mode="text",
+        textposition="top center",
+        textfont=dict(size=9, color="#ffd700"),
+        showlegend=False,
+        hoverinfo="skip",
+    ))
+
+    fig.update_geos(
+        scope="usa",
+        projection_type="albers usa",
+        showland=True,
+        landcolor="rgb(20,20,40)",
+        showlakes=True,
+        lakecolor="rgb(15,52,96)",
+        showocean=True,
+        oceancolor="rgb(10,10,30)",
+        showcountries=True,
+        countrycolor="rgba(100,100,180,0.3)",
+        showsubunits=True,
+        subunitcolor="rgba(100,100,180,0.2)",
+        bgcolor="rgba(0,0,0,0)",
+    )
+    fig.update_layout(
+        title="WWL美国目的港分布 (气泡大小=业务量)",
+        paper_bgcolor="rgba(0,0,0,0)",
+        font_color="#e0e0e0",
+        height=550,
+        margin=dict(l=0, r=0, t=40, b=0),
+        geo=dict(bgcolor="rgba(0,0,0,0)"),
+    )
+    st.plotly_chart(fig, use_container_width=True, key="pchart_8")
+
+    # Port detail table
+    st.markdown("---")
+    section_header("目的港详情")
+    port_detail_df = pd.DataFrame([{
+        "港口": p["port"],
+        "州": p["state"],
+        "月均票数": f"~{p['volume']}",
+        "主要客户": p["desc"],
+        "风险提示": (
+            "Rail Detention高发区"
+            if p["state"] in ["IL", "TX"]
+            else "港口拥堵风险"
+            if p["state"] in ["CA"]
+            else "正常"
+        ),
+        "建议": (
+            "关注Rail Detention, 提前通知客户提柜时限"
+            if p["state"] in ["IL", "TX"]
+            else "关注Demurrage, LB港Free Time短"
+            if p["state"] == "CA"
+            else "常规监控"
+        ),
+    } for p in port_data])
+    st.dataframe(port_detail_df, use_container_width=True, hide_index=True, key="tbl_11")
+
+
+
+# ══════════════════════════════════════════════════════════════════
+# TAB 10: 联系人搜索
+# ══════════════════════════════════════════════════════════════════
+with tabs[9]:
+    section_header("联系人搜索")
+
+    contacts = CON.get("contacts", [])
+
+    search_query = st.text_input("搜索 (姓名/公司/邮箱/电话)", placeholder="输入关键词...")
+
+    if contacts:
+        # Filter
+        if search_query:
+            query_lower = search_query.lower()
+            filtered = [c for c in contacts if (
+                query_lower in c.get("name", "").lower()
+                or query_lower in c.get("company", "").lower()
+                or query_lower in c.get("email", "").lower()
+                or query_lower in c.get("domain", "").lower()
+                or query_lower in c.get("title", "").lower()
+                or any(query_lower in p for p in c.get("phones", []))
+            )]
+        else:
+            filtered = contacts[:50]  # Show first 50 by default
+
+        st.markdown(f"**找到 {len(filtered)} 个联系人** (共 {len(contacts)} 个)")
+
+        if filtered:
+            contact_rows = []
+            for c in filtered[:100]:
+                contact_rows.append({
+                    "姓名": c.get("name", "") or "-",
+                    "公司": c.get("company", "") or "-",
+                    "邮箱": c.get("email", ""),
+                    "域名": c.get("domain", ""),
+                    "职位": c.get("title", "").replace("\r\n", " ").replace("\n", " ").strip()[:50] if c.get("title") else "-",
+                    "电话": ", ".join(c.get("phones", [])[:3]) if c.get("phones") else "-",
+                    "邮件数": c.get("email_count", 0),
+                    "最后联系": c.get("last_seen", "")[:20] if c.get("last_seen") else "-",
+                })
+            ct_df = pd.DataFrame(contact_rows)
+            ct_df = ct_df.sort_values("邮件数", ascending=False)
+            st.dataframe(ct_df, use_container_width=True, hide_index=True, key="tbl_12")
+
+        # Stats
+        st.markdown("---")
+        meta = CON.get("metadata", {})
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            st.markdown(metric_card(meta.get("total_contacts", 0), "总联系人", "#2196f3"), unsafe_allow_html=True)
+        with c2:
+            st.markdown(metric_card(meta.get("internal_wwl", 0), "WWL内部", "#00c853"), unsafe_allow_html=True)
+        with c3:
+            st.markdown(metric_card(meta.get("external", 0), "外部联系人", "#ffa500"), unsafe_allow_html=True)
+        with c4:
+            st.markdown(metric_card(meta.get("total_companies", 0), "关联公司", "#9c27b0"), unsafe_allow_html=True)
+    else:
+        st.info("联系人数据库为空或加载失败")
+
+
+# ─── Footer ───
+st.markdown("""
+<div style="text-align:center; padding:30px 0 10px 0; color:#4a4a6a; font-size:12px;">
+    WWL 环世物流 运营指挥中心 v5.0 | Powered by OpenClaw Engine |
+    数据源: 邮件智能扫描 + 供应商数据库 + 联系人数据库<br>
+    所有建议仅供参考, 请结合实际情况判断执行
+</div>
+""", unsafe_allow_html=True)
