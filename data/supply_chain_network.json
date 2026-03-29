@@ -1,33 +1,39 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 114,
-      "COSCO": 39,
-      "ONE": 57,
-      "OOCL": 25,
-      "ZIM": 91
+      "CMA-CGM": 150,
+      "COSCO": 57,
+      "ONE": 68,
+      "OOCL": 47,
+      "ZIM": 127,
+      "Evergreen": 49,
+      "WAN HAI": 4
     },
     "MING HAO XIN": {
-      "CMA-CGM": 51,
-      "COSCO": 14,
-      "ONE": 18,
-      "OOCL": 10,
+      "CMA-CGM": 61,
+      "COSCO": 24,
+      "ONE": 19,
+      "OOCL": 32,
       "MAERSK": 2,
-      "ZIM": 25
+      "ZIM": 54,
+      "Evergreen": 4,
+      "WAN HAI": 1
     },
     "HAILIANG": {
-      "MSC": 30,
-      "ONE": 1,
+      "MSC": 61,
+      "ONE": 42,
       "ZIM": 10,
-      "COSCO": 5,
-      "OOCL": 21
+      "COSCO": 7,
+      "OOCL": 21,
+      "HMM": 7
     },
     "HAIROBOT": {
-      "OOCL": 29,
-      "ZIM": 48,
-      "MSC": 12,
-      "Hapag-Lloyd": 14,
-      "WAN HAI": 2
+      "OOCL": 39,
+      "ZIM": 69,
+      "MSC": 44,
+      "Hapag-Lloyd": 16,
+      "WAN HAI": 2,
+      "ONE": 22
     },
     "ELITE EAGLE": {
       "ONE": 2,
@@ -35,7 +41,7 @@
       "MSC": 2
     },
     "JINGZHOU": {
-      "Hapag-Lloyd": 41
+      "Hapag-Lloyd": 64
     },
     "ELITE SOLAR": {
       "OOCL": 6,
@@ -48,16 +54,18 @@
       "MSC": 3
     },
     "MERSY CORP": {
-      "MSC": 7
+      "MSC": 9
     },
     "MAG SPECIALTIES": {
       "ZIM": 1,
       "Hapag-Lloyd": 4
     },
     "AVANTIX": {
-      "ONE": 15,
-      "WAN HAI": 22,
-      "COSCO": 6
+      "ONE": 66,
+      "WAN HAI": 57,
+      "COSCO": 13,
+      "ZIM": 15,
+      "MSC": 10
     },
     "HORIZON SOLAR": {
       "OOCL": 8,
@@ -65,11 +73,11 @@
     },
     "HOUNEN SOLAR": {
       "WAN HAI": 3,
-      "MSC": 9
+      "MSC": 13
     },
     "CLOU": {
       "COSCO": 17,
-      "ZIM": 39
+      "ZIM": 42
     },
     "VITA COCO": {
       "ONE": 9
@@ -82,7 +90,7 @@
   "customer_service": {
     "HAIROBOT": {
       "YES报关行": {
-        "count": 100,
+        "count": 180,
         "types": [
           "卡车",
           "清关"
@@ -91,11 +99,11 @@
     },
     "HAILIANG": {
       "FCC USA": {
-        "count": 3,
+        "count": 6,
         "types": []
       },
       "SCC Supply Chain": {
-        "count": 27,
+        "count": 36,
         "types": []
       },
       "Finwhale鲸运": {
@@ -105,7 +113,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 42,
+        "count": 71,
         "types": [
           "卡车"
         ]
@@ -141,7 +149,7 @@
         ]
       },
       "PTT卡车": {
-        "count": 22,
+        "count": 30,
         "types": [
           "卡车"
         ]
@@ -192,6 +200,12 @@
           "卡车"
         ]
       }
+    },
+    "HITHIUM": {
+      "PTT卡车": {
+        "count": 1,
+        "types": []
+      }
     }
   },
   "supply_chains": {
@@ -208,17 +222,18 @@
     },
     "HAILIANG": {
       "carriers": {
-        "MSC": 30,
-        "ONE": 1,
+        "MSC": 61,
+        "ONE": 42,
         "ZIM": 10,
-        "COSCO": 5,
-        "OOCL": 21
+        "COSCO": 7,
+        "OOCL": 21,
+        "HMM": 7
       },
       "brokers": {},
       "truckers": {},
       "agents": {
-        "FCC USA": 3,
-        "SCC Supply Chain": 27,
+        "FCC USA": 6,
+        "SCC Supply Chain": 36,
         "Finwhale鲸运": 20
       },
       "top_carrier": "MSC",
@@ -256,7 +271,7 @@
     },
     "MERSY CORP": {
       "carriers": {
-        "MSC": 7
+        "MSC": 9
       },
       "brokers": {},
       "truckers": {},
@@ -295,7 +310,7 @@
     "HOUNEN SOLAR": {
       "carriers": {
         "WAN HAI": 3,
-        "MSC": 9
+        "MSC": 13
       },
       "brokers": {},
       "truckers": {},
@@ -307,13 +322,13 @@
     "CLOU": {
       "carriers": {
         "COSCO": 17,
-        "ZIM": 39
+        "ZIM": 42
       },
       "brokers": {
         "YES报关行": 25
       },
       "truckers": {
-        "PTT卡车": 22
+        "PTT卡车": 30
       },
       "agents": {},
       "top_carrier": "ZIM",
@@ -345,12 +360,12 @@
     },
     "JINGZHOU": {
       "carriers": {
-        "Hapag-Lloyd": 41
+        "Hapag-Lloyd": 64
       },
       "brokers": {},
       "truckers": {},
       "agents": {
-        "PTS": 42
+        "PTS": 71
       },
       "top_carrier": "Hapag-Lloyd",
       "concentration": "100%",
@@ -358,12 +373,14 @@
     },
     "MING HAO XIN": {
       "carriers": {
-        "CMA-CGM": 51,
-        "COSCO": 14,
-        "ONE": 18,
-        "OOCL": 10,
+        "CMA-CGM": 61,
+        "COSCO": 24,
+        "ONE": 19,
+        "OOCL": 32,
         "MAERSK": 2,
-        "ZIM": 25
+        "ZIM": 54,
+        "Evergreen": 4,
+        "WAN HAI": 1
       },
       "brokers": {},
       "truckers": {},
@@ -380,7 +397,9 @@
         "MSC": 3
       },
       "brokers": {},
-      "truckers": {},
+      "truckers": {
+        "PTT卡车": 1
+      },
       "agents": {},
       "top_carrier": "ZIM",
       "concentration": "68%",
@@ -399,11 +418,13 @@
     },
     "REACH INDUSTRY": {
       "carriers": {
-        "CMA-CGM": 114,
-        "COSCO": 39,
-        "ONE": 57,
-        "OOCL": 25,
-        "ZIM": 91
+        "CMA-CGM": 150,
+        "COSCO": 57,
+        "ONE": 68,
+        "OOCL": 47,
+        "ZIM": 127,
+        "Evergreen": 49,
+        "WAN HAI": 4
       },
       "brokers": {},
       "truckers": {},
@@ -425,14 +446,15 @@
     },
     "HAIROBOT": {
       "carriers": {
-        "OOCL": 29,
-        "ZIM": 48,
-        "MSC": 12,
-        "Hapag-Lloyd": 14,
-        "WAN HAI": 2
+        "OOCL": 39,
+        "ZIM": 69,
+        "MSC": 44,
+        "Hapag-Lloyd": 16,
+        "WAN HAI": 2,
+        "ONE": 22
       },
       "brokers": {
-        "YES报关行": 100
+        "YES报关行": 180
       },
       "truckers": {},
       "agents": {},
@@ -456,9 +478,11 @@
     },
     "AVANTIX": {
       "carriers": {
-        "ONE": 15,
-        "WAN HAI": 22,
-        "COSCO": 6
+        "ONE": 66,
+        "WAN HAI": 57,
+        "COSCO": 13,
+        "ZIM": 15,
+        "MSC": 10
       },
       "brokers": {},
       "truckers": {},

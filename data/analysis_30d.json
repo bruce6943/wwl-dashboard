@@ -1,7 +1,7 @@
 {
   "period": "2026-01-27 ~ 2026-03-29",
-  "total_days": 62,
-  "total_emails": 9734,
+  "total_days": 61,
+  "total_emails": 14825,
   "customers": {
     "PTS(代理)": {
       "emails": 60,
@@ -15,7 +15,7 @@
       "carriers": {}
     },
     "REACH INDUSTRY": {
-      "emails": 337,
+      "emails": 529,
       "active_days": 41,
       "hbl_count": 96,
       "mbl_count": 78,
@@ -158,7 +158,7 @@
       }
     },
     "MING HAO XIN": {
-      "emails": 20,
+      "emails": 110,
       "active_days": 10,
       "hbl_count": 16,
       "mbl_count": 9,
@@ -174,7 +174,7 @@
       }
     },
     "HOUNEN SOLAR": {
-      "emails": 11,
+      "emails": 25,
       "active_days": 5,
       "hbl_count": 0,
       "mbl_count": 0,
@@ -201,8 +201,8 @@
       }
     },
     "AVANTIX": {
-      "emails": 5,
-      "active_days": 5,
+      "emails": 130,
+      "active_days": 11,
       "hbl_count": 0,
       "mbl_count": 0,
       "w1": 0,
@@ -263,7 +263,7 @@
       }
     },
     "ELITE SOLAR": {
-      "emails": 16,
+      "emails": 17,
       "active_days": 9,
       "hbl_count": 0,
       "mbl_count": 2,
@@ -300,7 +300,7 @@
       "carriers": {}
     },
     "MERSY CORP": {
-      "emails": 7,
+      "emails": 13,
       "active_days": 6,
       "hbl_count": 0,
       "mbl_count": 1,
@@ -444,27 +444,27 @@
       "active_days": 15
     },
     "NEXTERA": {
-      "emails": 3,
-      "active_days": 2
+      "emails": 8,
+      "active_days": 4
     },
     "HITHIUM": {
-      "emails": 26,
+      "emails": 51,
       "active_days": 12
     },
     "HAILIANG": {
-      "emails": 24,
-      "active_days": 10
+      "emails": 175,
+      "active_days": 27
     },
     "FCC USA": {
       "emails": 31,
       "active_days": 13
     },
     "HAIROBOT": {
-      "emails": 60,
+      "emails": 151,
       "active_days": 16
     },
     "JINGZHOU": {
-      "emails": 27,
+      "emails": 56,
       "active_days": 16
     },
     "YES": {
@@ -472,41 +472,45 @@
       "active_days": 9
     },
     "ASTRONERGY": {
-      "emails": 147,
-      "active_days": 6
+      "emails": 161,
+      "active_days": 8
+    },
+    "CLOU": {
+      "emails": 12,
+      "active_days": 8
     }
   },
   "carriers": {
     "OOCL": {
-      "emails": 1044,
+      "emails": 1478,
       "w1": 86,
       "w2": 238,
       "w3": 174,
       "w4": 546
     },
     "CMA-CGM": {
-      "emails": 507,
+      "emails": 648,
       "w1": 52,
       "w2": 89,
       "w3": 23,
       "w4": 343
     },
     "ONE": {
-      "emails": 1088,
+      "emails": 1784,
       "w1": 121,
       "w2": 225,
       "w3": 131,
       "w4": 611
     },
     "COSCO": {
-      "emails": 918,
+      "emails": 1234,
       "w1": 51,
       "w2": 228,
       "w3": 64,
       "w4": 575
     },
     "Evergreen": {
-      "emails": 231,
+      "emails": 425,
       "w1": 10,
       "w2": 94,
       "w3": 12,
@@ -520,42 +524,42 @@
       "w4": 53
     },
     "ZIM": {
-      "emails": 613,
+      "emails": 861,
       "w1": 43,
       "w2": 92,
       "w3": 113,
       "w4": 365
     },
     "Hapag-Lloyd": {
-      "emails": 377,
+      "emails": 543,
       "w1": 13,
       "w2": 81,
       "w3": 70,
       "w4": 213
     },
     "MSC": {
-      "emails": 1357,
+      "emails": 2211,
       "w1": 27,
       "w2": 173,
       "w3": 185,
       "w4": 972
     },
     "WAN HAI": {
-      "emails": 177,
+      "emails": 273,
       "w1": 2,
       "w2": 16,
       "w3": 22,
       "w4": 137
     },
     "MAERSK": {
-      "emails": 21,
+      "emails": 32,
       "w1": 20,
       "w2": 0,
       "w3": 0,
       "w4": 1
     },
     "HMM": {
-      "emails": 13,
+      "emails": 21,
       "w1": 0,
       "w2": 2,
       "w3": 1,
@@ -578,102 +582,118 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      1489
+      2441
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      977
+      1237
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      826
-    ],
-    [
-      "Effy <us.effyhuo@wwl.sg>",
-      371
-    ],
-    [
-      "<bkk.guide@wwl.sg>",
-      333
-    ],
-    [
-      "\"nathia\" <jkt.nathia@wwl.sg>",
-      292
+      1175
     ],
     [
       "BTLCS@SWITCHBL.COM",
-      268
+      741
     ],
     [
-      "<us.ops@wwl.sg>",
-      253
+      "<bkk.guide@wwl.sg>",
+      523
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      488
     ],
     [
       "\"rita tang\" <rita.tang@wwl.cn>",
-      250
+      369
+    ],
+    [
+      "\"nathia\" <jkt.nathia@wwl.sg>",
+      367
+    ],
+    [
+      "<us.ops@wwl.sg>",
+      318
     ],
     [
       "us038-arrival.notices@msc.com",
-      165
-    ],
-    [
-      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
-      126
-    ],
-    [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      125
+      187
     ],
     [
       "ADRIAN JUAREZ <adrianj@fccusa.net>",
-      124
+      185
     ],
     [
-      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
-      122
+      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      182
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      175
+    ],
+    [
+      "us038-importpickupnotification@msc.com",
+      156
+    ],
+    [
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      150
     ],
     [
       "\"yoyo\" <ngb.ops4@wwl.cn>",
-      115
+      146
+    ],
+    [
+      "Will Sun <willsun@wwl.cn>",
+      144
+    ],
+    [
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      130
+    ],
+    [
+      "\"Anggito Iqbal\" <jkt.iqbal@wwl.sg>",
+      128
+    ],
+    [
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      122
+    ],
+    [
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
+      117
+    ],
+    [
+      "Team3 YES <team3@yeschb.com>",
+      114
     ],
     [
       "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
       112
     ],
     [
-      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
-      98
-    ],
-    [
-      "\"Anggito Iqbal\" <jkt.iqbal@wwl.sg>",
-      95
-    ],
-    [
-      "\"Emma Cheng\" <bdasst09@wwl.cn>",
-      91
-    ],
-    [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      91
-    ],
-    [
-      "us038-importpickupnotification@msc.com",
-      91
-    ],
-    [
-      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
-      90
-    ],
-    [
-      "US038-noreply@msc.com",
-      87
+      111
     ],
     [
       "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
-      85
+      103
     ],
     [
-      "Will Sun <willsun@wwl.cn>",
+      "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      98
+    ],
+    [
+      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
+      96
+    ],
+    [
+      "US038-noreply@msc.com",
+      90
+    ],
+    [
+      "Andy Kim | PTS Inc <akim@ptstfs.com>",
       85
     ],
     [
@@ -681,28 +701,1628 @@
       82
     ],
     [
-      "Team3 YES <team3@yeschb.com>",
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
       72
     ],
     [
-      "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "noreply@emodal.com",
       69
     ],
     [
-      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
-      68
-    ],
-    [
-      "Andy Kim | PTS Inc <akim@ptstfs.com>",
-      64
+      "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      57
     ],
     [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       48
     ],
     [
-      "\"Bobc\" <bobc@worldwide-logistics.cn>",
-      37
+      "张志鹏  <cgo.sales2@worldwide-logistics.cn>",
+      48
+    ],
+    [
+      "\" BTL \" <btl@switchbl.com>",
+      42
+    ],
+    [
+      "Erica <prealertop@jscmglobal.com>",
+      40
+    ],
+    [
+      "韩一歌  <us.yikihan@worldwide-logistics.cn>",
+      39
+    ],
+    [
+      "Kim Line Import <import@kimline.us>",
+      39
+    ],
+    [
+      "\"Burce Xu - WWG XMN\" <xmn.ops2@wwl.cn>",
+      33
+    ],
+    [
+      "\"Sienna\" <sienna.ji@wwl.cn>",
+      31
+    ],
+    [
+      "Bruce Huang <Bruce@wwl.cn>",
+      27
+    ],
+    [
+      "\" dtc.chenai@wwl.cn \"<dtc.chenai@worldwide-logistics.cn>",
+      25
+    ],
+    [
+      "<LGBITM@oocl.com>",
+      24
+    ],
+    [
+      "tonklar <bkk.tonklar@worldwide-logistics.cn>",
+      23
+    ],
+    [
+      "Mack Liongson <ltl@pinnacleteam.com>",
+      22
+    ],
+    [
+      "Scott Coleman <Scott.Coleman@jbhunt.com>",
+      21
+    ],
+    [
+      "\"gaoyuan\" <sha.gaoyuan@wwl.cn>",
+      19
+    ],
+    [
+      "\"Wang Jiong\" <wangjiong@wwl.cn>",
+      19
+    ],
+    [
+      "Sam Kim | PTS Inc <skim@ptstfs.com>",
+      18
+    ],
+    [
+      "<bkk.bong@wwl.sg>",
+      18
+    ],
+    [
+      "\"dgu.jolingli@wwl.cn\" <dgu.jolingli@wwl.cn>",
+      18
+    ],
+    [
+      "Abdul Qadir <abdul.qadir@saslpk.com>",
+      17
+    ],
+    [
+      "\"Bongkoch Kongmanee\" <bkk.bong@wwl.sg>",
+      17
+    ],
+    [
+      "Victor PTT <victor@pacifictandt.com>",
+      16
+    ],
+    [
+      "Worldwide Logistics Group <wwltprate@wwl.sg>",
+      15
+    ],
+    [
+      "<hdostzada@rometransportation.com>",
+      15
+    ],
+    [
+      "BTLCS <btlcs@switchbl.com>",
+      15
+    ],
+    [
+      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
+      15
+    ],
+    [
+      "Hennie Viljoen <Hennie.Viljoen@impalaterminals.com>",
+      15
+    ],
+    [
+      "\"tao.opsnam3@wwl.cn\" <tao.opsnam3@wwl.cn>",
+      15
+    ],
+    [
+      "\"ASHLEY LIN WWL\" <ashleylin@worldwide-logistics.cn>",
+      14
+    ],
+    [
+      "PayCargo <alert@paycargo.com>",
+      14
+    ],
+    [
+      "\"robin rong\" <sha.ops133@wwl.cn>",
+      14
+    ],
+    [
+      "HsinPeng Tseng <HsinPeng.Tseng@hithium.com>",
+      13
+    ],
+    [
+      "<jkt.aldi@wwl.sg>",
+      12
+    ],
+    [
+      "<my.asha@wwl.sg>",
+      12
+    ],
+    [
+      "\"tsn.ops5@wwl.cn\" <tsn.ops5@wwl.cn>",
+      12
+    ],
+    [
+      "Ellen Jin <ellen@thornova-solar.com>",
+      11
+    ],
+    [
+      "Jacky Arimado <ltl@pinnacleteam.com>",
+      11
+    ],
+    [
+      "\"Aurora Zhao - WWG XMN\" <xmn.ops3@wwl.cn>",
+      10
+    ],
+    [
+      "\"sha.ops68\" <sha.ops68@wwl.cn>",
+      10
+    ],
+    [
+      "\"Joey Mao\" <maoqiaoyu@cargoee.com>",
+      10
+    ],
+    [
+      "\"Lucie Pham\" <vn.luciepham@wwl.sg>",
+      10
+    ],
+    [
+      "<lfantozzi@base.basespa.com>",
+      10
+    ],
+    [
+      "鲸宝中台公共邮箱  <jsjbggyxyw@jsjb-global.com>",
+      9
+    ],
+    [
+      "<IMPEAST@oocl.com>",
+      9
+    ],
+    [
+      "<us038-achpayments.newyork@msc.com>",
+      8
+    ],
+    [
+      "Ellen <Ellen@gaea-newenergy.com>",
+      8
+    ],
+    [
+      "Sam Lee <sam@fastfreightsinc.com>",
+      8
+    ],
+    [
+      "Jerimiah Donaldson <Jerimiah.Donaldson@priority1.com>",
+      8
+    ],
+    [
+      "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
+      8
+    ],
+    [
+      "Kate/GBLAX <kate@goldenbridge-intl.com>",
+      8
+    ],
+    [
+      "Monica Wang <monica@hounenus.com>",
+      8
+    ],
+    [
+      "\"Teerada\" <bkk.pang@wwl.sg>",
+      8
+    ],
+    [
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      8
+    ],
+    [
+      "Linda Pitto <lpitto@basespa.com>",
+      8
+    ],
+    [
+      "Dante Tagudin <ops@pinnacleteam.com>",
+      8
+    ],
+    [
+      "prakash <prakash@glweststardubai.com>",
+      7
+    ],
+    [
+      "\"Mark Jerick S. Florendo\" <phi.jerick@wwl.sg>",
+      7
+    ],
+    [
+      "<szn.ulaxie@wwl.cn>",
+      7
+    ],
+    [
+      "<bkk.odz@wwl.sg>",
+      7
+    ],
+    [
+      "Juliane/GBDoc <juliane.zhu@goldenbridge-intl.com>",
+      7
+    ],
+    [
+      "worldwide-logistics <info2@worldwide-logistics.cn>",
+      7
+    ],
+    [
+      "\"wangqili@hailiang.com\" <wangqili@hailiang.com>",
+      7
+    ],
+    [
+      "\"joannabao@worldwide-logistics.cn\" <sha.joannabao@worldwide-logistics.cn>",
+      7
+    ],
+    [
+      "kmtc-import@ekmtc.com",
+      7
+    ],
+    [
+      "Sangeetha <sangeetha@ispeedfreight.com>",
+      6
+    ],
+    [
+      "\" 田颖 \" <tianying@cargoee.com>",
+      6
+    ],
+    [
+      "\"Vivi Huang\" <sha.salessup25@wwl.cn>",
+      6
+    ],
+    [
+      "\"DTC.yukeni@wwl.cn\" <DTC.yukeni@wwl.cn>",
+      6
+    ],
+    [
+      "\"songwenwen@wwl.sg\" <songwenwen@wwl.sg>",
+      6
+    ],
+    [
+      "chartering@mlb-sunship.de",
+      6
+    ],
+    [
+      "\"Emily Huang\" <pld.vip1@wwl.cn>",
+      6
+    ],
+    [
+      "\"MONA CAI\" <sha.ops112@wwl.cn>",
+      6
+    ],
+    [
+      "Whale TPE / Pearl Wang <pearlwang@whaletpe.com.tw>",
+      6
+    ],
+    [
+      "<chris.ryu@samsung.com>",
+      6
+    ],
+    [
+      "\"OZea/Ozzie Zea (US/IBT/WIL)\" <ozea@ibttruck.com>",
+      6
+    ],
+    [
+      "\"Bryan Tan\" <my.bryan@wwl.sg>",
+      5
+    ],
+    [
+      "<invoices@romesales.com>",
+      5
+    ],
+    [
+      "高婷梅  <gaotingmei@kingbogroup.com>",
+      5
+    ],
+    [
+      "<LGBIMPORT@oocl.com>",
+      5
+    ],
+    [
+      "\"addie.lv@wwl.cn\" <addie.lv@wwl.cn>",
+      5
+    ],
+    [
+      "\"Caroline Sheng\" <sha.overseassup1@wwl.cn>",
+      5
+    ],
+    [
+      "Whale TPE / Anita Chiang <anitachiang@whaletpe.com.tw>",
+      5
+    ],
+    [
+      "\"Setlla -wwlngb\" <ngb.cus1@wwl.cn>",
+      5
+    ],
+    [
+      "\"Nola LAI\" <can.nolalai@wwl.cn>",
+      5
+    ],
+    [
+      "\"wengweijun@hailiang.com\" <wengweijun@hailiang.com>",
+      5
+    ],
+    [
+      "<dappelman@rometransportation.com>",
+      5
+    ],
+    [
+      "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
+      5
+    ],
+    [
+      "\"Li Zhuo\" <sha.impops03@wwl.cn>",
+      5
+    ],
+    [
+      "PTT Andrew <Andrew@pacifictandt.com>",
+      5
+    ],
+    [
+      "\"Kit-Guan\" <fsh.kitguan@wwl.cn>",
+      5
+    ],
+    [
+      "<rachele@base.basespa.com>",
+      5
+    ],
+    [
+      "\"Fiona Lok [US-KApex]\" <fiona.lok@kln.com>",
+      5
+    ],
+    [
+      "\"Claire Chen\" <tao.sales16@wwl.cn>",
+      5
+    ],
+    [
+      "\"NA.OFS CashReceipts\" <na.ofs.cashreceipts@one-line.com>",
+      5
+    ],
+    [
+      "Rafaela Katsantoni <rafaela.katsantoni@tpsgreece.gr>",
+      5
+    ],
+    [
+      "\"Yean\" <sin.yean@wwl.sg>",
+      4
+    ],
+    [
+      "Hadiya Challenger <hadiya@royalfoodimport.com>",
+      4
+    ],
+    [
+      "Sara Yu <sarayu@wwl.sg>",
+      4
+    ],
+    [
+      "Evans Delivery Company <evanscollections@evansdelivery.com>",
+      4
+    ],
+    [
+      "Carol Nanfro <CNanfro@charterbrokerage.net>",
+      4
+    ],
+    [
+      "\" BTLCS \" <btlcs@switchbl.com>",
+      4
+    ],
+    [
+      "Yan Persons - KHE <yan_persons@laharborexpress.com>",
+      4
+    ],
+    [
+      "Max <marketing@yqn-social.com>",
+      4
+    ],
+    [
+      "Giovanni Sambo <giovanni.sambo@dbgroup.net>",
+      4
+    ],
+    [
+      "\" 温璐璐 \" <wenlulu@kingbogroup.com>",
+      4
+    ],
+    [
+      "\"Rani\" <jkt.rani@wwl.sg>",
+      4
+    ],
+    [
+      "Šamajová Klára  <klara.samajova@geis.cz>",
+      4
+    ],
+    [
+      "DWE - Debbie Bodrie <Debbie.Bodrie@EvansDelivery.com>",
+      4
+    ],
+    [
+      "May Khasem <may.khasem@elite-solar.com>",
+      4
+    ],
+    [
+      "Jones Transport <sherman.barnes@jolo.com>",
+      4
+    ],
+    [
+      "\"stevenpu@wwl.cn\" <stevenpu@wwl.cn>",
+      4
+    ],
+    [
+      "DWE - Shannon Hitchcock <Shannon.Hitchcock@EvansDelivery.com>",
+      4
+    ],
+    [
+      "notice <notice@qiye.163.com>",
+      4
+    ],
+    [
+      "Bobby Bruce <Bobby.Bruce@knighttrans.com>",
+      4
+    ],
+    [
+      "HANKSUGI ACCOUNTING CFO <marcela@hanksugi.com>",
+      4
+    ],
+    [
+      "Docs YESCHB <docs@yeschb.com>",
+      3
+    ],
+    [
+      "<my.jayden@worldwide-logistics.cn>",
+      3
+    ],
+    [
+      "Ryan Dunleavy <rdunleavy@airseachicago.com>",
+      3
+    ],
+    [
+      "<USA-Import.RailCustomerService@msc.com>",
+      3
+    ],
+    [
+      "\"Eart\" <bkk.eart@wwl.sg>",
+      3
+    ],
+    [
+      "\"bjs.catherineyang@wwl.cn\" <bjs.catherineyang@wwl.cn>",
+      3
+    ],
+    [
+      "Triveni Narayanan - Emirates logistics <triveni.n@emirateslogistics.com>",
+      3
+    ],
+    [
+      "\"Janeen Mei A. De Guzman\" <phi.janeenmei@wwl.sg>",
+      3
+    ],
+    [
+      "\"Maggie Wu\" <bd@worldwideshipping-lines.com>",
+      3
+    ],
+    [
+      "\"shent/Shen Tong(COSFREBJ)\" <shent@coscon.com>",
+      3
+    ],
+    [
+      "\"Rachel Crawford, PCN\" <ceo@projectcargonetwork.com>",
+      3
+    ],
+    [
+      "Ashish Sharma <a.sharma@loadkonnect.com>",
+      3
+    ],
+    [
+      "\"Angel\" <gt05@inquiry.gtran.net>",
+      3
+    ],
+    [
+      "noreply@scif.com",
+      3
+    ],
+    [
+      "<calvin.gong@msc.com>",
+      3
+    ],
+    [
+      "知之为知之 แอม  <amy@jsjb-global.com>",
+      3
+    ],
+    [
+      "\"China Qingdao ord logistics company\" <marksun@ordd-logistics.com>",
+      3
+    ],
+    [
+      "\"zhangdantong\" <ada.zhang@wwl.cn>",
+      3
+    ],
+    [
+      "\"Fajar Romadhon\" <jkt.fajar@wwl.sg>",
+      3
+    ],
+    [
+      "Evelyn PTT <evelyn@pacifictandt.com>",
+      3
+    ],
+    [
+      "Direct CHB-OP1 <op1@directchb.net>",
+      3
+    ],
+    [
+      "\"Summer Peng\" <dgu.summerpeng@wwl.cn>",
+      3
+    ],
+    [
+      "Lokeshwar <lokeshwar@ispeedfreight.com>",
+      3
+    ],
+    [
+      "Alina Agiu - Medfreight <alina.agiu@medfreight.ro>",
+      3
+    ],
+    [
+      "Brad <bradzhang@worldwide-logistics.cn>",
+      3
+    ],
+    [
+      "陈佳艺  <chenjiayi@kingbogroup.com>",
+      3
+    ],
+    [
+      "\"dtc.liuxiaoyu@worldwide-logistics.cn\" <dtc.liuxiaoyu@worldwide-logistics.cn>",
+      3
+    ],
+    [
+      "Wendy-Ding-wwlngb <ngb.sales1@wwl.cn>",
+      3
+    ],
+    [
+      "\"dgu.sophielin@wwl.cn\" <dgu.sophielin@wwl.cn>",
+      3
+    ],
+    [
+      "Enosh - Salota Int <enosh@salotaint.com>",
+      3
+    ],
+    [
+      "<IMPWEST@oocl.com>",
+      3
+    ],
+    [
+      "\"Henry Chen\" <sha.ops55@wwl.cn>",
+      3
+    ],
+    [
+      "\"Wang Jiong\" <Wangjiong@wwl.cn>",
+      3
+    ],
+    [
+      "MilenM@bulklogisticstrends.com",
+      3
+    ],
+    [
+      "Ioanna Chintziou <Ioanna.Chintziou@tpsgreece.gr>",
+      3
+    ],
+    [
+      "\"us.ops2@wwl.sg\" <us.ops2@wwl.sg>",
+      3
+    ],
+    [
+      "Crystal Liu <Crystal.liu@knighttrans.com>",
+      3
+    ],
+    [
+      "James Zhou <jzhou@zhoulawoffices.com>",
+      3
+    ],
+    [
+      "郭清晨  <guoqingchen@sh-zilin.cn>",
+      3
+    ],
+    [
+      "May WU <maywu15@msn.com>",
+      3
+    ],
+    [
+      "Melissa Smith <melissas@tdsagentgroup.com>",
+      3
+    ],
+    [
+      "\"Sam Wilcox - Project Cargo Network\" <sam@projectcargonetwork.com>",
+      3
+    ],
+    [
+      "\"kevingrebe\" <kevingrebe@wwl.sg>",
+      3
+    ],
+    [
+      "\"GRPMBX.arrivalnotice.us@zim.com\" <GRPMBX.arrivalnotice.us@zim.com>",
+      3
+    ],
+    [
+      "<ID012-cs.mymscsupport@msc.com>",
+      3
+    ],
+    [
+      "na Offshore RCA <na.ofs.rca@one-line.com>",
+      3
+    ],
+    [
+      "Shay <shay@jsjsolns.com>",
+      3
+    ],
+    [
+      "\"MSC (USA) Inc. via airSlate\" <mail@airslate.com>",
+      2
+    ],
+    [
+      "usIBDOC <usinbound@wanhai.com>",
+      2
+    ],
+    [
+      "\"dtc.zhuolinan@wwl.cn\" <dtc.zhuolinan@wwl.cn>",
+      2
+    ],
+    [
+      "\"Siny Zhu\" <can.sinyzhu@wwl.cn>",
+      2
+    ],
+    [
+      "\"bkk.un\" <bkk.un@wwl.sg>",
+      2
+    ],
+    [
+      "IAH-Delivery <IAH-Delivery@expeditors.com>",
+      2
+    ],
+    [
+      "\"Krista Kingsland\" <kkingsland@rometransportation.com>",
+      2
+    ],
+    [
+      "蒋虹  <v3@kingbogroup.com>",
+      2
+    ],
+    [
+      "\"SIDDEEQUE | ILINESHIPPING\" <mktg1.dxb@ilineshipping.com>",
+      2
+    ],
+    [
+      "Rattanakulchainun Teerapoot <R.Teerapoot@zim.com>",
+      2
+    ],
+    [
+      "\"ruby.ruan\" <ruby.ruan@wwl.sg>",
+      2
+    ],
+    [
+      "Kimberly A Davidson <kimberly.davidson@cummins.com>",
+      2
+    ],
+    [
+      "Brent Moore <brent.moore@cummins.com>",
+      2
+    ],
+    [
+      "<LGBCASH@oocl.com>",
+      2
+    ],
+    [
+      "Chicago Import <chiimport@laufer.com>",
+      2
+    ],
+    [
+      "Ryan Johnson <rjohnson@onlinefreight.com>",
+      2
+    ],
+    [
+      "HLS LA - Zoey Bao <zoeybaola@hlsholding.com>",
+      2
+    ],
+    [
+      "\"Mara V. Avelino\" <phi.mara@worldwide-logistics.cn>",
+      2
+    ],
+    [
+      "Harish Abbott <harish@goaugment.com>",
+      2
+    ],
+    [
+      "Jovita Vas <jovita.vas@glweststardubai.com>",
+      2
+    ],
+    [
+      "SILVERSEA Containers <global-stocks@silverseacontainers.com>",
+      2
+    ],
+    [
+      "Sara Theriot <stheriot@capin-vyborny.com>",
+      2
+    ],
+    [
+      "IMPORT SM <import01@senmartintl.com>",
+      2
+    ],
+    [
+      "Esmy Zhu <Esmy.Zhu@allisontransmission.com>",
+      2
+    ],
+    [
+      "\"Era\" <my.era@wwl.sg>",
+      2
+    ],
+    [
+      "Bruce Huang <bruce@wwl.cn>",
+      2
+    ],
+    [
+      "<wendy@projectcargonetwork.com>",
+      2
+    ],
+    [
+      "Chartering | Bharati Shipping <chartering@bharatiship.com>",
+      2
+    ],
+    [
+      "\"Konnie Guo\" <sha.salessup24@wwl.cn>",
+      2
+    ],
+    [
+      "Vikram Shah <Vikram.Shah@dbgroup.net>",
+      2
+    ],
+    [
+      "Chris Smith <chris@vfworldcargo.com>",
+      2
+    ],
+    [
+      "<bkk.aor@wwl.sg>",
+      2
+    ],
+    [
+      "Imports <Imports@cavalrylogistics.com>",
+      2
+    ],
+    [
+      "Danielle Ramirez <danielle.ramirez@landstarmail.com>",
+      2
+    ],
+    [
+      "张�h  <zhangyue@cargoee.com>",
+      2
+    ],
+    [
+      "NAWINIA  <info@nawinia.pro>",
+      2
+    ],
+    [
+      "\"pennqiu\" <sha.pennqiu@wwl.cn>",
+      2
+    ],
+    [
+      "Siddharath <sid@vegastarshipping.com>",
+      2
+    ],
+    [
+      "Gilbert Cardona <tampawarehouse@turfusa.com>",
+      2
+    ],
+    [
+      "Sinny Choo <schoo@Traffix.com>",
+      2
+    ],
+    [
+      "<CTMMGTLGB@oocl.com>",
+      2
+    ],
+    [
+      "\" 毛乔瑜 \" <maoqiaoyu@kingbogroup.com>",
+      2
+    ],
+    [
+      "\"RE+ Southern Cone\" <donotreply@re-plus.com>",
+      2
+    ],
+    [
+      "Freya Dadwal <freya@algusa.com>",
+      2
+    ],
+    [
+      "\"Ash Pyke\" <ash.pyke@aiologistics.net>",
+      2
+    ],
+    [
+      "worldwide-logistics.cn  <digital-business@hlag.com>",
+      2
+    ],
+    [
+      "\"Arie xie \" <xieqiao@hailiang.com>",
+      2
+    ],
+    [
+      "韩笑  <gracehan@worldwide-logistics.cn>",
+      2
+    ],
+    [
+      "Claudia Lederhofer <claudia.lederhofer@dacolog.com>",
+      2
+    ],
+    [
+      "纪娴雅  <sienna.ji@worldwide-logistics.cn>",
+      2
+    ],
+    [
+      "Kiki Rezki Ananda <sales@philliprne.com>",
+      2
+    ],
+    [
+      "Dieudonne Atsu <dieudonne.atsu@tg.fracht.Africa>",
+      2
+    ],
+    [
+      "\"Abiola Tunde-Bello\" <odf01@worldwide-logistics.cn>",
+      2
+    ],
+    [
+      "\"[SH]-AM-US-Cummins.LAX\" <SH-AM-US-Cummins.LAX@CevaLogistics.com>",
+      2
+    ],
+    [
+      "Aiqin Phillips <aiqin.phillips@ride.co>",
+      2
+    ],
+    [
+      "НАВИНИЯ  <info@nawinia.pro>",
+      2
+    ],
+    [
+      "\"Wanda\" <wandam@transtaff.com>",
+      2
+    ],
+    [
+      "Jason/GBLAX <jason@goldenbridge-intl.com>",
+      2
+    ],
+    [
+      "李丽丽  <sha.sales72@wwl.cn>",
+      2
+    ],
+    [
+      "Ajay Sharma <ajay.sharma@jetspeed.co.in>",
+      2
+    ],
+    [
+      "Wenwen Mei <hcti_receiving@hailiang.com>",
+      2
+    ],
+    [
+      "postmaster@qiye.163.com",
+      2
+    ],
+    [
+      "Pauline Peoples-Thomas <pauline.peoples@sea-lead.com>",
+      2
+    ],
+    [
+      "AdamXue-Motherlines-USWC <adam.x@motherlines.com>",
+      2
+    ],
+    [
+      "candy@cargoconvoy.co",
+      2
+    ],
+    [
+      "Snacks <hello@snacks.robinhood.com>",
+      2
+    ],
+    [
+      "\"Daniel Yan\" <sha.ops46@wwl.cn>",
+      2
+    ],
+    [
+      "Pricing-PGSL DXB <pricing@pgsluae.com>",
+      2
+    ],
+    [
+      "NoReply@eModal.com",
+      1
+    ],
+    [
+      "LinkedIn <updates-noreply@linkedin.com>",
+      1
+    ],
+    [
+      "\"WWL - Taniya Awan\" <khi.taniya@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "Helen Wang <helen@agenthu.com>",
+      1
+    ],
+    [
+      "\"Yancy Yu\" <szn.yancyyu@wwl.cn>",
+      1
+    ],
+    [
+      "Mark H <dispatch@marktruckline.com>",
+      1
+    ],
+    [
+      "Priority1 Statement <NoReply@Priority1.com>",
+      1
+    ],
+    [
+      "Lina liu <lina@sfsolutions-usa.com>",
+      1
+    ],
+    [
+      "JPMorganChase FraudPrevention <jpmorganchase.fraudprevention@jpmchase.com>",
+      1
+    ],
+    [
+      "Customer Notifications <ZIM@notifications.zim.com>",
+      1
+    ],
+    [
+      "Sales01-PGSL DXB <Sales01@pgsluae.com>",
+      1
+    ],
+    [
+      "azin khomein <azinkhomein@gmail.com>",
+      1
+    ],
+    [
+      "LinkedIn <jobs-listings@linkedin.com>",
+      1
+    ],
+    [
+      "Saqib-PGSL DXB <saqib@pgsluae.com>",
+      1
+    ],
+    [
+      "Tomasz Minorczyk <tminorczyk@imperativelogistics.com>",
+      1
+    ],
+    [
+      "Antonio Hernandez <562expressinc@gmail.com>",
+      1
+    ],
+    [
+      "usCASHIER <uscashier@wanhai.com>",
+      1
+    ],
+    [
+      "JEREMY WONG <jeremyw@fccusa.net>",
+      1
+    ],
+    [
+      "\"bjs.catherineyang\" <bjs.catherineyang@wwl.cn>",
+      1
+    ],
+    [
+      "Jayden Lim Ze Guan <my.jayden@wwl.sg>",
+      1
+    ],
+    [
+      "\"ngb.ops25@wwl.cn\" <ngb.ops25@wwl.cn>",
+      1
+    ],
+    [
+      "\"Aut\" <bkk.aut@wwl.sg>",
+      1
+    ],
+    [
+      "\"ngb.ops32@wwl.cn\" <ngb.ops32@wwl.cn>",
+      1
+    ],
+    [
+      "Dona Cabauatan <donacabauatan@gmail.com>",
+      1
+    ],
+    [
+      "<my.jennytan@wwl.sg>",
+      1
+    ],
+    [
+      "<arshiya.shaikh@pgldubai.com>",
+      1
+    ],
+    [
+      "Ismail-Dss/Gcs <coocs1@ds.ae>",
+      1
+    ],
+    [
+      "TSE ALEXANDER <at@interfracht.jp>",
+      1
+    ],
+    [
+      "\"OL Philippines Import Doc (Shared)\" <OLP-Import-Doc-Shared@ol-usa.com>",
+      1
+    ],
+    [
+      "Destiny Guereca <Destiny_Guereca@ryder.com>",
+      1
+    ],
+    [
+      "Meg Belmonte <meg@pinnacleteam.com>",
+      1
+    ],
+    [
+      "\"Johnny A.\" <johnny@senville.com>",
+      1
+    ],
+    [
+      "\".GR US Waxd Export Operations\" <USSCJExportCompliance@scj.com>",
+      1
+    ],
+    [
+      "Karnkunakorn Uranee <k.uranee@zim.com>",
+      1
+    ],
+    [
+      "Annie From Apec shipping  <sales5@apeclogistics.com>",
+      1
+    ],
+    [
+      "\" 黄登雨 \" <huangdengyu@chinacrt.net>",
+      1
+    ],
+    [
+      "Jones Transportation <sherman.barnes@jolo.com>",
+      1
+    ],
+    [
+      "Freight Cashier DHY Shipping Line Inc <FreightCashier@dhyshippingline.com>",
+      1
+    ],
+    [
+      "\" KB中台 \" <kb-centre@cargoee.com>",
+      1
+    ],
+    [
+      "51发票平 <SFbill3@bill.sf-express.com>",
+      1
+    ],
+    [
+      "Matson Shipping Lines <sburns@matson-logistics.com>",
+      1
+    ],
+    [
+      "\"Bongkoch K.\" <bkk.bong@wwl.sg>",
+      1
+    ],
+    [
+      "Chris Henke <Chris.Henke@fura.com>",
+      1
+    ],
+    [
+      "<fhallam@rometransportation.com>",
+      1
+    ],
+    [
+      "Esther L Fulkerson <esther.fulkerson@cummins.com>",
+      1
+    ],
+    [
+      "CCS-Program-Coordinators <CCS-Program-Coordinators@jpmchase.com>",
+      1
+    ],
+    [
+      "\"c-service06@greatgreen-scm.com\" <c-service06@greatgreen-scm.com>",
+      1
+    ],
+    [
+      "\"fsh.joliehuang@wwl.cn\" <fsh.joliehuang@wwl.cn>",
+      1
+    ],
+    [
+      "Penny <riskmanagement@wwl.cn>",
+      1
+    ],
+    [
+      "Luca Lorenzon <luca.lorenzon@dbgroup.net>",
+      1
+    ],
+    [
+      "Freyt Media <bella@freytupdates.com>",
+      1
+    ],
+    [
+      "\"Mina Gao-WWG XMN\" <xmn.opsmgr@wwl.cn>",
+      1
+    ],
+    [
+      "ACC-PGSL DXB <acc@pgsluae.com>",
+      1
+    ],
+    [
+      "\"FCPPL - Muhammad Hashim\" <mhashim@fcg.com.pk>",
+      1
+    ],
+    [
+      "South Ocean Freight - Ms.NEETHU <southocean@sofintl.com>",
+      1
+    ],
+    [
+      "<roy.loken@asanetwork.org>",
+      1
+    ],
+    [
+      "Hector Martinez <hector.martinez@accretionlogistics.com>",
+      1
+    ],
+    [
+      "Lina Ramirez <lina@goaugment.com>",
+      1
+    ],
+    [
+      "\"Laura Playford\" <lplayford@rometransportation.com>",
+      1
+    ],
+    [
+      "fred koch <fred.koch@digifreights.com>",
+      1
+    ],
+    [
+      "Jenny Li <bigbeartruckingadm@gmail.com>",
+      1
+    ],
+    [
+      "\"david@futongtrans.com\" <david@futongtrans.com>",
+      1
+    ],
+    [
+      "Mia <sales39@smoothlogistics.cn>",
+      1
+    ],
+    [
+      "<usa-freight.cashier@msc.com>",
+      1
+    ],
+    [
+      "Bruce <bruce@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "\"douym/Dou Yanmiao(COSFREBJ)\" <douym@coscon.com>",
+      1
+    ],
+    [
+      "张志鹏  <cgo.sales2@wwl.cn>",
+      1
+    ],
+    [
+      "\"Sunny Shao\" <ngb.doc13@wwl.cn>",
+      1
+    ],
+    [
+      "<gbenetti@base.basespa.com>",
+      1
+    ],
+    [
+      "Amelia From Bloc <bella@freytupdates.com>",
+      1
+    ],
+    [
+      "Hossam Salem <hossam.salem@gac.com>",
+      1
+    ],
+    [
+      "Sunny Shao <ngb.doc13@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "Kila Cl <bit8q4l1fj@aaviza.co>",
+      1
+    ],
+    [
+      "\"XLP New Member\" <newmember@xlprojects.net>",
+      1
+    ],
+    [
+      "kristela <krislining01@gmail.com>",
+      1
+    ],
+    [
+      "\"Micky Sun\" <sha.ops61@wwl.cn>",
+      1
+    ],
+    [
+      "Dannie Wang（tao.vipcus7@wwl.cn）  <tao.vipcus7@wwl.cn>",
+      1
+    ],
+    [
+      "陈艳萍  <applechen@wwl.sg>",
+      1
+    ],
+    [
+      "Mubin Melath Abdul Saleem <Mubin.Abdulsaleem@gwcmarine.qa>",
+      1
+    ],
+    [
+      "<jia.he@elite-solar.com>",
+      1
+    ],
+    [
+      "\"Vily Lio\" <sin.hr2@wwl.sg>",
+      1
+    ],
+    [
+      "\"applechen@wwl.sg\" <applechen@wwl.sg>",
+      1
+    ],
+    [
+      "Leng De Mesa <phi.leng@wwl.sg>",
+      1
+    ],
+    [
+      "Middle East Energy <info@events.informamiddleeast.com>",
+      1
+    ],
+    [
+      "\"DTC.yukeni@worldwide-logistics.cn\" <DTC.yukeni@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "Himanshu Shah - CSS Global <himanshu@cssglobalforwarding.com>",
+      1
+    ],
+    [
+      "Whale TPE / Terresa Lin <terresalin@whaletpe.com.tw>",
+      1
+    ],
+    [
+      "<george@projectcargonetwork.com>",
+      1
+    ],
+    [
+      "\"Crystal Lee\" <member66@glafamily.com>",
+      1
+    ],
+    [
+      "EZ Schurder <ez@turfusa.com>",
+      1
+    ],
+    [
+      "Nora Chang <nora.chang@elite-solar.com>",
+      1
+    ],
+    [
+      "Dispatch <dispatch@bosltruckinginc.com>",
+      1
+    ],
+    [
+      "EXPORTS KOMPSHIP <cusexports@kompship.com>",
+      1
+    ],
+    [
+      "\"Steve Cross\" <steve.cross@xlprojects.net>",
+      1
+    ],
+    [
+      "Vasimuddin <vasim@alfarisuae.com>",
+      1
+    ],
+    [
+      "Bruce-PGSL DXB <bruce@pgsluae.com>",
+      1
+    ],
+    [
+      "Express Global Logistics Pvt. Ltd. <projects@expressworld.com>",
+      1
+    ],
+    [
+      "Kristen Stewart <kristenstewart@skyflytrucking.com>",
+      1
+    ],
+    [
+      "Evans Delivery Company <evansdelivery@esolutions.billtrust.com>",
+      1
+    ],
+    [
+      "no-reply@jpmorgan.com",
+      1
+    ],
+    [
+      "Fei Zhang <Fei.Zhang@jbhunt.com>",
+      1
+    ],
+    [
+      "\"adamhuang\" <adamhuang@wwl.cn>",
+      1
+    ],
+    [
+      "\"Jacky Shi\" <sin.jacky@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "\"Kitty Wang\" <sha.overseassup3@wwl.cn>",
+      1
+    ],
+    [
+      "<rachel@ringvietnam.com>",
+      1
+    ],
+    [
+      "Elena Bakshi <elena@algusa.com>",
+      1
+    ],
+    [
+      "Mia <sales64@smoothlogistics.cn>",
+      1
+    ],
+    [
+      "Yifu Zhang <yifu@abcscgroup.com>",
+      1
+    ],
+    [
+      "Ethan PTT <ethan@pacifictandt.com>",
+      1
+    ],
+    [
+      "Justin Warner <justin.warner@digifreights.com>",
+      1
+    ],
+    [
+      "黄刚  <kevin.huang@bondex.com.cn>",
+      1
+    ],
+    [
+      "Matson Transportation <sburns@matson-logistics.com>",
+      1
+    ],
+    [
+      "Italy Logistics  <info@klti.net>",
+      1
+    ],
+    [
+      "\"AIR-CARGO / KBP, Ukraine\" <logistics@air-cargo.com.ua>",
+      1
+    ],
+    [
+      "Odz <bkk.odz@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "\"WHALE  WA\" <WHALEWA@finwhalelogistics.com>",
+      1
+    ],
+    [
+      "Skye Thomson <skye.t@immensitylogistics.com>",
+      1
+    ],
+    [
+      "\"cgo.ops@wwl.cn\" <cgo.ops@wwl.cn>",
+      1
+    ],
+    [
+      "\"Robbin Wang\" <pld.vip3@wwl.cn>",
+      1
+    ],
+    [
+      "Guide <bkk.guide@wwl.sg>",
+      1
+    ],
+    [
+      "Sierra Gallese <sierrag@westernoverseas.com>",
+      1
+    ],
+    [
+      "Vincent Okeri <vincent.okeri@sovereignlog.com>",
+      1
+    ],
+    [
+      "Zhi Duan <hgmbes830269WVGBDO@lklab.comodacore.com>",
+      1
+    ],
+    [
+      "Jimmy Chung Sumner II <phi.jimmy@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "\"sha.ops66\" <sha.ops66@wwl.cn>",
+      1
+    ],
+    [
+      "Apple <no_reply@email.apple.com>",
+      1
+    ],
+    [
+      "<tw.hazel@wwl.sg>",
+      1
+    ],
+    [
+      "Jeff Carter <drayage.jeff@skyflytrucking.com>",
+      1
+    ],
+    [
+      "Jenny Wu <jenny@allfreightsolutioninc.net>",
+      1
+    ],
+    [
+      "kelly  <wctkelly05@163.com>",
+      1
+    ],
+    [
+      "\"Tew\" <bkk.tew@wwl.sg>",
+      1
+    ],
+    [
+      "\"Tricia Kwok\" <tp.triciakwok@wwl.sg>",
+      1
+    ],
+    [
+      "\"yuanjin@worldwide-logistics.cn\" <yuanjin@wwl.cn>",
+      1
+    ],
+    [
+      "Courtney Muller <courtney@manifestevents.com>",
+      1
+    ],
+    [
+      "<pmcgrath@projectlogisticsllc.com>",
+      1
+    ],
+    [
+      "邹淑君  <zoushujun@kingbogroup.com>",
+      1
+    ],
+    [
+      "<bkk.ying@wwl.sg>",
+      1
+    ],
+    [
+      "Jessie Zhao <Jessie.Z@aalshipping.com>",
+      1
+    ],
+    [
+      "\"Rajesh - WWL \" <sha.rajesh@wwl.sg>",
+      1
+    ],
+    [
+      "GSC3 Documentation Executive Moses A <a.moses@gsc.yangming.com>",
+      1
+    ],
+    [
+      "David Kim | PTS Inc <dkim@ptstfs.com>",
+      1
+    ],
+    [
+      "\"Kelvin Chen - WWL\" <kc@wwl.sg>",
+      1
+    ],
+    [
+      "\"Boby Gong\" <sha.ops8@wwl.cn>",
+      1
+    ],
+    [
+      "\"Gali.gan@wwl.cn\" <gali.gan@wwl.cn>",
+      1
+    ],
+    [
+      "DWE - Ashley Frazier <Ashley.Frazier@EvansDelivery.com>",
+      1
+    ],
+    [
+      "Patrick Kent <patrick@acefreightexperts.com>",
+      1
+    ],
+    [
+      "Czar Lizada <ltl@pinnacleteam.com>",
+      1
+    ],
+    [
+      "\"TMarsh/Timothy Marsh (US/CLA/SEC)\" <tmarsh@coscologam.com>",
+      1
+    ],
+    [
+      "\"tao.sales21@wwl.cn\" <tao.sales21@wwl.cn>",
+      1
+    ],
+    [
+      "\"Matson Inc.\" <sburns@matson-logistics.com>",
+      1
+    ],
+    [
+      "\"Makpal Bayetova\" <makpal.bayetova@design-innovation-awards.com>",
+      1
+    ],
+    [
+      "Anjana Saji <enquiries@threelineshipping.com>",
+      1
+    ],
+    [
+      "徐晓洁  <xuxiaojie@cargoee.com>",
+      1
+    ],
+    [
+      "\"Worldzone | Imports\" <imports@worldzone.ae>",
+      1
+    ],
+    [
+      "Sinder CONTEIRA <sales-eu@conteira.world>",
+      1
+    ],
+    [
+      "abelwang <abelwang@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "usa-import.customscompliance@msc.com",
+      1
+    ],
+    [
+      "Doris Arana <doris.arana@sea-lead.com>",
+      1
+    ],
+    [
+      "Dominic Teh <dominic@sunbayint.com>",
+      1
+    ],
+    [
+      "孙中羽  <tao.sales13@wwl.cn>",
+      1
+    ],
+    [
+      "Anna Steelle <anna.s@ladingcargo.com>",
+      1
+    ],
+    [
+      "Mia <sales62@smoothlogistics.cn>",
+      1
+    ],
+    [
+      "\"joycehe\" <sha.joycehe@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "\"Lenka Zhou\" <sha.ops119@wwl.cn>",
+      1
+    ],
+    [
+      "\"Cherish\" <cherishe@transtaff.com>",
+      1
+    ],
+    [
+      "Olivia Xiao <olivia@susanqinlaw.com>",
+      1
+    ],
+    [
+      "马德龙  <madelong@cargoee.com>",
+      1
+    ],
+    [
+      "\"zhangliangliang\" <sha.zhangliangliang@wwl.cn>",
+      1
+    ],
+    [
+      "\"Middle East Energy 2026\" <info@middleeast-energy.com>",
+      1
+    ],
+    [
+      "Maneesh Kurup | Allcargo UAE <Maneesh.Kurup@allcargologistics.com>",
+      1
+    ],
+    [
+      "\"sha.obd4\" <sha.obd4@wwl.cn>",
+      1
+    ],
+    [
+      "william.mark@cargoconvoy.co",
+      1
+    ],
+    [
+      "Sunaina Aggarwal <s.aggarwal@loadkonnect.com>",
+      1
     ]
   ],
   "daily_counts": {
@@ -737,7 +2357,36 @@
     "2026-03-28": 29,
     "2026-03-29": 15,
     "2026-02-26": 122,
-    "2026-02-27": 322
+    "2026-02-27": 322,
+    "2025-12-31": 27,
+    "2026-01-01": 14,
+    "2026-01-02": 66,
+    "2026-01-03": 13,
+    "2026-01-04": 122,
+    "2026-01-05": 167,
+    "2026-01-06": 184,
+    "2026-01-07": 187,
+    "2026-01-08": 196,
+    "2026-01-09": 132,
+    "2024-04-01": 1,
+    "2026-01-10": 65,
+    "2026-01-11": 73,
+    "2026-01-12": 305,
+    "2026-01-13": 263,
+    "2026-01-14": 261,
+    "2026-01-15": 227,
+    "2026-01-16": 275,
+    "2026-01-17": 89,
+    "2026-01-18": 66,
+    "2026-01-19": 316,
+    "2026-01-20": 279,
+    "2026-01-21": 231,
+    "2026-01-22": 307,
+    "2026-01-23": 233,
+    "2026-01-24": 86,
+    "2026-01-25": 47,
+    "2026-01-26": 230,
+    "2026-01-27": 1
   },
   "display_note": "趋势图显示最近30天,评分基于60天全量数据",
   "pdf_count": 2886
