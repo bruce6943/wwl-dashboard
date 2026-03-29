@@ -33,7 +33,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "MSC",
@@ -64,7 +64,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "Hapag-Lloyd",
@@ -93,7 +93,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "ZIM",
@@ -122,7 +122,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "YML",
@@ -151,7 +151,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "WAN HAI",
@@ -180,7 +180,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "Evergreen",
@@ -209,7 +209,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "HMM",
@@ -238,7 +238,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "MAERSK",
@@ -267,7 +267,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "PACIFIC T&T",
@@ -281,14 +281,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 25,
-        "service_mentions_cumulative": 31,
-        "customers_served": 2,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 14,
@@ -297,7 +296,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "ROME TRANSPORT",
@@ -311,14 +310,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 24,
-        "service_mentions_cumulative": 41,
-        "customers_served": 1,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 14,
@@ -327,7 +325,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "FAST FREIGHTS",
@@ -341,14 +339,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 8,
-        "service_mentions_cumulative": 0,
-        "customers_served": 0,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 5,
@@ -357,7 +354,7 @@
         "responsiveness": 8,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "YES CHB",
@@ -371,14 +368,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 117,
-        "service_mentions_cumulative": 208,
-        "customers_served": 3,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 20,
@@ -387,7 +383,7 @@
         "responsiveness": 20,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "FCC USA",
@@ -401,14 +397,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 186,
-        "service_mentions_cumulative": 34,
-        "customers_served": 3,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 20,
@@ -417,7 +412,7 @@
         "responsiveness": 20,
         "documentation_quality": 12
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "IDC INTERNATIONAL",
@@ -431,14 +426,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 0,
-        "service_mentions_cumulative": 0,
-        "customers_served": 0,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
@@ -447,7 +441,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "RIM LOGISTICS",
@@ -461,14 +455,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 0,
-        "service_mentions_cumulative": 0,
-        "customers_served": 0,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
@@ -477,7 +470,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "ATC CARGO",
@@ -491,14 +484,13 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_cumulative": 0,
-        "service_mentions_cumulative": 0,
-        "customers_served": 0,
-        "hold_events": 0,
-        "inspection_events": 0,
+        "email_volume_7d": 0,
+        "active_days_7d": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
@@ -507,7 +499,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "OOCL",
@@ -537,7 +529,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "COSCO",
@@ -567,7 +559,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     },
     {
       "vendor_name": "ONE",
@@ -597,7 +589,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T06:46:32.702516+08:00"
+      "last_updated": "2026-03-30T07:16:47.532152+08:00"
     }
   ]
 }
