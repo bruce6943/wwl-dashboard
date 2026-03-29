@@ -1,81 +1,334 @@
 {
-  "customer_carrier": {},
-  "customer_service": {},
+  "customer_carrier": {
+    "REACH": {
+      "CMA-CGM": 154,
+      "COSCO": 45,
+      "ONE": 74,
+      "OOCL": 33,
+      "ZIM": 91,
+      "MSC": 96
+    },
+    "MAG": {
+      "CMA-CGM": 81,
+      "ZIM": 162,
+      "ONE": 262,
+      "Hapag-Lloyd": 110,
+      "OOCL": 213,
+      "COSCO": 161,
+      "MSC": 269,
+      "YML": 18,
+      "WAN HAI": 35
+    },
+    "MING HAO": {
+      "CMA-CGM": 90,
+      "COSCO": 19,
+      "ONE": 33,
+      "OOCL": 16,
+      "MAERSK": 2,
+      "ZIM": 26
+    },
+    "HAILIANG": {
+      "MSC": 30,
+      "ONE": 1,
+      "ZIM": 10,
+      "COSCO": 1,
+      "OOCL": 21
+    },
+    "ELITE EAGLE": {
+      "ONE": 2,
+      "COSCO": 1,
+      "MSC": 2
+    },
+    "JINGZHOU": {
+      "Hapag-Lloyd": 41
+    },
+    "ELITE SOLAR": {
+      "OOCL": 6,
+      "WAN HAI": 5
+    },
+    "HITHIUM": {
+      "ONE": 17,
+      "ZIM": 54,
+      "MSC": 3
+    },
+    "MERSY": {
+      "MSC": 7
+    },
+    "HORIZON": {
+      "OOCL": 21,
+      "COSCO": 2,
+      "MSC": 5
+    },
+    "HAIROBOT": {
+      "ZIM": 1,
+      "WAN HAI": 2
+    },
+    "AVANTIX": {
+      "ONE": 15,
+      "WAN HAI": 22,
+      "COSCO": 6
+    },
+    "HOUNEN": {
+      "WAN HAI": 3,
+      "MSC": 9
+    },
+    "CLOU": {
+      "COSCO": 10,
+      "ZIM": 27
+    },
+    "PREVALON": {
+      "COSCO": 9,
+      "ZIM": 22
+    },
+    "VITA COCO": {
+      "ONE": 2
+    }
+  },
+  "customer_service": {
+    "MAG": {
+      "PTS": {
+        "count": 125,
+        "types": [
+          "清关",
+          "卡车"
+        ]
+      },
+      "FCC USA": {
+        "count": 33,
+        "types": []
+      },
+      "YES报关行": {
+        "count": 111,
+        "types": [
+          "清关",
+          "卡车"
+        ]
+      },
+      "SCC Supply Chain": {
+        "count": 12,
+        "types": []
+      },
+      "JC Transports": {
+        "count": 2,
+        "types": []
+      },
+      "WFS Customs": {
+        "count": 1,
+        "types": []
+      },
+      "一海通": {
+        "count": 20,
+        "types": []
+      },
+      "Rome卡车": {
+        "count": 12,
+        "types": []
+      },
+      "Pioneer卡车": {
+        "count": 8,
+        "types": []
+      }
+    },
+    "HAILIANG": {
+      "FCC USA": {
+        "count": 3,
+        "types": []
+      },
+      "SCC Supply Chain": {
+        "count": 27,
+        "types": []
+      }
+    },
+    "JINGZHOU": {
+      "PTS": {
+        "count": 42,
+        "types": [
+          "卡车"
+        ]
+      }
+    },
+    "HORIZON": {
+      "WFS Customs": {
+        "count": 17,
+        "types": []
+      }
+    },
+    "CLOU": {
+      "YES报关行": {
+        "count": 25,
+        "types": [
+          "清关",
+          "卡车"
+        ]
+      },
+      "PTT卡车": {
+        "count": 3,
+        "types": [
+          "卡车"
+        ]
+      }
+    },
+    "PREVALON": {
+      "YES报关行": {
+        "count": 3,
+        "types": [
+          "清关"
+        ]
+      }
+    },
+    "ASTRONERGY": {
+      "一海通": {
+        "count": 51,
+        "types": []
+      }
+    },
+    "TERRASOULSUPERFOODS": {
+      "FCC USA": {
+        "count": 14,
+        "types": [
+          "卡车"
+        ]
+      }
+    },
+    "BETTERBODYFOODS": {
+      "FCC USA": {
+        "count": 14,
+        "types": [
+          "卡车"
+        ]
+      }
+    }
+  },
   "supply_chains": {
-    "海柔": {
+    "ELITE EAGLE": {
       "carriers": {
-        "ZIM": 9,
-        "WAN HAI": 2,
-        "MSC": 6
-      },
-      "brokers": {
-        "YES报关行": 17
-      },
-      "truckers": {},
-      "agents": {}
-    },
-    "REACH INDUSTRY": {
-      "carriers": {
-        "CMA-CGM": 17,
-        "ZIM": 15,
-        "ONE": 3,
-        "OOCL": 2,
-        "COSCO": 8
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "MAG SPECIALTIES": {
-      "carriers": {
-        "Hapag-Lloyd": 7,
-        "MSC": 1
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "Vita Coco": {
-      "carriers": {
-        "ONE": 9
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "HORIZON SOLAR": {
-      "carriers": {
-        "OOCL": 5,
+        "ONE": 2,
+        "COSCO": 1,
         "MSC": 2
       },
-      "brokers": {
-        "WFS Customs": 6
-      },
+      "brokers": {},
       "truckers": {},
       "agents": {}
     },
-    "科陆电子": {
+    "TERRASOULSUPERFOODS": {
+      "carriers": {},
+      "brokers": {},
+      "truckers": {},
+      "agents": {
+        "FCC USA": 14
+      }
+    },
+    "ELITE SOLAR": {
       "carriers": {
-        "COSCO": 15,
-        "ZIM": 40
+        "OOCL": 6,
+        "WAN HAI": 5
       },
-      "brokers": {
-        "YES报关行": 26
-      },
-      "truckers": {
-        "PTT卡车": 22
-      },
+      "brokers": {},
+      "truckers": {},
       "agents": {}
     },
-    "海亮": {
+    "AVANTIX": {
       "carriers": {
-        "MSC": 4
+        "ONE": 15,
+        "WAN HAI": 22,
+        "COSCO": 6
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HAILIANG": {
+      "carriers": {
+        "MSC": 30,
+        "ONE": 1,
+        "ZIM": 10,
+        "COSCO": 1,
+        "OOCL": 21
       },
       "brokers": {},
       "truckers": {},
       "agents": {
-        "SCC Supply Chain": 13
+        "FCC USA": 3,
+        "SCC Supply Chain": 27
       }
+    },
+    "MAG": {
+      "carriers": {
+        "CMA-CGM": 81,
+        "ZIM": 162,
+        "ONE": 262,
+        "Hapag-Lloyd": 110,
+        "OOCL": 213,
+        "COSCO": 161,
+        "MSC": 269,
+        "YML": 18,
+        "WAN HAI": 35
+      },
+      "brokers": {
+        "YES报关行": 111,
+        "WFS Customs": 1
+      },
+      "truckers": {
+        "JC Transports": 2,
+        "Rome卡车": 12,
+        "Pioneer卡车": 8
+      },
+      "agents": {
+        "PTS": 125,
+        "FCC USA": 33,
+        "SCC Supply Chain": 12,
+        "一海通": 20
+      }
+    },
+    "JINGZHOU": {
+      "carriers": {
+        "Hapag-Lloyd": 41
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {
+        "PTS": 42
+      }
+    },
+    "REACH": {
+      "carriers": {
+        "CMA-CGM": 154,
+        "COSCO": 45,
+        "ONE": 74,
+        "OOCL": 33,
+        "ZIM": 91,
+        "MSC": 96
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "ASTRONERGY": {
+      "carriers": {},
+      "brokers": {},
+      "truckers": {},
+      "agents": {
+        "一海通": 51
+      }
+    },
+    "HITHIUM": {
+      "carriers": {
+        "ONE": 17,
+        "ZIM": 54,
+        "MSC": 3
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HOUNEN": {
+      "carriers": {
+        "WAN HAI": 3,
+        "MSC": 9
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
     },
     "PREVALON": {
       "carriers": {
@@ -88,51 +341,77 @@
       "truckers": {},
       "agents": {}
     },
-    "MERSY CORP": {
+    "MING HAO": {
       "carriers": {
+        "CMA-CGM": 90,
+        "COSCO": 19,
+        "ONE": 33,
+        "OOCL": 16,
+        "MAERSK": 2,
+        "ZIM": 26
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "CLOU": {
+      "carriers": {
+        "COSCO": 10,
+        "ZIM": 27
+      },
+      "brokers": {
+        "YES报关行": 25
+      },
+      "truckers": {
+        "PTT卡车": 3
+      },
+      "agents": {}
+    },
+    "VITA COCO": {
+      "carriers": {
+        "ONE": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "HAIROBOT": {
+      "carriers": {
+        "ZIM": 1,
+        "WAN HAI": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "MERSY": {
+      "carriers": {
+        "MSC": 7
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {}
+    },
+    "BETTERBODYFOODS": {
+      "carriers": {},
+      "brokers": {},
+      "truckers": {},
+      "agents": {
+        "FCC USA": 14
+      }
+    },
+    "HORIZON": {
+      "carriers": {
+        "OOCL": 21,
+        "COSCO": 2,
         "MSC": 5
       },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "AVANTIX": {
-      "carriers": {
-        "ONE": 5,
-        "WAN HAI": 8,
-        "COSCO": 2
+      "brokers": {
+        "WFS Customs": 17
       },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "HITHIUM海辰": {
-      "carriers": {
-        "ZIM": 4,
-        "MSC": 2
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "MING HAO XIN": {
-      "carriers": {
-        "ONE": 5,
-        "OOCL": 2
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {}
-    },
-    "HOUNEN SOLAR": {
-      "carriers": {
-        "WAN HAI": 1,
-        "MSC": 9
-      },
-      "brokers": {},
       "truckers": {},
       "agents": {}
     }
   },
-  "last_updated": "2026-03-29T16:34:48.742964+08:00"
+  "last_updated": "2026-03-29"
 }
