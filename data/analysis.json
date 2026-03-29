@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-30T05:16:00.210798+08:00",
+  "scan_time": "2026-03-30T05:46:08.565986+08:00",
   "total_emails": 7,
   "business_emails": 2,
   "pdf_count": 1,
@@ -85,7 +85,7 @@
     "entities": 85,
     "relationships": 0,
     "contacts_new": 0,
-    "contacts_total": 228,
+    "contacts_total": 364,
     "daily_connections": 0,
     "new_domains": []
   },
