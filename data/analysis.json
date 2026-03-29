@@ -1,6 +1,6 @@
 {
-  "scan_time": "2026-03-30T03:15:30.000378+08:00",
-  "total_emails": 3,
+  "scan_time": "2026-03-30T03:45:37.831348+08:00",
+  "total_emails": 5,
   "business_emails": 1,
   "pdf_count": 0,
   "categories": {
@@ -26,7 +26,7 @@
   "all_hbls": [],
   "all_mbls": [],
   "daily_counts": {
-    "2026-03-29": 2,
+    "2026-03-29": 4,
     "2026-03-30": 1
   },
   "inspection_mbls": [],
@@ -45,6 +45,14 @@
     ],
     [
       "LinkedIn <messages-noreply@linkedin.com>",
+      1
+    ],
+    [
+      "Krizza Mallari <ops@pinnacleteam.com>",
+      1
+    ],
+    [
+      "Ergin Ismayil <eismayil@balenaprojects.com>",
       1
     ]
   ],
