@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-03-30T03:45:37.831348+08:00",
-  "total_emails": 5,
-  "business_emails": 1,
-  "pdf_count": 0,
+  "scan_time": "2026-03-30T04:15:44.613704+08:00",
+  "total_emails": 6,
+  "business_emails": 2,
+  "pdf_count": 1,
   "categories": {
-    "other_biz": 1
+    "other_biz": 2
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -19,12 +19,16 @@
       ]
     }
   },
-  "carriers": {},
+  "carriers": {
+    "MSC": 1
+  },
   "carrier_fees": {},
   "hbl_total": 0,
-  "mbl_total": 0,
+  "mbl_total": 1,
   "all_hbls": [],
-  "all_mbls": [],
+  "all_mbls": [
+    "MEDUWG692272"
+  ],
   "daily_counts": {
     "2026-03-29": 4,
     "2026-03-30": 1
@@ -54,10 +58,16 @@
     [
       "Ergin Ismayil <eismayil@balenaprojects.com>",
       1
+    ],
+    [
+      "us038-importpickupnotification@msc.com",
+      1
     ]
   ],
   "bl_status": {
-    "no_tlx_mbl": [],
+    "no_tlx_mbl": [
+      "MEDUWG692272"
+    ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
     "hold_bl": [],
