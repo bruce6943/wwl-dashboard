@@ -6,7 +6,7 @@
     "total_companies": 83,
     "source": "15天邮件签名提取",
     "period": "2026-03-13 ~ 2026-03-28",
-    "last_updated": "2026-03-29T20:08:51.002498+08:00"
+    "last_updated": "2026-03-29T20:39:25.976731+08:00"
   },
   "contacts": [
     {
@@ -4669,7 +4669,7 @@
       "company": "",
       "title": "",
       "phones": [],
-      "email_count": 14,
+      "email_count": 15,
       "first_seen": "Sat, 28 Mar 2026 22:10:07",
       "last_seen": "Sat, 28 Mar 2026 22:10:07"
     }
