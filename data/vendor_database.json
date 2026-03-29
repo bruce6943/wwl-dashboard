@@ -273,7 +273,7 @@
       "vendor_name": "PACIFIC T&T",
       "vendor_name_cn": "太平洋运输",
       "vendor_category": "trucking",
-      "capability_score": 33,
+      "capability_score": 70,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -281,20 +281,21 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 25,
+        "service_mentions_cumulative": 31,
+        "customers_served": 2,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "volume_reliability": 14,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
-        "responsiveness": 0,
-        "documentation_quality": 5
+        "responsiveness": 14,
+        "documentation_quality": 6
       },
       "last_updated": "2026-03-30T06:46:32.702516+08:00"
     },
@@ -302,7 +303,7 @@
       "vendor_name": "ROME TRANSPORT",
       "vendor_name_cn": "罗马运输",
       "vendor_category": "trucking",
-      "capability_score": 33,
+      "capability_score": 66,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -310,20 +311,21 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 24,
+        "service_mentions_cumulative": 41,
+        "customers_served": 1,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "volume_reliability": 14,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
-        "responsiveness": 0,
-        "documentation_quality": 5
+        "responsiveness": 14,
+        "documentation_quality": 6
       },
       "last_updated": "2026-03-30T06:46:32.702516+08:00"
     },
@@ -331,7 +333,7 @@
       "vendor_name": "FAST FREIGHTS",
       "vendor_name_cn": "快捷货运",
       "vendor_category": "trucking",
-      "capability_score": 33,
+      "capability_score": 50,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -339,19 +341,20 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 8,
+        "service_mentions_cumulative": 0,
+        "customers_served": 0,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "volume_reliability": 5,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
-        "responsiveness": 0,
+        "responsiveness": 8,
         "documentation_quality": 5
       },
       "last_updated": "2026-03-30T06:46:32.702516+08:00"
@@ -360,7 +363,7 @@
       "vendor_name": "YES CHB",
       "vendor_name_cn": "YES报关行",
       "vendor_category": "customs_broker",
-      "capability_score": 33,
+      "capability_score": 87,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -368,20 +371,21 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 117,
+        "service_mentions_cumulative": 208,
+        "customers_served": 3,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "volume_reliability": 20,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
-        "responsiveness": 0,
-        "documentation_quality": 5
+        "responsiveness": 20,
+        "documentation_quality": 10
       },
       "last_updated": "2026-03-30T06:46:32.702516+08:00"
     },
@@ -389,7 +393,7 @@
       "vendor_name": "FCC USA",
       "vendor_name_cn": "FCC美国",
       "vendor_category": "agent_partner",
-      "capability_score": 33,
+      "capability_score": 89,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -397,20 +401,21 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 186,
+        "service_mentions_cumulative": 34,
+        "customers_served": 3,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "volume_reliability": 20,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
-        "responsiveness": 0,
-        "documentation_quality": 5
+        "responsiveness": 20,
+        "documentation_quality": 12
       },
       "last_updated": "2026-03-30T06:46:32.702516+08:00"
     },
@@ -418,7 +423,7 @@
       "vendor_name": "IDC INTERNATIONAL",
       "vendor_name_cn": "IDC国际",
       "vendor_category": "agent_partner",
-      "capability_score": 33,
+      "capability_score": 37,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -426,17 +431,18 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 0,
+        "service_mentions_cumulative": 0,
+        "customers_served": 0,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
         "responsiveness": 0,
         "documentation_quality": 5
@@ -447,7 +453,7 @@
       "vendor_name": "RIM LOGISTICS",
       "vendor_name_cn": "RIM物流",
       "vendor_category": "agent_partner",
-      "capability_score": 33,
+      "capability_score": 37,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -455,17 +461,18 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 0,
+        "service_mentions_cumulative": 0,
+        "customers_served": 0,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
         "responsiveness": 0,
         "documentation_quality": 5
@@ -476,7 +483,7 @@
       "vendor_name": "ATC CARGO",
       "vendor_name_cn": "ATC货运",
       "vendor_category": "agent_partner",
-      "capability_score": 33,
+      "capability_score": 37,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -484,17 +491,18 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_cumulative": 0,
+        "service_mentions_cumulative": 0,
+        "customers_served": 0,
+        "hold_events": 0,
+        "inspection_events": 0,
         "pdf_count": 0,
         "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "pdf_fee_avg": 0
       },
       "scoring_components": {
         "volume_reliability": 0,
-        "cost_efficiency": 8,
+        "cost_efficiency": 12,
         "problem_frequency": 20,
         "responsiveness": 0,
         "documentation_quality": 5
