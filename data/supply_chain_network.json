@@ -1,7 +1,7 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 161,
+      "CMA-CGM": 165,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 10
+      "MSC": 11
     },
     "MERSY CORP": {
       "MSC": 9
@@ -209,7 +209,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 5,
+        "count": 6,
         "types": []
       }
     }

@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T12:01:43.073732+08:00",
-  "total_emails": 66,
-  "business_emails": 59,
+  "scan_time": "2026-03-30T12:22:18.398288+08:00",
+  "total_emails": 68,
+  "business_emails": 61,
   "pdf_count": 26,
   "categories": {
-    "other_biz": 27,
+    "other_biz": 28,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 1,
-    "prealert": 7,
+    "prealert": 8,
     "arrival": 2
   },
   "customers": {
@@ -70,7 +70,7 @@
       ]
     },
     "REACH INDUSTRY": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -89,32 +89,11 @@
     "MSC": 7,
     "COSCO": 9,
     "OOCL": 12,
-    "ONE": 4,
-    "CMA-CGM": 10,
+    "ONE": 5,
+    "CMA-CGM": 11,
     "ZIM": 3
   },
-  "carrier_fees": {
-    "MSC": {
-      "count": 2,
-      "total": 20.0,
-      "avg": 20.0
-    },
-    "ONE": {
-      "count": 8,
-      "total": 0,
-      "avg": 0
-    },
-    "OOCL": {
-      "count": 2,
-      "total": 0,
-      "avg": 0
-    },
-    "ZIM": {
-      "count": 1,
-      "total": 0,
-      "avg": 0
-    }
-  },
+  "carrier_fees": {},
   "hbl_total": 21,
   "mbl_total": 26,
   "all_hbls": [
@@ -170,7 +149,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 60
+    "2026-03-30": 62
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -228,6 +207,10 @@
       2
     ],
     [
+      "<bkk.rie@wwl.sg>",
+      2
+    ],
+    [
       "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
       2
     ],
@@ -257,10 +240,6 @@
     ],
     [
       "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
-      1
-    ],
-    [
-      "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
       1
     ]
   ],
@@ -370,6 +349,28 @@
       "source": "RE: PRE-ALERT - MBL : CMDUTHD1466676 l HBL : WLC60124865 l L",
       "from": "<bkk.rie@wwl.sg>",
       "date": "Mon, 30 Mar 2026 10:09:31"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "ONE",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "Discharge Notification / ONE HONG KONG 0087E - YTI (YUSEN TE",
+      "source": "Discharge Notification / ONE HONG KONG 0087E - YTI (YUSEN TE",
+      "from": "Ocean Network Express <do-not-reply@one-line.com>",
+      "date": "Mon, 30 Mar 2026 04:02:45"
     },
     {
       "type": "inspection_broker",
@@ -1012,55 +1013,55 @@
     }
   ],
   "action_summary": {
-    "total": 36,
-    "urgent": 9,
+    "total": 37,
+    "urgent": 10,
     "high": 9,
     "medium": 18
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272",
-      "COSU6444363540",
-      "ONEYBKKG38865600",
-      "OOLU2166784690",
-      "COSU8040582340",
-      "MEDUWK478768",
-      "MEDUWK745968",
-      "OOLU2320126090",
-      "OOLU2166784680",
-      "OOLU2167100640",
-      "MEDUYL789706",
-      "OOLU2166524280",
       "OOLU2166784670",
-      "CMDUCHN3095178",
-      "COSU6444625540",
-      "MEDUKG193320",
-      "OOLU2167100650",
-      "ONEYBTMG00382500",
-      "CMDUCHN3116145",
       "MEDUYQ353300",
-      "ZIMUBKK80440481"
+      "ZIMUBKK80440481",
+      "ONEYBTMG00382500",
+      "OOLU2320126090",
+      "CMDUCHN3116145",
+      "COSU6444363540",
+      "MEDUWK478768",
+      "OOLU2166524280",
+      "MEDUWK745968",
+      "MEDUWG692272",
+      "COSU6444625540",
+      "OOLU2166784690",
+      "CMDUCHN3095178",
+      "MEDUKG193320",
+      "OOLU2167100640",
+      "COSU8040582340",
+      "OOLU2167100650",
+      "MEDUYL789706",
+      "ONEYBKKG38865600",
+      "OOLU2166784680"
     ],
     "no_tlx_hbl": [
-      "WLC60205753",
-      "WLC60124381",
-      "WLC60216466",
-      "WLC60301626",
-      "WLC60215570",
-      "WLC60200080",
+      "WLC60125060",
       "WLC60120505",
       "WLC60208507",
-      "WLC60301627",
+      "WLC60124381",
       "WLC50813210",
+      "WLC60301625",
+      "WLC60205753",
+      "WLC60301626",
+      "WLC60216466",
+      "WLC60301627",
+      "WLC60213560",
+      "WLC60215570",
       "WLC60126287",
       "WLC60307413",
-      "WLC60213560",
-      "WLC60301625",
-      "WLC60125060"
+      "WLC60200080"
     ],
     "an_no_prealert": [
-      "OOLU2167100650",
-      "OOLU2167100640"
+      "OOLU2167100640",
+      "OOLU2167100650"
     ],
     "hold_bl": [],
     "tlx_confirmed_mbl": 6,
@@ -1101,12 +1102,17 @@
   "neural_network": {
     "entities": 85,
     "relationships": 1,
-    "contacts_new": 0,
-    "contacts_total": 364,
-    "daily_connections": 3,
+    "contacts_new": 1,
+    "contacts_total": 365,
+    "daily_connections": 4,
     "new_domains": []
   },
   "daily_connections": [
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
     {
       "from": "REACH INDUSTRY",
       "to": "CMA-CGM",
