@@ -659,7 +659,10 @@ with tabs[0]:
         cat_counts[c] = cat_counts.get(c, 0) + 1
     cat_labels = {"hold":"Hold扣货","inspection":"查验","cc_confirm":"CC费用","arrival_notice":"到港通知",
                   "dd_alert":"D&D费用","overdue":"Overdue催收","arrears":"欠费催收","bl_release":"换单电放",
-                  "prealert_gap":"漏单预警","sop":"SOP跟进"}
+                  "prealert_gap":"漏单预警","sop":"SOP跟进",
+                  "broker_followup":"报关行跟进","trucker_followup":"卡车跟进","post_clearance":"清关后跟进",
+                  "empty_return":"空柜归还","post_booking":"订舱后跟进","supplier_reply":"供应商等回复",
+                  "inspection_broker":"查验报关跟进"}
     cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
     st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
 

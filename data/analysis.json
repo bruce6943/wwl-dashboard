@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-30T08:17:17.757514+08:00",
+  "scan_time": "2026-03-30T08:37:12.195785+08:00",
   "total_emails": 11,
   "business_emails": 6,
   "pdf_count": 1,
@@ -26,7 +26,13 @@
     "OOCL": 2,
     "ONE": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "MSC": {
+      "count": 1,
+      "total": 20.0,
+      "avg": 20.0
+    }
+  },
   "hbl_total": 0,
   "mbl_total": 5,
   "all_hbls": [],
@@ -133,21 +139,69 @@
       "source": "查验预警-OOLU2166524280",
       "from": "assistant@pltplt.com",
       "date": "Mon, 30 Mar 2026 08:00:20"
+    },
+    {
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "COSU6444625540",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-COSU6444625540",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:02"
+    },
+    {
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-OOLU2320126090",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:03"
+    },
+    {
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "ONEYBKKG38865600",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-ONEYBKKG38865600",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:05"
+    },
+    {
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "OOLU2166524280",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-OOLU2166524280",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:20"
     }
   ],
   "action_summary": {
-    "total": 4,
-    "urgent": 4,
+    "total": 8,
+    "urgent": 8,
     "high": 0,
     "medium": 0
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU6444625540",
-      "ONEYBKKG38865600",
       "OOLU2320126090",
+      "MEDUWG692272",
+      "COSU6444625540",
       "OOLU2166524280",
-      "MEDUWG692272"
+      "ONEYBKKG38865600"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
