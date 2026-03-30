@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 255,
+      "CMA-CGM": 259,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 187,
+      "ZIM": 193,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 34
+      "MSC": 35
     },
     "MERSY CORP": {
       "MSC": 9
@@ -87,8 +87,8 @@
       "ZIM": 22
     },
     "DTC SA": {
-      "COSCO": 19,
-      "OOCL": 38
+      "COSCO": 21,
+      "OOCL": 42
     }
   },
   "customer_service": {
@@ -191,7 +191,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 14,
+        "count": 16,
         "types": [
           "卡车"
         ]
@@ -199,7 +199,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 14,
+        "count": 16,
         "types": [
           "卡车"
         ]
@@ -213,19 +213,21 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 31,
+        "count": 33,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 9,
-        "types": []
+        "count": 13,
+        "types": [
+          "卡车"
+        ]
       }
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 2,
+        "count": 3,
         "types": []
       }
     }
