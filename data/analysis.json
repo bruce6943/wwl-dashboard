@@ -1,6 +1,6 @@
 {
-  "scan_time": "2026-03-31T07:20:13.466518+08:00",
-  "total_emails": 94,
+  "scan_time": "2026-03-31T07:38:13.403149+08:00",
+  "total_emails": 95,
   "business_emails": 67,
   "pdf_count": 15,
   "categories": {
@@ -136,9 +136,25 @@
     "YML": 1,
     "CMA-CGM": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "ONE": {
+      "count": 7,
+      "total": 6.0,
+      "avg": 1.2
+    },
+    "MSC": {
+      "count": 6,
+      "total": 20.0,
+      "avg": 20.0
+    },
+    "COSCO": {
+      "count": 1,
+      "total": 0,
+      "avg": 0
+    }
+  },
   "hbl_total": 11,
-  "mbl_total": 14,
+  "mbl_total": 16,
   "all_hbls": [
     "WLC50522982",
     "WLC60124859",
@@ -166,10 +182,12 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 74,
+    "2026-03-30": 75,
     "2026-03-31": 15
   },
   "inspection_mbls": [],
@@ -1044,39 +1062,41 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272",
-      "ONEYBKKG68481300",
-      "COSU9506295790",
-      "MEDURQ324234",
       "MEDURQ324903",
-      "ONEYBKKG67192800",
-      "MEDURQ324929",
-      "MEDURQ323962",
       "MEDUYL960612",
+      "MEDURQ324234",
+      "COSU9506295790",
       "CMDUTHD1466680",
+      "ONEYBKKG67192800",
+      "MEDUWG692272",
+      "MEDURQ324929",
       "ONEYBKKG61472300",
       "OOLU2320126090",
+      "MEDURQ323962",
+      "ONEYBKKG68481300",
+      "ONEYBKKG61453900",
+      "ONEYBTMG00521700",
       "ONEYBKKG48500700",
-      "ONEYBKKG61453900"
+      "ONEYBTMG00383600"
     ],
     "no_tlx_hbl": [
-      "WLC60213409",
-      "WLC60309086",
       "WLC60305140",
+      "WLC60305212",
+      "WLC60213409",
+      "WLC60125637",
+      "WLC60124859",
+      "WLC60304684",
+      "WLC60217446",
       "WLC60203463",
       "WLC50522982",
-      "WLC60217446",
-      "WLC60305212",
-      "WLC60124859",
-      "WLC60125637",
       "WLC60304584",
-      "WLC60304684"
+      "WLC60309086"
     ],
     "an_no_prealert": [
-      "COSU9506295790",
-      "MEDURQ324234",
-      "MEDURQ324929",
       "MEDURQ324903",
+      "MEDURQ324234",
+      "COSU9506295790",
+      "MEDURQ324929",
       "MEDURQ323962"
     ],
     "hold_bl": [
@@ -1131,9 +1151,9 @@
     "contacts_total": 371,
     "daily_connections": 6,
     "new_domains": [
-      "containerport.com",
+      "mercerlogistics.com",
       "elite-solar.com",
-      "mercerlogistics.com"
+      "containerport.com"
     ]
   },
   "daily_connections": [
