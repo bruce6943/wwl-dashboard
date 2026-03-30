@@ -1,19 +1,19 @@
 {
-  "scan_time": "2026-03-31T05:02:12.086246+08:00",
-  "total_emails": 69,
-  "business_emails": 48,
-  "pdf_count": 11,
+  "scan_time": "2026-03-31T05:36:18.874002+08:00",
+  "total_emails": 82,
+  "business_emails": 59,
+  "pdf_count": 15,
   "categories": {
     "charge_confirm": 6,
     "prealert": 8,
-    "other_biz": 26,
-    "arrival": 3,
+    "other_biz": 33,
+    "arrival": 7,
     "hold": 3,
     "booking": 2
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -24,7 +24,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -68,7 +68,7 @@
       ]
     },
     "HORIZON SOLAR": {
-      "emails": 4,
+      "emails": 5,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -118,14 +118,14 @@
   },
   "carriers": {
     "ONE": 14,
-    "MSC": 3,
+    "MSC": 8,
     "COSCO": 1,
     "OOCL": 3,
     "YML": 1
   },
   "carrier_fees": {},
   "hbl_total": 10,
-  "mbl_total": 9,
+  "mbl_total": 13,
   "all_hbls": [
     "WLC50522982",
     "WLC60125637",
@@ -140,6 +140,10 @@
   ],
   "all_mbls": [
     "COSU9506295790",
+    "MEDURQ323962",
+    "MEDURQ324234",
+    "MEDURQ324903",
+    "MEDURQ324929",
     "MEDUWG692272",
     "MEDUYL960612",
     "ONEYBKKG48500700",
@@ -150,7 +154,7 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 57,
+    "2026-03-30": 66,
     "2026-03-31": 11
   },
   "inspection_mbls": [],
@@ -165,6 +169,10 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
+      10
+    ],
+    [
+      "<horizonsolar001@gmail.com>",
       8
     ],
     [
@@ -172,7 +180,7 @@
       6
     ],
     [
-      "<horizonsolar001@gmail.com>",
+      "us038-importpickupnotification@msc.com",
       5
     ],
     [
@@ -208,11 +216,15 @@
       2
     ],
     [
-      "Robert Connor <bobc@maritimeway.net>",
-      1
+      "Fife CES <cesfife@mercerlogistics.com>",
+      2
     ],
     [
-      "us038-importpickupnotification@msc.com",
+      "Ian Weiland <sales@jctransports.com>",
+      2
+    ],
+    [
+      "Robert Connor <bobc@maritimeway.net>",
       1
     ],
     [
@@ -229,14 +241,6 @@
     ],
     [
       "Tammy Heard <tammy.heard@containerport.com>",
-      1
-    ],
-    [
-      "\"joannabao@worldwide-logistics.cn\" <sha.joannabao@worldwide-",
-      1
-    ],
-    [
-      "ADRIAN JUAREZ <adrianj@fccusa.net>",
       1
     ]
   ],
@@ -373,6 +377,48 @@
       "date": "Mon, 30 Mar 2026 20:38:06"
     },
     {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "",
+      "container": "",
+      "customer": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "Fife CES (mercerlogistics.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 ",
+      "source": "RE: Pick-up# inquire -ETA 4/03",
+      "from": "Fife CES <cesfife@mercerlogistics.com>",
+      "date": "Mon, 30 Mar 2026 21:04:54"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "",
+      "container": "",
+      "customer": "HORIZON SOLAR",
+      "assignee": "",
+      "carrier": "",
+      "sender": "gmail.com",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 ",
+      "source": "RE: Pick-up# inquire -ETA 4/03",
+      "from": "<horizonsolar001@gmail.com>",
+      "date": "Mon, 30 Mar 2026 14:09:07"
+    },
+    {
       "type": "arrival_notice",
       "priority": "high",
       "mbl": "COSU9506295790",
@@ -443,6 +489,102 @@
       "source": "Arrival Notice(BL#: BTMG00383600) Vessel/Voyage: ONE HARBOUR",
       "from": "\"shipment.info@one-line.com\" <shipment.info@one-li",
       "date": "Mon, 30 Mar 2026 17:51:44"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ323962",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ323962 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ323962",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "30 Mar 2026 17:12:13 -040"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ324234",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ324234 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ324234",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "30 Mar 2026 17:13:01 -040"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ324903",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ324903 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ324903",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "30 Mar 2026 17:14:46 -040"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ324929",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ324929 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ324929",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "30 Mar 2026 17:15:10 -040"
     },
     {
       "type": "post_clearance",
@@ -844,37 +986,45 @@
     }
   ],
   "action_summary": {
-    "total": 28,
-    "urgent": 6,
-    "high": 9,
+    "total": 34,
+    "urgent": 8,
+    "high": 13,
     "medium": 13
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG61472300",
+      "MEDUWG692272",
+      "MEDURQ324929",
+      "MEDUYL960612",
       "OOLU2320126090",
       "COSU9506295790",
+      "MEDURQ324234",
       "ONEYBKKG67192800",
-      "MEDUWG692272",
       "ONEYBKKG68481300",
+      "MEDURQ323962",
+      "ONEYBKKG61472300",
       "ONEYBKKG61453900",
-      "MEDUYL960612",
+      "MEDURQ324903",
       "ONEYBKKG48500700"
     ],
     "no_tlx_hbl": [
-      "WLC60217446",
+      "WLC50522982",
+      "WLC60304684",
       "WLC60305140",
-      "WLC60309086",
       "WLC60213409",
       "WLC60304584",
+      "WLC60305212",
       "WLC60125637",
-      "WLC50522982",
-      "WLC60203463",
-      "WLC60304684",
-      "WLC60305212"
+      "WLC60217446",
+      "WLC60309086",
+      "WLC60203463"
     ],
     "an_no_prealert": [
-      "COSU9506295790"
+      "MEDURQ324929",
+      "COSU9506295790",
+      "MEDURQ324234",
+      "MEDURQ323962",
+      "MEDURQ324903"
     ],
     "hold_bl": [
       {
@@ -923,10 +1073,10 @@
   },
   "neural_network": {
     "entities": 88,
-    "relationships": 15,
-    "contacts_new": 2,
+    "relationships": 18,
+    "contacts_new": 0,
     "contacts_total": 370,
-    "daily_connections": 4,
+    "daily_connections": 5,
     "new_domains": [
       "mercerlogistics.com",
       "containerport.com",
@@ -952,6 +1102,11 @@
     {
       "from": "PTS INC",
       "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
       "type": "service"
     }
   ]
