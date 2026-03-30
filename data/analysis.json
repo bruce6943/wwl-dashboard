@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-31T02:49:12.290949+08:00",
+  "scan_time": "2026-03-31T03:03:10.394643+08:00",
   "total_emails": 44,
   "business_emails": 36,
   "pdf_count": 11,
@@ -89,9 +89,25 @@
     "COSCO": 1,
     "OOCL": 2
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "ONE": {
+      "count": 7,
+      "total": 6.0,
+      "avg": 1.2
+    },
+    "MSC": {
+      "count": 2,
+      "total": 20.0,
+      "avg": 20.0
+    },
+    "COSCO": {
+      "count": 1,
+      "total": 0,
+      "avg": 0
+    }
+  },
   "hbl_total": 8,
-  "mbl_total": 9,
+  "mbl_total": 11,
   "all_hbls": [
     "WLC50522982",
     "WLC60203463",
@@ -111,6 +127,8 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "OOLU2320126090"
   ],
   "daily_counts": {
@@ -772,25 +790,27 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
+      "ONEYBTMG00521700",
       "ONEYBKKG61453900",
-      "OOLU2320126090",
       "ONEYBKKG68481300",
-      "MEDUWG692272",
       "MEDUYL960612",
-      "ONEYBKKG61472300",
       "COSU9506295790",
+      "ONEYBKKG61472300",
+      "ONEYBTMG00383600",
+      "ONEYBKKG67192800",
       "ONEYBKKG48500700",
-      "ONEYBKKG67192800"
+      "MEDUWG692272",
+      "OOLU2320126090"
     ],
     "no_tlx_hbl": [
-      "WLC60304684",
-      "WLC60213409",
-      "WLC60203463",
+      "WLC60217446",
       "WLC60304584",
       "WLC60305140",
+      "WLC60304684",
+      "WLC60213409",
       "WLC50522982",
-      "WLC60217446",
-      "WLC60305212"
+      "WLC60305212",
+      "WLC60203463"
     ],
     "an_no_prealert": [
       "COSU9506295790"

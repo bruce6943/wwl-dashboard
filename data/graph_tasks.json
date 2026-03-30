@@ -404,20 +404,6 @@
       "type": "inspection_active",
       "priority": "urgent",
       "title": "Inspection Active",
-      "mbl": "OOLU2320126090, OOLU2166524280",
-      "carrier": "OOCL",
-      "customer": "HORIZON SOLAR",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "OOCL 2票 — 查验中 → 跟进报关行 → 通知委托方",
-      "progress_history": "提单: OOLU2320126090, OOLU2166524280",
-      "email_count": 47,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "inspection_active",
-      "priority": "urgent",
-      "title": "Inspection Active",
       "mbl": "ONEYBKKG38865600",
       "carrier": "ONE",
       "customer": "HAIROBOT",
@@ -443,32 +429,32 @@
       "last_seen": "2026-03-30"
     },
     {
+      "type": "inspection_active",
+      "priority": "urgent",
+      "title": "Inspection Active",
+      "mbl": "OOLU2166524280",
+      "carrier": "OOCL",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验中 → 跟进报关行 → 通知委托方",
+      "progress_history": "",
+      "email_count": 6,
+      "last_seen": "2026-03-30"
+    },
+    {
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
       "mbl": "ZIMUBKK80439633, ZIMUBKK80439625, ZIMUBKK80441316",
       "carrier": "ZIM",
       "customer": "REACH",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
+      "wwl_sender": " (bkk.guide@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "ZIM 3票 — 费用已确认 → 向财务申请付款",
       "progress_history": "提单: ZIMUBKK80439633, ZIMUBKK80439625, ZIMUBKK80441316",
-      "email_count": 44,
-      "last_seen": "2026-03-25"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "ONEYBKKG68481300",
-      "carrier": "ONE",
-      "customer": "MING HAO XIN",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "费用已确认 → 向财务申请付款",
-      "progress_history": "",
-      "email_count": 2,
-      "last_seen": "2026-03-24"
+      "email_count": 48,
+      "last_seen": "2026-03-30"
     },
     {
       "type": "fee_confirmed",
@@ -483,31 +469,17 @@
       "progress_history": "",
       "email_count": 1,
       "last_seen": "2026-03-25"
-    },
-    {
-      "type": "payment_requested",
-      "priority": "high",
-      "title": "Payment Requested",
-      "mbl": "CMDUCHN3097590",
-      "carrier": "CMA-CGM",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "已申请付款 → 跟进水单 → 发船公司销账",
-      "progress_history": "",
-      "email_count": 1,
-      "last_seen": "2026-03-30"
     }
   ],
   "summary": {
-    "arrival_notices": 190,
-    "bl_releases": 99,
+    "arrival_notices": 179,
+    "bl_releases": 101,
     "billings": 125,
-    "prealerts": 37
+    "prealerts": 40
   },
   "stats": {
-    "total": 27,
+    "total": 25,
     "urgent": 23,
-    "high": 4
+    "high": 2
   }
 }
