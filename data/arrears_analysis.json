@@ -1,184 +1,303 @@
 {
-  "total_amount": 194273.91,
-  "total_records": 363,
-  "total_consignees": 74,
+  "snapshot_date": "2026-03-30",
+  "source": "上海环世物流(集团)有限公司目的港欠费截止到3.30.xlsx",
+  "total_amount": 136915.67,
+  "total_records": 280,
   "by_sheet": {
     "收货人自付": {
-      "records": 116,
-      "total": 96263.1
+      "total": 76813.08,
+      "count": 101
     },
     "委托人承担": {
-      "records": 189,
-      "total": 92435.81000000001
+      "total": 55297.59,
+      "count": 130
     },
     "代收-收货人": {
-      "records": 58,
-      "total": 5575.0
+      "total": 4805.0,
+      "count": 49
     }
   },
   "top20": [
     {
       "name": "NEXTERA ENERGY CONSTRUCTORS, LLC",
-      "total": 47352.0,
+      "total": 47663.0,
       "records": 115,
       "types": {
+        "Amount Still Due": 20444.0,
+        "Chassis Usage Charge": 19416.0,
+        "Ocean Freight": 2943.0,
+        "CONTAINER PER DIEM IMPORT-TCNU8938904": 1500.0,
+        "CONTAINER PER DIEM IMPORT-MSDU5001611": 250.0,
+        "CONTAINER PER DIEM IMPORT-MEDU4850643": 250.0,
+        "CONTAINER PER DIEM IMPORT-TRHU8554158": 250.0,
         "Detention-SEKU6230302": 190.0,
         "CONTAINER RAIL DETENTION-TIIU4189690": 185.0,
         "CONTAINER RAIL DETENTION-MEDU4627012": 185.0,
-        "IMPORT CHASSIS PER DIEM-TCLU6619222": 50.0,
-        "IMPORT CHASSIS PER DIEM-MSMU5624095": 50.0,
-        "CONTAINER RAIL DETENTION-TRHU7492895": 185.0,
-        "IMPORT CHASSIS PER DIEM-MSDU5001611": 75.0,
-        "CONTAINER PER DIEM IMPORT-MSDU5001611": 250.0,
         "CONTAINER RAIL DETENTION-TRHU7639461": 185.0,
         "CONTAINER RAIL DETENTION-MEDU7648030": 185.0,
         "CONTAINER RAIL DETENTION-TGBU7012122": 185.0,
+        "CONTAINER RAIL DETENTION-TGBU5354379": 185.0,
+        "CONTAINER RAIL DETENTION-MSDU6181797": 185.0,
+        "IMPORT CHASSIS PER DIEM-TCNU8938904": 175.0,
+        "IMPORT CHASSIS PER DIEM-MSDU5001611": 75.0,
+        "IMPORT CHASSIS PER DIEM-MEDU4850643": 75.0,
+        "IMPORT CHASSIS PER DIEM-TRHU8554158": 75.0,
+        "IMPORT CHASSIS PER DIEM-TCLU6619222": 50.0,
+        "IMPORT CHASSIS PER DIEM-MSMU5624095": 50.0,
         "IMPORT CHASSIS PER DIEM-GAOU7462613": 50.0,
+        "IMPORT CHASSIS PER DIEM-MSMU8845309": 50.0,
+        "IMPORT CHASSIS PER DIEM-MSDU7255507": 50.0,
+        "IMPORT CHASSIS PER DIEM-TCLU7867624": 50.0,
+        "IMPORT CHASSIS PER DIEM-MSNU6547166": 50.0,
+        "IMPORT CHASSIS PER DIEM-MSDU8862172": 50.0,
         "IMPORT CHASSIS PER DIEM-CAAU8066385": 25.0,
         "IMPORT CHASSIS PER DIEM-MSBU6855454": 25.0,
         "IMPORT CHASSIS PER DIEM-TIIU4485368": 25.0,
         "IMPORT CHASSIS PER DIEM-MSDU7852436": 25.0,
         "IMPORT CHASSIS PER DIEM-TGBU4394119": 25.0,
         "IMPORT CHASSIS PER DIEM-MSDU6375180": 25.0,
-        "CONTAINER RAIL DETENTION-TGBU5354379": 185.0,
-        "IMPORT CHASSIS PER DIEM-MEDU4850643": 75.0,
-        "CONTAINER PER DIEM IMPORT-MEDU4850643": 250.0,
-        "IMPORT CHASSIS PER DIEM-TCNU8938904": 175.0,
-        "CONTAINER PER DIEM IMPORT-TCNU8938904": 1500.0,
-        "IMPORT CHASSIS PER DIEM-MSMU8845309": 50.0,
-        "IMPORT CHASSIS PER DIEM-MSDU7255507": 50.0,
-        "IMPORT CHASSIS PER DIEM-TCLU7867624": 50.0,
         "IMPORT CHASSIS PER DIEM-TXGU7020199": 25.0,
-        "IMPORT CHASSIS PER DIEM-MSNU6547166": 50.0,
         "IMPORT CHASSIS PER DIEM-MSDU7600500": 25.0,
-        "IMPORT CHASSIS PER DIEM-TRHU8554158": 75.0,
-        "IMPORT CHASSIS PER DIEM-MSDU8862172": 50.0,
-        "CONTAINER PER DIEM IMPORT-TRHU8554158": 250.0,
         "IMPORT CHASSIS PER DIEM-MEDU4977387": 25.0,
         "IMPORT CHASSIS PER DIEM-TRHU6521540": 25.0,
         "IMPORT CHASSIS PER DIEM-MSMU4698160": 25.0,
         "IMPORT CHASSIS PER DIEM-MSNU7466053": 25.0,
-        "IMPORT CHASSIS PER DIEM-MSDU6574304": 25.0,
-        "CONTAINER RAIL DETENTION-MSDU6181797": 185.0,
-        "Chassis Usage Charge": 24729.0,
-        "Amount Still Due": 17578.0
+        "IMPORT CHASSIS PER DIEM-MSDU6574304": 25.0
       },
-      "sheets": [
-        "收货人自付",
-        "委托人承担"
-      ],
       "mbls": [
-        "MEDUXJ983378",
-        "MEDUKU085057",
-        "MEDUKU054533",
+        "CMDUDJA1404335",
         "MEDUKU053790",
-        "MEDUKU099082"
+        "MEDUKU054053",
+        "MEDUKU054087",
+        "MEDUKU054269",
+        "MEDUKU054509",
+        "MEDUKU054533",
+        "MEDUKU054582",
+        "MEDUKU054616",
+        "MEDUKU054640",
+        "MEDUKU060985",
+        "MEDUKU061108",
+        "MEDUKU061116",
+        "MEDUKU083904",
+        "MEDUKU084050",
+        "MEDUKU084118",
+        "MEDUKU084233",
+        "MEDUKU084282",
+        "MEDUKU084555",
+        "MEDUKU084654",
+        "MEDUKU084779",
+        "MEDUKU084878",
+        "MEDUKU084886",
+        "MEDUKU084928",
+        "MEDUKU084969",
+        "MEDUKU084993",
+        "MEDUKU085008",
+        "MEDUKU085016",
+        "MEDUKU085057",
+        "MEDUKU085123",
+        "MEDUKU085172",
+        "MEDUKU085206",
+        "MEDUKU085222",
+        "MEDUKU086709",
+        "MEDUKU087186",
+        "MEDUKU087236",
+        "MEDUKU087335",
+        "MEDUKU087350",
+        "MEDUKU087368",
+        "MEDUKU099082",
+        "MEDUKU099504",
+        "MEDUKU099538",
+        "MEDUKU099553",
+        "MEDUKU099595",
+        "MEDUKU099611",
+        "MEDUXJ928142",
+        "MEDUXJ928159",
+        "MEDUXJ928225",
+        "MEDUXJ928274",
+        "MEDUXJ928308",
+        "MEDUXJ928357",
+        "MEDUXJ928456",
+        "MEDUXJ928480",
+        "MEDUXJ928555",
+        "MEDUXJ928746",
+        "MEDUXJ928761",
+        "MEDUXJ928779",
+        "MEDUXJ928803",
+        "MEDUXJ928811",
+        "MEDUXJ928886",
+        "MEDUXJ928977",
+        "MEDUXJ928993",
+        "MEDUXJ929074",
+        "MEDUXJ929090",
+        "MEDUXJ929108",
+        "MEDUXJ929132",
+        "MEDUXJ929298",
+        "MEDUXJ929579",
+        "MEDUXJ929645",
+        "MEDUXJ929686",
+        "MEDUXJ929751",
+        "MEDUXJ929801",
+        "MEDUXJ929843",
+        "MEDUXJ929868",
+        "MEDUXJ929900",
+        "MEDUXJ929942",
+        "MEDUXJ929983",
+        "MEDUXJ930353",
+        "MEDUXJ983378",
+        "MEDUXJ983386"
       ],
       "hbls": [
-        "WLC51105406",
+        "WLC50915798",
         "WLC51005057",
-        "WLC51107807",
+        "WLC51005058",
+        "WLC51005060",
+        "WLC51005061",
+        "WLC51005063",
+        "WLC51005064",
+        "WLC51005065",
+        "WLC51005066",
+        "WLC51005067",
+        "WLC51005068",
+        "WLC51005069",
+        "WLC51005070",
+        "WLC51007082",
+        "WLC51007083",
+        "WLC51007084",
+        "WLC51007085",
+        "WLC51007110",
+        "WLC51007113",
+        "WLC51017504",
+        "WLC51017506",
+        "WLC51017508",
+        "WLC51017514",
+        "WLC51017515",
+        "WLC51017521",
+        "WLC51017522",
+        "WLC51017523",
+        "WLC51017525",
+        "WLC51017527",
+        "WLC51017528",
+        "WLC51018435",
+        "WLC51018436",
+        "WLC51018437",
+        "WLC51018439",
+        "WLC51018442",
+        "WLC51020477",
+        "WLC51020478",
+        "WLC51020480",
+        "WLC51020602",
+        "WLC51020605",
+        "WLC51020606",
+        "WLC51020608",
+        "WLC51020612",
+        "WLC51020613",
+        "WLC51020617",
+        "WLC51020620",
         "WLC51020624",
-        "WLC51005070"
+        "WLC51020957",
+        "WLC51105402",
+        "WLC51105403",
+        "WLC51105405",
+        "WLC51105406",
+        "WLC51105410",
+        "WLC51105413",
+        "WLC51105414",
+        "WLC51106224",
+        "WLC51106225",
+        "WLC51106226",
+        "WLC51106227",
+        "WLC51106228",
+        "WLC51107796",
+        "WLC51107799",
+        "WLC51107800",
+        "WLC51107801",
+        "WLC51107803",
+        "WLC51107804",
+        "WLC51107805",
+        "WLC51107806",
+        "WLC51107807",
+        "WLC51107808",
+        "WLC51107810",
+        "WLC51107811",
+        "WLC51107812",
+        "WLC51107814",
+        "WLC51107815",
+        "WLC51107818",
+        "WLC51107820",
+        "WLC51107821",
+        "WLC51107822",
+        "WLC51107823"
       ],
-      "latest": "2026-02-26 08:14:01",
-      "risk": "高风险"
+      "latest": "2026-03-16 13:38:17",
+      "sheets": {
+        "收货人自付": 4860.0,
+        "委托人承担": 42803.0
+      }
     },
     {
       "name": "AVANTIX INC.",
-      "total": 35840.0,
-      "records": 7,
+      "total": 27760.0,
+      "records": 5,
       "types": {
-        "CONTAINER PER DIEM IMPORT-TCNU5327584": 2920.0,
         "Detention-HAMU4066417": 11300.0,
         "Detention-CMAU7350643": 10590.0,
         "CONTAINER PER DIEM IMPORT-MEDU7209799": 5670.0,
-        "Detention-SELU4302571": 5160.0,
         "CARRIER D/O FEE": 200.0
       },
-      "sheets": [
-        "收货人自付",
-        "代收-收货人"
-      ],
       "mbls": [
-        "ONEYNBOFB9934500",
-        "MEDUKS545920",
-        "ZIMUHAI80174666",
+        "CMDUSEL1983182",
+        "HLCUSEL251045578",
         "MEDUKE303533",
-        "CMDUSEL1983182"
+        "MEDUKS545920",
+        "ONEYNBOFB9934500"
       ],
       "hbls": [
-        "WLC51000880",
+        "WLC50900465",
         "WLC51100239",
-        "WLC51018387",
         "WLC51100240",
-        "WLC50900465"
+        "WLC51101600",
+        "WLC51101603"
       ],
       "latest": "2026-03-08 06:59:53",
-      "risk": "高风险"
+      "sheets": {
+        "收货人自付": 27560.0,
+        "代收-收货人": 200.0
+      }
     },
     {
-      "name": "ELITE EAGLE GROUP LLC",
-      "total": 26608.0,
-      "records": 22,
+      "name": "HAI ROBOTICS U.S.A. INC",
+      "total": 9620.0,
+      "records": 14,
       "types": {
-        "O.F.": 6375.0,
-        "BAC": 3177.0,
-        "LSS": 351.0,
-        "ISOCC": 297.0,
-        "WH": 195.0,
-        "PCFW": 90.0,
-        "SC/D": 42.0,
-        "CSF": 36.0,
-        "Container Compliance Charge": 220.0,
-        "Intermodal (Precarriage)": 500.0,
-        "ISPS - Intern": 100.0,
-        "Low Sulphur Fuel Contribution": 55.0,
-        "Ocean Freight": 10400.0,
-        "Quartely Bunker Recovery Charge": 4330.0,
-        "Wharfage": 440.0
+        "CONTAINER RAIL DETENTION-BMOU1618274": 1685.0,
+        "Detention-ONEU0748719": 1480.0,
+        "Demurrage-FANU3833394": 700.0,
+        "Demurrage-FANU3237610": 700.0,
+        "Demurrage-HAMU2891516": 700.0,
+        "Demurrage-FANU3841430": 700.0,
+        "Demurrage-TEMU7085978": 700.0,
+        "Demurrage-HAMU3994859": 700.0,
+        "Detention-NYKU5130618": 555.0,
+        "Demurrage-CAIU4798272": 480.0,
+        "Demurrage-TRHU4553528": 480.0,
+        "Detention-FDCU0373750": 370.0,
+        "Detention-TLLU5505840": 185.0,
+        "Detention-ONEU1543879": 185.0
       },
-      "sheets": [
-        "委托人承担"
-      ],
       "mbls": [
-        "EGLV235502170154",
-        "MEDUKE627170",
-        "MEDUKE637732"
+        "HLCUSHA2511GBWM5",
+        "MEDUEK846578",
+        "ONEYSHAFBK530800"
       ],
       "hbls": [
-        "WLC60116553",
-        "WLC60117568",
-        "WLC60103431"
+        "WLC51113461",
+        "WLC51123757",
+        "WLC60101294"
       ],
-      "latest": "2026-03-07 02:11:50",
-      "risk": "高风险"
-    },
-    {
-      "name": "ROYAL FOOD IMPORT CORPORATION",
-      "total": 9380.0,
-      "records": 4,
-      "types": {
-        "Demurrage-CAAU6833370": 400.0,
-        "Detention-CAAU6833370": 700.0,
-        "Detention-LYGU2037716": 4560.0,
-        "Detention-LYGU2037681": 3720.0
-      },
-      "sheets": [
-        "收货人自付"
-      ],
-      "mbls": [
-        "MAEU259299041",
-        "HLCUNHN250731902",
-        "MAEU259297774"
-      ],
-      "hbls": [
-        "WLC50911574",
-        "WLC50805801",
-        "WLC50911596"
-      ],
-      "latest": "2025-12-27 12:16:35",
-      "risk": "中等风险"
+      "latest": "2026-03-25 05:07:57",
+      "sheets": {
+        "收货人自付": 9620.0
+      }
     },
     {
       "name": "ALBATROSS AMERICA INC.",
@@ -187,9 +306,6 @@
       "types": {
         "CONTAINER PER DIEM IMPORT-MEDU9558969": 7170.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
         "MEDUW8710297"
       ],
@@ -197,7 +313,9 @@
         "WLC50904641"
       ],
       "latest": "2025-12-05 13:00:36",
-      "risk": "中等风险"
+      "sheets": {
+        "收货人自付": 7170.0
+      }
     },
     {
       "name": "HOUNEN SOLAR INC",
@@ -206,72 +324,54 @@
       "types": {
         "Chassis Usage Charge": 6490.0
       },
-      "sheets": [
-        "委托人承担"
-      ],
       "mbls": [
-        "MEDUXJ328756",
-        "MEDUXJ179753",
-        "MEDUXJ168228",
+        "MEDURQ079010",
+        "MEDUXJ162643",
+        "MEDUXJ162684",
         "MEDUXJ162726",
-        "MEDUXJ224591"
+        "MEDUXJ162734",
+        "MEDUXJ167881",
+        "MEDUXJ167931",
+        "MEDUXJ167972",
+        "MEDUXJ168228",
+        "MEDUXJ179753",
+        "MEDUXJ224583",
+        "MEDUXJ224591",
+        "MEDUXJ328756",
+        "MEDUXJ328798"
       ],
       "hbls": [
-        "WLC50400481",
+        "WLC50312949",
+        "WLC50312962",
         "WLC50312969",
-        "WLC50315793",
+        "WLC50312972",
         "WLC50313725",
-        "WLC50315963"
+        "WLC50313730",
+        "WLC50315793",
+        "WLC50315963",
+        "WLC50400479",
+        "WLC50400481",
+        "WLC50403051",
+        "WLC50506384",
+        "WLC50506413",
+        "WLC51124725"
       ],
       "latest": "2026-01-18 07:16:17",
-      "risk": "中等风险"
-    },
-    {
-      "name": "HAI ROBOTICS U.S.A. INC",
-      "total": 6420.0,
-      "records": 10,
-      "types": {
-        "Detention-ONEU0748719": 1480.0,
-        "Detention-NYKU5130618": 555.0,
-        "Detention-FDCU0373750": 370.0,
-        "Detention-TLLU5505840": 185.0,
-        "Detention-ONEU1543879": 185.0,
-        "CONTAINER RAIL DETENTION-MSNU5736890": 765.0,
-        "CONTAINER RAIL DETENTION-MSNU6882267": 975.0,
-        "CONTAINER RAIL DETENTION-BMOU1618274": 1685.0,
-        "Chassis Usage Charge": 220.0
-      },
-      "sheets": [
-        "收货人自付",
-        "委托人承担"
-      ],
-      "mbls": [
-        "MEDUEK841017",
-        "MEDUEK846578",
-        "ONEYSHAFBK530800"
-      ],
-      "hbls": [
-        "WLC51123757",
-        "WLC51113420",
-        "WLC51113461"
-      ],
-      "latest": "2026-02-25 10:28:17",
-      "risk": "中等风险"
+      "sheets": {
+        "委托人承担": 6490.0
+      }
     },
     {
       "name": "MERSY CORP SA DE CV",
       "total": 5985.0,
       "records": 5,
       "types": {
-        "Chassis Usage Charge": 220.0,
-        "IMPORT CHASSIS PER DIEM-MSDU8776069": 325.0,
-        "IMPORT CHASSIS PER DIEM-MSNU5615610": 350.0,
+        "CONTAINER PER DIEM IMPORT-MSNU5615610": 2670.0,
         "CONTAINER PER DIEM IMPORT-MSDU8776069": 2420.0,
-        "CONTAINER PER DIEM IMPORT-MSNU5615610": 2670.0
+        "IMPORT CHASSIS PER DIEM-MSNU5615610": 350.0,
+        "IMPORT CHASSIS PER DIEM-MSDU8776069": 325.0,
+        "Chassis Usage Charge": 220.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
         "MEDUKH457914"
       ],
@@ -279,99 +379,104 @@
         "WLC51100187"
       ],
       "latest": "2026-01-08 07:36:30",
-      "risk": "中等风险"
+      "sheets": {
+        "收货人自付": 5985.0
+      }
     },
     {
-      "name": "JMF COMPANY",
-      "total": 4735.0,
-      "records": 16,
+      "name": "MING HAO XIN TRADING CO LTD",
+      "total": 5609.35,
+      "records": 11,
       "types": {
-        "CONTAINER RAIL DETENTION-TGBU7987144": 185.0,
-        "Chassis Usage Charge": 110.0,
-        "CONTAINER RAIL DETENTION-MSNU8870310": 185.0,
-        "CONTAINER RAIL DETENTION-MSNU8873330": 185.0,
-        "CONTAINER RAIL DETENTION-MSNU8871220": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8871549": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8873285": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8872674": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8885434": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8882271": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8886092": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8886277": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8919581": 185.0,
-        "CONTAINER RAIL DETENTION-MSMU6349001": 370.0,
-        "CONTAINER RAIL DETENTION-MSNU8918991": 185.0,
-        "CONTAINER RAIL DETENTION-MSNU8919107": 370.0
+        "Detention-ECMU7363896": 1840.0,
+        "Detention-TGBU4825371": 1590.0,
+        "Detention-OOLU8781674": 900.0,
+        "Detention-TRHU4446448": 720.0,
+        "Detention-ECMU7149035": 190.0,
+        "On Carriage Additional - Local": 150.0,
+        "Port and/or Terminal wharfage at destina": 90.0,
+        "WHARFAGE": 65.35,
+        "Container maintenance Fee at destination": 40.0,
+        "ISPS -Terminal security Fee at destinati": 19.0,
+        "WHARFAGE ADMINISTRATION FEE": 5.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
-        "MEDUKH273840",
-        "MEDURH800688",
-        "MEDUKH387491",
-        "MEDURH971190",
-        "MEDURH939932"
+        "CMDUTHD1452040",
+        "CMDUTHD1452042",
+        "CMDUTHD1457292",
+        "CMDUTHD1466676",
+        "CMDUTHD1466680",
+        "COSU6439563970",
+        "COSU6439564020",
+        "ZIMUBKK80440481"
       ],
       "hbls": [
-        "WLC51003370",
-        "WLC51200851",
-        "WLC51204713",
-        "WLC51006767",
-        "WLC50704769"
+        "WLC51224030",
+        "WLC51224032",
+        "WLC51226550",
+        "WLC51226774",
+        "WLC60111642",
+        "WLC60124859",
+        "WLC60124865",
+        "WLC60216466"
       ],
-      "latest": "2026-01-17 09:11:44",
-      "risk": "中等风险"
+      "latest": "2026-03-28 17:59:49",
+      "sheets": {
+        "收货人自付": 5390.0,
+        "委托人承担": 219.35
+      }
     },
     {
       "name": "HITHIUM TECH USA INC.",
-      "total": 4560.0,
-      "records": 7,
+      "total": 4200.0,
+      "records": 5,
       "types": {
-        "Chassis Usage Charge": 3960.0,
-        "CARRIER D/O FEE": 600.0
+        "Chassis Usage Charge": 4070.0,
+        "CARRIER D/O FEE": 100.0,
+        "BANK CHARGE": 30.0
       },
-      "sheets": [
-        "代收-收货人",
-        "委托人承担"
-      ],
       "mbls": [
-        "MEDUYQ353300",
-        "MEDUKG224521",
-        "OOLU2319751760",
         "MEDUWK745968",
+        "MEDUYQ353300",
+        "ONEYXMNG04051600",
         "ZIMUSNH1872861"
       ],
       "hbls": [
-        "WLC60112275",
-        "WLC60211843",
-        "WLC60201357",
         "WLC50923188",
-        "WLC60205753"
+        "WLC60112275",
+        "WLC60205753",
+        "WLC60211843"
       ],
-      "latest": "2026-02-24 09:47:25",
-      "risk": "中等风险"
+      "latest": "2026-03-29 11:03:49",
+      "sheets": {
+        "委托人承担": 4100.0,
+        "代收-收货人": 100.0
+      }
     },
     {
-      "name": "LION POWER, LLC",
-      "total": 3145.0,
-      "records": 3,
+      "name": "ES FOUNDRY CORP",
+      "total": 3260.07,
+      "records": 6,
       "types": {
-        "Detention-TRHU7816084": 1110.0,
-        "Detention-TCLU7821834": 1110.0,
-        "Detention-FTAU2457110": 925.0
+        "Demurrage-TCNU5934968": 825.0,
+        "Demurrage-TCNU5264228": 825.0,
+        "Demurrage-TCNU4113593": 825.0,
+        "Amount": 370.07,
+        "Demurrage-TLLU5027206": 290.0,
+        "Administration Charge": 125.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
-        "ONEYSHAFCU641600"
+        "CMDUTHD1461926",
+        "ONEYBKKG01937300"
       ],
       "hbls": [
-        "WLC51220280"
+        "WLC60109250",
+        "WLC60109265"
       ],
-      "latest": "2026-02-25 10:00:00",
-      "risk": "中等风险"
+      "latest": "2026-03-18 04:59:56",
+      "sheets": {
+        "收货人自付": 3260.07
+      }
     },
     {
       "name": "ARTISARY INC",
@@ -381,9 +486,6 @@
         "Detention-TLLU6897263": 1550.0,
         "Detention-TCLU9446347": 1550.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
         "MAEU260834246"
       ],
@@ -391,153 +493,9 @@
         "WLC51016850"
       ],
       "latest": "2026-01-21 11:02:49",
-      "risk": "中等风险"
-    },
-    {
-      "name": "ES FOUNDRY CORP",
-      "total": 2970.07,
-      "records": 5,
-      "types": {
-        "Demurrage-TCNU5934968": 825.0,
-        "Demurrage-TCNU5264228": 825.0,
-        "Demurrage-TCNU4113593": 825.0,
-        "Amount": 370.07,
-        "Administration Charge": 125.0
-      },
-      "sheets": [
-        "收货人自付",
-        "委托人承担"
-      ],
-      "mbls": [
-        "ONEYBKKG01937300"
-      ],
-      "hbls": [
-        "WLC60109265"
-      ],
-      "latest": "2026-03-06 14:16:33",
-      "risk": "中等风险"
-    },
-    {
-      "name": "WANE ATLAN LLC",
-      "total": 2936.0,
-      "records": 6,
-      "types": {
-        "OFT": 2422.0,
-        "OBS": 380.0,
-        "TSD": 7.0,
-        "CSS": 12.0,
-        "OAR": 100.0,
-        "CMD": 15.0
-      },
-      "sheets": [
-        "委托人承担"
-      ],
-      "mbls": [
-        "ONEYHANG04169300"
-      ],
-      "hbls": [
-        "WLC60113949A"
-      ],
-      "latest": "2026-03-07 02:04:44",
-      "risk": "中等风险"
-    },
-    {
-      "name": "SANTE DERIA LLC",
-      "total": 2930.0,
-      "records": 3,
-      "types": {
-        "Ocean Freight": 1922.0,
-        "Bunker Charge": 993.0,
-        "Carrier Security Charge": 15.0
-      },
-      "sheets": [
-        "委托人承担"
-      ],
-      "mbls": [
-        "COSU6442109800"
-      ],
-      "hbls": [
-        "WLC60115927"
-      ],
-      "latest": "2026-03-05 15:00:17",
-      "risk": "中等风险"
-    },
-    {
-      "name": "EMA ELECTROMECHANICS, INC.",
-      "total": 2850.0,
-      "records": 1,
-      "types": {
-        "Demurrage-DFSU6613045": 2850.0
-      },
-      "sheets": [
-        "收货人自付"
-      ],
-      "mbls": [
-        "HLCUSHA2509BJOH7"
-      ],
-      "hbls": [
-        "WLC50918693"
-      ],
-      "latest": "2025-11-05 07:12:55",
-      "risk": "中等风险"
-    },
-    {
-      "name": "ELITE SOLAR INC",
-      "total": 2260.0,
-      "records": 8,
-      "types": {
-        "Demurrage-CMAU3472860": 360.0,
-        "Demurrage-TRHU5833800": 125.0,
-        "Demurrage-FFAU3310424": 125.0,
-        "Chassis Usage Charge": 1650.0
-      },
-      "sheets": [
-        "收货人自付",
-        "委托人承担"
-      ],
-      "mbls": [
-        "MEDUXJ530930",
-        "MEDUXJ530864",
-        "OOLU2318721230",
-        "OOLU2318721210",
-        "MEDUXJ530286"
-      ],
-      "hbls": [
-        "WLC60107304",
-        "WLC51106239",
-        "WLC50620629",
-        "WLC50620612",
-        "WLC50620621"
-      ],
-      "latest": "2026-03-06 07:01:42",
-      "risk": "中等风险"
-    },
-    {
-      "name": "TENG GREAT TRADE INC",
-      "total": 1957.8,
-      "records": 9,
-      "types": {
-        "Exam Charges-FCL": 725.0,
-        "Fuel Surcharge": 129.8,
-        "Chassis Usage": 175.0,
-        "Chassis Stop Off": 95.0,
-        "Processing Fee": 150.0,
-        "Facility Charge": 135.0,
-        "Lift Operations": 85.0,
-        "Drayage": 295.0,
-        "NYCT TOLLS": 168.0
-      },
-      "sheets": [
-        "委托人承担"
-      ],
-      "mbls": [
-        "ONEYTSNF66249600"
-      ],
-      "hbls": [
-        "WLC51022500"
-      ],
-      "latest": "2026-01-17 02:52:17",
-      "risk": "中等风险"
+      "sheets": {
+        "收货人自付": 3100.0
+      }
     },
     {
       "name": "LIUGONG CONSTRUCTION MACHINERY N.A.,LLC",
@@ -546,9 +504,6 @@
       "types": {
         "Detention-CXSU1078403": 1800.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
         "ONEYSZPFY7242300"
       ],
@@ -556,196 +511,237 @@
         "WLC51020799"
       ],
       "latest": "2026-02-05 21:18:06",
-      "risk": "中等风险"
+      "sheets": {
+        "收货人自付": 1800.0
+      }
     },
     {
-      "name": "MAG SPECIALTIES INC.",
-      "total": 1520.0,
-      "records": 6,
+      "name": "JST POWER EQUIPMENT INC.",
+      "total": 1410.0,
+      "records": 14,
       "types": {
-        "Demurrage-HLBU3455707": 160.0,
-        "Demurrage-HLBU3651504": 160.0,
-        "Demurrage-HAMU1082224": 400.0,
-        "Demurrage-FCIU6317435": 400.0,
-        "Demurrage-HLBU3494811": 200.0,
-        "Demurrage-BEAU2217477": 200.0
+        "CARRIER D/O FEE": 1300.0,
+        "Chassis Usage Charge": 110.0
       },
-      "sheets": [
-        "收货人自付"
-      ],
       "mbls": [
-        "HLCUTS12511BCPM2",
-        "HLCUTS12512ASCR2",
-        "HLCUTS12512ARGG0",
-        "HLCUTS12512ARGU4",
-        "HLCUTS12511BCPC2"
+        "HDMUSHAZLGM71500",
+        "MEDUOW702270",
+        "OOLU2167032400",
+        "OOLU2167191220",
+        "OOLU2167304750"
       ],
       "hbls": [
-        "WLC51116980",
-        "WLC51116975",
-        "WLC51207707",
-        "WLC51207746",
-        "WLC51207709"
+        "WLC50819977C",
+        "WLC60217493A",
+        "WLC60217493B",
+        "WLC60217493C",
+        "WLC60217493D",
+        "WLC60217493E",
+        "WLC60308414A",
+        "WLC60308414B",
+        "WLC60308414C",
+        "WLC60308414D",
+        "WLC60308414E",
+        "WLC60308414F",
+        "WLC60313516",
+        "WLC60313596"
       ],
-      "latest": "2026-03-04 02:06:30",
-      "risk": "中等风险"
+      "latest": "2026-03-23 22:40:52",
+      "sheets": {
+        "委托人承担": 110.0,
+        "代收-收货人": 1300.0
+      }
+    },
+    {
+      "name": "GLOBAL CROSSING INC",
+      "total": 1315.0,
+      "records": 14,
+      "types": {
+        "CARRIER D/O FEE": 1300.0,
+        "CMD": 15.0
+      },
+      "mbls": [
+        "COSU6421875990",
+        "ONEYNBOFC3568300",
+        "ONEYNBOFC3573600",
+        "ONEYNBOFC4284600",
+        "ONEYNBOFE9691800",
+        "ONEYNBOFF6151400",
+        "ONEYNBOFG1556900",
+        "ONEYNBOFH9398800",
+        "WHLC031F527185",
+        "WHLC031F539599",
+        "WHLC031F548206",
+        "WHLC031F554607",
+        "WHLC031F555752"
+      ],
+      "hbls": [
+        "WLC50415075",
+        "WLC50600407",
+        "WLC50612177",
+        "WLC50625026",
+        "WLC50700253",
+        "WLC50700802",
+        "WLC50900736",
+        "WLC50900743",
+        "WLC50900744",
+        "WLC51004234",
+        "WLC51009443",
+        "WLC51100894",
+        "WLC51114211"
+      ],
+      "latest": "2025-11-27 11:44:24",
+      "sheets": {
+        "委托人承担": 15.0,
+        "代收-收货人": 1300.0
+      }
+    },
+    {
+      "name": "ROYAL FOOD IMPORT CORPORATION",
+      "total": 1100.0,
+      "records": 2,
+      "types": {
+        "Detention-CAAU6833370": 700.0,
+        "Demurrage-CAAU6833370": 400.0
+      },
+      "mbls": [
+        "HLCUNHN250731902"
+      ],
+      "hbls": [
+        "WLC50805801"
+      ],
+      "latest": "2025-10-09 05:07:26",
+      "sheets": {
+        "收货人自付": 1100.0
+      }
+    },
+    {
+      "name": "KHD GROUP INC",
+      "total": 955.0,
+      "records": 3,
+      "types": {
+        "Detention-JXLU4662319": 850.0,
+        "CMD": 105.0
+      },
+      "mbls": [
+        "ONEYNBOFD5781300",
+        "ONEYNBOFH7731400",
+        "ZIMUNGB20218977"
+      ],
+      "hbls": [
+        "WLC50907658",
+        "WLC51111112",
+        "WLC51111119"
+      ],
+      "latest": "2026-01-29 16:07:57",
+      "sheets": {
+        "收货人自付": 850.0,
+        "委托人承担": 105.0
+      }
+    },
+    {
+      "name": "YUNCHENG SOLAR USA",
+      "total": 940.0,
+      "records": 4,
+      "types": {
+        "Detention-DRYU9521698": 360.0,
+        "Detention-OOLU9330211": 360.0,
+        "Chassis Usage Charge": 220.0
+      },
+      "mbls": [
+        "COSU6434352060",
+        "MEDUXJ184720",
+        "MEDUXJ248186"
+      ],
+      "hbls": [
+        "WLC50316631",
+        "WLC50413852",
+        "WLC51021461"
+      ],
+      "latest": "2026-03-05 11:01:44",
+      "sheets": {
+        "收货人自付": 720.0,
+        "委托人承担": 220.0
+      }
+    },
+    {
+      "name": "TALESUNERGY SOLUTIONS INC.",
+      "total": 780.0,
+      "records": 2,
+      "types": {
+        "Detention-APHU6732617": 390.0,
+        "Detention-BSIU8340730": 390.0
+      },
+      "mbls": [
+        "SJHH3100122207",
+        "SJHH3100122208"
+      ],
+      "hbls": [
+        "WLC51224655",
+        "WLC51224688"
+      ],
+      "latest": "2026-03-07 00:04:38",
+      "sheets": {
+        "收货人自付": 780.0
+      }
+    },
+    {
+      "name": "CAYEPORS",
+      "total": 750.0,
+      "records": 2,
+      "types": {
+        "Detention-DRYU4546712": 570.0,
+        "Detention-OOLU9073200": 180.0
+      },
+      "mbls": [
+        "COSU6443781610",
+        "OOLU2164911242"
+      ],
+      "hbls": [
+        "WLC51225132",
+        "WLC60205371"
+      ],
+      "latest": "2026-03-26 09:02:09",
+      "sheets": {
+        "收货人自付": 750.0
+      }
+    },
+    {
+      "name": "CSCL GLOBAL LIMITED",
+      "total": 610.0,
+      "records": 2,
+      "types": {
+        "IMPORT CHASSIS PER DIEM-MSMU9223341": 500.0,
+        "Chassis Usage Charge": 110.0
+      },
+      "mbls": [
+        "MEDUR2341408"
+      ],
+      "hbls": [
+        "WLC50910939"
+      ],
+      "latest": "2026-01-01 07:22:09",
+      "sheets": {
+        "收货人自付": 610.0
+      }
+    },
+    {
+      "name": "CASEY CATON LOGISTICS",
+      "total": 570.0,
+      "records": 1,
+      "types": {
+        "Detention-CMAU9472403": 570.0
+      },
+      "mbls": [
+        "CMDUTHD1424156"
+      ],
+      "hbls": [
+        "WLC51007229"
+      ],
+      "latest": "2026-01-08 05:46:19",
+      "sheets": {
+        "收货人自付": 570.0
+      }
     }
-  ],
-  "matched_to_db": 8,
-  "fee_type_summary": {
-    "Chassis Usage Charge": 38699.0,
-    "Amount Still Due": 17578.0,
-    "Ocean Freight": 12322.0,
-    "Detention-HAMU4066417": 11300.0,
-    "Detention-CMAU7350643": 10590.0,
-    "CONTAINER PER DIEM IMPORT-MEDU9558969": 7170.0,
-    "O.F.": 6375.0,
-    "CONTAINER PER DIEM IMPORT-MEDU7209799": 5670.0,
-    "CARRIER D/O FEE": 5575.0,
-    "Detention-SELU4302571": 5160.0,
-    "Detention-LYGU2037716": 4560.0,
-    "Quartely Bunker Recovery Charge": 4330.0,
-    "Detention-LYGU2037681": 3720.0,
-    "BAC": 3177.0,
-    "CONTAINER PER DIEM IMPORT-TCNU5327584": 2920.0,
-    "Demurrage-DFSU6613045": 2850.0,
-    "CONTAINER PER DIEM IMPORT-MSNU5615610": 2670.0,
-    "OFT": 2422.0,
-    "CONTAINER PER DIEM IMPORT-MSDU8776069": 2420.0,
-    "Detention-CXSU1078403": 1800.0,
-    "CONTAINER RAIL DETENTION-BMOU1618274": 1685.0,
-    "Detention-TLLU6897263": 1550.0,
-    "Detention-TCLU9446347": 1550.0,
-    "CONTAINER PER DIEM IMPORT-TCNU8938904": 1500.0,
-    "Detention-ONEU0748719": 1480.0,
-    "Detention-TRHU7816084": 1110.0,
-    "Detention-TCLU7821834": 1110.0,
-    "Bunker Charge": 993.0,
-    "CONTAINER RAIL DETENTION-MSNU6882267": 975.0,
-    "Wharfage": 930.45,
-    "Detention-FTAU2457110": 925.0,
-    "Detention-JXLU4662319": 850.0,
-    "Demurrage-TCNU5934968": 825.0,
-    "Demurrage-TCNU5264228": 825.0,
-    "Demurrage-TCNU4113593": 825.0,
-    "CONTAINER RAIL DETENTION-MSNU5736890": 765.0,
-    "Exam Charges-FCL": 725.0,
-    "Detention-CAAU6833370": 700.0,
-    "Detention-CMAU9472403": 570.0,
-    "Detention-DRYU4546712": 570.0,
-    "Detention-NYKU5130618": 555.0,
-    "Demurrage-TRHU5769698": 550.0,
-    "Detention-YMLU9559293": 510.0,
-    "CMD": 510.0,
-    "IMPORT CHASSIS PER DIEM-MSMU9223341": 500.0,
-    "Intermodal (Precarriage)": 500.0,
-    "detention-WHSU9008890": 443.1,
-    "Demurrage-CAAU6833370": 400.0,
-    "Demurrage-HAMU1082224": 400.0,
-    "Demurrage-FCIU6317435": 400.0,
-    "Detention-APHU6732617": 390.0,
-    "Detention-BSIU8340730": 390.0,
-    "OBS": 380.0,
-    "Port and/or Terminal wharfage at destination": 380.0,
-    "Amount": 370.07,
-    "CONTAINER RAIL DETENTION-MSNU8871220": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8871549": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8873285": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8872674": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8885434": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8882271": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8886092": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8886277": 370.0,
-    "CONTAINER RAIL DETENTION-MSMU6349001": 370.0,
-    "CONTAINER RAIL DETENTION-MSNU8919107": 370.0,
-    "Detention-FDCU0373750": 370.0,
-    "Detention-DRYU9521698": 360.0,
-    "Detention-OOLU9330211": 360.0,
-    "Demurrage-CMAU3472860": 360.0,
-    "LSS": 351.0,
-    "IMPORT CHASSIS PER DIEM-MSNU5615610": 350.0,
-    "IMPORT CHASSIS PER DIEM-MSDU8776069": 325.0,
-    "Demurrage-TLLU5666819": 300.0,
-    "ISOCC": 297.0,
-    "Drayage": 295.0,
-    "CONTAINER PER DIEM IMPORT-MSDU5001611": 250.0,
-    "CONTAINER PER DIEM IMPORT-MEDU4850643": 250.0,
-    "CONTAINER PER DIEM IMPORT-TRHU8554158": 250.0,
-    "Container Compliance Charge": 220.0,
-    "GENSET CHARGE 1.000 200.0000": 200.0,
-    "Demurrage-HLBU3494811": 200.0,
-    "Demurrage-BEAU2217477": 200.0,
-    "WH": 195.0,
-    "Detention-SEKU6230302": 190.0,
-    "CONTAINER RAIL DETENTION-TGBU7987144": 185.0,
-    "CONTAINER RAIL DETENTION-MSNU8870310": 185.0,
-    "CONTAINER RAIL DETENTION-MSNU8873330": 185.0,
-    "CONTAINER RAIL DETENTION-TIIU4189690": 185.0,
-    "CONTAINER RAIL DETENTION-MEDU4627012": 185.0,
-    "CONTAINER RAIL DETENTION-TRHU7492895": 185.0,
-    "CONTAINER RAIL DETENTION-TRHU7639461": 185.0,
-    "CONTAINER RAIL DETENTION-MEDU7648030": 185.0,
-    "CONTAINER RAIL DETENTION-TGBU7012122": 185.0,
-    "CONTAINER RAIL DETENTION-TGBU5354379": 185.0,
-    "CONTAINER RAIL DETENTION-MSDU6181797": 185.0,
-    "CONTAINER RAIL DETENTION-MSNU8919581": 185.0,
-    "CONTAINER RAIL DETENTION-MSNU8918991": 185.0,
-    "Detention-TLLU5505840": 185.0,
-    "Detention-ONEU1543879": 185.0,
-    "CONTAINER PER DIEM IMPORT-MEDU9573557": 185.0,
-    "IMPORT CHASSIS PER DIEM-TCNU8938904": 175.0,
-    "Chassis Usage": 175.0,
-    "NYCT TOLLS": 168.0,
-    "Demurrage-FFAU1888178": 165.0,
-    "Demurrage-HLBU3455707": 160.0,
-    "Demurrage-HLBU3651504": 160.0,
-    "Container maintenance Fee at destination": 160.0,
-    "Processing Fee": 150.0,
-    "Facility Charge": 135.0,
-    "Fuel Surcharge": 129.8,
-    "Demurrage-TRHU5833800": 125.0,
-    "Demurrage-FFAU3310424": 125.0,
-    "Administration Charge": 125.0,
-    "OAR": 100.0,
-    "ISPS - Intern": 100.0,
-    "Chassis Stop Off": 95.0,
-    "PCFW": 90.0,
-    "Lift Operations": 85.0,
-    "WHARFAGE": 80.49,
-    "Container maintenance Fee at d": 80.0,
-    "ISPS -Terminal security Fee at destination": 76.0,
-    "IMPORT CHASSIS PER DIEM-MSDU5001611": 75.0,
-    "IMPORT CHASSIS PER DIEM-MEDU4850643": 75.0,
-    "IMPORT CHASSIS PER DIEM-TRHU8554158": 75.0,
-    "Low Sulphur Fuel Contribution": 55.0,
-    "IMPORT CHASSIS PER DIEM-TCLU6619222": 50.0,
-    "IMPORT CHASSIS PER DIEM-MSMU5624095": 50.0,
-    "IMPORT CHASSIS PER DIEM-GAOU7462613": 50.0,
-    "IMPORT CHASSIS PER DIEM-MSMU8845309": 50.0,
-    "IMPORT CHASSIS PER DIEM-MSDU7255507": 50.0,
-    "IMPORT CHASSIS PER DIEM-TCLU7867624": 50.0,
-    "IMPORT CHASSIS PER DIEM-MSNU6547166": 50.0,
-    "IMPORT CHASSIS PER DIEM-MSDU8862172": 50.0,
-    "SC/D": 42.0,
-    "CSF": 36.0,
-    "Detention freetime upgrade at POD to 7 days": 30.0,
-    "IMPORT CHASSIS PER DIEM-CAAU8066385": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSBU6855454": 25.0,
-    "IMPORT CHASSIS PER DIEM-TIIU4485368": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSDU7852436": 25.0,
-    "IMPORT CHASSIS PER DIEM-TGBU4394119": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSDU6375180": 25.0,
-    "IMPORT CHASSIS PER DIEM-TXGU7020199": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSDU7600500": 25.0,
-    "IMPORT CHASSIS PER DIEM-MEDU4977387": 25.0,
-    "IMPORT CHASSIS PER DIEM-TRHU6521540": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSMU4698160": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSNU7466053": 25.0,
-    "IMPORT CHASSIS PER DIEM-MSDU6574304": 25.0,
-    "ISPS-Intern": 20.0,
-    "USD": 15.0,
-    "Carrier Security Charge": 15.0,
-    "CSS": 12.0,
-    "TSD": 7.0
-  }
+  ]
 }
