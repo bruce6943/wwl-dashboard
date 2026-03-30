@@ -1,10 +1,11 @@
 {
-  "scan_time": "2026-03-30T07:47:09.451402+08:00",
-  "total_emails": 7,
-  "business_emails": 2,
+  "scan_time": "2026-03-30T08:11:21.389593+08:00",
+  "total_emails": 11,
+  "business_emails": 6,
   "pdf_count": 1,
   "categories": {
-    "other_biz": 2
+    "other_biz": 2,
+    "inspection": 4
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -20,25 +21,47 @@
     }
   },
   "carriers": {
-    "MSC": 1
+    "MSC": 1,
+    "COSCO": 1,
+    "OOCL": 2,
+    "ONE": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "MSC": {
+      "count": 1,
+      "total": 20.0,
+      "avg": 20.0
+    }
+  },
   "hbl_total": 0,
-  "mbl_total": 1,
+  "mbl_total": 5,
   "all_hbls": [],
   "all_mbls": [
-    "MEDUWG692272"
+    "COSU6444625540",
+    "MEDUWG692272",
+    "ONEYBKKG38865600",
+    "OOLU2166524280",
+    "OOLU2320126090"
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 1
+    "2026-03-30": 5
   },
-  "inspection_mbls": [],
+  "inspection_mbls": [
+    "COSU6444625540",
+    "ONEYBKKG38865600",
+    "OOLU2166524280",
+    "OOLU2320126090"
+  ],
   "hold_count": 0,
-  "inspection_count": 0,
+  "inspection_count": 4,
   "overdue_count": 0,
   "cancel_count": 0,
   "top_senders": [
+    [
+      "assistant@pltplt.com",
+      4
+    ],
     [
       "Krizza Mallari <ops@pinnacleteam.com>",
       2
@@ -64,9 +87,73 @@
       1
     ]
   ],
+  "action_items": [
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "COSU6444625540",
+      "container": "COSU6444625540",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 COSU6444625540",
+      "source": "查验预警-COSU6444625540",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:02"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "container": "OOLU2320126090",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2320126090",
+      "source": "查验预警-OOLU2320126090",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:03"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "ONEYBKKG38865600",
+      "container": "BKKG38865600",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 BKKG38865600",
+      "source": "查验预警-ONEYBKKG38865600",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:05"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2166524280",
+      "container": "OOLU2166524280",
+      "customer": "",
+      "assignee": "Effy",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2166524280",
+      "source": "查验预警-OOLU2166524280",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 08:00:20"
+    }
+  ],
+  "action_summary": {
+    "total": 4,
+    "urgent": 4,
+    "high": 0,
+    "medium": 0
+  },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272"
+      "MEDUWG692272",
+      "ONEYBKKG38865600",
+      "COSU6444625540",
+      "OOLU2166524280",
+      "OOLU2320126090"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
