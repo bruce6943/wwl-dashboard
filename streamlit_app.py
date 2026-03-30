@@ -354,7 +354,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "id": key, "category": "arrears", "priority": priority,
             "title": "欠费催收",
             "action": f"总欠费${total:,.0f} — 确认T+X阶段: T+7首催/T+15升级/T+30追偿函/T+45中信保",
-            "assignee": "Maggie",
+            "assignee": "",
             "mbl": mbl_str, "hbl": hbl_str,
             "customer": name[:30], "amount": f"${total:,.0f}",
             "internal_staff": find_internal_staff(name),
@@ -377,7 +377,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "id": key, "category": "bl_release", "priority": "high",
             "title": "换单/电放",
             "action": f"MBL未电放 — 联系origin确认TLX状态{f' ({carrier})' if carrier else ''} → 催促放单 → 确认后通知目的港",
-            "assignee": "Everlyn", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
             "internal_staff": "", "customer_contact": "",
             "detail_lines": [f"船公司: {carrier}"] if carrier else [],
             "source": "bl_status", "date": "",
@@ -393,7 +393,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "id": key, "category": "prealert_gap", "priority": "urgent",
             "title": "漏单预警",
             "action": "AN已收但无PreAlert — 可能漏单! 立即核查是否有对应HBL，确认origin是否已发货",
-            "assignee": "Rita", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
             "internal_staff": "", "customer_contact": "",
             "detail_lines": [], "source": "bl_status", "date": "",
         })
@@ -414,7 +414,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "id": key, "category": "hold", "priority": "urgent",
             "title": f"HOLD ({htype})",
             "action": action_map.get(htype, f"{htype.upper()} HOLD — 确认Hold类型并处理"),
-            "assignee": "Everlyn", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
             "internal_staff": "", "customer_contact": "",
             "detail_lines": [f"Hold来源: {h.get('from','?')}", f"邮件: {h.get('subject','')[:40]}"] if isinstance(h, dict) else [],
             "source": "bl_status", "date": "",
@@ -433,7 +433,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "id": key, "category": "sop", "priority": "high",
             "title": "SOP合规跟进",
             "action": f"Overdue SOP — {item.get('maggie_action', '按T+X时间线推进')}",
-            "assignee": "Maggie", "mbl": m, "hbl": "", "customer": "",
+            "assignee": "", "mbl": m, "hbl": "", "customer": "",
             "amount": f"${item.get('amount', 0):,.0f}" if isinstance(item.get("amount"), (int, float)) else "",
             "internal_staff": "", "customer_contact": "",
             "detail_lines": [f"状态: {item.get('t_status','?')}"] if item.get('t_status') else [],
@@ -667,55 +667,69 @@ with tabs[0]:
     st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
 
     def render_task_card(t, pri_color, bg_alpha):
-        """渲染单个任务卡片 — 含客户/提单/金额/联系人/内部销售"""
+        """渲染任务卡片 — 按客户维度展示，含提单/船公司/联系人/金额明细"""
         cat_label = cat_labels.get(t["category"], t["category"])
         cust = t.get("customer", "")
         mbl = t.get("mbl", "")
         hbl = t.get("hbl", "")
         amount = t.get("amount", "")
+        carrier = t.get("carrier", "")
+        sender = t.get("sender", "")
+        contact = t.get("contact", "")
         internal = t.get("internal_staff", "")
         ext_contact = t.get("customer_contact", "")
         details = t.get("detail_lines", [])
 
-        # 第一行: 类别 + 客户 + 金额
-        line1 = f'<span style="background:{pri_color};color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600;">{cat_label}</span>'
+        lines = []
+
+        # 行1: 类别标签 + 客户/收货人 + 金额
+        h = f'<span style="background:{pri_color};color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600;">{cat_label}</span>'
         if cust:
-            line1 += f' <b style="color:#fff;font-size:14px;">{cust}</b>'
+            h += f'&nbsp; <b style="color:#fff;font-size:15px;">{cust}</b>'
         if amount:
-            line1 += f' <span style="color:#ffd700;font-weight:600;font-size:14px;">{amount}</span>'
+            h += f'&nbsp; <span style="color:#ffd700;font-weight:700;">{amount}</span>'
+        lines.append(h)
 
-        # 第二行: 行动指引
-        line2 = f'<div style="color:#c0c0d0;font-size:13px;margin:4px 0;">{t["action"]}</div>'
+        # 行2: 行动指引
+        lines.append(f'<div style="color:#c0c0d0;font-size:13px;margin:5px 0 3px;">{t["action"]}</div>')
 
-        # 第三行: 提单号
-        line3 = ""
+        # 行3: 提单号 + 船公司
         refs = []
-        if mbl: refs.append(f"MBL: {mbl}")
-        if hbl: refs.append(f"HBL: {hbl}")
+        if mbl:
+            ref = f'MBL: <span style="font-family:monospace;color:#a0a0e0;">{mbl}</span>'
+            if carrier:
+                ref += f' <span style="color:#888;">({carrier})</span>'
+            refs.append(ref)
+        if hbl:
+            refs.append(f'HBL: <span style="font-family:monospace;color:#a0a0e0;">{hbl}</span>')
         if refs:
-            line3 = f'<div style="color:#8888bb;font-size:12px;">{"  |  ".join(refs)}</div>'
+            lines.append(f'<div style="font-size:12px;margin:2px 0;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(refs)}</div>')
 
-        # 第四行: 费用明细(如有)
-        line4 = ""
+        # 行4: 费用明细
         if details:
-            detail_html = " / ".join(details[:4])
+            detail_html = "&nbsp;/&nbsp;".join(d[:40] for d in details[:4])
             if len(details) > 4:
                 detail_html += f" +{len(details)-4}项"
-            line4 = f'<div style="color:#888;font-size:11px;margin:2px 0;">明细: {detail_html}</div>'
+            lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
 
-        # 第五行: 人员(内部销售 + 客户联系人 + 负责人)
-        ppl_parts = []
-        if t.get("assignee"):
-            ppl_parts.append(f'<span style="color:{pri_color};">执行: {t["assignee"]}</span>')
-        if internal:
-            ppl_parts.append(f'<span style="color:#2196f3;">内部销售: {internal}</span>')
+        # 行5: 联系人指引(关键改进 — 不指定执行人，而是给出联系方向)
+        ppl = []
+        # 客户方联系人(从联系人DB或邮件提取)
         if ext_contact:
-            ppl_parts.append(f'<span style="color:#00c853;">客户联系: {ext_contact[:50]}</span>')
-        line5 = f'<div style="font-size:11px;margin-top:3px;">{"  |  ".join(ppl_parts)}</div>' if ppl_parts else ""
+            ppl.append(f'<span style="color:#00c853;">客户联系: {ext_contact[:60]}</span>')
+        elif contact:
+            ppl.append(f'<span style="color:#00c853;">客户联系: {contact[:60]}</span>')
+        # 内部相关同事
+        if internal:
+            ppl.append(f'<span style="color:#2196f3;">内部关联: {internal}</span>')
+        # 邮件来源方
+        if sender:
+            ppl.append(f'<span style="color:#888;">来源: {sender[:40]}</span>')
+        if ppl:
+            lines.append(f'<div style="font-size:11px;margin-top:3px;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(ppl)}</div>')
 
-        return f'''<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:4px 0;">
-            {line1}{line2}{line3}{line4}{line5}
-        </div>'''
+        body = "".join(lines)
+        return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
 
     # ─── 紧急任务 ───
     if pending_urgent:
