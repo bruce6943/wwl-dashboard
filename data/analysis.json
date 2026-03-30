@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T04:36:41.402509+08:00",
-  "total_emails": 57,
-  "business_emails": 40,
+  "scan_time": "2026-03-31T05:02:12.086246+08:00",
+  "total_emails": 69,
+  "business_emails": 48,
   "pdf_count": 11,
   "categories": {
     "charge_confirm": 6,
-    "prealert": 6,
-    "other_biz": 20,
+    "prealert": 8,
+    "other_biz": 26,
     "arrival": 3,
     "hold": 3,
     "booking": 2
@@ -68,7 +68,7 @@
       ]
     },
     "HORIZON SOLAR": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -81,43 +81,62 @@
       "days": [
         "03/30"
       ]
+    },
+    "PTS INC": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
+    },
+    "PACIFIC T&T": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
+    },
+    "JINGZHOU": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
-    "ONE": 13,
+    "ONE": 14,
     "MSC": 3,
     "COSCO": 1,
     "OOCL": 3,
     "YML": 1
   },
-  "carrier_fees": {
-    "ONE": {
-      "count": 7,
-      "total": 6.0,
-      "avg": 1.2
-    },
-    "MSC": {
-      "count": 2,
-      "total": 20.0,
-      "avg": 20.0
-    },
-    "COSCO": {
-      "count": 1,
-      "total": 0,
-      "avg": 0
-    }
-  },
-  "hbl_total": 8,
-  "mbl_total": 11,
+  "carrier_fees": {},
+  "hbl_total": 10,
+  "mbl_total": 9,
   "all_hbls": [
     "WLC50522982",
+    "WLC60125637",
     "WLC60203463",
     "WLC60213409",
     "WLC60217446",
     "WLC60304584",
     "WLC60304684",
     "WLC60305140",
-    "WLC60305212"
+    "WLC60305212",
+    "WLC60309086"
   ],
   "all_mbls": [
     "COSU9506295790",
@@ -128,12 +147,10 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
-    "ONEYBTMG00383600",
-    "ONEYBTMG00521700",
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 45,
+    "2026-03-30": 57,
     "2026-03-31": 11
   },
   "inspection_mbls": [],
@@ -144,7 +161,7 @@
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      10
+      14
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -155,11 +172,15 @@
       6
     ],
     [
+      "<horizonsolar001@gmail.com>",
+      5
+    ],
+    [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
       3
     ],
     [
-      "<horizonsolar001@gmail.com>",
+      "<julian.tseng@dynastydfw.com>",
       3
     ],
     [
@@ -183,7 +204,7 @@
       2
     ],
     [
-      "<julian.tseng@dynastydfw.com>",
+      "Ellen Jin <ellen@thornova-solar.com>",
       2
     ],
     [
@@ -216,10 +237,6 @@
     ],
     [
       "ADRIAN JUAREZ <adrianj@fccusa.net>",
-      1
-    ],
-    [
-      "Rex M <rex@ladingcargo.com>",
       1
     ]
   ],
@@ -333,6 +350,27 @@
       "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
       "from": "<horizonsolar001@gmail.com>",
       "date": "Mon, 30 Mar 2026 13:32:07"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "",
+      "container": "",
+      "customer": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "Fife CES (mercerlogistics.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 ",
+      "source": "RE: Pick-up# inquire -ETA 4/03",
+      "from": "Fife CES <cesfife@mercerlogistics.com>",
+      "date": "Mon, 30 Mar 2026 20:38:06"
     },
     {
       "type": "arrival_notice",
@@ -806,34 +844,34 @@
     }
   ],
   "action_summary": {
-    "total": 27,
-    "urgent": 5,
+    "total": 28,
+    "urgent": 6,
     "high": 9,
     "medium": 13
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUYL960612",
-      "ONEYBKKG61453900",
-      "ONEYBTMG00521700",
-      "ONEYBKKG68481300",
+      "ONEYBKKG61472300",
       "OOLU2320126090",
       "COSU9506295790",
       "ONEYBKKG67192800",
-      "ONEYBKKG48500700",
-      "ONEYBTMG00383600",
-      "ONEYBKKG61472300",
-      "MEDUWG692272"
+      "MEDUWG692272",
+      "ONEYBKKG68481300",
+      "ONEYBKKG61453900",
+      "MEDUYL960612",
+      "ONEYBKKG48500700"
     ],
     "no_tlx_hbl": [
-      "WLC60304684",
-      "WLC50522982",
       "WLC60217446",
-      "WLC60305212",
-      "WLC60304584",
-      "WLC60203463",
       "WLC60305140",
-      "WLC60213409"
+      "WLC60309086",
+      "WLC60213409",
+      "WLC60304584",
+      "WLC60125637",
+      "WLC50522982",
+      "WLC60203463",
+      "WLC60304684",
+      "WLC60305212"
     ],
     "an_no_prealert": [
       "COSU9506295790"
@@ -884,14 +922,15 @@
     ]
   },
   "neural_network": {
-    "entities": 87,
-    "relationships": 12,
-    "contacts_new": 0,
-    "contacts_total": 368,
-    "daily_connections": 3,
+    "entities": 88,
+    "relationships": 15,
+    "contacts_new": 2,
+    "contacts_total": 370,
+    "daily_connections": 4,
     "new_domains": [
-      "elite-solar.com",
-      "containerport.com"
+      "mercerlogistics.com",
+      "containerport.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [
@@ -908,6 +947,11 @@
     {
       "from": "FCC USA",
       "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
       "type": "service"
     }
   ]

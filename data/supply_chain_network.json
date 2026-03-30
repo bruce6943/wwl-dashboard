@@ -68,7 +68,7 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 17,
+      "OOCL": 19,
       "MSC": 2
     },
     "HOUNEN SOLAR": {
@@ -117,7 +117,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 71,
+        "count": 72,
         "types": [
           "卡车"
         ]
@@ -134,7 +134,7 @@
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 16,
+        "count": 18,
         "types": []
       }
     },
@@ -191,7 +191,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 34,
+        "count": 36,
         "types": [
           "卡车"
         ]
@@ -199,7 +199,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 34,
+        "count": 36,
         "types": [
           "卡车"
         ]
@@ -213,13 +213,13 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 33,
+        "count": 34,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 64,
+        "count": 70,
         "types": [
           "卡车"
         ]
@@ -227,7 +227,7 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 3,
+        "count": 4,
         "types": []
       }
     }
