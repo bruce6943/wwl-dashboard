@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-30T08:11:21.389593+08:00",
+  "scan_time": "2026-03-30T08:17:17.757514+08:00",
   "total_emails": 11,
   "business_emails": 6,
   "pdf_count": 1,
@@ -26,13 +26,7 @@
     "OOCL": 2,
     "ONE": 1
   },
-  "carrier_fees": {
-    "MSC": {
-      "count": 1,
-      "total": 20.0,
-      "avg": 20.0
-    }
-  },
+  "carrier_fees": {},
   "hbl_total": 0,
   "mbl_total": 5,
   "all_hbls": [],
@@ -149,11 +143,11 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272",
-      "ONEYBKKG38865600",
       "COSU6444625540",
+      "ONEYBKKG38865600",
+      "OOLU2320126090",
       "OOLU2166524280",
-      "OOLU2320126090"
+      "MEDUWG692272"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
