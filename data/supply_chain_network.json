@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 213,
+      "CMA-CGM": 217,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 127,
+      "ZIM": 130,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 23
+      "MSC": 24
     },
     "MERSY CORP": {
       "MSC": 9
@@ -209,7 +209,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 18,
+        "count": 19,
         "types": []
       }
     }
