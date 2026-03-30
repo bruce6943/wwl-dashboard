@@ -763,8 +763,8 @@ with tabs[0]:
                 all_tasks.append(extra)
                 existing_ids.add(extra["id"])
     else:
-        # Fallback
-        all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, {})
+        # Fallback: only arrears (no action_items - those are unreliable)
+        all_tasks = build_task_board([], ARR, {}, SOP, CON, DI, {})
 
     # 去重
     seen_ids = set()
@@ -1221,33 +1221,7 @@ with tabs[3]:
             <div class="star-badge">本周之星经理: {star_mgr}</div>
         </div>""", unsafe_allow_html=True)
 
-    # ═══ v3.0 按负责人分组的行动项 ═══
-    if action_items:
-        section_header("今日待办 (按负责人)")
-        assignee_groups = {}
-        for a in action_items:
-            assignee = a.get('assignee', '未分配')
-            assignee_groups.setdefault(assignee, []).append(a)
-
-        cols = st.columns(min(len(assignee_groups), 4))
-        for idx, (assignee, tasks) in enumerate(sorted(assignee_groups.items(), key=lambda x: len(x[1]), reverse=True)):
-            with cols[idx % len(cols)]:
-                urgent_n = len([t for t in tasks if t.get('priority') == 'urgent'])
-                color = "#e94560" if urgent_n > 0 else "#2196f3"
-                st.markdown(f"""<div style="background:rgba(30,30,60,0.8);border:1px solid {color};border-radius:10px;padding:12px;margin:4px 0;">
-                    <h4 style="color:{color};margin:0;">{assignee} ({len(tasks)})</h4>
-                    {'<span style="color:#e94560;font-size:12px;">⚡ ' + str(urgent_n) + '条紧急</span>' if urgent_n > 0 else ''}
-                </div>""", unsafe_allow_html=True)
-                for t in tasks[:5]:
-                    pri_color = {"urgent":"#e94560","high":"#ffa500","medium":"#2196f3"}.get(t.get('priority',''), '#a0a0c0')
-                    st.markdown(f"""<div style="border-left:3px solid {pri_color};padding:4px 8px;margin:3px 0;font-size:12px;color:#c0c0d0;">
-                        <b>{t.get('type','')}</b> {t.get('customer','')}<br>
-                        {t.get('action','')[:50]}
-                    </div>""", unsafe_allow_html=True)
-                if len(tasks) > 5:
-                    st.markdown(f"<p style='color:#666;font-size:11px;'>+{len(tasks)-5}条更多...</p>", unsafe_allow_html=True)
-
-        st.markdown("---")
+    # (按负责人分组已移除 — 等确认分工后再加)
 
     # Sub-tabs
     person_tabs = st.tabs(["Everlyn", "Rita+Maggie+Will", "Effy", "Bruce"])
