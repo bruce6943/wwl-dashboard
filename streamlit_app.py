@@ -638,90 +638,16 @@ with tabs[0]:
         <b>周五规则:</b> 周五收到Hold必须当天行动, 不等周一(省3天D&D)。
     """)
 
-    # ─── Hold/查验/CC 数字卡片 + 折叠详情(教练总结下方) ───
-    _top_c1, _top_c2, _top_c3 = st.columns(3)
+    # ─── 事件摘要(一行显示) ───
     cc_count = A.get("categories", {}).get("charge_confirm", 0)
-    with _top_c1:
-        st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if hold_count > 0 else "#00c853"}">{hold_count}</h2><p>Hold</p></div>', unsafe_allow_html=True)
-    with _top_c2:
-        st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if inspection_count > 0 else "#00c853"}">{inspection_count}</h2><p>查验</p></div>', unsafe_allow_html=True)
-    with _top_c3:
-        st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if cc_count > 0 else "#00c853"}">{cc_count}</h2><p>CC</p></div>', unsafe_allow_html=True)
-
-    # Hold折叠详情
-    if hold_count > 0 or hold_bl:
-        with st.expander(f"Hold详情 ({max(hold_count, len(hold_bl))})"):
-            for _thi, h in enumerate(hold_bl[:10] if hold_bl else []):
-                m = h.get("mbl","") if isinstance(h, dict) else str(h)
-                htype = h.get("type","?") if isinstance(h, dict) else "?"
-                st.markdown(f'<div style="border-left:4px solid #e94560;padding:8px 12px;margin:4px 0;background:rgba(233,69,96,0.08);border-radius:0 8px 8px 0;"><b>HOLD ({htype})</b> MBL:{m}<br><span style="color:#a0a0c0;font-size:13px;">建议: 确认Hold类型 → Freight联系origin催付 / Customs联系报关行补文件</span></div>', unsafe_allow_html=True)
-                st.checkbox("完成", key=f"top_hold_{_thi}")
-
-    # 查验折叠详情
-    if inspection_count > 0:
-        with st.expander(f"查验详情 ({inspection_count})"):
-            for _tii, mbl in enumerate(inspection_mbls[:10]):
-                st.markdown(f'<div style="border-left:4px solid #ffa500;padding:8px 12px;margin:4px 0;background:rgba(255,165,0,0.08);border-radius:0 8px 8px 0;"><b>查验</b> MBL:{clean_html(mbl)}<br><span style="color:#a0a0c0;font-size:13px;">建议: 确认类型 → 通知客户延迟2-5天 → 准备ISF/PI/PL → 费用由进口商承担</span></div>', unsafe_allow_html=True)
-                st.checkbox("完成", key=f"top_insp_{_tii}")
-
-    # CC折叠详情
-    if cc_count > 0:
-        _cc_details = []
-        try:
-            with open("data/cc_details.json", "r", encoding="utf-8") as _ccf:
-                _cc_details = json.load(_ccf)
-        except: pass
-        with st.expander(f"CC费用确认 ({cc_count})"):
-            st.markdown('<p style="color:#a0a0c0;font-size:12px;">小额($50以下)直接确认 / 大额核实后回复 / 有争议标记Dispute</p>', unsafe_allow_html=True)
-            for _tci, cc in enumerate(_cc_details[:30]):
-                mbl=cc.get('mbl',''); hbl=cc.get('hbl',''); carrier=cc.get('carrier','')
-                amt=cc.get('amount',''); charge=cc.get('charge_type',''); eta=cc.get('eta','')
-                try: av=float(amt.replace('$','').replace(',','')) if amt else 999
-                except: av=999
-                clr="#00c853" if av<=50 else "#ffa500"
-                ln=f'<b style="color:{clr};">{amt or "待确认"}</b>'
-                if charge: ln+=f' <span style="color:#888;">{charge}</span>'
-                ln+=f'<br><span style="color:#a0a0e0;font-size:12px;">MBL:{mbl}'
-                if hbl: ln+=f' HBL:{hbl}'
-                ln+=f'</span> <span style="color:#666;font-size:12px;">({carrier})'
-                if eta: ln+=f' ETA:{eta}'
-                ln+='</span>'
-                st.markdown(f'<div style="border-left:3px solid {clr};padding:6px 10px;margin:3px 0;background:rgba(30,30,60,0.5);border-radius:0 6px 6px 0;">{ln}</div>', unsafe_allow_html=True)
-                st.checkbox("完成", key=f"top_cc_{_tci}")
-
-    # 异常折叠
     anomaly_total = len(cancel_it) + len(cod_list) + len(non_standard) + len(stolen) + len(urgent)
-    if anomaly_total > 0:
-        with st.expander(f"异常预警 ({anomaly_total})"):
-            _tai = 0
-            for item in cancel_it + cod_list + non_standard + stolen + urgent:
-                subj = item.get("subject","") if isinstance(item, dict) else str(item)
-                frm = item.get("from","") if isinstance(item, dict) else ""
-                typ = item.get("type","") if isinstance(item, dict) else ""
-                label = "Cancel IT" if item in cancel_it else "COD" if item in cod_list else "非标" if item in non_standard else "失窃" if item in stolen else "紧急"
-                clr = "#e94560" if label in ("Cancel IT","失窃","紧急") else "#ffa500"
-                st.markdown(f'<div style="border-left:4px solid {clr};padding:6px 10px;margin:3px 0;background:rgba(30,30,60,0.5);border-radius:0 6px 6px 0;"><b>{label}</b> {f"[{typ}]" if typ else ""}<br>{clean_html(subj[:60])}<br><span style="color:#888;font-size:11px;">{clean_html(frm[:40])}</span></div>', unsafe_allow_html=True)
-                st.checkbox("完成", key=f"top_anom_{_tai}")
-                _tai += 1
-
-    # ─── 常规流转汇总(不需特别处理，了解即可) ───
-    _summary = GRAPH.get("summary", {}) if 'GRAPH' in dir() else DATA.get("graph_tasks", {}).get("summary", {})
-    if not _summary:
-        _summary = DATA.get("graph_tasks", {}).get("summary", {})
-    if _summary:
-        with st.expander("常规流转汇总 (了解即可)"):
-            _sc = st.columns(4)
-            _labels = [("到港通知","arrival_notices","#2196f3"),("BL签发/电放","bl_releases","#00c853"),
-                       ("费用确认","billings","#ffa500"),("PreAlert","prealerts","#9c27b0")]
-            for i, (label, key, color) in enumerate(_labels):
-                with _sc[i]:
-                    st.markdown(f'<div style="text-align:center;padding:8px;"><span style="color:{color};font-size:24px;font-weight:700;">{_summary.get(key,0)}</span><br><span style="color:#a0a0c0;font-size:12px;">{label}</span></div>', unsafe_allow_html=True)
-            _sc2 = st.columns(4)
-            _labels2 = [("Booking","bookings","#2196f3"),("Delivery","deliveries","#00c853"),("清关","clearances","#ffa500"),("","","")]
-            for i, (label, key, color) in enumerate(_labels2):
-                if label:
-                    with _sc2[i]:
-                        st.markdown(f'<div style="text-align:center;padding:8px;"><span style="color:{color};font-size:24px;font-weight:700;">{_summary.get(key,0)}</span><br><span style="color:#a0a0c0;font-size:12px;">{label}</span></div>', unsafe_allow_html=True)
+    _summary = DATA.get("graph_tasks", {}).get("summary", {})
+    _sc1, _sc2, _sc3, _sc4, _sc5 = st.columns(5)
+    with _sc1: st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if hold_count else "#00c853"}">{hold_count}</h2><p>Hold</p></div>', unsafe_allow_html=True)
+    with _sc2: st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if inspection_count else "#00c853"}">{inspection_count}</h2><p>查验</p></div>', unsafe_allow_html=True)
+    with _sc3: st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if cc_count else "#00c853"}">{cc_count}</h2><p>CC</p></div>', unsafe_allow_html=True)
+    with _sc4: st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if anomaly_total else "#00c853"}">{anomaly_total}</h2><p>异常</p></div>', unsafe_allow_html=True)
+    with _sc5: st.markdown(f'<div class="metric-card"><h2 style="color:#2196f3">{_summary.get("arrival_notices",0)}</h2><p>到港</p></div>', unsafe_allow_html=True)
 
     st.markdown("---")
 
