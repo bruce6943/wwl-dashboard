@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T06:10:55.959881+08:00",
-  "total_emails": 85,
-  "business_emails": 62,
+  "scan_time": "2026-03-31T06:45:25.633030+08:00",
+  "total_emails": 90,
+  "business_emails": 64,
   "pdf_count": 15,
   "categories": {
     "charge_confirm": 7,
     "prealert": 8,
-    "other_biz": 35,
+    "other_biz": 37,
     "arrival": 7,
     "hold": 3,
     "booking": 2
@@ -68,7 +68,7 @@
       ]
     },
     "HORIZON SOLAR": {
-      "emails": 5,
+      "emails": 6,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -116,7 +116,7 @@
       ]
     },
     "ASTRONERGY (正泰新能)": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -168,8 +168,8 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 67,
-    "2026-03-31": 13
+    "2026-03-30": 71,
+    "2026-03-31": 14
   },
   "inspection_mbls": [],
   "hold_count": 3,
@@ -187,7 +187,7 @@
     ],
     [
       "<horizonsolar001@gmail.com>",
-      8
+      9
     ],
     [
       "assistant@pltplt.com",
@@ -199,11 +199,15 @@
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
-      4
+      5
     ],
     [
       "<julian.tseng@dynastydfw.com>",
       3
+    ],
+    [
+      "Maggie Yin <maggie.yin@elite-solar.com>",
+      2
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
@@ -247,10 +251,6 @@
     ],
     [
       "Meg Belmonte <meg@pinnacleteam.com>",
-      1
-    ],
-    [
-      "Maggie Yin <maggie.yin@elite-solar.com>",
       1
     ],
     [
@@ -1044,39 +1044,39 @@
   "bl_status": {
     "no_tlx_mbl": [
       "ONEYBKKG48500700",
+      "MEDURQ324903",
+      "MEDURQ323962",
+      "ONEYBKKG68481300",
+      "ONEYBKKG67192800",
+      "COSU9506295790",
+      "ONEYBKKG61472300",
       "MEDURQ324234",
       "OOLU2320126090",
-      "MEDURQ324929",
-      "MEDUYL960612",
-      "ONEYBKKG67192800",
-      "ONEYBKKG61472300",
-      "MEDURQ323962",
-      "MEDUWG692272",
-      "COSU9506295790",
       "CMDUTHD1466680",
+      "MEDUYL960612",
+      "MEDUWG692272",
       "ONEYBKKG61453900",
-      "MEDURQ324903",
-      "ONEYBKKG68481300"
+      "MEDURQ324929"
     ],
     "no_tlx_hbl": [
       "WLC60305212",
       "WLC60304684",
-      "WLC60124859",
       "WLC60217446",
       "WLC60305140",
-      "WLC60304584",
-      "WLC50522982",
-      "WLC60213409",
       "WLC60125637",
+      "WLC60203463",
+      "WLC60213409",
+      "WLC60124859",
+      "WLC50522982",
       "WLC60309086",
-      "WLC60203463"
+      "WLC60304584"
     ],
     "an_no_prealert": [
-      "MEDURQ324234",
-      "MEDURQ324929",
+      "MEDURQ324903",
       "MEDURQ323962",
       "COSU9506295790",
-      "MEDURQ324903"
+      "MEDURQ324234",
+      "MEDURQ324929"
     ],
     "hold_bl": [
       {
@@ -1125,13 +1125,13 @@
   },
   "neural_network": {
     "entities": 88,
-    "relationships": 18,
-    "contacts_new": 1,
+    "relationships": 19,
+    "contacts_new": 0,
     "contacts_total": 371,
-    "daily_connections": 5,
+    "daily_connections": 6,
     "new_domains": [
-      "containerport.com",
       "mercerlogistics.com",
+      "containerport.com",
       "elite-solar.com"
     ]
   },
@@ -1159,6 +1159,11 @@
     {
       "from": "TERRASOULSUPERFOODS",
       "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "ASTRONERGY (正泰新能)",
+      "to": "Pioneer",
       "type": "service"
     }
   ]
