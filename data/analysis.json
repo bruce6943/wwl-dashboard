@@ -1,15 +1,16 @@
 {
-  "scan_time": "2026-03-31T06:45:25.633030+08:00",
-  "total_emails": 90,
-  "business_emails": 64,
+  "scan_time": "2026-03-31T07:20:13.466518+08:00",
+  "total_emails": 94,
+  "business_emails": 67,
   "pdf_count": 15,
   "categories": {
     "charge_confirm": 7,
     "prealert": 8,
-    "other_biz": 37,
+    "other_biz": 39,
     "arrival": 7,
     "hold": 3,
-    "booking": 2
+    "booking": 2,
+    "delivery": 1
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -116,7 +117,7 @@
       ]
     },
     "ASTRONERGY (正泰新能)": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -168,8 +169,8 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 71,
-    "2026-03-31": 14
+    "2026-03-30": 74,
+    "2026-03-31": 15
   },
   "inspection_mbls": [],
   "hold_count": 3,
@@ -183,7 +184,7 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      10
+      11
     ],
     [
       "<horizonsolar001@gmail.com>",
@@ -194,11 +195,11 @@
       7
     ],
     [
-      "us038-importpickupnotification@msc.com",
-      5
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      6
     ],
     [
-      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      "us038-importpickupnotification@msc.com",
       5
     ],
     [
@@ -1043,40 +1044,40 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG48500700",
-      "MEDURQ324903",
-      "MEDURQ323962",
-      "ONEYBKKG68481300",
-      "ONEYBKKG67192800",
-      "COSU9506295790",
-      "ONEYBKKG61472300",
-      "MEDURQ324234",
-      "OOLU2320126090",
-      "CMDUTHD1466680",
-      "MEDUYL960612",
       "MEDUWG692272",
-      "ONEYBKKG61453900",
-      "MEDURQ324929"
+      "ONEYBKKG68481300",
+      "COSU9506295790",
+      "MEDURQ324234",
+      "MEDURQ324903",
+      "ONEYBKKG67192800",
+      "MEDURQ324929",
+      "MEDURQ323962",
+      "MEDUYL960612",
+      "CMDUTHD1466680",
+      "ONEYBKKG61472300",
+      "OOLU2320126090",
+      "ONEYBKKG48500700",
+      "ONEYBKKG61453900"
     ],
     "no_tlx_hbl": [
-      "WLC60305212",
-      "WLC60304684",
-      "WLC60217446",
-      "WLC60305140",
-      "WLC60125637",
-      "WLC60203463",
       "WLC60213409",
-      "WLC60124859",
-      "WLC50522982",
       "WLC60309086",
-      "WLC60304584"
+      "WLC60305140",
+      "WLC60203463",
+      "WLC50522982",
+      "WLC60217446",
+      "WLC60305212",
+      "WLC60124859",
+      "WLC60125637",
+      "WLC60304584",
+      "WLC60304684"
     ],
     "an_no_prealert": [
-      "MEDURQ324903",
-      "MEDURQ323962",
       "COSU9506295790",
       "MEDURQ324234",
-      "MEDURQ324929"
+      "MEDURQ324929",
+      "MEDURQ324903",
+      "MEDURQ323962"
     ],
     "hold_bl": [
       {
@@ -1130,9 +1131,9 @@
     "contacts_total": 371,
     "daily_connections": 6,
     "new_domains": [
-      "mercerlogistics.com",
       "containerport.com",
-      "elite-solar.com"
+      "elite-solar.com",
+      "mercerlogistics.com"
     ]
   },
   "daily_connections": [
