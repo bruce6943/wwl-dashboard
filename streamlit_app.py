@@ -411,7 +411,7 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
         action_map = {
             "freight": "Freight Hold — 联系origin确认运费支付状态 → 付款后通知船公司释放",
             "customs": "Customs Hold — 联系报关行(YES/WFS)确认CBP要求 → 准备补充文件 → 跟进放行",
-            "do fee": "DO Fee Hold — 确认DO费用金额 → Maggie安排付款 → 付款后拿DO",
+            "do fee": "DO Fee Hold — 确认DO费用金额 → 安排付款 → 付款后拿DO",
         }
         tasks.append({
             "id": key, "category": "hold", "priority": "urgent",
@@ -954,7 +954,7 @@ with tabs[1]:
                 for m in no_tlx_mbl
             ],
             "建议行动": ["联系origin确认TLX状态, 催促放单"] * len(no_tlx_mbl),
-            "负责人": ["Everlyn"] * len(no_tlx_mbl),
+            "状态": ["待跟进"] * len(no_tlx_mbl),
         })
         st.dataframe(mbl_df, use_container_width=True, hide_index=True, key="tbl_1")
     else:
@@ -967,7 +967,7 @@ with tabs[1]:
             "序号": range(1, len(no_tlx_hbl) + 1),
             "HBL号": no_tlx_hbl,
             "建议行动": ["联系销售确认TLX, 确认客户是否已付款"] * len(no_tlx_hbl),
-            "负责人": ["Everlyn + Maggie"] * len(no_tlx_hbl),
+            "状态": ["待跟进"] * len(no_tlx_hbl),
         })
         st.dataframe(hbl_df, use_container_width=True, hide_index=True, key="tbl_2")
     else:
@@ -981,7 +981,7 @@ with tabs[1]:
             "MBL号": an_no_prealert,
             "风险等级": ["极高-可能漏单"] * len(an_no_prealert),
             "建议行动": ["可能漏单! 立即查找对应预报邮件, 确认是否有对应HBL, 联系origin核实"] * len(an_no_prealert),
-            "负责人": ["Everlyn (查找) + Effy (确认)"] * len(an_no_prealert),
+            "状态": ["待核查"] * len(an_no_prealert),
         })
         st.dataframe(an_df, use_container_width=True, hide_index=True, key="tbl_3")
     else:
@@ -1003,7 +1003,7 @@ with tabs[1]:
                     if "freight" in str(h.get("type", "")).lower()
                     else "Regulatory Hold: 准备ISF/PI/PL补充文件"
                     if "regulatory" in str(h.get("type", "")).lower()
-                    else "DO Fee Hold: 联系Maggie确认付款"
+                    else "DO Fee Hold: 确认DO费用并安排付款"
                     if "do" in str(h.get("type", "")).lower() or "fee" in str(h.get("type", "")).lower()
                     else "检查Hold类型, 联系船公司确认具体要求"
                 ),
@@ -1088,7 +1088,7 @@ with tabs[2]:
                     "客户": name,
                     "提单": info.get("mbl", ""),
                     "金额": info.get("amount", ""),
-                    "Rita/Maggie/Will行动": combined_action,
+                    "跟进行动": combined_action,
                     "T+X状态": info.get("t_status", ""),
                     "建议后续行动": next_action,
                     "风险": info.get("risk", ""),
@@ -1134,8 +1134,8 @@ with tabs[3]:
 
     # Star Employee/Manager (rotate by week number)
     week_num = datetime.now().isocalendar()[1]
-    employees = ["Everlyn", "Rita", "Maggie"]
-    managers = ["Effy", "Will", "Bruce"]
+    employees = ["团队成员A", "团队成员B", "团队成员C"]
+    managers = ["管理层A", "管理层B", "管理层C"]
     star_emp = employees[week_num % len(employees)]
     star_mgr = managers[week_num % len(managers)]
 
@@ -1152,13 +1152,13 @@ with tabs[3]:
     # (按负责人分组已移除 — 等确认分工后再加)
 
     # Sub-tabs
-    person_tabs = st.tabs(["Everlyn", "Rita+Maggie+Will", "Effy", "Bruce"])
+    person_tabs = st.tabs(["操作组", "业务+催收", "客户组", "管理层"])
 
     with person_tabs[0]:
-        section_header("Everlyn - 操作核心")
+        section_header("操作组")
         insights = DI.get("people_topics", {})
-        ev_topics = insights.get("Everlyn Shaw", {})
-        ev_connections = DI.get("people_connections", {}).get("Everlyn Shaw", {})
+        ev_topics = insights.get("Everlyn Shaw", insights.get(list(insights.keys())[0] if insights else "", {}))
+        ev_connections = DI.get("people_connections", {}).get(list(DI.get("people_connections",{}).keys())[0] if DI.get("people_connections") else "", {})
 
         c1, c2 = st.columns(2)
         with c1:
@@ -1196,38 +1196,37 @@ with tabs[3]:
             2. 跟踪{inspection_count}票查验进度<br>
             3. 推进{len(no_tlx_mbl)}个MBL电放确认<br>
             4. 检查所有AN是否有对应预报<br>
-            <b>成长建议:</b> Everlyn是操作部门的核心枢纽, 处理邮件量最大。建议建立标准化checklist,
+            <b>建议:</b> 操作组是核心枢纽, 处理邮件量最大。建议建立标准化checklist,
             每天早上9点先处理Hold和查验, 再处理CC, 最后处理常规booking。效率会提升30%+。
         """)
 
     with person_tabs[1]:
-        section_header("Rita + Maggie + Will - 业务+催收+管理")
+        section_header("业务+催收组")
 
         # Rita
-        st.markdown("#### Rita")
+        st.markdown("#### 业务跟进")
         rita_topics = insights.get("Rita Tang", {})
         rita_conn = DI.get("people_connections", {}).get("Rita Tang", {})
         rita_topics_str = ", ".join([f"{k}({v})" for k, v in rita_topics.items()]) if rita_topics else "暂无数据"
         rita_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(rita_conn.items())[:3]]) if rita_conn else "暂无数据"
         alert_card("blue", f"""
-            <b>Rita 30天工作领域:</b> {rita_topics_str}<br>
+            <b>业务跟进30天:</b> {rita_topics_str}<br>
             <b>主要协作:</b> {rita_conn_str}<br>
-            <b>本周重点:</b> 配合Maggie催收, 跟进booking进度, 维护客户关系<br>
+            <b>本周重点:</b> 配合催收跟进, 推进booking, 维护客户关系<br>
             <b>成长建议:</b> Rita在催收方面越来越成熟, 建议增加与客户直接沟通的机会, 培养独立处理中等风险案件的能力。
         """)
 
         # Maggie
-        st.markdown("#### Maggie")
+        st.markdown("#### 催收管理")
         maggie_topics = insights.get("Maggie Wu", {})
         maggie_conn = DI.get("people_connections", {}).get("Maggie Wu", {})
         maggie_topics_str = ", ".join([f"{k}({v})" for k, v in maggie_topics.items()]) if maggie_topics else "暂无数据"
         maggie_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(maggie_conn.items())[:3]]) if maggie_conn else "暂无数据"
         alert_card("blue", f"""
-            <b>Maggie 30天工作领域:</b> {maggie_topics_str}<br>
+            <b>催收管理30天:</b> {maggie_topics_str}<br>
             <b>主要协作:</b> {maggie_conn_str}<br>
             <b>本周重点:</b> MERSY案件催收(最高优先), TOP5欠费客户跟进, SOP状态更新<br>
-            <b>成长建议:</b> Maggie是催收和booking的双料能手, 邮件量462封/月。建议适当分配部分booking工作给Rita,
-            让Maggie更多精力聚焦高风险催收。
+            <b>建议:</b> 催收和booking需要合理分配，高风险催收应优先。
         """)
 
         # Will
@@ -1242,7 +1241,7 @@ with tabs[3]:
         """)
 
     with person_tabs[2]:
-        section_header("Effy - 目的港操作经理")
+        section_header("客户组")
         effy_topics = insights.get("Effy Huo", {})
         effy_conn = DI.get("people_connections", {}).get("Effy Huo", {})
 
@@ -1283,7 +1282,7 @@ with tabs[3]:
             2. 协调报关行YES处理科陆/海柔清关<br>
             3. 监控Delivery进度, 确保无延误<br>
             4. 处理Hold事件协调<br>
-            <b>成长建议:</b> Effy作为目的港操作经理, 是客户体验的最后一道防线。
+            <b>建议:</b> 目的港操作是客户体验的最后一道防线。
             建议建立"到港日+3"预警机制 - 货物到港3天内如果没有开始提货流程, 自动升级预警。
         """)
 
@@ -1295,8 +1294,7 @@ with tabs[3]:
             2. 团队效率评审 - 本月处理5,169封邮件, 人均日处理量如何?<br>
             3. MSC关系维护 - MERSY案件可能影响全线业务<br>
             4. 新客户开发策略 - Astronergy(147封邮件)是否值得深度绑定?<br>
-            <b>战略建议:</b> 当前团队最大风险是SPOF(单点故障) - Everlyn离开后操作会瘫痪,
-            Maggie离开后催收会停滞。建议Q2启动交叉培训计划。
+            <b>战略建议:</b> 建议关注关键岗位backup，启动交叉培训，降低单点故障风险。
         """)
 
     st.markdown("""
@@ -1310,24 +1308,24 @@ with tabs[3]:
                 <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">管理架构</div>
                 <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
                     Bruce(整体运营)<br>
-                    Effy(美国目的港)<br>
+                    目的港操作<br>
                     Will(中国端协调)
                 </div>
             </div>
             <div style="flex:1;background:rgba(10,20,50,0.6);border-radius:8px;padding:14px;border:1px solid rgba(100,150,255,0.1);">
                 <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">执行团队</div>
                 <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
-                    Everlyn(换单操作核心)<br>
-                    Rita+Maggie(催收+SA)<br>
-                    Adam Sum(战略客户)
+                    换单操作<br>
+                    催收+SA<br>
+                    战略客户
                 </div>
             </div>
         </div>
         <div style="color:#b8c8e0;font-size:13px;line-height:2;">
             <b style="color:#a8d4ff;">成长方向:</b><br>
-            <span style="color:#fbbf24;">Everlyn</span> — 从执行者转向指导者，培养Jason接手SA和PreAlert<br>
-            <span style="color:#fbbf24;">Effy</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
-            <span style="color:#fbbf24;">Rita+Maggie</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
+            <span style="color:#fbbf24;">操作组</span> — 从执行者转向指导者，培养son接手SA和PreAlert<br>
+            <span style="color:#fbbf24;">客户组</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
+            <span style="color:#fbbf24;">催收组</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
             <span style="color:#fbbf24;">Will</span> — 复杂升级案件(MERSY/MSC危机)处理，团队的判断力安全网<br><br>
             <b style="color:#a8d4ff;">管理原则:</b> 不要让任何人长期超负荷。连续3天邮件超50封，<b style="color:#ef4444;">必须主动分流</b>。团队可持续性比单月效率更重要。
         </div>
@@ -1352,10 +1350,10 @@ with tabs[4]:
     coach_box("教练总结: 从数据看运营节奏", f"""
         <b>邮件量模式:</b> 工作日平均{avg_daily:.0f}封, 周末明显下降。这说明大部分业务集中在美国工作时间。
         建议团队错峰安排: 中国早上优先处理origin邮件, 下午处理美国目的港邮件。<br><br>
-        <b>Top发件人分析:</b> PLT系统(658封)和Everlyn(542封)是最大邮件来源,
-        说明系统自动邮件和内部操作邮件占比最高。Maggie(462封)紧随其后, 反映催收和booking的工作强度。<br><br>
+        <b>Top发件人分析:</b> PLT系统和操作组是最大邮件来源,
+        说明系统自动邮件和内部操作邮件占比最高。催收组紧随其后, 反映催收和booking的工作强度。<br><br>
         <b>效率提升空间:</b> 如果能将CC费用确认中小额($50以下)的部分自动化处理,
-        预计可以减少15-20%的操作邮件量, 释放Everlyn约100封/月的工作量。
+        预计可以减少15-20%的操作邮件量。
     """)
 
 
@@ -1477,7 +1475,7 @@ with tabs[5]:
 
     coach_box("教练总结: 紧急 vs 重要 - 艾森豪威尔矩阵", """
         <b>右上角(重要且紧急):</b> 这些客户邮件量大、活跃度高、可能有欠费。需要指定专人负责, 每天review。
-        典型代表: REACH INDUSTRY(103封)、HAIROBOT(60封)。<br><br>
+        典型代表: 排名前列的客户。<br><br>
         <b>左上角(重要不紧急):</b> 长期价值客户, 当前没有紧急事务。定期维护关系, 预防性沟通。<br><br>
         <b>右下角(紧急不重要):</b> 突发事务多但客户价值一般。快速处理, 不要投入过多精力。<br><br>
         <b>左下角(不重要不紧急):</b> 可以放在队列最后处理。但注意: 长期忽略可能让客户流失。<br><br>
@@ -1635,19 +1633,19 @@ with tabs[6]:
             elif "PTT" in name or "PACIFIC" in name:
                 current_biz = "科陆储能柜卡车配送(22次)/双鱼项目卡车"
                 pending = "COSCO COSU6446478520 DO已签→待提箱"
-                our_action = "联系Jack PTT确认提箱时间→协调仓库收货→通知科陆"
+                our_action = "联系PTT确认提箱时间→协调仓库收货→通知科陆"
             elif "Rome" in name or "ROME" in name:
                 current_biz = "正泰新能卡车配送(41次)/Houston项目"
                 pending = "正泰ZTLO260031后续提货安排"
-                our_action = "与Rome确认下批次提货计划→对接Adam Sum→通知正泰"
+                our_action = "与Rome确认下批次提货计划→对接origin→通知正泰"
             elif "FCC" in name:
                 current_biz = "海亮Houston出口订舱/TERRA电商ReExport"
                 pending = "YCH26240119 7x40HQ装箱计划"
-                our_action = "联系Adrian确认装箱日期→协调Everlyn操作→通知海亮"
+                our_action = "联系FCC确认装箱日期→协调操作→通知海亮"
             elif "PTS" in name:
                 current_biz = "SAV区域卡车/COSCO Round Trip"
                 pending = "SAV Bid Cargo 27柜报价评估"
-                our_action = "汇总Sam Kim报价→与IDC/PTT比价→回复客户"
+                our_action = "汇总PTS报价→与IDC/PTT比价→回复客户"
             else:
                 current_biz = "常规合作"
                 pending = "-"
@@ -1687,23 +1685,23 @@ with tabs[6]:
             if "YES" in name:
                 biz_detail = "正在处理: 科陆锂电池清关(LITHIUM BATTERIES查验中) / 海柔MEDUEK846578清关 / PREVALON COSU6446478520清关"
                 pending_detail = "科陆查验文件待CBP确认 / 海柔清关等待放行"
-                action_detail = "催YES确认科陆查验进展→准备补充MSDS文件→协调Effy通知客户延误预期"
+                action_detail = "催YES确认科陆查验进展→准备补充MSDS文件→通知客户延误预期"
             elif "PTT" in name or "PACIFIC" in name:
                 biz_detail = "正在处理: 科陆储能柜提箱配送(COSU6446478520 DO已签) / ZIM双鱼2x20HC卡车安排"
                 pending_detail = "COSCO提箱时间待确认 / ZIM票卡车报价待回复"
-                action_detail = "联系Jack PTT确认COSCO提箱时间→跟进ZIM卡车报价→通知Effy安排Delivery"
+                action_detail = "联系PTT确认COSCO提箱时间→跟进ZIM卡车报价→通知Effy安排Delivery"
             elif "Rome" in name:
                 biz_detail = "正在处理: 正泰新能ZTLO260031项目(41次配送) / Houston大件运输"
                 pending_detail = "下批次正泰提货时间待确认"
-                action_detail = "与Rome确认正泰下周提货计划→对接Adam Sum→确保16柜按时配送"
+                action_detail = "与Rome确认正泰下周提货计划→对接origin→确保16柜按时配送"
             elif "FCC" in name:
                 biz_detail = "正在处理: 海亮Houston出口YCH26240119(7x40HQ) / TERRA电商ReExport操作"
                 pending_detail = "海亮装箱日期待确认 / TERRA 20GP拆箱方案待确认"
-                action_detail = "催Adrian确认海亮装箱日→协调TERRA拆箱→Effy跟进客户沟通"
+                action_detail = "催Adrian确认海亮装箱日→协调TERRA拆箱→跟进客户沟通"
             elif "PTS" in name:
                 biz_detail = "正在处理: SAV区域卡车 / COSCO Round Trip(Jingzhou-Charleston)"
                 pending_detail = "SAV Bid Cargo 27柜报价待比较"
-                action_detail = "汇总Sam Kim报价与IDC/PTT比价→选择最优方案→回复客户"
+                action_detail = "汇总PTS报价与IDC/PTT比价→选择最优方案→回复客户"
             else:
                 biz_detail = "常规合作中"
                 pending_detail = "-"
@@ -1758,7 +1756,7 @@ with tabs[7]:
         <b>FMC OSRA保护:</b> 船公司不得因我们投诉D&D或使用竞争对手而拒绝舱位(反报复条款)。
         也不得无合理理由拒绝我们订舱(拒绝交易规则, 2024.7生效)。遇到不合理拒舱, 可向FMC投诉。<br><br>
         <b>集中度红线(从14,825封邮件发现):</b>
-        JINGZHOU 100%走Hapag-Lloyd(64次) — 必须开发备选!
+        部分客户集中度超70% — 必须开发备选!
         CLOU 71%走ZIM, HITHIUM 68%走ZIM — ZIM变动影响两家。
         建议: &gt;70%集中度的客户必须有B计划船公司。<br><br>
         <b>D&D账单对比:</b> 14天累计D&D最贵: NY($3,182) &gt; Long Beach($2,730) &gt; LA($2,673)。
