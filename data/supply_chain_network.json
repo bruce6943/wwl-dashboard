@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 5
+      "MSC": 6
     },
     "MERSY CORP": {
       "MSC": 9
@@ -203,6 +203,12 @@
     },
     "HITHIUM": {
       "PTT卡车": {
+        "count": 1,
+        "types": []
+      }
+    },
+    "PTS INC": {
+      "PTS": {
         "count": 1,
         "types": []
       }

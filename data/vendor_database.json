@@ -34,7 +34,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "MSC",
@@ -65,7 +65,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "Hapag-Lloyd",
@@ -94,7 +94,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "ZIM",
@@ -123,7 +123,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "YML",
@@ -152,7 +152,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "WAN HAI",
@@ -181,7 +181,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "Evergreen",
@@ -210,7 +210,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "HMM",
@@ -239,7 +239,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "MAERSK",
@@ -268,7 +268,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "PACIFIC T&T",
@@ -297,7 +297,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "ROME TRANSPORT",
@@ -326,7 +326,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "FAST FREIGHTS",
@@ -355,7 +355,7 @@
         "responsiveness": 8,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "YES CHB",
@@ -384,7 +384,7 @@
         "responsiveness": 20,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "FCC USA",
@@ -413,7 +413,7 @@
         "responsiveness": 20,
         "documentation_quality": 12
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "IDC INTERNATIONAL",
@@ -442,7 +442,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "RIM LOGISTICS",
@@ -471,7 +471,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "ATC CARGO",
@@ -500,7 +500,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "OOCL",
@@ -518,10 +518,11 @@
         "集中度20%",
         "集中度21%",
         "集中度19%",
-        "集中度15%"
+        "集中度15%",
+        "集中度16%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 6,
+        "email_volume_7d": 7,
         "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -536,7 +537,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "COSCO",
@@ -551,7 +552,7 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 2,
+        "email_volume_7d": 3,
         "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -560,13 +561,13 @@
         "inspection_events_7d": 1
       },
       "scoring_components": {
-        "volume_reliability": 2,
+        "volume_reliability": 6,
         "cost_efficiency": 15,
         "problem_frequency": 20,
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     },
     {
       "vendor_name": "ONE",
@@ -596,7 +597,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T10:19:12.904782+08:00"
+      "last_updated": "2026-03-30T10:49:54.313896+08:00"
     }
   ]
 }
