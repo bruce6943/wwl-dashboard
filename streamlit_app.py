@@ -657,11 +657,24 @@ with tabs[0]:
                 "detail_lines": [f"邮件数:{gt.get('email_count',0)}", f"最后:{gt.get('last_seen','')}"] if gt.get('email_count') else [],
                 "assignee": "",
             })
-        # 补充欠费催收任务
-        all_tasks.extend(build_task_board([], ARR, {}, SOP, CON, DI, {}).copy())
+        # 补充欠费催收任务(去重)
+        existing_ids = {t["id"] for t in all_tasks}
+        for extra in build_task_board([], ARR, {}, SOP, CON, DI, {}):
+            if extra["id"] not in existing_ids:
+                all_tasks.append(extra)
+                existing_ids.add(extra["id"])
     else:
         # Fallback
         all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, {})
+
+    # 去重(防止相同id的checkbox冲突)
+    seen_ids = set()
+    deduped = []
+    for t in all_tasks:
+        if t["id"] not in seen_ids:
+            seen_ids.add(t["id"])
+            deduped.append(t)
+    all_tasks = deduped
 
     task_data = load_tasks()
     completed_ids = task_data.get("completed", {})
@@ -772,14 +785,15 @@ with tabs[0]:
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
 
+    _chk_idx = 0  # 全局checkbox计数器，防止重复key
     # ─── 紧急任务 ───
     if pending_urgent:
         st.markdown(f"<div style='color:#e94560;font-weight:700;font-size:15px;margin:14px 0 6px;'>紧急待办 ({len(pending_urgent)})</div>", unsafe_allow_html=True)
         for t in pending_urgent:
             col1, col2 = st.columns([0.04, 0.96])
             with col1:
-                if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
-                    completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
+                    _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                     save_tasks({"completed": completed_ids, "tasks": all_tasks})
                     st.rerun()
             with col2:
@@ -791,8 +805,8 @@ with tabs[0]:
             for t in pending_high:
                 col1, col2 = st.columns([0.04, 0.96])
                 with col1:
-                    if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
-                        completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                    if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
+                        _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                         save_tasks({"completed": completed_ids, "tasks": all_tasks})
                         st.rerun()
                 with col2:
@@ -804,8 +818,8 @@ with tabs[0]:
             for t in pending_medium:
                 col1, col2 = st.columns([0.04, 0.96])
                 with col1:
-                    if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
-                        completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                    if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
+                        _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                         save_tasks({"completed": completed_ids, "tasks": all_tasks})
                         st.rerun()
                 with col2:
