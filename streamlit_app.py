@@ -924,12 +924,48 @@ with tabs[0]:
                     if chk:
                         st.button("确认", key=f"insp_cfm_{i}")
 
-    # ─── CC费用(折叠) ───
+    # ─── CC费用(折叠+每条详情+完成功能) ───
     if cc_count > 0:
+        # Load CC details
+        _cc_details = []
+        try:
+            with open("data/cc_details.json", "r", encoding="utf-8") as _ccf:
+                _cc_details = json.load(_ccf)
+        except: pass
+
         with st.expander(f"CC费用确认 ({cc_count}件)"):
-            st.markdown(f"""<div style="color:#c0c0d0;font-size:13px;">
-                建议: 1) 按船公司分类整理CC 2) 小额($50以下)直接确认 3) 大额核实后回复 4) 有争议的标记"Dispute"并48h内回复
+            st.markdown("""<div style="color:#a0a0c0;font-size:12px;margin-bottom:8px;">
+                建议: 小额($50以下)直接确认 / 大额核实后回复 / 有争议标记"Dispute"48h内回复
             </div>""", unsafe_allow_html=True)
+
+            if _cc_details:
+                for i, cc in enumerate(_cc_details[:30]):
+                    mbl = cc.get('mbl','')
+                    hbl = cc.get('hbl','')
+                    carrier = cc.get('carrier','')
+                    amt = cc.get('amount','')
+                    charge = cc.get('charge_type','')
+                    cust = cc.get('customer','')
+                    eta = cc.get('eta','')
+
+                    amt_color = "#00c853" if amt and float(amt.replace('$','').replace(',','') or '0') <= 50 else "#ffa500"
+                    st.markdown(f"""<div style="border-left:3px solid {amt_color};padding:6px 12px;margin:3px 0;background:rgba(30,30,60,0.5);border-radius:0 6px 6px 0;">
+                        <span style="color:#fff;font-weight:600;">{amt or '待确认'}</span>
+                        {f'<span style="color:#888;"> {charge}</span>' if charge else ''}
+                        {f'<span style="color:#888;"> | {cust}</span>' if cust else ''}
+                        <br><span style="font-family:monospace;color:#a0a0e0;font-size:12px;">MBL:{mbl}</span>
+                        {f'<span style="font-family:monospace;color:#a0a0e0;font-size:12px;"> HBL:{hbl}</span>' if hbl else ''}
+                        <span style="color:#666;font-size:12px;"> ({carrier})</span>
+                        {f'<span style="color:#666;font-size:12px;"> ETA:{eta}</span>' if eta else ''}
+                    </div>""", unsafe_allow_html=True)
+                    c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                    with c1:
+                        chk = st.checkbox("完成", key=f"cc_chk_{i}")
+                    with c2:
+                        if chk:
+                            st.button("确认", key=f"cc_cfm_{i}")
+            else:
+                st.markdown(f"CC确认{cc_count}件，详情数据加载中...")
 
     st.markdown("---")
 
