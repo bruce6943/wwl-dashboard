@@ -667,7 +667,7 @@ with tabs[0]:
         # Fallback
         all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, {})
 
-    # 去重(防止相同id的checkbox冲突)
+    # 去重
     seen_ids = set()
     deduped = []
     for t in all_tasks:
@@ -675,6 +675,26 @@ with tabs[0]:
             seen_ids.add(t["id"])
             deduped.append(t)
     all_tasks = deduped
+
+    # 过滤掉3月15日前的旧任务(已经过期的不再显示)
+    all_tasks = [t for t in all_tasks if not t.get("last_seen") or t.get("last_seen","9999") >= "2026-03-15"]
+
+    # 过滤掉wwl_sender是US团队的(这些不是源头)
+    US_TEAM_EMAILS = {
+        'us.ops2@wwl.sg', 'us.ops@wwl.sg', 'us.effyhuo@wwl.sg',
+        'maggiewu@wwl.cn', 'rita.tang@wwl.cn', 'willsun@wwl.cn',
+        'bruce@wwl.cn', 'bruce@wwl.sg',
+        'us.adamsum@worldwide-logistics.cn', 'bobc@worldwide-logistics.cn',
+        'us.docs@wwl.sg',
+    }
+    for t in all_tasks:
+        sender = t.get("wwl_sender", "")
+        # 从sender字符串中提取email
+        import re as _re
+        _em = _re.search(r'[\w.+-]+@[\w.-]+', sender.lower()) if sender else None
+        if _em and _em.group() in US_TEAM_EMAILS:
+            t["wwl_sender"] = ""  # 清除US团队，不是源头
+            t["wwl_branch"] = ""
 
     task_data = load_tasks()
     completed_ids = task_data.get("completed", {})
@@ -785,45 +805,43 @@ with tabs[0]:
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
 
-    _chk_idx = 0  # 全局checkbox计数器，防止重复key
-    # ─── 紧急任务 ───
-    if pending_urgent:
-        st.markdown(f"<div style='color:#e94560;font-weight:700;font-size:15px;margin:14px 0 6px;'>紧急待办 ({len(pending_urgent)})</div>", unsafe_allow_html=True)
-        for t in pending_urgent:
-            col1, col2 = st.columns([0.04, 0.96])
-            with col1:
-                if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
-                    _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+    _chk_idx = 0
+
+    def render_task_with_confirm(t, pri_color, bg_alpha):
+        """渲染任务卡片 + 两步确认(勾选→确认按钮)"""
+        nonlocal _chk_idx
+        _chk_idx += 1
+        chk_key = f"chk_{_chk_idx}"
+        confirm_key = f"confirm_{_chk_idx}"
+
+        col1, col2 = st.columns([0.04, 0.96])
+        with col1:
+            checked = st.checkbox("", key=chk_key, label_visibility="collapsed")
+        with col2:
+            st.markdown(render_task_card(t, pri_color, bg_alpha), unsafe_allow_html=True)
+            if checked:
+                if st.button("确认完成", key=confirm_key, type="primary"):
+                    completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                     save_tasks({"completed": completed_ids, "tasks": all_tasks})
                     st.rerun()
-            with col2:
-                st.markdown(render_task_card(t, "#e94560", "233,69,96,0.10"), unsafe_allow_html=True)
+
+    # ─── 紧急任务(折叠框) ───
+    if pending_urgent:
+        with st.expander(f"紧急待办 ({len(pending_urgent)})", expanded=True):
+            for t in pending_urgent:
+                render_task_with_confirm(t, "#e94560", "233,69,96,0.10")
 
     # ─── 重要任务 ───
     if pending_high:
         with st.expander(f"重要待办 ({len(pending_high)})", expanded=len(pending_urgent) == 0):
             for t in pending_high:
-                col1, col2 = st.columns([0.04, 0.96])
-                with col1:
-                    if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
-                        _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
-                        save_tasks({"completed": completed_ids, "tasks": all_tasks})
-                        st.rerun()
-                with col2:
-                    st.markdown(render_task_card(t, "#ffa500", "255,165,0,0.06"), unsafe_allow_html=True)
+                render_task_with_confirm(t, "#ffa500", "255,165,0,0.06")
 
     # ─── 常规任务 ───
     if pending_medium:
         with st.expander(f"常规待办 ({len(pending_medium)})"):
             for t in pending_medium:
-                col1, col2 = st.columns([0.04, 0.96])
-                with col1:
-                    if st.checkbox("", key=f"chk_{_chk_idx}_{t['id'][:30]}", label_visibility="collapsed"):
-                        _chk_idx += 1; completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
-                        save_tasks({"completed": completed_ids, "tasks": all_tasks})
-                        st.rerun()
-                with col2:
-                    st.markdown(render_task_card(t, "#2196f3", "33,150,243,0.05"), unsafe_allow_html=True)
+                render_task_with_confirm(t, "#2196f3", "33,150,243,0.05")
 
     # ─── 今日已完成 ───
     if done_today:
