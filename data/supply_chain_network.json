@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 247,
+      "CMA-CGM": 251,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 175,
+      "ZIM": 181,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 32
+      "MSC": 33
     },
     "MERSY CORP": {
       "MSC": 9
@@ -87,8 +87,8 @@
       "ZIM": 22
     },
     "DTC SA": {
-      "COSCO": 15,
-      "OOCL": 30
+      "COSCO": 17,
+      "OOCL": 34
     }
   },
   "customer_service": {
@@ -213,13 +213,19 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 27,
+        "count": 29,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 7,
+        "count": 8,
+        "types": []
+      }
+    },
+    "PACIFIC T&T": {
+      "PTS": {
+        "count": 1,
         "types": []
       }
     }
