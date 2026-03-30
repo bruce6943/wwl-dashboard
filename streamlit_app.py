@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 import re
 import random
 
-# v4.1 layout: tasks → events → completed (2026-03-30 02:30)
+# v5.1 body-based progress: tasks → events → completed (2026-03-30 02:30)
 
 # ─── Page Config ───
 st.set_page_config(
@@ -232,7 +232,7 @@ header {visibility: hidden;}
 
 
 # ─── Load Data ───
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=30)
 def load_all_data():
     data = {}
     files = {
