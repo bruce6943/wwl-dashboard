@@ -1,15 +1,17 @@
 {
-  "scan_time": "2026-03-30T10:49:54.313896+08:00",
-  "total_emails": 43,
-  "business_emails": 37,
-  "pdf_count": 16,
+  "scan_time": "2026-03-30T11:20:42.595217+08:00",
+  "total_emails": 53,
+  "business_emails": 46,
+  "pdf_count": 22,
   "categories": {
-    "other_biz": 15,
+    "other_biz": 17,
     "inspection": 4,
-    "charge_confirm": 14,
+    "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
-    "overdue": 1
+    "overdue": 1,
+    "prealert": 4,
+    "arrival": 2
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -66,19 +68,34 @@
       "days": [
         "03/30"
       ]
+    },
+    "REACH INDUSTRY": {
+      "emails": 2,
+      "hbl_count": 1,
+      "mbl_count": 1,
+      "active_days": 1,
+      "hbls": [
+        "WLC60124865"
+      ],
+      "mbls": [
+        "CMDUTHD1466676"
+      ],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
     "MSC": 5,
-    "COSCO": 3,
-    "OOCL": 7,
+    "COSCO": 7,
+    "OOCL": 11,
     "ONE": 2,
-    "CMA-CGM": 6,
+    "CMA-CGM": 9,
     "ZIM": 1
   },
   "carrier_fees": {},
-  "hbl_total": 15,
-  "mbl_total": 19,
+  "hbl_total": 17,
+  "mbl_total": 23,
   "all_hbls": [
     "WLC50813210",
     "WLC60120505",
@@ -94,7 +111,9 @@
     "WLC60301625",
     "WLC60301626",
     "WLC60301627",
-    "WLC60307413"
+    "WLC60307413",
+    "WLC60308623",
+    "WLC60314959"
   ],
   "all_mbls": [
     "CMDUCHN3095178",
@@ -114,12 +133,16 @@
     "OOLU2166784680",
     "OOLU2166784690",
     "OOLU2167032400",
+    "OOLU2167100640",
+    "OOLU2167100650",
+    "OOLU2167175490",
+    "OOLU2167307120",
     "OOLU2320126090",
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 37
+    "2026-03-30": 47
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -138,14 +161,22 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      4
+      6
     ],
     [
       "Krizza Mallari <ops@pinnacleteam.com>",
       2
     ],
     [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      2
+    ],
+    [
       "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
+      2
+    ],
+    [
+      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
       2
     ],
     [
@@ -158,6 +189,14 @@
     ],
     [
       "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      2
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      2
+    ],
+    [
+      "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
       2
     ],
     [
@@ -189,23 +228,11 @@
       1
     ],
     [
-      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
-      1
-    ],
-    [
-      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
-      1
-    ],
-    [
       "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
       1
     ],
     [
       "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
-      1
-    ],
-    [
-      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
       1
     ]
   ],
@@ -223,8 +250,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "tao.opsnam3@wwl.cn (tao.opsnam3@wwl.cn)",
-      "wwl_branch": "WWL中国",
+      "wwl_sender": "worldwide-logistics (info2@worldwide-logistics.cn)",
+      "wwl_branch": "WWL环世",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 COSU6444625540",
       "source": "查验预警-COSU6444625540",
@@ -244,7 +271,7 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_sender": "us.ops (us.ops@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2320126090",
@@ -265,7 +292,7 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.nasmee@wwl.sg",
+      "wwl_sender": "bkk.nasmee (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 BKKG38865600",
@@ -286,13 +313,35 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "PLT系统",
-      "wwl_branch": "PLT平台(自动)",
+      "wwl_sender": "",
+      "wwl_branch": "",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2166524280",
       "source": "查验预警-OOLU2166524280",
       "from": "assistant@pltplt.com",
       "date": "Mon, 30 Mar 2026 08:00:20"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "CMDUTHD1466676",
+      "hbl": "WLC60124865",
+      "customer": "REACH INDUSTRY",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: bkk.rie@wwl.sg",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "bkk.rie (bkk.rie@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: CMDUTHD1466676",
+      "source": "RE: PRE-ALERT - MBL : CMDUTHD1466676 l HBL : WLC60124865 l L",
+      "from": "<bkk.rie@wwl.sg>",
+      "date": "Mon, 30 Mar 2026 10:09:31"
     },
     {
       "type": "inspection_broker",
@@ -306,8 +355,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "tao.opsnam3@wwl.cn (tao.opsnam3@wwl.cn)",
-      "wwl_branch": "WWL中国",
+      "wwl_sender": "worldwide-logistics (info2@worldwide-logistics.cn)",
+      "wwl_branch": "WWL环世",
       "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
       "detail": "查验报关行跟进 ",
       "source": "查验预警-COSU6444625540",
@@ -326,7 +375,7 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_sender": "us.ops (us.ops@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
       "detail": "查验报关行跟进 ",
@@ -346,7 +395,7 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "bkk.nasmee@wwl.sg",
+      "wwl_sender": "bkk.nasmee (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
       "detail": "查验报关行跟进 ",
@@ -366,8 +415,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "PLT系统",
-      "wwl_branch": "PLT平台(自动)",
+      "wwl_sender": "",
+      "wwl_branch": "",
       "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
       "detail": "查验报关行跟进 ",
       "source": "查验预警-OOLU2166524280",
@@ -461,6 +510,54 @@
       "date": "Mon, 30 Mar 2026 10:20:21"
     },
     {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "OOLU2167100640",
+      "hbl": "",
+      "customer": "REACH INDUSTRY",
+      "eta": "",
+      "port": "LB",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "OOCL",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Henry Chen (sha.ops55@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 注意PierPass费用",
+      "detail": "到港 LB MBL:OOLU2167100640 Free Time 4天",
+      "source": "OOCL Arrival Notice OOLU2167100640 | COSCO BELGIUM - 084E",
+      "from": "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
+      "date": "Mon, 30 Mar 2026 11:17:20"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "OOLU2167100650",
+      "hbl": "",
+      "customer": "REACH INDUSTRY",
+      "eta": "",
+      "port": "LB",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "OOCL",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Henry Chen (sha.ops55@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 注意PierPass费用",
+      "detail": "到港 LB MBL:OOLU2167100650 Free Time 4天",
+      "source": "OOCL Arrival Notice OOLU2167100650 | COSCO BELGIUM - 084E",
+      "from": "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
+      "date": "Mon, 30 Mar 2026 11:20:20"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "OOLU2167032400",
@@ -469,10 +566,10 @@
       "carrier": "OOCL",
       "sender": "内部: Maggie Wu",
       "contact": "",
-      "consignee": "(COMPLETE NAME AND ADDRESS)",
-      "shipper": "/EXPORTER (COMPLETE NAME AND ADDRESS)",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "Maggie Wu (maggiewu@wwl.cn)",
+      "wwl_sender": "Yumi Dai - WWLSZX (fsh.yumidai@wwl.cn)",
       "wwl_branch": "WWL中国",
       "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
       "detail": "清关完成 通知卡车+客户",
@@ -495,8 +592,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:OOLU2166784670 金额:",
       "source": "Charge confirm request /MBL:OOLU2166784670 /HBL:WLC60301627\r",
@@ -518,8 +615,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:OOLU2166784680 金额:",
       "source": "Charge confirm request /MBL:OOLU2166784680 /HBL:WLC60301626\r",
@@ -541,8 +638,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:OOLU2166784690 金额:",
       "source": "Charge confirm request /MBL:OOLU2166784690 /HBL:WLC60301625\r",
@@ -564,8 +661,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "bkk.rie (bkk.rie@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUTHD1466676 金额:",
       "source": "Charge confirm request /MBL:CMDUTHD1466676 /HBL:WLC60124865\r",
@@ -584,11 +681,11 @@
       "carrier": "CMA-CGM",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
-      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
-      "shipper": "NOTIFY",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
       "source": "Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213560\r",
@@ -607,11 +704,11 @@
       "carrier": "CMA-CGM",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
-      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
-      "shipper": "NOTIFY",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
       "source": "Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC60125060\r",
@@ -633,8 +730,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "bkk.guide (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:ZIMUBKK80440481 金额:",
       "source": "Charge confirm request /MBL:ZIMUBKK80440481 /HBL:WLC60216466",
@@ -676,8 +773,8 @@
       "carrier": "MSC",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
-      "consignee": "BTL INTERNATIONAL INC FFAU2506773-40HC FJ27287875",
-      "shipper": "DECLARED THAT: THE SHIPMENT CONTAINS NO SOLID WOOD PACKING M",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "Maggie Wu",
       "wwl_sender": "",
       "wwl_branch": "",
@@ -702,8 +799,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "Maggie Wu",
-      "wwl_sender": "msc.com",
-      "wwl_branch": "外部",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:MEDUWK745968 金额:",
       "source": "Charge confirm request /MBL:MEDUWK745968 /HBL:WLC60205753\r\n ",
@@ -725,8 +822,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "Maggie Wu",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:MEDUWK478768 金额:",
       "source": "Charge confirm request /MBL:MEDUWK478768 /HBL:WLC60120505\r\n ",
@@ -745,11 +842,11 @@
       "carrier": "CMA-CGM",
       "sender": "内部: rita tang",
       "contact": "",
-      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
-      "shipper": "NOTIFY",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
       "source": "答复: Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC60125",
@@ -768,11 +865,11 @@
       "carrier": "CMA-CGM",
       "sender": "内部: rita tang",
       "contact": "",
-      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
-      "shipper": "NOTIFY",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
       "source": "答复: Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213",
@@ -791,64 +888,130 @@
       "carrier": "CMA-CGM",
       "sender": "内部: dtc.zengcaihong@wwl.cn",
       "contact": "",
-      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
-      "shipper": "NOTIFY",
+      "consignee": "",
+      "shipper": "",
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "确认费用承担方",
       "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
       "source": "Re: 答复: Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC6",
       "from": "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
       "date": "Mon, 30 Mar 2026 10:17:43"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3116145",
+      "hbl": "WLC60213560",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: sha.ops66",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
+      "source": "答复: Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213",
+      "from": "\"sha.ops66\" <sha.ops66@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 11:15:21"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "OOLU2167100640",
+      "customer": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "OOCL",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Henry Chen (sha.ops55@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "OOCL Arrival Notice OOLU2167100640 | COSCO BELGIUM - 084E",
+      "from": "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
+      "date": "Mon, 30 Mar 2026 11:17:20"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "OOLU2167100650",
+      "customer": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "OOCL",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Henry Chen (sha.ops55@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "OOCL Arrival Notice OOLU2167100650 | COSCO BELGIUM - 084E",
+      "from": "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
+      "date": "Mon, 30 Mar 2026 11:20:20"
     }
   ],
   "action_summary": {
-    "total": 29,
-    "urgent": 8,
-    "high": 7,
-    "medium": 14
+    "total": 35,
+    "urgent": 9,
+    "high": 9,
+    "medium": 17
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ZIMUBKK80440481",
-      "MEDUWG692272",
-      "OOLU2166784680",
-      "COSU6444363540",
-      "MEDUWK745968",
+      "COSU6444625540",
+      "MEDUYQ353300",
+      "OOLU2166784690",
       "CMDUCHN3116145",
       "OOLU2166784670",
-      "OOLU2166524280",
-      "CMDUTHD1466676",
+      "MEDUWK745968",
+      "OOLU2167100640",
+      "MEDUWG692272",
       "CMDUCHN3095178",
+      "OOLU2166524280",
       "ONEYBKKG38865600",
-      "COSU8040582340",
-      "MEDUYL789706",
+      "ZIMUBKK80440481",
+      "COSU6444363540",
+      "OOLU2166784680",
+      "OOLU2167100650",
       "MEDUWK478768",
       "OOLU2320126090",
-      "OOLU2166784690",
-      "COSU6444625540",
-      "MEDUYQ353300"
+      "MEDUYL789706",
+      "COSU8040582340"
     ],
     "no_tlx_hbl": [
-      "WLC60301625",
-      "WLC60125060",
       "WLC60124381",
-      "WLC50813210",
-      "WLC60124865",
-      "WLC60120505",
-      "WLC60213560",
-      "WLC60216466",
-      "WLC60301627",
-      "WLC60126287",
       "WLC60301626",
       "WLC60205753",
-      "WLC60307413"
+      "WLC60301625",
+      "WLC50813210",
+      "WLC60307413",
+      "WLC60213560",
+      "WLC60301627",
+      "WLC60126287",
+      "WLC60120505",
+      "WLC60125060",
+      "WLC60216466"
     ],
-    "an_no_prealert": [],
+    "an_no_prealert": [
+      "OOLU2167100640",
+      "OOLU2167100650"
+    ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 2,
-    "tlx_confirmed_hbl": 2
+    "tlx_confirmed_mbl": 5,
+    "tlx_confirmed_hbl": 5
   },
   "anomalies": {
     "cancel_it": [],
@@ -861,6 +1024,18 @@
         "from": "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 09:52:27"
+      },
+      {
+        "subject": "Pre-alert  Freehandle : OOLU2167307120  / WLC60308623  /  DF",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 10:51:01"
+      },
+      {
+        "subject": "Pre-alert  Freehandle : OOLU2167175490  / WLC60314959  /  OO",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 10:55:26"
       }
     ]
   },
@@ -869,8 +1044,19 @@
     "relationships": 1,
     "contacts_new": 0,
     "contacts_total": 364,
-    "daily_connections": 0,
+    "daily_connections": 2,
     "new_domains": []
   },
-  "daily_connections": []
+  "daily_connections": [
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    }
+  ]
 }
