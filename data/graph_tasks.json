@@ -236,7 +236,7 @@
     },
     {
       "type": "arrears",
-      "priority": "high",
+      "priority": "urgent",
       "title": "欠费催收",
       "mbl": "",
       "hbl": "",
@@ -253,7 +253,7 @@
     },
     {
       "type": "arrears",
-      "priority": "high",
+      "priority": "urgent",
       "title": "欠费催收",
       "mbl": "",
       "hbl": "",
@@ -270,7 +270,7 @@
     },
     {
       "type": "arrears",
-      "priority": "high",
+      "priority": "urgent",
       "title": "欠费催收",
       "mbl": "",
       "hbl": "",
@@ -354,7 +354,7 @@
   },
   "stats": {
     "total": 21,
-    "urgent": 14,
-    "high": 7
+    "urgent": 17,
+    "high": 4
   }
 }

@@ -743,6 +743,8 @@ with tabs[0]:
                   "prealert_gap":"漏单预警","sop":"SOP跟进",
                   "broker_followup":"报关行跟进","trucker_followup":"卡车跟进","post_clearance":"清关后跟进",
                   "empty_return":"空柜归还","post_booking":"订舱后跟进","supplier_reply":"供应商等回复",
+                  "hold_active":"Hold扣货","inspection_active":"查验中","fee_confirmed":"费用已确认",
+                  "payment_requested":"待付款","awaiting_reply":"等回复",
                   "inspection_broker":"查验报关跟进",
                   "stale_arrival":"到港停滞","awaiting_reply":"等回复"}
     cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
