@@ -1,15 +1,15 @@
 {
-  "scan_time": "2026-03-31T01:16:43.261075+08:00",
-  "total_emails": 28,
-  "business_emails": 25,
+  "scan_time": "2026-03-31T01:47:40.651578+08:00",
+  "total_emails": 35,
+  "business_emails": 29,
   "pdf_count": 9,
   "categories": {
     "charge_confirm": 6,
     "prealert": 6,
-    "other_biz": 10,
+    "other_biz": 12,
     "arrival": 1,
-    "hold": 1,
-    "booking": 1
+    "hold": 2,
+    "booking": 2
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -46,6 +46,17 @@
       ]
     },
     "FCC USA": {
+      "emails": 2,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
+    },
+    "HAILIANG (海亮)": {
       "emails": 1,
       "hbl_count": 0,
       "mbl_count": 0,
@@ -55,18 +66,35 @@
       "days": [
         "03/30"
       ]
+    },
+    "HORIZON SOLAR": {
+      "emails": 1,
+      "hbl_count": 1,
+      "mbl_count": 1,
+      "active_days": 1,
+      "hbls": [
+        "WLC60203463"
+      ],
+      "mbls": [
+        "OOLU2320126090"
+      ],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
     "ONE": 11,
     "MSC": 3,
-    "COSCO": 1
+    "COSCO": 1,
+    "OOCL": 1
   },
   "carrier_fees": {},
-  "hbl_total": 7,
-  "mbl_total": 8,
+  "hbl_total": 8,
+  "mbl_total": 9,
   "all_hbls": [
     "WLC50522982",
+    "WLC60203463",
     "WLC60213409",
     "WLC60217446",
     "WLC60304584",
@@ -82,21 +110,22 @@
     "ONEYBKKG61453900",
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
-    "ONEYBKKG68481300"
+    "ONEYBKKG68481300",
+    "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 19,
-    "2026-03-31": 8
+    "2026-03-30": 25,
+    "2026-03-31": 9
   },
   "inspection_mbls": [],
-  "hold_count": 1,
+  "hold_count": 2,
   "inspection_count": 0,
   "overdue_count": 0,
   "cancel_count": 0,
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      7
+      9
     ],
     [
       "assistant@pltplt.com",
@@ -140,6 +169,26 @@
     ],
     [
       "ADRIAN JUAREZ <adrianj@fccusa.net>",
+      1
+    ],
+    [
+      "FLORA WANG <floraw@fccusa.net>",
+      1
+    ],
+    [
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      1
+    ],
+    [
+      "<horizonsolar001@gmail.com>",
+      1
+    ],
+    [
+      "Rex M <rex@ladingcargo.com>",
+      1
+    ],
+    [
+      "Matthew Stefanelli <mstefanelli@scotlynn.com>",
       1
     ]
   ],
@@ -209,6 +258,28 @@
       "source": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
       "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
       "date": "Mon, 30 Mar 2026 12:31:49"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "hbl": "WLC60203463",
+      "customer": "HORIZON SOLAR",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "gmail.com",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "Hold BL: OOLU2320126090",
+      "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+      "from": "<horizonsolar001@gmail.com>",
+      "date": "Mon, 30 Mar 2026 10:35:57"
     },
     {
       "type": "arrival_notice",
@@ -634,35 +705,45 @@
     }
   ],
   "action_summary": {
-    "total": 23,
-    "urgent": 3,
+    "total": 24,
+    "urgent": 4,
     "high": 7,
     "medium": 13
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG68481300",
-      "COSU9506295790",
-      "ONEYBKKG67192800",
+      "MEDUWG692272",
       "ONEYBKKG61453900",
       "ONEYBKKG61472300",
-      "MEDUYL960612",
+      "COSU9506295790",
+      "ONEYBKKG67192800",
+      "OOLU2320126090",
       "ONEYBKKG48500700",
-      "MEDUWG692272"
+      "MEDUYL960612",
+      "ONEYBKKG68481300"
     ],
     "no_tlx_hbl": [
       "WLC50522982",
-      "WLC60217446",
       "WLC60305212",
       "WLC60305140",
-      "WLC60213409",
+      "WLC60304684",
+      "WLC60203463",
+      "WLC60217446",
       "WLC60304584",
-      "WLC60304684"
+      "WLC60213409"
     ],
     "an_no_prealert": [
       "COSU9506295790"
     ],
-    "hold_bl": [],
+    "hold_bl": [
+      {
+        "mbl": "OOLU2320126090",
+        "type": "regulatory",
+        "needs_docs": false,
+        "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+        "from": "<horizonsolar001@gmail.com>"
+      }
+    ],
     "tlx_confirmed_mbl": 0,
     "tlx_confirmed_hbl": 0
   },
@@ -694,13 +775,13 @@
   },
   "neural_network": {
     "entities": 87,
-    "relationships": 8,
+    "relationships": 10,
     "contacts_new": 0,
     "contacts_total": 368,
     "daily_connections": 3,
     "new_domains": [
-      "elite-solar.com",
-      "containerport.com"
+      "containerport.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [

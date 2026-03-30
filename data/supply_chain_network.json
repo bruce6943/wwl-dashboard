@@ -68,7 +68,7 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 8,
+      "OOCL": 9,
       "MSC": 2
     },
     "HOUNEN SOLAR": {
@@ -134,7 +134,7 @@
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 7,
+        "count": 8,
         "types": []
       }
     },
@@ -191,7 +191,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 18,
+        "count": 20,
         "types": [
           "卡车"
         ]
@@ -199,7 +199,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 18,
+        "count": 20,
         "types": [
           "卡车"
         ]
@@ -219,7 +219,7 @@
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 17,
+        "count": 22,
         "types": [
           "卡车"
         ]
