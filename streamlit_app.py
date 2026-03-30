@@ -879,127 +879,125 @@ with tabs[0]:
 
     st.markdown("---")
 
-    # Three columns: Hold / Inspection / CC
+    # ─── 事件概览(三列摘要) ───
     c1, c2, c3 = st.columns(3)
     with c1:
-        section_header(f"Hold事件: {hold_count}件")
-        if hold_count > 0 or hold_bl:
-            alert_card("red", f"""
-                <b>当前Hold提单: {max(hold_count, len(hold_bl))}件</b><br>
-                <b>行动:</b> Everlyn立即检查Hold类型(Freight/Regulatory/DO Fee),
-                Freight Hold联系origin催付运费; Regulatory Hold准备补充文件; DO Fee Hold联系Maggie确认付款<br>
-                <b>负责人:</b> Everlyn (操作) + Maggie (付款确认)
-            """)
-        else:
-            alert_card("green", "当前无Hold事件 - 状态良好")
-
+        st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if hold_count > 0 else "#00c853"}">{hold_count}</h2><p>Hold事件</p></div>', unsafe_allow_html=True)
     with c2:
-        section_header(f"查验预警: {inspection_count}件")
-        if inspection_count > 0:
-            mbl_list = ", ".join(inspection_mbls[:5])
-            alert_card("orange", f"""
-                <b>被查验MBL:</b> {clean_html(mbl_list)}<br>
-                <b>行动:</b> 1) Effy确认查验类型(X-ray/开箱/重量); 2) 通知客户可能延迟2-5天;
-                3) 准备ISF/PI/PL文件备查; 4) 跟踪放行进度<br>
-                <b>负责人:</b> Effy (跟踪) + Everlyn (文件) + 报关行YES (现场)
-            """)
-        else:
-            alert_card("green", "当前无查验事件 - 状态良好")
-
+        st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if inspection_count > 0 else "#00c853"}">{inspection_count}</h2><p>查验预警</p></div>', unsafe_allow_html=True)
     with c3:
         cc_count = A.get("categories", {}).get("charge_confirm", 0)
-        section_header(f"CC待确认: {cc_count}件")
-        if cc_count > 0:
-            alert_card("yellow", f"""
-                <b>费用确认待处理: {cc_count}件</b><br>
-                <b>行动:</b> 1) Everlyn按船公司分类整理CC; 2) 小额($50以下)直接确认;
-                3) 大额与Maggie/Will确认后回复; 4) 有争议的标记"Dispute"并48h内回复<br>
-                <b>负责人:</b> Everlyn (分类+小额) + Maggie (大额确认) + Will (争议决策)
-            """)
-        else:
-            alert_card("green", "当前无CC待确认")
+        st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if cc_count > 0 else "#00c853"}">{cc_count}</h2><p>CC待确认</p></div>', unsafe_allow_html=True)
+
+    # ─── Hold详情(折叠+确认) ───
+    if hold_count > 0 or hold_bl:
+        with st.expander(f"Hold事件详情 ({max(hold_count, len(hold_bl))}件)"):
+            if hold_bl:
+                for i, h in enumerate(hold_bl[:10]):
+                    m = h.get("mbl","") if isinstance(h, dict) else str(h)
+                    htype = h.get("type","?") if isinstance(h, dict) else "?"
+                    st.markdown(f"""<div style="border-left:4px solid #e94560;padding:8px 12px;margin:4px 0;border-radius:0 8px 8px 0;background:rgba(233,69,96,0.08);">
+                        <b>HOLD ({htype})</b> | MBL: <span style="font-family:monospace;">{m}</span><br>
+                        <span style="color:#a0a0c0;font-size:13px;">建议: 确认Hold类型 → Freight Hold联系origin催付; Customs Hold联系报关行补文件</span>
+                    </div>""", unsafe_allow_html=True)
+                    c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                    with c1:
+                        chk = st.checkbox("完成", key=f"hold_chk_{i}")
+                    with c2:
+                        if chk:
+                            st.button("确认", key=f"hold_cfm_{i}")
+            else:
+                st.markdown(f"Hold事件{hold_count}件，详情见待办任务栏")
+
+    # ─── 查验详情(折叠+确认) ───
+    if inspection_count > 0:
+        with st.expander(f"查验预警详情 ({inspection_count}件)"):
+            for i, mbl in enumerate(inspection_mbls[:10]):
+                st.markdown(f"""<div style="border-left:4px solid #ffa500;padding:8px 12px;margin:4px 0;border-radius:0 8px 8px 0;background:rgba(255,165,0,0.08);">
+                    <b>查验</b> | MBL: <span style="font-family:monospace;">{clean_html(mbl)}</span><br>
+                    <span style="color:#a0a0c0;font-size:13px;">建议: 1) 确认查验类型(X-ray/开箱/全掏) 2) 通知客户延迟2-5天 3) 准备ISF/PI/PL文件 4) 费用由进口商承担</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1:
+                    chk = st.checkbox("完成", key=f"insp_chk_{i}")
+                with c2:
+                    if chk:
+                        st.button("确认", key=f"insp_cfm_{i}")
+
+    # ─── CC费用(折叠) ───
+    if cc_count > 0:
+        with st.expander(f"CC费用确认 ({cc_count}件)"):
+            st.markdown(f"""<div style="color:#c0c0d0;font-size:13px;">
+                建议: 1) 按船公司分类整理CC 2) 小额($50以下)直接确认 3) 大额核实后回复 4) 有争议的标记"Dispute"并48h内回复
+            </div>""", unsafe_allow_html=True)
 
     st.markdown("---")
 
-    # Anomaly section
-    section_header("异常邮件预警")
+    # ─── 异常邮件预警(折叠) ───
+    anomaly_total = len(cancel_it) + len(cod_list) + len(non_standard) + len(stolen) + len(urgent)
+    if anomaly_total > 0:
+        with st.expander(f"异常邮件预警 ({anomaly_total}件)"):
+            _anom_idx = 0
+            for item in cancel_it:
+                subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+                frm = item.get("from", "") if isinstance(item, dict) else ""
+                st.markdown(f"""<div style="border-left:4px solid #e94560;padding:8px 12px;margin:4px 0;background:rgba(233,69,96,0.08);border-radius:0 8px 8px 0;">
+                    <b>Cancel IT</b><br>主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                    <span style="color:#a0a0c0;font-size:13px;">建议: 确认IT是否已提交 → 如已提交联系海关取消 → 通知origin/客户</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1: st.checkbox("完成", key=f"anom_chk_{_anom_idx}")
+                _anom_idx += 1
 
-    # (教练总结已移到效率评分下方)
+            for item in cod_list:
+                subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+                frm = item.get("from", "") if isinstance(item, dict) else ""
+                st.markdown(f"""<div style="border-left:4px solid #ffa500;padding:8px 12px;margin:4px 0;background:rgba(255,165,0,0.08);border-radius:0 8px 8px 0;">
+                    <b>COD改港</b><br>主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                    <span style="color:#a0a0c0;font-size:13px;">建议: 确认新目的港 → 联系船公司询费用+可行性 → 通知客户额外费用</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1: st.checkbox("完成", key=f"anom_chk_{_anom_idx}")
+                _anom_idx += 1
 
+            for item in non_standard:
+                subj = item.get("subject", "") if isinstance(item, dict) else str(item)
+                frm = item.get("from", "") if isinstance(item, dict) else ""
+                typ = item.get("type", "") if isinstance(item, dict) else ""
+                st.markdown(f"""<div style="border-left:4px solid #2196f3;padding:8px 12px;margin:4px 0;background:rgba(33,150,243,0.08);border-radius:0 8px 8px 0;">
+                    <b>非标操作</b> [{typ}]<br>主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                    <span style="color:#a0a0c0;font-size:13px;">建议: 评估可行性 → 确认额外费用 → 获客户书面确认后执行</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1: st.checkbox("完成", key=f"anom_chk_{_anom_idx}")
+                _anom_idx += 1
 
-    # Cancel IT
-    if cancel_it:
-        for item in cancel_it:
-            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
-            frm = item.get("from", "") if isinstance(item, dict) else ""
-            alert_card("red", f"""
-                <b>Cancel IT 请求</b><br>
-                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
-                <b>立即行动:</b> 确认是否已提交IT, 如已提交联系海关取消, 通知origin/客户, 更新系统状态<br>
-                <b>负责人:</b> Everlyn确认 + Effy协调海关
-            """)
+            for item in stolen:
+                subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+                frm = item.get("from", "") if isinstance(item, dict) else ""
+                st.markdown(f"""<div style="border-left:4px solid #e94560;padding:8px 12px;margin:4px 0;background:rgba(233,69,96,0.15);border-radius:0 8px 8px 0;">
+                    <b>失窃/丢失</b><br>主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                    <span style="color:#e94560;font-size:13px;">紧急: 1) 立即报警 2) 通知保险公司 3) 通知客户 4) 收集文件备索赔</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1: st.checkbox("完成", key=f"anom_chk_{_anom_idx}")
+                _anom_idx += 1
+
+            for item in urgent:
+                subj = item.get("subject", "")
+                frm = item.get("from", "")
+                urg_level = item.get("urgency", 0)
+                urg_label = "极高" if urg_level >= 4 else "高"
+                st.markdown(f"""<div style="border-left:4px solid #e94560;padding:8px 12px;margin:4px 0;background:rgba(233,69,96,0.08);border-radius:0 8px 8px 0;">
+                    <b>紧急邮件</b> [紧急度:{urg_label}]<br>主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                    <span style="color:#a0a0c0;font-size:13px;">建议: 立即阅读回复 → 评估影响范围 → 必要时升级处理</span>
+                </div>""", unsafe_allow_html=True)
+                c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+                with c1: st.checkbox("完成", key=f"anom_chk_{_anom_idx}")
+                _anom_idx += 1
     else:
-        alert_card("green", "无Cancel IT请求")
+        st.markdown("<p style='color:#00c853;'>当前无异常事件</p>", unsafe_allow_html=True)
 
-    # COD
-    if cod_list:
-        for item in cod_list:
-            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
-            frm = item.get("from", "") if isinstance(item, dict) else ""
-            alert_card("orange", f"""
-                <b>COD 改港请求</b><br>
-                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
-                <b>立即行动:</b> 确认新目的港, 联系船公司询问COD费用+可行性, 通知客户额外费用<br>
-                <b>负责人:</b> Everlyn (船公司沟通) + Maggie (费用确认) + Will (客户通知)
-            """)
-    else:
-        alert_card("green", "无COD改港请求")
-
-    # Non-standard
-    if non_standard:
-        for item in non_standard:
-            subj = item.get("subject", "") if isinstance(item, dict) else str(item)
-            frm = item.get("from", "") if isinstance(item, dict) else ""
-            typ = item.get("type", "") if isinstance(item, dict) else ""
-            alert_card("yellow", f"""
-                <b>非标操作请求</b> [{typ}]<br>
-                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
-                <b>行动:</b> 评估可行性, 确认额外费用, 获得客户书面确认后执行<br>
-                <b>负责人:</b> Effy (评估) + Will (审批)
-            """)
-    else:
-        alert_card("green", "无非标操作请求")
-
-    # Stolen/lost
-    if stolen:
-        for item in stolen:
-            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
-            frm = item.get("from", "") if isinstance(item, dict) else ""
-            alert_card("red", f"""
-                <b>集装箱失窃/丢失</b><br>
-                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
-                <b>紧急行动:</b> 1) 立即报警; 2) 通知保险公司; 3) 通知客户; 4) 收集所有文件备索赔<br>
-                <b>负责人:</b> Bruce (决策) + Effy (保险) + Will (客户沟通)
-            """)
-    else:
-        alert_card("green", "无失窃/丢失报告")
-
-    # Urgent
-    if urgent:
-        for item in urgent:
-            subj = item.get("subject", "")
-            frm = item.get("from", "")
-            urg_level = item.get("urgency", 0)
-            dt = item.get("date", "")
-            urg_label = "极高" if urg_level >= 4 else ("高" if urg_level >= 3 else "中")
-            alert_card("red", f"""
-                <b>紧急邮件</b> [紧急度: {urg_label} ({urg_level}/5)]<br>
-                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>日期: {dt}<br>
-                <b>行动:</b> 立即阅读并回复, 评估影响范围, 必要时升级至Will/Bruce<br>
-                <b>负责人:</b> Everlyn (首响) + Effy (跟进)
-            """)
-    else:
-        alert_card("green", "无紧急邮件")
     st.markdown("---")
 
 # ══════════════════════════════════════════════════════════════════
