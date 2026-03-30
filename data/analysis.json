@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T13:24:28.205938+08:00",
-  "total_emails": 73,
-  "business_emails": 64,
-  "pdf_count": 26,
+  "scan_time": "2026-03-30T13:55:43.162333+08:00",
+  "total_emails": 80,
+  "business_emails": 71,
+  "pdf_count": 33,
   "categories": {
-    "other_biz": 30,
+    "other_biz": 36,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 1,
-    "prealert": 9,
+    "prealert": 10,
     "arrival": 2
   },
   "customers": {
@@ -86,19 +86,20 @@
     }
   },
   "carriers": {
-    "MSC": 7,
-    "COSCO": 9,
-    "OOCL": 12,
+    "MSC": 8,
+    "COSCO": 13,
+    "OOCL": 14,
     "ONE": 7,
     "CMA-CGM": 11,
     "ZIM": 3
   },
   "carrier_fees": {},
-  "hbl_total": 21,
-  "mbl_total": 26,
+  "hbl_total": 28,
+  "mbl_total": 33,
   "all_hbls": [
     "WLC50813210",
     "WLC60120505",
+    "WLC60123818",
     "WLC60124381",
     "WLC60124865",
     "WLC60125060",
@@ -114,8 +115,14 @@
     "WLC60301625",
     "WLC60301626",
     "WLC60301627",
+    "WLC60306398",
+    "WLC60307317",
+    "WLC60307318",
     "WLC60307413",
     "WLC60308623",
+    "WLC60312641",
+    "WLC60312643",
+    "WLC60312647",
     "WLC60314959",
     "WLC60315533"
   ],
@@ -125,7 +132,12 @@
     "CMDUTHD1466676",
     "COSU6444363540",
     "COSU6444625540",
+    "COSU6447544630",
+    "COSU6447544660",
+    "COSU6447551240",
     "COSU8040582340",
+    "COSU9506320440",
+    "MEDUKE699088",
     "MEDUKG193320",
     "MEDUWG692272",
     "MEDUWK478768",
@@ -145,11 +157,13 @@
     "OOLU2167175510",
     "OOLU2167307120",
     "OOLU2320126090",
+    "OOLU2322301770",
+    "OOLU2322439640",
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 65
+    "2026-03-30": 72
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -168,7 +182,7 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      7
+      9
     ],
     [
       "\"rita tang\" <rita.tang@wwl.cn>",
@@ -184,6 +198,10 @@
     ],
     [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      3
+    ],
+    [
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
       3
     ],
     [
@@ -219,6 +237,10 @@
       2
     ],
     [
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
+      2
+    ],
+    [
       "LinkedIn <notifications-noreply@linkedin.com>",
       1
     ],
@@ -232,14 +254,6 @@
     ],
     [
       "Ergin Ismayil <eismayil@balenaprojects.com>",
-      1
-    ],
-    [
-      "us038-importpickupnotification@msc.com",
-      1
-    ],
-    [
-      "\"Sienna\" <sienna.ji@wwl.cn>",
       1
     ]
   ],
@@ -1020,52 +1034,58 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "OOLU2320126090",
-      "COSU6444625540",
-      "CMDUCHN3095178",
-      "ZIMUBKK80440481",
-      "OOLU2167100650",
-      "MEDUYL789706",
-      "ONEYBTMG00382500",
-      "CMDUCHN3116145",
       "COSU6444363540",
-      "MEDUWG692272",
-      "OOLU2166784690",
-      "MEDUWK745968",
-      "OOLU2166784670",
+      "COSU6447551240",
       "MEDUWK478768",
-      "OOLU2166784680",
-      "OOLU2167100640",
-      "MEDUKG193320",
       "MEDUYQ353300",
-      "OOLU2166524280",
       "COSU8040582340",
-      "ONEYBKKG38865600"
+      "ONEYBKKG38865600",
+      "ONEYBTMG00382500",
+      "ZIMUBKK80440481",
+      "MEDUKG193320",
+      "COSU6447544660",
+      "CMDUCHN3095178",
+      "OOLU2167100650",
+      "MEDUWG692272",
+      "OOLU2166784670",
+      "OOLU2167100640",
+      "CMDUCHN3116145",
+      "MEDUWK745968",
+      "OOLU2166524280",
+      "MEDUYL789706",
+      "OOLU2320126090",
+      "OOLU2166784690",
+      "COSU6447544630",
+      "OOLU2166784680",
+      "COSU6444625540"
     ],
     "no_tlx_hbl": [
-      "WLC60216466",
-      "WLC60200080",
-      "WLC60301626",
-      "WLC60125060",
-      "WLC60213560",
-      "WLC60205753",
-      "WLC60301627",
+      "WLC60120505",
+      "WLC60312647",
       "WLC50813210",
+      "WLC60312643",
+      "WLC60301626",
+      "WLC60208507",
+      "WLC60205753",
       "WLC60301625",
       "WLC60307413",
-      "WLC60124381",
-      "WLC60126287",
       "WLC60215570",
-      "WLC60120505",
-      "WLC60208507"
+      "WLC60124381",
+      "WLC60216466",
+      "WLC60312641",
+      "WLC60200080",
+      "WLC60213560",
+      "WLC60301627",
+      "WLC60125060",
+      "WLC60126287"
     ],
     "an_no_prealert": [
-      "OOLU2167100640",
-      "OOLU2167100650"
+      "OOLU2167100650",
+      "OOLU2167100640"
     ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 6,
-    "tlx_confirmed_hbl": 6
+    "tlx_confirmed_mbl": 10,
+    "tlx_confirmed_hbl": 10
   },
   "anomalies": {
     "cancel_it": [],
