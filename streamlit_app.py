@@ -254,6 +254,132 @@ def load_all_data():
     return data
 
 
+# ─── Task Board Persistence ───
+TASK_FILE = "data/task_board.json"
+
+def load_tasks():
+    try:
+        with open(TASK_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"completed": {}, "tasks": []}
+
+def save_tasks(task_data):
+    import os
+    os.makedirs("data", exist_ok=True)
+    with open(TASK_FILE, "w", encoding="utf-8") as f:
+        json.dump(task_data, f, ensure_ascii=False, indent=2)
+
+def build_task_board(action_items, arrears_data, bl_status, overdue_sop):
+    """从多个数据源构建完整任务清单 — 不只是邮件行动项，还包括催款、换单、供应商跟进等"""
+    tasks = []
+    seen_keys = set()
+
+    # 1. 从引擎action_items
+    for a in action_items:
+        key = f"{a.get('type','')}__{a.get('mbl','')}__{a.get('source','')[:30]}"
+        if key not in seen_keys:
+            seen_keys.add(key)
+            tasks.append({
+                "id": key,
+                "category": a.get("type", "other"),
+                "priority": a.get("priority", "medium"),
+                "title": f"{a.get('type','').upper()} | {a.get('customer','') or a.get('mbl','')}",
+                "action": a.get("action", ""),
+                "assignee": a.get("assignee", ""),
+                "mbl": a.get("mbl", ""),
+                "customer": a.get("customer", ""),
+                "amount": a.get("amount", ""),
+                "source": a.get("source", ""),
+                "date": a.get("date", ""),
+            })
+
+    # 2. 欠费催收任务(Top 20)
+    for item in arrears_data.get("top20", [])[:20]:
+        name = item.get("name", "")
+        total = item.get("total", 0)
+        if total > 1000:
+            key = f"arrears__{name}"
+            if key not in seen_keys:
+                seen_keys.add(key)
+                priority = "urgent" if total > 20000 else "high" if total > 5000 else "medium"
+                tasks.append({
+                    "id": key,
+                    "category": "arrears",
+                    "priority": priority,
+                    "title": f"催收 | {name[:25]}",
+                    "action": f"欠费${total:,.0f} — 确认T+X阶段并推进催收",
+                    "assignee": "Maggie",
+                    "mbl": "",
+                    "customer": name[:25],
+                    "amount": f"${total:,.0f}",
+                    "source": "arrears_analysis",
+                    "date": "",
+                })
+
+    # 3. BL状态跟进(未电放、AN无预报、Hold)
+    for mbl in bl_status.get("no_tlx_mbl", [])[:10]:
+        m = mbl if isinstance(mbl, str) else str(mbl)
+        key = f"no_tlx__{m}"
+        if key not in seen_keys:
+            seen_keys.add(key)
+            tasks.append({
+                "id": key, "category": "bl_release", "priority": "high",
+                "title": f"换单 | {m}",
+                "action": "MBL未电放 — 联系origin确认TLX状态并催促放单",
+                "assignee": "Everlyn", "mbl": m, "customer": "", "amount": "",
+                "source": "bl_status", "date": "",
+            })
+
+    for mbl in bl_status.get("an_no_prealert", [])[:10]:
+        m = mbl if isinstance(mbl, str) else str(mbl)
+        key = f"an_gap__{m}"
+        if key not in seen_keys:
+            seen_keys.add(key)
+            tasks.append({
+                "id": key, "category": "prealert_gap", "priority": "urgent",
+                "title": f"漏单预警 | {m}",
+                "action": "AN已收但无PreAlert — 可能漏单! 立即核查是否有对应HBL",
+                "assignee": "Rita", "mbl": m, "customer": "", "amount": "",
+                "source": "bl_status", "date": "",
+            })
+
+    for h in bl_status.get("hold_bl", [])[:10]:
+        m = h.get("mbl", "") if isinstance(h, dict) else str(h)
+        htype = h.get("type", "?") if isinstance(h, dict) else "?"
+        key = f"hold__{m}"
+        if key not in seen_keys:
+            seen_keys.add(key)
+            tasks.append({
+                "id": key, "category": "hold", "priority": "urgent",
+                "title": f"HOLD | {m} ({htype})",
+                "action": f"{htype.upper()} HOLD — {'联系origin催付运费' if htype == 'freight' else '准备补充文件给CBP' if htype == 'customs' else '确认Hold类型并处理'}",
+                "assignee": "Everlyn", "mbl": m, "customer": "", "amount": "",
+                "source": "bl_status", "date": "",
+            })
+
+    # 4. SOP跟进
+    if isinstance(overdue_sop, list):
+        for item in overdue_sop[:10]:
+            m = item.get("mbl", "") if isinstance(item, dict) else ""
+            key = f"sop__{m}"
+            if key not in seen_keys and m:
+                seen_keys.add(key)
+                tasks.append({
+                    "id": key, "category": "sop", "priority": "high",
+                    "title": f"SOP跟进 | {m}",
+                    "action": f"Overdue SOP — {item.get('maggie_action', '按T+X时间线推进')}",
+                    "assignee": "Maggie", "mbl": m, "customer": "",
+                    "amount": f"${item.get('amount', 0):,.0f}" if isinstance(item.get('amount'), (int, float)) else "",
+                    "source": "overdue_sop", "date": "",
+                })
+
+    # Sort by priority
+    priority_order = {"urgent": 0, "high": 1, "medium": 2, "low": 3}
+    tasks.sort(key=lambda x: priority_order.get(x.get("priority", "low"), 3))
+    return tasks
+
+
 DATA = load_all_data()
 A = DATA.get("analysis", {})
 A30 = DATA.get("analysis_30d", {})
@@ -434,57 +560,119 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 
-    # ═══ v3.0 行动项看板 ═══
-    if action_items:
-        section_header(f"今日行动项: {len(action_items)}条 (紧急{len(urgent_actions)} / 重要{len(high_actions)} / 常规{len(medium_actions)})")
+    # ═══ v3.1 任务工作台 ═══
+    all_tasks = build_task_board(action_items, ARR, bl, SOP)
+    task_data = load_tasks()
+    completed_ids = task_data.get("completed", {})
 
-        # 紧急行动项(红色)
-        if urgent_actions:
-            for a in urgent_actions[:10]:
-                assignee = a.get('assignee', '?')
-                action = a.get('action', '')
-                detail = a.get('detail', '')
-                mbl = a.get('mbl', '')
-                cust = a.get('customer', '')
-                alert_card("red", f"""
-                    <span style="background:#e94560;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">紧急</span>
-                    <b> {a.get('type','').upper()}</b> {f'| {cust}' if cust else ''} {f'| {mbl}' if mbl else ''}<br>
-                    <b>行动:</b> {action}<br>
-                    <b>负责人:</b> {assignee} &nbsp;|&nbsp; 来源: {a.get('source','')[:50]}
-                """)
+    # 分离未完成和已完成
+    pending = [t for t in all_tasks if t["id"] not in completed_ids]
+    done_today = [t for t in all_tasks if t["id"] in completed_ids]
+    pending_urgent = [t for t in pending if t["priority"] == "urgent"]
+    pending_high = [t for t in pending if t["priority"] == "high"]
+    pending_medium = [t for t in pending if t["priority"] == "medium"]
 
-        # 重要行动项(橙色)
-        if high_actions:
-            with st.expander(f"重要行动项 ({len(high_actions)}条)", expanded=len(urgent_actions) == 0):
-                for a in high_actions[:15]:
-                    assignee = a.get('assignee', '?')
-                    action = a.get('action', '')
-                    mbl = a.get('mbl', '')
-                    cust = a.get('customer', '')
-                    alert_card("orange", f"""
-                        <span style="background:#ffa500;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">重要</span>
-                        <b> {a.get('type','').upper()}</b> {f'| {cust}' if cust else ''} {f'| {mbl}' if mbl else ''}<br>
-                        <b>行动:</b> {action}<br>
-                        <b>负责人:</b> {assignee}
-                    """)
+    section_header(f"任务工作台: {len(pending)}条待办 / {len(done_today)}条已完成")
 
-        # 常规行动项(表格)
-        if medium_actions:
-            with st.expander(f"常规行动项 ({len(medium_actions)}条)"):
-                m_rows = []
-                for a in medium_actions[:30]:
-                    m_rows.append({
-                        "类型": a.get('type', ''),
-                        "MBL": a.get('mbl', '')[:20],
-                        "客户": a.get('customer', ''),
-                        "行动": a.get('action', '')[:40],
-                        "负责人": a.get('assignee', ''),
-                        "金额": a.get('amount', ''),
-                    })
-                if m_rows:
-                    st.dataframe(pd.DataFrame(m_rows), use_container_width=True, hide_index=True, key="tbl_actions")
+    # 分类统计
+    cat_counts = {}
+    for t in pending:
+        c = t.get("category", "other")
+        cat_counts[c] = cat_counts.get(c, 0) + 1
+    cat_labels = {"hold":"Hold扣货","inspection":"查验","cc_confirm":"CC费用","arrival_notice":"到港通知",
+                  "dd_alert":"D&D费用","overdue":"Overdue催收","arrears":"欠费催收","bl_release":"换单电放",
+                  "prealert_gap":"漏单预警","sop":"SOP跟进"}
+    cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
+    st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
 
-        st.markdown("---")
+    # ─── 紧急任务(必须处理) ───
+    if pending_urgent:
+        st.markdown(f"<div style='color:#e94560;font-weight:700;font-size:15px;margin:12px 0 6px;'>紧急 ({len(pending_urgent)})</div>", unsafe_allow_html=True)
+        for t in pending_urgent:
+            col1, col2 = st.columns([0.05, 0.95])
+            with col1:
+                if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
+                    completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                    save_tasks({"completed": completed_ids, "tasks": all_tasks})
+                    st.rerun()
+            with col2:
+                pri_bg = "#e94560"
+                cat_label = cat_labels.get(t["category"], t["category"])
+                st.markdown(f"""<div style="background:rgba(233,69,96,0.12);border-left:4px solid {pri_bg};padding:8px 12px;border-radius:0 8px 8px 0;margin:2px 0;">
+                    <span style="background:{pri_bg};color:#fff;padding:1px 8px;border-radius:4px;font-size:11px;">{cat_label}</span>
+                    <b style="color:#fff;"> {t['title']}</b>
+                    {f'<span style="color:#ffa500;"> {t["amount"]}</span>' if t.get('amount') else ''}
+                    <br><span style="color:#a0a0c0;font-size:13px;">{t["action"]}</span>
+                    <br><span style="color:#666;font-size:11px;">负责: {t["assignee"]} | {t.get("source","")[:40]}</span>
+                </div>""", unsafe_allow_html=True)
+
+    # ─── 重要任务 ───
+    if pending_high:
+        with st.expander(f"重要 ({len(pending_high)})", expanded=len(pending_urgent) == 0):
+            for t in pending_high:
+                col1, col2 = st.columns([0.05, 0.95])
+                with col1:
+                    if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
+                        completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                        save_tasks({"completed": completed_ids, "tasks": all_tasks})
+                        st.rerun()
+                with col2:
+                    cat_label = cat_labels.get(t["category"], t["category"])
+                    st.markdown(f"""<div style="background:rgba(255,165,0,0.08);border-left:4px solid #ffa500;padding:8px 12px;border-radius:0 8px 8px 0;margin:2px 0;">
+                        <span style="background:#ffa500;color:#fff;padding:1px 8px;border-radius:4px;font-size:11px;">{cat_label}</span>
+                        <b style="color:#ddd;"> {t['title']}</b>
+                        {f'<span style="color:#ffa500;"> {t["amount"]}</span>' if t.get('amount') else ''}
+                        <br><span style="color:#a0a0c0;font-size:13px;">{t["action"]}</span>
+                        <br><span style="color:#666;font-size:11px;">负责: {t["assignee"]}</span>
+                    </div>""", unsafe_allow_html=True)
+
+    # ─── 常规任务 ───
+    if pending_medium:
+        with st.expander(f"常规 ({len(pending_medium)})"):
+            for t in pending_medium:
+                col1, col2 = st.columns([0.05, 0.95])
+                with col1:
+                    if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
+                        completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
+                        save_tasks({"completed": completed_ids, "tasks": all_tasks})
+                        st.rerun()
+                with col2:
+                    cat_label = cat_labels.get(t["category"], t["category"])
+                    st.markdown(f"""<div style="border-left:3px solid #2196f3;padding:6px 12px;margin:2px 0;">
+                        <span style="color:#2196f3;font-size:12px;">[{cat_label}]</span>
+                        <b style="color:#ccc;"> {t['title']}</b>
+                        {f' {t["amount"]}' if t.get('amount') else ''}
+                        <span style="color:#888;font-size:12px;"> — {t["action"][:50]} | {t["assignee"]}</span>
+                    </div>""", unsafe_allow_html=True)
+
+    # ─── 今日已完成 ───
+    if done_today:
+        with st.expander(f"已完成 ({len(done_today)})"):
+            for t in done_today:
+                info = completed_ids.get(t["id"], {})
+                done_time = info.get("time", "")[:16] if isinstance(info, dict) else ""
+                st.markdown(f"""<div style="border-left:3px solid #00c853;padding:4px 12px;margin:2px 0;opacity:0.6;">
+                    <span style="color:#00c853;">✓</span> <s style="color:#888;">{t['title']}</s>
+                    <span style="color:#555;font-size:11px;"> 完成于 {done_time}</span>
+                </div>""", unsafe_allow_html=True)
+
+    # 清除过期完成记录(超过24h的)
+    now_ts = datetime.now()
+    stale_keys = []
+    for tid, info in completed_ids.items():
+        if isinstance(info, dict) and info.get("time"):
+            try:
+                done_dt = datetime.fromisoformat(info["time"])
+                if (now_ts - done_dt).total_seconds() > 86400:
+                    stale_keys.append(tid)
+            except:
+                pass
+    if stale_keys:
+        for k in stale_keys:
+            del completed_ids[k]
+        save_tasks({"completed": completed_ids, "tasks": all_tasks})
+
+    st.markdown("---")
 
     # Three columns: Hold / Inspection / CC
     c1, c2, c3 = st.columns(3)
