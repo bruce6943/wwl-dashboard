@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T03:53:56.836195+08:00",
-  "total_emails": 46,
-  "business_emails": 37,
+  "scan_time": "2026-03-31T04:27:51.594117+08:00",
+  "total_emails": 55,
+  "business_emails": 38,
   "pdf_count": 11,
   "categories": {
     "charge_confirm": 6,
     "prealert": 6,
-    "other_biz": 18,
+    "other_biz": 19,
     "arrival": 3,
     "hold": 2,
     "booking": 2
@@ -87,7 +87,8 @@
     "ONE": 13,
     "MSC": 3,
     "COSCO": 1,
-    "OOCL": 2
+    "OOCL": 2,
+    "YML": 1
   },
   "carrier_fees": {},
   "hbl_total": 8,
@@ -114,7 +115,7 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 34,
+    "2026-03-30": 43,
     "2026-03-31": 11
   },
   "inspection_mbls": [],
@@ -125,7 +126,7 @@
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      9
+      10
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -140,11 +141,27 @@
       3
     ],
     [
+      "JEREMY WONG <jeremyw@fccusa.net>",
+      2
+    ],
+    [
+      "FLORA WANG <floraw@fccusa.net>",
+      2
+    ],
+    [
       "Matthew Stefanelli <mstefanelli@scotlynn.com>",
       2
     ],
     [
       "\"shipment.info@one-line.com\" <shipment.info@one-line.com>",
+      2
+    ],
+    [
+      "Direct CHB-Monica Marquez <Monica.Marquez@directchb.net>",
+      2
+    ],
+    [
+      "<julian.tseng@dynastydfw.com>",
       2
     ],
     [
@@ -168,10 +185,6 @@
       1
     ],
     [
-      "JEREMY WONG <jeremyw@fccusa.net>",
-      1
-    ],
-    [
       "Tammy Heard <tammy.heard@containerport.com>",
       1
     ],
@@ -184,23 +197,11 @@
       1
     ],
     [
-      "FLORA WANG <floraw@fccusa.net>",
-      1
-    ],
-    [
       "<horizonsolar001@gmail.com>",
       1
     ],
     [
       "Rex M <rex@ladingcargo.com>",
-      1
-    ],
-    [
-      "Alan Lo <Alan.Lo@idcintl.com>",
-      1
-    ],
-    [
-      "\"Bobc\" <bobc@worldwide-logistics.cn>",
       1
     ]
   ],
@@ -772,25 +773,25 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU9506295790",
       "ONEYBKKG61453900",
-      "ONEYBKKG67192800",
-      "OOLU2320126090",
-      "ONEYBKKG68481300",
-      "ONEYBKKG61472300",
       "MEDUWG692272",
+      "ONEYBKKG61472300",
+      "OOLU2320126090",
+      "ONEYBKKG48500700",
       "MEDUYL960612",
-      "ONEYBKKG48500700"
+      "ONEYBKKG68481300",
+      "ONEYBKKG67192800",
+      "COSU9506295790"
     ],
     "no_tlx_hbl": [
-      "WLC60305212",
-      "WLC60217446",
-      "WLC60213409",
-      "WLC60203463",
-      "WLC60304584",
-      "WLC60305140",
       "WLC60304684",
-      "WLC50522982"
+      "WLC60305212",
+      "WLC60203463",
+      "WLC60305140",
+      "WLC60304584",
+      "WLC60213409",
+      "WLC50522982",
+      "WLC60217446"
     ],
     "an_no_prealert": [
       "COSU9506295790"
