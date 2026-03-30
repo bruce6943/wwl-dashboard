@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-03-30T09:11:09.928805+08:00",
-  "total_emails": 25,
-  "business_emails": 20,
-  "pdf_count": 1,
+  "scan_time": "2026-03-30T09:18:08.084180+08:00",
+  "total_emails": 28,
+  "business_emails": 22,
+  "pdf_count": 6,
   "categories": {
-    "other_biz": 4,
+    "other_biz": 6,
     "inspection": 4,
     "charge_confirm": 11,
     "booking": 1
@@ -36,20 +36,14 @@
   "carriers": {
     "MSC": 4,
     "COSCO": 1,
-    "OOCL": 5,
+    "OOCL": 6,
     "ONE": 1,
     "CMA-CGM": 3,
     "ZIM": 1
   },
-  "carrier_fees": {
-    "MSC": {
-      "count": 1,
-      "total": 20.0,
-      "avg": 20.0
-    }
-  },
-  "hbl_total": 11,
-  "mbl_total": 15,
+  "carrier_fees": {},
+  "hbl_total": 12,
+  "mbl_total": 16,
   "all_hbls": [
     "WLC60120505",
     "WLC60124381",
@@ -58,6 +52,7 @@
     "WLC60205753",
     "WLC60213560",
     "WLC60216466",
+    "WLC60217493",
     "WLC60301625",
     "WLC60301626",
     "WLC60301627",
@@ -77,12 +72,13 @@
     "OOLU2166784670",
     "OOLU2166784680",
     "OOLU2166784690",
+    "OOLU2167032400",
     "OOLU2320126090",
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 19
+    "2026-03-30": 22
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -125,6 +121,18 @@
     ],
     [
       "\"Sienna\" <sienna.ji@wwl.cn>",
+      1
+    ],
+    [
+      "\"Wang Jiong\" <wangjiong@wwl.cn>",
+      1
+    ],
+    [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      1
+    ],
+    [
+      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
       1
     ]
   ],
@@ -549,39 +557,39 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "OOLU2166784670",
-      "CMDUCHN3095178",
-      "CMDUCHN3116145",
-      "MEDUWK478768",
-      "ONEYBKKG38865600",
-      "OOLU2166524280",
-      "OOLU2320126090",
-      "COSU6444625540",
-      "OOLU2166784680",
-      "OOLU2166784690",
       "CMDUTHD1466676",
-      "ZIMUBKK80440481",
+      "COSU6444625540",
+      "CMDUCHN3116145",
+      "OOLU2166784680",
+      "CMDUCHN3095178",
+      "OOLU2166784670",
       "MEDUYL789706",
+      "ONEYBKKG38865600",
       "MEDUWG692272",
-      "MEDUWK745968"
+      "ZIMUBKK80440481",
+      "OOLU2166784690",
+      "OOLU2320126090",
+      "MEDUWK745968",
+      "MEDUWK478768",
+      "OOLU2166524280"
     ],
     "no_tlx_hbl": [
-      "WLC60120505",
-      "WLC60213560",
-      "WLC60301626",
       "WLC60124865",
-      "WLC60124381",
-      "WLC60125060",
+      "WLC60301625",
+      "WLC60216466",
       "WLC60205753",
       "WLC60301627",
+      "WLC60120505",
+      "WLC60124381",
+      "WLC60213560",
       "WLC60307413",
-      "WLC60301625",
-      "WLC60216466"
+      "WLC60125060",
+      "WLC60301626"
     ],
     "an_no_prealert": [],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 0,
-    "tlx_confirmed_hbl": 0
+    "tlx_confirmed_mbl": 1,
+    "tlx_confirmed_hbl": 1
   },
   "anomalies": {
     "cancel_it": [],
