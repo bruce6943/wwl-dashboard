@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-03-31T04:27:51.594117+08:00",
-  "total_emails": 55,
-  "business_emails": 38,
+  "scan_time": "2026-03-31T04:36:41.402509+08:00",
+  "total_emails": 57,
+  "business_emails": 40,
   "pdf_count": 11,
   "categories": {
     "charge_confirm": 6,
     "prealert": 6,
-    "other_biz": 19,
+    "other_biz": 20,
     "arrival": 3,
-    "hold": 2,
+    "hold": 3,
     "booking": 2
   },
   "customers": {
@@ -68,7 +68,7 @@
       ]
     },
     "HORIZON SOLAR": {
-      "emails": 1,
+      "emails": 3,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -87,12 +87,28 @@
     "ONE": 13,
     "MSC": 3,
     "COSCO": 1,
-    "OOCL": 2,
+    "OOCL": 3,
     "YML": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "ONE": {
+      "count": 7,
+      "total": 6.0,
+      "avg": 1.2
+    },
+    "MSC": {
+      "count": 2,
+      "total": 20.0,
+      "avg": 20.0
+    },
+    "COSCO": {
+      "count": 1,
+      "total": 0,
+      "avg": 0
+    }
+  },
   "hbl_total": 8,
-  "mbl_total": 9,
+  "mbl_total": 11,
   "all_hbls": [
     "WLC50522982",
     "WLC60203463",
@@ -112,14 +128,16 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 43,
+    "2026-03-30": 45,
     "2026-03-31": 11
   },
   "inspection_mbls": [],
-  "hold_count": 2,
+  "hold_count": 3,
   "inspection_count": 0,
   "overdue_count": 0,
   "cancel_count": 0,
@@ -138,6 +156,10 @@
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      3
+    ],
+    [
+      "<horizonsolar001@gmail.com>",
       3
     ],
     [
@@ -194,10 +216,6 @@
     ],
     [
       "ADRIAN JUAREZ <adrianj@fccusa.net>",
-      1
-    ],
-    [
-      "<horizonsolar001@gmail.com>",
       1
     ],
     [
@@ -293,6 +311,28 @@
       "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
       "from": "<horizonsolar001@gmail.com>",
       "date": "Mon, 30 Mar 2026 10:35:57"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "hbl": "WLC60203463",
+      "customer": "HORIZON SOLAR",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "gmail.com",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "Hold BL: OOLU2320126090",
+      "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+      "from": "<horizonsolar001@gmail.com>",
+      "date": "Mon, 30 Mar 2026 13:32:07"
     },
     {
       "type": "arrival_notice",
@@ -766,37 +806,46 @@
     }
   ],
   "action_summary": {
-    "total": 26,
-    "urgent": 4,
+    "total": 27,
+    "urgent": 5,
     "high": 9,
     "medium": 13
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG61453900",
-      "MEDUWG692272",
-      "ONEYBKKG61472300",
-      "OOLU2320126090",
-      "ONEYBKKG48500700",
       "MEDUYL960612",
+      "ONEYBKKG61453900",
+      "ONEYBTMG00521700",
       "ONEYBKKG68481300",
+      "OOLU2320126090",
+      "COSU9506295790",
       "ONEYBKKG67192800",
-      "COSU9506295790"
+      "ONEYBKKG48500700",
+      "ONEYBTMG00383600",
+      "ONEYBKKG61472300",
+      "MEDUWG692272"
     ],
     "no_tlx_hbl": [
       "WLC60304684",
+      "WLC50522982",
+      "WLC60217446",
       "WLC60305212",
+      "WLC60304584",
       "WLC60203463",
       "WLC60305140",
-      "WLC60304584",
-      "WLC60213409",
-      "WLC50522982",
-      "WLC60217446"
+      "WLC60213409"
     ],
     "an_no_prealert": [
       "COSU9506295790"
     ],
     "hold_bl": [
+      {
+        "mbl": "OOLU2320126090",
+        "type": "regulatory",
+        "needs_docs": false,
+        "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+        "from": "<horizonsolar001@gmail.com>"
+      },
       {
         "mbl": "OOLU2320126090",
         "type": "regulatory",
@@ -836,13 +885,13 @@
   },
   "neural_network": {
     "entities": 87,
-    "relationships": 11,
+    "relationships": 12,
     "contacts_new": 0,
     "contacts_total": 368,
     "daily_connections": 3,
     "new_domains": [
-      "containerport.com",
-      "elite-solar.com"
+      "elite-solar.com",
+      "containerport.com"
     ]
   },
   "daily_connections": [
