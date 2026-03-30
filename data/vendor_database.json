@@ -35,7 +35,10 @@
         "responsiveness": 4,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Ocean Alliance(至2032)",
+      "fleet_info": "683船/4M TEU",
+      "schedule_reliability": "~65%"
     },
     {
       "vendor_name": "MSC",
@@ -68,7 +71,10 @@
         "responsiveness": 8,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "独立(前2M)",
+      "fleet_info": "980船/7.2M TEU",
+      "schedule_reliability": "60-70%"
     },
     {
       "vendor_name": "Hapag-Lloyd",
@@ -97,7 +103,10 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Gemini(与Maersk) 91%准班",
+      "fleet_info": "301船/2.5M TEU",
+      "schedule_reliability": "75-77%"
     },
     {
       "vendor_name": "ZIM",
@@ -126,7 +135,10 @@
         "responsiveness": 4,
         "documentation_quality": 8
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "独立(被Hapag $4.2B收购中)",
+      "fleet_info": "131船/776K TEU",
+      "schedule_reliability": "低于平均"
     },
     {
       "vendor_name": "YML",
@@ -155,7 +167,10 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Premier Alliance",
+      "fleet_info": "98船/711K TEU",
+      "schedule_reliability": "中等"
     },
     {
       "vendor_name": "WAN HAI",
@@ -184,7 +199,10 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "独立",
+      "fleet_info": "142船/430K TEU",
+      "schedule_reliability": "47.8%最低"
     },
     {
       "vendor_name": "Evergreen",
@@ -213,7 +231,10 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Ocean Alliance(至2032)",
+      "fleet_info": "239船/1.9M TEU",
+      "schedule_reliability": "中等"
     },
     {
       "vendor_name": "HMM",
@@ -242,7 +263,10 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Premier Alliance",
+      "fleet_info": "86船/850K TEU",
+      "schedule_reliability": "中等"
     },
     {
       "vendor_name": "MAERSK",
@@ -271,7 +295,10 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Gemini(与Hapag) 91%准班",
+      "fleet_info": "707船/4.3M TEU",
+      "schedule_reliability": "76-78% #1"
     },
     {
       "vendor_name": "PACIFIC T&T",
@@ -541,7 +568,10 @@
         "responsiveness": 4,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Ocean Alliance(至2032)",
+      "fleet_info": "59船",
+      "schedule_reliability": "64%"
     },
     {
       "vendor_name": "COSCO",
@@ -572,7 +602,10 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Ocean Alliance(至2032)",
+      "fleet_info": "542船/3.4M TEU",
+      "schedule_reliability": "~60%"
     },
     {
       "vendor_name": "ONE",
@@ -612,7 +645,10 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-31T05:36:18.874002+08:00"
+      "last_updated": "2026-03-31T05:36:18.874002+08:00",
+      "alliance": "Premier Alliance(5年)",
+      "fleet_info": "260船/2M TEU",
+      "schedule_reliability": "中等"
     }
   ]
 }

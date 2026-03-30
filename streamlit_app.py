@@ -1750,19 +1750,23 @@ with tabs[7]:
   try:
     section_header("船公司全景")
 
-    coach_box("教练总结: 船公司选择 — 全成本+法规+集中度", """
-        <b>全成本公式:</b> 运费 + 目的港费用 + D&D风险 + Chassis费 + Hold频率 + 查验概率 + 服务响应。
-        <em>不要只看运费!</em><br><br>
-        <b>FMC OSRA保护:</b> 船公司不得因我们投诉D&D或使用竞争对手而拒绝舱位(反报复条款)。
-        也不得无合理理由拒绝我们订舱(拒绝交易规则, 2024.7生效)。遇到不合理拒舱, 可向FMC投诉。<br><br>
-        <b>集中度红线(从14,825封邮件发现):</b>
-        部分客户集中度超70% — 必须开发备选!
-        CLOU 71%走ZIM, HITHIUM 68%走ZIM — ZIM变动影响两家。
-        建议: &gt;70%集中度的客户必须有B计划船公司。<br><br>
-        <b>D&D账单对比:</b> 14天累计D&D最贵: NY($3,182) &gt; Long Beach($2,730) &gt; LA($2,673)。
-        MSC邮件最多(2,211封/331 MBL)但目的港费用复杂。ONE/OOCL查验概率需持续观察。<br><br>
-        <b>Demurrage免费天数:</b> LA/LB 4天 / NY 4天(不含周末) / Savannah 7天 / Houston 4天。
-        Free Time从卸船后凌晨3:00开始计(LA/LB), 不是从我们收到AN开始!
+    # 动态生成教练总结
+    _carriers_all = {v.get("vendor_name"): v for v in VDB.get("vendors",[]) if v.get("vendor_category") == "ship_carrier"}
+    _top_carrier = max(A30.get("carriers",{}).items(), key=lambda x: x[1] if isinstance(x[1],int) else x[1].get("emails",0), default=("",0))
+    _concentration_warnings = []
+    for cust, cars in SCN.get("customer_carrier",{}).items():
+        if cars:
+            total = sum(cars.values())
+            top = max(cars, key=cars.get)
+            pct = cars[top] * 100 // max(total, 1)
+            if pct >= 70:
+                _concentration_warnings.append(f"{cust} {pct}%→{top}")
+
+    coach_box("教练总结: 船公司选择", f"""
+        <b>联盟格局:</b> Gemini(Maersk+Hapag)91%准班率最高 / Ocean Alliance(CMA+COSCO+OOCL+Evergreen)至2032 / Premier(ONE+HMM+YML) / MSC独立最大 / ZIM被Hapag收购中<br><br>
+        <b>集中度预警:</b> {', '.join(_concentration_warnings[:5]) if _concentration_warnings else '无>70%集中度'}。&gt;70%必须有B计划。<br><br>
+        <b>D&D:</b> NY最贵($3,182/14天) &gt; LB($2,730) &gt; LA($2,673)。Free Time: LA/LB 4天 / NY 4天(不含周末) / Savannah 7天。<br>
+        <b>FMC:</b> 船公司不得因投诉而拒舱(OSRA反报复条款)。D&D账单缺19项要素=无需付款。
     """)
 
 
@@ -1794,14 +1798,12 @@ with tabs[7]:
 
             c_rows.append({
                 "船公司": f"{name} ({vinfo.get('vendor_name_cn', '')})" if vinfo else name,
+                "联盟": vinfo.get("alliance", "-") if vinfo else "-",
+                "准班率": vinfo.get("schedule_reliability", "-") if vinfo else "-",
                 "30天邮件": vol,
-                "能力评分": vinfo.get("capability_score", "-") if vinfo else "-",
-                "等级": vinfo.get("capability_level", "-") if vinfo else "-",
-                "7日Hold": pm.get("hold_events_7d", 0),
-                "7日查验": pm.get("inspection_events_7d", 0),
-                "费用笔数": fees.get("count", 0),
-                "费用总额": f"${fees.get('total', 0):,.0f}" if fees.get("total", 0) > 0 else "-",
-                "平均费用": f"${fees.get('avg', 0):,.0f}" if fees.get("avg", 0) > 0 else "-",
+                "评分": vinfo.get("capability_score", "-") if vinfo else "-",
+                "Hold": pm.get("hold_events_7d", 0),
+                "查验": pm.get("inspection_events_7d", 0),
                 "风险标签": ", ".join(vinfo.get("risk_tags", ["-"])) if vinfo else "-",
                 "服务客户": ", ".join(custs_using[:4]) if custs_using else "-",
             })
