@@ -1,11 +1,12 @@
 {
-  "scan_time": "2026-03-30T08:57:56.202191+08:00",
-  "total_emails": 11,
-  "business_emails": 6,
+  "scan_time": "2026-03-30T09:05:24.275435+08:00",
+  "total_emails": 14,
+  "business_emails": 9,
   "pdf_count": 1,
   "categories": {
     "other_biz": 2,
-    "inspection": 4
+    "inspection": 4,
+    "charge_confirm": 3
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -23,7 +24,7 @@
   "carriers": {
     "MSC": 1,
     "COSCO": 1,
-    "OOCL": 2,
+    "OOCL": 5,
     "ONE": 1
   },
   "carrier_fees": {
@@ -33,19 +34,26 @@
       "avg": 20.0
     }
   },
-  "hbl_total": 0,
-  "mbl_total": 5,
-  "all_hbls": [],
+  "hbl_total": 3,
+  "mbl_total": 8,
+  "all_hbls": [
+    "WLC60301625",
+    "WLC60301626",
+    "WLC60301627"
+  ],
   "all_mbls": [
     "COSU6444625540",
     "MEDUWG692272",
     "ONEYBKKG38865600",
     "OOLU2166524280",
+    "OOLU2166784670",
+    "OOLU2166784680",
+    "OOLU2166784690",
     "OOLU2320126090"
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 5
+    "2026-03-30": 8
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -60,7 +68,7 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      4
+      7
     ],
     [
       "Krizza Mallari <ops@pinnacleteam.com>",
@@ -100,7 +108,9 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "internal_staff": "",
+      "wwl_sender": "PLT系统",
+      "wwl_branch": "PLT平台(自动)",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 COSU6444625540",
       "source": "查验预警-COSU6444625540",
@@ -119,7 +129,9 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "internal_staff": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2320126090",
       "source": "查验预警-OOLU2320126090",
@@ -138,7 +150,9 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "internal_staff": "",
+      "wwl_sender": "PLT系统",
+      "wwl_branch": "PLT平台(自动)",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 BKKG38865600",
       "source": "查验预警-ONEYBKKG38865600",
@@ -157,7 +171,9 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "internal_staff": "",
+      "wwl_sender": "PLT系统",
+      "wwl_branch": "PLT平台(自动)",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2166524280",
       "source": "查验预警-OOLU2166524280",
@@ -211,23 +227,99 @@
       "source": "查验预警-OOLU2166524280",
       "from": "assistant@pltplt.com",
       "date": "Mon, 30 Mar 2026 08:00:20"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "OOLU2166784670",
+      "hbl": "WLC60301627",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-03",
+      "amount": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:OOLU2166784670 金额:",
+      "source": "Charge confirm request /MBL:OOLU2166784670 /HBL:WLC60301627\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:02"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "OOLU2166784680",
+      "hbl": "WLC60301626",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-03",
+      "amount": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:OOLU2166784680 金额:",
+      "source": "Charge confirm request /MBL:OOLU2166784680 /HBL:WLC60301626\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:03"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "OOLU2166784690",
+      "hbl": "WLC60301625",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-03",
+      "amount": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:OOLU2166784690 金额:",
+      "source": "Charge confirm request /MBL:OOLU2166784690 /HBL:WLC60301625\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:04"
     }
   ],
   "action_summary": {
-    "total": 8,
+    "total": 11,
     "urgent": 8,
     "high": 0,
-    "medium": 0
+    "medium": 3
   },
   "bl_status": {
     "no_tlx_mbl": [
       "OOLU2320126090",
+      "OOLU2166784680",
+      "OOLU2166524280",
+      "OOLU2166784670",
       "COSU6444625540",
       "ONEYBKKG38865600",
-      "MEDUWG692272",
-      "OOLU2166524280"
+      "OOLU2166784690",
+      "MEDUWG692272"
     ],
-    "no_tlx_hbl": [],
+    "no_tlx_hbl": [
+      "WLC60301627",
+      "WLC60301626",
+      "WLC60301625"
+    ],
     "an_no_prealert": [],
     "hold_bl": [],
     "tlx_confirmed_mbl": 0,

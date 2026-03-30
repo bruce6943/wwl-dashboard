@@ -723,18 +723,22 @@ with tabs[0]:
                 detail_html += f" +{len(details)-4}项"
             lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
 
-        # 行6: 联系人(客户方 + WWL内部关联同事)
+        # 行6: WWL内部委托方(谁发给我们的 → 找他)
+        wwl_sender = t.get("wwl_sender", "")
+        wwl_branch = t.get("wwl_branch", "")
+        if wwl_sender and wwl_branch.startswith("WWL"):
+            lines.append(f'<div style="font-size:12px;margin:3px 0;"><span style="color:#ff9800;font-weight:600;">委托方: {wwl_sender[:40]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span> — 催收/跟进找他</div>')
+
+        # 行7: 客户方联系人 + WWL内部关联同事
         ppl = []
         if ext_contact:
             ppl.append(f'<span style="color:#00c853;">客户方: {ext_contact[:55]}</span>')
         elif contact:
             ppl.append(f'<span style="color:#00c853;">客户方: {contact[:55]}</span>')
         if internal:
-            ppl.append(f'<span style="color:#2196f3;">WWL内部: {internal}</span>')
-        if sender and not ppl:
-            ppl.append(f'<span style="color:#888;">来源: {sender[:40]}</span>')
+            ppl.append(f'<span style="color:#2196f3;">关联同事: {internal}</span>')
         if ppl:
-            lines.append(f'<div style="font-size:11px;margin-top:3px;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(ppl)}</div>')
+            lines.append(f'<div style="font-size:11px;margin-top:2px;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(ppl)}</div>')
 
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
