@@ -1,15 +1,15 @@
 {
-  "scan_time": "2026-03-30T15:30:21.053969+08:00",
-  "total_emails": 117,
-  "business_emails": 108,
-  "pdf_count": 74,
+  "scan_time": "2026-03-30T16:01:52.554003+08:00",
+  "total_emails": 123,
+  "business_emails": 113,
+  "pdf_count": 77,
   "categories": {
-    "other_biz": 64,
+    "other_biz": 68,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
-    "overdue": 1,
+    "overdue": 2,
     "prealert": 17,
     "arrival": 2,
     "cancel": 2
@@ -87,17 +87,17 @@
     }
   },
   "carriers": {
-    "MSC": 15,
+    "MSC": 17,
     "COSCO": 15,
     "OOCL": 18,
     "ONE": 12,
     "CMA-CGM": 12,
     "ZIM": 4,
-    "Hapag-Lloyd": 3
+    "Hapag-Lloyd": 4
   },
   "carrier_fees": {},
-  "hbl_total": 39,
-  "mbl_total": 42,
+  "hbl_total": 40,
+  "mbl_total": 44,
   "all_hbls": [
     "WLC50522982",
     "WLC50813210",
@@ -109,6 +109,7 @@
     "WLC60126287",
     "WLC60200080",
     "WLC60205753",
+    "WLC60207645",
     "WLC60208507",
     "WLC60211379",
     "WLC60213560",
@@ -153,6 +154,7 @@
     "COSU8040582340",
     "COSU9506295860",
     "COSU9506320440",
+    "HLCUNK2251220417",
     "HLCUSHA2603BIYR0",
     "HLCUSHA2603BJKC0",
     "MEDUKE699088",
@@ -160,6 +162,7 @@
     "MEDUWG692272",
     "MEDUWK478768",
     "MEDUWK745968",
+    "MEDUWV323979",
     "MEDUYL789706",
     "MEDUYQ353300",
     "ONEYBKKG38865600",
@@ -185,7 +188,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 109
+    "2026-03-30": 115
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -195,7 +198,7 @@
   ],
   "hold_count": 0,
   "inspection_count": 4,
-  "overdue_count": 1,
+  "overdue_count": 2,
   "cancel_count": 2,
   "top_senders": [
     [
@@ -211,12 +214,12 @@
       13
     ],
     [
-      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
       7
     ],
     [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      6
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      7
     ],
     [
       "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
@@ -271,12 +274,12 @@
       2
     ],
     [
-      "\"Clement Po\" <cpo@tnts.us>",
+      "Will Sun <willsun@wwl.cn>",
       2
     ],
     [
-      "LinkedIn <notifications-noreply@linkedin.com>",
-      1
+      "\"Clement Po\" <cpo@tnts.us>",
+      2
     ]
   ],
   "action_items": [
@@ -645,6 +648,27 @@
       "date": "Mon, 30 Mar 2026 11:20:20"
     },
     {
+      "type": "overdue",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Yancy Yu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "催收 → 确认T+X阶段 → T+7首催/T+15升级/T+30追偿函/T+45中信保",
+      "detail": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
+      "source": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
+      "from": "\"Yancy Yu\" <szn.yancyyu@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 15:48:34"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "OOLU2167032400",
@@ -743,6 +767,26 @@
       "source": "RE: [PRE-ALERT] - ATD MAR 17  - HBL#WLC60311287 - MBL#ONEYSG",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Mon, 30 Mar 2026 15:24:46"
+    },
+    {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "HLCUNK2251220417",
+      "customer": "",
+      "assignee": "",
+      "carrier": "Hapag-Lloyd",
+      "sender": "内部: MengLu-WWLNKG",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "吴梦露 (nkg.ops11@worldwide-logistics.cn)",
+      "wwl_branch": "WWL环世",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "RE: Pre Alert   CHANGE HBL   WLCNKG260207645   MBL#HLCUNK225",
+      "from": "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 15:58:07"
     },
     {
       "type": "cc_confirm",
@@ -1151,72 +1195,74 @@
     }
   ],
   "action_summary": {
-    "total": 42,
+    "total": 44,
     "urgent": 11,
-    "high": 13,
+    "high": 15,
     "medium": 18
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "CMDUCHN3097590",
-      "ZIMUBKK80440481",
-      "COSU6447544660",
+      "COSU8040582340",
       "MEDUWK745968",
+      "MEDUWG692272",
       "CMDUCHN3116145",
-      "COSU6447544630",
-      "OOLU2320126090",
+      "COSU6447551240",
+      "OOLU2166784690",
+      "HLCUSHA2603BIYR0",
       "MEDUYQ353300",
       "ONEYBKKG38865600",
-      "OOLU2166784680",
-      "COSU6447551240",
-      "HLCUSHA2603BIYR0",
       "MEDUYL789706",
-      "ONEYBTMG00382500",
-      "OOLU2167100640",
-      "OOLU2166784690",
-      "HLCUSHA2603BJKC0",
-      "OOLU2167100650",
-      "OOLU2166784670",
-      "OOLU2166524280",
-      "CMDUCHN3095178",
-      "MEDUWK478768",
-      "MEDUKG193320",
-      "MEDUWG692272",
+      "HLCUNK2251220417",
+      "COSU6447544660",
       "COSU6444363540",
+      "OOLU2166524280",
+      "OOLU2166784680",
+      "OOLU2167100650",
+      "HLCUSHA2603BJKC0",
+      "ONEYBTMG00382500",
+      "CMDUCHN3097590",
+      "ZIMUBKK80440481",
+      "OOLU2167100640",
+      "COSU6447544630",
+      "MEDUWK478768",
+      "OOLU2320126090",
+      "OOLU2166784670",
+      "MEDUKG193320",
       "COSU6444625540",
-      "COSU8040582340"
+      "CMDUCHN3095178"
     ],
     "no_tlx_hbl": [
-      "WLC60215570",
-      "WLC60125060",
-      "WLC50522982",
-      "WLC60301627",
-      "WLC60205753",
-      "WLC50813210",
-      "WLC60120505",
-      "WLC60312641",
-      "WLC60216466",
-      "WLC60312647",
-      "WLC60312639",
-      "WLC60312633",
-      "WLC60126287",
-      "WLC60307413",
-      "WLC60213560",
-      "WLC60200080",
-      "WLC60216138",
       "WLC60313836",
-      "WLC60124381",
+      "WLC60312633",
+      "WLC60312647",
+      "WLC60207645",
+      "WLC60307413",
+      "WLC60312643",
+      "WLC60205753",
+      "WLC60312639",
+      "WLC60213560",
+      "WLC50522982",
+      "WLC60120505",
       "WLC60301626",
-      "WLC60208507",
+      "WLC60125060",
+      "WLC60216466",
+      "WLC60126287",
+      "WLC60124381",
+      "WLC50813210",
+      "WLC60200080",
+      "WLC60312641",
       "WLC60301625",
-      "WLC60312643"
+      "WLC60216138",
+      "WLC60208507",
+      "WLC60301627",
+      "WLC60215570"
     ],
     "an_no_prealert": [
       "OOLU2167100640",
       "OOLU2167100650"
     ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 16,
+    "tlx_confirmed_mbl": 17,
     "tlx_confirmed_hbl": 16
   },
   "anomalies": {
@@ -1298,6 +1344,18 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 15:08:41"
+      },
+      {
+        "subject": "RE: 025F845248 /  美国目的港费用逾期警示 --- 彭巧群",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 15:35:08"
+      },
+      {
+        "subject": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
+        "from": "\"Yancy Yu\" <szn.yancyyu@wwl.cn",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 15:48:34"
       }
     ]
   },
