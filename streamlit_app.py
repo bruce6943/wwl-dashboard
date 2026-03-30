@@ -626,6 +626,16 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 
+    # 教练总结紧跟效率评分
+    coach_box("教练总结: 风险管理 — 法规+实战", f"""
+        <b>当前状态:</b> Hold {hold_count}件 / 查验 {inspection_count}件 / 待办 {len(action_items)}项。
+        {'⚠️ 有Hold必须立即处理!' if hold_count > 0 else '✅ 无Hold。'}
+        {'⚠️ 有查验需跟进!' if inspection_count > 0 else ''}<br><br>
+        <b>FMC D&D新规:</b> 船公司D&D账单必须含19项要素, 缺一项=无需付款。收到账单先核对合规性。<br>
+        <b>UFLPA:</b> 太阳能/电池客户(正泰/科陆/海辰)每票确认溯源文件。77%中国货被扣后拒放。<br>
+        <b>周五规则:</b> 周五收到Hold必须当天行动, 不等周一(省3天D&D)。
+    """)
+
     # ═══ v4.0 任务工作台(从知识图谱) ═══
     # 优先用graph_tasks(SQLite知识图谱推理), fallback到旧的build_task_board
     GRAPH = DATA.get("graph_tasks", {})
@@ -808,18 +818,16 @@ with tabs[0]:
     _chk_counter = [0]  # 用列表绕过scope限制
 
     def render_task_with_confirm(t, pri_color, bg_alpha):
-        """渲染任务卡片 + 两步确认(勾选→确认按钮)"""
+        """渲染任务卡片 + 两步确认"""
         _chk_counter[0] += 1
-        chk_key = f"chk_{_chk_counter[0]}"
-        confirm_key = f"confirm_{_chk_counter[0]}"
-
-        col1, col2 = st.columns([0.04, 0.96])
-        with col1:
-            checked = st.checkbox("", key=chk_key, label_visibility="collapsed")
-        with col2:
-            st.markdown(render_task_card(t, pri_color, bg_alpha), unsafe_allow_html=True)
+        n = _chk_counter[0]
+        st.markdown(render_task_card(t, pri_color, bg_alpha), unsafe_allow_html=True)
+        c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
+        with c1:
+            checked = st.checkbox("完成", key=f"chk_{n}", label_visibility="visible")
+        with c2:
             if checked:
-                if st.button("确认完成", key=confirm_key, type="primary"):
+                if st.button("确认", key=f"cfm_{n}"):
                     completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                     save_tasks({"completed": completed_ids, "tasks": all_tasks})
                     st.rerun()
@@ -916,21 +924,7 @@ with tabs[0]:
     # Anomaly section
     section_header("异常邮件预警")
 
-    # Coach — 置顶(在效率Banner之后、数据之前)
-    coach_box("教练总结: 风险管理 — 法规+实战", """
-        <b>FMC D&D新规(2024.5.28生效):</b> 船公司D&D账单必须包含19项要素(BL号/柜号/免费天数/起止日/费率依据等),
-        <em>缺任何一项=我们无需付款</em>。收到D&D账单第一步不是付款, 是核对合规性。
-        NVOCC有60天开票窗口(船公司30天+我们30天), 超时账单=无支付义务。<br><br>
-        <b>Hold真实成本:</b> LA/LB超Free Time后40'柜$80-150/天, NY更贵$125-175/天。
-        <em>周五的Hold=3天白白损失</em>(周五14次Hold是全周最多!) — 周五下午收到Hold必须当天行动, 绝不等周一。
-        政府查验期间的D&D, 根据FMC 2020解释性规则, 可以争议为"不合理收费"。<br><br>
-        <b>查验成本阶梯:</b> X-Ray $150-250(1-2天) &lt; 开门查 $150-350(2-3天) &lt; 全掏箱 $1,000-2,500(5-7天)。
-        费用由进口商承担(联邦法律), 我们合同必须明确这一点。C-TPAT会员可显著降低查验率 — 建议大客户申请。<br><br>
-        <b>UFLPA紧急预警:</b> 太阳能板和锂电池是CBP强制劳动法(UFLPA)最高优先级品类。
-        FY2025数据: 7,325批货被扣, <em>77%中国货物被拒绝放行</em>。
-        我们8个太阳能/储能客户(正泰/科陆/海辰/PREVALON等)全部在风险区。
-        必须提前要求客户准备: BOM清单/加工流程图/供应商溯源文件, 事后补证几乎不可能。
-    """)
+    # (教练总结已移到效率评分下方)
 
 
     # Cancel IT
