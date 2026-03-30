@@ -1,13 +1,13 @@
 {
-  "scan_time": "2026-03-31T01:47:40.651578+08:00",
-  "total_emails": 35,
-  "business_emails": 29,
-  "pdf_count": 9,
+  "scan_time": "2026-03-31T02:18:31.275539+08:00",
+  "total_emails": 41,
+  "business_emails": 34,
+  "pdf_count": 11,
   "categories": {
     "charge_confirm": 6,
     "prealert": 6,
-    "other_biz": 12,
-    "arrival": 1,
+    "other_biz": 15,
+    "arrival": 3,
     "hold": 2,
     "booking": 2
   },
@@ -84,7 +84,7 @@
     }
   },
   "carriers": {
-    "ONE": 11,
+    "ONE": 13,
     "MSC": 3,
     "COSCO": 1,
     "OOCL": 1
@@ -114,7 +114,7 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 25,
+    "2026-03-30": 31,
     "2026-03-31": 9
   },
   "inspection_mbls": [],
@@ -128,12 +128,16 @@
       9
     ],
     [
+      "Effy <us.effyhuo@wwl.sg>",
+      8
+    ],
+    [
       "assistant@pltplt.com",
       6
     ],
     [
-      "Effy <us.effyhuo@wwl.sg>",
-      6
+      "\"shipment.info@one-line.com\" <shipment.info@one-line.com>",
+      2
     ],
     [
       "Robert Connor <bobc@maritimeway.net>",
@@ -189,6 +193,14 @@
     ],
     [
       "Matthew Stefanelli <mstefanelli@scotlynn.com>",
+      1
+    ],
+    [
+      "Alan Lo <Alan.Lo@idcintl.com>",
+      1
+    ],
+    [
+      "\"Bobc\" <bobc@worldwide-logistics.cn>",
       1
     ]
   ],
@@ -304,6 +316,54 @@
       "source": "COSCO Arrival Notice with Freight COSU9506295790 | OOCL ROTT",
       "from": "PLEASE_DO_NOT_REPLY_LAX@COSCON.COM",
       "date": "Tue, 31 Mar 2026 00:19:48"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "",
+      "sender": "ONE",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL: Free Time 4天",
+      "source": "Arrival Notice(BL#: BTMG00521700) Vessel/Voyage: ONE HARBOUR",
+      "from": "\"shipment.info@one-line.com\" <shipment.info@one-li",
+      "date": "Mon, 30 Mar 2026 17:51:04"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "",
+      "sender": "ONE",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL: Free Time 4天",
+      "source": "Arrival Notice(BL#: BTMG00383600) Vessel/Voyage: ONE HARBOUR",
+      "from": "\"shipment.info@one-line.com\" <shipment.info@one-li",
+      "date": "Mon, 30 Mar 2026 17:51:44"
     },
     {
       "type": "post_clearance",
@@ -705,32 +765,32 @@
     }
   ],
   "action_summary": {
-    "total": 24,
+    "total": 26,
     "urgent": 4,
-    "high": 7,
+    "high": 9,
     "medium": 13
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272",
-      "ONEYBKKG61453900",
-      "ONEYBKKG61472300",
+      "OOLU2320126090",
+      "ONEYBKKG68481300",
+      "ONEYBKKG48500700",
       "COSU9506295790",
       "ONEYBKKG67192800",
-      "OOLU2320126090",
-      "ONEYBKKG48500700",
+      "ONEYBKKG61472300",
+      "MEDUWG692272",
       "MEDUYL960612",
-      "ONEYBKKG68481300"
+      "ONEYBKKG61453900"
     ],
     "no_tlx_hbl": [
-      "WLC50522982",
       "WLC60305212",
-      "WLC60305140",
       "WLC60304684",
       "WLC60203463",
+      "WLC50522982",
+      "WLC60305140",
+      "WLC60213409",
       "WLC60217446",
-      "WLC60304584",
-      "WLC60213409"
+      "WLC60304584"
     ],
     "an_no_prealert": [
       "COSU9506295790"
@@ -775,13 +835,13 @@
   },
   "neural_network": {
     "entities": 87,
-    "relationships": 10,
+    "relationships": 11,
     "contacts_new": 0,
     "contacts_total": 368,
     "daily_connections": 3,
     "new_domains": [
-      "containerport.com",
-      "elite-solar.com"
+      "elite-solar.com",
+      "containerport.com"
     ]
   },
   "daily_connections": [
