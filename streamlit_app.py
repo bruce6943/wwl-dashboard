@@ -753,7 +753,7 @@ with tabs[0]:
                 "shipper": "",
                 "internal_staff": "",
                 "customer_contact": "",
-                "detail_lines": [gt.get('detail','')] if gt.get('detail') else ([f"邮件数:{gt.get('email_count',0)}", f"最后:{gt.get('last_seen','')}"] if gt.get('email_count') else []),
+                "detail_lines": ([gt.get('progress_history','')] if gt.get('progress_history') else []) + ([gt.get('detail','')] if gt.get('detail') else []),
                 "assignee": "",
             })
         # 补充欠费催收任务(去重)
