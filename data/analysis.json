@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T03:19:55.731758+08:00",
-  "total_emails": 45,
-  "business_emails": 36,
+  "scan_time": "2026-03-31T03:53:56.836195+08:00",
+  "total_emails": 46,
+  "business_emails": 37,
   "pdf_count": 11,
   "categories": {
     "charge_confirm": 6,
     "prealert": 6,
-    "other_biz": 17,
+    "other_biz": 18,
     "arrival": 3,
     "hold": 2,
     "booking": 2
@@ -115,7 +115,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 34,
-    "2026-03-31": 10
+    "2026-03-31": 11
   },
   "inspection_mbls": [],
   "hold_count": 2,
@@ -137,7 +137,7 @@
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
-      2
+      3
     ],
     [
       "Matthew Stefanelli <mstefanelli@scotlynn.com>",
@@ -772,25 +772,25 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
+      "COSU9506295790",
       "ONEYBKKG61453900",
       "ONEYBKKG67192800",
-      "MEDUWG692272",
-      "ONEYBKKG48500700",
-      "ONEYBKKG61472300",
-      "COSU9506295790",
-      "MEDUYL960612",
+      "OOLU2320126090",
       "ONEYBKKG68481300",
-      "OOLU2320126090"
+      "ONEYBKKG61472300",
+      "MEDUWG692272",
+      "MEDUYL960612",
+      "ONEYBKKG48500700"
     ],
     "no_tlx_hbl": [
+      "WLC60305212",
+      "WLC60217446",
+      "WLC60213409",
+      "WLC60203463",
       "WLC60304584",
       "WLC60305140",
       "WLC60304684",
-      "WLC50522982",
-      "WLC60305212",
-      "WLC60213409",
-      "WLC60217446",
-      "WLC60203463"
+      "WLC50522982"
     ],
     "an_no_prealert": [
       "COSU9506295790"
@@ -840,8 +840,8 @@
     "contacts_total": 368,
     "daily_connections": 3,
     "new_domains": [
-      "elite-solar.com",
-      "containerport.com"
+      "containerport.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [
