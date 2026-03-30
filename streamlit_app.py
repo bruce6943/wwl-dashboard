@@ -805,14 +805,13 @@ with tabs[0]:
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
 
-    _chk_idx = 0
+    _chk_counter = [0]  # 用列表绕过scope限制
 
     def render_task_with_confirm(t, pri_color, bg_alpha):
         """渲染任务卡片 + 两步确认(勾选→确认按钮)"""
-        nonlocal _chk_idx
-        _chk_idx += 1
-        chk_key = f"chk_{_chk_idx}"
-        confirm_key = f"confirm_{_chk_idx}"
+        _chk_counter[0] += 1
+        chk_key = f"chk_{_chk_counter[0]}"
+        confirm_key = f"confirm_{_chk_counter[0]}"
 
         col1, col2 = st.columns([0.04, 0.96])
         with col1:
