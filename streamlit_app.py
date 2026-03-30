@@ -723,22 +723,29 @@ with tabs[0]:
                 detail_html += f" +{len(details)-4}项"
             lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
 
-        # 行6: WWL内部委托方(谁发给我们的 → 找他)
+        # 行6: 找谁(只显示外部联系方向 — 收货人联系方式 或 委托方分公司)
         wwl_sender = t.get("wwl_sender", "")
         wwl_branch = t.get("wwl_branch", "")
-        if wwl_sender and wwl_branch.startswith("WWL"):
-            lines.append(f'<div style="font-size:12px;margin:3px 0;"><span style="color:#ff9800;font-weight:600;">委托方: {wwl_sender[:40]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span> — 催收/跟进找他</div>')
+        contact_line = ""
 
-        # 行7: 客户方联系人 + WWL内部关联同事
-        ppl = []
+        # 优先显示收货人/客户方联系人(能直接联系的)
         if ext_contact:
-            ppl.append(f'<span style="color:#00c853;">客户方: {ext_contact[:55]}</span>')
+            contact_line = f'<span style="color:#00c853;font-weight:600;">联系收货人: {ext_contact[:60]}</span>'
         elif contact:
-            ppl.append(f'<span style="color:#00c853;">客户方: {contact[:55]}</span>')
-        if internal:
-            ppl.append(f'<span style="color:#2196f3;">关联同事: {internal}</span>')
-        if ppl:
-            lines.append(f'<div style="font-size:11px;margin-top:2px;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(ppl)}</div>')
+            contact_line = f'<span style="color:#00c853;font-weight:600;">联系客户: {contact[:60]}</span>'
+
+        # 委托方(WWL哪个分公司发给我们的)
+        wwl_line = ""
+        if wwl_sender and wwl_branch.startswith("WWL"):
+            wwl_line = f'<span style="color:#ff9800;font-weight:600;">找: {wwl_sender[:45]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span>'
+
+        if contact_line and wwl_line:
+            lines.append(f'<div style="font-size:12px;margin:3px 0;">{contact_line}</div>')
+            lines.append(f'<div style="font-size:12px;">{wwl_line}</div>')
+        elif wwl_line:
+            lines.append(f'<div style="font-size:12px;margin:3px 0;">{wwl_line}</div>')
+        elif contact_line:
+            lines.append(f'<div style="font-size:12px;margin:3px 0;">{contact_line}</div>')
 
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
