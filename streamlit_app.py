@@ -244,6 +244,7 @@ def load_all_data():
         "deep_insights": "data/deep_insights.json",
         "deep_patterns": "data/deep_patterns.json",
         "us_consignee": "data/us_consignee_database.json",
+        "graph_tasks": "data/graph_tasks.json",
     }
     for key, path in files.items():
         try:
@@ -625,21 +626,43 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 
-    # ═══ v3.2 任务工作台 ═══
-    all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, DATA.get("analysis", {}).get("enhanced", {}))
-    # Fallback: try loading enhanced from file if not in analysis
-    if not DATA.get("analysis", {}).get("enhanced"):
-        try:
-            import os
-            _enh_path = os.path.join(os.path.dirname(__file__) or ".", "data", "enhanced_dimensions.json")
-            if not os.path.exists(_enh_path):
-                _enh_path = "/tmp/wwl_scan/enhanced_dimensions.json"
-            if os.path.exists(_enh_path):
-                with open(_enh_path) as _ef:
-                    _enh = json.load(_ef)
-                all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, _enh)
-        except:
-            pass
+    # ═══ v4.0 任务工作台(从知识图谱) ═══
+    # 优先用graph_tasks(SQLite知识图谱推理), fallback到旧的build_task_board
+    GRAPH = DATA.get("graph_tasks", {})
+    graph_tasks_list = GRAPH.get("tasks", [])
+
+    if graph_tasks_list:
+        # 从知识图谱生成的任务(更丰富)
+        all_tasks = []
+        for gt in graph_tasks_list:
+            task_id = f"{gt.get('type','')}__{gt.get('mbl','')}__{gt.get('customer','')}"
+            all_tasks.append({
+                "id": task_id,
+                "category": gt.get("type", "other"),
+                "priority": gt.get("priority", "medium"),
+                "title": gt.get("title", ""),
+                "action": gt.get("action", ""),
+                "mbl": gt.get("mbl", ""),
+                "hbl": gt.get("hbl", ""),
+                "carrier": gt.get("carrier", ""),
+                "customer": gt.get("customer", ""),
+                "wwl_sender": gt.get("wwl_sender", ""),
+                "wwl_branch": gt.get("wwl_branch", ""),
+                "amount": "",
+                "contact": "",
+                "consignee": "",
+                "shipper": "",
+                "internal_staff": "",
+                "customer_contact": "",
+                "detail_lines": [f"邮件数:{gt.get('email_count',0)}", f"最后:{gt.get('last_seen','')}"] if gt.get('email_count') else [],
+                "assignee": "",
+            })
+        # 补充欠费催收任务
+        all_tasks.extend(build_task_board([], ARR, {}, SOP, CON, DI, {}).copy())
+    else:
+        # Fallback
+        all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, {})
+
     task_data = load_tasks()
     completed_ids = task_data.get("completed", {})
 
@@ -662,7 +685,8 @@ with tabs[0]:
                   "prealert_gap":"漏单预警","sop":"SOP跟进",
                   "broker_followup":"报关行跟进","trucker_followup":"卡车跟进","post_clearance":"清关后跟进",
                   "empty_return":"空柜归还","post_booking":"订舱后跟进","supplier_reply":"供应商等回复",
-                  "inspection_broker":"查验报关跟进"}
+                  "inspection_broker":"查验报关跟进",
+                  "stale_arrival":"到港停滞","awaiting_reply":"等回复"}
     cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
     st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
 
