@@ -1,17 +1,18 @@
 {
-  "scan_time": "2026-03-30T14:58:32.690673+08:00",
-  "total_emails": 109,
-  "business_emails": 100,
-  "pdf_count": 65,
+  "scan_time": "2026-03-30T15:30:21.053969+08:00",
+  "total_emails": 117,
+  "business_emails": 108,
+  "pdf_count": 74,
   "categories": {
-    "other_biz": 60,
+    "other_biz": 64,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 1,
-    "prealert": 15,
-    "arrival": 2
+    "prealert": 17,
+    "arrival": 2,
+    "cancel": 2
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -86,17 +87,17 @@
     }
   },
   "carriers": {
-    "MSC": 13,
+    "MSC": 15,
     "COSCO": 15,
     "OOCL": 18,
-    "ONE": 10,
+    "ONE": 12,
     "CMA-CGM": 12,
     "ZIM": 4,
     "Hapag-Lloyd": 3
   },
   "carrier_fees": {},
-  "hbl_total": 38,
-  "mbl_total": 41,
+  "hbl_total": 39,
+  "mbl_total": 42,
   "all_hbls": [
     "WLC50522982",
     "WLC50813210",
@@ -124,6 +125,7 @@
     "WLC60307413",
     "WLC60308414",
     "WLC60308623",
+    "WLC60311287",
     "WLC60312633",
     "WLC60312639",
     "WLC60312641",
@@ -163,6 +165,7 @@
     "ONEYBKKG38865600",
     "ONEYBTMG00382500",
     "ONEYNBOG45453700",
+    "ONEYSGNG55445900",
     "OOLU2166524280",
     "OOLU2166784670",
     "OOLU2166784680",
@@ -182,7 +185,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 101
+    "2026-03-30": 109
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -193,15 +196,15 @@
   "hold_count": 0,
   "inspection_count": 4,
   "overdue_count": 1,
-  "cancel_count": 0,
+  "cancel_count": 2,
   "top_senders": [
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      18
+    ],
     [
       "assistant@pltplt.com",
       17
-    ],
-    [
-      "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      14
     ],
     [
       "\"rita tang\" <rita.tang@wwl.cn>",
@@ -213,7 +216,7 @@
     ],
     [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      5
+      6
     ],
     [
       "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
@@ -404,6 +407,28 @@
       "source": "Discharge Notification / ONE HONG KONG 0087E - YTI (YUSEN TE",
       "from": "Ocean Network Express <do-not-reply@one-line.com>",
       "date": "Mon, 30 Mar 2026 04:02:45"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "ONEYSGNG55445900",
+      "hbl": "WLC60311287",
+      "customer": "REACH INDUSTRY",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "内部: Danny Ho",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Danny Ho (vn.vietducho@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "Hold BL: ONEYSGNG55445900",
+      "source": "RE: [PRE-ALERT] - ATD MAR 17  - HBL#WLC60311287 - MBL#ONEYSG",
+      "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "date": "Mon, 30 Mar 2026 14:13:03"
     },
     {
       "type": "inspection_broker",
@@ -698,6 +723,26 @@
       "source": "RE: FEEHAND SHIPMENT SA MBL#OOLU2167304750, HBL#WLC60313516/",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Mon, 30 Mar 2026 14:33:35"
+    },
+    {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "ONEYSGNG55445900",
+      "customer": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "内部: Maggie Wu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Danny Ho (vn.vietducho@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "RE: [PRE-ALERT] - ATD MAR 17  - HBL#WLC60311287 - MBL#ONEYSG",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 15:24:46"
     },
     {
       "type": "cc_confirm",
@@ -1106,76 +1151,87 @@
     }
   ],
   "action_summary": {
-    "total": 40,
-    "urgent": 10,
-    "high": 12,
+    "total": 42,
+    "urgent": 11,
+    "high": 13,
     "medium": 18
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUKG193320",
-      "MEDUWK745968",
-      "MEDUWK478768",
-      "COSU6447544660",
-      "HLCUSHA2603BIYR0",
-      "OOLU2166784670",
-      "ONEYBTMG00382500",
-      "MEDUWG692272",
-      "MEDUYL789706",
-      "OOLU2166524280",
-      "MEDUYQ353300",
-      "CMDUCHN3116145",
-      "OOLU2166784690",
-      "ZIMUBKK80440481",
-      "ONEYBKKG38865600",
-      "OOLU2167100640",
-      "COSU6447551240",
-      "OOLU2320126090",
-      "COSU8040582340",
-      "OOLU2166784680",
-      "COSU6444625540",
-      "COSU6444363540",
-      "OOLU2167100650",
-      "COSU6447544630",
-      "HLCUSHA2603BJKC0",
       "CMDUCHN3097590",
-      "CMDUCHN3095178"
+      "ZIMUBKK80440481",
+      "COSU6447544660",
+      "MEDUWK745968",
+      "CMDUCHN3116145",
+      "COSU6447544630",
+      "OOLU2320126090",
+      "MEDUYQ353300",
+      "ONEYBKKG38865600",
+      "OOLU2166784680",
+      "COSU6447551240",
+      "HLCUSHA2603BIYR0",
+      "MEDUYL789706",
+      "ONEYBTMG00382500",
+      "OOLU2167100640",
+      "OOLU2166784690",
+      "HLCUSHA2603BJKC0",
+      "OOLU2167100650",
+      "OOLU2166784670",
+      "OOLU2166524280",
+      "CMDUCHN3095178",
+      "MEDUWK478768",
+      "MEDUKG193320",
+      "MEDUWG692272",
+      "COSU6444363540",
+      "COSU6444625540",
+      "COSU8040582340"
     ],
     "no_tlx_hbl": [
-      "WLC60312641",
-      "WLC60205753",
-      "WLC60213560",
-      "WLC60312647",
-      "WLC60216138",
-      "WLC60200080",
-      "WLC60312633",
-      "WLC60216466",
-      "WLC60301625",
-      "WLC60307413",
-      "WLC60124381",
-      "WLC60120505",
-      "WLC60313836",
-      "WLC60208507",
+      "WLC60215570",
       "WLC60125060",
-      "WLC60312643",
-      "WLC60301626",
-      "WLC60312639",
-      "WLC60301627",
       "WLC50522982",
+      "WLC60301627",
+      "WLC60205753",
       "WLC50813210",
+      "WLC60120505",
+      "WLC60312641",
+      "WLC60216466",
+      "WLC60312647",
+      "WLC60312639",
+      "WLC60312633",
       "WLC60126287",
-      "WLC60215570"
+      "WLC60307413",
+      "WLC60213560",
+      "WLC60200080",
+      "WLC60216138",
+      "WLC60313836",
+      "WLC60124381",
+      "WLC60301626",
+      "WLC60208507",
+      "WLC60301625",
+      "WLC60312643"
     ],
     "an_no_prealert": [
-      "OOLU2167100650",
-      "OOLU2167100640"
+      "OOLU2167100640",
+      "OOLU2167100650"
     ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 15,
-    "tlx_confirmed_hbl": 15
+    "tlx_confirmed_mbl": 16,
+    "tlx_confirmed_hbl": 16
   },
   "anomalies": {
-    "cancel_it": [],
+    "cancel_it": [
+      {
+        "subject": "Re: Re:  need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6",
+        "from": "\"Joey Mao\" <maoqiaoyu@cargoee.",
+        "date": "Mon, 30 Mar 2026 15:06:19"
+      },
+      {
+        "subject": "RE: Re:  need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6",
+        "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+        "date": "Mon, 30 Mar 2026 15:15:16"
+      }
+    ],
     "cod": [
       {
         "subject": "SA FOR HB/L: WLC60312639  MB/L:HLCUSHA2603BJKC0   FROM SHANG",
@@ -1236,6 +1292,12 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 14:51:57"
+      },
+      {
+        "subject": "RE: 025F845248 /  美国目的港费用逾期警示 --- 彭巧群",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 15:08:41"
       }
     ]
   },
