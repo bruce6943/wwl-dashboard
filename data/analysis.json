@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T05:36:18.874002+08:00",
-  "total_emails": 82,
-  "business_emails": 59,
+  "scan_time": "2026-03-31T06:10:55.959881+08:00",
+  "total_emails": 85,
+  "business_emails": 62,
   "pdf_count": 15,
   "categories": {
-    "charge_confirm": 6,
+    "charge_confirm": 7,
     "prealert": 8,
-    "other_biz": 33,
+    "other_biz": 35,
     "arrival": 7,
     "hold": 3,
     "booking": 2
@@ -114,6 +114,17 @@
       "days": [
         "03/30"
       ]
+    },
+    "ASTRONERGY (正泰新能)": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/31"
+      ]
     }
   },
   "carriers": {
@@ -121,13 +132,15 @@
     "MSC": 8,
     "COSCO": 1,
     "OOCL": 3,
-    "YML": 1
+    "YML": 1,
+    "CMA-CGM": 1
   },
   "carrier_fees": {},
-  "hbl_total": 10,
-  "mbl_total": 13,
+  "hbl_total": 11,
+  "mbl_total": 14,
   "all_hbls": [
     "WLC50522982",
+    "WLC60124859",
     "WLC60125637",
     "WLC60203463",
     "WLC60213409",
@@ -139,6 +152,7 @@
     "WLC60309086"
   ],
   "all_mbls": [
+    "CMDUTHD1466680",
     "COSU9506295790",
     "MEDURQ323962",
     "MEDURQ324234",
@@ -154,8 +168,8 @@
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 66,
-    "2026-03-31": 11
+    "2026-03-30": 67,
+    "2026-03-31": 13
   },
   "inspection_mbls": [],
   "hold_count": 3,
@@ -177,7 +191,7 @@
     ],
     [
       "assistant@pltplt.com",
-      6
+      7
     ],
     [
       "us038-importpickupnotification@msc.com",
@@ -185,7 +199,7 @@
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
-      3
+      4
     ],
     [
       "<julian.tseng@dynastydfw.com>",
@@ -587,6 +601,19 @@
       "date": "30 Mar 2026 17:15:10 -040"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: Pick-up# inquire -ETA 4/03",
+      "source": "RE: Pick-up# inquire -ETA 4/03",
+      "from": "Seattle CES <cesseattle@mercerlogistics.com>",
+      "date": "Mon, 30 Mar 2026 22:07:35"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -845,6 +872,29 @@
       "date": "Tue, 31 Mar 2026 00:06:28"
     },
     {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUTHD1466680",
+      "hbl": "WLC60124859",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-03-10",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUTHD1466680 金额:",
+      "source": "Charge confirm request /MBL:CMDUTHD1466680 /HBL:WLC60124859\r",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 06:03:23"
+    },
+    {
       "type": "empty_return",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -986,44 +1036,46 @@
     }
   ],
   "action_summary": {
-    "total": 34,
+    "total": 36,
     "urgent": 8,
-    "high": 13,
-    "medium": 13
+    "high": 14,
+    "medium": 14
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUWG692272",
+      "ONEYBKKG48500700",
+      "MEDURQ324234",
+      "OOLU2320126090",
       "MEDURQ324929",
       "MEDUYL960612",
-      "OOLU2320126090",
-      "COSU9506295790",
-      "MEDURQ324234",
       "ONEYBKKG67192800",
-      "ONEYBKKG68481300",
-      "MEDURQ323962",
       "ONEYBKKG61472300",
+      "MEDURQ323962",
+      "MEDUWG692272",
+      "COSU9506295790",
+      "CMDUTHD1466680",
       "ONEYBKKG61453900",
       "MEDURQ324903",
-      "ONEYBKKG48500700"
+      "ONEYBKKG68481300"
     ],
     "no_tlx_hbl": [
-      "WLC50522982",
-      "WLC60304684",
-      "WLC60305140",
-      "WLC60213409",
-      "WLC60304584",
       "WLC60305212",
-      "WLC60125637",
+      "WLC60304684",
+      "WLC60124859",
       "WLC60217446",
+      "WLC60305140",
+      "WLC60304584",
+      "WLC50522982",
+      "WLC60213409",
+      "WLC60125637",
       "WLC60309086",
       "WLC60203463"
     ],
     "an_no_prealert": [
-      "MEDURQ324929",
-      "COSU9506295790",
       "MEDURQ324234",
+      "MEDURQ324929",
       "MEDURQ323962",
+      "COSU9506295790",
       "MEDURQ324903"
     ],
     "hold_bl": [
@@ -1074,12 +1126,12 @@
   "neural_network": {
     "entities": 88,
     "relationships": 18,
-    "contacts_new": 0,
-    "contacts_total": 370,
+    "contacts_new": 1,
+    "contacts_total": 371,
     "daily_connections": 5,
     "new_domains": [
-      "mercerlogistics.com",
       "containerport.com",
+      "mercerlogistics.com",
       "elite-solar.com"
     ]
   },
