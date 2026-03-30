@@ -1790,26 +1790,29 @@ with tabs[7]:
                 if name in carriers_map:
                     custs_using.append(f"{cust}({carriers_map[name]})")
 
+            email_vol = vol if isinstance(vol, (int, float)) else vol.get('emails', 0) if isinstance(vol, dict) else 0
             c_rows.append({
                 "船公司": f"{name} ({vinfo.get('vendor_name_cn', '')})" if vinfo else name,
                 "联盟": vinfo.get("alliance", "-") if vinfo else "-",
                 "准班率": vinfo.get("schedule_reliability", "-") if vinfo else "-",
-                "30天邮件": vol,
+                "邮件量": email_vol,
                 "评分": vinfo.get("capability_score", "-") if vinfo else "-",
-                "Hold": pm.get("hold_events_7d", 0),
-                "查验": pm.get("inspection_events_7d", 0),
-                "风险标签": ", ".join(vinfo.get("risk_tags", ["-"])) if vinfo else "-",
-                "服务客户": ", ".join(custs_using[:4]) if custs_using else "-",
+                "服务客户": ", ".join(custs_using[:3]) if custs_using else "-",
             })
 
         c_df = pd.DataFrame(c_rows)
-        st.dataframe(c_df, use_container_width=True, hide_index=True, key="tbl_10")
+        st.dataframe(c_df, use_container_width=True, hide_index=True, key="tbl_10",
+                     column_config={
+                         "邮件量": st.column_config.ProgressColumn(min_value=0, max_value=max(r["邮件量"] for r in c_rows) if c_rows else 100, format="%d"),
+                         "评分": st.column_config.ProgressColumn(min_value=0, max_value=100, format="%d"),
+                     })
 
         # Market share pie chart
+        _pie_values = [v if isinstance(v, (int,float)) else v.get('emails',0) if isinstance(v,dict) else 0 for v in carriers_30d.values()]
         fig = px.pie(
             names=list(carriers_30d.keys()),
-            values=list(carriers_30d.values()),
-            title="船公司30天邮件量占比",
+            values=_pie_values,
+            title="船公司邮件量占比",
             color_discrete_sequence=px.colors.sequential.RdBu,
         )
         fig.update_layout(
