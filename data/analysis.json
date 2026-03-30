@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-03-30T09:18:08.084180+08:00",
-  "total_emails": 28,
-  "business_emails": 22,
+  "scan_time": "2026-03-30T09:19:06.345691+08:00",
+  "total_emails": 29,
+  "business_emails": 23,
   "pdf_count": 6,
   "categories": {
-    "other_biz": 6,
+    "other_biz": 7,
     "inspection": 4,
     "charge_confirm": 11,
     "booking": 1
@@ -41,7 +41,18 @@
     "CMA-CGM": 3,
     "ZIM": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "MSC": {
+      "count": 1,
+      "total": 20.0,
+      "avg": 20.0
+    },
+    "ONE": {
+      "count": 5,
+      "total": 0,
+      "avg": 0
+    }
+  },
   "hbl_total": 12,
   "mbl_total": 16,
   "all_hbls": [
@@ -78,7 +89,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 22
+    "2026-03-30": 23
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -134,6 +145,10 @@
     [
       "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
       1
+    ],
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      1
     ]
   ],
   "action_items": [
@@ -149,7 +164,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "tao.opsnam3@wwl.cn (tao.opsnam3@wwl.cn)",
       "wwl_branch": "WWL中国",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
@@ -170,7 +185,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
@@ -191,7 +206,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "bkk.nasmee@wwl.sg",
       "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
@@ -212,7 +227,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "PLT系统",
       "wwl_branch": "PLT平台(自动)",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
@@ -296,6 +311,19 @@
       "date": "Mon, 30 Mar 2026 09:10:19"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: Re：    目的港逾期detention未付警示 --- WWL-SZN （东莞）",
+      "source": "RE: Re：    目的港逾期detention未付警示 --- WWL-SZN （东莞）",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 09:18:46"
+    },
+    {
       "type": "cc_confirm",
       "priority": "medium",
       "mbl": "OOLU2166784670",
@@ -309,7 +337,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -332,7 +360,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -355,7 +383,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -378,7 +406,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -401,7 +429,7 @@
       "contact": "",
       "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
       "shipper": "NOTIFY",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -424,7 +452,7 @@
       "contact": "",
       "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
       "shipper": "NOTIFY",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -447,7 +475,7 @@
       "contact": "",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -493,7 +521,7 @@
       "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
       "consignee": "BTL INTERNATIONAL INC FFAU2506773-40HC FJ27287875",
       "shipper": "DECLARED THAT: THE SHIPMENT CONTAINS NO SOLID WOOD PACKING M",
-      "internal_staff": "",
+      "internal_staff": "Maggie Wu",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -516,7 +544,7 @@
       "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "Maggie Wu",
       "wwl_sender": "msc.com",
       "wwl_branch": "外部",
       "action": "确认费用承担方",
@@ -539,7 +567,7 @@
       "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
       "consignee": "",
       "shipper": "",
-      "internal_staff": "",
+      "internal_staff": "Maggie Wu",
       "wwl_sender": "",
       "wwl_branch": "",
       "action": "确认费用承担方",
@@ -550,41 +578,41 @@
     }
   ],
   "action_summary": {
-    "total": 21,
+    "total": 22,
     "urgent": 8,
-    "high": 2,
+    "high": 3,
     "medium": 11
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "CMDUTHD1466676",
-      "COSU6444625540",
-      "CMDUCHN3116145",
-      "OOLU2166784680",
-      "CMDUCHN3095178",
-      "OOLU2166784670",
-      "MEDUYL789706",
-      "ONEYBKKG38865600",
-      "MEDUWG692272",
-      "ZIMUBKK80440481",
-      "OOLU2166784690",
-      "OOLU2320126090",
-      "MEDUWK745968",
+      "OOLU2166524280",
       "MEDUWK478768",
-      "OOLU2166524280"
+      "CMDUTHD1466676",
+      "MEDUWG692272",
+      "OOLU2166784690",
+      "MEDUWK745968",
+      "OOLU2166784670",
+      "CMDUCHN3095178",
+      "ONEYBKKG38865600",
+      "MEDUYL789706",
+      "COSU6444625540",
+      "OOLU2166784680",
+      "OOLU2320126090",
+      "ZIMUBKK80440481",
+      "CMDUCHN3116145"
     ],
     "no_tlx_hbl": [
-      "WLC60124865",
-      "WLC60301625",
       "WLC60216466",
+      "WLC60301626",
+      "WLC60301625",
       "WLC60205753",
       "WLC60301627",
-      "WLC60120505",
-      "WLC60124381",
       "WLC60213560",
+      "WLC60120505",
       "WLC60307413",
       "WLC60125060",
-      "WLC60301626"
+      "WLC60124381",
+      "WLC60124865"
     ],
     "an_no_prealert": [],
     "hold_bl": [],
