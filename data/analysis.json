@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-30T09:48:39.124135+08:00",
-  "total_emails": 31,
-  "business_emails": 25,
-  "pdf_count": 7,
+  "scan_time": "2026-03-30T10:19:12.904782+08:00",
+  "total_emails": 39,
+  "business_emails": 33,
+  "pdf_count": 16,
   "categories": {
-    "other_biz": 8,
+    "other_biz": 13,
     "inspection": 4,
-    "charge_confirm": 11,
+    "charge_confirm": 14,
     "booking": 1,
     "invoice": 1
   },
@@ -32,26 +32,50 @@
       "days": [
         "03/30"
       ]
+    },
+    "TERRASOULSUPERFOODS": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
+    },
+    "BETTERBODYFOODS": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
     "MSC": 5,
     "COSCO": 2,
     "OOCL": 6,
-    "ONE": 1,
-    "CMA-CGM": 3,
+    "ONE": 2,
+    "CMA-CGM": 6,
     "ZIM": 1
   },
   "carrier_fees": {},
-  "hbl_total": 13,
+  "hbl_total": 15,
   "mbl_total": 18,
   "all_hbls": [
+    "WLC50813210",
     "WLC60120505",
     "WLC60124381",
     "WLC60124865",
     "WLC60125060",
     "WLC60126287",
     "WLC60205753",
+    "WLC60211379",
     "WLC60213560",
     "WLC60216466",
     "WLC60217493",
@@ -82,7 +106,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 25
+    "2026-03-30": 33
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -104,7 +128,19 @@
       2
     ],
     [
+      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
+      2
+    ],
+    [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      2
+    ],
+    [
+      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      2
+    ],
+    [
+      "\"rita tang\" <rita.tang@wwl.cn>",
       2
     ],
     [
@@ -140,11 +176,19 @@
       1
     ],
     [
-      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
+      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
       1
     ],
     [
-      "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
+      "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
+      1
+    ],
+    [
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      1
+    ],
+    [
+      "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
       1
     ]
   ],
@@ -351,6 +395,32 @@
       "source": "RE: Re：    目的港逾期detention未付警示 --- WWL-SZN （东莞）",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Mon, 30 Mar 2026 09:18:46"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "PRE ALERT / 194GA00425 / WLCBTH260317883 / BATAM TO CHARLEST",
+      "source": "PRE ALERT / 194GA00425 / WLCBTH260317883 / BATAM TO CHARLEST",
+      "from": "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "date": "Mon, 30 Mar 2026 08:52:29"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "PRE ALERT / 194GA00424 / WLCBTH260317882 / BATAM TO CHARLEST",
+      "source": "PRE ALERT / 194GA00424 / WLCBTH260317882 / BATAM TO CHARLEST",
+      "from": "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "date": "Mon, 30 Mar 2026 08:52:34"
     },
     {
       "type": "cc_confirm",
@@ -604,59 +674,136 @@
       "source": "Charge confirm request /MBL:MEDUWK478768 /HBL:WLC60120505\r\n ",
       "from": "assistant@pltplt.com",
       "date": "Mon, 30 Mar 2026 09:05:12"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3095178",
+      "hbl": "WLC60125060",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: rita tang",
+      "contact": "",
+      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
+      "shipper": "NOTIFY",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
+      "source": "答复: Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC60125",
+      "from": "\"rita tang\" <rita.tang@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 09:56:32"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3116145",
+      "hbl": "WLC60213560",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: rita tang",
+      "contact": "",
+      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
+      "shipper": "NOTIFY",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
+      "source": "答复: Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213",
+      "from": "\"rita tang\" <rita.tang@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 09:58:59"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3095178",
+      "hbl": "WLC60125060",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: dtc.zengcaihong@wwl.cn",
+      "contact": "",
+      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
+      "shipper": "NOTIFY",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
+      "source": "Re: 答复: Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC6",
+      "from": "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 10:17:43"
     }
   ],
   "action_summary": {
-    "total": 22,
+    "total": 27,
     "urgent": 8,
-    "high": 3,
-    "medium": 11
+    "high": 5,
+    "medium": 14
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ZIMUBKK80440481",
-      "CMDUTHD1466676",
-      "MEDUWK478768",
-      "MEDUWG692272",
-      "CMDUCHN3095178",
-      "OOLU2166524280",
       "ONEYBKKG38865600",
-      "OOLU2166784680",
-      "OOLU2166784690",
       "OOLU2166784670",
       "CMDUCHN3116145",
       "MEDUYL789706",
-      "COSU6444363540",
       "MEDUYQ353300",
-      "COSU6444625540",
+      "COSU6444363540",
+      "MEDUWK478768",
+      "MEDUWG692272",
       "MEDUWK745968",
-      "OOLU2320126090"
+      "OOLU2166784680",
+      "OOLU2320126090",
+      "CMDUTHD1466676",
+      "ZIMUBKK80440481",
+      "COSU6444625540",
+      "OOLU2166524280",
+      "CMDUCHN3095178",
+      "OOLU2166784690"
     ],
     "no_tlx_hbl": [
-      "WLC60120505",
-      "WLC60124381",
+      "WLC60125060",
+      "WLC50813210",
+      "WLC60124865",
       "WLC60205753",
       "WLC60301627",
-      "WLC60124865",
-      "WLC60216466",
-      "WLC60126287",
-      "WLC60307413",
       "WLC60301626",
-      "WLC60125060",
+      "WLC60307413",
+      "WLC60120505",
+      "WLC60126287",
       "WLC60213560",
-      "WLC60301625"
+      "WLC60124381",
+      "WLC60301625",
+      "WLC60216466"
     ],
     "an_no_prealert": [],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 1,
-    "tlx_confirmed_hbl": 1
+    "tlx_confirmed_mbl": 2,
+    "tlx_confirmed_hbl": 2
   },
   "anomalies": {
     "cancel_it": [],
     "cod": [],
     "non_standard": [],
     "stolen": [],
-    "urgent": []
+    "urgent": [
+      {
+        "subject": "答复: AN    HBL#WLC50813210   MBL#ONEYSZPFQ7086300  POL:   SHE",
+        "from": "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 09:52:27"
+      }
+    ]
   },
   "neural_network": {
     "entities": 85,
