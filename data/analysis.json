@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T16:01:52.554003+08:00",
-  "total_emails": 123,
-  "business_emails": 113,
-  "pdf_count": 77,
+  "scan_time": "2026-03-30T16:33:42.041354+08:00",
+  "total_emails": 134,
+  "business_emails": 123,
+  "pdf_count": 80,
   "categories": {
-    "other_biz": 68,
+    "other_biz": 73,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 2,
-    "prealert": 17,
+    "prealert": 22,
     "arrival": 2,
     "cancel": 2
   },
@@ -87,17 +87,18 @@
     }
   },
   "carriers": {
-    "MSC": 17,
+    "MSC": 18,
     "COSCO": 15,
     "OOCL": 18,
-    "ONE": 12,
+    "ONE": 17,
     "CMA-CGM": 12,
-    "ZIM": 4,
-    "Hapag-Lloyd": 4
+    "ZIM": 5,
+    "Hapag-Lloyd": 5,
+    "HMM": 2
   },
   "carrier_fees": {},
-  "hbl_total": 40,
-  "mbl_total": 44,
+  "hbl_total": 43,
+  "mbl_total": 48,
   "all_hbls": [
     "WLC50522982",
     "WLC50813210",
@@ -113,6 +114,7 @@
     "WLC60208507",
     "WLC60211379",
     "WLC60213560",
+    "WLC60215567",
     "WLC60215570",
     "WLC60216138",
     "WLC60216466",
@@ -120,6 +122,7 @@
     "WLC60301625",
     "WLC60301626",
     "WLC60301627",
+    "WLC60301974",
     "WLC60306398",
     "WLC60307317",
     "WLC60307318",
@@ -138,6 +141,7 @@
     "WLC60314959",
     "WLC60315533",
     "WLC60315850",
+    "WLC60317120",
     "WLC60401336"
   ],
   "all_mbls": [
@@ -167,8 +171,11 @@
     "MEDUYQ353300",
     "ONEYBKKG38865600",
     "ONEYBTMG00382500",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "ONEYNBOG45453700",
     "ONEYSGNG55445900",
+    "ONEYSHAG81060500",
     "OOLU2166524280",
     "OOLU2166784670",
     "OOLU2166784680",
@@ -184,11 +191,12 @@
     "OOLU2320126090",
     "OOLU2322301770",
     "OOLU2322439640",
-    "ZIMUBKK80440481"
+    "ZIMUBKK80440481",
+    "ZIMUNGB20218977"
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 115
+    "2026-03-30": 126
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -203,7 +211,7 @@
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      18
+      20
     ],
     [
       "assistant@pltplt.com",
@@ -230,6 +238,10 @@
       4
     ],
     [
+      "\"Sienna\" <sienna.ji@wwl.cn>",
+      3
+    ],
+    [
       "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
       3
     ],
@@ -246,11 +258,11 @@
       2
     ],
     [
-      "\"Sienna\" <sienna.ji@wwl.cn>",
+      "\"Wang Jiong\" <wangjiong@wwl.cn>",
       2
     ],
     [
-      "\"Wang Jiong\" <wangjiong@wwl.cn>",
+      "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
       2
     ],
     [
@@ -275,10 +287,6 @@
     ],
     [
       "Will Sun <willsun@wwl.cn>",
-      2
-    ],
-    [
-      "\"Clement Po\" <cpo@tnts.us>",
       2
     ]
   ],
@@ -1192,70 +1200,97 @@
       "source": "回复：   DAP DOCS FOR  HBL#WLC60200080 MBL#MEDUKG193320 TO USCH",
       "from": "Will Sun <willsun@wwl.cn>",
       "date": "Mon, 30 Mar 2026 11:40:10"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "ONEYSHAG81060500",
+      "customer": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "内部: Daniel Yan",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "pre-alert WLCSHA260317120/CONTI CORTESIA / 012E/ONEYSHAG8106",
+      "from": "\"Daniel Yan\" <sha.ops46@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 16:18:57"
     }
   ],
   "action_summary": {
-    "total": 44,
+    "total": 45,
     "urgent": 11,
     "high": 15,
-    "medium": 18
+    "medium": 19
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU8040582340",
-      "MEDUWK745968",
-      "MEDUWG692272",
-      "CMDUCHN3116145",
       "COSU6447551240",
-      "OOLU2166784690",
+      "COSU8040582340",
       "HLCUSHA2603BIYR0",
-      "MEDUYQ353300",
-      "ONEYBKKG38865600",
-      "MEDUYL789706",
-      "HLCUNK2251220417",
-      "COSU6447544660",
-      "COSU6444363540",
       "OOLU2166524280",
-      "OOLU2166784680",
-      "OOLU2167100650",
+      "MEDUYQ353300",
+      "COSU6447544660",
       "HLCUSHA2603BJKC0",
-      "ONEYBTMG00382500",
-      "CMDUCHN3097590",
-      "ZIMUBKK80440481",
-      "OOLU2167100640",
-      "COSU6447544630",
+      "ONEYSHAG81060500",
+      "ONEYBTMG00383600",
+      "MEDUYL789706",
+      "ONEYBTMG00521700",
+      "OOLU2166784680",
+      "MEDUWK745968",
       "MEDUWK478768",
-      "OOLU2320126090",
-      "OOLU2166784670",
+      "ZIMUNGB20218977",
+      "CMDUCHN3095178",
       "MEDUKG193320",
+      "OOLU2166784670",
+      "CMDUCHN3097590",
+      "COSU6444363540",
+      "OOLU2167100640",
+      "OOLU2320126090",
+      "ONEYBTMG00382500",
+      "MEDUWG692272",
+      "HLCUNK2251220417",
+      "OOLU2166784690",
+      "CMDUCHN3116145",
       "COSU6444625540",
-      "CMDUCHN3095178"
+      "ZIMUBKK80440481",
+      "COSU6447544630",
+      "ONEYBKKG38865600",
+      "OOLU2167100650"
     ],
     "no_tlx_hbl": [
-      "WLC60313836",
-      "WLC60312633",
-      "WLC60312647",
-      "WLC60207645",
+      "WLC60216466",
+      "WLC50813210",
       "WLC60307413",
-      "WLC60312643",
-      "WLC60205753",
-      "WLC60312639",
-      "WLC60213560",
+      "WLC60215570",
+      "WLC60312641",
+      "WLC60301974",
+      "WLC60200080",
+      "WLC60124381",
       "WLC50522982",
+      "WLC60301625",
+      "WLC60213560",
+      "WLC60126287",
+      "WLC60208507",
+      "WLC60207645",
+      "WLC60312647",
+      "WLC60215567",
       "WLC60120505",
       "WLC60301626",
-      "WLC60125060",
-      "WLC60216466",
-      "WLC60126287",
-      "WLC60124381",
-      "WLC50813210",
-      "WLC60200080",
-      "WLC60312641",
-      "WLC60301625",
       "WLC60216138",
-      "WLC60208507",
       "WLC60301627",
-      "WLC60215570"
+      "WLC60317120",
+      "WLC60205753",
+      "WLC60312643",
+      "WLC60313836",
+      "WLC60312639",
+      "WLC60312633",
+      "WLC60125060"
     ],
     "an_no_prealert": [
       "OOLU2167100640",
@@ -1356,6 +1391,12 @@
         "from": "\"Yancy Yu\" <szn.yancyyu@wwl.cn",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 15:48:34"
+      },
+      {
+        "subject": "答复: AN    HBL#WLC50813210   MBL#ONEYSZPFQ7086300  POL:   SHE",
+        "from": "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 16:05:52"
       }
     ]
   },
