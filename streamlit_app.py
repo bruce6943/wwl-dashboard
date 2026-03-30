@@ -14,6 +14,8 @@ from datetime import datetime, timedelta
 import re
 import random
 
+# v4.1 layout: tasks → events → completed (2026-03-30 02:30)
+
 # ─── Page Config ───
 st.set_page_config(
     page_title="WWL运营指挥中心 v5.0",
@@ -230,7 +232,7 @@ header {visibility: hidden;}
 
 
 # ─── Load Data ───
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=60)
 def load_all_data():
     data = {}
     files = {
