@@ -723,29 +723,27 @@ with tabs[0]:
                 detail_html += f" +{len(details)-4}项"
             lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
 
-        # 行6: 找谁(只显示外部联系方向 — 收货人联系方式 或 委托方分公司)
+        # 行6: 找谁(收货人联系方式 / 委托方WWL分公司 / origin操作人)
         wwl_sender = t.get("wwl_sender", "")
         wwl_branch = t.get("wwl_branch", "")
-        contact_line = ""
+        who_lines = []
 
-        # 优先显示收货人/客户方联系人(能直接联系的)
+        # A: 收货人/客户方联系人
         if ext_contact:
-            contact_line = f'<span style="color:#00c853;font-weight:600;">联系收货人: {ext_contact[:60]}</span>'
+            who_lines.append(f'<span style="color:#00c853;font-weight:600;">收货人: {ext_contact[:60]}</span>')
         elif contact:
-            contact_line = f'<span style="color:#00c853;font-weight:600;">联系客户: {contact[:60]}</span>'
+            who_lines.append(f'<span style="color:#00c853;font-weight:600;">客户方: {contact[:60]}</span>')
 
-        # 委托方(WWL哪个分公司发给我们的)
-        wwl_line = ""
+        # B: 委托方(WWL哪个分公司发给我们的)
         if wwl_sender and wwl_branch.startswith("WWL"):
-            wwl_line = f'<span style="color:#ff9800;font-weight:600;">找: {wwl_sender[:45]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span>'
+            who_lines.append(f'<span style="color:#ff9800;font-weight:600;">找: {wwl_sender[:45]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span>')
 
-        if contact_line and wwl_line:
-            lines.append(f'<div style="font-size:12px;margin:3px 0;">{contact_line}</div>')
-            lines.append(f'<div style="font-size:12px;">{wwl_line}</div>')
-        elif wwl_line:
-            lines.append(f'<div style="font-size:12px;margin:3px 0;">{wwl_line}</div>')
-        elif contact_line:
-            lines.append(f'<div style="font-size:12px;margin:3px 0;">{contact_line}</div>')
+        # C: 如果A和B都没有，显示origin端操作人(最后的兜底)
+        if not who_lines and internal:
+            who_lines.append(f'<span style="color:#2196f3;">Origin操作: {internal}</span>')
+
+        for wl in who_lines:
+            lines.append(f'<div style="font-size:12px;margin:2px 0;">{wl}</div>')
 
         body = "".join(lines)
         return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
