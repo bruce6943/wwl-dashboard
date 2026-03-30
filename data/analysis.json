@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T13:55:43.162333+08:00",
-  "total_emails": 80,
-  "business_emails": 71,
-  "pdf_count": 33,
+  "scan_time": "2026-03-30T14:26:54.795955+08:00",
+  "total_emails": 91,
+  "business_emails": 82,
+  "pdf_count": 52,
   "categories": {
-    "other_biz": 36,
+    "other_biz": 45,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 1,
-    "prealert": 10,
+    "prealert": 12,
     "arrival": 2
   },
   "customers": {
@@ -86,16 +86,17 @@
     }
   },
   "carriers": {
-    "MSC": 8,
-    "COSCO": 13,
-    "OOCL": 14,
-    "ONE": 7,
+    "MSC": 9,
+    "COSCO": 15,
+    "OOCL": 15,
+    "ONE": 8,
     "CMA-CGM": 11,
-    "ZIM": 3
+    "ZIM": 3,
+    "Hapag-Lloyd": 3
   },
   "carrier_fees": {},
-  "hbl_total": 28,
-  "mbl_total": 33,
+  "hbl_total": 35,
+  "mbl_total": 39,
   "all_hbls": [
     "WLC50813210",
     "WLC60120505",
@@ -119,12 +120,19 @@
     "WLC60307317",
     "WLC60307318",
     "WLC60307413",
+    "WLC60308414",
     "WLC60308623",
+    "WLC60312633",
+    "WLC60312639",
     "WLC60312641",
     "WLC60312643",
     "WLC60312647",
+    "WLC60313836",
+    "WLC60314691",
     "WLC60314959",
-    "WLC60315533"
+    "WLC60315533",
+    "WLC60315850",
+    "WLC60401336"
   ],
   "all_mbls": [
     "CMDUCHN3095178",
@@ -132,11 +140,15 @@
     "CMDUTHD1466676",
     "COSU6444363540",
     "COSU6444625540",
+    "COSU6446482360",
     "COSU6447544630",
     "COSU6447544660",
     "COSU6447551240",
     "COSU8040582340",
+    "COSU9506295860",
     "COSU9506320440",
+    "HLCUSHA2603BIYR0",
+    "HLCUSHA2603BJKC0",
     "MEDUKE699088",
     "MEDUKG193320",
     "MEDUWG692272",
@@ -146,6 +158,7 @@
     "MEDUYQ353300",
     "ONEYBKKG38865600",
     "ONEYBTMG00382500",
+    "ONEYNBOG45453700",
     "OOLU2166524280",
     "OOLU2166784670",
     "OOLU2166784680",
@@ -155,6 +168,7 @@
     "OOLU2167100650",
     "OOLU2167175490",
     "OOLU2167175510",
+    "OOLU2167191220",
     "OOLU2167307120",
     "OOLU2320126090",
     "OOLU2322301770",
@@ -163,7 +177,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 72
+    "2026-03-30": 83
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -182,14 +196,26 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      9
+      10
     ],
     [
       "\"rita tang\" <rita.tang@wwl.cn>",
-      6
+      7
+    ],
+    [
+      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
+      7
+    ],
+    [
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
+      4
     ],
     [
       "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      3
+    ],
+    [
+      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
       3
     ],
     [
@@ -201,19 +227,15 @@
       3
     ],
     [
-      "\"Winnie Shen\" <sha.ops4@wwl.cn>",
-      3
-    ],
-    [
       "Krizza Mallari <ops@pinnacleteam.com>",
       2
     ],
     [
-      "\"Wang Jiong\" <wangjiong@wwl.cn>",
+      "\"Sienna\" <sienna.ji@wwl.cn>",
       2
     ],
     [
-      "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
+      "\"Wang Jiong\" <wangjiong@wwl.cn>",
       2
     ],
     [
@@ -237,10 +259,6 @@
       2
     ],
     [
-      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
-      2
-    ],
-    [
       "LinkedIn <notifications-noreply@linkedin.com>",
       1
     ],
@@ -250,10 +268,6 @@
     ],
     [
       "LinkedIn <messages-noreply@linkedin.com>",
-      1
-    ],
-    [
-      "Ergin Ismayil <eismayil@balenaprojects.com>",
       1
     ]
   ],
@@ -619,6 +633,26 @@
       "source": "RE: FEEHAND SHIPMENT SA MBL#OOLU2167032400, HBL#WLC60217493A",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Mon, 30 Mar 2026 10:46:38"
+    },
+    {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "ONEYNBOG45453700",
+      "customer": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "内部: ngb.ops18@wwl.cn",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "FREE HAND SA FOR/MBL:ONEYNBOG45453700--HBL:WLC60401336/  40H",
+      "from": "\"ngb.ops18@wwl.cn\" <ngb.ops18@wwl.cn>",
+      "date": "Mon, 30 Mar 2026 14:09:26"
     },
     {
       "type": "cc_confirm",
@@ -1027,69 +1061,95 @@
     }
   ],
   "action_summary": {
-    "total": 37,
+    "total": 38,
     "urgent": 10,
-    "high": 9,
+    "high": 10,
     "medium": 18
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU6444363540",
-      "COSU6447551240",
-      "MEDUWK478768",
-      "MEDUYQ353300",
-      "COSU8040582340",
-      "ONEYBKKG38865600",
-      "ONEYBTMG00382500",
-      "ZIMUBKK80440481",
-      "MEDUKG193320",
       "COSU6447544660",
-      "CMDUCHN3095178",
-      "OOLU2167100650",
-      "MEDUWG692272",
-      "OOLU2166784670",
-      "OOLU2167100640",
-      "CMDUCHN3116145",
-      "MEDUWK745968",
+      "COSU6447551240",
       "OOLU2166524280",
-      "MEDUYL789706",
-      "OOLU2320126090",
+      "HLCUSHA2603BJKC0",
+      "COSU6444625540",
+      "CMDUCHN3116145",
       "OOLU2166784690",
       "COSU6447544630",
+      "ONEYBKKG38865600",
+      "OOLU2167100650",
+      "COSU8040582340",
+      "ZIMUBKK80440481",
+      "MEDUYQ353300",
+      "MEDUWK745968",
+      "CMDUCHN3095178",
+      "OOLU2320126090",
+      "MEDUYL789706",
+      "COSU6444363540",
+      "OOLU2167100640",
+      "MEDUKG193320",
+      "HLCUSHA2603BIYR0",
+      "OOLU2166784670",
       "OOLU2166784680",
-      "COSU6444625540"
+      "MEDUWK478768",
+      "MEDUWG692272",
+      "ONEYBTMG00382500"
     ],
     "no_tlx_hbl": [
-      "WLC60120505",
-      "WLC60312647",
-      "WLC50813210",
-      "WLC60312643",
-      "WLC60301626",
-      "WLC60208507",
       "WLC60205753",
-      "WLC60301625",
-      "WLC60307413",
-      "WLC60215570",
-      "WLC60124381",
-      "WLC60216466",
       "WLC60312641",
-      "WLC60200080",
-      "WLC60213560",
-      "WLC60301627",
       "WLC60125060",
-      "WLC60126287"
+      "WLC60301627",
+      "WLC60215570",
+      "WLC60301626",
+      "WLC60312643",
+      "WLC60312639",
+      "WLC60216466",
+      "WLC60301625",
+      "WLC60208507",
+      "WLC60126287",
+      "WLC60312633",
+      "WLC60312647",
+      "WLC60120505",
+      "WLC60124381",
+      "WLC50813210",
+      "WLC60307413",
+      "WLC60313836",
+      "WLC60213560",
+      "WLC60200080"
     ],
     "an_no_prealert": [
-      "OOLU2167100650",
-      "OOLU2167100640"
+      "OOLU2167100640",
+      "OOLU2167100650"
     ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 10,
-    "tlx_confirmed_hbl": 10
+    "tlx_confirmed_mbl": 14,
+    "tlx_confirmed_hbl": 14
   },
   "anomalies": {
     "cancel_it": [],
-    "cod": [],
+    "cod": [
+      {
+        "subject": "SA FOR HB/L: WLC60312639  MB/L:HLCUSHA2603BJKC0   FROM SHANG",
+        "from": "\"Winnie Shen\" <sha.ops4@wwl.cn",
+        "date": "Mon, 30 Mar 2026 13:59:01"
+      },
+      {
+        "subject": "答复: SA FOR HB/L: WLC60312639  MB/L:HLCUSHA2603BJKC0   FROM S",
+        "from": "\"Winnie Shen\" <sha.ops4@wwl.cn",
+        "date": "Mon, 30 Mar 2026 13:59:58"
+      },
+      {
+        "subject": "SA FOR HB/L: WLC60312633  MB/L:HLCUSHA2603BIYR0  FROM SHANGH",
+        "from": "\"Winnie Shen\" <sha.ops4@wwl.cn",
+        "date": "Mon, 30 Mar 2026 14:00:45"
+      },
+      {
+        "subject": "SA FOR HB/L: WLC60313836  MB/L:HDMUSHAZ3L775500  FROM SHANGH",
+        "from": "\"Winnie Shen\" <sha.ops4@wwl.cn",
+        "date": "Mon, 30 Mar 2026 14:02:28"
+      }
+    ],
     "non_standard": [],
     "stolen": [],
     "urgent": [
