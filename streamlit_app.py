@@ -1772,7 +1772,7 @@ with tabs[7]:
 
     if carriers_30d:
         c_rows = []
-        for name, vol in sorted(carriers_30d.items(), key=lambda x: x[1], reverse=True):
+        for name, vol in sorted(carriers_30d.items(), key=lambda x: x[1] if isinstance(x[1], (int, float)) else x[1].get('emails', 0) if isinstance(x[1], dict) else 0, reverse=True):
             vinfo = carrier_vendors.get(name, {})
             pm = vinfo.get("performance_metrics", {}) if vinfo else {}
             sc = vinfo.get("scoring_components", {}) if vinfo else {}
