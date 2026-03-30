@@ -747,13 +747,13 @@ with tabs[0]:
                 "customer": gt.get("customer", ""),
                 "wwl_sender": gt.get("wwl_sender", ""),
                 "wwl_branch": gt.get("wwl_branch", ""),
-                "amount": "",
+                "amount": gt.get("amount", ""),
                 "contact": "",
                 "consignee": "",
                 "shipper": "",
                 "internal_staff": "",
                 "customer_contact": "",
-                "detail_lines": [f"邮件数:{gt.get('email_count',0)}", f"最后:{gt.get('last_seen','')}"] if gt.get('email_count') else [],
+                "detail_lines": [gt.get('detail','')] if gt.get('detail') else ([f"邮件数:{gt.get('email_count',0)}", f"最后:{gt.get('last_seen','')}"] if gt.get('email_count') else []),
                 "assignee": "",
             })
         # 补充欠费催收任务(去重)
