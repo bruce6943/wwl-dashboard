@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T19:13:53.060225+08:00",
-  "total_emails": 174,
-  "business_emails": 160,
-  "pdf_count": 123,
+  "scan_time": "2026-03-30T19:46:01.571499+08:00",
+  "total_emails": 179,
+  "business_emails": 164,
+  "pdf_count": 129,
   "categories": {
-    "other_biz": 101,
+    "other_biz": 104,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 3,
     "invoice": 3,
     "overdue": 2,
-    "prealert": 28,
+    "prealert": 29,
     "arrival": 2,
     "cancel": 2
   },
@@ -103,12 +103,31 @@
       "days": [
         "03/30"
       ]
+    },
+    "DTC SA": {
+      "emails": 3,
+      "hbl_count": 3,
+      "mbl_count": 3,
+      "active_days": 1,
+      "hbls": [
+        "WLC60305927",
+        "WLC60305929",
+        "WLC60310591"
+      ],
+      "mbls": [
+        "COSU6446772000",
+        "OOLU2167100640",
+        "OOLU2167100650"
+      ],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
     "MSC": 18,
-    "COSCO": 17,
-    "OOCL": 18,
+    "COSCO": 18,
+    "OOCL": 20,
     "ONE": 23,
     "CMA-CGM": 13,
     "ZIM": 10,
@@ -117,8 +136,8 @@
     "Evergreen": 1
   },
   "carrier_fees": {},
-  "hbl_total": 68,
-  "mbl_total": 55,
+  "hbl_total": 72,
+  "mbl_total": 56,
   "all_hbls": [
     "WLC40906751",
     "WLC41218534",
@@ -164,12 +183,16 @@
     "WLC60301626",
     "WLC60301627",
     "WLC60301974",
+    "WLC60305927",
+    "WLC60305929",
     "WLC60306398",
     "WLC60307317",
     "WLC60307318",
     "WLC60307413",
     "WLC60308414",
     "WLC60308623",
+    "WLC60309086",
+    "WLC60310591",
     "WLC60310757",
     "WLC60310826",
     "WLC60311287",
@@ -198,6 +221,7 @@
     "COSU6444363540",
     "COSU6444625540",
     "COSU6446482360",
+    "COSU6446772000",
     "COSU6447544630",
     "COSU6447544660",
     "COSU6447551240",
@@ -248,7 +272,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 166
+    "2026-03-30": 171
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -322,6 +346,14 @@
       3
     ],
     [
+      "\"Henry Chen\" <sha.ops55@wwl.cn>",
+      3
+    ],
+    [
+      "LinkedIn <notifications-noreply@linkedin.com>",
+      2
+    ],
+    [
       "LinkedIn <messages-noreply@linkedin.com>",
       2
     ],
@@ -331,14 +363,6 @@
     ],
     [
       "\"Wang Jiong\" <wangjiong@wwl.cn>",
-      2
-    ],
-    [
-      "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
-      2
-    ],
-    [
-      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
       2
     ]
   ],
@@ -1370,94 +1394,92 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU6444625540",
-      "ONEYBTMG00521700",
-      "ONEYBTMG00383600",
-      "COSU6447551240",
-      "OOLU2167100650",
-      "ONEYBTMG00382500",
       "HLCUNK2251220417",
+      "ONEYBTMG00382500",
       "MEDUWK478768",
-      "ONEYSHAG81060500",
-      "COSU6444363540",
-      "HLCUSHA2603BJKC0",
-      "CMDUCHN3116145",
-      "MEDUKG193320",
-      "HLCUSHA2603BLLR4",
-      "ONEYBKKG38865600",
-      "HLCUNHN250731902",
-      "COSU6447544630",
-      "OOLU2166784680",
-      "OOLU2166784670",
-      "OOLU2166524280",
-      "COSU6447544660",
-      "HLCUSHA2603BIYR0",
-      "MEDUYQ353300",
-      "MEDUWK745968",
-      "ZIMUNGB20218977",
       "CMDUCHN3095178",
-      "MEDUWG692272",
-      "MEDUYL789706",
-      "OOLU2320126090",
+      "ONEYBTMG00521700",
+      "OOLU2166784670",
       "ZIMUBKK80440481",
-      "CMDUCHN3097590",
+      "MEDUWK745968",
+      "HLCUNHN250731902",
+      "ONEYBTMG00383600",
+      "MEDUKG193320",
       "COSU6421875990",
+      "OOLU2320126090",
+      "ZIMUNGB20218977",
+      "OOLU2166784680",
+      "ONEYBKKG38865600",
+      "COSU6444625540",
+      "OOLU2166524280",
+      "HLCUSHA2603BLLR4",
+      "COSU6447544660",
+      "COSU6447551240",
+      "MEDUWG692272",
+      "MEDUYQ353300",
+      "HLCUSHA2603BIYR0",
+      "CMDUCHN3097590",
+      "HLCUSHA2603BJKC0",
+      "COSU6447544630",
+      "CMDUCHN3116145",
       "OOLU2166784690",
       "COSU8040582340",
-      "OOLU2167100640"
+      "ONEYSHAG81060500",
+      "COSU6444363540",
+      "MEDUYL789706"
     ],
     "no_tlx_hbl": [
-      "WLC60312633",
-      "WLC50813210",
-      "WLC50625026",
-      "WLC60215570",
-      "WLC60312647",
-      "WLC50805801",
-      "WLC60208507",
-      "WLC50600407",
-      "WLC60216466",
-      "WLC60313836",
-      "WLC60301625",
-      "WLC60316755",
-      "WLC50411255",
-      "WLC60200080",
-      "WLC60216138",
-      "WLC50900465",
-      "WLC60205753",
-      "WLC60301627",
-      "WLC60125060",
-      "WLC41218534",
-      "WLC50900744",
       "WLC60213560",
-      "WLC60301626",
-      "WLC60312639",
-      "WLC50900736",
-      "WLC60312643",
-      "WLC60207645",
-      "WLC60317120",
-      "WLC60307413",
+      "WLC50600407",
       "WLC50700253",
-      "WLC50714544",
+      "WLC50900744",
+      "WLC50805801",
+      "WLC60124381",
+      "WLC50415075",
+      "WLC60301625",
+      "WLC60207645",
+      "WLC60216466",
+      "WLC41218534",
+      "WLC60215567",
+      "WLC60307413",
+      "WLC60312643",
+      "WLC60126287",
+      "WLC60313836",
+      "WLC60312633",
+      "WLC60312639",
+      "WLC60317120",
+      "WLC50625026",
+      "WLC60208507",
+      "WLC60216138",
+      "WLC60205753",
+      "WLC50612177",
+      "WLC60301626",
+      "WLC60125060",
+      "WLC60301627",
+      "WLC50522982",
+      "WLC60200080",
       "WLC60312641",
       "WLC60301974",
-      "WLC60124381",
-      "WLC50522982",
-      "WLC50415075",
-      "WLC60215567",
-      "WLC40906751",
-      "WLC50612177",
-      "WLC50700802",
       "WLC60120505",
-      "WLC60126287",
-      "WLC50109816"
+      "WLC50109816",
+      "WLC50813210",
+      "WLC50700802",
+      "WLC60215570",
+      "WLC50900736",
+      "WLC50714544",
+      "WLC40906751",
+      "WLC50411255",
+      "WLC60312647",
+      "WLC50900465",
+      "WLC60316755"
     ],
     "an_no_prealert": [
       "OOLU2167100650",
       "OOLU2167100640"
     ],
     "hold_bl": [],
-    "tlx_confirmed_mbl": 24,
-    "tlx_confirmed_hbl": 25
+    "tlx_confirmed_mbl": 27,
+    "tlx_confirmed_hbl": 29
   },
   "anomalies": {
     "cancel_it": [
@@ -1600,7 +1622,7 @@
     "relationships": 1,
     "contacts_new": 0,
     "contacts_total": 365,
-    "daily_connections": 7,
+    "daily_connections": 10,
     "new_domains": [
       "romesales.com"
     ]
@@ -1639,6 +1661,21 @@
     {
       "from": "REACH INDUSTRY",
       "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "COSCO",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "OOCL",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "OOCL",
       "type": "carrier"
     }
   ]
