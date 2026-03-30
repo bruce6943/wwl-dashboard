@@ -465,7 +465,7 @@
       "wwl_sender": "Gali.gan@wwl.cn (gali.gan@wwl.cn)",
       "wwl_branch": "WWL中国",
       "action": "Gali.gan@wwl.cn等回复 — Re: 回复：   DAP DOCS FOR  HBL#WLC60200080 MBL#M",
-      "email_count": 1,
+      "email_count": 2,
       "last_seen": "2026-03-30"
     },
     {
@@ -510,19 +510,6 @@
     {
       "type": "awaiting_reply",
       "priority": "high",
-      "title": "等回复 | Gali.gan@wwl.cn",
-      "mbl": "MEDUKG193320",
-      "carrier": "",
-      "customer": "",
-      "wwl_sender": "Gali.gan@wwl.cn (gali.gan@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "Gali.gan@wwl.cn等回复 — Re: 回复：  DAP DOCS FOR  HBL#WLC60200080 MBL#ME",
-      "email_count": 1,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "awaiting_reply",
-      "priority": "high",
       "title": "等回复 | sha.ops66",
       "mbl": "CMDUCHN3116145",
       "carrier": "",
@@ -543,7 +530,7 @@
       "wwl_sender": "bkk.rie@wwl.sg",
       "wwl_branch": "WWL新加坡",
       "action": "WWL新加坡等回复 — RE: PRE-ALERT - MBL : CMDUTHD1466676 l HBL : ",
-      "email_count": 1,
+      "email_count": 2,
       "last_seen": "2026-03-30"
     },
     {
@@ -584,23 +571,10 @@
       "action": "dtc.zengcaihong@wwl.cn等回复 — Re: 答复: Charge confirm request /MBL:CMDUCHN30",
       "email_count": 1,
       "last_seen": "2026-03-30"
-    },
-    {
-      "type": "awaiting_reply",
-      "priority": "high",
-      "title": "等回复 | WWL新加坡",
-      "mbl": "CMDUTHD1466676",
-      "carrier": "",
-      "customer": "REACH",
-      "wwl_sender": "bkk.rie@wwl.sg",
-      "wwl_branch": "WWL新加坡",
-      "action": "WWL新加坡等回复 — RE: PRE-ALERT - MBL : CMDUTHD1466676 l HBL : ",
-      "email_count": 1,
-      "last_seen": "2026-03-30"
     }
   ],
   "stats": {
-    "total": 46,
+    "total": 44,
     "urgent": 16,
     "high": 30
   }

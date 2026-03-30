@@ -1,15 +1,5 @@
 [
   {
-    "mbl": "CMDUCHN3095178",
-    "hbl": "WLC60125060",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "$40.00",
-    "charge_type": "Container maintenance Fee at d",
-    "eta": "2026-04-07",
-    "date": "2026-03-30"
-  },
-  {
     "mbl": "CMDUCHN3116145",
     "hbl": "WLC60213560",
     "carrier": "CMA-CGM",
@@ -17,7 +7,7 @@
     "amount": "$40.00",
     "charge_type": "Container maintenance Fee at d",
     "eta": "2026-04-07",
-    "date": "2026-03-30"
+    "email_count": 6
   },
   {
     "mbl": "CMDUCHN3095178",
@@ -27,7 +17,7 @@
     "amount": "$40.00",
     "charge_type": "Container maintenance Fee at d",
     "eta": "2026-04-07",
-    "date": "2026-03-30"
+    "email_count": 6
   },
   {
     "mbl": "MEDUWK478768",
@@ -36,8 +26,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-02-17",
-    "date": "2026-03-29"
+    "eta": "",
+    "email_count": 2
   },
   {
     "mbl": "MEDUWK745968",
@@ -46,8 +36,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-06",
-    "date": "2026-03-29"
+    "eta": "",
+    "email_count": 2
   },
   {
     "mbl": "MEDUYL789706",
@@ -56,48 +46,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-20",
-    "date": "2026-03-29"
-  },
-  {
-    "mbl": "",
-    "hbl": "WLC60307413",
-    "carrier": "",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-07",
-    "date": "2026-03-29"
-  },
-  {
-    "mbl": "OOLU2166784690",
-    "hbl": "WLC60301625",
-    "carrier": "OOCL",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-03",
-    "date": "2026-03-28"
-  },
-  {
-    "mbl": "OOLU2166784680",
-    "hbl": "WLC60301626",
-    "carrier": "OOCL",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-03",
-    "date": "2026-03-28"
-  },
-  {
-    "mbl": "OOLU2166784670",
-    "hbl": "WLC60301627",
-    "carrier": "OOCL",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-03",
-    "date": "2026-03-28"
+    "eta": "",
+    "email_count": 2
   },
   {
     "mbl": "ZIMUBKK80440481",
@@ -106,28 +56,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-16",
-    "date": "2026-03-28"
-  },
-  {
-    "mbl": "CMDUCHN3095178",
-    "hbl": "WLC60125060",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-07",
-    "date": "2026-03-28"
-  },
-  {
-    "mbl": "CMDUCHN3116145",
-    "hbl": "WLC60213560",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-07",
-    "date": "2026-03-28"
+    "eta": "",
+    "email_count": 3
   },
   {
     "mbl": "CMDUTHD1466676",
@@ -136,18 +66,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-06",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "CMDUCHN3116145",
-    "hbl": "WLC60213560",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "$40.00",
-    "charge_type": "Container maintenance Fee at d",
-    "eta": "2026-04-07",
-    "date": "2026-03-27"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "OOLU2166784690",
@@ -156,8 +76,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-04",
-    "date": "2026-03-27"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "OOLU2166784680",
@@ -166,18 +86,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-04",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "CMDUCHN3095178",
-    "hbl": "WLC60125060",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "$40.00",
-    "charge_type": "Container maintenance Fee at d",
-    "eta": "2026-04-07",
-    "date": "2026-03-27"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "OOLU2166784670",
@@ -186,108 +96,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-04",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "OOLU2166704660",
-    "hbl": "WLC60215317",
-    "carrier": "OOCL",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-04",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "ZIMUNGB20219787",
-    "hbl": "WLC60208360",
-    "carrier": "ZIM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-15",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWG959531",
-    "hbl": "WLC60213673",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-02",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWA866914",
-    "hbl": "WLC60126359",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-02",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWG881552",
-    "hbl": "WLC60126351",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-31",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWI613169",
-    "hbl": "WLC60208380",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-31",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWG694617",
-    "hbl": "WLC60121109",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-27",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "MEDUWG692272",
-    "hbl": "WLC60121074",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-27",
-    "date": "2026-03-27"
-  },
-  {
-    "mbl": "CMDUTHD1483918",
-    "hbl": "WLC60216402",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-05",
-    "date": "2026-03-26"
-  },
-  {
-    "mbl": "CMDUTHD1483914",
-    "hbl": "WLC60216400",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-04-05",
-    "date": "2026-03-26"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "CMDUTHD1483494",
@@ -296,38 +106,28 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-05",
-    "date": "2026-03-26"
+    "eta": "",
+    "email_count": 6
   },
   {
-    "mbl": "MEDUWG899430",
-    "hbl": "WLC60124775",
-    "carrier": "MSC",
+    "mbl": "CMDUTHD1483914",
+    "hbl": "WLC60216400",
+    "carrier": "CMA-CGM",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-31",
-    "date": "2026-03-26"
+    "eta": "",
+    "email_count": 6
   },
   {
-    "mbl": "MEDUWI613169",
-    "hbl": "WLC60208380",
-    "carrier": "MSC",
+    "mbl": "CMDUTHD1483918",
+    "hbl": "WLC60216402",
+    "carrier": "CMA-CGM",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-30",
-    "date": "2026-03-26"
-  },
-  {
-    "mbl": "",
-    "hbl": "WLC60121377",
-    "carrier": "",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-10",
-    "date": "2026-03-26"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWG959531",
@@ -336,8 +136,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-01",
-    "date": "2026-03-26"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWA866914",
@@ -346,38 +146,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-01",
-    "date": "2026-03-26"
-  },
-  {
-    "mbl": "MEDUWK591388",
-    "hbl": "WLC60202334",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-02-27",
-    "date": "2026-03-25"
-  },
-  {
-    "mbl": "MEDUWG694617",
-    "hbl": "WLC60121109",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-28",
-    "date": "2026-03-25"
-  },
-  {
-    "mbl": "MEDUWG692272",
-    "hbl": "WLC60121074",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-28",
-    "date": "2026-03-25"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWG899430",
@@ -386,28 +156,28 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-01",
-    "date": "2026-03-25"
+    "eta": "",
+    "email_count": 4
   },
   {
-    "mbl": "ONEYTSNG03788600",
-    "hbl": "WLC60119494",
-    "carrier": "ONE",
+    "mbl": "OOLU2166704660",
+    "hbl": "WLC60215317",
+    "carrier": "OOCL",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-30",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 1
   },
   {
-    "mbl": "HLCUSHA2511GBWM5",
-    "hbl": "WLC60101294",
-    "carrier": "Hapag-Lloyd",
+    "mbl": "ZIMUNGB20219787",
+    "hbl": "WLC60208360",
+    "carrier": "ZIM",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-10",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 1
   },
   {
     "mbl": "CMDUTHD1487693",
@@ -416,18 +186,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-31",
-    "date": "2026-03-24"
-  },
-  {
-    "mbl": "HLCUTS12512ATYQ5",
-    "hbl": "WLC51207952",
-    "carrier": "Hapag-Lloyd",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-04",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWG881552",
@@ -436,8 +196,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-30",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWI613169",
@@ -446,8 +206,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-29",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWG694617",
@@ -456,8 +216,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-29",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "MEDUWG692272",
@@ -466,38 +226,38 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-29",
-    "date": "2026-03-24"
+    "eta": "",
+    "email_count": 4
   },
   {
-    "mbl": "COSU6444883670",
-    "hbl": "WLC60208151",
-    "carrier": "COSCO",
+    "mbl": "MEDUWK591388",
+    "hbl": "WLC60202334",
+    "carrier": "MSC",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-24",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 2
   },
   {
-    "mbl": "COSU6444535360",
-    "hbl": "WLC60210682",
-    "carrier": "COSCO",
+    "mbl": "ONEYTSNG03788600",
+    "hbl": "WLC60119494",
+    "carrier": "ONE",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-24",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 2
   },
   {
-    "mbl": "ZIMUBKK80439633",
-    "hbl": "WLC60215949",
-    "carrier": "ZIM",
+    "mbl": "HLCUSHA2511GBWM5",
+    "hbl": "WLC60101294",
+    "carrier": "Hapag-Lloyd",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-11",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 8
   },
   {
     "mbl": "ZIMUBKK80439625",
@@ -506,8 +266,18 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-11",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 4
+  },
+  {
+    "mbl": "ZIMUBKK80439633",
+    "hbl": "WLC60215949",
+    "carrier": "ZIM",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "ZIMUBKK80439624",
@@ -516,8 +286,8 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-04-11",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 4
   },
   {
     "mbl": "ONEYSHAG45971900",
@@ -526,108 +296,18 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-23",
-    "date": "2026-03-21"
+    "eta": "",
+    "email_count": 4
   },
   {
-    "mbl": "",
-    "hbl": "WLC60212549",
-    "carrier": "",
+    "mbl": "HLCUTS12512ATYQ5",
+    "hbl": "WLC51207952",
+    "carrier": "Hapag-Lloyd",
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-03-25",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "CMDUTHD1462264",
-    "hbl": "WLC60112759",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-29",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "MEDUWI770548",
-    "hbl": "WLC60211958",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-25",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "MEDUWI767775",
-    "hbl": "WLC60211972",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-25",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "MEDUWG842547",
-    "hbl": "WLC60124786",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-25",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "MEDUWG842521",
-    "hbl": "WLC60124788",
-    "carrier": "MSC",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-25",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "COSU6444883670",
-    "hbl": "WLC60208151",
-    "carrier": "COSCO",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-22",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "COSU6444535360",
-    "hbl": "WLC60210682",
-    "carrier": "COSCO",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-22",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "",
-    "hbl": "WLC60214307",
-    "carrier": "",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-24",
-    "date": "2026-03-20"
-  },
-  {
-    "mbl": "CMDUTHD1470309",
-    "hbl": "WLC60214734",
-    "carrier": "CMA-CGM",
-    "customer": "",
-    "amount": "",
-    "charge_type": "",
-    "eta": "2026-03-24",
-    "date": "2026-03-20"
+    "eta": "",
+    "email_count": 1
   },
   {
     "mbl": "MEDUKG224521",
@@ -636,7 +316,87 @@
     "customer": "",
     "amount": "",
     "charge_type": "",
-    "eta": "2026-02-27",
-    "date": "2026-03-20"
+    "eta": "",
+    "email_count": 4
+  },
+  {
+    "mbl": "CMDUTHD1462264",
+    "hbl": "WLC60112759",
+    "carrier": "CMA-CGM",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 3
+  },
+  {
+    "mbl": "MEDUWI770548",
+    "hbl": "WLC60211958",
+    "carrier": "MSC",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 3
+  },
+  {
+    "mbl": "MEDUWI767775",
+    "hbl": "WLC60211972",
+    "carrier": "MSC",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 3
+  },
+  {
+    "mbl": "MEDUWG842547",
+    "hbl": "WLC60124786",
+    "carrier": "MSC",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 3
+  },
+  {
+    "mbl": "MEDUWG842521",
+    "hbl": "WLC60124788",
+    "carrier": "MSC",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 3
+  },
+  {
+    "mbl": "COSU6444883670",
+    "hbl": "WLC60208151",
+    "carrier": "COSCO",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 2
+  },
+  {
+    "mbl": "COSU6444535360",
+    "hbl": "WLC60210682",
+    "carrier": "COSCO",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 2
+  },
+  {
+    "mbl": "CMDUTHD1470309",
+    "hbl": "WLC60214734",
+    "carrier": "CMA-CGM",
+    "customer": "",
+    "amount": "",
+    "charge_type": "",
+    "eta": "",
+    "email_count": 1
   }
 ]
