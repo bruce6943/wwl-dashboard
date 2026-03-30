@@ -1,0 +1,482 @@
+{
+  "carrier_business": {
+    "MSC": {
+      "mbl_count": 331,
+      "hbl_count": 26,
+      "container_count": 1182,
+      "top_pods": [
+        [
+          "巴淡",
+          59
+        ],
+        [
+          "长滩",
+          58
+        ],
+        [
+          "休斯顿",
+          33
+        ],
+        [
+          "宁波",
+          17
+        ],
+        [
+          "查尔斯顿",
+          14
+        ]
+      ],
+      "top_pols": [
+        [
+          "巴淡",
+          3
+        ],
+        [
+          "长滩",
+          3
+        ],
+        [
+          "上海",
+          3
+        ]
+      ]
+    },
+    "CMA-CGM": {
+      "mbl_count": 28,
+      "hbl_count": 13,
+      "container_count": 90,
+      "top_pods": [
+        [
+          "洛杉矶",
+          24
+        ],
+        [
+          "坦帕",
+          6
+        ],
+        [
+          "巴淡",
+          5
+        ],
+        [
+          "迈阿密",
+          2
+        ]
+      ],
+      "top_pols": [
+        [
+          "上海",
+          4
+        ],
+        [
+          "萨凡纳",
+          4
+        ]
+      ]
+    },
+    "OOCL": {
+      "mbl_count": 94,
+      "hbl_count": 16,
+      "container_count": 324,
+      "top_pods": [
+        [
+          "长滩",
+          44
+        ],
+        [
+          "宁波",
+          38
+        ],
+        [
+          "巴淡",
+          33
+        ],
+        [
+          "厦门",
+          30
+        ],
+        [
+          "纽约",
+          27
+        ]
+      ],
+      "top_pols": [
+        [
+          "巴淡",
+          6
+        ]
+      ]
+    },
+    "Hapag-Lloyd": {
+      "mbl_count": 53,
+      "hbl_count": 6,
+      "container_count": 55,
+      "top_pods": [
+        [
+          "上海",
+          20
+        ],
+        [
+          "宁波",
+          20
+        ],
+        [
+          "洛杉矶",
+          12
+        ],
+        [
+          "休斯顿",
+          10
+        ],
+        [
+          "青岛",
+          7
+        ]
+      ],
+      "top_pols": [
+        [
+          "上海",
+          5
+        ],
+        [
+          "休斯顿",
+          4
+        ]
+      ]
+    },
+    "COSCO": {
+      "mbl_count": 108,
+      "hbl_count": 29,
+      "container_count": 240,
+      "top_pods": [
+        [
+          "上海",
+          51
+        ],
+        [
+          "长滩",
+          41
+        ],
+        [
+          "厦门",
+          22
+        ],
+        [
+          "宁波",
+          22
+        ],
+        [
+          "纽约",
+          19
+        ]
+      ],
+      "top_pols": [
+        [
+          "上海",
+          18
+        ],
+        [
+          "萨凡纳",
+          8
+        ],
+        [
+          "休斯顿",
+          3
+        ]
+      ]
+    },
+    "ONE": {
+      "mbl_count": 59,
+      "hbl_count": 21,
+      "container_count": 173,
+      "top_pods": [
+        [
+          "巴淡",
+          23
+        ],
+        [
+          "萨凡纳",
+          11
+        ],
+        [
+          "宁波",
+          8
+        ],
+        [
+          "长滩",
+          6
+        ],
+        [
+          "查尔斯顿",
+          6
+        ]
+      ],
+      "top_pols": [
+        [
+          "巴淡",
+          2
+        ],
+        [
+          "上海",
+          1
+        ],
+        [
+          "休斯顿",
+          1
+        ]
+      ]
+    },
+    "ZIM": {
+      "mbl_count": 21,
+      "hbl_count": 2,
+      "container_count": 48,
+      "top_pods": [
+        [
+          "休斯顿",
+          13
+        ],
+        [
+          "洛杉矶",
+          12
+        ],
+        [
+          "纽约",
+          9
+        ],
+        [
+          "长滩",
+          5
+        ],
+        [
+          "宁波",
+          4
+        ]
+      ],
+      "top_pols": []
+    }
+  },
+  "staff_analysis": {
+    "us.ops(Jason等)": {
+      "total": 99,
+      "w1": 33,
+      "w2": 66,
+      "categories": {
+        "其他": 76,
+        "PreAlert": 10,
+        "Hold": 1,
+        "SA": 4,
+        "Delivery": 8
+      },
+      "customers": [
+        "REACH",
+        "双鱼",
+        "正泰",
+        "科陆"
+      ],
+      "carriers": [
+        "MSC",
+        "ONE",
+        "OOCL",
+        "ZIM"
+      ],
+      "hold": 1,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 8
+    },
+    "Adam Sum": {
+      "total": 13,
+      "w1": 3,
+      "w2": 10,
+      "categories": {
+        "其他": 13
+      },
+      "customers": [
+        "正泰"
+      ],
+      "carriers": [],
+      "hold": 0,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 0
+    },
+    "Effy Huo": {
+      "total": 144,
+      "w1": 63,
+      "w2": 81,
+      "categories": {
+        "其他": 125,
+        "Delivery": 17,
+        "Hold": 2
+      },
+      "customers": [
+        "Byson",
+        "双鱼",
+        "正泰",
+        "电商",
+        "科陆"
+      ],
+      "carriers": [
+        "CMA-CGM",
+        "ONE",
+        "ZIM"
+      ],
+      "hold": 2,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 17
+    },
+    "Maggie Wu": {
+      "total": 178,
+      "w1": 120,
+      "w2": 58,
+      "categories": {
+        "其他": 98,
+        "Booking": 3,
+        "Overdue": 29,
+        "Delivery": 8,
+        "SA": 14,
+        "PreAlert": 26
+      },
+      "customers": [
+        "HAILIANG",
+        "MERSY",
+        "MING HAO",
+        "REACH",
+        "正泰",
+        "海亮",
+        "海柔",
+        "科陆"
+      ],
+      "carriers": [
+        "COSCO",
+        "MSC",
+        "ONE",
+        "OOCL",
+        "ZIM"
+      ],
+      "hold": 0,
+      "overdue": 29,
+      "cc": 0,
+      "delivery": 8
+    },
+    "Rita Tang": {
+      "total": 76,
+      "w1": 45,
+      "w2": 31,
+      "categories": {
+        "PreAlert": 21,
+        "其他": 44,
+        "SA": 11
+      },
+      "customers": [
+        "REACH"
+      ],
+      "carriers": [
+        "CMA-CGM",
+        "COSCO",
+        "MSC",
+        "ONE",
+        "OOCL",
+        "ZIM"
+      ],
+      "hold": 0,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 0
+    },
+    "Bobc(COO)": {
+      "total": 21,
+      "w1": 13,
+      "w2": 8,
+      "categories": {
+        "其他": 19,
+        "Hold": 2
+      },
+      "customers": [
+        "Byson"
+      ],
+      "carriers": [],
+      "hold": 2,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 0
+    },
+    "Winnie Shen": {
+      "total": 34,
+      "w1": 10,
+      "w2": 24,
+      "categories": {
+        "SA": 34
+      },
+      "customers": [],
+      "carriers": [
+        "ONE"
+      ],
+      "hold": 0,
+      "overdue": 0,
+      "cc": 0,
+      "delivery": 0
+    },
+    "Will Sun": {
+      "total": 40,
+      "w1": 23,
+      "w2": 17,
+      "categories": {
+        "其他": 23,
+        "Delivery": 13,
+        "PreAlert": 2,
+        "Overdue": 2
+      },
+      "customers": [
+        "MERSY",
+        "REACH",
+        "海柔",
+        "科陆"
+      ],
+      "carriers": [
+        "COSCO",
+        "MSC",
+        "ONE",
+        "ZIM"
+      ],
+      "hold": 0,
+      "overdue": 2,
+      "cc": 0,
+      "delivery": 13
+    },
+    "Everlyn Shaw": {
+      "total": 252,
+      "w1": 80,
+      "w2": 172,
+      "categories": {
+        "其他": 156,
+        "PreAlert": 34,
+        "SA": 35,
+        "Booking": 14,
+        "Hold": 7,
+        "Arrival": 4,
+        "CC": 2
+      },
+      "customers": [
+        "DTC",
+        "REACH",
+        "正泰",
+        "海亮",
+        "科陆"
+      ],
+      "carriers": [
+        "CMA-CGM",
+        "COSCO",
+        "MSC",
+        "ONE",
+        "OOCL",
+        "ZIM"
+      ],
+      "hold": 7,
+      "overdue": 0,
+      "cc": 2,
+      "delivery": 0
+    }
+  }
+}

@@ -270,111 +270,176 @@ def save_tasks(task_data):
     with open(TASK_FILE, "w", encoding="utf-8") as f:
         json.dump(task_data, f, ensure_ascii=False, indent=2)
 
-def build_task_board(action_items, arrears_data, bl_status, overdue_sop):
-    """从多个数据源构建完整任务清单 — 不只是邮件行动项，还包括催款、换单、供应商跟进等"""
+def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contacts_db, deep_insights, enhanced):
+    """从多个数据源构建完整任务清单，按客户维度聚合，包含联系人+提单号+金额明细"""
     tasks = []
     seen_keys = set()
 
-    # 1. 从引擎action_items
+    # 内部销售负责人映射
+    staff_customers = {}
+    for staff_name, data in enhanced.get("staff_analysis", {}).items():
+        if isinstance(data, dict):
+            for cust in data.get("customers", []):
+                staff_customers.setdefault(cust, []).append(staff_name.split("(")[0].strip())
+
+    # 客户联系人映射
+    cust_contacts_map = deep_insights.get("customer_contacts", {})
+
+    # 联系人快速查找
+    all_contacts = contacts_db.get("contacts", []) if isinstance(contacts_db, dict) else []
+
+    def find_internal_staff(customer_name):
+        """查找负责该客户的内部销售"""
+        for alias, staffs in staff_customers.items():
+            if alias.upper() in customer_name.upper() or customer_name.upper() in alias.upper():
+                return ", ".join(staffs[:2])
+        return ""
+
+    def find_customer_contact(customer_name):
+        """查找客户方联系人"""
+        for cust_key, ppl in cust_contacts_map.items():
+            if cust_key.upper() in customer_name.upper() or customer_name.upper() in cust_key.upper():
+                if isinstance(ppl, dict):
+                    top = sorted(ppl.items(), key=lambda x: x[1].get("count",0) if isinstance(x[1],dict) else x[1], reverse=True)[:2]
+                    result = []
+                    for email, info in top:
+                        name = info.get("name", "") if isinstance(info, dict) else ""
+                        phone = info.get("phone", "") if isinstance(info, dict) else ""
+                        result.append(f"{name} {email}" + (f" {phone}" if phone else ""))
+                    return " / ".join(result)
+        return ""
+
+    # 1. 从引擎action_items(查验/Hold/CC/AN/D&D/Overdue)
     for a in action_items:
         key = f"{a.get('type','')}__{a.get('mbl','')}__{a.get('source','')[:30]}"
-        if key not in seen_keys:
-            seen_keys.add(key)
-            tasks.append({
-                "id": key,
-                "category": a.get("type", "other"),
-                "priority": a.get("priority", "medium"),
-                "title": f"{a.get('type','').upper()} | {a.get('customer','') or a.get('mbl','')}",
-                "action": a.get("action", ""),
-                "assignee": a.get("assignee", ""),
-                "mbl": a.get("mbl", ""),
-                "customer": a.get("customer", ""),
-                "amount": a.get("amount", ""),
-                "source": a.get("source", ""),
-                "date": a.get("date", ""),
-            })
+        if key in seen_keys: continue
+        seen_keys.add(key)
+        cust = a.get("customer", "")
+        tasks.append({
+            "id": key, "category": a.get("type", "other"), "priority": a.get("priority", "medium"),
+            "title": a.get("type", "").upper(),
+            "action": a.get("action", ""),
+            "assignee": a.get("assignee", ""),
+            "mbl": a.get("mbl", ""), "hbl": a.get("hbl", ""),
+            "customer": cust, "amount": a.get("amount", ""),
+            "internal_staff": find_internal_staff(cust) if cust else "",
+            "customer_contact": find_customer_contact(cust) if cust else "",
+            "detail_lines": [],
+            "source": a.get("source", ""), "date": a.get("date", ""),
+        })
 
-    # 2. 欠费催收任务(Top 20)
+    # 2. 欠费催收(按客户聚合，含提单明细)
     for item in arrears_data.get("top20", [])[:20]:
         name = item.get("name", "")
         total = item.get("total", 0)
-        if total > 1000:
-            key = f"arrears__{name}"
-            if key not in seen_keys:
-                seen_keys.add(key)
-                priority = "urgent" if total > 20000 else "high" if total > 5000 else "medium"
-                tasks.append({
-                    "id": key,
-                    "category": "arrears",
-                    "priority": priority,
-                    "title": f"催收 | {name[:25]}",
-                    "action": f"欠费${total:,.0f} — 确认T+X阶段并推进催收",
-                    "assignee": "Maggie",
-                    "mbl": "",
-                    "customer": name[:25],
-                    "amount": f"${total:,.0f}",
-                    "source": "arrears_analysis",
-                    "date": "",
-                })
+        if total < 500: continue
+        key = f"arrears__{name}"
+        if key in seen_keys: continue
+        seen_keys.add(key)
 
-    # 3. BL状态跟进(未电放、AN无预报、Hold)
+        # 提单明细
+        detail_lines = []
+        types = item.get("types", {})
+        for desc, amt in sorted(types.items(), key=lambda x: abs(x[1]) if isinstance(x[1],(int,float)) else 0, reverse=True)[:6]:
+            if isinstance(amt, (int, float)) and amt > 0:
+                detail_lines.append(f"{desc}: ${amt:,.0f}")
+
+        mbls = item.get("mbls", [])
+        hbls = item.get("hbls", [])
+        mbl_str = ", ".join(mbls[:3]) if isinstance(mbls, list) else ""
+        hbl_str = ", ".join(hbls[:3]) if isinstance(hbls, list) else ""
+
+        priority = "urgent" if total > 20000 else "high" if total > 5000 else "medium"
+        tasks.append({
+            "id": key, "category": "arrears", "priority": priority,
+            "title": "欠费催收",
+            "action": f"总欠费${total:,.0f} — 确认T+X阶段: T+7首催/T+15升级/T+30追偿函/T+45中信保",
+            "assignee": "Maggie",
+            "mbl": mbl_str, "hbl": hbl_str,
+            "customer": name[:30], "amount": f"${total:,.0f}",
+            "internal_staff": find_internal_staff(name),
+            "customer_contact": find_customer_contact(name),
+            "detail_lines": detail_lines,
+            "source": f"{item.get('records',0)}条记录", "date": item.get("latest", ""),
+        })
+
+    # 3. 未电放MBL
     for mbl in bl_status.get("no_tlx_mbl", [])[:10]:
         m = mbl if isinstance(mbl, str) else str(mbl)
         key = f"no_tlx__{m}"
-        if key not in seen_keys:
-            seen_keys.add(key)
-            tasks.append({
-                "id": key, "category": "bl_release", "priority": "high",
-                "title": f"换单 | {m}",
-                "action": "MBL未电放 — 联系origin确认TLX状态并催促放单",
-                "assignee": "Everlyn", "mbl": m, "customer": "", "amount": "",
-                "source": "bl_status", "date": "",
-            })
+        if key in seen_keys: continue
+        seen_keys.add(key)
+        # 从MBL前缀识别船公司
+        carrier = ""
+        for prefix, c in [("MEDU","MSC"),("COSU","COSCO"),("OOLU","OOCL"),("ONEY","ONE"),("ZIMU","ZIM"),("CMDU","CMA-CGM"),("HLCU","Hapag-Lloyd")]:
+            if m.startswith(prefix): carrier = c; break
+        tasks.append({
+            "id": key, "category": "bl_release", "priority": "high",
+            "title": "换单/电放",
+            "action": f"MBL未电放 — 联系origin确认TLX状态{f' ({carrier})' if carrier else ''} → 催促放单 → 确认后通知目的港",
+            "assignee": "Everlyn", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "internal_staff": "", "customer_contact": "",
+            "detail_lines": [f"船公司: {carrier}"] if carrier else [],
+            "source": "bl_status", "date": "",
+        })
 
+    # 4. AN无预报(漏单预警)
     for mbl in bl_status.get("an_no_prealert", [])[:10]:
         m = mbl if isinstance(mbl, str) else str(mbl)
         key = f"an_gap__{m}"
-        if key not in seen_keys:
-            seen_keys.add(key)
-            tasks.append({
-                "id": key, "category": "prealert_gap", "priority": "urgent",
-                "title": f"漏单预警 | {m}",
-                "action": "AN已收但无PreAlert — 可能漏单! 立即核查是否有对应HBL",
-                "assignee": "Rita", "mbl": m, "customer": "", "amount": "",
-                "source": "bl_status", "date": "",
-            })
+        if key in seen_keys: continue
+        seen_keys.add(key)
+        tasks.append({
+            "id": key, "category": "prealert_gap", "priority": "urgent",
+            "title": "漏单预警",
+            "action": "AN已收但无PreAlert — 可能漏单! 立即核查是否有对应HBL，确认origin是否已发货",
+            "assignee": "Rita", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "internal_staff": "", "customer_contact": "",
+            "detail_lines": [], "source": "bl_status", "date": "",
+        })
 
+    # 5. Hold提单
     for h in bl_status.get("hold_bl", [])[:10]:
         m = h.get("mbl", "") if isinstance(h, dict) else str(h)
         htype = h.get("type", "?") if isinstance(h, dict) else "?"
         key = f"hold__{m}"
-        if key not in seen_keys:
-            seen_keys.add(key)
-            tasks.append({
-                "id": key, "category": "hold", "priority": "urgent",
-                "title": f"HOLD | {m} ({htype})",
-                "action": f"{htype.upper()} HOLD — {'联系origin催付运费' if htype == 'freight' else '准备补充文件给CBP' if htype == 'customs' else '确认Hold类型并处理'}",
-                "assignee": "Everlyn", "mbl": m, "customer": "", "amount": "",
-                "source": "bl_status", "date": "",
-            })
+        if key in seen_keys: continue
+        seen_keys.add(key)
+        action_map = {
+            "freight": "Freight Hold — 联系origin确认运费支付状态 → 付款后通知船公司释放",
+            "customs": "Customs Hold — 联系报关行(YES/WFS)确认CBP要求 → 准备补充文件 → 跟进放行",
+            "do fee": "DO Fee Hold — 确认DO费用金额 → Maggie安排付款 → 付款后拿DO",
+        }
+        tasks.append({
+            "id": key, "category": "hold", "priority": "urgent",
+            "title": f"HOLD ({htype})",
+            "action": action_map.get(htype, f"{htype.upper()} HOLD — 确认Hold类型并处理"),
+            "assignee": "Everlyn", "mbl": m, "hbl": "", "customer": "", "amount": "",
+            "internal_staff": "", "customer_contact": "",
+            "detail_lines": [f"Hold来源: {h.get('from','?')}", f"邮件: {h.get('subject','')[:40]}"] if isinstance(h, dict) else [],
+            "source": "bl_status", "date": "",
+        })
 
-    # 4. SOP跟进
-    if isinstance(overdue_sop, list):
-        for item in overdue_sop[:10]:
-            m = item.get("mbl", "") if isinstance(item, dict) else ""
-            key = f"sop__{m}"
-            if key not in seen_keys and m:
-                seen_keys.add(key)
-                tasks.append({
-                    "id": key, "category": "sop", "priority": "high",
-                    "title": f"SOP跟进 | {m}",
-                    "action": f"Overdue SOP — {item.get('maggie_action', '按T+X时间线推进')}",
-                    "assignee": "Maggie", "mbl": m, "customer": "",
-                    "amount": f"${item.get('amount', 0):,.0f}" if isinstance(item.get('amount'), (int, float)) else "",
-                    "source": "overdue_sop", "date": "",
-                })
+    # 6. SOP跟进
+    sop_list = overdue_sop if isinstance(overdue_sop, list) else []
+    for item in sop_list[:10]:
+        if not isinstance(item, dict): continue
+        m = item.get("mbl", "")
+        if not m: continue
+        key = f"sop__{m}"
+        if key in seen_keys: continue
+        seen_keys.add(key)
+        tasks.append({
+            "id": key, "category": "sop", "priority": "high",
+            "title": "SOP合规跟进",
+            "action": f"Overdue SOP — {item.get('maggie_action', '按T+X时间线推进')}",
+            "assignee": "Maggie", "mbl": m, "hbl": "", "customer": "",
+            "amount": f"${item.get('amount', 0):,.0f}" if isinstance(item.get("amount"), (int, float)) else "",
+            "internal_staff": "", "customer_contact": "",
+            "detail_lines": [f"状态: {item.get('t_status','?')}"] if item.get('t_status') else [],
+            "source": "overdue_sop", "date": "",
+        })
 
-    # Sort by priority
     priority_order = {"urgent": 0, "high": 1, "medium": 2, "low": 3}
     tasks.sort(key=lambda x: priority_order.get(x.get("priority", "low"), 3))
     return tasks
@@ -560,8 +625,21 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 
-    # ═══ v3.1 任务工作台 ═══
-    all_tasks = build_task_board(action_items, ARR, bl, SOP)
+    # ═══ v3.2 任务工作台 ═══
+    all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, DATA.get("analysis", {}).get("enhanced", {}))
+    # Fallback: try loading enhanced from file if not in analysis
+    if not DATA.get("analysis", {}).get("enhanced"):
+        try:
+            import os
+            _enh_path = os.path.join(os.path.dirname(__file__) or ".", "data", "enhanced_dimensions.json")
+            if not os.path.exists(_enh_path):
+                _enh_path = "/tmp/wwl_scan/enhanced_dimensions.json"
+            if os.path.exists(_enh_path):
+                with open(_enh_path) as _ef:
+                    _enh = json.load(_ef)
+                all_tasks = build_task_board(action_items, ARR, bl, SOP, CON, DI, _enh)
+        except:
+            pass
     task_data = load_tasks()
     completed_ids = task_data.get("completed", {})
 
@@ -585,65 +663,95 @@ with tabs[0]:
     cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
     st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
 
-    # ─── 紧急任务(必须处理) ───
+    def render_task_card(t, pri_color, bg_alpha):
+        """渲染单个任务卡片 — 含客户/提单/金额/联系人/内部销售"""
+        cat_label = cat_labels.get(t["category"], t["category"])
+        cust = t.get("customer", "")
+        mbl = t.get("mbl", "")
+        hbl = t.get("hbl", "")
+        amount = t.get("amount", "")
+        internal = t.get("internal_staff", "")
+        ext_contact = t.get("customer_contact", "")
+        details = t.get("detail_lines", [])
+
+        # 第一行: 类别 + 客户 + 金额
+        line1 = f'<span style="background:{pri_color};color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600;">{cat_label}</span>'
+        if cust:
+            line1 += f' <b style="color:#fff;font-size:14px;">{cust}</b>'
+        if amount:
+            line1 += f' <span style="color:#ffd700;font-weight:600;font-size:14px;">{amount}</span>'
+
+        # 第二行: 行动指引
+        line2 = f'<div style="color:#c0c0d0;font-size:13px;margin:4px 0;">{t["action"]}</div>'
+
+        # 第三行: 提单号
+        line3 = ""
+        refs = []
+        if mbl: refs.append(f"MBL: {mbl}")
+        if hbl: refs.append(f"HBL: {hbl}")
+        if refs:
+            line3 = f'<div style="color:#8888bb;font-size:12px;">{"  |  ".join(refs)}</div>'
+
+        # 第四行: 费用明细(如有)
+        line4 = ""
+        if details:
+            detail_html = " / ".join(details[:4])
+            if len(details) > 4:
+                detail_html += f" +{len(details)-4}项"
+            line4 = f'<div style="color:#888;font-size:11px;margin:2px 0;">明细: {detail_html}</div>'
+
+        # 第五行: 人员(内部销售 + 客户联系人 + 负责人)
+        ppl_parts = []
+        if t.get("assignee"):
+            ppl_parts.append(f'<span style="color:{pri_color};">执行: {t["assignee"]}</span>')
+        if internal:
+            ppl_parts.append(f'<span style="color:#2196f3;">内部销售: {internal}</span>')
+        if ext_contact:
+            ppl_parts.append(f'<span style="color:#00c853;">客户联系: {ext_contact[:50]}</span>')
+        line5 = f'<div style="font-size:11px;margin-top:3px;">{"  |  ".join(ppl_parts)}</div>' if ppl_parts else ""
+
+        return f'''<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:4px 0;">
+            {line1}{line2}{line3}{line4}{line5}
+        </div>'''
+
+    # ─── 紧急任务 ───
     if pending_urgent:
-        st.markdown(f"<div style='color:#e94560;font-weight:700;font-size:15px;margin:12px 0 6px;'>紧急 ({len(pending_urgent)})</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='color:#e94560;font-weight:700;font-size:15px;margin:14px 0 6px;'>紧急待办 ({len(pending_urgent)})</div>", unsafe_allow_html=True)
         for t in pending_urgent:
-            col1, col2 = st.columns([0.05, 0.95])
+            col1, col2 = st.columns([0.04, 0.96])
             with col1:
                 if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
                     completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                     save_tasks({"completed": completed_ids, "tasks": all_tasks})
                     st.rerun()
             with col2:
-                pri_bg = "#e94560"
-                cat_label = cat_labels.get(t["category"], t["category"])
-                st.markdown(f"""<div style="background:rgba(233,69,96,0.12);border-left:4px solid {pri_bg};padding:8px 12px;border-radius:0 8px 8px 0;margin:2px 0;">
-                    <span style="background:{pri_bg};color:#fff;padding:1px 8px;border-radius:4px;font-size:11px;">{cat_label}</span>
-                    <b style="color:#fff;"> {t['title']}</b>
-                    {f'<span style="color:#ffa500;"> {t["amount"]}</span>' if t.get('amount') else ''}
-                    <br><span style="color:#a0a0c0;font-size:13px;">{t["action"]}</span>
-                    <br><span style="color:#666;font-size:11px;">负责: {t["assignee"]} | {t.get("source","")[:40]}</span>
-                </div>""", unsafe_allow_html=True)
+                st.markdown(render_task_card(t, "#e94560", "233,69,96,0.10"), unsafe_allow_html=True)
 
     # ─── 重要任务 ───
     if pending_high:
-        with st.expander(f"重要 ({len(pending_high)})", expanded=len(pending_urgent) == 0):
+        with st.expander(f"重要待办 ({len(pending_high)})", expanded=len(pending_urgent) == 0):
             for t in pending_high:
-                col1, col2 = st.columns([0.05, 0.95])
+                col1, col2 = st.columns([0.04, 0.96])
                 with col1:
                     if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
                         completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                         save_tasks({"completed": completed_ids, "tasks": all_tasks})
                         st.rerun()
                 with col2:
-                    cat_label = cat_labels.get(t["category"], t["category"])
-                    st.markdown(f"""<div style="background:rgba(255,165,0,0.08);border-left:4px solid #ffa500;padding:8px 12px;border-radius:0 8px 8px 0;margin:2px 0;">
-                        <span style="background:#ffa500;color:#fff;padding:1px 8px;border-radius:4px;font-size:11px;">{cat_label}</span>
-                        <b style="color:#ddd;"> {t['title']}</b>
-                        {f'<span style="color:#ffa500;"> {t["amount"]}</span>' if t.get('amount') else ''}
-                        <br><span style="color:#a0a0c0;font-size:13px;">{t["action"]}</span>
-                        <br><span style="color:#666;font-size:11px;">负责: {t["assignee"]}</span>
-                    </div>""", unsafe_allow_html=True)
+                    st.markdown(render_task_card(t, "#ffa500", "255,165,0,0.06"), unsafe_allow_html=True)
 
     # ─── 常规任务 ───
     if pending_medium:
-        with st.expander(f"常规 ({len(pending_medium)})"):
+        with st.expander(f"常规待办 ({len(pending_medium)})"):
             for t in pending_medium:
-                col1, col2 = st.columns([0.05, 0.95])
+                col1, col2 = st.columns([0.04, 0.96])
                 with col1:
                     if st.checkbox("", key=f"chk_{t['id']}", label_visibility="collapsed"):
                         completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
                         save_tasks({"completed": completed_ids, "tasks": all_tasks})
                         st.rerun()
                 with col2:
-                    cat_label = cat_labels.get(t["category"], t["category"])
-                    st.markdown(f"""<div style="border-left:3px solid #2196f3;padding:6px 12px;margin:2px 0;">
-                        <span style="color:#2196f3;font-size:12px;">[{cat_label}]</span>
-                        <b style="color:#ccc;"> {t['title']}</b>
-                        {f' {t["amount"]}' if t.get('amount') else ''}
-                        <span style="color:#888;font-size:12px;"> — {t["action"][:50]} | {t["assignee"]}</span>
-                    </div>""", unsafe_allow_html=True)
+                    st.markdown(render_task_card(t, "#2196f3", "33,150,243,0.05"), unsafe_allow_html=True)
 
     # ─── 今日已完成 ───
     if done_today:
