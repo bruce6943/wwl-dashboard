@@ -710,7 +710,7 @@ with tabs[0]:
         'maggiewu@wwl.cn', 'rita.tang@wwl.cn', 'willsun@wwl.cn',
         'bruce@wwl.cn', 'bruce@wwl.sg',
         'us.adamsum@worldwide-logistics.cn', 'bobc@worldwide-logistics.cn',
-        'us.docs@wwl.sg',
+        'us.docs@wwl.sg', 'sha.overseassup2@wwl.cn',
     }
     for t in all_tasks:
         sender = t.get("wwl_sender", "")
