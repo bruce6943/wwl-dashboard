@@ -704,6 +704,25 @@ with tabs[0]:
                 st.checkbox("完成", key=f"top_anom_{_tai}")
                 _tai += 1
 
+    # ─── 常规流转汇总(不需特别处理，了解即可) ───
+    _summary = GRAPH.get("summary", {}) if 'GRAPH' in dir() else DATA.get("graph_tasks", {}).get("summary", {})
+    if not _summary:
+        _summary = DATA.get("graph_tasks", {}).get("summary", {})
+    if _summary:
+        with st.expander("常规流转汇总 (了解即可)"):
+            _sc = st.columns(4)
+            _labels = [("到港通知","arrival_notices","#2196f3"),("BL签发/电放","bl_releases","#00c853"),
+                       ("费用确认","billings","#ffa500"),("PreAlert","prealerts","#9c27b0")]
+            for i, (label, key, color) in enumerate(_labels):
+                with _sc[i]:
+                    st.markdown(f'<div style="text-align:center;padding:8px;"><span style="color:{color};font-size:24px;font-weight:700;">{_summary.get(key,0)}</span><br><span style="color:#a0a0c0;font-size:12px;">{label}</span></div>', unsafe_allow_html=True)
+            _sc2 = st.columns(4)
+            _labels2 = [("Booking","bookings","#2196f3"),("Delivery","deliveries","#00c853"),("清关","clearances","#ffa500"),("","","")]
+            for i, (label, key, color) in enumerate(_labels2):
+                if label:
+                    with _sc2[i]:
+                        st.markdown(f'<div style="text-align:center;padding:8px;"><span style="color:{color};font-size:24px;font-weight:700;">{_summary.get(key,0)}</span><br><span style="color:#a0a0c0;font-size:12px;">{label}</span></div>', unsafe_allow_html=True)
+
     st.markdown("---")
 
     # ═══ v4.0 任务工作台(从知识图谱) ═══
