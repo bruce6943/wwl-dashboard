@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-03-30T12:53:25.060372+08:00",
-  "total_emails": 68,
-  "business_emails": 61,
+  "scan_time": "2026-03-30T13:24:28.205938+08:00",
+  "total_emails": 73,
+  "business_emails": 64,
   "pdf_count": 26,
   "categories": {
-    "other_biz": 28,
+    "other_biz": 30,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
     "invoice": 1,
     "overdue": 1,
-    "prealert": 8,
+    "prealert": 9,
     "arrival": 2
   },
   "customers": {
@@ -89,7 +89,7 @@
     "MSC": 7,
     "COSCO": 9,
     "OOCL": 12,
-    "ONE": 5,
+    "ONE": 7,
     "CMA-CGM": 11,
     "ZIM": 3
   },
@@ -148,8 +148,8 @@
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-29": 5,
-    "2026-03-30": 62
+    "2026-03-29": 7,
+    "2026-03-30": 65
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -175,6 +175,10 @@
       6
     ],
     [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      3
+    ],
+    [
       "\"Shirley.Liu WWL TSN OPS\" <tsn.ops14@wwl.cn>",
       3
     ],
@@ -188,10 +192,6 @@
     ],
     [
       "\"Wang Jiong\" <wangjiong@wwl.cn>",
-      2
-    ],
-    [
-      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
       2
     ],
     [
@@ -212,6 +212,10 @@
     ],
     [
       "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
+      2
+    ],
+    [
+      "\"Clement Po\" <cpo@tnts.us>",
       2
     ],
     [
@@ -236,10 +240,6 @@
     ],
     [
       "\"Sienna\" <sienna.ji@wwl.cn>",
-      1
-    ],
-    [
-      "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
       1
     ]
   ],
@@ -1020,48 +1020,48 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "COSU6444625540",
-      "COSU8040582340",
-      "OOLU2167100650",
-      "ONEYBTMG00382500",
-      "ONEYBKKG38865600",
       "OOLU2320126090",
+      "COSU6444625540",
       "CMDUCHN3095178",
       "ZIMUBKK80440481",
-      "CMDUCHN3116145",
-      "MEDUWK478768",
-      "MEDUYQ353300",
-      "MEDUKG193320",
-      "MEDUWG692272",
-      "OOLU2166784670",
-      "MEDUWK745968",
-      "OOLU2166784680",
-      "COSU6444363540",
-      "OOLU2166524280",
-      "OOLU2167100640",
+      "OOLU2167100650",
       "MEDUYL789706",
-      "OOLU2166784690"
+      "ONEYBTMG00382500",
+      "CMDUCHN3116145",
+      "COSU6444363540",
+      "MEDUWG692272",
+      "OOLU2166784690",
+      "MEDUWK745968",
+      "OOLU2166784670",
+      "MEDUWK478768",
+      "OOLU2166784680",
+      "OOLU2167100640",
+      "MEDUKG193320",
+      "MEDUYQ353300",
+      "OOLU2166524280",
+      "COSU8040582340",
+      "ONEYBKKG38865600"
     ],
     "no_tlx_hbl": [
-      "WLC60301626",
-      "WLC60126287",
-      "WLC50813210",
-      "WLC60124381",
-      "WLC60125060",
       "WLC60216466",
       "WLC60200080",
+      "WLC60301626",
+      "WLC60125060",
       "WLC60213560",
+      "WLC60205753",
+      "WLC60301627",
+      "WLC50813210",
       "WLC60301625",
       "WLC60307413",
-      "WLC60301627",
-      "WLC60208507",
-      "WLC60205753",
+      "WLC60124381",
+      "WLC60126287",
       "WLC60215570",
-      "WLC60120505"
+      "WLC60120505",
+      "WLC60208507"
     ],
     "an_no_prealert": [
-      "OOLU2167100650",
-      "OOLU2167100640"
+      "OOLU2167100640",
+      "OOLU2167100650"
     ],
     "hold_bl": [],
     "tlx_confirmed_mbl": 6,
