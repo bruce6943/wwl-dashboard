@@ -286,6 +286,13 @@ inspection_mbls = A.get("inspection_mbls", [])
 hold_count = A.get("hold_count", 0)
 inspection_count = A.get("inspection_count", 0)
 
+# v3.0 行动项
+action_items = A.get("action_items", [])
+action_summary = A.get("action_summary", {})
+urgent_actions = [a for a in action_items if a.get("priority") == "urgent"]
+high_actions = [a for a in action_items if a.get("priority") == "high"]
+medium_actions = [a for a in action_items if a.get("priority") == "medium"]
+
 # Compute efficiency score (平衡版 — 有挑战但不打击士气)
 total_7d = A.get("total_emails", 0)
 biz_7d = A.get("business_emails", 0)
@@ -426,6 +433,58 @@ with tabs[0]:
         </span>
     </div>
     """, unsafe_allow_html=True)
+
+    # ═══ v3.0 行动项看板 ═══
+    if action_items:
+        section_header(f"今日行动项: {len(action_items)}条 (紧急{len(urgent_actions)} / 重要{len(high_actions)} / 常规{len(medium_actions)})")
+
+        # 紧急行动项(红色)
+        if urgent_actions:
+            for a in urgent_actions[:10]:
+                assignee = a.get('assignee', '?')
+                action = a.get('action', '')
+                detail = a.get('detail', '')
+                mbl = a.get('mbl', '')
+                cust = a.get('customer', '')
+                alert_card("red", f"""
+                    <span style="background:#e94560;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">紧急</span>
+                    <b> {a.get('type','').upper()}</b> {f'| {cust}' if cust else ''} {f'| {mbl}' if mbl else ''}<br>
+                    <b>行动:</b> {action}<br>
+                    <b>负责人:</b> {assignee} &nbsp;|&nbsp; 来源: {a.get('source','')[:50]}
+                """)
+
+        # 重要行动项(橙色)
+        if high_actions:
+            with st.expander(f"重要行动项 ({len(high_actions)}条)", expanded=len(urgent_actions) == 0):
+                for a in high_actions[:15]:
+                    assignee = a.get('assignee', '?')
+                    action = a.get('action', '')
+                    mbl = a.get('mbl', '')
+                    cust = a.get('customer', '')
+                    alert_card("orange", f"""
+                        <span style="background:#ffa500;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">重要</span>
+                        <b> {a.get('type','').upper()}</b> {f'| {cust}' if cust else ''} {f'| {mbl}' if mbl else ''}<br>
+                        <b>行动:</b> {action}<br>
+                        <b>负责人:</b> {assignee}
+                    """)
+
+        # 常规行动项(表格)
+        if medium_actions:
+            with st.expander(f"常规行动项 ({len(medium_actions)}条)"):
+                m_rows = []
+                for a in medium_actions[:30]:
+                    m_rows.append({
+                        "类型": a.get('type', ''),
+                        "MBL": a.get('mbl', '')[:20],
+                        "客户": a.get('customer', ''),
+                        "行动": a.get('action', '')[:40],
+                        "负责人": a.get('assignee', ''),
+                        "金额": a.get('amount', ''),
+                    })
+                if m_rows:
+                    st.dataframe(pd.DataFrame(m_rows), use_container_width=True, hide_index=True, key="tbl_actions")
+
+        st.markdown("---")
 
     # Three columns: Hold / Inspection / CC
     c1, c2, c3 = st.columns(3)
@@ -814,6 +873,34 @@ with tabs[3]:
         st.markdown(f"""<div style="text-align:center; padding:15px;">
             <div class="star-badge">本周之星经理: {star_mgr}</div>
         </div>""", unsafe_allow_html=True)
+
+    # ═══ v3.0 按负责人分组的行动项 ═══
+    if action_items:
+        section_header("今日待办 (按负责人)")
+        assignee_groups = {}
+        for a in action_items:
+            assignee = a.get('assignee', '未分配')
+            assignee_groups.setdefault(assignee, []).append(a)
+
+        cols = st.columns(min(len(assignee_groups), 4))
+        for idx, (assignee, tasks) in enumerate(sorted(assignee_groups.items(), key=lambda x: len(x[1]), reverse=True)):
+            with cols[idx % len(cols)]:
+                urgent_n = len([t for t in tasks if t.get('priority') == 'urgent'])
+                color = "#e94560" if urgent_n > 0 else "#2196f3"
+                st.markdown(f"""<div style="background:rgba(30,30,60,0.8);border:1px solid {color};border-radius:10px;padding:12px;margin:4px 0;">
+                    <h4 style="color:{color};margin:0;">{assignee} ({len(tasks)})</h4>
+                    {'<span style="color:#e94560;font-size:12px;">⚡ ' + str(urgent_n) + '条紧急</span>' if urgent_n > 0 else ''}
+                </div>""", unsafe_allow_html=True)
+                for t in tasks[:5]:
+                    pri_color = {"urgent":"#e94560","high":"#ffa500","medium":"#2196f3"}.get(t.get('priority',''), '#a0a0c0')
+                    st.markdown(f"""<div style="border-left:3px solid {pri_color};padding:4px 8px;margin:3px 0;font-size:12px;color:#c0c0d0;">
+                        <b>{t.get('type','')}</b> {t.get('customer','')}<br>
+                        {t.get('action','')[:50]}
+                    </div>""", unsafe_allow_html=True)
+                if len(tasks) > 5:
+                    st.markdown(f"<p style='color:#666;font-size:11px;'>+{len(tasks)-5}条更多...</p>", unsafe_allow_html=True)
+
+        st.markdown("---")
 
     # Sub-tabs
     person_tabs = st.tabs(["Everlyn", "Rita+Maggie+Will", "Effy", "Bruce"])
