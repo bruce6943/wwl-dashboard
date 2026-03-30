@@ -18,8 +18,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 3,
+        "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -33,7 +33,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "MSC",
@@ -49,7 +49,7 @@
         "集中度17%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 1,
+        "email_volume_7d": 4,
         "active_days_7d": 1,
         "pdf_count": 1,
         "pdf_fee_total": 20.0,
@@ -64,7 +64,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "Hapag-Lloyd",
@@ -93,7 +93,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "ZIM",
@@ -107,8 +107,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 1,
+        "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -122,7 +122,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "YML",
@@ -151,7 +151,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "WAN HAI",
@@ -180,7 +180,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "Evergreen",
@@ -209,7 +209,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "HMM",
@@ -238,7 +238,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "MAERSK",
@@ -267,7 +267,7 @@
         "responsiveness": 0,
         "documentation_quality": 0
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "PACIFIC T&T",
@@ -296,7 +296,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "ROME TRANSPORT",
@@ -325,7 +325,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "FAST FREIGHTS",
@@ -354,7 +354,7 @@
         "responsiveness": 8,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "YES CHB",
@@ -383,7 +383,7 @@
         "responsiveness": 20,
         "documentation_quality": 10
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "FCC USA",
@@ -412,7 +412,7 @@
         "responsiveness": 20,
         "documentation_quality": 12
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "IDC INTERNATIONAL",
@@ -441,7 +441,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "RIM LOGISTICS",
@@ -470,7 +470,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "ATC CARGO",
@@ -499,7 +499,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "OOCL",
@@ -513,7 +513,8 @@
         "查验2票",
         "无",
         "集中度18%",
-        "集中度36%"
+        "集中度36%",
+        "集中度20%"
       ],
       "performance_metrics": {
         "email_volume_7d": 5,
@@ -531,7 +532,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "COSCO",
@@ -561,7 +562,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     },
     {
       "vendor_name": "ONE",
@@ -591,7 +592,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-03-30T09:05:24.275435+08:00"
+      "last_updated": "2026-03-30T09:11:09.928805+08:00"
     }
   ]
 }

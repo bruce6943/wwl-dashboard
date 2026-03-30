@@ -1,12 +1,13 @@
 {
-  "scan_time": "2026-03-30T09:05:24.275435+08:00",
-  "total_emails": 14,
-  "business_emails": 9,
+  "scan_time": "2026-03-30T09:11:09.928805+08:00",
+  "total_emails": 25,
+  "business_emails": 20,
   "pdf_count": 1,
   "categories": {
-    "other_biz": 2,
+    "other_biz": 4,
     "inspection": 4,
-    "charge_confirm": 3
+    "charge_confirm": 11,
+    "booking": 1
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
@@ -19,13 +20,26 @@
       "days": [
         "03/30"
       ]
+    },
+    "HAILIANG (海亮)": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
-    "MSC": 1,
+    "MSC": 4,
     "COSCO": 1,
     "OOCL": 5,
-    "ONE": 1
+    "ONE": 1,
+    "CMA-CGM": 3,
+    "ZIM": 1
   },
   "carrier_fees": {
     "MSC": {
@@ -34,26 +48,41 @@
       "avg": 20.0
     }
   },
-  "hbl_total": 3,
-  "mbl_total": 8,
+  "hbl_total": 11,
+  "mbl_total": 15,
   "all_hbls": [
+    "WLC60120505",
+    "WLC60124381",
+    "WLC60124865",
+    "WLC60125060",
+    "WLC60205753",
+    "WLC60213560",
+    "WLC60216466",
     "WLC60301625",
     "WLC60301626",
-    "WLC60301627"
+    "WLC60301627",
+    "WLC60307413"
   ],
   "all_mbls": [
+    "CMDUCHN3095178",
+    "CMDUCHN3116145",
+    "CMDUTHD1466676",
     "COSU6444625540",
     "MEDUWG692272",
+    "MEDUWK478768",
+    "MEDUWK745968",
+    "MEDUYL789706",
     "ONEYBKKG38865600",
     "OOLU2166524280",
     "OOLU2166784670",
     "OOLU2166784680",
     "OOLU2166784690",
-    "OOLU2320126090"
+    "OOLU2320126090",
+    "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-29": 5,
-    "2026-03-30": 8
+    "2026-03-30": 19
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -68,7 +97,7 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      7
+      17
     ],
     [
       "Krizza Mallari <ops@pinnacleteam.com>",
@@ -93,6 +122,10 @@
     [
       "us038-importpickupnotification@msc.com",
       1
+    ],
+    [
+      "\"Sienna\" <sienna.ji@wwl.cn>",
+      1
     ]
   ],
   "action_items": [
@@ -109,8 +142,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "PLT系统",
-      "wwl_branch": "PLT平台(自动)",
+      "wwl_sender": "tao.opsnam3@wwl.cn (tao.opsnam3@wwl.cn)",
+      "wwl_branch": "WWL中国",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 COSU6444625540",
       "source": "查验预警-COSU6444625540",
@@ -151,8 +184,8 @@
       "consignee": "",
       "shipper": "",
       "internal_staff": "",
-      "wwl_sender": "PLT系统",
-      "wwl_branch": "PLT平台(自动)",
+      "wwl_sender": "bkk.nasmee@wwl.sg",
+      "wwl_branch": "WWL新加坡",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 BKKG38865600",
       "source": "查验预警-ONEYBKKG38865600",
@@ -229,6 +262,32 @@
       "date": "Mon, 30 Mar 2026 08:00:20"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "Detention 风险提醒（未收到船司账单）",
+      "source": "Detention 风险提醒（未收到船司账单）",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:10:14"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "Detention 风险提醒（未收到船司账单）",
+      "source": "Detention 风险提醒（未收到船司账单）",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:10:19"
+    },
+    {
       "type": "cc_confirm",
       "priority": "medium",
       "mbl": "OOLU2166784670",
@@ -296,29 +355,228 @@
       "source": "Charge confirm request /MBL:OOLU2166784690 /HBL:WLC60301625\r",
       "from": "assistant@pltplt.com",
       "date": "Mon, 30 Mar 2026 09:05:04"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUTHD1466676",
+      "hbl": "WLC60124865",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-06",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUTHD1466676 金额:",
+      "source": "Charge confirm request /MBL:CMDUTHD1466676 /HBL:WLC60124865\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:05"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3116145",
+      "hbl": "WLC60213560",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
+      "shipper": "NOTIFY",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
+      "source": "Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213560\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:06"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3095178",
+      "hbl": "WLC60125060",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "SECOND NOTIFY BTL INTERNATIONAL INC. 780 NOGALES STREET , UN",
+      "shipper": "NOTIFY",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
+      "source": "Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC60125060\r",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:07"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80440481",
+      "hbl": "WLC60216466",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-16",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80440481 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80440481 /HBL:WLC60216466",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:08"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60307413",
+      "customer": "",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:HDMUSHAZYFZ44500 /HBL:WLC6030741",
+      "source": "Charge confirm request /MBL:HDMUSHAZYFZ44500 /HBL:WLC6030741",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:10"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUYL789706",
+      "hbl": "WLC60124381",
+      "customer": "HAILIANG",
+      "eta": "2026-03-20",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "BTL INTERNATIONAL INC FFAU2506773-40HC FJ27287875",
+      "shipper": "DECLARED THAT: THE SHIPMENT CONTAINS NO SOLID WOOD PACKING M",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUYL789706 金额:",
+      "source": "Charge confirm request /MBL:MEDUYL789706 /HBL:WLC60124381\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:10"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUWK745968",
+      "hbl": "WLC60205753",
+      "customer": "HAILIANG",
+      "eta": "2026-03-06",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "msc.com",
+      "wwl_branch": "外部",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUWK745968 金额:",
+      "source": "Charge confirm request /MBL:MEDUWK745968 /HBL:WLC60205753\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:11"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUWK478768",
+      "hbl": "WLC60120505",
+      "customer": "HAILIANG",
+      "eta": "2026-02-17",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUWK478768 金额:",
+      "source": "Charge confirm request /MBL:MEDUWK478768 /HBL:WLC60120505\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Mon, 30 Mar 2026 09:05:12"
     }
   ],
   "action_summary": {
-    "total": 11,
+    "total": 21,
     "urgent": 8,
-    "high": 0,
-    "medium": 3
+    "high": 2,
+    "medium": 11
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "OOLU2320126090",
-      "OOLU2166784680",
-      "OOLU2166524280",
       "OOLU2166784670",
-      "COSU6444625540",
+      "CMDUCHN3095178",
+      "CMDUCHN3116145",
+      "MEDUWK478768",
       "ONEYBKKG38865600",
+      "OOLU2166524280",
+      "OOLU2320126090",
+      "COSU6444625540",
+      "OOLU2166784680",
       "OOLU2166784690",
-      "MEDUWG692272"
+      "CMDUTHD1466676",
+      "ZIMUBKK80440481",
+      "MEDUYL789706",
+      "MEDUWG692272",
+      "MEDUWK745968"
     ],
     "no_tlx_hbl": [
-      "WLC60301627",
+      "WLC60120505",
+      "WLC60213560",
       "WLC60301626",
-      "WLC60301625"
+      "WLC60124865",
+      "WLC60124381",
+      "WLC60125060",
+      "WLC60205753",
+      "WLC60301627",
+      "WLC60307413",
+      "WLC60301625",
+      "WLC60216466"
     ],
     "an_no_prealert": [],
     "hold_bl": [],
