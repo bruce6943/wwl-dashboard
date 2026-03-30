@@ -680,9 +680,11 @@ with tabs[0]:
         ext_contact = t.get("customer_contact", "")
         details = t.get("detail_lines", [])
 
+        consignee = t.get("consignee", "")
+        shipper = t.get("shipper", "")
         lines = []
 
-        # 行1: 类别标签 + 客户/收货人 + 金额
+        # 行1: 类别标签 + 客户 + 金额
         h = f'<span style="background:{pri_color};color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600;">{cat_label}</span>'
         if cust:
             h += f'&nbsp; <b style="color:#fff;font-size:15px;">{cust}</b>'
@@ -690,10 +692,19 @@ with tabs[0]:
             h += f'&nbsp; <span style="color:#ffd700;font-weight:700;">{amount}</span>'
         lines.append(h)
 
-        # 行2: 行动指引
-        lines.append(f'<div style="color:#c0c0d0;font-size:13px;margin:5px 0 3px;">{t["action"]}</div>')
+        # 行2: 收货人Consignee / 发货人Shipper (核心指向信息)
+        party_parts = []
+        if consignee:
+            party_parts.append(f'<span style="color:#4fc3f7;">收货人: {consignee[:50]}</span>')
+        if shipper and 'WORLDWIDE' not in shipper.upper():
+            party_parts.append(f'<span style="color:#81c784;">发货人: {shipper[:35]}</span>')
+        if party_parts:
+            lines.append(f'<div style="font-size:12px;margin:3px 0;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(party_parts)}</div>')
 
-        # 行3: 提单号 + 船公司
+        # 行3: 行动指引
+        lines.append(f'<div style="color:#c0c0d0;font-size:13px;margin:4px 0;">{t["action"]}</div>')
+
+        # 行4: 提单号 + 船公司
         refs = []
         if mbl:
             ref = f'MBL: <span style="font-family:monospace;color:#a0a0e0;">{mbl}</span>'
@@ -705,25 +716,22 @@ with tabs[0]:
         if refs:
             lines.append(f'<div style="font-size:12px;margin:2px 0;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(refs)}</div>')
 
-        # 行4: 费用明细
+        # 行5: 费用明细
         if details:
             detail_html = "&nbsp;/&nbsp;".join(d[:40] for d in details[:4])
             if len(details) > 4:
                 detail_html += f" +{len(details)-4}项"
             lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
 
-        # 行5: 联系人指引(关键改进 — 不指定执行人，而是给出联系方向)
+        # 行6: 联系人(客户方 + WWL内部关联同事)
         ppl = []
-        # 客户方联系人(从联系人DB或邮件提取)
         if ext_contact:
-            ppl.append(f'<span style="color:#00c853;">客户联系: {ext_contact[:60]}</span>')
+            ppl.append(f'<span style="color:#00c853;">客户方: {ext_contact[:55]}</span>')
         elif contact:
-            ppl.append(f'<span style="color:#00c853;">客户联系: {contact[:60]}</span>')
-        # 内部相关同事
+            ppl.append(f'<span style="color:#00c853;">客户方: {contact[:55]}</span>')
         if internal:
-            ppl.append(f'<span style="color:#2196f3;">内部关联: {internal}</span>')
-        # 邮件来源方
-        if sender:
+            ppl.append(f'<span style="color:#2196f3;">WWL内部: {internal}</span>')
+        if sender and not ppl:
             ppl.append(f'<span style="color:#888;">来源: {sender[:40]}</span>')
         if ppl:
             lines.append(f'<div style="font-size:11px;margin-top:3px;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(ppl)}</div>')

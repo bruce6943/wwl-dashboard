@@ -1,5 +1,5 @@
 {
-  "scan_time": "2026-03-30T08:47:44.807641+08:00",
+  "scan_time": "2026-03-30T08:57:56.202191+08:00",
   "total_emails": 11,
   "business_emails": 6,
   "pdf_count": 1,
@@ -26,7 +26,13 @@
     "OOCL": 2,
     "ONE": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "MSC": {
+      "count": 1,
+      "total": 20.0,
+      "avg": 20.0
+    }
+  },
   "hbl_total": 0,
   "mbl_total": 5,
   "all_hbls": [],
@@ -92,6 +98,9 @@
       "carrier": "COSCO",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 COSU6444625540",
       "source": "查验预警-COSU6444625540",
@@ -108,6 +117,9 @@
       "carrier": "OOCL",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2320126090",
       "source": "查验预警-OOLU2320126090",
@@ -124,6 +136,9 @@
       "carrier": "ONE",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 BKKG38865600",
       "source": "查验预警-ONEYBKKG38865600",
@@ -140,6 +155,9 @@
       "carrier": "OOCL",
       "sender": "assistant@pltplt.com (pltplt.com)",
       "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
       "detail": "查验 OOLU2166524280",
       "source": "查验预警-OOLU2166524280",
@@ -203,11 +221,11 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG38865600",
-      "OOLU2166524280",
-      "COSU6444625540",
       "OOLU2320126090",
-      "MEDUWG692272"
+      "COSU6444625540",
+      "ONEYBKKG38865600",
+      "MEDUWG692272",
+      "OOLU2166524280"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
