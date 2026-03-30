@@ -1,22 +1,22 @@
 {
-  "scan_time": "2026-03-30T16:33:42.041354+08:00",
-  "total_emails": 134,
-  "business_emails": 123,
-  "pdf_count": 80,
+  "scan_time": "2026-03-30T17:05:33.768307+08:00",
+  "total_emails": 138,
+  "business_emails": 128,
+  "pdf_count": 81,
   "categories": {
-    "other_biz": 73,
+    "other_biz": 78,
     "inspection": 4,
     "charge_confirm": 15,
     "booking": 2,
-    "invoice": 1,
-    "overdue": 2,
+    "invoice": 2,
+    "overdue": 1,
     "prealert": 22,
     "arrival": 2,
     "cancel": 2
   },
   "customers": {
     "ASTRONERGY (正泰新能)": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -84,16 +84,27 @@
       "days": [
         "03/30"
       ]
+    },
+    "ROME TRANSPORT": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/30"
+      ]
     }
   },
   "carriers": {
     "MSC": 18,
     "COSCO": 15,
     "OOCL": 18,
-    "ONE": 17,
+    "ONE": 18,
     "CMA-CGM": 12,
-    "ZIM": 5,
-    "Hapag-Lloyd": 5,
+    "ZIM": 7,
+    "Hapag-Lloyd": 4,
     "HMM": 2
   },
   "carrier_fees": {},
@@ -196,7 +207,7 @@
   ],
   "daily_counts": {
     "2026-03-29": 7,
-    "2026-03-30": 126
+    "2026-03-30": 130
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -206,12 +217,12 @@
   ],
   "hold_count": 0,
   "inspection_count": 4,
-  "overdue_count": 2,
+  "overdue_count": 1,
   "cancel_count": 2,
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      20
+      21
     ],
     [
       "assistant@pltplt.com",
@@ -228,6 +239,10 @@
     [
       "\"Winnie Shen\" <sha.ops4@wwl.cn>",
       7
+    ],
+    [
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      5
     ],
     [
       "\"Yumi Dai - WWLSZX\" <fsh.yumidai@wwl.cn>",
@@ -283,10 +298,6 @@
     ],
     [
       "\"Gali.gan@wwl.cn\" <gali.gan@wwl.cn>",
-      2
-    ],
-    [
-      "Will Sun <willsun@wwl.cn>",
       2
     ]
   ],
@@ -656,27 +667,6 @@
       "date": "Mon, 30 Mar 2026 11:20:20"
     },
     {
-      "type": "overdue",
-      "priority": "high",
-      "mbl": "",
-      "customer": "",
-      "amount": "",
-      "assignee": "",
-      "carrier": "",
-      "sender": "内部: Yancy Yu",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "催收 → 确认T+X阶段 → T+7首催/T+15升级/T+30追偿函/T+45中信保",
-      "detail": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
-      "source": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
-      "from": "\"Yancy Yu\" <szn.yancyyu@wwl.cn>",
-      "date": "Mon, 30 Mar 2026 15:48:34"
-    },
-    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "OOLU2167032400",
@@ -775,26 +765,6 @@
       "source": "RE: [PRE-ALERT] - ATD MAR 17  - HBL#WLC60311287 - MBL#ONEYSG",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Mon, 30 Mar 2026 15:24:46"
-    },
-    {
-      "type": "post_clearance",
-      "priority": "high",
-      "mbl": "HLCUNK2251220417",
-      "customer": "",
-      "assignee": "",
-      "carrier": "Hapag-Lloyd",
-      "sender": "内部: MengLu-WWLNKG",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "吴梦露 (nkg.ops11@worldwide-logistics.cn)",
-      "wwl_branch": "WWL环世",
-      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
-      "detail": "清关完成 通知卡车+客户",
-      "source": "RE: Pre Alert   CHANGE HBL   WLCNKG260207645   MBL#HLCUNK225",
-      "from": "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
-      "date": "Mon, 30 Mar 2026 15:58:07"
     },
     {
       "type": "cc_confirm",
@@ -1223,78 +1193,78 @@
     }
   ],
   "action_summary": {
-    "total": 45,
+    "total": 43,
     "urgent": 11,
-    "high": 15,
+    "high": 13,
     "medium": 19
   },
   "bl_status": {
     "no_tlx_mbl": [
+      "COSU6444625540",
+      "CMDUCHN3097590",
+      "OOLU2166524280",
+      "ONEYBTMG00382500",
+      "MEDUYQ353300",
+      "ZIMUNGB20218977",
+      "OOLU2320126090",
+      "CMDUCHN3095178",
+      "HLCUSHA2603BIYR0",
+      "OOLU2166784670",
       "COSU6447551240",
       "COSU8040582340",
-      "HLCUSHA2603BIYR0",
-      "OOLU2166524280",
-      "MEDUYQ353300",
-      "COSU6447544660",
-      "HLCUSHA2603BJKC0",
-      "ONEYSHAG81060500",
-      "ONEYBTMG00383600",
-      "MEDUYL789706",
-      "ONEYBTMG00521700",
-      "OOLU2166784680",
-      "MEDUWK745968",
-      "MEDUWK478768",
-      "ZIMUNGB20218977",
-      "CMDUCHN3095178",
-      "MEDUKG193320",
-      "OOLU2166784670",
-      "CMDUCHN3097590",
-      "COSU6444363540",
-      "OOLU2167100640",
-      "OOLU2320126090",
-      "ONEYBTMG00382500",
-      "MEDUWG692272",
       "HLCUNK2251220417",
-      "OOLU2166784690",
-      "CMDUCHN3116145",
-      "COSU6444625540",
       "ZIMUBKK80440481",
-      "COSU6447544630",
+      "ONEYSHAG81060500",
       "ONEYBKKG38865600",
-      "OOLU2167100650"
+      "HLCUSHA2603BJKC0",
+      "MEDUWG692272",
+      "ONEYBTMG00521700",
+      "CMDUCHN3116145",
+      "OOLU2166784680",
+      "COSU6444363540",
+      "OOLU2166784690",
+      "ONEYBTMG00383600",
+      "MEDUWK745968",
+      "COSU6447544660",
+      "OOLU2167100640",
+      "MEDUYL789706",
+      "OOLU2167100650",
+      "COSU6447544630",
+      "MEDUWK478768",
+      "MEDUKG193320"
     ],
     "no_tlx_hbl": [
       "WLC60216466",
-      "WLC50813210",
-      "WLC60307413",
-      "WLC60215570",
+      "WLC60312647",
       "WLC60312641",
+      "WLC60215567",
+      "WLC60312639",
       "WLC60301974",
-      "WLC60200080",
       "WLC60124381",
-      "WLC50522982",
+      "WLC60200080",
+      "WLC60312633",
+      "WLC60126287",
+      "WLC60120505",
+      "WLC60215570",
       "WLC60301625",
       "WLC60213560",
-      "WLC60126287",
-      "WLC60208507",
-      "WLC60207645",
-      "WLC60312647",
-      "WLC60215567",
-      "WLC60120505",
-      "WLC60301626",
       "WLC60216138",
-      "WLC60301627",
-      "WLC60317120",
+      "WLC50813210",
       "WLC60205753",
-      "WLC60312643",
+      "WLC60125060",
+      "WLC60317120",
+      "WLC60301627",
+      "WLC60207645",
+      "WLC60307413",
       "WLC60313836",
-      "WLC60312639",
-      "WLC60312633",
-      "WLC60125060"
+      "WLC60301626",
+      "WLC60208507",
+      "WLC50522982",
+      "WLC60312643"
     ],
     "an_no_prealert": [
-      "OOLU2167100640",
-      "OOLU2167100650"
+      "OOLU2167100650",
+      "OOLU2167100640"
     ],
     "hold_bl": [],
     "tlx_confirmed_mbl": 17,
@@ -1387,26 +1357,52 @@
         "date": "Mon, 30 Mar 2026 15:35:08"
       },
       {
-        "subject": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MAC",
-        "from": "\"Yancy Yu\" <szn.yancyyu@wwl.cn",
-        "urgency": 3,
-        "date": "Mon, 30 Mar 2026 15:48:34"
-      },
-      {
         "subject": "答复: AN    HBL#WLC50813210   MBL#ONEYSZPFQ7086300  POL:   SHE",
         "from": "\"Jim Wen\" <fsh.jimwen@wwl.cn>",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 16:05:52"
+      },
+      {
+        "subject": "RE: ONE付款  WLDBKK260304456  ONEYBTMG00382500  USD15",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:51:53"
+      },
+      {
+        "subject": "RE: OOCL付款  USD63.06*4",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:53:13"
+      },
+      {
+        "subject": "RE: CMA付款  USD59+149",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:54:50"
+      },
+      {
+        "subject": "RE: ZIM付款  WLDBKK260301685  ZIMUBKK80440481  USD70.35",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:55:51"
+      },
+      {
+        "subject": "RE: HMM付款  WLDSHA260304463  HDMUSHAZYFZ44500  USD70",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:56:48"
       }
     ]
   },
   "neural_network": {
-    "entities": 85,
+    "entities": 86,
     "relationships": 1,
     "contacts_new": 0,
     "contacts_total": 365,
     "daily_connections": 4,
-    "new_domains": []
+    "new_domains": [
+      "romesales.com"
+    ]
   },
   "daily_connections": [
     {
