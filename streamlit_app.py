@@ -1683,7 +1683,7 @@ with tabs[6]:
             elif "PTT" in name or "PACIFIC" in name:
                 biz_detail = "正在处理: 科陆储能柜提箱配送(COSU6446478520 DO已签) / ZIM双鱼2x20HC卡车安排"
                 pending_detail = "COSCO提箱时间待确认 / ZIM票卡车报价待回复"
-                action_detail = "联系PTT确认COSCO提箱时间→跟进ZIM卡车报价→通知Effy安排Delivery"
+                action_detail = "联系PTT确认COSCO提箱时间→跟进ZIM卡车报价→安排Delivery"
             elif "Rome" in name:
                 biz_detail = "正在处理: 正泰新能ZTLO260031项目(41次配送) / Houston大件运输"
                 pending_detail = "下批次正泰提货时间待确认"
