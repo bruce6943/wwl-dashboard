@@ -1504,12 +1504,11 @@ with tabs[5]:
                 "紧急度星": "★" * urgency,
                 "重要度星": "★" * importance,
                 "建议": (
-                    "高度关注! 频繁沟通+有欠费, 需要专人跟进"
-                    if urgency >= 4 and importance >= 4
-                    else "重要客户, 保持服务质量"
-                    if importance >= 4
-                    else "紧急处理当前事务"
-                    if urgency >= 4
+                    f"高度关注! 频繁沟通+欠费${arrears_amount:,.0f}" if urgency >= 4 and importance >= 4 and arrears_amount > 0
+                    else "高度关注! 业务量大, 重点维护" if urgency >= 4 and importance >= 4
+                    else f"注意欠费${arrears_amount:,.0f}" if arrears_amount > 1000
+                    else "重要客户, 保持服务质量" if importance >= 4
+                    else "紧急处理当前事务" if urgency >= 4
                     else "常规维护"
                 ),
             })
