@@ -820,6 +820,48 @@ with tabs[0]:
 
     # 操作待办(非催收)
     ops_tasks = [t for t in pending if t.get("category") != "arrears"]
+
+    # 补充: bl_status中的未电放/Hold/AN漏单也作为操作待办
+    _bl_task_counter = 0
+    for m in no_tlx_mbl:
+        _bl_task_counter += 1
+        carrier = "MSC" if m.startswith("MEDU") else "CMA-CGM" if m.startswith("CMDU") else "COSCO" if m.startswith("COSU") else "ONE" if m.startswith("ONEY") else "OOCL" if m.startswith("OOLU") else "ZIM" if m.startswith("ZIMU") else "其他"
+        tid = f"bl_notlx__{m}"
+        if tid not in seen_ids:
+            ops_tasks.append({"id": tid, "category": "bl_release", "priority": "high",
+                "title": "MBL未电放", "action": f"联系origin确认TLX状态, 催促放单",
+                "mbl": m, "hbl": "", "carrier": carrier, "customer": "", "wwl_sender": "", "wwl_branch": "",
+                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
+                "internal_staff": "", "customer_contact": "", "assignee": ""})
+    for h in no_tlx_hbl:
+        _bl_task_counter += 1
+        tid = f"bl_hbl__{h}"
+        if tid not in seen_ids:
+            ops_tasks.append({"id": tid, "category": "bl_release", "priority": "high",
+                "title": "HBL未电放", "action": f"联系origin确认TLX, 确认客户是否已付款",
+                "mbl": "", "hbl": h, "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
+                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
+                "internal_staff": "", "customer_contact": "", "assignee": ""})
+    for h in hold_bl:
+        if not isinstance(h, dict): continue
+        m = h.get("mbl", "")
+        tid = f"bl_hold__{m}"
+        if tid not in seen_ids:
+            htype = h.get("type", "待确认")
+            ops_tasks.append({"id": tid, "category": "hold_active", "priority": "urgent",
+                "title": f"Hold/查验: {htype}", "action": f"{htype} → 确认具体要求 → 联系报关行/origin",
+                "mbl": m, "hbl": "", "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
+                "amount": "", "detail_lines": [h.get("subject", "")], "contact": "", "consignee": "", "shipper": "",
+                "internal_staff": "", "customer_contact": "", "assignee": ""})
+    for m in an_no_prealert:
+        tid = f"bl_an__{m}"
+        if tid not in seen_ids:
+            ops_tasks.append({"id": tid, "category": "prealert_gap", "priority": "urgent",
+                "title": "AN已收但无预报", "action": "可能漏单! 查找对应预报, 确认HBL, 联系origin",
+                "mbl": m, "hbl": "", "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
+                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
+                "internal_staff": "", "customer_contact": "", "assignee": ""})
+
     ops_urgent = [t for t in ops_tasks if t["priority"] == "urgent"]
     ops_high = [t for t in ops_tasks if t["priority"] == "high"]
     ops_medium = [t for t in ops_tasks if t["priority"] == "medium"]
@@ -1153,45 +1195,118 @@ with tabs[2]:
     with c4:
         st.markdown(metric_card(f"${collect_cnee:,.0f}", "代收-收货人", "#9c27b0"), unsafe_allow_html=True)
 
+    # 欠费构成饼图 + T+X阶段分布
+    _c_pie, _c_bar = st.columns(2)
+    with _c_pie:
+        if cnee_self or shipper_bear or collect_cnee:
+            _pie_data = []
+            if cnee_self: _pie_data.append({"类型": "收货人自付", "金额": cnee_self})
+            if shipper_bear: _pie_data.append({"类型": "委托人承担", "金额": shipper_bear})
+            if collect_cnee: _pie_data.append({"类型": "代收-收货人", "金额": collect_cnee})
+            _pie_df = pd.DataFrame(_pie_data)
+            fig_pie = px.pie(_pie_df, names="类型", values="金额",
+                             color_discrete_sequence=["#e94560","#2196f3","#9c27b0"],
+                             title="欠费构成")
+            fig_pie.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+                                  font_color="#e0e0e0", height=280, title_font_size=14)
+            st.plotly_chart(fig_pie, use_container_width=True, key="arr_pie")
+    with _c_bar:
+        if SOP and isinstance(SOP, dict):
+            _tx_counts = {"T+7 首催": 0, "T+15 升级": 0, "T+30 追偿函": 0, "超中信保": 0}
+            _tx_amts = {"T+7 首催": 0, "T+15 升级": 0, "T+30 追偿函": 0, "超中信保": 0}
+            for name, info in SOP.items():
+                if not isinstance(info, dict): continue
+                tx = info.get('status', '')
+                amt_num = info.get('amount_num', 0)
+                if '超中信保' in tx:
+                    _tx_counts["超中信保"] += 1; _tx_amts["超中信保"] += amt_num
+                elif '中信保' in tx or '追偿' in tx:
+                    _tx_counts["T+30 追偿函"] += 1; _tx_amts["T+30 追偿函"] += amt_num
+                elif '升级' in tx:
+                    _tx_counts["T+15 升级"] += 1; _tx_amts["T+15 升级"] += amt_num
+                else:
+                    _tx_counts["T+7 首催"] += 1; _tx_amts["T+7 首催"] += amt_num
+            _bar_data = [{"阶段": k, "客户数": v, "金额": _tx_amts[k]} for k, v in _tx_counts.items() if v > 0]
+            if _bar_data:
+                _bar_df = pd.DataFrame(_bar_data)
+                fig_bar = px.bar(_bar_df, x="阶段", y="金额", text="客户数",
+                                 color="阶段", color_discrete_map={"T+7 首催":"#2196f3","T+15 升级":"#ffa500","T+30 追偿函":"#ff6b35","超中信保":"#e94560"},
+                                 title="T+X阶段分布")
+                fig_bar.update_traces(texttemplate='%{text}家', textposition='outside')
+                fig_bar.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+                                      font_color="#e0e0e0", height=280, showlegend=False, title_font_size=14,
+                                      yaxis_title="金额($)", xaxis_title="")
+                st.plotly_chart(fig_bar, use_container_width=True, key="arr_bar")
+
     st.markdown("---")
 
-    # 催收跟踪(全部从3.30 Excel数据生成)
+    # 催收跟踪(SOP + 目的港欠费联动)
     section_header("欠费催收跟踪")
+
+    # 构建目的港欠费索引(从arrears top20)
+    _port_arrears = {}
+    for item in ARR.get("top20", []):
+        _port_arrears[item["name"].upper()] = item
+
     if SOP and isinstance(SOP, dict):
         _sop_html = ""
         for i, (name, info) in enumerate(sorted(SOP.items(), key=lambda x: x[1].get('amount_num', 0) if isinstance(x[1], dict) else 0, reverse=True)):
             if not isinstance(info, dict): continue
             amt = info.get('amount', '')
+            amt_num = info.get('amount_num', 0)
             days = info.get('days_overdue', 0)
             tx = info.get('status', '')
             sheet = info.get('sheet_breakdown', '')
             detail = info.get('fee_detail', '')[:45]
             records = info.get('records', 0)
 
+            # 联动目的港欠费数据
+            port_match = _port_arrears.get(name.upper(), {})
+            port_amt = port_match.get('total', 0)
+            port_mbls = len(port_match.get('mbls', []))
+
+            # 状态图标
+            if days > 45:
+                icon = "🔴"
+            elif days > 15:
+                icon = "🟠"
+            elif days > 7:
+                icon = "🟡"
+            else:
+                icon = "🔵"
+
             amt_color = "#e94560" if days > 45 else "#ffa500" if days > 15 else "#2196f3"
             tx_color = "#e94560" if '超中信保' in tx else "#ffa500" if '追偿' in tx or '升级' in tx or '中信保!' in tx else "#2196f3"
+            # 金额占比条
+            bar_pct = min(amt_num / max(total_arrears, 1) * 100, 100)
 
             _sop_html += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;color:#666;width:25px;">{i+1}</td>
-                <td><b style="color:#fff;">{unify_customer_name(name)}</b></td>
+                <td style="text-align:center;color:#666;width:25px;">{icon}</td>
+                <td><b style="color:#fff;">{unify_customer_name(name)}</b>
+                    <div style="background:rgba(50,50,80,0.5);border-radius:3px;height:4px;margin-top:3px;">
+                        <div style="background:{amt_color};width:{bar_pct:.0f}%;height:4px;border-radius:3px;"></div>
+                    </div>
+                </td>
                 <td style="text-align:center;color:{amt_color};font-weight:700;">{amt}</td>
                 <td style="text-align:center;color:#a0a0c0;">{days}天</td>
                 <td style="text-align:center;"><span style="background:{tx_color};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{tx}</span></td>
                 <td style="font-size:11px;color:#a0a0c0;">{sheet}</td>
                 <td style="font-size:11px;color:#888;">{detail}</td>
                 <td style="text-align:center;color:#666;">{records}</td>
+                <td style="text-align:center;font-size:11px;color:{'#e94560' if port_amt > 0 else '#444'};">{"${:,.0f}".format(port_amt) if port_amt else "-"}</td>
             </tr>'''
 
         st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
             <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
-                <th style="padding:6px;color:#e94560;width:25px;">#</th>
+                <th style="padding:6px;color:#e94560;width:25px;"></th>
                 <th style="padding:6px;color:#e94560;">客户</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">金额</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">欠费天数</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">T+X阶段</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">SOP金额</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">天数</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">T+X</th>
                 <th style="padding:6px;color:#e94560;">收款类型</th>
                 <th style="padding:6px;color:#e94560;">费用明细</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">记录</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">目的港欠费</th>
             </tr></thead>
             <tbody>{_sop_html}</tbody>
         </table>''', unsafe_allow_html=True)
