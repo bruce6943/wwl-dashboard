@@ -409,7 +409,12 @@
       "customer": "HORIZON SOLAR INC.",
       "wwl_sender": "",
       "wwl_branch": "未知",
-      "action": "OOCL 2票 — 查验中 → 跟进报关行 → 通知委托方",
+      "action": "OOCL 2票 — Brian Wals来信→需确认并回复",
+      "detail_lines": [
+        "03-30 21:04 Fife CES: Hello,\r \r I do not have record of these containers.\r \r SEKU4559135\r FFAU3079228",
+        "03-30 22:07 Seattle CES: Hello,\r \r We have no record of these three either.\r \r Thank you!\r \r [A black rec",
+        "03-31 01:02 Brian Walsh - W: Shipment is on a customs hold.\r I emailed customs this morning, but am still wai"
+      ],
       "progress_history": "提单: OOLU2320126090, OOLU2166524280",
       "email_count": 59,
       "last_seen": "2026-03-31"
@@ -423,7 +428,12 @@
       "customer": "ELITE SOLAR NEW ENERGY CO.",
       "wwl_sender": "nathia (jkt.nathia@wwl.sg)",
       "wwl_branch": "WWL印尼",
-      "action": "MSC 11票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "MSC 11票 — 等nathia的上家回复",
+      "detail_lines": [
+        "01-22 16:07 nathia: Dear  <mailto:ID012-freight.id@msc.com> @'ID012-freight.id@msc.com'\r \r \r \r Pleas",
+        "01-22 16:19 nathia: Dear All\r \r \r \r Proof as attached\r \r \r \r \r \r \r \r Warm regards\r \r \r \r Nathia Utam",
+        "01-22 17:03 nathia: Dear  <mailto:wwlusa.list@worldwide-logistics.cn>\r @wwlusa.list@worldwide-logist"
+      ],
       "progress_history": "提单: MEDUKU085016, MEDUKU084282, MEDUKU085123",
       "email_count": 178,
       "last_seen": "2026-03-19"
@@ -434,10 +444,14 @@
       "title": "Fee Pending",
       "mbl": "OOLU2322301440, OOLU2322148060, OOLU2322147820, OOLU2320655770, OOLU2320655560 +2",
       "carrier": "OOCL",
-      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
       "wwl_branch": "WWL厦门",
-      "action": "OOCL 7票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "OOCL 7票 — 等Justin Jia的上家回复",
+      "detail_lines": [
+        "03-17 11:58 Justin Jia - WW: Hi \r   \r HB/L: WLC60305005 COPY\r      \r MB/L: OOLU2322301440   COPY \r  \r Pls cha",
+        "03-25 11:35 Justin Jia - WW: Dear\r \r 请查收HBL-TLX\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：wwlqc@wwl."
+      ],
       "progress_history": "提单: OOLU2322301440, OOLU2322148060, OOLU2322147820",
       "email_count": 11,
       "last_seen": "2026-03-25"
@@ -448,10 +462,14 @@
       "title": "Fee Pending",
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506319200, COSU9506444150 +2",
       "carrier": "COSCO",
-      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
-      "action": "COSCO 7票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "COSCO 7票 — 等Maggie Wu的上家回复",
+      "detail_lines": [
+        "03-17 16:21 ngb.ops25@wwl.c: Dear all,\r  \r Pls kindly find attached S/A for our shpts, D/O charge PREPAID.",
+        "03-30 13:54 Maggie Wu: Dear Kitty\r \r We have received AN from carrier for subject shipment and please i"
+      ],
       "progress_history": "提单: COSU9506320440, COSU6446832300, COSU9506319310",
       "email_count": 10,
       "last_seen": "2026-03-30"
@@ -462,10 +480,15 @@
       "title": "Fee Pending",
       "mbl": "COSU6446212300, COSU6446342500, COSU6446117360, COSU9506295790, COSU6446482360 +1",
       "carrier": "COSCO",
-      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
       "wwl_branch": "WWL厦门",
-      "action": "COSCO 6票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "COSCO 6票 — 等Justin Jia的上家回复",
+      "detail_lines": [
+        "03-20 17:00 Yate Li - WWG X: Hi \r   \r HB/L: WLC60305002          TLX PENDING\r      \r MB/L: COSU6446212300   S",
+        "03-25 11:34 Justin Jia - WW: Dear\r \r 请查收HBL-TLX\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：wwlqc@wwl.",
+        "03-25 14:27 Justin Jia - WW: Dear\r \r 更新POD的HBL-TLX请查收，谢谢。\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门："
+      ],
       "progress_history": "提单: COSU6446212300, COSU6446342500, COSU6446117360",
       "email_count": 10,
       "last_seen": "2026-03-25"
@@ -479,7 +502,12 @@
       "customer": "ELITE SOLAR NEW ENERGY CO.",
       "wwl_sender": "",
       "wwl_branch": "未知",
-      "action": "CMA-CGM 4票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "CMA-CGM 4票 — 等Maggie Wu的上家回复",
+      "detail_lines": [
+        "03-16 17:37 Maggie Wu: Dear May & Jiahe，\r \r  \r \r Please kindly settle  DEM invoice attached from carrie",
+        "03-23 23:47 Maggie Wu: Dear May & Jiahe，\r \r Any positive reply as per overdue payment for this shipment",
+        "03-27 02:27 Maggie Wu: Dear all\r \r Nobody can answer to me?\r \r  \r \r With Best Regards! \r \r Maggie Wu"
+      ],
       "progress_history": "提单: CMDUDJA1417805, CMDUDJA1418502, CMDUDJA1417763",
       "email_count": 32,
       "last_seen": "2026-03-27"
@@ -493,7 +521,10 @@
       "customer": "",
       "wwl_sender": "sha.ops120 (sha.ops120@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "COSCO 4票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "COSCO 4票 — 等sha.ops120的上家回复",
+      "detail_lines": [
+        "03-17 11:09 sha.ops120: Dear \r \r  \r \r Pls kindly find attached S/A for our shpts \r ATD: 2026-03-14\r \r VS"
+      ],
       "progress_history": "提单: COSU6446579460, COSU6446020160, COSU6446020150",
       "email_count": 4,
       "last_seen": "2026-03-17"
@@ -507,7 +538,12 @@
       "customer": "HITHIUM TECH USA INC. / 海辰储能",
       "wwl_sender": "stevenpu@wwl.cn (stevenpu@wwl.cn)",
       "wwl_branch": "WWL中国",
-      "action": "CMA-CGM 3票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "CMA-CGM 3票 — Noelle Hen来信→需确认并回复",
+      "detail_lines": [
+        "03-18 14:28 Steven Harris: Noelle,\r \r We still need this paid.\r \r Best Regards,\r \r Steven Harris\r Logistics",
+        "03-18 14:38 Noelle Henderso: Hi Steven,  I will get this receipt over to you shortly.  Thank you  Noelle Hend",
+        "03-18 14:59 Noelle Henderso: Hi team,  Please see attached.  Thank you  Noelle Henderson International Operat"
+      ],
       "progress_history": "提单: CMDUCHN2683387, CMDUCHN2699890, CMDUCHN2683389",
       "email_count": 42,
       "last_seen": "2026-03-18"
@@ -521,7 +557,12 @@
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
       "wwl_sender": " (bkk.guide@wwl.sg)",
       "wwl_branch": "WWL泰国",
-      "action": "ZIM 3票 — 已申请付款 → 跟进水单 → 发船公司销账",
+      "action": "ZIM 3票 — 等us.ops的上家回复",
+      "detail_lines": [
+        "03-12 09:49 bkk.guide: Confirmed prepaid.\r \r  \r \r  \r \r Best regards ,\r \r Satak Hirunrattanakorn [ Guide",
+        "03-12 14:17 rita tang: Dear Sven，\r \r  \r \r \r ZIMUBKK80435044\r \r WLDBKK260201108\r \r 18.41\r \r \r ZIMUBKK804",
+        "03-13 07:21 us.ops: Dear ZIM Team\r \r We have arranged payment for the following four shipments.\r \r P"
+      ],
       "progress_history": "提单: ZIMUBKK80433862, ZIMUBKK80435044, ZIMUBKK80433861",
       "email_count": 38,
       "last_seen": "2026-03-15"
@@ -535,7 +576,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
       "wwl_branch": "WWL宁波",
-      "action": "OOCL 3票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "OOCL 3票 — 等yoyo的上家回复",
+      "detail_lines": [
+        "02-09 16:41 yoyo: Dear all,\r \r Pls kindly find attached S/A for our shpts, D/O charge prepaid.",
+        "03-17 09:46 Everlyn Shaw: Hello\r \r  \r \r 确认一下此票的品名是否改成以下内容了：\r \r  \r \r \r \r  \r \r  \r \r  \r \r Thank you!",
+        "03-18 11:45 yoyo: Dear\r \r 是的\r \r  \r \r   _____  \r \r 宁波舱单链接：https://www.sino56.com/sino-manifest/serv"
+      ],
       "progress_history": "提单: OOLU2318729730, OOLU2322662920, OOLU2321476620",
       "email_count": 5,
       "last_seen": "2026-03-18"
@@ -546,10 +592,13 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
+      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD.",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
-      "action": "ONE 3票 — 预付 → Origin已垫付 → 确认金额入账",
+      "action": "ONE 3票 — 等bkk.nasmee的上家回复",
+      "detail_lines": [
+        "03-20 09:53 bkk.nasmee: Dear All,\r \r  \r \r Please find the pre-alert and documents attached.\r \r POD charg"
+      ],
       "progress_history": "提单: ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "email_count": 3,
       "last_seen": "2026-03-20"
@@ -563,7 +612,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "MSC 2票 — 到付 → Sven确认付款给船公司 → 向收货人征收 | 收货人: HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "action": "MSC 2票 — operation.来信→需确认并回复",
+      "detail_lines": [
+        "03-12 14:44 Winnie Shen: Dear \r \r  \r \r Chassis Usage Charge USD220  collect\r \r  \r \r Thank  you~\r \r  \r \r 如",
+        "03-18 10:43 Sienna: Dear：\r \r Please check MSC invs as attached. Thx.\r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，",
+        "03-24 15:35 operation.us@sc: Dear\r \r bank slip for \r MEDUWK300806  chassis-USD220\r MEDUWK300806  CHASSIS PER"
+      ],
       "progress_history": "提单: MEDUWK300806, MEDUWK525337",
       "email_count": 23,
       "last_seen": "2026-03-24"
@@ -577,7 +631,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
       "wwl_branch": "WWL宁波",
-      "action": "Hapag-Lloyd 2票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "Hapag-Lloyd 2票 — 等yoyo的上家回复",
+      "detail_lines": [
+        "02-24 18:00 yoyo: Dear all,\r \r Pls kindly find attached S/A for our shpts, D/O charge prepaid.",
+        "02-26 11:03 Everlyn Shaw: Docs on file.\r \r  \r \r  \r \r  \r \r Thank you!\r \r  \r \r Everlyn Shaw\r \r Worldwide Log",
+        "03-24 14:39 yoyo: Dear\r \r 附件HBL电放件，可以放单了\r \r  \r \r   _____  \r \r 宁波舱单链接：https://www.sino56.com/sino-m"
+      ],
       "progress_history": "提单: HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
       "email_count": 4,
       "last_seen": "2026-03-24"
@@ -591,7 +650,12 @@
       "customer": "",
       "wwl_sender": "",
       "wwl_branch": "未知",
-      "action": "MSC 2票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "MSC 2票 — 等对方确认",
+      "detail_lines": [
+        "03-30 08:28 us038-noreply: ",
+        "03-30 10:14 Everlyn Shaw: 附件MSC chassis usage发票，请确认收你们还是收收货人\r \r  \r \r  \r \r Thank you!\r \r  \r \r Everlyn Shaw",
+        "03-31 15:12 rita tang: 请确认 chassis usage \r \r  \r \r Rita Tang\r \r  \r \r Worldwide Logistics Co.,Ltd. Shangh"
+      ],
       "progress_history": "提单: MEDUYL789706, MEDUKU104502",
       "email_count": 7,
       "last_seen": "2026-03-31"
@@ -605,7 +669,10 @@
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
       "wwl_sender": " (bkk.guide@wwl.sg)",
       "wwl_branch": "WWL泰国",
-      "action": "OOCL 2票 — 预付 → Origin已垫付 → 确认金额入账",
+      "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
+      "detail_lines": [
+        "03-25 10:13 bkk.nasmee: Dear All,\r \r  \r \r Please find the pre-alert and documents attached.\r \r POD charg"
+      ],
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
       "email_count": 2,
       "last_seen": "2026-03-25"
@@ -619,7 +686,10 @@
       "customer": "",
       "wwl_sender": "",
       "wwl_branch": "未知",
-      "action": "CMA-CGM 2票 — 已申请付款 → 跟进水单 → 发船公司销账",
+      "action": "CMA-CGM 2票 — 等rita tang的上家回复",
+      "detail_lines": [
+        "03-31 15:23 rita tang: Dear Sven，\r \r  \r \r 海外版单独开水单\r \r  \r \r \r CMDUCHN3106797\r \r WLDQZH260304461\r \r 78"
+      ],
       "progress_history": "提单: CMDUCHN3106797, CMDUCHN3097470",
       "email_count": 2,
       "last_seen": "2026-03-31"
@@ -633,7 +703,12 @@
       "customer": "",
       "wwl_sender": "zhangdantong (ada.zhang@wwl.cn)",
       "wwl_branch": "WWL中国",
-      "action": "已申请付款 → 跟进水单 → 发船公司销账",
+      "action": "等rita tang的上家回复",
+      "detail_lines": [
+        "03-30 17:04 Maggie Wu: Dear Ada\r \r 好的，那这票我们垫付，向宁波口岸结算。\r \r  \r \r Dear Max\r \r 这票USD 850 应付WWL-LAX 做进系统。",
+        "03-31 15:18 rita tang: Dear Sven，\r \r  \r \r \r ZIMUNGB20218977\r \r WLDSHA251201150\r \r 850\r \r \r ZIMUBKK80439",
+        "03-31 15:19 rita tang: 补账单\r \r  \r \r Rita Tang\r \r  \r \r Worldwide Logistics Co.,Ltd. Shanghai Head Office"
+      ],
       "progress_history": "",
       "email_count": 14,
       "last_seen": "2026-03-31"
@@ -647,7 +722,12 @@
       "customer": "MAG SPECIALTIES INC.",
       "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
       "wwl_branch": "WWL天津",
-      "action": "费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "us038-impo来信→需确认并回复",
+      "detail_lines": [
+        "03-28 16:38 us038-importpic: ",
+        "03-29 16:09 us038-importpic: ",
+        "03-30 12:13 us038-importpic: "
+      ],
       "progress_history": "",
       "email_count": 25,
       "last_seen": "2026-03-30"
@@ -661,7 +741,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
       "wwl_branch": "WWL天津",
-      "action": "到付 → Sven确认付款给船公司 → 向收货人征收 | 收货人: HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "action": "等Shirley.Li的上家回复",
+      "detail_lines": [
+        "03-10 20:53 Sven Gu: APLAX2603100012\r \r  \r \r Thanks & B.Regards,\r \r  \r \r * Our Bank details haven’t c",
+        "03-24 10:00 Everlyn Shaw: Pls advise attached POD charge is prepaid or collect?",
+        "03-25 10:25 Shirley.Liu WWL: Dear Everlyn\r \r Pls collect to cnee\r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：w"
+      ],
       "progress_history": "",
       "email_count": 15,
       "last_seen": "2026-03-25"
@@ -675,7 +760,11 @@
       "customer": "GLOBAL OCEAN",
       "wwl_sender": "Daniel Yan (sha.ops46@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "action": "等Sienna的上家回复",
+      "detail_lines": [
+        "03-30 16:18 Daniel Yan: Dear,\r \r  \r \r Pls kindly find attached S/A for our shpts \r \r  \r \r SHIPPING ADVIC",
+        "03-30 16:20 Sienna: Adding 方\r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：\r <mailto:wwlqc@wwl.cn> wwl"
+      ],
       "progress_history": "",
       "email_count": 2,
       "last_seen": "2026-03-30"
