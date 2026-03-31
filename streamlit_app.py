@@ -460,6 +460,37 @@ DI = DATA.get("deep_insights", {})
 DP = DATA.get("deep_patterns", {})
 USC = DATA.get("us_consignee", {})
 
+# ─── 统一客户名映射(全局强制执行) ───
+_CUSTOMER_UNIFIED = {}
+try:
+    with open("data/customer_unified.json", "r", encoding="utf-8") as _cuf:
+        _cu_data = json.load(_cuf)
+    _CUSTOMER_UNIFIED = _cu_data.get("mapping", {})
+    _ARREARS_BY_CUSTOMER = _cu_data.get("arrears_by_customer", {})
+except:
+    _ARREARS_BY_CUSTOMER = {}
+
+def unify_customer_name(name):
+    """将任何客户名变体映射到标准名"""
+    if not name: return name
+    std = _CUSTOMER_UNIFIED.get(name.upper(), '')
+    if std: return std
+    for k, v in _CUSTOMER_UNIFIED.items():
+        if k[:6] in name.upper() or name.upper()[:6] in k:
+            return v
+    return name
+
+def get_customer_arrears(name):
+    """获取客户欠费金额"""
+    std = unify_customer_name(name)
+    amt = _ARREARS_BY_CUSTOMER.get(std, 0)
+    if not amt:
+        for arr_item in ARR.get("top20", []):
+            if std.upper()[:8] in arr_item.get("name", "").upper() or arr_item.get("name", "").upper()[:8] in std.upper():
+                return arr_item.get("total", 0)
+    return amt
+
+
 # ─── Derived data ───
 bl = A.get("bl_status", {})
 anom = A.get("anomalies", {})
@@ -1115,7 +1146,7 @@ with tabs[2]:
             )
             top_rows.append({
                 "排名": i + 1,
-                "客户名称": item.get("name", ""),
+                "客户名称": unify_customer_name(item.get("name", "")),
                 "欠费金额": f"${item.get('total', 0):,.0f}",
                 "记录数": item.get("records", 0),
                 "风险等级": risk,
@@ -1527,7 +1558,7 @@ with tabs[5]:
             importance = min(5, max(1, active // 4 + (2 if emails > 50 else (1 if emails > 20 else 0))))
 
             cust_rows.append({
-                "客户": name,
+                "客户": unify_customer_name(name),
                 "30天邮件": emails,
                 "活跃天数": active,
                 "欠费": f"${arrears_amount:,.0f}" if arrears_amount > 0 else "-",
