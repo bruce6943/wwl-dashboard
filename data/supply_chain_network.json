@@ -5,7 +5,7 @@
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 221,
+      "ZIM": 223,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -68,7 +68,7 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 75,
+      "OOCL": 77,
       "MSC": 2
     },
     "HOUNEN SOLAR": {
@@ -88,11 +88,11 @@
     },
     "DTC SA": {
       "COSCO": 23,
-      "OOCL": 72,
-      "Evergreen": 53
+      "OOCL": 74,
+      "Evergreen": 57
     },
     "BTL INTERNATIONAL": {
-      "ONE": 23
+      "ONE": 27
     }
   },
   "customer_service": {
@@ -121,7 +121,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 100,
+        "count": 101,
         "types": [
           "卡车"
         ]
@@ -138,7 +138,7 @@
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 74,
+        "count": 76,
         "types": []
       }
     },
@@ -195,7 +195,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 177,
+        "count": 183,
         "types": [
           "卡车"
         ]
@@ -203,7 +203,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 177,
+        "count": 183,
         "types": [
           "卡车"
         ]
@@ -217,13 +217,13 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 82,
+        "count": 84,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 342,
+        "count": 353,
         "types": [
           "卡车"
         ]
@@ -231,13 +231,13 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 33,
+        "count": 34,
         "types": []
       }
     },
     "ASTRONERGY (正泰新能)": {
       "Pioneer": {
-        "count": 26,
+        "count": 27,
         "types": []
       }
     }

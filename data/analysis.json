@@ -1,19 +1,19 @@
 {
-  "scan_time": "2026-03-31T16:14:01.779890+08:00",
-  "total_emails": 226,
-  "business_emails": 190,
-  "pdf_count": 75,
+  "scan_time": "2026-03-31T16:22:33.123945+08:00",
+  "total_emails": 229,
+  "business_emails": 193,
+  "pdf_count": 76,
   "categories": {
     "charge_confirm": 16,
     "prealert": 32,
-    "other_biz": 103,
+    "other_biz": 105,
     "arrival": 10,
     "hold": 4,
     "booking": 5,
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
-    "overdue": 13
+    "overdue": 14
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -208,7 +208,7 @@
   },
   "carrier_fees": {
     "ONE": {
-      "count": 20,
+      "count": 21,
       "total": 10.0,
       "avg": 1.25
     },
@@ -339,7 +339,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 137
+    "2026-03-31": 140
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -349,7 +349,7 @@
   ],
   "hold_count": 4,
   "inspection_count": 4,
-  "overdue_count": 13,
+  "overdue_count": 14,
   "cancel_count": 0,
   "top_senders": [
     [
@@ -370,7 +370,7 @@
     ],
     [
       "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
-      11
+      12
     ],
     [
       "<horizonsolar001@gmail.com>",
@@ -1372,6 +1372,19 @@
       "date": "Tue, 31 Mar 2026 15:11:51"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG17801700",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG17801700",
+      "source": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "李丽丽 <sha.sales72@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 16:14:44"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -2141,9 +2154,9 @@
     }
   ],
   "action_summary": {
-    "total": 87,
+    "total": 88,
     "urgent": 20,
-    "high": 38,
+    "high": 39,
     "medium": 29
   },
   "bl_status": {
@@ -2210,6 +2223,12 @@
         "from": "\"linyaxin@xiangyu.cn\" <linyaxi",
         "type": "向收货人收费",
         "date": "Tue, 31 Mar 2026 15:45:52"
+      },
+      {
+        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+        "from": "李丽丽 <sha.sales72@wwl.cn>",
+        "type": "向收货人收费",
+        "date": "Tue, 31 Mar 2026 16:14:44"
       }
     ],
     "stolen": [],
@@ -2265,18 +2284,19 @@
     ]
   },
   "neural_network": {
-    "entities": 91,
+    "entities": 92,
     "relationships": 30,
     "contacts_new": 0,
     "contacts_total": 374,
     "daily_connections": 22,
     "new_domains": [
-      "romesales.com",
       "xiangyu.cn",
+      "romesales.com",
+      "mercerlogistics.com",
       "biposervice.com",
       "containerport.com",
-      "mercerlogistics.com",
-      "elite-solar.com"
+      "elite-solar.com",
+      "immensitylogistics.com"
     ]
   },
   "daily_connections": [
