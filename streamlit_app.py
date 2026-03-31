@@ -470,15 +470,31 @@ try:
 except:
     _ARREARS_BY_CUSTOMER = {}
 
+_CUSTOMER_FULL_NAMES = json.loads('''{"REACH": "REACH INDUSTRY (THAILAND) CO., LTD.", "HAIROBOT": "HAI ROBOTICS U.S.A. INC / \u6d77\u67d4\u521b\u65b0", "HAILIANG": "HAILIANG (SINGAPORE) PTE. LTD. / \u6d77\u4eae", "CLOU": "CLOU ELECTRONICS CO., LTD. / \u79d1\u9646(\u542b\u53cc\u9c7c)", "ASTRONERGY": "ASTRONERGY SOLAR TECHNOLOGY CO., LTD. / \u6b63\u6cf0\u65b0\u80fd", "HITHIUM": "HITHIUM TECH USA INC. / \u6d77\u8fb0\u50a8\u80fd", "PREVALON": "PREVALON ENERGY INC.", "HOUNEN": "HOUNEN SOLAR AMERICA INC.", "NEXTERA": "NEXTERA ENERGY CONSTRUCTORS, LLC (US\u76f4\u64cd)", "AVANTIX": "AVANTIX INC.", "MAG SPECIALTIES": "MAG SPECIALTIES INC.", "ELITE SOLAR": "ELITE SOLAR NEW ENERGY CO.", "ELITE EAGLE": "ELITE EAGLE GROUP LLC", "MING HAO XIN": "MING HAO XIN TRADING CO., LTD.", "JINGZHOU": "JINGZHOU CHEMICAL INDUSTRIAL CO., LTD. / \u8346\u5dde\u5316\u5de5", "MERSY": "MERSY CORP SA DE CV", "DTC": "DTC FREIGHT (\u5185\u90e8\u7535\u5546)"}''')
+
+# 供应商/内部公司(不是客户，从客户列表排除)
+_NOT_CUSTOMERS = {"PTS", "YES", "FCC USA", "PTT", "ROME", "SCC", "KORNET", "DTC", "FCC USA(代理)", "PTS(代理)", "YES(报关行)"}
+
 def unify_customer_name(name):
-    """将任何客户名变体映射到标准名"""
+    """将任何客户名变体映射到标准名的全称"""
     if not name: return name
     std = _CUSTOMER_UNIFIED.get(name.upper(), '')
-    if std: return std
-    for k, v in _CUSTOMER_UNIFIED.items():
-        if k[:6] in name.upper() or name.upper()[:6] in k:
-            return v
-    return name
+    if not std:
+        for k, v in _CUSTOMER_UNIFIED.items():
+            if k[:6] in name.upper() or name.upper()[:6] in k:
+                std = v; break
+    if not std: std = name
+    # Return full name if available
+    full = _CUSTOMER_FULL_NAMES.get(std, '')
+    return full if full else std
+
+def is_real_customer(name):
+    """判断是否是真实客户(排除供应商和内部公司)"""
+    if not name: return False
+    for skip in _NOT_CUSTOMERS:
+        if skip.upper() in name.upper() or name.upper() in skip.upper():
+            return False
+    return True
 
 def get_customer_arrears(name):
     """获取客户欠费金额"""
@@ -1522,6 +1538,7 @@ with tabs[5]:
 
         _merged = {}
         for name, info in customers_30d.items():
+            if not is_real_customer(name): continue
             emails = info.get("emails", info) if isinstance(info, dict) else info
             if not isinstance(emails, (int, float)): emails = 0
             active = info.get("active_days", 0) if isinstance(info, dict) else 0
