@@ -1,6 +1,6 @@
 {
-  "scan_time": "2026-03-31T12:45:42.581698+08:00",
-  "total_emails": 162,
+  "scan_time": "2026-03-31T13:22:27.660413+08:00",
+  "total_emails": 163,
   "business_emails": 128,
   "pdf_count": 34,
   "categories": {
@@ -242,7 +242,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 73
+    "2026-03-31": 74
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -296,6 +296,10 @@
       3
     ],
     [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      3
+    ],
+    [
       "Maggie Yin <maggie.yin@elite-solar.com>",
       2
     ],
@@ -329,10 +333,6 @@
     ],
     [
       "Fife CES <cesfife@mercerlogistics.com>",
-      2
-    ],
-    [
-      "Ian Weiland <sales@jctransports.com>",
       2
     ]
   ],
@@ -1607,9 +1607,9 @@
     "contacts_total": 373,
     "daily_connections": 17,
     "new_domains": [
-      "biposervice.com",
       "containerport.com",
       "mercerlogistics.com",
+      "biposervice.com",
       "elite-solar.com"
     ]
   },
