@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T17:18:13.854063+08:00",
-  "total_emails": 240,
-  "business_emails": 204,
-  "pdf_count": 80,
+  "scan_time": "2026-03-31T17:54:15.696198+08:00",
+  "total_emails": 248,
+  "business_emails": 211,
+  "pdf_count": 88,
   "categories": {
-    "charge_confirm": 16,
-    "prealert": 33,
-    "other_biz": 110,
+    "charge_confirm": 17,
+    "prealert": 37,
+    "other_biz": 112,
     "arrival": 10,
     "hold": 4,
     "booking": 5,
@@ -195,11 +195,11 @@
   },
   "carriers": {
     "ONE": 37,
-    "MSC": 21,
-    "COSCO": 2,
-    "OOCL": 12,
+    "MSC": 22,
+    "COSCO": 4,
+    "OOCL": 14,
     "YML": 1,
-    "CMA-CGM": 5,
+    "CMA-CGM": 6,
     "ZIM": 7,
     "Evergreen": 4,
     "Hapag-Lloyd": 2,
@@ -207,8 +207,8 @@
     "WAN HAI": 2
   },
   "carrier_fees": {},
-  "hbl_total": 41,
-  "mbl_total": 39,
+  "hbl_total": 45,
+  "mbl_total": 42,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -232,6 +232,7 @@
     "WLC60216138",
     "WLC60216156",
     "WLC60216466",
+    "WLC60217085",
     "WLC60217446",
     "WLC60301972",
     "WLC60301974",
@@ -240,9 +241,12 @@
     "WLC60305140",
     "WLC60305212",
     "WLC60307413",
+    "WLC60307548",
     "WLC60309086",
     "WLC60310362",
     "WLC60310365",
+    "WLC60311245",
+    "WLC60311254",
     "WLC60311659",
     "WLC60312251",
     "WLC60313618",
@@ -257,6 +261,8 @@
     "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
+    "COSU6447268220",
+    "COSU6447269010",
     "COSU9506295790",
     "HLCUSHA2603BNWG4",
     "HLCUSHA2603BNWQ4",
@@ -283,6 +289,7 @@
     "ONEYBTMG00486300",
     "ONEYBTMG00521700",
     "OOLU2166524280",
+    "OOLU2166783970",
     "OOLU2167382790",
     "OOLU2167428510",
     "OOLU2167574730",
@@ -295,7 +302,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 151
+    "2026-03-31": 159
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -329,6 +336,10 @@
       12
     ],
     [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      10
+    ],
+    [
       "<horizonsolar001@gmail.com>",
       9
     ],
@@ -353,15 +364,15 @@
       5
     ],
     [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      5
-    ],
-    [
       "JEREMY WONG <jeremyw@fccusa.net>",
       4
     ],
     [
       "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
+      4
+    ],
+    [
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
       4
     ],
     [
@@ -383,10 +394,6 @@
     [
       "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
       3
-    ],
-    [
-      "Maggie Yin <maggie.yin@elite-solar.com>",
-      2
     ]
   ],
   "action_items": [
@@ -1934,6 +1941,29 @@
       "date": "Tue, 31 Mar 2026 15:12:10"
     },
     {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUYL789706",
+      "hbl": "WLC60124381",
+      "customer": "HAILIANG",
+      "eta": "2026-03-20",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "内部: Renee Lin-WWLSZN",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUYL789706 金额:",
+      "source": "RE: Charge confirm request /MBL:MEDUYL789706 /HBL:WLC6012438",
+      "from": "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 17:20:58"
+    },
+    {
       "type": "empty_return",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -2215,10 +2245,10 @@
     }
   ],
   "action_summary": {
-    "total": 95,
+    "total": 96,
     "urgent": 20,
     "high": 45,
-    "medium": 30
+    "medium": 31
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -2353,6 +2383,48 @@
         "from": "\"Sven Gu\" <sha.overseassup2@ww",
         "urgency": 3,
         "date": "Tue, 31 Mar 2026 20:16:02"
+      },
+      {
+        "subject": "RE: ZIM付款  USD850+65.35",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 20:18:57"
+      },
+      {
+        "subject": "RE: CMA付款  WLDSHA260300272  CMDUCHN3095178  USD59",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 20:21:21"
+      },
+      {
+        "subject": "RE: Charge confirm request /MBL:MEDUYL789706 /HBL:WLC6012438",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:20:58"
+      },
+      {
+        "subject": "RE: DTC account - Pre-alert  Freehandle : OOLU2167574730  / ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:44:25"
+      },
+      {
+        "subject": "Resend ~ RE: DTC account - Pre-alert  Freehandle : OOLU21667",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:46:56"
+      },
+      {
+        "subject": "RESEND ~RE: DTC account - Pre-alert  Freehandle : COSU644726",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:50:50"
+      },
+      {
+        "subject": "RESENT~ RE: DTC account - Pre-alert  Freehandle : COSU644726",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:51:42"
       }
     ]
   },
@@ -2363,13 +2435,13 @@
     "contacts_total": 374,
     "daily_connections": 22,
     "new_domains": [
+      "containerport.com",
+      "xiangyu.cn",
       "immensitylogistics.com",
       "elite-solar.com",
       "mercerlogistics.com",
-      "xiangyu.cn",
       "romesales.com",
-      "biposervice.com",
-      "containerport.com"
+      "biposervice.com"
     ]
   },
   "daily_connections": [
