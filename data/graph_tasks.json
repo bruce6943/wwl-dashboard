@@ -444,8 +444,8 @@
       "title": "Fee Pending",
       "mbl": "OOLU2322301440, OOLU2322148060, OOLU2322147820, OOLU2320655770, OOLU2320655560 +2",
       "carrier": "OOCL",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
       "wwl_branch": "WWL厦门",
       "action": "OOCL 7票 — 等Justin Jia的上家回复",
       "detail_lines": [
@@ -462,8 +462,8 @@
       "title": "Fee Pending",
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506319200, COSU9506444150 +2",
       "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "ngb.ops18@wwl.cn (ngb.ops18@wwl.cn)",
+      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 7票 — 等Maggie Wu的上家回复",
       "detail_lines": [
@@ -480,8 +480,8 @@
       "title": "Fee Pending",
       "mbl": "COSU6446212300, COSU6446342500, COSU6446117360, COSU9506295790, COSU6446482360 +1",
       "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
       "wwl_branch": "WWL厦门",
       "action": "COSCO 6票 — 等Justin Jia的上家回复",
       "detail_lines": [
@@ -592,7 +592,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD.",
+      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 3票 — 等bkk.nasmee的上家回复",
@@ -667,7 +667,7 @@
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
       "detail_lines": [
@@ -676,42 +676,6 @@
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
       "email_count": 2,
       "last_seen": "2026-03-25"
-    },
-    {
-      "type": "payment_requested",
-      "priority": "high",
-      "title": "Payment Requested",
-      "mbl": "CMDUCHN3106797, CMDUCHN3097470",
-      "carrier": "CMA-CGM",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "未知",
-      "action": "CMA-CGM 2票 — 等rita tang的上家回复",
-      "detail_lines": [
-        "03-31 15:23 rita tang: Dear Sven，\r \r  \r \r 海外版单独开水单\r \r  \r \r \r CMDUCHN3106797\r \r WLDQZH260304461\r \r 78"
-      ],
-      "progress_history": "提单: CMDUCHN3106797, CMDUCHN3097470",
-      "email_count": 2,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "payment_requested",
-      "priority": "high",
-      "title": "Payment Requested",
-      "mbl": "ZIMUNGB20218977",
-      "carrier": "ZIM",
-      "customer": "",
-      "wwl_sender": "zhangdantong (ada.zhang@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "等rita tang的上家回复",
-      "detail_lines": [
-        "03-30 17:04 Maggie Wu: Dear Ada\r \r 好的，那这票我们垫付，向宁波口岸结算。\r \r  \r \r Dear Max\r \r 这票USD 850 应付WWL-LAX 做进系统。",
-        "03-31 15:18 rita tang: Dear Sven，\r \r  \r \r \r ZIMUNGB20218977\r \r WLDSHA251201150\r \r 850\r \r \r ZIMUBKK80439",
-        "03-31 15:19 rita tang: 补账单\r \r  \r \r Rita Tang\r \r  \r \r Worldwide Logistics Co.,Ltd. Shanghai Head Office"
-      ],
-      "progress_history": "",
-      "email_count": 14,
-      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_pending",
@@ -768,6 +732,23 @@
       "progress_history": "",
       "email_count": 2,
       "last_seen": "2026-03-30"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "OOLU2167382790",
+      "carrier": "OOCL",
+      "customer": "",
+      "wwl_sender": "Daniel Yan (sha.ops46@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "等Daniel Yan的上家回复",
+      "detail_lines": [
+        "03-31 17:14 Daniel Yan: Dear,\r \r  \r \r Pls kindly find attached S/A for our shpts \r \r  \r \r SHIPPING ADVIC"
+      ],
+      "progress_history": "",
+      "email_count": 1,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "supplier_followup",
@@ -869,14 +850,14 @@
     }
   ],
   "summary": {
-    "arrival_notices": 164,
+    "arrival_notices": 151,
     "bl_releases": 102,
-    "billings": 112,
-    "prealerts": 51
+    "billings": 142,
+    "prealerts": 48
   },
   "stats": {
-    "total": 47,
+    "total": 46,
     "urgent": 21,
-    "high": 26
+    "high": 25
   }
 }

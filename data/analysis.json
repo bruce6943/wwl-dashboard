@@ -1,19 +1,19 @@
 {
-  "scan_time": "2026-03-31T16:39:32.520920+08:00",
-  "total_emails": 233,
-  "business_emails": 197,
-  "pdf_count": 76,
+  "scan_time": "2026-03-31T17:18:13.854063+08:00",
+  "total_emails": 240,
+  "business_emails": 204,
+  "pdf_count": 80,
   "categories": {
     "charge_confirm": 16,
-    "prealert": 32,
-    "other_biz": 105,
+    "prealert": 33,
+    "other_biz": 110,
     "arrival": 10,
     "hold": 4,
     "booking": 5,
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
-    "overdue": 18
+    "overdue": 19
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -197,7 +197,7 @@
     "ONE": 37,
     "MSC": 21,
     "COSCO": 2,
-    "OOCL": 11,
+    "OOCL": 12,
     "YML": 1,
     "CMA-CGM": 5,
     "ZIM": 7,
@@ -207,8 +207,8 @@
     "WAN HAI": 2
   },
   "carrier_fees": {},
-  "hbl_total": 40,
-  "mbl_total": 38,
+  "hbl_total": 41,
+  "mbl_total": 39,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -244,6 +244,7 @@
     "WLC60310362",
     "WLC60310365",
     "WLC60311659",
+    "WLC60312251",
     "WLC60313618",
     "WLC60314212",
     "WLC60314287",
@@ -282,6 +283,7 @@
     "ONEYBTMG00486300",
     "ONEYBTMG00521700",
     "OOLU2166524280",
+    "OOLU2167382790",
     "OOLU2167428510",
     "OOLU2167574730",
     "OOLU2167608500",
@@ -293,7 +295,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 144
+    "2026-03-31": 151
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -303,12 +305,12 @@
   ],
   "hold_count": 4,
   "inspection_count": 4,
-  "overdue_count": 18,
+  "overdue_count": 19,
   "cancel_count": 0,
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      28
+      30
     ],
     [
       "assistant@pltplt.com",
@@ -359,11 +361,11 @@
       4
     ],
     [
-      "<julian.tseng@dynastydfw.com>",
-      3
+      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
+      4
     ],
     [
-      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
+      "<julian.tseng@dynastydfw.com>",
       3
     ],
     [
@@ -1391,6 +1393,19 @@
       "date": "Tue, 31 Mar 2026 16:36:58"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "MEDUYL784319",
+      "customer": "HAILIANG",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:MEDUYL784319",
+      "source": "RE: OVERDUE OUTSTANDING PAYMENT FOR ESPECIALISTAS EN COMERCO",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 17:04:55"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -1529,6 +1544,26 @@
       "source": "RE: 【PRE-ALERT】HBL#WLC60123818 - MBL#MEDUKE699088",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Tue, 31 Mar 2026 13:36:41"
+    },
+    {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "MEDURQ394716",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "内部: Maggie Wu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "WIRE TO MSC 3/31 TOTAL $ 637921",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 16:54:46"
     },
     {
       "type": "cc_confirm",
@@ -2157,13 +2192,33 @@
       "source": "OOCL Arrival Notice OOLU2322439640 | OOCL ROTTERDAM - 162E",
       "from": "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
       "date": "Tue, 31 Mar 2026 14:54:55"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "OOLU2167382790",
+      "customer": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "内部: Daniel Yan",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "pre-alert WLCSHA260312251/OOCL TULIP / 003E / - /OOLU2167382",
+      "from": "\"Daniel Yan\" <sha.ops46@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 17:14:42"
     }
   ],
   "action_summary": {
-    "total": 92,
+    "total": 95,
     "urgent": 20,
-    "high": 43,
-    "medium": 29
+    "high": 45,
+    "medium": 30
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -2286,6 +2341,18 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Tue, 31 Mar 2026 15:47:02"
+      },
+      {
+        "subject": "RE: CMA付款  USD78+156",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 20:07:59"
+      },
+      {
+        "subject": "RE: ONE付款  USD30+15*2",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 20:16:02"
       }
     ]
   },
@@ -2297,12 +2364,12 @@
     "daily_connections": 22,
     "new_domains": [
       "immensitylogistics.com",
+      "elite-solar.com",
       "mercerlogistics.com",
       "xiangyu.cn",
-      "biposervice.com",
-      "containerport.com",
       "romesales.com",
-      "elite-solar.com"
+      "biposervice.com",
+      "containerport.com"
     ]
   },
   "daily_connections": [
