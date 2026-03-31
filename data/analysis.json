@@ -1,18 +1,18 @@
 {
-  "scan_time": "2026-03-31T21:32:41.408857+08:00",
-  "total_emails": 292,
-  "business_emails": 251,
-  "pdf_count": 115,
+  "scan_time": "2026-03-31T22:09:52.955657+08:00",
+  "total_emails": 297,
+  "business_emails": 254,
+  "pdf_count": 119,
   "categories": {
     "charge_confirm": 17,
     "prealert": 58,
-    "other_biz": 124,
+    "other_biz": 125,
     "arrival": 11,
     "hold": 4,
-    "booking": 11,
+    "booking": 13,
     "delivery": 1,
-    "invoice": 2,
-    "inspection": 4,
+    "invoice": 4,
+    "inspection": 2,
     "overdue": 19
   },
   "customers": {
@@ -221,23 +221,24 @@
     }
   },
   "carriers": {
-    "ONE": 39,
+    "ONE": 38,
     "MSC": 23,
     "COSCO": 6,
-    "OOCL": 14,
+    "OOCL": 13,
     "YML": 1,
     "CMA-CGM": 6,
     "ZIM": 8,
     "Evergreen": 4,
-    "Hapag-Lloyd": 2,
+    "Hapag-Lloyd": 4,
     "MAERSK": 2,
     "WAN HAI": 2
   },
   "carrier_fees": {},
-  "hbl_total": 56,
-  "mbl_total": 44,
+  "hbl_total": 57,
+  "mbl_total": 43,
   "all_hbls": [
     "WLC50522982",
+    "WLC50805801",
     "WLC51220280",
     "WLC60117535",
     "WLC60117536",
@@ -303,6 +304,7 @@
     "COSU6447269010",
     "COSU8040582340",
     "COSU9506295790",
+    "HLCUNHN250731902",
     "HLCUSHA2603BNWG4",
     "HLCUSHA2603BNWQ4",
     "MEDUKE699088",
@@ -317,7 +319,6 @@
     "MEDUYL886908",
     "MEDUYL960612",
     "ONEYBKKG23204800",
-    "ONEYBKKG38865600",
     "ONEYBKKG48500700",
     "ONEYBKKG61453900",
     "ONEYBKKG61472300",
@@ -328,7 +329,6 @@
     "ONEYBTMG00485900",
     "ONEYBTMG00486300",
     "ONEYBTMG00521700",
-    "OOLU2166524280",
     "OOLU2166783970",
     "OOLU2167382790",
     "OOLU2167428510",
@@ -342,22 +342,20 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 202
+    "2026-03-31": 207
   },
   "inspection_mbls": [
     "COSU6444625540",
-    "ONEYBKKG38865600",
-    "OOLU2166524280",
     "OOLU2320126090"
   ],
   "hold_count": 4,
-  "inspection_count": 4,
+  "inspection_count": 2,
   "overdue_count": 19,
   "cancel_count": 0,
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      31
+      33
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
@@ -369,7 +367,7 @@
     ],
     [
       "assistant@pltplt.com",
-      18
+      16
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -416,6 +414,14 @@
       4
     ],
     [
+      "\"joannabao@worldwide-logistics.cn\" <sha.joannabao@worldwide-",
+      3
+    ],
+    [
+      "Matthew Stefanelli <mstefanelli@scotlynn.com>",
+      3
+    ],
+    [
       "<julian.tseng@dynastydfw.com>",
       3
     ],
@@ -425,14 +431,6 @@
     ],
     [
       "\"sha.ops68\" <sha.ops68@wwl.cn>",
-      3
-    ],
-    [
-      "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
-      3
-    ],
-    [
-      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
       3
     ]
   ],
@@ -653,48 +651,6 @@
       "date": "Tue, 31 Mar 2026 08:00:02"
     },
     {
-      "type": "inspection",
-      "priority": "urgent",
-      "mbl": "ONEYBKKG38865600",
-      "container": "BKKG38865600",
-      "customer": "REACH INDUSTRY",
-      "assignee": "",
-      "carrier": "ONE",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
-      "detail": "查验 BKKG38865600",
-      "source": "查验预警-ONEYBKKG38865600",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 08:00:05"
-    },
-    {
-      "type": "inspection",
-      "priority": "urgent",
-      "mbl": "OOLU2166524280",
-      "container": "OOLU2166524280",
-      "customer": "REACH INDUSTRY",
-      "assignee": "",
-      "carrier": "OOCL",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
-      "detail": "查验 OOLU2166524280",
-      "source": "查验预警-OOLU2166524280",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 08:00:20"
-    },
-    {
       "type": "hold",
       "priority": "urgent",
       "mbl": "OOLU2320126090",
@@ -782,6 +738,27 @@
       "date": "Tue, 31 Mar 2026 16:06:17"
     },
     {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "",
+      "container": "WHSU8006676",
+      "customer": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Everlyn Shaw",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 WHSU8006676",
+      "source": "RE-EXPORT REQUEST-WHLC045FX21683/WHSU8006676",
+      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      "date": "Tue, 31 Mar 2026 10:07:17"
+    },
+    {
       "type": "inspection_broker",
       "priority": "urgent",
       "mbl": "COSU6444625540",
@@ -820,46 +797,6 @@
       "source": "查验预警-OOLU2320126090",
       "from": "assistant@pltplt.com",
       "date": "Tue, 31 Mar 2026 08:00:02"
-    },
-    {
-      "type": "inspection_broker",
-      "priority": "urgent",
-      "mbl": "ONEYBKKG38865600",
-      "customer": "",
-      "assignee": "",
-      "carrier": "ONE",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
-      "detail": "查验报关行跟进 ",
-      "source": "查验预警-ONEYBKKG38865600",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 08:00:05"
-    },
-    {
-      "type": "inspection_broker",
-      "priority": "urgent",
-      "mbl": "OOLU2166524280",
-      "customer": "",
-      "assignee": "",
-      "carrier": "OOCL",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
-      "detail": "查验报关行跟进 ",
-      "source": "查验预警-OOLU2166524280",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 08:00:20"
     },
     {
       "type": "arrival_notice",
@@ -1475,6 +1412,19 @@
       "source": "MSC USA - Rail Arrival Notice for BL: MEDUYL886908",
       "from": "us038-importpickupnotification@msc.com",
       "date": "31 Mar 2026 09:14:15 -040"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "HLCUNHN250731902",
+      "customer": "HAIROBOT",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:HLCUNHN250731902",
+      "source": "Invoice from Carrier - MBL#HLCUNHN250731902 / HBL#WLC5080580",
+      "from": "BTLCS@SWITCHBL.COM",
+      "date": "Tue, 31 Mar 2026 22:00:45"
     },
     {
       "type": "post_clearance",
@@ -2309,9 +2259,9 @@
     }
   ],
   "action_summary": {
-    "total": 97,
-    "urgent": 20,
-    "high": 46,
+    "total": 95,
+    "urgent": 17,
+    "high": 47,
     "medium": 31
   },
   "bl_status": {
@@ -2571,14 +2521,14 @@
     "contacts_total": 375,
     "daily_connections": 24,
     "new_domains": [
+      "erdoganlarnakliyat.com",
+      "mercerlogistics.com",
+      "immensitylogistics.com",
       "romesales.com",
       "xiangyu.cn",
-      "erdoganlarnakliyat.com",
       "elite-solar.com",
-      "biposervice.com",
-      "immensitylogistics.com",
-      "mercerlogistics.com",
-      "containerport.com"
+      "containerport.com",
+      "biposervice.com"
     ]
   },
   "daily_connections": [
