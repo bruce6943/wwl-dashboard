@@ -1,15 +1,15 @@
 {
-  "scan_time": "2026-03-31T19:42:57.147002+08:00",
-  "total_emails": 268,
-  "business_emails": 228,
+  "scan_time": "2026-03-31T20:19:21.922790+08:00",
+  "total_emails": 284,
+  "business_emails": 243,
   "pdf_count": 111,
   "categories": {
     "charge_confirm": 17,
-    "prealert": 48,
-    "other_biz": 117,
+    "prealert": 56,
+    "other_biz": 121,
     "arrival": 10,
     "hold": 4,
-    "booking": 6,
+    "booking": 9,
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
@@ -52,25 +52,27 @@
       ]
     },
     "FCC USA": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "HAILIANG (海亮)": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "HORIZON SOLAR": {
@@ -205,7 +207,7 @@
     }
   },
   "carriers": {
-    "ONE": 37,
+    "ONE": 39,
     "MSC": 22,
     "COSCO": 4,
     "OOCL": 14,
@@ -324,7 +326,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 179
+    "2026-03-31": 195
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -342,6 +344,10 @@
       30
     ],
     [
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      29
+    ],
+    [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
       21
     ],
@@ -352,10 +358,6 @@
     [
       "Effy <us.effyhuo@wwl.sg>",
       16
-    ],
-    [
-      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      14
     ],
     [
       "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
@@ -2513,24 +2515,30 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Tue, 31 Mar 2026 18:02:52"
+      },
+      {
+        "subject": "2026--3 月德州海亮出口订舱-YCH26240124",
+        "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 07:57:58"
       }
     ]
   },
   "neural_network": {
     "entities": 93,
-    "relationships": 30,
+    "relationships": 31,
     "contacts_new": 0,
     "contacts_total": 375,
     "daily_connections": 22,
     "new_domains": [
-      "biposervice.com",
-      "romesales.com",
-      "containerport.com",
-      "immensitylogistics.com",
-      "mercerlogistics.com",
       "elite-solar.com",
+      "biposervice.com",
+      "mercerlogistics.com",
+      "containerport.com",
+      "romesales.com",
       "xiangyu.cn",
-      "erdoganlarnakliyat.com"
+      "erdoganlarnakliyat.com",
+      "immensitylogistics.com"
     ]
   },
   "daily_connections": [
