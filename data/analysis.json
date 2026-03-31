@@ -1402,54 +1402,19 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "MEDUYL960612",
-      "COSU6444625540",
-      "CMDUTHD1466680",
-      "ZIMUBKK80440481",
-      "CMDUCHN3095178",
-      "ONEYBKKG48500700",
-      "ONEYBKKG67192800",
-      "ONEYBKKG61472300",
-      "ONEYBKKG38865600",
       "OOLU2320126090",
-      "MEDURQ324903",
-      "MEDURQ324234",
-      "ONEYBKKG61453900",
-      "ONEYBKKG68481300",
-      "MEDURQ323962",
       "COSU9506295790",
-      "MEDUWG692272",
-      "ZIMUBKK80439660",
-      "CMDUCHN3116145",
-      "OOLU2166524280",
-      "MEDURQ324929"
+      "OOLU2166524280"
     ],
     "no_tlx_hbl": [
-      "WLC60304584",
       "WLC60203463",
-      "WLC60304684",
-      "WLC60213409",
-      "WLC60217446",
-      "WLC60125060",
-      "WLC60305212",
       "WLC60125637",
-      "WLC60305140",
       "WLC60309086",
-      "WLC60124859",
       "WLC60216138",
       "WLC50522982",
-      "WLC60213560",
-      "WLC60307413",
-      "WLC60215944",
-      "WLC60216466"
+      "WLC60307413"
     ],
-    "an_no_prealert": [
-      "MEDURQ323962",
-      "COSU9506295790",
-      "MEDURQ324929",
-      "MEDURQ324903",
-      "MEDURQ324234"
-    ],
+    "an_no_prealert": [],
     "hold_bl": [
       {
         "mbl": "OOLU2320126090",
@@ -1459,22 +1424,23 @@
         "from": "<horizonsolar001@gmail.com>"
       },
       {
-        "mbl": "OOLU2320126090",
-        "type": "regulatory",
+        "mbl": "YMJAE490402433",
+        "type": "待确认",
         "needs_docs": false,
-        "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
-        "from": "<horizonsolar001@gmail.com>"
+        "subject": "回复: 3/13/2026\t22607275047\tTRANSFAR CHAS LI\t749.00",
+        "from": "us.ops@wwl.sg"
       },
       {
-        "mbl": "OOLU2320126090",
+        "mbl": "YMJAW237295797",
         "type": "freight",
-        "needs_docs": true,
-        "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
-        "from": "Brian Walsh - WFS Customs <bri"
+        "needs_docs": false,
+        "subject": "Re: FREIGHT HOLD YMJAW237295797",
+        "from": "amber.gutierrez@itslb.com"
       }
     ],
     "tlx_confirmed_mbl": 1,
-    "tlx_confirmed_hbl": 1
+    "tlx_confirmed_hbl": 1,
+    "tlx_confirmed": {}
   },
   "anomalies": {
     "cancel_it": [],
