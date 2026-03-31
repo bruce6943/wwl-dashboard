@@ -1,40 +1,42 @@
 {
-  "scan_time": "2026-03-31T09:06:29.015280+08:00",
-  "total_emails": 114,
-  "business_emails": 83,
-  "pdf_count": 16,
+  "scan_time": "2026-03-31T09:42:50.072125+08:00",
+  "total_emails": 129,
+  "business_emails": 96,
+  "pdf_count": 18,
   "categories": {
     "charge_confirm": 12,
-    "prealert": 8,
-    "other_biz": 44,
+    "prealert": 12,
+    "other_biz": 52,
     "arrival": 7,
     "hold": 4,
-    "booking": 2,
+    "booking": 3,
     "delivery": 1,
     "invoice": 1,
     "inspection": 4
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 6,
+      "emails": 8,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 6,
+      "emails": 8,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "BYSON ELECTRONICS": {
@@ -49,7 +51,7 @@
       ]
     },
     "FCC USA": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -131,16 +133,16 @@
     }
   },
   "carriers": {
-    "ONE": 15,
-    "MSC": 9,
+    "ONE": 16,
+    "MSC": 11,
     "COSCO": 2,
     "OOCL": 6,
     "YML": 1,
     "CMA-CGM": 3,
-    "ZIM": 2
+    "ZIM": 3
   },
   "carrier_fees": {},
-  "hbl_total": 16,
+  "hbl_total": 18,
   "mbl_total": 21,
   "all_hbls": [
     "WLC50522982",
@@ -148,9 +150,11 @@
     "WLC60125060",
     "WLC60125637",
     "WLC60203463",
+    "WLC60211379",
     "WLC60213409",
     "WLC60213560",
     "WLC60215944",
+    "WLC60216138",
     "WLC60216466",
     "WLC60217446",
     "WLC60304584",
@@ -184,8 +188,8 @@
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 80,
-    "2026-03-31": 28
+    "2026-03-30": 83,
+    "2026-03-31": 40
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -204,7 +208,7 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      15
+      16
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -224,7 +228,7 @@
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
-      3
+      4
     ],
     [
       "<julian.tseng@dynastydfw.com>",
@@ -232,6 +236,10 @@
     ],
     [
       "Maggie Yin <maggie.yin@elite-solar.com>",
+      2
+    ],
+    [
+      "ADRIAN JUAREZ <adrianj@fccusa.net>",
       2
     ],
     [
@@ -267,16 +275,12 @@
       2
     ],
     [
-      "Robert Connor <bobc@maritimeway.net>",
-      1
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      2
     ],
     [
-      "PLEASE_DO_NOT_REPLY_LAX@COSCON.COM",
-      1
-    ],
-    [
-      "Meg Belmonte <meg@pinnacleteam.com>",
-      1
+      "<bkk.rie@wwl.sg>",
+      2
     ]
   ],
   "action_items": [
@@ -1368,62 +1372,83 @@
       "source": "COSCO Arrival Notice with Freight COSU9506295790 | OOCL ROTT",
       "from": "PLEASE_DO_NOT_REPLY_LAX@COSCON.COM",
       "date": "Tue, 31 Mar 2026 00:19:48"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80439660",
+      "customer": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "内部: bkk.rie@wwl.sg",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "RE: PRE-ALERT - MBL : ZIMUBKK80439660 l HBL : WLC60215944 l ",
+      "from": "<bkk.rie@wwl.sg>",
+      "date": "Tue, 31 Mar 2026 08:16:29"
     }
   ],
   "action_summary": {
-    "total": 51,
+    "total": 52,
     "urgent": 17,
     "high": 15,
-    "medium": 19
+    "medium": 20
   },
   "bl_status": {
     "no_tlx_mbl": [
       "MEDUYL960612",
-      "MEDURQ323962",
+      "COSU6444625540",
+      "CMDUTHD1466680",
+      "ZIMUBKK80440481",
+      "CMDUCHN3095178",
       "ONEYBKKG48500700",
       "ONEYBKKG67192800",
-      "ONEYBKKG61453900",
-      "MEDURQ324929",
-      "MEDUWG692272",
-      "OOLU2166524280",
       "ONEYBKKG61472300",
-      "ZIMUBKK80439660",
-      "CMDUTHD1466680",
-      "COSU9506295790",
-      "MEDURQ324234",
       "ONEYBKKG38865600",
-      "CMDUCHN3095178",
-      "ONEYBKKG68481300",
-      "ZIMUBKK80440481",
-      "CMDUCHN3116145",
-      "COSU6444625540",
       "OOLU2320126090",
-      "MEDURQ324903"
+      "MEDURQ324903",
+      "MEDURQ324234",
+      "ONEYBKKG61453900",
+      "ONEYBKKG68481300",
+      "MEDURQ323962",
+      "COSU9506295790",
+      "MEDUWG692272",
+      "ZIMUBKK80439660",
+      "CMDUCHN3116145",
+      "OOLU2166524280",
+      "MEDURQ324929"
     ],
     "no_tlx_hbl": [
-      "WLC60125637",
-      "WLC60305212",
-      "WLC60309086",
+      "WLC60304584",
       "WLC60203463",
-      "WLC60307413",
-      "WLC60124859",
-      "WLC50522982",
-      "WLC60216466",
-      "WLC60215944",
-      "WLC60305140",
-      "WLC60125060",
+      "WLC60304684",
       "WLC60213409",
       "WLC60217446",
+      "WLC60125060",
+      "WLC60305212",
+      "WLC60125637",
+      "WLC60305140",
+      "WLC60309086",
+      "WLC60124859",
+      "WLC60216138",
+      "WLC50522982",
       "WLC60213560",
-      "WLC60304684",
-      "WLC60304584"
+      "WLC60307413",
+      "WLC60215944",
+      "WLC60216466"
     ],
     "an_no_prealert": [
       "MEDURQ323962",
       "COSU9506295790",
-      "MEDURQ324234",
       "MEDURQ324929",
-      "MEDURQ324903"
+      "MEDURQ324903",
+      "MEDURQ324234"
     ],
     "hold_bl": [
       {
@@ -1448,8 +1473,8 @@
         "from": "Brian Walsh - WFS Customs <bri"
       }
     ],
-    "tlx_confirmed_mbl": 0,
-    "tlx_confirmed_hbl": 0
+    "tlx_confirmed_mbl": 1,
+    "tlx_confirmed_hbl": 1
   },
   "anomalies": {
     "cancel_it": [],
@@ -1474,18 +1499,30 @@
         "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg",
         "urgency": 3,
         "date": "Mon, 30 Mar 2026 12:31:49"
+      },
+      {
+        "subject": "RE: 025F845248 /  美国目的港费用逾期警示 --- 彭巧群",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 09:12:04"
+      },
+      {
+        "subject": "Re: Re: 2026.3 HOUSTON-SHANGHAI// BKG# YCH26240124",
+        "from": "ADRIAN JUAREZ <adrianj@fccusa.",
+        "urgency": 3,
+        "date": "Mon, 30 Mar 2026 19:41:57"
       }
     ]
   },
   "neural_network": {
     "entities": 88,
-    "relationships": 25,
-    "contacts_new": 1,
+    "relationships": 30,
+    "contacts_new": 0,
     "contacts_total": 372,
-    "daily_connections": 8,
+    "daily_connections": 10,
     "new_domains": [
-      "elite-solar.com",
       "mercerlogistics.com",
+      "elite-solar.com",
       "containerport.com"
     ]
   },
@@ -1527,6 +1564,16 @@
     },
     {
       "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "FCC USA",
       "to": "FCC USA",
       "type": "service"
     }

@@ -1,242 +1,88 @@
 {
-  "NEXTERA ENERGY CONSTRUCTORS, LLC": {
-    "mbl": "CMDUDJA1404335, MEDUKU053790, MEDUKU054053",
-    "amount": "$47,663",
-    "amount_num": 47663.0,
-    "days_overdue": 14,
-    "status": "T+15 升级",
-    "t_status": "T+15 升级",
-    "sheet_breakdown": "收货人自付$4,860 + 委托人承担$42,803",
-    "fee_detail": "Amount Still Due:$20,444, Chassis Usage Charge:$19,416, Ocean Freight:$2,943",
-    "records": 115,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "AVANTIX INC.": {
-    "mbl": "CMDUSEL1983182, HLCUSEL251045578, MEDUKE303533",
-    "amount": "$27,760",
-    "amount_num": 27760.0,
-    "days_overdue": 22,
-    "status": "T+30 追偿函",
-    "t_status": "T+30 追偿函",
-    "sheet_breakdown": "收货人自付$27,560 + 代收-收货人$200",
-    "fee_detail": "Detention-HAMU4066417:$11,300, Detention-CMAU7350643:$10,590, CONTAINER PER DIEM IMPORT:$5,670",
-    "records": 5,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "HAI ROBOTICS U.S.A. INC": {
-    "mbl": "HLCUSHA2511GBWM5, MEDUEK846578, ONEYSHAFBK530800",
-    "amount": "$9,620",
-    "amount_num": 9620.0,
-    "days_overdue": 5,
-    "status": "T+7 首催",
-    "t_status": "T+7 首催",
-    "sheet_breakdown": "收货人自付$9,620",
-    "fee_detail": "CONTAINER RAIL DETENTION-:$1,685, Detention-ONEU0748719:$1,480, Demurrage-FANU3833394:$700",
-    "records": 14,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "ALBATROSS AMERICA INC.": {
-    "mbl": "MEDUW8710297",
-    "amount": "$7,170",
-    "amount_num": 7170.0,
-    "days_overdue": 115,
-    "status": "T+115 超中信保!",
-    "t_status": "T+115 超中信保!",
-    "sheet_breakdown": "收货人自付$7,170",
-    "fee_detail": "CONTAINER PER DIEM IMPORT:$7,170",
-    "records": 1,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "HOUNEN SOLAR INC": {
-    "mbl": "MEDURQ079010, MEDUXJ162643, MEDUXJ162684",
-    "amount": "$6,490",
-    "amount_num": 6490.0,
-    "days_overdue": 71,
-    "status": "T+71 超中信保!",
-    "t_status": "T+71 超中信保!",
-    "sheet_breakdown": "委托人承担$6,490",
-    "fee_detail": "Chassis Usage Charge:$6,490",
-    "records": 14,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "MERSY CORP SA DE CV": {
+  "MERSY CORP SA": {
     "mbl": "MEDUKH457914",
-    "amount": "$5,985",
-    "amount_num": 5985.0,
-    "days_overdue": 81,
-    "status": "T+81 超中信保!",
-    "t_status": "T+81 超中信保!",
-    "sheet_breakdown": "收货人自付$5,985",
-    "fee_detail": "CONTAINER PER DIEM IMPORT:$2,670, CONTAINER PER DIEM IMPORT:$2,420, IMPORT CHASSIS PER DIEM-M:$350",
-    "records": 5,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "MING HAO XIN TRADING CO LTD": {
-    "mbl": "CMDUTHD1452040, CMDUTHD1452042, CMDUTHD1457292",
-    "amount": "$5,609",
-    "amount_num": 5609.35,
-    "days_overdue": 2,
-    "status": "T+7 首催",
-    "t_status": "T+7 首催",
-    "sheet_breakdown": "收货人自付$5,390 + 委托人承担$219",
-    "fee_detail": "Detention-ECMU7363896:$1,840, Detention-TGBU4825371:$1,590, Detention-OOLU8781674:$900",
-    "records": 11,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "HITHIUM TECH USA INC.": {
-    "mbl": "MEDUWK745968, MEDUYQ353300, ONEYXMNG04051600",
-    "amount": "$4,200",
-    "amount_num": 4200.0,
-    "days_overdue": 1,
-    "status": "T+7 首催",
-    "t_status": "T+7 首催",
-    "sheet_breakdown": "委托人承担$4,100 + 代收-收货人$100",
-    "fee_detail": "Chassis Usage Charge:$4,070, CARRIER D/O FEE:$100, BANK CHARGE:$30",
-    "records": 5,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "ES FOUNDRY CORP": {
-    "mbl": "CMDUTHD1461926, ONEYBKKG01937300",
-    "amount": "$3,260",
-    "amount_num": 3260.07,
-    "days_overdue": 12,
-    "status": "T+15 升级",
-    "t_status": "T+15 升级",
-    "sheet_breakdown": "收货人自付$3,260",
-    "fee_detail": "Demurrage-TCNU5934968:$825, Demurrage-TCNU5264228:$825, Demurrage-TCNU4113593:$825",
-    "records": 6,
-    "source": "3.30 Excel (2026-03-30)"
+    "amount": "$83,898(MSC)+$5,985(目的港)",
+    "status": "MSC第3次催收,final warning",
+    "maggie_action": "3/17催Jim Wen处理",
+    "jim_action": "3/18回复正在处理",
+    "will_sun": "3/27警告月底不付扣所有放单,准备佛山垫付",
+    "t_status": "T+30+已过(3月初产生)",
+    "sinosure_ready": "需检查: 协议? 通知? 催收记录? 垫付凭证?",
+    "risk": "极高—可能影响WWL全线MSC业务"
   },
   "ARTISARY INC": {
     "mbl": "MAEU260834246",
-    "amount": "$3,100",
-    "amount_num": 3100.0,
-    "days_overdue": 68,
-    "status": "T+68 超中信保!",
-    "t_status": "T+68 超中信保!",
-    "sheet_breakdown": "收货人自付$3,100",
-    "fee_detail": "Detention-TLLU6897263:$1,550, Detention-TCLU9446347:$1,550",
-    "records": 2,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "LIUGONG CONSTRUCTION MACHINERY N.A.,LLC": {
-    "mbl": "ONEYSZPFY7242300",
-    "amount": "$1,800",
-    "amount_num": 1800.0,
-    "days_overdue": 53,
-    "status": "T+53 超中信保!",
-    "t_status": "T+53 超中信保!",
-    "sheet_breakdown": "收货人自付$1,800",
-    "fee_detail": "Detention-CXSU1078403:$1,800",
-    "records": 1,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "JST POWER EQUIPMENT INC.": {
-    "mbl": "HDMUSHAZLGM71500, MEDUOW702270, OOLU2167032400",
-    "amount": "$1,410",
-    "amount_num": 1410.0,
-    "days_overdue": 7,
-    "status": "T+7 首催",
-    "t_status": "T+7 首催",
-    "sheet_breakdown": "委托人承担$110 + 代收-收货人$1,300",
-    "fee_detail": "CARRIER D/O FEE:$1,300, Chassis Usage Charge:$110",
-    "records": 14,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "GLOBAL CROSSING INC": {
-    "mbl": "COSU6421875990, ONEYNBOFC3568300, ONEYNBOFC3573600",
-    "amount": "$1,315",
-    "amount_num": 1315.0,
-    "days_overdue": 123,
-    "status": "T+123 超中信保!",
-    "t_status": "T+123 超中信保!",
-    "sheet_breakdown": "委托人承担$15 + 代收-收货人$1,300",
-    "fee_detail": "CARRIER D/O FEE:$1,300, CMD:$15",
-    "records": 14,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "ROYAL FOOD IMPORT CORPORATION": {
-    "mbl": "HLCUNHN250731902",
-    "amount": "$1,100",
-    "amount_num": 1100.0,
-    "days_overdue": 172,
-    "status": "T+172 超中信保!",
-    "t_status": "T+172 超中信保!",
-    "sheet_breakdown": "收货人自付$1,100",
-    "fee_detail": "Detention-CAAU6833370:$700, Demurrage-CAAU6833370:$400",
-    "records": 2,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "KHD GROUP INC": {
-    "mbl": "ONEYNBOFD5781300, ONEYNBOFH7731400, ZIMUNGB20218977",
-    "amount": "$955",
-    "amount_num": 955.0,
-    "days_overdue": 60,
-    "status": "T+60 超中信保!",
-    "t_status": "T+60 超中信保!",
-    "sheet_breakdown": "收货人自付$850 + 委托人承担$105",
-    "fee_detail": "Detention-JXLU4662319:$850, CMD:$105",
-    "records": 3,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "YUNCHENG SOLAR USA": {
-    "mbl": "COSU6434352060, MEDUXJ184720, MEDUXJ248186",
-    "amount": "$940",
-    "amount_num": 940.0,
-    "days_overdue": 25,
-    "status": "T+30 追偿函",
-    "t_status": "T+30 追偿函",
-    "sheet_breakdown": "收货人自付$720 + 委托人承担$220",
-    "fee_detail": "Detention-DRYU9521698:$360, Detention-OOLU9330211:$360, Chassis Usage Charge:$220",
-    "records": 4,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "TALESUNERGY SOLUTIONS INC.": {
-    "mbl": "SJHH3100122207, SJHH3100122208",
-    "amount": "$780",
-    "amount_num": 780.0,
-    "days_overdue": 23,
-    "status": "T+30 追偿函",
-    "t_status": "T+30 追偿函",
-    "sheet_breakdown": "收货人自付$780",
-    "fee_detail": "Detention-APHU6732617:$390, Detention-BSIU8340730:$390",
-    "records": 2,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "CAYEPORS": {
-    "mbl": "COSU6443781610, OOLU2164911242",
-    "amount": "$750",
-    "amount_num": 750.0,
-    "days_overdue": 4,
-    "status": "T+7 首催",
-    "t_status": "T+7 首催",
-    "sheet_breakdown": "收货人自付$750",
-    "fee_detail": "Detention-DRYU4546712:$570, Detention-OOLU9073200:$180",
-    "records": 2,
-    "source": "3.30 Excel (2026-03-30)"
-  },
-  "CSCL GLOBAL LIMITED": {
-    "mbl": "MEDUR2341408",
-    "amount": "$610",
-    "amount_num": 610.0,
-    "days_overdue": 88,
-    "status": "T+88 超中信保!",
-    "t_status": "T+88 超中信保!",
-    "sheet_breakdown": "收货人自付$610",
-    "fee_detail": "IMPORT CHASSIS PER DIEM-M:$500, Chassis Usage Charge:$110",
-    "records": 2,
-    "source": "3.30 Excel (2026-03-30)"
+    "amount": "$3,100(Detention)",
+    "maggie_action": "3/16催Alan \"settle overdue asap\"",
+    "t_status": "估计T+15~T+30",
+    "sinosure_ready": "需确认: 书面确认? 7日默认认可?"
   },
   "CASEY CATON LOGISTICS": {
     "mbl": "CMDUTHD1424156",
-    "amount": "$570",
-    "amount_num": 570.0,
-    "days_overdue": 81,
-    "status": "T+81 超中信保!",
-    "t_status": "T+81 超中信保!",
-    "sheet_breakdown": "收货人自付$570",
-    "fee_detail": "Detention-CMAU9472403:$570",
-    "records": 1,
-    "source": "3.30 Excel (2026-03-30)"
+    "amount": "Detention费用",
+    "maggie_action": "3/16催Amy",
+    "t_status": "估计T+15~T+30"
+  },
+  "CAYEPORS": {
+    "mbl": "OOLU2164911242 + CMDUQGD2605616/605",
+    "amount": "$54.95(WWL已垫付)",
+    "maggie_action": "3/16催收, 3/18 Ada Zhang指示垫付",
+    "resolution": "WWL已PayCargo垫付$54.95,费用向WWL-TAO收取",
+    "t_status": "已解决(WWL垫付)",
+    "sinosure_ready": "垫付凭证已有"
+  },
+  "CHAINVALUE US CO": {
+    "mbl": "ONEYBKKG01171700",
+    "amount": "Demurrage",
+    "maggie_action": "3/16催李丽丽(合肥)催收货人",
+    "t_status": "估计T+15+"
+  },
+  "CSCL GLOBAL LIMITED": {
+    "mbl": "MEDUR2341408",
+    "amount": "目的港费用未付",
+    "maggie_action": "3/16催Ada \"文瑶的这票怎么处理?\" 第2次催收",
+    "t_status": "T+30(第2次催收)",
+    "sinosure_ready": "需确认: 正式追偿函已发?"
+  },
+  "ES FOUNDRY CORP": {
+    "mbl": "ONEYBKKG01937300",
+    "amount": "$2,970(Demurrage 3柜)",
+    "maggie_action": "3/16催Stella,附了最新未结清明细",
+    "t_status": "估计T+15~T+30"
+  },
+  "LIUGONG CONSTRUCTION": {
+    "mbl": "ONEYSZPFY7242300",
+    "amount": "$1,800(Detention)",
+    "maggie_action": "3/16-17催Yancy Yu",
+    "resolution": "Yancy回复\"发货人反馈收货人已支付\"",
+    "pending": "等水单(已拖1周+)",
+    "t_status": "T+30(等水单核销)"
+  },
+  "MAG SPECIALTIES INC": {
+    "mbl": "多票",
+    "amount": "$1,520",
+    "maggie_action": "3/13确认,3/26问Dongni Liu是否已付,要bank slip",
+    "t_status": "T+30+"
+  },
+  "MING HAO XIN TRADING": {
+    "mbl": "CMDUTHD1466680/WLC60124859",
+    "amount": "$150(On Carriage)",
+    "maggie_action": "W2继续催,鲸宝系统也推送",
+    "t_status": "T+15+"
+  },
+  "HAI ROBOTICS": {
+    "mbl": "3票",
+    "amount": "$6,200→$6,420(Detention)",
+    "maggie_action": "3/17催高远\"这3票怎么付?\"",
+    "resolution": "高远:\"你们先垫付,我找ADAM和车队协商\"",
+    "t_status": "T+15~T+30",
+    "sinosure_ready": "需确认: 垫付后向谁追偿? 协议有费用条款?"
+  },
+  "HAILIANG COPPER TEXAS": {
+    "mbl": "多票",
+    "amount": "Chassis Usage",
+    "maggie_action": "3/17催Qili,Gloria Ni发了bank slip",
+    "resolution": "已付(bank slip已收)",
+    "t_status": "已解决"
   }
 }
