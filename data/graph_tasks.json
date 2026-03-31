@@ -439,59 +439,98 @@
       "last_seen": "2026-03-19"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "OOLU2322301440, OOLU2322148060, OOLU2322147820, OOLU2320655770, OOLU2320655560 +2",
-      "carrier": "OOCL",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
-      "wwl_branch": "WWL厦门",
-      "action": "OOCL 7票 — 等Justin Jia的上家回复",
+      "title": "Fee Confirmed",
+      "mbl": "MEDUWK300806, MEDUWK525337, MEDUWK869305, MEDUWK867465, MEDUWQ172043 +1",
+      "carrier": "MSC",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "MSC 6票 — operation.来信→需确认并回复",
       "detail_lines": [
-        "03-17 11:58 Justin Jia - WW: Hi \r   \r HB/L: WLC60305005 COPY\r      \r MB/L: OOLU2322301440   COPY \r  \r Pls cha",
-        "03-25 11:35 Justin Jia - WW: Dear\r \r 请查收HBL-TLX\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：wwlqc@wwl."
+        "03-12 14:44 Winnie Shen: Dear \r \r  \r \r Chassis Usage Charge USD220  collect\r \r  \r \r Thank  you~\r \r  \r \r 如",
+        "03-18 10:43 Sienna: Dear：\r \r Please check MSC invs as attached. Thx.\r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，",
+        "03-24 15:35 operation.us@sc: Dear\r \r bank slip for \r MEDUWK300806  chassis-USD220\r MEDUWK300806  CHASSIS PER"
       ],
-      "progress_history": "提单: OOLU2322301440, OOLU2322148060, OOLU2322147820",
-      "email_count": 11,
-      "last_seen": "2026-03-25"
+      "progress_history": "提单: MEDUWK300806, MEDUWK525337, MEDUWK869305",
+      "email_count": 49,
+      "last_seen": "2026-03-24"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506319200, COSU9506444150 +2",
+      "title": "Fee Confirmed",
+      "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
+      "carrier": "MSC",
+      "customer": "PREVALON ENERGY INC.",
+      "wwl_sender": " (szn.ulaxie@wwl.cn)",
+      "wwl_branch": "WWL深圳",
+      "action": "MSC 6票 — us038-impo来信→需确认并回复",
+      "detail_lines": [
+        "03-31 09:14 us038-importpic: ",
+        "03-31 12:07 us038-importpic: ",
+        "03-31 12:31 us038-importpic: "
+      ],
+      "progress_history": "提单: MEDUYL886908, MEDUYL942321, MEDUYL789706",
+      "email_count": 32,
+      "last_seen": "2026-03-31"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "OOLU2166556440, OOLU2166120500, OOLU2167307120, OOLU2167175490, OOLU2167175510 +1",
+      "carrier": "OOCL",
+      "customer": "",
+      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
+      "wwl_branch": "WWL深圳",
+      "action": "OOCL 6票 — Carinali已回复→检查是否需要下一步",
+      "detail_lines": [
+        "02-27 13:20 Renee Lin-WWLSZ: Dear Team\r \r  \r \r Please see the attached MBL/HBL OBD Bill of Lading.\r \r  \r \r MV",
+        "03-02 14:28 Renee Lin-WWLSZ: Dear all\r \r  \r \r HBL 可放，谢谢\r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r Atten",
+        "03-18 17:34 Carinali: Dear  client ,\r \r OOCL SUNFLOWER 008E 此水大船更新目前情况，请查收如下通知，谢谢。\r \r \r \r  \r \r  \r \r At"
+      ],
+      "progress_history": "提单: OOLU2166556440, OOLU2166120500, OOLU2167307120",
+      "email_count": 9,
+      "last_seen": "2026-03-18"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506444150, COSU9506319330 +1",
       "carrier": "COSCO",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
+      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
-      "action": "COSCO 7票 — 等Maggie Wu的上家回复",
+      "action": "COSCO 6票 — 等Maggie Wu的上家回复",
       "detail_lines": [
         "03-17 16:21 ngb.ops25@wwl.c: Dear all,\r  \r Pls kindly find attached S/A for our shpts, D/O charge PREPAID.",
         "03-30 13:54 Maggie Wu: Dear Kitty\r \r We have received AN from carrier for subject shipment and please i"
       ],
       "progress_history": "提单: COSU9506320440, COSU6446832300, COSU9506319310",
-      "email_count": 10,
+      "email_count": 9,
       "last_seen": "2026-03-30"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "COSU6446212300, COSU6446342500, COSU6446117360, COSU9506295790, COSU6446482360 +1",
-      "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
-      "wwl_branch": "WWL厦门",
-      "action": "COSCO 6票 — 等Justin Jia的上家回复",
+      "title": "Fee Confirmed",
+      "mbl": "HLCUSHA260228529, HLCUSHA2603BNZF0, HLCUSHA2603BNZN8, HLCUSHA2603BJKC0, HLCUSHA2603BIYR0",
+      "carrier": "Hapag-Lloyd",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "Hapag-Lloyd 5票 — 等Winnie She的上家回复",
       "detail_lines": [
-        "03-20 17:00 Yate Li - WWG X: Hi \r   \r HB/L: WLC60305002          TLX PENDING\r      \r MB/L: COSU6446212300   S",
-        "03-25 11:34 Justin Jia - WW: Dear\r \r 请查收HBL-TLX\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：wwlqc@wwl.",
-        "03-25 14:27 Justin Jia - WW: Dear\r \r 更新POD的HBL-TLX请查收，谢谢。\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门："
+        "03-08 21:25 Winnie Shen: Dear ALL\r \r  \r \r Pls kindly find attached S/A for our shpts, D/O charge prepaid.",
+        "03-26 18:01 Erica: Hi All,\r \r Please kindly advise the OBL status. Per Hapag US, shipment pending O",
+        "03-27 10:58 Winnie Shen: Dear \r \r  \r \r Please  check  the attachment  MBL-SW\r \r  \r \r  \r \r  \r \r 如果阁下对我司提供的"
       ],
-      "progress_history": "提单: COSU6446212300, COSU6446342500, COSU6446117360",
-      "email_count": 10,
-      "last_seen": "2026-03-25"
+      "progress_history": "提单: HLCUSHA260228529, HLCUSHA2603BNZF0, HLCUSHA2603BNZN8",
+      "email_count": 12,
+      "last_seen": "2026-03-27"
     },
     {
       "type": "fee_pending",
@@ -511,23 +550,6 @@
       "progress_history": "提单: CMDUDJA1417805, CMDUDJA1418502, CMDUDJA1417763",
       "email_count": 32,
       "last_seen": "2026-03-27"
-    },
-    {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "COSU6446579460, COSU6446020160, COSU6446020150, COSU6446147720",
-      "carrier": "COSCO",
-      "customer": "",
-      "wwl_sender": "sha.ops120 (sha.ops120@wwl.cn)",
-      "wwl_branch": "WWL上海",
-      "action": "COSCO 4票 — 等sha.ops120的上家回复",
-      "detail_lines": [
-        "03-17 11:09 sha.ops120: Dear \r \r  \r \r Pls kindly find attached S/A for our shpts \r ATD: 2026-03-14\r \r VS"
-      ],
-      "progress_history": "提单: COSU6446579460, COSU6446020160, COSU6446020150",
-      "email_count": 4,
-      "last_seen": "2026-03-17"
     },
     {
       "type": "fee_pending",
@@ -568,9 +590,9 @@
       "last_seen": "2026-03-15"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
+      "title": "Fee Confirmed",
       "mbl": "OOLU2318729730, OOLU2322662920, OOLU2321476620",
       "carrier": "OOCL",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
@@ -592,7 +614,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD.",
+      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 3票 — 等bkk.nasmee的上家回复",
@@ -607,25 +629,25 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "MEDUWK300806, MEDUWK525337",
-      "carrier": "MSC",
+      "mbl": "COSU6447544630, COSU6447544660, COSU6447551240",
+      "carrier": "COSCO",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "MSC 2票 — operation.来信→需确认并回复",
+      "action": "COSCO 3票 — 等Winnie She的上家回复",
       "detail_lines": [
-        "03-12 14:44 Winnie Shen: Dear \r \r  \r \r Chassis Usage Charge USD220  collect\r \r  \r \r Thank  you~\r \r  \r \r 如",
-        "03-18 10:43 Sienna: Dear：\r \r Please check MSC invs as attached. Thx.\r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，",
-        "03-24 15:35 operation.us@sc: Dear\r \r bank slip for \r MEDUWK300806  chassis-USD220\r MEDUWK300806  CHASSIS PER"
+        "03-27 11:46 rita tang: 这票mbl名和文件不一样，看下哪个错了\r \r  \r \r Rita Tang\r \r  \r \r Worldwide Logistics Co.,Ltd. Shang",
+        "03-27 15:09 Winnie Shen: Dear\r \r  \r \r please check \r \r  \r \r  \r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门",
+        "03-30 13:49 Winnie Shen: Dear \r \r  \r \r Please  check the attachment MBL-SW\r \r  \r \r  \r \r  \r \r 如果阁下对我司提供的物流"
       ],
-      "progress_history": "提单: MEDUWK300806, MEDUWK525337",
-      "email_count": 23,
-      "last_seen": "2026-03-24"
+      "progress_history": "提单: COSU6447544630, COSU6447544660, COSU6447551240",
+      "email_count": 8,
+      "last_seen": "2026-03-30"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
+      "title": "Fee Confirmed",
       "mbl": "HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
       "carrier": "Hapag-Lloyd",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
@@ -640,6 +662,25 @@
       "progress_history": "提单: HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
       "email_count": 4,
       "last_seen": "2026-03-24"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "ONEYBTMG00383600, ONEYBTMG00521700",
+      "carrier": "ONE",
+      "customer": "ELITE SOLAR NEW ENERGY CO.",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL印尼",
+      "action": "ONE 2票 — 等对方确认",
+      "detail_lines": [
+        "03-30 15:25 Anggito Iqbal: Dear Everlyn\r \r  \r \r Pls advise if IT already cancelled?\r \r  \r \r Thanks and Best",
+        "03-31 14:50 Alexander Jkt: Dear US Team,\r \r  \r \r Attached the HBL Telex,\r \r Thank you.",
+        "03-31 14:58 rita tang: Plz confirm the following fees\r  \r Rita Tang\r  \r Worldwide Logistics Co.,Ltd. Sh"
+      ],
+      "progress_history": "提单: ONEYBTMG00383600, ONEYBTMG00521700",
+      "email_count": 14,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -659,27 +700,9 @@
       "last_seen": "2026-03-25"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "OOLU2167574730, OOLU2166783970",
-      "carrier": "OOCL",
-      "customer": "",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "OOCL 2票 — Renee Lin-已确认→Sven付款→跟进水单",
-      "detail_lines": [
-        "03-31 14:38 please_do_not_r: ",
-        "03-31 17:44 Renee Lin-WWLSZ: Dear Friends\r \r  \r \r Attached pre-alert for your ref，tks.\r \r  \r \r HBL STATUS"
-      ],
-      "progress_history": "提单: OOLU2167574730, OOLU2166783970",
-      "email_count": 3,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
+      "title": "Fee Confirmed",
       "mbl": "COSU6447268220, COSU6447269010",
       "carrier": "COSCO",
       "customer": "",
@@ -697,20 +720,20 @@
       "type": "fee_pending",
       "priority": "high",
       "title": "Fee Pending",
-      "mbl": "MEDUWG692272",
+      "mbl": "MEDUWK827857",
       "carrier": "MSC",
-      "customer": "MAG SPECIALTIES INC.",
-      "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
-      "wwl_branch": "WWL天津",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "MONA CAI (sha.ops112@wwl.cn)",
+      "wwl_branch": "WWL上海",
       "action": "us038-impo来信→需确认并回复",
       "detail_lines": [
-        "03-30 12:13 us038-importpic: ",
-        "03-31 13:20 us038-importpic: ",
-        "03-31 13:56 us038-importpic: "
+        "03-18 13:42 us038-importpic: ",
+        "03-18 17:38 us038-importpic: ",
+        "03-18 17:57 us038-importpic: "
       ],
       "progress_history": "",
-      "email_count": 27,
-      "last_seen": "2026-03-31"
+      "email_count": 10,
+      "last_seen": "2026-03-18"
     },
     {
       "type": "fee_confirmed",
@@ -732,23 +755,23 @@
       "last_seen": "2026-03-25"
     },
     {
-      "type": "fee_pending",
+      "type": "fee_confirmed",
       "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "MEDUYL789706",
-      "carrier": "MSC",
+      "title": "Fee Confirmed",
+      "mbl": "OOLU2766161230",
+      "carrier": "OOCL",
       "customer": "",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "Renee Lin-已回复→检查是否需要下一步",
+      "wwl_sender": "songwenwen@wwl.sg (songwenwen@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "songwenwen已回复→检查是否需要下一步",
       "detail_lines": [
-        "03-30 10:14 Everlyn Shaw: 附件MSC chassis usage发票，请确认收你们还是收收货人\r \r  \r \r  \r \r Thank you!\r \r  \r \r Everlyn Shaw",
-        "03-31 15:12 rita tang: 请确认 chassis usage \r \r  \r \r Rita Tang\r \r  \r \r Worldwide Logistics Co.,Ltd. Shangh",
-        "03-31 17:20 Renee Lin-WWLSZ: Dear Rita\r \r  \r \r 客户反馈目的港车队会付，谢谢"
+        "03-11 13:51 Maggie Wu: Dear Song\r \r 有可能错了，我们问下OOCL等他们回复。\r \r  \r \r  \r \r With Best Regards! \r \r Maggie Wu",
+        "03-16 11:53 Maggie Wu: Dear Song wenwen\r \r 这个OOLU2766161230 这票目的港这个提供的EIR单号不对，麻烦重新提供过来。",
+        "03-16 16:22 songwenwen@wwl.: dear team,\r 客户反馈如下，请帮忙跟船司作下解释，谢谢\r EIR上显示的是这个提单号:2316268190  ，这个提单号有两个柜子，OOCU9731"
       ],
       "progress_history": "",
-      "email_count": 7,
-      "last_seen": "2026-03-31"
+      "email_count": 9,
+      "last_seen": "2026-03-16"
     },
     {
       "type": "fee_pending",
@@ -764,6 +787,41 @@
       "progress_history": "",
       "email_count": 1,
       "last_seen": "2026-03-17"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "OOLU2322301440",
+      "carrier": "OOCL",
+      "customer": "DTC FREIGHT (内部电商)",
+      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
+      "wwl_branch": "WWL厦门",
+      "action": "等Justin Jia的上家回复",
+      "detail_lines": [
+        "03-17 11:58 Justin Jia - WW: Hi \r   \r HB/L: WLC60305005 COPY\r      \r MB/L: OOLU2322301440   COPY \r  \r Pls cha",
+        "03-25 11:35 Justin Jia - WW: Dear\r \r 请查收HBL-TLX\r \r \r \r \r \r \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：wwlqc@wwl."
+      ],
+      "progress_history": "",
+      "email_count": 2,
+      "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "COSU9506319200",
+      "carrier": "COSCO",
+      "customer": "",
+      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "wwl_branch": "WWL宁波",
+      "action": "等ngb.ops25@的上家回复",
+      "detail_lines": [
+        "03-23 14:08 ngb.ops25@wwl.c: Dear all,\r  \r Pls kindly find attached S/A for our shpts, D/O charge  PREPAID."
+      ],
+      "progress_history": "",
+      "email_count": 1,
+      "last_seen": "2026-03-23"
     },
     {
       "type": "fee_pending",
@@ -906,8 +964,8 @@
     "prealerts": 47
   },
   "stats": {
-    "total": 49,
+    "total": 52,
     "urgent": 21,
-    "high": 27
+    "high": 30
   }
 }
