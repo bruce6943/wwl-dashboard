@@ -411,8 +411,8 @@
       "wwl_branch": "WWL环世",
       "action": "查验中 → 跟进报关行 → 通知委托方",
       "progress_history": "",
-      "email_count": 6,
-      "last_seen": "2026-03-30"
+      "email_count": 7,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "payment_requested",
@@ -458,10 +458,10 @@
     }
   ],
   "summary": {
-    "arrival_notices": 185,
+    "arrival_notices": 183,
     "bl_releases": 100,
     "billings": 114,
-    "prealerts": 50
+    "prealerts": 49
   },
   "stats": {
     "total": 24,
