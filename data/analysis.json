@@ -1,11 +1,11 @@
 {
-  "scan_time": "2026-03-31T17:54:15.696198+08:00",
-  "total_emails": 248,
-  "business_emails": 211,
-  "pdf_count": 88,
+  "scan_time": "2026-03-31T18:31:00.218319+08:00",
+  "total_emails": 260,
+  "business_emails": 222,
+  "pdf_count": 109,
   "categories": {
     "charge_confirm": 17,
-    "prealert": 37,
+    "prealert": 48,
     "other_biz": 112,
     "arrival": 10,
     "hold": 4,
@@ -17,7 +17,7 @@
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 8,
+      "emails": 7,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -29,7 +29,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 8,
+      "emails": 7,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -207,7 +207,7 @@
     "WAN HAI": 2
   },
   "carrier_fees": {},
-  "hbl_total": 45,
+  "hbl_total": 56,
   "mbl_total": 42,
   "all_hbls": [
     "WLC50522982",
@@ -249,6 +249,17 @@
     "WLC60311254",
     "WLC60311659",
     "WLC60312251",
+    "WLC60312761",
+    "WLC60313324",
+    "WLC60313335",
+    "WLC60313340",
+    "WLC60313343",
+    "WLC60313348",
+    "WLC60313501",
+    "WLC60313523",
+    "WLC60313529",
+    "WLC60313539",
+    "WLC60313561",
     "WLC60313618",
     "WLC60314212",
     "WLC60314287",
@@ -301,8 +312,8 @@
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 83,
-    "2026-03-31": 159
+    "2026-03-30": 82,
+    "2026-03-31": 172
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -320,12 +331,16 @@
       30
     ],
     [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      21
+    ],
+    [
       "assistant@pltplt.com",
       18
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      16
+      15
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -334,10 +349,6 @@
     [
       "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
       12
-    ],
-    [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      10
     ],
     [
       "<horizonsolar001@gmail.com>",
@@ -1001,19 +1012,6 @@
       "source": "RE: Pick-up# inquire -ETA 4/03",
       "from": "Seattle CES <cesseattle@mercerlogistics.com>",
       "date": "Mon, 30 Mar 2026 22:07:35"
-    },
-    {
-      "type": "dd_alert",
-      "priority": "high",
-      "mbl": "",
-      "customer": "",
-      "amount": "",
-      "assignee": "",
-      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
-      "detail": "WORLDWIDE LOGISTICS USA - (CC21416588) -  Invoices Posted on",
-      "source": "WORLDWIDE LOGISTICS USA - (CC21416588) -  Invoices Posted on",
-      "from": "USA-Finance.collection@msc.com",
-      "date": "30 Mar 2026 19:54:46 -040"
     },
     {
       "type": "dd_alert",
@@ -2245,9 +2243,9 @@
     }
   ],
   "action_summary": {
-    "total": 96,
+    "total": 95,
     "urgent": 20,
-    "high": 45,
+    "high": 44,
     "medium": 31
   },
   "bl_status": {
@@ -2425,23 +2423,90 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Tue, 31 Mar 2026 17:51:42"
+      },
+      {
+        "subject": "RESEND~RE: DTC account - Pre-alert  Freehandle : 025G576616 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:53:56"
+      },
+      {
+        "subject": "RESEND~RE: DTC account - Pre-alert  Freehandle : 14960189372",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:54:51"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G577950 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:58:14"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G577949 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:58:50"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G578097 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 17:59:21"
+      },
+      {
+        "subject": "Resend~ RE: DTC account - Pre-alert  Freehandle : 025G578419",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:00:09"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G578420 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:00:40"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G578067 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:01:04"
+      },
+      {
+        "subject": "Resend~RE: DTC account - Pre-alert  Freehandle : 025G578066 ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:02:05"
+      },
+      {
+        "subject": "Resend~  RE: DTC account - Pre-alert  Freehandle : 025G57806",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:02:29"
+      },
+      {
+        "subject": "Resend~ RE: DTC account - Pre-alert  Freehandle : 025G578421",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 18:02:52"
       }
     ]
   },
   "neural_network": {
-    "entities": 92,
-    "relationships": 30,
-    "contacts_new": 0,
-    "contacts_total": 374,
-    "daily_connections": 22,
+    "entities": 93,
+    "relationships": 27,
+    "contacts_new": 1,
+    "contacts_total": 375,
+    "daily_connections": 21,
     "new_domains": [
+      "erdoganlarnakliyat.com",
       "containerport.com",
-      "xiangyu.cn",
-      "immensitylogistics.com",
       "elite-solar.com",
-      "mercerlogistics.com",
       "romesales.com",
-      "biposervice.com"
+      "biposervice.com",
+      "immensitylogistics.com",
+      "mercerlogistics.com",
+      "xiangyu.cn"
     ]
   },
   "daily_connections": [
@@ -2473,11 +2538,6 @@
     {
       "from": "ASTRONERGY (正泰新能)",
       "to": "Pioneer",
-      "type": "service"
-    },
-    {
-      "from": "TERRASOULSUPERFOODS",
-      "to": "FCC USA",
       "type": "service"
     },
     {
