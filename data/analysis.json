@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T15:13:17.850488+08:00",
-  "total_emails": 192,
-  "business_emails": 157,
-  "pdf_count": 47,
+  "scan_time": "2026-03-31T15:31:13.306198+08:00",
+  "total_emails": 198,
+  "business_emails": 163,
+  "pdf_count": 55,
   "categories": {
     "charge_confirm": 16,
     "prealert": 30,
-    "other_biz": 82,
+    "other_biz": 88,
     "arrival": 10,
     "hold": 4,
     "booking": 4,
@@ -199,13 +199,44 @@
     "COSCO": 2,
     "OOCL": 11,
     "YML": 1,
-    "CMA-CGM": 4,
+    "CMA-CGM": 5,
     "ZIM": 7,
     "Evergreen": 4
   },
-  "carrier_fees": {},
-  "hbl_total": 39,
-  "mbl_total": 35,
+  "carrier_fees": {
+    "ONE": {
+      "count": 12,
+      "total": 10.0,
+      "avg": 1.25
+    },
+    "MSC": {
+      "count": 9,
+      "total": 21580.0,
+      "avg": 1541.4285714285713
+    },
+    "COSCO": {
+      "count": 2,
+      "total": 360.0,
+      "avg": 180.0
+    },
+    "CMA-CGM": {
+      "count": 3,
+      "total": 32638.0,
+      "avg": 2175.866666666667
+    },
+    "OOCL": {
+      "count": 4,
+      "total": 3525.0,
+      "avg": 440.625
+    },
+    "ZIM": {
+      "count": 2,
+      "total": 211.04999999999998,
+      "avg": 42.209999999999994
+    }
+  },
+  "hbl_total": 40,
+  "mbl_total": 39,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -239,6 +270,7 @@
     "WLC60309086",
     "WLC60310362",
     "WLC60310365",
+    "WLC60310469",
     "WLC60311659",
     "WLC60313618",
     "WLC60314212",
@@ -249,6 +281,8 @@
   ],
   "all_mbls": [
     "CMDUCHN3095178",
+    "CMDUCHN3097470",
+    "CMDUCHN3106797",
     "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
@@ -261,6 +295,7 @@
     "MEDUWG692272",
     "MEDUWH597967",
     "MEDUWH661557",
+    "MEDUWN372125",
     "MEDUYL789706",
     "MEDUYL960612",
     "ONEYBKKG23204800",
@@ -282,11 +317,12 @@
     "OOLU2322301770",
     "OOLU2322439640",
     "ZIMUBKK80439660",
-    "ZIMUBKK80440481"
+    "ZIMUBKK80440481",
+    "ZIMUNGB20218977"
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 103
+    "2026-03-31": 109
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -301,7 +337,7 @@
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      20
+      21
     ],
     [
       "assistant@pltplt.com",
@@ -320,6 +356,10 @@
       9
     ],
     [
+      "\"rita tang\" <rita.tang@wwl.cn>",
+      9
+    ],
+    [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
       6
     ],
@@ -333,10 +373,6 @@
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
-      4
-    ],
-    [
-      "\"rita tang\" <rita.tang@wwl.cn>",
       4
     ],
     [
@@ -2010,11 +2046,11 @@
     "contacts_total": 373,
     "daily_connections": 21,
     "new_domains": [
-      "biposervice.com",
+      "containerport.com",
       "elite-solar.com",
+      "biposervice.com",
       "romesales.com",
-      "mercerlogistics.com",
-      "containerport.com"
+      "mercerlogistics.com"
     ]
   },
   "daily_connections": [

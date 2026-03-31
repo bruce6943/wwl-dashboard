@@ -434,7 +434,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "REACH/MING HAO XIN",
+      "customer": "MING HAO XIN/REACH",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "ONE 3票 — 预付 → Origin已垫付 → 确认金额入账",
@@ -469,6 +469,20 @@
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
       "email_count": 2,
       "last_seen": "2026-03-25"
+    },
+    {
+      "type": "payment_requested",
+      "priority": "high",
+      "title": "Payment Requested",
+      "mbl": "CMDUCHN3106797, CMDUCHN3097470",
+      "carrier": "CMA-CGM",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "未知",
+      "action": "CMA-CGM 2票 — 已申请付款 → 跟进水单 → 发船公司销账",
+      "progress_history": "提单: CMDUCHN3106797, CMDUCHN3097470",
+      "email_count": 2,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "payment_requested",
@@ -599,13 +613,13 @@
   ],
   "summary": {
     "arrival_notices": 164,
-    "bl_releases": 103,
-    "billings": 110,
+    "bl_releases": 100,
+    "billings": 115,
     "prealerts": 51
   },
   "stats": {
-    "total": 34,
+    "total": 35,
     "urgent": 21,
-    "high": 13
+    "high": 14
   }
 }
