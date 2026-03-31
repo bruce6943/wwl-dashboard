@@ -1,7 +1,7 @@
 {
-  "scan_time": "2026-03-31T16:22:33.123945+08:00",
-  "total_emails": 229,
-  "business_emails": 193,
+  "scan_time": "2026-03-31T16:39:32.520920+08:00",
+  "total_emails": 233,
+  "business_emails": 197,
   "pdf_count": 76,
   "categories": {
     "charge_confirm": 16,
@@ -13,7 +13,7 @@
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
-    "overdue": 14
+    "overdue": 18
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -206,45 +206,9 @@
     "MAERSK": 2,
     "WAN HAI": 2
   },
-  "carrier_fees": {
-    "ONE": {
-      "count": 21,
-      "total": 10.0,
-      "avg": 1.25
-    },
-    "MSC": {
-      "count": 9,
-      "total": 21580.0,
-      "avg": 1541.4285714285713
-    },
-    "COSCO": {
-      "count": 2,
-      "total": 360.0,
-      "avg": 180.0
-    },
-    "CMA-CGM": {
-      "count": 3,
-      "total": 32638.0,
-      "avg": 2175.866666666667
-    },
-    "OOCL": {
-      "count": 4,
-      "total": 3525.0,
-      "avg": 440.625
-    },
-    "ZIM": {
-      "count": 2,
-      "total": 211.04999999999998,
-      "avg": 42.209999999999994
-    },
-    "Hapag-Lloyd": {
-      "count": 2,
-      "total": 0,
-      "avg": 0
-    }
-  },
-  "hbl_total": 44,
-  "mbl_total": 44,
+  "carrier_fees": {},
+  "hbl_total": 40,
+  "mbl_total": 38,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -279,22 +243,16 @@
     "WLC60309086",
     "WLC60310362",
     "WLC60310365",
-    "WLC60310469",
     "WLC60311659",
-    "WLC60312093",
     "WLC60313618",
     "WLC60314212",
     "WLC60314287",
     "WLC60314849",
     "WLC60315792",
-    "WLC60317401",
-    "WLC60317403",
     "WLC60319081"
   ],
   "all_mbls": [
     "CMDUCHN3095178",
-    "CMDUCHN3097470",
-    "CMDUCHN3106797",
     "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
@@ -309,7 +267,6 @@
     "MEDUWG692272",
     "MEDUWH597967",
     "MEDUWH661557",
-    "MEDUWN372125",
     "MEDUYL789706",
     "MEDUYL960612",
     "ONEYBKKG23204800",
@@ -324,7 +281,6 @@
     "ONEYBTMG00485900",
     "ONEYBTMG00486300",
     "ONEYBTMG00521700",
-    "ONEYBTMG00583800",
     "OOLU2166524280",
     "OOLU2167428510",
     "OOLU2167574730",
@@ -332,14 +288,12 @@
     "OOLU2320126090",
     "OOLU2322301770",
     "OOLU2322439640",
-    "OOLU2323707040",
     "ZIMUBKK80439660",
-    "ZIMUBKK80440481",
-    "ZIMUNGB20218977"
+    "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 140
+    "2026-03-31": 144
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -349,12 +303,12 @@
   ],
   "hold_count": 4,
   "inspection_count": 4,
-  "overdue_count": 14,
+  "overdue_count": 18,
   "cancel_count": 0,
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      26
+      28
     ],
     [
       "assistant@pltplt.com",
@@ -389,6 +343,10 @@
       6
     ],
     [
+      "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      6
+    ],
+    [
       "us038-importpickupnotification@msc.com",
       5
     ],
@@ -398,10 +356,6 @@
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
-      4
-    ],
-    [
-      "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
       4
     ],
     [
@@ -1385,6 +1339,58 @@
       "date": "Tue, 31 Mar 2026 16:14:44"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1461926",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:CMDUTHD1461926",
+      "source": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 16:25:07"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "source": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 16:28:02"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "source": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 16:28:02"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "source": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 16:36:58"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -2154,9 +2160,9 @@
     }
   ],
   "action_summary": {
-    "total": 88,
+    "total": 92,
     "urgent": 20,
-    "high": 39,
+    "high": 43,
     "medium": 29
   },
   "bl_status": {
@@ -2290,13 +2296,13 @@
     "contacts_total": 374,
     "daily_connections": 22,
     "new_domains": [
-      "xiangyu.cn",
-      "romesales.com",
+      "immensitylogistics.com",
       "mercerlogistics.com",
+      "xiangyu.cn",
       "biposervice.com",
       "containerport.com",
-      "elite-solar.com",
-      "immensitylogistics.com"
+      "romesales.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [
