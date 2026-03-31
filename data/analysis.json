@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T20:19:21.922790+08:00",
-  "total_emails": 284,
-  "business_emails": 243,
-  "pdf_count": 111,
+  "scan_time": "2026-03-31T20:55:58.984064+08:00",
+  "total_emails": 288,
+  "business_emails": 247,
+  "pdf_count": 112,
   "categories": {
     "charge_confirm": 17,
-    "prealert": 56,
-    "other_biz": 121,
+    "prealert": 58,
+    "other_biz": 123,
     "arrival": 10,
     "hold": 4,
     "booking": 9,
@@ -204,6 +204,17 @@
       "days": [
         "03/31"
       ]
+    },
+    "HITHIUM": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/31"
+      ]
     }
   },
   "carriers": {
@@ -213,7 +224,7 @@
     "OOCL": 14,
     "YML": 1,
     "CMA-CGM": 6,
-    "ZIM": 7,
+    "ZIM": 8,
     "Evergreen": 4,
     "Hapag-Lloyd": 2,
     "MAERSK": 2,
@@ -326,7 +337,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 195
+    "2026-03-31": 199
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -340,12 +351,12 @@
   "cancel_count": 0,
   "top_senders": [
     [
-      "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      30
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      31
     ],
     [
-      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      29
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      30
     ],
     [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
@@ -2529,16 +2540,16 @@
     "relationships": 31,
     "contacts_new": 0,
     "contacts_total": 375,
-    "daily_connections": 22,
+    "daily_connections": 23,
     "new_domains": [
+      "erdoganlarnakliyat.com",
       "elite-solar.com",
       "biposervice.com",
-      "mercerlogistics.com",
       "containerport.com",
       "romesales.com",
       "xiangyu.cn",
-      "erdoganlarnakliyat.com",
-      "immensitylogistics.com"
+      "immensitylogistics.com",
+      "mercerlogistics.com"
     ]
   },
   "daily_connections": [
@@ -2650,6 +2661,11 @@
     {
       "from": "BTL INTERNATIONAL",
       "to": "ONE",
+      "type": "carrier"
+    },
+    {
+      "from": "HITHIUM",
+      "to": "ZIM",
       "type": "carrier"
     }
   ]
