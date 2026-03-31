@@ -1,6 +1,6 @@
 {
-  "scan_time": "2026-03-31T08:30:44.217999+08:00",
-  "total_emails": 104,
+  "scan_time": "2026-03-31T08:47:31.177349+08:00",
+  "total_emails": 105,
   "business_emails": 75,
   "pdf_count": 16,
   "categories": {
@@ -138,9 +138,25 @@
     "YML": 1,
     "CMA-CGM": 1
   },
-  "carrier_fees": {},
+  "carrier_fees": {
+    "ONE": {
+      "count": 7,
+      "total": 6.0,
+      "avg": 1.2
+    },
+    "MSC": {
+      "count": 7,
+      "total": 4570.0,
+      "avg": 415.45454545454544
+    },
+    "COSCO": {
+      "count": 1,
+      "total": 0,
+      "avg": 0
+    }
+  },
   "hbl_total": 11,
-  "mbl_total": 17,
+  "mbl_total": 20,
   "all_hbls": [
     "WLC50522982",
     "WLC60124859",
@@ -163,6 +179,7 @@
     "MEDURQ324903",
     "MEDURQ324929",
     "MEDUWG692272",
+    "MEDUWN372125",
     "MEDUYL960612",
     "ONEYBKKG38865600",
     "ONEYBKKG48500700",
@@ -170,11 +187,13 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "OOLU2166524280",
     "OOLU2320126090"
   ],
   "daily_counts": {
-    "2026-03-30": 77,
+    "2026-03-30": 78,
     "2026-03-31": 21
   },
   "inspection_mbls": [
@@ -213,15 +232,15 @@
       5
     ],
     [
+      "JEREMY WONG <jeremyw@fccusa.net>",
+      3
+    ],
+    [
       "<julian.tseng@dynastydfw.com>",
       3
     ],
     [
       "Maggie Yin <maggie.yin@elite-solar.com>",
-      2
-    ],
-    [
-      "JEREMY WONG <jeremyw@fccusa.net>",
       2
     ],
     [
@@ -1231,42 +1250,45 @@
   },
   "bl_status": {
     "no_tlx_mbl": [
-      "ONEYBKKG67192800",
-      "MEDURQ324903",
-      "MEDURQ323962",
-      "OOLU2166524280",
-      "ONEYBKKG68481300",
       "MEDUWG692272",
-      "CMDUTHD1466680",
-      "ONEYBKKG61472300",
-      "ONEYBKKG48500700",
-      "ONEYBKKG38865600",
-      "COSU9506295790",
-      "ONEYBKKG61453900",
-      "MEDUYL960612",
-      "OOLU2320126090",
-      "MEDURQ324234",
+      "OOLU2166524280",
       "MEDURQ324929",
-      "COSU6444625540"
+      "OOLU2320126090",
+      "ONEYBKKG61472300",
+      "ONEYBTMG00521700",
+      "MEDURQ324234",
+      "ONEYBKKG68481300",
+      "MEDUYL960612",
+      "MEDURQ324903",
+      "CMDUTHD1466680",
+      "ONEYBKKG61453900",
+      "ONEYBKKG48500700",
+      "MEDURQ323962",
+      "COSU9506295790",
+      "MEDUWN372125",
+      "ONEYBTMG00383600",
+      "COSU6444625540",
+      "ONEYBKKG67192800",
+      "ONEYBKKG38865600"
     ],
     "no_tlx_hbl": [
-      "WLC60304684",
       "WLC60203463",
+      "WLC60305212",
+      "WLC60304684",
+      "WLC60217446",
+      "WLC50522982",
+      "WLC60124859",
       "WLC60304584",
       "WLC60305140",
       "WLC60213409",
-      "WLC60125637",
-      "WLC60124859",
-      "WLC60305212",
-      "WLC60217446",
       "WLC60309086",
-      "WLC50522982"
+      "WLC60125637"
     ],
     "an_no_prealert": [
-      "MEDURQ324903",
       "MEDURQ323962",
       "COSU9506295790",
       "MEDURQ324234",
+      "MEDURQ324903",
       "MEDURQ324929"
     ],
     "hold_bl": [
