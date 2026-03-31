@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T19:07:00.883340+08:00",
-  "total_emails": 263,
-  "business_emails": 225,
-  "pdf_count": 110,
+  "scan_time": "2026-03-31T19:42:57.147002+08:00",
+  "total_emails": 268,
+  "business_emails": 228,
+  "pdf_count": 111,
   "categories": {
     "charge_confirm": 17,
     "prealert": 48,
-    "other_biz": 114,
+    "other_biz": 117,
     "arrival": 10,
     "hold": 4,
     "booking": 6,
@@ -191,6 +191,17 @@
       "days": [
         "03/31"
       ]
+    },
+    "ATC CARGO": {
+      "emails": 2,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/31"
+      ]
     }
   },
   "carriers": {
@@ -313,7 +324,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 174
+    "2026-03-31": 179
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -2512,14 +2523,14 @@
     "contacts_total": 375,
     "daily_connections": 22,
     "new_domains": [
-      "immensitylogistics.com",
-      "romesales.com",
-      "erdoganlarnakliyat.com",
       "biposervice.com",
+      "romesales.com",
+      "containerport.com",
+      "immensitylogistics.com",
       "mercerlogistics.com",
       "elite-solar.com",
       "xiangyu.cn",
-      "containerport.com"
+      "erdoganlarnakliyat.com"
     ]
   },
   "daily_connections": [
