@@ -423,23 +423,26 @@ def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contact
             "source": "bl_status", "date": "",
         })
 
-    # 6. SOP跟进
-    sop_list = overdue_sop if isinstance(overdue_sop, list) else []
-    for item in sop_list[:10]:
-        if not isinstance(item, dict): continue
-        m = item.get("mbl", "")
-        if not m: continue
-        key = f"sop__{m}"
+    # 6. SOP跟进 (overdue_sop is now dict: customer_name → info)
+    sop_dict = overdue_sop if isinstance(overdue_sop, dict) else {}
+    for cust_name, info in sorted(sop_dict.items(), key=lambda x: x[1].get('amount_num', 0) if isinstance(x[1], dict) else 0, reverse=True)[:10]:
+        if not isinstance(info, dict): continue
+        m = info.get("mbl", "")
+        key = f"sop__{cust_name}"
         if key in seen_keys: continue
         seen_keys.add(key)
+        amt_num = info.get("amount_num", 0)
+        days = info.get("days_overdue", 0)
+        tx = info.get("status", "按T+X时间线推进")
+        pri = "urgent" if days > 45 else "high"
         tasks.append({
-            "id": key, "category": "sop", "priority": "high",
-            "title": "SOP合规跟进",
-            "action": f"Overdue SOP — {item.get('maggie_action', '按T+X时间线推进')}",
-            "assignee": "", "mbl": m, "hbl": "", "customer": "",
-            "amount": f"${item.get('amount', 0):,.0f}" if isinstance(item.get("amount"), (int, float)) else "",
+            "id": key, "category": "sop", "priority": pri,
+            "title": f"催收跟进: {unify_customer_name(cust_name)}",
+            "action": f"{tx} — {info.get('amount', '')} 欠费{days}天",
+            "assignee": "", "mbl": m, "hbl": "", "customer": unify_customer_name(cust_name),
+            "amount": info.get("amount", ""),
             "internal_staff": "", "customer_contact": "",
-            "detail_lines": [f"状态: {item.get('t_status','?')}"] if item.get('t_status') else [],
+            "detail_lines": [f"收款类型: {info.get('sheet_breakdown','')}", f"费用: {info.get('fee_detail','')[:50]}"],
             "source": "overdue_sop", "date": "",
         })
 
@@ -1111,74 +1114,46 @@ with tabs[2]:
 
     st.markdown("---")
 
-    # Overdue SOP table
-    section_header("重点催收跟踪 (Overdue SOP)")
-    if SOP:
-        sop_rows = []
-        for name, info in SOP.items():
-            if isinstance(info, dict):
-                # Build the Rita/Maggie/Will action column by combining available info
-                actions_parts = []
-                if info.get("maggie_action"):
-                    actions_parts.append(info["maggie_action"])
-                if info.get("jim_action"):
-                    actions_parts.append(f"Jim: {info['jim_action']}")
-                if info.get("will_sun"):
-                    actions_parts.append(f"Will: {info['will_sun']}")
-                combined_action = " | ".join(actions_parts) if actions_parts else "-"
+    # 催收跟踪(全部从3.30 Excel数据生成)
+    section_header("欠费催收跟踪")
+    if SOP and isinstance(SOP, dict):
+        _sop_html = ""
+        for i, (name, info) in enumerate(sorted(SOP.items(), key=lambda x: x[1].get('amount_num', 0) if isinstance(x[1], dict) else 0, reverse=True)):
+            if not isinstance(info, dict): continue
+            amt = info.get('amount', '')
+            days = info.get('days_overdue', 0)
+            tx = info.get('status', '')
+            sheet = info.get('sheet_breakdown', '')
+            detail = info.get('fee_detail', '')[:45]
+            records = info.get('records', 0)
 
-                # Build suggested next action
-                next_action_parts = []
-                if info.get("sinosure_ready"):
-                    next_action_parts.append(info["sinosure_ready"])
-                if info.get("pending"):
-                    next_action_parts.append(info["pending"])
-                if info.get("resolution"):
-                    next_action_parts.append(info["resolution"])
-                if not next_action_parts:
-                    next_action_parts.append("持续跟进")
-                next_action = " | ".join(next_action_parts)
+            amt_color = "#e94560" if days > 45 else "#ffa500" if days > 15 else "#2196f3"
+            tx_color = "#e94560" if '超中信保' in tx else "#ffa500" if '追偿' in tx or '升级' in tx or '中信保!' in tx else "#2196f3"
 
-                sop_rows.append({
-                    "客户": name,
-                    "提单": info.get("mbl", ""),
-                    "金额": info.get("amount", ""),
-                    "跟进行动": combined_action,
-                    "T+X状态": info.get("t_status", ""),
-                    "建议后续行动": next_action,
-                    "风险": info.get("risk", ""),
-                })
-        if sop_rows:
-            sop_df = pd.DataFrame(sop_rows)
-            st.dataframe(sop_df, use_container_width=True, hide_index=True, key="tbl_5")
+            _sop_html += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
+                <td style="text-align:center;color:#666;width:25px;">{i+1}</td>
+                <td><b style="color:#fff;">{unify_customer_name(name)}</b></td>
+                <td style="text-align:center;color:{amt_color};font-weight:700;">{amt}</td>
+                <td style="text-align:center;color:#a0a0c0;">{days}天</td>
+                <td style="text-align:center;"><span style="background:{tx_color};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{tx}</span></td>
+                <td style="font-size:11px;color:#a0a0c0;">{sheet}</td>
+                <td style="font-size:11px;color:#888;">{detail}</td>
+                <td style="text-align:center;color:#666;">{records}</td>
+            </tr>'''
 
-    st.markdown("---")
-
-    # TOP 15 arrears
-    section_header("TOP 15 欠费客户")
-    top20 = ARR.get("top20", [])
-    if top20:
-        top_rows = []
-        for i, item in enumerate(top20[:15]):
-            risk = item.get("risk", "未评估")
-            suggested = (
-                "紧急催收! 发正式追偿函, 准备中信保材料"
-                if "高" in risk
-                else "常规催收, 发催款邮件并跟进"
-                if "中" in risk
-                else "观察, 低优先级"
-            )
-            top_rows.append({
-                "排名": i + 1,
-                "客户名称": unify_customer_name(item.get("name", "")),
-                "欠费金额": f"${item.get('total', 0):,.0f}",
-                "记录数": item.get("records", 0),
-                "风险等级": risk,
-                "费用类型": ", ".join(list(item.get("sheets", []))),
-                "建议行动": suggested,
-            })
-        top_df = pd.DataFrame(top_rows)
-        st.dataframe(top_df, use_container_width=True, hide_index=True, key="tbl_6")
+        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
+                <th style="padding:6px;color:#e94560;width:25px;">#</th>
+                <th style="padding:6px;color:#e94560;">客户</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">金额</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">欠费天数</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">T+X阶段</th>
+                <th style="padding:6px;color:#e94560;">收款类型</th>
+                <th style="padding:6px;color:#e94560;">费用明细</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">记录</th>
+            </tr></thead>
+            <tbody>{_sop_html}</tbody>
+        </table>''', unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════════
