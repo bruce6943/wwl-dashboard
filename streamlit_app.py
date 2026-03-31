@@ -1889,22 +1889,35 @@ with tabs[6]:
 
 
     vendors = VDB.get("vendors", [])
-    # 排除船公司! 船公司在Tab8单独展示
     service_vendors = [v for v in vendors if v.get("vendor_category") != "ship_carrier"]
 
     if service_vendors:
-        # Build customer-vendor mapping from supply chain network
+        # 供应商↔客户映射(同时匹配中英文名)
+        _VENDOR_ALIAS = {
+            "YES": ["YES报关行","YES CHB","YES","YESCHB"],
+            "PACIFIC T&T": ["PTT卡车","PTT","PACIFIC","Pacific T&T"],
+            "ROME TRANSPORT": ["Rome卡车","ROME","Rome Transport"],
+            "FCC USA": ["FCC USA","FCC","FCCUSA"],
+            "PTS LOGISTICS": ["PTS","PTS LOGISTICS"],
+            "DIRECT CHB": ["Direct CHB","DIRECTCHB","Direct"],
+            "WFS CUSTOMS": ["WFS Customs","WFS","WFSCUSTOMS"],
+            "SCOTLYNN": ["Scotlynn","SCOTLYNN"],
+            "FIN WHALE": ["Fin Whale","FINWHALE","Fin Whale Logistics"],
+            "CARGO CONVOY": ["Cargo Convoy","CARGOCONVOY"],
+        }
         cs = SCN.get("customer_service", {})
-        # Fallback: build from supply_chains if customer_service is empty
         if not cs:
             for cust, chain in SCN.get("supply_chains", {}).items():
                 for cat in ["brokers", "truckers", "agents"]:
                     for svc_name, count in chain.get(cat, {}).items():
-                        cs.setdefault(cust, {})[svc_name] = {"count": count, "types": [cat]}
+                        cs.setdefault(cust, {})[svc_name] = {"count": count}
         vendor_customers = {}
         for cust, svcs in cs.items():
             for svc_name in svcs:
                 vendor_customers.setdefault(svc_name, []).append(cust)
+
+        # 从deep_insights获取邮件数据
+        _people = DI.get("people_topics", {})
 
         v_rows = []
         for v in sorted(service_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
@@ -1913,22 +1926,52 @@ with tabs[6]:
             pm = v.get("performance_metrics", {})
             score = v.get("capability_score", 0)
 
+            # 动态计算等级(不信JSON里的hardcoded值)
+            if score >= 85: level = "S级核心"
+            elif score >= 70: level = "A级优质"
+            elif score >= 50: level = "B级合格"
+            elif score >= 30: level = "C级关注"
+            else: level = "D级风险"
+
+            # 匹配客户(用别名表)
             custs = []
-            for vk, vc in vendor_customers.items():
-                if name.upper()[:6] in vk.upper() or vk.upper()[:6] in name.upper():
-                    custs.extend(vc)
-            custs = list(set(custs))
+            aliases = _VENDOR_ALIAS.get(name, [name])
+            for alias in aliases:
+                for vk, vc in vendor_customers.items():
+                    if alias.upper()[:4] in vk.upper() or vk.upper()[:4] in alias.upper():
+                        custs.extend(vc)
+            custs = list(set(c for c in custs if c))
+
+            # 邮件数: 优先用7d数据, 也从people_topics找
+            emails_7d = pm.get("email_volume_7d", 0)
+            active_days = pm.get("active_days_7d", 0)
+            # 从deep_insights匹配(如 "Team3 YES", "Jack PTT", "Adrian FCC")
+            for pname, topics in _people.items():
+                for alias in aliases:
+                    if alias.upper()[:3] in pname.upper():
+                        emails_7d = max(emails_7d, sum(topics.values()) if isinstance(topics, dict) else 0)
+
+            # 服务次数 = 所有客户的count之和
+            svc_count = 0
+            for alias in aliases:
+                for vk, vc_data in cs.items() if isinstance(cs, dict) else []:
+                    pass
+            # 从supply_chains统计
+            for cust, chain in SCN.get("supply_chains", {}).items():
+                for cat in ["brokers", "truckers", "agents"]:
+                    for svc_name, count in chain.get(cat, {}).items():
+                        for alias in aliases:
+                            if alias.upper()[:4] in svc_name.upper():
+                                svc_count += count if isinstance(count, int) else count.get("count", 0) if isinstance(count, dict) else 0
 
             cat = v.get("vendor_category", "")
             cat_cn = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(cat, cat)
-            emails = pm.get("email_volume_cumulative", 0)
-            mentions = pm.get("service_mentions_cumulative", 0)
 
             v_rows.append({
-                "name": name, "cn": cn, "cat": cat_cn, "score": score,
-                "level": v.get("capability_level", "")[:6],
-                "emails": emails, "mentions": mentions,
-                "custs": custs[:4], "cust_count": pm.get("customers_served", len(custs)),
+                "name": name, "cn": cn, "cat": cat_cn, "score": score, "level": level,
+                "emails": emails_7d, "active_days": active_days, "svc_count": svc_count,
+                "custs": [unify_customer_name(c) for c in custs[:5]], "cust_count": len(custs),
+                "hold": pm.get("hold_events_7d", 0), "inspection": pm.get("inspection_events_7d", 0),
             })
 
         # Premium HTML table
@@ -1936,21 +1979,20 @@ with tabs[6]:
         for i, r in enumerate(v_rows):
             score = r["score"]
             sc = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560" if score > 0 else "#666"
-            level = r["level"]
-            lc = "#00c853" if "S级" in level or "A级" in level else "#ffa500" if "B级" in level else "#e94560"
+            lc = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560"
             cat_colors = {"报关行":"#9c27b0","卡车":"#2196f3","代理":"#ff9800"}
             cc = cat_colors.get(r["cat"], "#666")
-            custs_str = ", ".join(r["custs"]) if r["custs"] else "-"
-            activity = r["emails"] + r["mentions"]
+            custs_str = ", ".join(r["custs"][:3]) if r["custs"] else "-"
+            if len(r["custs"]) > 3: custs_str += f" +{len(r['custs'])-3}"
 
             html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
                 <td style="text-align:center;width:30px;color:#666;">{i+1}</td>
                 <td><b style="color:#fff;">{r["name"]}</b><br><span style="color:#888;font-size:11px;">{r["cn"]}</span></td>
                 <td style="text-align:center;"><span style="background:{cc};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{r["cat"]}</span></td>
                 <td style="text-align:center;"><span style="background:{sc};color:#fff;padding:2px 10px;border-radius:10px;font-size:13px;font-weight:700;">{score}</span></td>
-                <td style="text-align:center;color:{lc};font-size:12px;font-weight:600;">{level}</td>
+                <td style="text-align:center;color:{lc};font-size:12px;font-weight:600;">{r["level"]}</td>
                 <td style="text-align:center;color:#a0a0c0;">{r["emails"]}</td>
-                <td style="text-align:center;color:#a0a0c0;">{r["mentions"]}</td>
+                <td style="text-align:center;color:#a0a0c0;">{r["svc_count"]}</td>
                 <td style="text-align:center;color:#2196f3;font-weight:600;">{r["cust_count"]}</td>
                 <td style="font-size:11px;color:#a0a0c0;">{custs_str}</td>
             </tr>'''
@@ -1962,7 +2004,7 @@ with tabs[6]:
                 <th style="padding:6px;color:#e94560;text-align:center;">类型</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">评分</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">等级</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">邮件</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">邮件(7天)</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">服务次数</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">客户数</th>
                 <th style="padding:6px;color:#e94560;">服务客户</th>
@@ -1970,75 +2012,52 @@ with tabs[6]:
             <tbody>{html_rows}</tbody>
         </table>''', unsafe_allow_html=True)
 
-    # Key vendor details
+    # 供应商评估卡片(数据驱动, 不硬编码业务内容)
     st.markdown("---")
-    section_header("重点供应商详情")
+    section_header("供应商评估")
 
-    # 重点供应商详情(排除船公司，显示所有有评分的)
-    key_vendors = [v for v in service_vendors if v.get("capability_score", 0) > 0]
-    if key_vendors:
-        for v in sorted(key_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
-            name = v.get("vendor_name", "")
-            cn = v.get("vendor_name_cn", "")
-            pm = v.get("performance_metrics", {})
-            sc = v.get("scoring_components", {})
-            cat = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(v.get("vendor_category",""), "")
+    if v_rows:
+        # 两列布局展示评估卡片
+        _vcols = st.columns(2)
+        for vi, r in enumerate(v_rows):
+            score = r["score"]
+            sc_color = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560"
 
-            # Business-specific details
-            if "YES" in name:
-                biz_detail = "正在处理: 科陆锂电池清关(LITHIUM BATTERIES查验中) / 海柔MEDUEK846578清关 / PREVALON COSU6446478520清关"
-                pending_detail = "科陆查验文件待CBP确认 / 海柔清关等待放行"
-                action_detail = "催YES确认科陆查验进展→准备补充MSDS文件→通知客户延误预期"
-            elif "PTT" in name or "PACIFIC" in name:
-                biz_detail = "正在处理: 科陆储能柜提箱配送(COSU6446478520 DO已签) / ZIM双鱼2x20HC卡车安排"
-                pending_detail = "COSCO提箱时间待确认 / ZIM票卡车报价待回复"
-                action_detail = "联系PTT确认COSCO提箱时间→跟进ZIM卡车报价→安排Delivery"
-            elif "Rome" in name:
-                biz_detail = "正在处理: 正泰新能ZTLO260031项目(41次配送) / Houston大件运输"
-                pending_detail = "下批次正泰提货时间待确认"
-                action_detail = "与Rome确认正泰下周提货计划→对接origin→确保16柜按时配送"
-            elif "FCC" in name:
-                biz_detail = "正在处理: 海亮Houston出口YCH26240119(7x40HQ) / TERRA电商ReExport操作"
-                pending_detail = "海亮装箱日期待确认 / TERRA 20GP拆箱方案待确认"
-                action_detail = "催Adrian确认海亮装箱日→协调TERRA拆箱→跟进客户沟通"
-            elif "PTS" in name:
-                biz_detail = "正在处理: SAV区域卡车 / COSCO Round Trip(Jingzhou-Charleston)"
-                pending_detail = "SAV Bid Cargo 27柜报价待比较"
-                action_detail = "汇总PTS报价与IDC/PTT比价→选择最优方案→回复客户"
-            else:
-                biz_detail = "常规合作中"
-                pending_detail = "-"
-                action_detail = "保持定期沟通维护关系"
+            # 优势和风险评估(从数据推导)
+            strengths = []
+            risks = []
+            if r["emails"] >= 30: strengths.append(f"高活跃度({r['emails']}封邮件)")
+            elif r["emails"] < 5: risks.append("沟通频率低")
+            if r["cust_count"] >= 3: strengths.append(f"服务面广({r['cust_count']}家客户)")
+            elif r["cust_count"] <= 1: risks.append("客户单一,依赖风险")
+            if r["svc_count"] >= 20: strengths.append(f"服务量大({r['svc_count']}次)")
+            if r["hold"] > 0: risks.append(f"有Hold事件({r['hold']}次)")
+            if r["inspection"] > 0: risks.append(f"查验相关({r['inspection']}次)")
+            if r["active_days"] >= 5: strengths.append(f"响应及时(7天活跃{r['active_days']}天)")
+            elif r["active_days"] <= 2 and r["active_days"] > 0: risks.append(f"活跃度低({r['active_days']}/7天)")
+            if not strengths: strengths.append("常规合作")
+            if not risks: risks.append("暂无明显风险")
 
-            with st.expander(f"{cat} | {name} ({cn}) - 评分{v.get('capability_score', 0)}/100"):
-                st.markdown(f"**当前业务:** {biz_detail}")
-                st.markdown(f"**待处理/待回复:** {pending_detail}")
-                st.markdown(f"**我方建议行动:** {action_detail}")
-                st.markdown(f"**服务邮件:** {pm.get('email_volume_7d', 0)}封 | **Hold:** {pm.get('hold_events_7d', 0)} | **查验:** {pm.get('inspection_events_7d', 0)}")
-
-                # Scoring radar
-                if sc:
-                    categories = list(sc.keys())
-                    values = list(sc.values())
-                    fig = go.Figure(data=go.Scatterpolar(
-                        r=values + [values[0]],
-                        theta=categories + [categories[0]],
-                        fill='toself',
-                        fillcolor='rgba(233,69,96,0.2)',
-                        line_color='#e94560',
-                    ))
-                    fig.update_layout(
-                        polar=dict(
-                            bgcolor="rgba(0,0,0,0)",
-                            radialaxis=dict(visible=True, range=[0, 25], gridcolor="rgba(50,50,80,0.3)"),
-                            angularaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
-                        ),
-                        paper_bgcolor="rgba(0,0,0,0)",
-                        font_color="#e0e0e0",
-                        height=300,
-                        showlegend=False,
-                    )
-                    st.plotly_chart(fig, use_container_width=True, key=f"radar_{name}")
+            with _vcols[vi % 2]:
+                st.markdown(f'''<div style="background:rgba(20,20,50,0.85);border:1px solid rgba(100,100,180,0.2);
+                    border-left:4px solid {sc_color};border-radius:0 10px 10px 0;padding:14px;margin:8px 0;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;">
+                        <div>
+                            <b style="color:#fff;font-size:15px;">{r["name"]}</b>
+                            <span style="color:#888;font-size:12px;"> {r["cn"]}</span>
+                            <span style="background:{{"报关行":"#9c27b0","卡车":"#2196f3","代理":"#ff9800"}}.get(r["cat"],"#666");
+                                   color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;margin-left:6px;">{r["cat"]}</span>
+                        </div>
+                        <span style="background:{sc_color};color:#fff;padding:4px 12px;border-radius:15px;font-size:16px;font-weight:900;">{score}</span>
+                    </div>
+                    <div style="margin-top:8px;font-size:12px;">
+                        <span style="color:#00c853;">✓ {" / ".join(strengths)}</span><br>
+                        <span style="color:#e94560;">⚠ {" / ".join(risks)}</span>
+                    </div>
+                    <div style="margin-top:6px;font-size:11px;color:#a0a0c0;">
+                        邮件: {r["emails"]}封 | 服务: {r["svc_count"]}次 | 客户: {", ".join(r["custs"][:3]) if r["custs"] else "-"}
+                    </div>
+                </div>''', unsafe_allow_html=True)
   except Exception as _e7:
     import traceback as _tb7
     st.error(f"供应商全景 加载出错: {type(_e7).__name__}: {_e7}")
