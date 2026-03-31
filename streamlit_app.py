@@ -1483,12 +1483,30 @@ with tabs[5]:
         for name, info in customers_30d.items():
             emails = info.get("emails", 0)
             active = info.get("active_days", 0)
-            # Find arrears for this customer
+            # Find arrears using unified customer mapping
             arrears_amount = 0
-            for arr_item in ARR.get("top20", []):
-                if name.upper() in arr_item.get("name", "").upper():
-                    arrears_amount = arr_item.get("total", 0)
-                    break
+            _cuni = DATA.get("graph_tasks", {})  # check if customer_unified loaded
+            try:
+                with open('data/customer_unified.json', 'r') as _cuf:
+                    _cu = json.load(_cuf)
+                _cu_map = _cu.get('mapping', {})
+                _cu_arr = _cu.get('arrears_by_customer', {})
+                # Map this customer name to standard name
+                _std = _cu_map.get(name.upper(), '')
+                if not _std:
+                    for _k in _cu_map:
+                        if _k[:6] in name.upper() or name.upper()[:6] in _k:
+                            _std = _cu_map[_k]; break
+                if _std:
+                    arrears_amount = _cu_arr.get(_std, 0)
+                if not arrears_amount:
+                    for arr_item in ARR.get('top20', []):
+                        if name.upper()[:8] in arr_item.get('name', '').upper():
+                            arrears_amount = arr_item.get('total', 0); break
+            except:
+                for arr_item in ARR.get('top20', []):
+                    if name.upper()[:8] in arr_item.get('name', '').upper():
+                        arrears_amount = arr_item.get('total', 0); break
 
             # Score urgency (email volume + arrears) and importance (active days + relationship)
             urgency = min(5, max(1, emails // 15 + (3 if arrears_amount > 10000 else (2 if arrears_amount > 1000 else 0))))
