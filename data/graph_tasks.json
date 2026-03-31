@@ -445,7 +445,7 @@
       "mbl": "OOLU2322301440, OOLU2322148060, OOLU2322147820, OOLU2320655770, OOLU2320655560 +2",
       "carrier": "OOCL",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
       "wwl_branch": "WWL厦门",
       "action": "OOCL 7票 — 等Justin Jia的上家回复",
       "detail_lines": [
@@ -463,7 +463,7 @@
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506319200, COSU9506444150 +2",
       "carrier": "COSCO",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 7票 — 等Maggie Wu的上家回复",
       "detail_lines": [
@@ -481,7 +481,7 @@
       "mbl": "COSU6446212300, COSU6446342500, COSU6446117360, COSU9506295790, COSU6446482360 +1",
       "carrier": "COSCO",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "wwl_sender": "Justin Jia - WWG XMN (xmn.ops9@wwl.cn)",
       "wwl_branch": "WWL厦门",
       "action": "COSCO 6票 — 等Justin Jia的上家回复",
       "detail_lines": [
@@ -648,7 +648,7 @@
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
       "detail_lines": [
@@ -704,13 +704,13 @@
       "wwl_branch": "WWL天津",
       "action": "us038-impo来信→需确认并回复",
       "detail_lines": [
-        "03-28 16:38 us038-importpic: ",
-        "03-29 16:09 us038-importpic: ",
-        "03-30 12:13 us038-importpic: "
+        "03-30 12:13 us038-importpic: ",
+        "03-31 13:20 us038-importpic: ",
+        "03-31 13:56 us038-importpic: "
       ],
       "progress_history": "",
-      "email_count": 25,
-      "last_seen": "2026-03-30"
+      "email_count": 27,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -873,20 +873,6 @@
     {
       "type": "supplier_followup",
       "priority": "high",
-      "title": "供应商跟进: FCC USA(报关)",
-      "mbl": "",
-      "carrier": "",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "FCC USA(报关)来信未回复 → 需尽快回复确认",
-      "progress_history": "最后联系: ADRIAN JUAREZ 2026-03-30 19:41",
-      "email_count": 0,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "supplier_followup",
-      "priority": "high",
       "title": "供应商跟进: Cargo Convoy(拖车)",
       "mbl": "",
       "carrier": "",
@@ -897,17 +883,31 @@
       "progress_history": "最后联系: Kim Karla 2026-03-30 11:05",
       "email_count": 0,
       "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "medium",
+      "title": "供应商跟进: FCC USA(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FCC USA(报关)最后沟通: Re: Re: 40 HQ / unloading / Re → 检查是否需要跟进",
+      "progress_history": "最后联系: JEREMY WONG 2026-03-31 09:45",
+      "email_count": 0,
+      "last_seen": "2026-03-31"
     }
   ],
   "summary": {
-    "arrival_notices": 182,
+    "arrival_notices": 150,
     "bl_releases": 106,
-    "billings": 110,
+    "billings": 141,
     "prealerts": 47
   },
   "stats": {
     "total": 49,
     "urgent": 21,
-    "high": 28
+    "high": 27
   }
 }

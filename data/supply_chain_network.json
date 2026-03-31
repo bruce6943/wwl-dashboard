@@ -50,7 +50,7 @@
     "HITHIUM": {
       "ONE": 17,
       "OOCL": 6,
-      "ZIM": 61,
+      "ZIM": 62,
       "MSC": 36
     },
     "MERSY CORP": {
@@ -93,6 +93,9 @@
     },
     "BTL INTERNATIONAL": {
       "ONE": 83
+    },
+    "PREVALON ENERGY": {
+      "ZIM": 1
     }
   },
   "customer_service": {
@@ -195,7 +198,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 262,
+        "count": 264,
         "types": [
           "卡车"
         ]
@@ -203,7 +206,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 262,
+        "count": 264,
         "types": [
           "卡车"
         ]
@@ -223,7 +226,7 @@
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 505,
+        "count": 507,
         "types": [
           "卡车"
         ]
@@ -237,7 +240,7 @@
     },
     "ASTRONERGY (正泰新能)": {
       "Pioneer": {
-        "count": 41,
+        "count": 42,
         "types": []
       }
     }
