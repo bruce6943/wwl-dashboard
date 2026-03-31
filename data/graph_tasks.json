@@ -408,7 +408,7 @@
       "carrier": "OOCL",
       "customer": "HORIZON SOLAR",
       "wwl_sender": "",
-      "wwl_branch": "",
+      "wwl_branch": "未知",
       "action": "OOCL 2票 — 查验中 → 跟进报关行 → 通知委托方",
       "progress_history": "提单: OOLU2320126090, OOLU2166524280",
       "email_count": 58,
@@ -418,43 +418,15 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "ONEYTSNG03788600, ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900, ONEYBKKG77382300 +1",
+      "mbl": "ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "ELITE SOLAR/HAIROBOT/REACH",
-      "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "ONE 6票 — 费用已确认 → 向财务申请付款",
-      "progress_history": "提单: ONEYTSNG03788600, ONEYBTMG00383600, ONEYBTMG00521700",
-      "email_count": 28,
-      "last_seen": "2026-03-25"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "MEDUWK300806, MEDUWK525337",
-      "carrier": "MSC",
-      "customer": "HAIROBOT",
-      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "MSC 2票 — 费用已确认 → 向财务申请付款",
-      "progress_history": "提单: MEDUWK300806, MEDUWK525337",
-      "email_count": 23,
-      "last_seen": "2026-03-24"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "OOLU2322755420, OOLU2323329550",
-      "carrier": "OOCL",
-      "customer": "REACH",
+      "customer": "ELITE SOLAR/MING HAO XIN/REACH",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
-      "action": "OOCL 2票 — 费用已确认 → 向财务申请付款",
-      "progress_history": "提单: OOLU2322755420, OOLU2323329550",
-      "email_count": 2,
-      "last_seen": "2026-03-25"
+      "action": "ONE 5票 — 预付 → Origin已垫付 → 确认金额入账",
+      "progress_history": "提单: ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900",
+      "email_count": 13,
+      "last_seen": "2026-03-30"
     },
     {
       "type": "payment_requested",
@@ -469,6 +441,48 @@
       "progress_history": "提单: ZIMUBKK80433862, ZIMUBKK80435044, ZIMUBKK80433861",
       "email_count": 38,
       "last_seen": "2026-03-15"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "MEDUWK300806, MEDUWK525337",
+      "carrier": "MSC",
+      "customer": "HAIROBOT",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "MSC 2票 — 到付 → Sven确认付款给船公司 → 向收货人征收 | 收货人: HAIROBOT",
+      "progress_history": "提单: MEDUWK300806, MEDUWK525337",
+      "email_count": 23,
+      "last_seen": "2026-03-24"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "OOLU2322755420, OOLU2323329550",
+      "carrier": "OOCL",
+      "customer": "REACH",
+      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "OOCL 2票 — 预付 → Origin已垫付 → 确认金额入账",
+      "progress_history": "提单: OOLU2322755420, OOLU2323329550",
+      "email_count": 2,
+      "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "ONEYTSNG03788600",
+      "carrier": "ONE",
+      "customer": "HAIROBOT",
+      "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "到付 → Sven确认付款给船公司 → 向收货人征收 | 收货人: HAIROBOT",
+      "progress_history": "",
+      "email_count": 15,
+      "last_seen": "2026-03-25"
     }
   ],
   "summary": {
@@ -478,8 +492,8 @@
     "prealerts": 48
   },
   "stats": {
-    "total": 25,
+    "total": 26,
     "urgent": 21,
-    "high": 4
+    "high": 5
   }
 }
