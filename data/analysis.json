@@ -1,15 +1,15 @@
 {
-  "scan_time": "2026-03-31T20:55:58.984064+08:00",
-  "total_emails": 288,
-  "business_emails": 247,
-  "pdf_count": 112,
+  "scan_time": "2026-03-31T21:32:41.408857+08:00",
+  "total_emails": 292,
+  "business_emails": 251,
+  "pdf_count": 115,
   "categories": {
     "charge_confirm": 17,
     "prealert": 58,
-    "other_biz": 123,
-    "arrival": 10,
+    "other_biz": 124,
+    "arrival": 11,
     "hold": 4,
-    "booking": 9,
+    "booking": 11,
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
@@ -91,36 +91,39 @@
       ]
     },
     "PTS INC": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "PACIFIC T&T": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "JINGZHOU": {
-      "emails": 1,
+      "emails": 2,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "03/30"
+        "03/30",
+        "03/31"
       ]
     },
     "ASTRONERGY (正泰新能)": {
@@ -219,8 +222,8 @@
   },
   "carriers": {
     "ONE": 39,
-    "MSC": 22,
-    "COSCO": 4,
+    "MSC": 23,
+    "COSCO": 6,
     "OOCL": 14,
     "YML": 1,
     "CMA-CGM": 6,
@@ -232,7 +235,7 @@
   },
   "carrier_fees": {},
   "hbl_total": 56,
-  "mbl_total": 42,
+  "mbl_total": 44,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -298,6 +301,7 @@
     "COSU6444625540",
     "COSU6447268220",
     "COSU6447269010",
+    "COSU8040582340",
     "COSU9506295790",
     "HLCUSHA2603BNWG4",
     "HLCUSHA2603BNWQ4",
@@ -310,6 +314,7 @@
     "MEDUWH597967",
     "MEDUWH661557",
     "MEDUYL789706",
+    "MEDUYL886908",
     "MEDUYL960612",
     "ONEYBKKG23204800",
     "ONEYBKKG38865600",
@@ -337,7 +342,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 199
+    "2026-03-31": 202
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -383,6 +388,10 @@
       9
     ],
     [
+      "us038-importpickupnotification@msc.com",
+      6
+    ],
+    [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
       6
     ],
@@ -393,10 +402,6 @@
     [
       "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
       6
-    ],
-    [
-      "us038-importpickupnotification@msc.com",
-      5
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
@@ -1448,6 +1453,30 @@
       "date": "Tue, 31 Mar 2026 17:04:55"
     },
     {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUYL886908",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "szn.ulaxie@wwl.cn (szn.ulaxie@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDUYL886908 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDUYL886908",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "31 Mar 2026 09:14:15 -040"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -2280,9 +2309,9 @@
     }
   ],
   "action_summary": {
-    "total": 96,
+    "total": 97,
     "urgent": 20,
-    "high": 45,
+    "high": 46,
     "medium": 31
   },
   "bl_status": {
@@ -2537,19 +2566,19 @@
   },
   "neural_network": {
     "entities": 93,
-    "relationships": 31,
+    "relationships": 34,
     "contacts_new": 0,
     "contacts_total": 375,
-    "daily_connections": 23,
+    "daily_connections": 24,
     "new_domains": [
+      "romesales.com",
+      "xiangyu.cn",
       "erdoganlarnakliyat.com",
       "elite-solar.com",
       "biposervice.com",
-      "containerport.com",
-      "romesales.com",
-      "xiangyu.cn",
       "immensitylogistics.com",
-      "mercerlogistics.com"
+      "mercerlogistics.com",
+      "containerport.com"
     ]
   },
   "daily_connections": [
@@ -2667,6 +2696,11 @@
       "from": "HITHIUM",
       "to": "ZIM",
       "type": "carrier"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
     }
   ]
 }
