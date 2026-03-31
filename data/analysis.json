@@ -1376,15 +1376,10 @@
     "medium": 19
   },
   "bl_status": {
-    "no_tlx_mbl": [
-      "ONEYBKKG61472300",
-      "ONEYBKKG61453900"
-    ],
+    "no_tlx_mbl": [],
     "no_tlx_hbl": [
-      "WLC60125637",
       "WLC60216138",
       "WLC60307413",
-      "WLC60309086",
       "WLC50522982"
     ],
     "an_no_prealert": [],
