@@ -715,10 +715,20 @@ with tabs[0]:
     graph_tasks_list = GRAPH.get("tasks", [])
 
     if graph_tasks_list:
-        # 从知识图谱生成的任务(更丰富)
+        # 从知识图谱生成的任务 — 不再补充build_task_board(消除重复)
         all_tasks = []
         for gt in graph_tasks_list:
-            task_id = f"{gt.get('type','')}__{gt.get('mbl','')}__{gt.get('customer','')}"
+            cust_raw = gt.get("customer", "")
+            cust_display = unify_customer_name(cust_raw) if cust_raw else ""
+            task_id = f"{gt.get('type','')}__{cust_display}__{gt.get('mbl','')[:20]}"
+            # 修正branch映射
+            branch = gt.get("wwl_branch", "")
+            sender_email = gt.get("wwl_sender", "").lower()
+            if 'bkk.' in sender_email: branch = "WWL泰国"
+            elif 'jkt.' in sender_email: branch = "WWL印尼"
+            elif 'sha.' in sender_email or 'szn.' in sender_email or 'fsh.' in sender_email: branch = "WWL中国"
+            elif 'xmn.' in sender_email or 'can.' in sender_email: branch = "WWL中国"
+            elif 'hkg.' in sender_email: branch = "WWL香港"
             all_tasks.append({
                 "id": task_id,
                 "category": gt.get("type", "other"),
@@ -728,26 +738,19 @@ with tabs[0]:
                 "mbl": gt.get("mbl", ""),
                 "hbl": gt.get("hbl", ""),
                 "carrier": gt.get("carrier", ""),
-                "customer": gt.get("customer", ""),
+                "customer": cust_display,
                 "wwl_sender": gt.get("wwl_sender", ""),
-                "wwl_branch": gt.get("wwl_branch", ""),
+                "wwl_branch": branch,
                 "amount": gt.get("amount", ""),
                 "contact": "",
                 "consignee": "",
                 "shipper": "",
                 "internal_staff": "",
                 "customer_contact": "",
-                "detail_lines": ([gt.get('progress_history','')] if gt.get('progress_history') else []) + ([gt.get('detail','')] if gt.get('detail') else []),
+                "detail_lines": ([gt.get('progress_history','')] if gt.get('progress_history') else []) + (gt.get('detail_lines',[]) if gt.get('detail_lines') else []),
                 "assignee": "",
             })
-        # 补充欠费催收任务(去重)
-        existing_ids = {t["id"] for t in all_tasks}
-        for extra in build_task_board([], ARR, {}, SOP, CON, DI, {}):
-            if extra["id"] not in existing_ids:
-                all_tasks.append(extra)
-                existing_ids.add(extra["id"])
     else:
-        # Fallback: only arrears (no action_items - those are unreliable)
         all_tasks = build_task_board([], ARR, {}, SOP, CON, DI, {})
 
     # 去重
@@ -769,6 +772,8 @@ with tabs[0]:
         'bruce@wwl.cn', 'bruce@wwl.sg',
         'us.adamsum@worldwide-logistics.cn', 'bobc@worldwide-logistics.cn',
         'us.docs@wwl.sg', 'sha.overseassup2@wwl.cn',
+        # 公共邮箱 — 不是具体联系人
+        'wwlusa.list@worldwide-logistics.cn', 'us.list@wwl.sg',
     }
     for t in all_tasks:
         sender = t.get("wwl_sender", "")
@@ -782,31 +787,43 @@ with tabs[0]:
     task_data = load_tasks()
     completed_ids = task_data.get("completed", {})
 
-    # 分离未完成和已完成
+    # 分离: 欠费催收 vs 操作待办 (Bruce: 催收就是催收不分优先级，统一折叠)
     pending = [t for t in all_tasks if t["id"] not in completed_ids]
     done_today = [t for t in all_tasks if t["id"] in completed_ids]
-    pending_urgent = [t for t in pending if t["priority"] == "urgent"]
-    pending_high = [t for t in pending if t["priority"] == "high"]
-    pending_medium = [t for t in pending if t["priority"] == "medium"]
 
-    section_header(f"任务工作台: {len(pending)}条待办 / {len(done_today)}条已完成")
-
-    # 分类统计
-    cat_counts = {}
+    # 按客户名去重欠费(同一客户只显示一次)
+    arrears_tasks = []
+    arrears_seen = set()
     for t in pending:
-        c = t.get("category", "other")
-        cat_counts[c] = cat_counts.get(c, 0) + 1
+        if t.get("category") == "arrears":
+            ckey = t.get("customer", "").upper()[:15]
+            if ckey and ckey not in arrears_seen:
+                arrears_seen.add(ckey)
+                arrears_tasks.append(t)
+            elif not ckey:
+                arrears_tasks.append(t)
+
+    # 操作待办(非催收)
+    ops_tasks = [t for t in pending if t.get("category") != "arrears"]
+    ops_urgent = [t for t in ops_tasks if t["priority"] == "urgent"]
+    ops_high = [t for t in ops_tasks if t["priority"] == "high"]
+    ops_medium = [t for t in ops_tasks if t["priority"] == "medium"]
+
+    section_header(f"任务工作台: 催收{len(arrears_tasks)}条 + 操作{len(ops_tasks)}条 / 已完成{len(done_today)}条")
+
     cat_labels = {"hold":"Hold扣货","inspection":"查验","cc_confirm":"CC费用","arrival_notice":"到港通知",
                   "dd_alert":"D&D费用","overdue":"Overdue催收","arrears":"欠费催收","bl_release":"换单电放",
                   "prealert_gap":"漏单预警","sop":"SOP跟进",
-                  "broker_followup":"报关行跟进","trucker_followup":"卡车跟进","post_clearance":"清关后跟进",
-                  "empty_return":"空柜归还","post_booking":"订舱后跟进","supplier_reply":"供应商等回复",
                   "hold_active":"Hold扣货","inspection_active":"查验中","fee_confirmed":"费用已确认",
                   "payment_requested":"待付款","awaiting_reply":"等回复",
-                  "inspection_broker":"查验报关跟进",
-                  "stale_arrival":"到港停滞","awaiting_reply":"等回复"}
-    cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(cat_counts.items(), key=lambda x:x[1], reverse=True))
-    st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>{cat_display}</p>", unsafe_allow_html=True)
+                  "inspection_broker":"查验报关跟进","stale_arrival":"到港停滞"}
+    ops_cats = {}
+    for t in ops_tasks:
+        c = t.get("category", "other")
+        ops_cats[c] = ops_cats.get(c, 0) + 1
+    if ops_cats:
+        cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(ops_cats.items(), key=lambda x:x[1], reverse=True))
+        st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>操作类: {cat_display}</p>", unsafe_allow_html=True)
 
     def render_task_card(t, pri_color, bg_alpha):
         """渲染任务卡片 — 按客户维度展示，含提单/船公司/联系人/金额明细"""
@@ -907,22 +924,30 @@ with tabs[0]:
                     save_tasks({"completed": completed_ids, "tasks": all_tasks})
                     st.rerun()
 
-    # ─── 紧急任务(折叠框) ───
-    if pending_urgent:
-        with st.expander(f"紧急待办 ({len(pending_urgent)})", expanded=True):
-            for t in pending_urgent:
+    # ─── 欠费催收(统一折叠, 不分优先级 — Bruce: 催收无论金额大小都要做) ───
+    if arrears_tasks:
+        total_arrears_amt = sum(
+            float(t.get("amount","0").replace("$","").replace(",",""))
+            for t in arrears_tasks if t.get("amount")
+        )
+        with st.expander(f"欠费催收 ({len(arrears_tasks)}家客户 | 总额${total_arrears_amt:,.0f})", expanded=True):
+            for t in arrears_tasks:
                 render_task_with_confirm(t, "#e94560", "233,69,96,0.10")
 
-    # ─── 重要任务 ───
-    if pending_high:
-        with st.expander(f"重要待办 ({len(pending_high)})", expanded=len(pending_urgent) == 0):
-            for t in pending_high:
-                render_task_with_confirm(t, "#ffa500", "255,165,0,0.06")
+    # ─── 操作待办(hold/查验/费用/付款等) ───
+    if ops_urgent:
+        with st.expander(f"紧急操作 ({len(ops_urgent)})", expanded=True):
+            for t in ops_urgent:
+                render_task_with_confirm(t, "#ffa500", "255,165,0,0.08")
 
-    # ─── 常规任务 ───
-    if pending_medium:
-        with st.expander(f"常规待办 ({len(pending_medium)})"):
-            for t in pending_medium:
+    if ops_high:
+        with st.expander(f"重要操作 ({len(ops_high)})", expanded=len(ops_urgent) == 0):
+            for t in ops_high:
+                render_task_with_confirm(t, "#2196f3", "33,150,243,0.06")
+
+    if ops_medium:
+        with st.expander(f"常规操作 ({len(ops_medium)})"):
+            for t in ops_medium:
                 render_task_with_confirm(t, "#2196f3", "33,150,243,0.05")
 
     # (Hold/查验/CC/异常已移到教练总结下方)
