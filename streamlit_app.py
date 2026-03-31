@@ -1240,76 +1240,79 @@ with tabs[2]:
 
     st.markdown("---")
 
-    # 催收跟踪(SOP + 目的港欠费联动)
-    section_header("欠费催收跟踪")
-
-    # 构建目的港欠费索引(从arrears top20)
-    _port_arrears = {}
-    for item in ARR.get("top20", []):
-        _port_arrears[item["name"].upper()] = item
-
-    if SOP and isinstance(SOP, dict):
+    # 催收跟踪 — 唯一数据源: arrears_analysis.json top20 (3.30 Excel权威数据)
+    section_header(f"欠费催收跟踪 ({ARR.get('total_consignees', len(ARR.get('top20',[])))  }家客户 | 数据: {ARR.get('snapshot_date','?')})")
+    _top20 = ARR.get("top20", [])
+    if _top20:
+        from datetime import datetime as _dt
+        _now = _dt.now()
         _sop_html = ""
-        for i, (name, info) in enumerate(sorted(SOP.items(), key=lambda x: x[1].get('amount_num', 0) if isinstance(x[1], dict) else 0, reverse=True)):
-            if not isinstance(info, dict): continue
-            amt = info.get('amount', '')
-            amt_num = info.get('amount_num', 0)
-            days = info.get('days_overdue', 0)
-            tx = info.get('status', '')
-            sheet = info.get('sheet_breakdown', '')
-            detail = info.get('fee_detail', '')[:45]
-            records = info.get('records', 0)
+        for i, item in enumerate(_top20):
+            name = item.get("name", "")
+            total = item.get("total", 0)
+            records = item.get("records", 0)
+            latest = item.get("latest", "")
+            sheets = item.get("sheets", {})
+            types = item.get("types", {})
+            mbls = item.get("mbls", [])
 
-            # 联动目的港欠费数据
-            port_match = _port_arrears.get(name.upper(), {})
-            port_amt = port_match.get('total', 0)
-            port_mbls = len(port_match.get('mbls', []))
+            # 计算欠费天数和T+X
+            days = 0
+            if latest:
+                try: days = (_now - _dt.strptime(latest[:10], '%Y-%m-%d')).days
+                except: pass
+            if days <= 7: tx = "T+7 首催"
+            elif days <= 15: tx = "T+15 升级"
+            elif days <= 30: tx = "T+30 追偿函"
+            elif days <= 45: tx = f"T+{days} 中信保!"
+            else: tx = f"T+{days} 超中信保!"
 
-            # 状态图标
-            if days > 45:
-                icon = "🔴"
-            elif days > 15:
-                icon = "🟠"
-            elif days > 7:
-                icon = "🟡"
-            else:
-                icon = "🔵"
+            # 收款类型
+            sheet_str = " + ".join(f"{k}${v:,.0f}" for k, v in sheets.items()) if isinstance(sheets, dict) else ""
+            # TOP 3费用类型
+            top_types = sorted(types.items(), key=lambda x: x[1], reverse=True)[:3] if isinstance(types, dict) else []
+            detail = " / ".join(f"{k[:20]}:${v:,.0f}" for k, v in top_types)
+
+            # 视觉指标
+            if days > 45: icon = "🔴"
+            elif days > 15: icon = "🟠"
+            elif days > 7: icon = "🟡"
+            else: icon = "🔵"
 
             amt_color = "#e94560" if days > 45 else "#ffa500" if days > 15 else "#2196f3"
-            tx_color = "#e94560" if '超中信保' in tx else "#ffa500" if '追偿' in tx or '升级' in tx or '中信保!' in tx else "#2196f3"
-            # 金额占比条
-            bar_pct = min(amt_num / max(total_arrears, 1) * 100, 100)
+            tx_color = "#e94560" if '超中信保' in tx else "#ffa500" if '中信保' in tx or '追偿' in tx or '升级' in tx else "#2196f3"
+            bar_pct = min(total / max(total_arrears, 1) * 100, 100)
 
             _sop_html += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;color:#666;width:25px;">{icon}</td>
+                <td style="text-align:center;width:25px;">{icon}</td>
                 <td><b style="color:#fff;">{unify_customer_name(name)}</b>
                     <div style="background:rgba(50,50,80,0.5);border-radius:3px;height:4px;margin-top:3px;">
                         <div style="background:{amt_color};width:{bar_pct:.0f}%;height:4px;border-radius:3px;"></div>
                     </div>
                 </td>
-                <td style="text-align:center;color:{amt_color};font-weight:700;">{amt}</td>
+                <td style="text-align:center;color:{amt_color};font-weight:700;">${total:,.0f}</td>
                 <td style="text-align:center;color:#a0a0c0;">{days}天</td>
                 <td style="text-align:center;"><span style="background:{tx_color};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{tx}</span></td>
-                <td style="font-size:11px;color:#a0a0c0;">{sheet}</td>
+                <td style="font-size:11px;color:#a0a0c0;">{sheet_str}</td>
                 <td style="font-size:11px;color:#888;">{detail}</td>
-                <td style="text-align:center;color:#666;">{records}</td>
-                <td style="text-align:center;font-size:11px;color:{'#e94560' if port_amt > 0 else '#444'};">{"${:,.0f}".format(port_amt) if port_amt else "-"}</td>
+                <td style="text-align:center;color:#666;">{records}条/{len(mbls)}票</td>
             </tr>'''
 
         st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
             <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
                 <th style="padding:6px;color:#e94560;width:25px;"></th>
                 <th style="padding:6px;color:#e94560;">客户</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">SOP金额</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">欠费金额</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">天数</th>
                 <th style="padding:6px;color:#e94560;text-align:center;">T+X</th>
                 <th style="padding:6px;color:#e94560;">收款类型</th>
-                <th style="padding:6px;color:#e94560;">费用明细</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">记录</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">目的港欠费</th>
+                <th style="padding:6px;color:#e94560;">TOP费用明细</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">记录/MBL</th>
             </tr></thead>
             <tbody>{_sop_html}</tbody>
         </table>''', unsafe_allow_html=True)
+    else:
+        alert_card("green", "当前无欠费数据")
 
 
 # ══════════════════════════════════════════════════════════════════
