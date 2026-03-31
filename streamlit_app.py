@@ -1031,7 +1031,7 @@ with tabs[2]:
         <em>Chassis是我们最大单项费用, 远超D&D, 必须重视!</em><br><br>
         <b>第三步: 催收时间线:</b>
         T+7首次催收 → T+15三方协同群 → T+30正式追偿函 → T+45中信保窗口(超时=理赔失效!)。
-        Top欠费: NEXTERA $47K(可能含大量Houston Rail Detention), AVANTIX $36K, ELITE EAGLE $27K。<br><br>
+        Top欠费客户请查看待办事项栏(每周一更新)。<br><br>
         <b>FMC争议权利:</b> 被计费方有30天争议期; FMC CADRS提供免费调解;
         $50K以下走Small Claims快速通道; <em>OSRA禁止船公司因你投诉而报复拒舱</em>。
     """)
@@ -1225,7 +1225,7 @@ with tabs[3]:
         alert_card("blue", f"""
             <b>催收管理30天:</b> {maggie_topics_str}<br>
             <b>主要协作:</b> {maggie_conn_str}<br>
-            <b>本周重点:</b> MERSY案件催收(最高优先), TOP5欠费客户跟进, SOP状态更新<br>
+            <b>本周重点:</b> TOP欠费客户跟进, SOP状态更新<br>
             <b>建议:</b> 催收和booking需要合理分配，高风险催收应优先。
         """)
 
@@ -1235,7 +1235,7 @@ with tabs[3]:
         will_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(will_conn.items())[:3]]) if will_conn else "暂无数据"
         alert_card("blue", f"""
             <b>Will 主要协作:</b> {will_conn_str}<br>
-            <b>本周重点:</b> MERSY决策(垫付?法律?), 大客户关系维护, 团队效率审查<br>
+            <b>本周重点:</b> 大客户关系维护, 团队效率审查<br>
             <b>成长建议:</b> Will作为管理层, 需要更多关注策略而非执行。建议每周花1小时review催收进度,
             对T+30以上案件亲自决策。
         """)
@@ -1290,9 +1290,9 @@ with tabs[3]:
         section_header("Bruce - 战略决策")
         alert_card("blue", """
             <b>Bruce 本周关注点:</b><br>
-            1. MERSY $89K案件最终决策 - 垫付还是法律途径?<br>
+            
             2. 团队效率评审 - 本月处理5,169封邮件, 人均日处理量如何?<br>
-            3. MSC关系维护 - MERSY案件可能影响全线业务<br>
+            
             4. 新客户开发策略 - Astronergy(147封邮件)是否值得深度绑定?<br>
             <b>战略建议:</b> 建议关注关键岗位backup，启动交叉培训，降低单点故障风险。
         """)
@@ -1326,7 +1326,7 @@ with tabs[3]:
             <span style="color:#fbbf24;">操作组</span> — 从执行者转向指导者，培养son接手SA和PreAlert<br>
             <span style="color:#fbbf24;">客户组</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
             <span style="color:#fbbf24;">催收组</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
-            <span style="color:#fbbf24;">Will</span> — 复杂升级案件(MERSY/MSC危机)处理，团队的判断力安全网<br><br>
+            <span style="color:#fbbf24;">Will</span> — 复杂升级案件处理，团队的判断力安全网<br><br>
             <b style="color:#a8d4ff;">管理原则:</b> 不要让任何人长期超负荷。连续3天邮件超50封，<b style="color:#ef4444;">必须主动分流</b>。团队可持续性比单月效率更重要。
         </div>
     </div>
@@ -1964,7 +1964,7 @@ with tabs[8]:
         14天累计$3,182! Maher/APM/GCT等多码头, 注意不同码头费率差异。
         <em>NY票必须快进快出, Free Time第1天就安排卡车。</em><br><br>
         <b>Houston (208次):</b> Bayport和Barbours Cut两个码头。IPI铁路(BNSF/UP到Chicago约3天)
-        是主力但Rail Detention $75-300/天。NEXTERA $47K欠费可能含大量Rail Detention。
+        是主力但Rail Detention $75-300/天。注意Rail Detention是Houston主要成本。
         <em>IPI货提前7天通知收货人, 到达后48h内必须提柜。</em><br><br>
         <b>Savannah (112次, Free Time最长):</b> GPA给7天Free Time(全美最慷慨), 超时$32-47/TEU/天。
         REACH的主要目的港, 操作压力相对小。但出了Free Time后费用也会快速叠加。<br><br>
