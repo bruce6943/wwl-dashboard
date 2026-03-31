@@ -1514,18 +1514,49 @@ with tabs[5]:
                 ),
             })
 
-        # Display table
-        cust_display = pd.DataFrame([{
-            "客户": r["客户"],
-            "30天邮件": r["30天邮件"],
-            "活跃天数": r["活跃天数"],
-            "欠费": r["欠费"],
-            "紧急度": r["紧急度星"],
-            "重要度": r["重要度星"],
-            "建议": r["建议"],
-        } for r in cust_rows])
-        cust_display = cust_display.sort_values("30天邮件", ascending=False)
-        st.dataframe(cust_display, use_container_width=True, hide_index=True, key="tbl_8")
+        # Display premium HTML table
+        cust_rows.sort(key=lambda r: r["30天邮件"], reverse=True)
+        max_emails = max(r["30天邮件"] for r in cust_rows) if cust_rows else 1
+        html_rows = ""
+        for i, r in enumerate(cust_rows[:20]):
+            emails = r["30天邮件"]
+            vol_pct = min(emails * 100 // max(max_emails, 1), 100)
+            urg = r["紧急度"]; imp = r["重要度"]
+            urg_color = "#e94560" if urg >= 4 else "#ffa500" if urg >= 3 else "#2196f3"
+            imp_color = "#e94560" if imp >= 4 else "#ffa500" if imp >= 3 else "#2196f3"
+            arrears = r["欠费"]
+            arrears_color = "#e94560" if arrears != "-" else "#333"
+            tag = "P1" if urg>=4 and imp>=4 else "P2" if imp>=4 else "P3" if urg>=4 else "P4"
+            tag_color = "#e94560" if tag=="P1" else "#ffa500" if tag=="P2" else "#2196f3" if tag=="P3" else "#555"
+            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
+                <td style="text-align:center;width:30px;color:#666;">{i+1}</td>
+                <td><span style="background:{tag_color};color:#fff;padding:1px 6px;border-radius:4px;font-size:10px;margin-right:6px;">{tag}</span><b style="color:#fff;">{r["客户"]}</b></td>
+                <td style="width:110px;">
+                    <div style="background:rgba(50,50,80,0.5);border-radius:4px;height:16px;overflow:hidden;">
+                        <div style="width:{vol_pct}%;height:100%;background:linear-gradient(90deg,#2196f3,#64b5f6);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:4px;">
+                            <span style="color:#fff;font-size:10px;">{emails}</span>
+                        </div>
+                    </div>
+                </td>
+                <td style="text-align:center;color:#a0a0c0;">{r["活跃天数"]}</td>
+                <td style="text-align:center;color:{arrears_color};font-weight:600;">{arrears}</td>
+                <td style="text-align:center;"><span style="color:{urg_color};">{"★" * urg}</span></td>
+                <td style="text-align:center;"><span style="color:{imp_color};">{"★" * imp}</span></td>
+                <td style="font-size:11px;color:#888;">{r["建议"][:15]}</td>
+            </tr>'''
+        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
+                <th style="padding:6px;color:#e94560;width:30px;">#</th>
+                <th style="padding:6px;color:#e94560;">客户</th>
+                <th style="padding:6px;color:#e94560;width:110px;">邮件量</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">活跃</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">欠费</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">紧急</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">重要</th>
+                <th style="padding:6px;color:#e94560;">建议</th>
+            </tr></thead>
+            <tbody>{html_rows}</tbody>
+        </table>''', unsafe_allow_html=True)
 
         # Scatter plot
         sdf = pd.DataFrame([{
@@ -1603,63 +1634,68 @@ with tabs[6]:
                 vendor_customers.setdefault(svc_name, []).append(cust)
 
         v_rows = []
-        for v in service_vendors:
+        for v in sorted(service_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
             name = v.get("vendor_name", "")
             cn = v.get("vendor_name_cn", "")
             pm = v.get("performance_metrics", {})
+            score = v.get("capability_score", 0)
 
-            # Find which customers this vendor serves
             custs = []
             for vk, vc in vendor_customers.items():
                 if name.upper()[:6] in vk.upper() or vk.upper()[:6] in name.upper():
                     custs.extend(vc)
             custs = list(set(custs))
 
-            # Category label
             cat = v.get("vendor_category", "")
             cat_cn = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(cat, cat)
-
-            # Current business description
-            if name == "YES" or "YES" in name:
-                current_biz = "科陆清关/海柔清关/PREVALON清关/HORIZON清关"
-                pending = "科陆锂电池查验文件准备中"
-                our_action = "确认查验文件齐全→催YES加快清关→通知客户预计延误"
-            elif "PTT" in name or "PACIFIC" in name:
-                current_biz = "科陆储能柜卡车配送(22次)/双鱼项目卡车"
-                pending = "COSCO COSU6446478520 DO已签→待提箱"
-                our_action = "联系PTT确认提箱时间→协调仓库收货→通知科陆"
-            elif "Rome" in name or "ROME" in name:
-                current_biz = "正泰新能卡车配送(41次)/Houston项目"
-                pending = "正泰ZTLO260031后续提货安排"
-                our_action = "与Rome确认下批次提货计划→对接origin→通知正泰"
-            elif "FCC" in name:
-                current_biz = "海亮Houston出口订舱/TERRA电商ReExport"
-                pending = "YCH26240119 7x40HQ装箱计划"
-                our_action = "联系FCC确认装箱日期→协调操作→通知海亮"
-            elif "PTS" in name:
-                current_biz = "SAV区域卡车/COSCO Round Trip"
-                pending = "SAV Bid Cargo 27柜报价评估"
-                our_action = "汇总PTS报价→与IDC/PTT比价→回复客户"
-            else:
-                current_biz = "常规合作"
-                pending = "-"
-                our_action = "保持定期沟通"
+            emails = pm.get("email_volume_cumulative", 0)
+            mentions = pm.get("service_mentions_cumulative", 0)
 
             v_rows.append({
-                "供应商": f"{name}({cn})",
-                "类型": cat_cn,
-                "评分": v.get("capability_score", 0),
-                "等级": v.get("capability_level", "")[:6],
-                "服务客户": "/".join(custs[:4]) if custs else "-",
-                "当前业务": current_biz[:30],
-                "待处理": pending[:25],
-                "我方建议行动": our_action[:35],
+                "name": name, "cn": cn, "cat": cat_cn, "score": score,
+                "level": v.get("capability_level", "")[:6],
+                "emails": emails, "mentions": mentions,
+                "custs": custs[:4], "cust_count": pm.get("customers_served", len(custs)),
             })
-        v_df = pd.DataFrame(v_rows)
-        v_df = v_df.sort_values("评分", ascending=False)
-        st.dataframe(v_df, use_container_width=True, hide_index=True,
-                     column_config={"评分": st.column_config.ProgressColumn(min_value=0, max_value=100)},
-                     key="tbl_9")
+
+        # Premium HTML table
+        html_rows = ""
+        for i, r in enumerate(v_rows):
+            score = r["score"]
+            sc = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560" if score > 0 else "#666"
+            level = r["level"]
+            lc = "#00c853" if "S级" in level or "A级" in level else "#ffa500" if "B级" in level else "#e94560"
+            cat_colors = {"报关行":"#9c27b0","卡车":"#2196f3","代理":"#ff9800"}
+            cc = cat_colors.get(r["cat"], "#666")
+            custs_str = ", ".join(r["custs"]) if r["custs"] else "-"
+            activity = r["emails"] + r["mentions"]
+
+            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
+                <td style="text-align:center;width:30px;color:#666;">{i+1}</td>
+                <td><b style="color:#fff;">{r["name"]}</b><br><span style="color:#888;font-size:11px;">{r["cn"]}</span></td>
+                <td style="text-align:center;"><span style="background:{cc};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{r["cat"]}</span></td>
+                <td style="text-align:center;"><span style="background:{sc};color:#fff;padding:2px 10px;border-radius:10px;font-size:13px;font-weight:700;">{score}</span></td>
+                <td style="text-align:center;color:{lc};font-size:12px;font-weight:600;">{level}</td>
+                <td style="text-align:center;color:#a0a0c0;">{r["emails"]}</td>
+                <td style="text-align:center;color:#a0a0c0;">{r["mentions"]}</td>
+                <td style="text-align:center;color:#2196f3;font-weight:600;">{r["cust_count"]}</td>
+                <td style="font-size:11px;color:#a0a0c0;">{custs_str}</td>
+            </tr>'''
+
+        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
+                <th style="padding:6px;color:#e94560;width:30px;">#</th>
+                <th style="padding:6px;color:#e94560;">供应商</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">类型</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">评分</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">等级</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">邮件</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">服务次数</th>
+                <th style="padding:6px;color:#e94560;text-align:center;">客户数</th>
+                <th style="padding:6px;color:#e94560;">服务客户</th>
+            </tr></thead>
+            <tbody>{html_rows}</tbody>
+        </table>''', unsafe_allow_html=True)
 
     # Key vendor details
     st.markdown("---")
