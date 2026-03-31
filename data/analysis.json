@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-03-31T12:27:16.744588+08:00",
-  "total_emails": 160,
-  "business_emails": 126,
+  "scan_time": "2026-03-31T12:45:42.581698+08:00",
+  "total_emails": 162,
+  "business_emails": 128,
   "pdf_count": 34,
   "categories": {
-    "charge_confirm": 12,
+    "charge_confirm": 14,
     "prealert": 24,
     "other_biz": 69,
     "arrival": 7,
@@ -169,7 +169,7 @@
     }
   },
   "carriers": {
-    "ONE": 20,
+    "ONE": 22,
     "MSC": 15,
     "COSCO": 2,
     "OOCL": 8,
@@ -178,32 +178,13 @@
     "ZIM": 4,
     "Evergreen": 4
   },
-  "carrier_fees": {
-    "ONE": {
-      "count": 9,
-      "total": 6.0,
-      "avg": 1.2
-    },
-    "MSC": {
-      "count": 8,
-      "total": 21580.0,
-      "avg": 1541.4285714285713
-    },
-    "COSCO": {
-      "count": 1,
-      "total": 0,
-      "avg": 0
-    },
-    "CMA-CGM": {
-      "count": 1,
-      "total": 31770.0,
-      "avg": 10590.0
-    }
-  },
-  "hbl_total": 29,
-  "mbl_total": 27,
+  "carrier_fees": {},
+  "hbl_total": 30,
+  "mbl_total": 25,
   "all_hbls": [
     "WLC50522982",
+    "WLC51220280",
+    "WLC60118671",
     "WLC60123818",
     "WLC60124859",
     "WLC60125060",
@@ -226,7 +207,6 @@
     "WLC60309086",
     "WLC60310362",
     "WLC60310365",
-    "WLC60310469",
     "WLC60313618",
     "WLC60314212",
     "WLC60314287",
@@ -245,16 +225,14 @@
     "MEDURQ324903",
     "MEDURQ324929",
     "MEDUWG692272",
-    "MEDUWN372125",
     "MEDUYL960612",
+    "ONEYBKKG23204800",
     "ONEYBKKG38865600",
     "ONEYBKKG48500700",
     "ONEYBKKG61453900",
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
-    "ONEYBTMG00383600",
-    "ONEYBTMG00521700",
     "OOLU2166524280",
     "OOLU2167428510",
     "OOLU2167608500",
@@ -264,7 +242,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 71
+    "2026-03-31": 73
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -279,7 +257,7 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      16
+      18
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -1335,6 +1313,52 @@
       "date": "Tue, 31 Mar 2026 09:05:06"
     },
     {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ONEYBKKG23204800",
+      "hbl": "WLC60118671",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-02-27",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "tonklar (bkk.tonklar@worldwide-logistics.cn)",
+      "wwl_branch": "WWL环世",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ONEYBKKG23204800 金额:",
+      "source": "Charge confirm request /MBL:ONEYBKKG23204800 /HBL:WLC6011867",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 12:28:49"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC51220280",
+      "customer": "",
+      "eta": "2026-01-31",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:ONEYSHAFCU641600 /HBL:WLC5122028",
+      "source": "Charge confirm request /MBL:ONEYSHAFCU641600 /HBL:WLC5122028",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 12:29:08"
+    },
+    {
       "type": "empty_return",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -1496,10 +1520,10 @@
     }
   ],
   "action_summary": {
-    "total": 54,
+    "total": 56,
     "urgent": 17,
     "high": 17,
-    "medium": 20
+    "medium": 22
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -1584,9 +1608,9 @@
     "daily_connections": 17,
     "new_domains": [
       "biposervice.com",
-      "elite-solar.com",
       "containerport.com",
-      "mercerlogistics.com"
+      "mercerlogistics.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [
