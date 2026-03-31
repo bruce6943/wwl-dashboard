@@ -831,7 +831,8 @@ with tabs[0]:
                   "prealert_gap":"漏单预警","sop":"SOP跟进",
                   "hold_active":"Hold扣货","inspection_active":"查验中","fee_confirmed":"费用已确认",
                   "payment_requested":"待付款","awaiting_reply":"等回复",
-                  "inspection_broker":"查验报关跟进","stale_arrival":"到港停滞"}
+                  "inspection_broker":"查验报关跟进","stale_arrival":"到港停滞",
+                  "supplier_followup":"供应商跟进"}
     ops_cats = {}
     for t in ops_tasks:
         c = t.get("category", "other")
@@ -1202,22 +1203,56 @@ with tabs[2]:
 with tabs[3]:
     section_header("团队任务看板")
 
-    # Star Employee/Manager (rotate by week number)
-    week_num = datetime.now().isocalendar()[1]
-    employees = ["团队成员A", "团队成员B", "团队成员C"]
-    managers = ["管理层A", "管理层B", "管理层C"]
-    star_emp = employees[week_num % len(employees)]
-    star_mgr = managers[week_num % len(managers)]
+    # 本周之星 — 基于30天邮件数据动态评选
+    _people = DI.get("people_topics", {})
+    _us_ops = {  # US操作团队
+        "Everlyn Shaw": "换单操作",
+        "Effy Huo": "客户协调",
+        "Maggie Wu": "催收+SA",
+        "Adam Sum": "操作支持",
+        "Rita Tang": "业务跟进",
+    }
+    _mgr = {"Will Sun": "中国端协调"}
+
+    # 找邮件量最大的员工
+    emp_scores = []
+    for name, role in _us_ops.items():
+        topics = _people.get(name, {})
+        total = sum(topics.values()) if isinstance(topics, dict) else 0
+        if total > 0:
+            emp_scores.append((name, role, total, topics))
+    emp_scores.sort(key=lambda x: x[2], reverse=True)
+
+    mgr_scores = []
+    for name, role in _mgr.items():
+        topics = _people.get(name, {})
+        total = sum(topics.values()) if isinstance(topics, dict) else 0
+        if total > 0:
+            mgr_scores.append((name, role, total, topics))
 
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown(f"""<div style="text-align:center; padding:15px;">
-            <div class="star-badge">本周之星员工: {star_emp}</div>
-        </div>""", unsafe_allow_html=True)
+        if emp_scores:
+            star = emp_scores[0]
+            top_area = max(star[3].items(), key=lambda x: x[1])[0] if star[3] else ""
+            st.markdown(f"""<div style="text-align:center; padding:15px;">
+                <div class="star-badge">本周之星: {star[0]}</div>
+                <p style="color:#ffd700;font-size:13px;margin-top:8px;">
+                    30天处理<b>{star[2]}封</b>邮件 | 核心领域: {top_area} | 岗位: {star[1]}<br>
+                    <span style="color:#a0a0c0;">保持高效产出，是团队操作的核心力量!</span>
+                </p>
+            </div>""", unsafe_allow_html=True)
     with c2:
-        st.markdown(f"""<div style="text-align:center; padding:15px;">
-            <div class="star-badge">本周之星经理: {star_mgr}</div>
-        </div>""", unsafe_allow_html=True)
+        if len(emp_scores) >= 2:
+            runner = emp_scores[1]
+            top_area2 = max(runner[3].items(), key=lambda x: x[1])[0] if runner[3] else ""
+            st.markdown(f"""<div style="text-align:center; padding:15px;">
+                <div class="star-badge">进步之星: {runner[0]}</div>
+                <p style="color:#7dc3ff;font-size:13px;margin-top:8px;">
+                    30天处理<b>{runner[2]}封</b>邮件 | 核心领域: {top_area2} | 岗位: {runner[1]}<br>
+                    <span style="color:#a0a0c0;">业务覆盖面广，多方协调能力强!</span>
+                </p>
+            </div>""", unsafe_allow_html=True)
 
     # (按负责人分组已移除 — 等确认分工后再加)
 
@@ -1358,13 +1393,31 @@ with tabs[3]:
 
     with person_tabs[3]:
         section_header("Bruce - 战略决策")
-        alert_card("blue", """
+        # 动态计算关注点
+        _total_30d = A30.get("total_emails", 0)
+        _team_size = len([s for s in emp_scores if s[2] > 20])  # 活跃成员
+        _daily_avg = _total_30d // 30 if _total_30d else 0
+        _per_person = _daily_avg // max(_team_size, 1)
+        _top_customer = ""
+        _top_cust_cnt = 0
+        for cn, topics in _people.items():
+            if cn in _us_ops or cn in _mgr: continue
+            cnt = sum(topics.values()) if isinstance(topics, dict) else 0
+            if cnt > _top_cust_cnt:
+                _top_cust_cnt = cnt
+                _top_customer = cn
+        # 欠费总额
+        _total_arr = ARR.get("total_amount", 0)
+        _arr_count = len(SOP) if isinstance(SOP, dict) else 0
+        # 查验/Hold
+        _active_issues = len([t for t in all_tasks if t.get("category") in ("inspection_active","hold_active")])
+        alert_card("blue", f"""
             <b>Bruce 本周关注点:</b><br>
-            
-            2. 团队效率评审 - 本月处理5,169封邮件, 人均日处理量如何?<br>
-            
-            4. 新客户开发策略 - Astronergy(147封邮件)是否值得深度绑定?<br>
-            <b>战略建议:</b> 建议关注关键岗位backup，启动交叉培训，降低单点故障风险。
+            1. <b>欠费催收</b> — 总额${_total_arr:,.0f}, {_arr_count}家客户待催收, 超中信保客户需优先处理<br>
+            2. <b>团队效率</b> — 30天共{_total_30d}封邮件, 日均{_daily_avg}封, {_team_size}人活跃, 人均日处理{_per_person}封<br>
+            3. <b>查验/Hold</b> — {_active_issues}票活跃异常, 需确认报关行跟进状态<br>
+            4. <b>供应商跟进</b> — 检查询价/报价进度, 未回复的供应商需催促, 已报价的需和销售推进<br>
+            <b>战略建议:</b> 关注关键岗位backup和交叉培训; 超负荷成员(日均>50封)需及时分流。
         """)
 
     st.markdown("""

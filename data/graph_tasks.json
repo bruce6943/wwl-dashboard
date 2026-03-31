@@ -420,8 +420,8 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "ELITE SOLAR/MING HAO XIN/REACH",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
+      "customer": "REACH/MING HAO XIN/ELITE SOLAR",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "ONE 5票 — 预付 → Origin已垫付 → 确认金额入账",
       "progress_history": "提单: ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900",
@@ -483,6 +483,104 @@
       "progress_history": "",
       "email_count": 15,
       "last_seen": "2026-03-25"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: WFS Customs(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "WFS Customs(报关)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Brian Walsh - WFS Customs 2026-03-31 01:02",
+      "email_count": 0,
+      "last_seen": "2026-03-31"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Mercer CES(查验站)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Mercer CES(查验站)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Seattle CES 2026-03-30 22:07",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Direct CHB(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Direct CHB(报关)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Direct CHB-Monica Marquez 2026-03-30 20:14",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Fin Whale(代理)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Fin Whale(代理)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Joanne Fang 2026-03-30 20:04",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: FCC USA(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FCC USA(报关)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: ADRIAN JUAREZ 2026-03-30 19:41",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Scotlynn(拖车)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Scotlynn(拖车)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Matthew Stefanelli 2026-03-30 18:25",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Cargo Convoy(拖车)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Cargo Convoy(拖车)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Kim Karla 2026-03-30 11:05",
+      "email_count": 0,
+      "last_seen": "2026-03-30"
     }
   ],
   "summary": {
@@ -492,8 +590,8 @@
     "prealerts": 48
   },
   "stats": {
-    "total": 26,
+    "total": 33,
     "urgent": 21,
-    "high": 5
+    "high": 12
   }
 }
