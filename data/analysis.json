@@ -1401,13 +1401,8 @@
     "medium": 20
   },
   "bl_status": {
-    "no_tlx_mbl": [
-      "OOLU2320126090",
-      "COSU9506295790",
-      "OOLU2166524280"
-    ],
+    "no_tlx_mbl": [],
     "no_tlx_hbl": [
-      "WLC60203463",
       "WLC60125637",
       "WLC60309086",
       "WLC60216138",
@@ -1418,24 +1413,24 @@
     "hold_bl": [
       {
         "mbl": "OOLU2320126090",
-        "type": "regulatory",
+        "type": "海关查验",
         "needs_docs": false,
         "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
         "from": "<horizonsolar001@gmail.com>"
       },
       {
         "mbl": "YMJAE490402433",
-        "type": "待确认",
+        "type": "海关查验",
         "needs_docs": false,
         "subject": "回复: 3/13/2026\t22607275047\tTRANSFAR CHAS LI\t749.00",
         "from": "us.ops@wwl.sg"
       },
       {
-        "mbl": "YMJAW237295797",
-        "type": "freight",
+        "mbl": "OOLU2166524280",
+        "type": "海关查验",
         "needs_docs": false,
-        "subject": "Re: FREIGHT HOLD YMJAW237295797",
-        "from": "amber.gutierrez@itslb.com"
+        "subject": "查验预警-OOLU2166524280",
+        "from": "assistant@pltplt.com"
       }
     ],
     "tlx_confirmed_mbl": 1,

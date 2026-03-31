@@ -401,45 +401,17 @@
       ]
     },
     {
-      "type": "hold_active",
-      "priority": "urgent",
-      "title": "Hold Active",
-      "mbl": "OOLU2320126090",
-      "carrier": "OOCL",
-      "customer": "HORIZON SOLAR",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "Hold → 确认类型 → 联系origin解决",
-      "progress_history": "",
-      "email_count": 51,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "hold_active",
-      "priority": "urgent",
-      "title": "Hold Active",
-      "mbl": "YMJAW237295797",
-      "carrier": "未知",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "Hold → 确认类型 → 联系origin解决",
-      "progress_history": "",
-      "email_count": 16,
-      "last_seen": "2026-03-19"
-    },
-    {
       "type": "inspection_active",
       "priority": "urgent",
       "title": "Inspection Active",
-      "mbl": "OOLU2166524280",
+      "mbl": "OOLU2320126090, OOLU2166524280",
       "carrier": "OOCL",
-      "customer": "",
+      "customer": "HORIZON SOLAR",
       "wwl_sender": "wwlusa.list@worldwide-logistics.cn",
-      "wwl_branch": "WWL环世",
-      "action": "查验中 → 跟进报关行 → 通知委托方",
-      "progress_history": "",
-      "email_count": 7,
+      "wwl_branch": "",
+      "action": "OOCL 2票 — 查验中 → 跟进报关行 → 通知委托方",
+      "progress_history": "提单: OOLU2320126090, OOLU2166524280",
+      "email_count": 58,
       "last_seen": "2026-03-31"
     },
     {
@@ -448,7 +420,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYTSNG03788600, ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900, ONEYBKKG77382300 +1",
       "carrier": "ONE",
-      "customer": "ELITE SOLAR/MING HAO XIN/REACH",
+      "customer": "REACH/HAIROBOT/MING HAO XIN",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL中国",
       "action": "ONE 6票 — 费用已确认 → 向财务申请付款",
@@ -477,7 +449,7 @@
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "OOCL 2票 — 费用已确认 → 向财务申请付款",
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
@@ -506,8 +478,8 @@
     "prealerts": 48
   },
   "stats": {
-    "total": 27,
-    "urgent": 23,
+    "total": 25,
+    "urgent": 21,
     "high": 4
   }
 }
