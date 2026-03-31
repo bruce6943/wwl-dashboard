@@ -1479,33 +1479,47 @@ with tabs[5]:
 
     customers_30d = A30.get("customers", {})
     if customers_30d:
-        cust_rows = []
+        # 先用统一映射合并去重
+        _cu_data = {}
+        try:
+            with open('data/customer_unified.json', 'r') as _cuf:
+                _cu = json.load(_cuf)
+            _cu_map = _cu.get('mapping', {})
+            _cu_arr = _cu.get('arrears_by_customer', {})
+        except:
+            _cu_map = {}; _cu_arr = {}
+
+        _merged = {}
         for name, info in customers_30d.items():
-            emails = info.get("emails", 0)
-            active = info.get("active_days", 0)
-            # Find arrears using unified customer mapping
-            arrears_amount = 0
-            _cuni = DATA.get("graph_tasks", {})  # check if customer_unified loaded
-            try:
-                with open('data/customer_unified.json', 'r') as _cuf:
-                    _cu = json.load(_cuf)
-                _cu_map = _cu.get('mapping', {})
-                _cu_arr = _cu.get('arrears_by_customer', {})
-                # Map this customer name to standard name
-                _std = _cu_map.get(name.upper(), '')
-                if not _std:
-                    for _k in _cu_map:
-                        if _k[:6] in name.upper() or name.upper()[:6] in _k:
-                            _std = _cu_map[_k]; break
-                if _std:
-                    arrears_amount = _cu_arr.get(_std, 0)
-                if not arrears_amount:
-                    for arr_item in ARR.get('top20', []):
-                        if name.upper()[:8] in arr_item.get('name', '').upper():
-                            arrears_amount = arr_item.get('total', 0); break
-            except:
+            emails = info.get("emails", info) if isinstance(info, dict) else info
+            if not isinstance(emails, (int, float)): emails = 0
+            active = info.get("active_days", 0) if isinstance(info, dict) else 0
+            # Map to standard name
+            std = _cu_map.get(name.upper(), '')
+            if not std:
+                for k in _cu_map:
+                    if k[:6] in name.upper() or name.upper()[:6] in k:
+                        std = _cu_map[k]; break
+            if not std:
+                std = name
+            if std not in _merged:
+                _merged[std] = {"emails": 0, "active_days": 0, "display_name": name}
+            _merged[std]["emails"] += emails
+            _merged[std]["active_days"] = max(_merged[std]["active_days"], active)
+            # Keep the longer display name
+            if len(name) > len(_merged[std]["display_name"]):
+                _merged[std]["display_name"] = name
+
+        cust_rows = []
+        for std_name, data in _merged.items():
+            name = data["display_name"]
+            emails = data["emails"]
+            active = data["active_days"]
+            # Find arrears from unified data
+            arrears_amount = _cu_arr.get(std_name, 0)
+            if not arrears_amount:
                 for arr_item in ARR.get('top20', []):
-                    if name.upper()[:8] in arr_item.get('name', '').upper():
+                    if name.upper()[:8] in arr_item.get('name', '').upper() or std_name.upper()[:8] in arr_item.get('name', '').upper():
                         arrears_amount = arr_item.get('total', 0); break
 
             # Score urgency (email volume + arrears) and importance (active days + relationship)
