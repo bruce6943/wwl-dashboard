@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-03-31T08:47:31.177349+08:00",
-  "total_emails": 105,
-  "business_emails": 75,
+  "scan_time": "2026-03-31T09:06:29.015280+08:00",
+  "total_emails": 114,
+  "business_emails": 83,
   "pdf_count": 16,
   "categories": {
-    "charge_confirm": 7,
+    "charge_confirm": 12,
     "prealert": 8,
-    "other_biz": 42,
+    "other_biz": 44,
     "arrival": 7,
-    "hold": 3,
+    "hold": 4,
     "booking": 2,
     "delivery": 1,
     "invoice": 1,
@@ -16,7 +16,7 @@
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 4,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -27,7 +27,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 4,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 1,
@@ -134,43 +134,35 @@
     "ONE": 15,
     "MSC": 9,
     "COSCO": 2,
-    "OOCL": 5,
+    "OOCL": 6,
     "YML": 1,
-    "CMA-CGM": 1
+    "CMA-CGM": 3,
+    "ZIM": 2
   },
-  "carrier_fees": {
-    "ONE": {
-      "count": 7,
-      "total": 6.0,
-      "avg": 1.2
-    },
-    "MSC": {
-      "count": 7,
-      "total": 4570.0,
-      "avg": 415.45454545454544
-    },
-    "COSCO": {
-      "count": 1,
-      "total": 0,
-      "avg": 0
-    }
-  },
-  "hbl_total": 11,
-  "mbl_total": 20,
+  "carrier_fees": {},
+  "hbl_total": 16,
+  "mbl_total": 21,
   "all_hbls": [
     "WLC50522982",
     "WLC60124859",
+    "WLC60125060",
     "WLC60125637",
     "WLC60203463",
     "WLC60213409",
+    "WLC60213560",
+    "WLC60215944",
+    "WLC60216466",
     "WLC60217446",
     "WLC60304584",
     "WLC60304684",
     "WLC60305140",
     "WLC60305212",
+    "WLC60307413",
     "WLC60309086"
   ],
   "all_mbls": [
+    "CMDUCHN3095178",
+    "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
     "COSU9506295790",
@@ -179,7 +171,6 @@
     "MEDURQ324903",
     "MEDURQ324929",
     "MEDUWG692272",
-    "MEDUWN372125",
     "MEDUYL960612",
     "ONEYBKKG38865600",
     "ONEYBKKG48500700",
@@ -187,14 +178,14 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
-    "ONEYBTMG00383600",
-    "ONEYBTMG00521700",
     "OOLU2166524280",
-    "OOLU2320126090"
+    "OOLU2320126090",
+    "ZIMUBKK80439660",
+    "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 78,
-    "2026-03-31": 21
+    "2026-03-30": 80,
+    "2026-03-31": 28
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -202,22 +193,22 @@
     "OOLU2166524280",
     "OOLU2320126090"
   ],
-  "hold_count": 3,
+  "hold_count": 4,
   "inspection_count": 4,
   "overdue_count": 0,
   "cancel_count": 0,
   "top_senders": [
     [
-      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      14
+      "assistant@pltplt.com",
+      16
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      13
+      15
     ],
     [
-      "assistant@pltplt.com",
-      11
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      14
     ],
     [
       "<horizonsolar001@gmail.com>",
@@ -545,6 +536,28 @@
       "source": "查验预警-OOLU2166524280",
       "from": "assistant@pltplt.com",
       "date": "Tue, 31 Mar 2026 08:00:20"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "hbl": "WLC60203463",
+      "customer": "REACH INDUSTRY",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "Brian Walsh - WFS Customs (wfscustoms.)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "Hold BL: OOLU2320126090",
+      "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+      "from": "Brian Walsh - WFS Customs <brian.walsh@wfscustoms.",
+      "date": "Tue, 31 Mar 2026 01:02:20"
     },
     {
       "type": "inspection_broker",
@@ -1102,6 +1115,121 @@
       "date": "Tue, 31 Mar 2026 06:03:23"
     },
     {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3116145",
+      "hbl": "WLC60213560",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
+      "source": "Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213560\r",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 09:05:00"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3095178",
+      "hbl": "WLC60125060",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
+      "source": "Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC60125060\r",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 09:05:01"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80440481",
+      "hbl": "WLC60216466",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-16",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80440481 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80440481 /HBL:WLC60216466",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 09:05:02"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60307413",
+      "customer": "",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:HDMUSHAZYFZ44500 /HBL:WLC6030741",
+      "source": "Charge confirm request /MBL:HDMUSHAZYFZ44500 /HBL:WLC6030741",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 09:05:04"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80439660",
+      "hbl": "WLC60215944",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-16",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80439660 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80439660 /HBL:WLC60215944",
+      "from": "assistant@pltplt.com",
+      "date": "Tue, 31 Mar 2026 09:05:06"
+    },
+    {
       "type": "empty_return",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -1243,53 +1371,59 @@
     }
   ],
   "action_summary": {
-    "total": 45,
-    "urgent": 16,
+    "total": 51,
+    "urgent": 17,
     "high": 15,
-    "medium": 14
+    "medium": 19
   },
   "bl_status": {
     "no_tlx_mbl": [
+      "MEDUYL960612",
+      "MEDURQ323962",
+      "ONEYBKKG48500700",
+      "ONEYBKKG67192800",
+      "ONEYBKKG61453900",
+      "MEDURQ324929",
       "MEDUWG692272",
       "OOLU2166524280",
-      "MEDURQ324929",
-      "OOLU2320126090",
       "ONEYBKKG61472300",
-      "ONEYBTMG00521700",
-      "MEDURQ324234",
-      "ONEYBKKG68481300",
-      "MEDUYL960612",
-      "MEDURQ324903",
+      "ZIMUBKK80439660",
       "CMDUTHD1466680",
-      "ONEYBKKG61453900",
-      "ONEYBKKG48500700",
-      "MEDURQ323962",
       "COSU9506295790",
-      "MEDUWN372125",
-      "ONEYBTMG00383600",
+      "MEDURQ324234",
+      "ONEYBKKG38865600",
+      "CMDUCHN3095178",
+      "ONEYBKKG68481300",
+      "ZIMUBKK80440481",
+      "CMDUCHN3116145",
       "COSU6444625540",
-      "ONEYBKKG67192800",
-      "ONEYBKKG38865600"
+      "OOLU2320126090",
+      "MEDURQ324903"
     ],
     "no_tlx_hbl": [
-      "WLC60203463",
+      "WLC60125637",
       "WLC60305212",
-      "WLC60304684",
-      "WLC60217446",
-      "WLC50522982",
-      "WLC60124859",
-      "WLC60304584",
-      "WLC60305140",
-      "WLC60213409",
       "WLC60309086",
-      "WLC60125637"
+      "WLC60203463",
+      "WLC60307413",
+      "WLC60124859",
+      "WLC50522982",
+      "WLC60216466",
+      "WLC60215944",
+      "WLC60305140",
+      "WLC60125060",
+      "WLC60213409",
+      "WLC60217446",
+      "WLC60213560",
+      "WLC60304684",
+      "WLC60304584"
     ],
     "an_no_prealert": [
       "MEDURQ323962",
       "COSU9506295790",
       "MEDURQ324234",
-      "MEDURQ324903",
-      "MEDURQ324929"
+      "MEDURQ324929",
+      "MEDURQ324903"
     ],
     "hold_bl": [
       {
@@ -1305,6 +1439,13 @@
         "needs_docs": false,
         "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
         "from": "<horizonsolar001@gmail.com>"
+      },
+      {
+        "mbl": "OOLU2320126090",
+        "type": "freight",
+        "needs_docs": true,
+        "subject": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
+        "from": "Brian Walsh - WFS Customs <bri"
       }
     ],
     "tlx_confirmed_mbl": 0,
@@ -1338,13 +1479,13 @@
   },
   "neural_network": {
     "entities": 88,
-    "relationships": 22,
-    "contacts_new": 0,
-    "contacts_total": 371,
-    "daily_connections": 7,
+    "relationships": 25,
+    "contacts_new": 1,
+    "contacts_total": 372,
+    "daily_connections": 8,
     "new_domains": [
-      "mercerlogistics.com",
       "elite-solar.com",
+      "mercerlogistics.com",
       "containerport.com"
     ]
   },
@@ -1377,6 +1518,11 @@
     {
       "from": "ASTRONERGY (正泰新能)",
       "to": "Pioneer",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
       "type": "service"
     },
     {

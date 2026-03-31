@@ -435,7 +435,7 @@
       "mbl": "ZIMUBKK80439633, ZIMUBKK80439625, ZIMUBKK80441316",
       "carrier": "ZIM",
       "customer": "REACH",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "ZIM 3票 — 费用已确认 → 向财务申请付款",
       "progress_history": "提单: ZIMUBKK80439633, ZIMUBKK80439625, ZIMUBKK80441316",
@@ -460,8 +460,8 @@
   "summary": {
     "arrival_notices": 183,
     "bl_releases": 100,
-    "billings": 114,
-    "prealerts": 49
+    "billings": 115,
+    "prealerts": 48
   },
   "stats": {
     "total": 24,
