@@ -486,18 +486,33 @@ _NOT_CUSTOMERS = {"PTS", "YES", "FCC USA", "PTT", "ROME", "SCC", "KORNET", "DTC"
     "BASE SPA", "TPS", "BALENA", "PTT(卡车)", "ROME(卡车)",
     "BASE SPA(意大利)", "TPS(希腊)", "BALENA(项目物流)", "DTC(内部电商)"}
 
-def unify_customer_name(name):
-    """将任何客户名变体映射到标准名的全称"""
+def _unify_single(name):
+    """单个客户名映射到标准名全称"""
     if not name: return name
-    std = _CUSTOMER_UNIFIED.get(name.upper(), '')
+    n = name.strip()
+    std = _CUSTOMER_UNIFIED.get(n.upper(), '')
     if not std:
         for k, v in _CUSTOMER_UNIFIED.items():
-            if k[:6] in name.upper() or name.upper()[:6] in k:
+            if len(n) >= 6 and len(k) >= 6 and (k[:6] in n.upper() or n.upper()[:6] in k):
                 std = v; break
-    if not std: std = name
-    # Return full name if available
+    if not std: std = n
     full = _CUSTOMER_FULL_NAMES.get(std, '')
     return full if full else std
+
+def unify_customer_name(name):
+    """将任何客户名变体映射到标准名的全称，支持'/'分隔的多客户"""
+    if not name: return name
+    if '/' in name:
+        parts = [_unify_single(p) for p in name.split('/')]
+        # 去重(同一客户不同写法映射到同一全称)
+        seen = set()
+        unique = []
+        for p in parts:
+            if p.upper() not in seen:
+                seen.add(p.upper())
+                unique.append(p)
+        return ' / '.join(unique)
+    return _unify_single(name)
 
 def is_real_customer(name):
     """判断是否是真实客户(排除供应商和内部公司)"""
