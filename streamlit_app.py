@@ -872,7 +872,7 @@ with tabs[0]:
                   "dd_alert":"D&D费用","overdue":"Overdue催收","arrears":"欠费催收","bl_release":"换单电放",
                   "prealert_gap":"漏单预警","sop":"SOP跟进",
                   "hold_active":"Hold扣货","inspection_active":"查验中","fee_confirmed":"费用已确认",
-                  "payment_requested":"待付款","awaiting_reply":"等回复",
+                  "fee_pending":"费用待确认","payment_requested":"待付款","awaiting_reply":"等回复",
                   "inspection_broker":"查验报关跟进","stale_arrival":"到港停滞",
                   "supplier_followup":"供应商跟进"}
     ops_cats = {}

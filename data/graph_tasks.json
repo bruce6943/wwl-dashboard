@@ -415,6 +415,104 @@
       "last_seen": "2026-03-31"
     },
     {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "MEDUKU085016, MEDUKU084282, MEDUKU085123, MEDUKU084050, MEDUKU085206 +6",
+      "carrier": "MSC",
+      "customer": "ELITE SOLAR NEW ENERGY CO.",
+      "wwl_sender": "nathia (jkt.nathia@wwl.sg)",
+      "wwl_branch": "WWL印尼",
+      "action": "MSC 11票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: MEDUKU085016, MEDUKU084282, MEDUKU085123",
+      "email_count": 178,
+      "last_seen": "2026-03-19"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "OOLU2322301440, OOLU2322148060, OOLU2322147820, OOLU2320655770, OOLU2320655560 +2",
+      "carrier": "OOCL",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "wwl_branch": "WWL厦门",
+      "action": "OOCL 7票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: OOLU2322301440, OOLU2322148060, OOLU2322147820",
+      "email_count": 11,
+      "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506319200, COSU9506444150 +2",
+      "carrier": "COSCO",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "ngb.ops18@wwl.cn (ngb.ops18@wwl.cn)",
+      "wwl_branch": "WWL宁波",
+      "action": "COSCO 7票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: COSU9506320440, COSU6446832300, COSU9506319310",
+      "email_count": 10,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "COSU6446212300, COSU6446342500, COSU6446117360, COSU9506295790, COSU6446482360 +1",
+      "carrier": "COSCO",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "Yate Li - WWG XMN (xmn.cus3@wwl.cn)",
+      "wwl_branch": "WWL厦门",
+      "action": "COSCO 6票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: COSU6446212300, COSU6446342500, COSU6446117360",
+      "email_count": 10,
+      "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "CMDUDJA1417805, CMDUDJA1418502, CMDUDJA1417763, CMDUDJA1417808",
+      "carrier": "CMA-CGM",
+      "customer": "ELITE SOLAR NEW ENERGY CO.",
+      "wwl_sender": "",
+      "wwl_branch": "未知",
+      "action": "CMA-CGM 4票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: CMDUDJA1417805, CMDUDJA1418502, CMDUDJA1417763",
+      "email_count": 32,
+      "last_seen": "2026-03-27"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "COSU6446579460, COSU6446020160, COSU6446020150, COSU6446147720",
+      "carrier": "COSCO",
+      "customer": "",
+      "wwl_sender": "sha.ops120 (sha.ops120@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "COSCO 4票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: COSU6446579460, COSU6446020160, COSU6446020150",
+      "email_count": 4,
+      "last_seen": "2026-03-17"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "CMDUCHN2683387, CMDUCHN2699890, CMDUCHN2683389",
+      "carrier": "CMA-CGM",
+      "customer": "HITHIUM TECH USA INC. / 海辰储能",
+      "wwl_sender": "stevenpu@wwl.cn (stevenpu@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "CMA-CGM 3票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: CMDUCHN2683387, CMDUCHN2699890, CMDUCHN2683389",
+      "email_count": 42,
+      "last_seen": "2026-03-18"
+    },
+    {
       "type": "payment_requested",
       "priority": "high",
       "title": "Payment Requested",
@@ -429,12 +527,26 @@
       "last_seen": "2026-03-15"
     },
     {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "OOLU2318729730, OOLU2322662920, OOLU2321476620",
+      "carrier": "OOCL",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
+      "wwl_branch": "WWL宁波",
+      "action": "OOCL 3票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: OOLU2318729730, OOLU2322662920, OOLU2321476620",
+      "email_count": 5,
+      "last_seen": "2026-03-18"
+    },
+    {
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD.",
+      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 3票 — 预付 → Origin已垫付 → 确认金额入账",
@@ -457,13 +569,41 @@
       "last_seen": "2026-03-24"
     },
     {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
+      "carrier": "Hapag-Lloyd",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
+      "wwl_branch": "WWL宁波",
+      "action": "Hapag-Lloyd 2票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
+      "email_count": 4,
+      "last_seen": "2026-03-24"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "MEDUYL789706, MEDUKU104502",
+      "carrier": "MSC",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "未知",
+      "action": "MSC 2票 — 费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "提单: MEDUYL789706, MEDUKU104502",
+      "email_count": 7,
+      "last_seen": "2026-03-31"
+    },
+    {
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "OOCL 2票 — 预付 → Origin已垫付 → 确认金额入账",
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
@@ -499,6 +639,20 @@
       "last_seen": "2026-03-31"
     },
     {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "MEDUWG692272",
+      "carrier": "MSC",
+      "customer": "MAG SPECIALTIES INC.",
+      "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
+      "wwl_branch": "WWL天津",
+      "action": "费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "",
+      "email_count": 25,
+      "last_seen": "2026-03-30"
+    },
+    {
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
@@ -511,6 +665,20 @@
       "progress_history": "",
       "email_count": 15,
       "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "ONEYSHAG81060500",
+      "carrier": "ONE",
+      "customer": "GLOBAL OCEAN",
+      "wwl_sender": "Daniel Yan (sha.ops46@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "费用待确认 → 问origin预付还是到付 → 确认后走付款流程",
+      "progress_history": "",
+      "email_count": 2,
+      "last_seen": "2026-03-30"
     },
     {
       "type": "supplier_followup",
@@ -618,8 +786,8 @@
     "prealerts": 51
   },
   "stats": {
-    "total": 35,
+    "total": 47,
     "urgent": 21,
-    "high": 14
+    "high": 26
   }
 }
