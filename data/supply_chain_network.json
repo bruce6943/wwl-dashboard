@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 259,
+      "CMA-CGM": 263,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 193,
+      "ZIM": 199,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -51,7 +51,7 @@
       "ONE": 17,
       "OOCL": 6,
       "ZIM": 54,
-      "MSC": 35
+      "MSC": 36
     },
     "MERSY CORP": {
       "MSC": 9
@@ -68,7 +68,7 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 41,
+      "OOCL": 45,
       "MSC": 2
     },
     "HOUNEN SOLAR": {
@@ -87,8 +87,8 @@
       "ZIM": 22
     },
     "DTC SA": {
-      "COSCO": 21,
-      "OOCL": 42
+      "COSCO": 23,
+      "OOCL": 46
     }
   },
   "customer_service": {
@@ -117,7 +117,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 83,
+        "count": 85,
         "types": [
           "卡车"
         ]
@@ -134,7 +134,7 @@
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 40,
+        "count": 44,
         "types": []
       }
     },
@@ -191,7 +191,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 77,
+        "count": 88,
         "types": [
           "卡车"
         ]
@@ -199,7 +199,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 77,
+        "count": 88,
         "types": [
           "卡车"
         ]
@@ -213,13 +213,13 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 46,
+        "count": 52,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 156,
+        "count": 178,
         "types": [
           "卡车"
         ]
@@ -227,13 +227,13 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 15,
+        "count": 18,
         "types": []
       }
     },
     "ASTRONERGY (正泰新能)": {
       "Pioneer": {
-        "count": 9,
+        "count": 11,
         "types": []
       }
     }

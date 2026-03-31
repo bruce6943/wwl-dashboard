@@ -1,22 +1,22 @@
 {
-  "scan_time": "2026-03-31T09:42:50.072125+08:00",
-  "total_emails": 129,
-  "business_emails": 96,
-  "pdf_count": 18,
+  "scan_time": "2026-03-31T10:19:03.929498+08:00",
+  "total_emails": 134,
+  "business_emails": 101,
+  "pdf_count": 19,
   "categories": {
-    "charge_confirm": 12,
-    "prealert": 12,
-    "other_biz": 52,
+    "charge_confirm": 11,
+    "prealert": 16,
+    "other_biz": 53,
     "arrival": 7,
     "hold": 4,
-    "booking": 3,
+    "booking": 4,
     "delivery": 1,
     "invoice": 1,
     "inspection": 4
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 8,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -28,7 +28,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 8,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -133,17 +133,17 @@
     }
   },
   "carriers": {
-    "ONE": 16,
+    "ONE": 20,
     "MSC": 11,
     "COSCO": 2,
     "OOCL": 6,
     "YML": 1,
-    "CMA-CGM": 3,
+    "CMA-CGM": 2,
     "ZIM": 3
   },
   "carrier_fees": {},
-  "hbl_total": 18,
-  "mbl_total": 21,
+  "hbl_total": 17,
+  "mbl_total": 20,
   "all_hbls": [
     "WLC50522982",
     "WLC60124859",
@@ -152,7 +152,6 @@
     "WLC60203463",
     "WLC60211379",
     "WLC60213409",
-    "WLC60213560",
     "WLC60215944",
     "WLC60216138",
     "WLC60216466",
@@ -166,7 +165,6 @@
   ],
   "all_mbls": [
     "CMDUCHN3095178",
-    "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
     "COSU9506295790",
@@ -188,8 +186,8 @@
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 83,
-    "2026-03-31": 40
+    "2026-03-30": 81,
+    "2026-03-31": 47
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -204,14 +202,14 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      16
-    ],
-    [
-      "Effy <us.effyhuo@wwl.sg>",
-      16
+      15
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      14
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
       14
     ],
     [
@@ -232,6 +230,10 @@
     ],
     [
       "<julian.tseng@dynastydfw.com>",
+      3
+    ],
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
       3
     ],
     [
@@ -275,11 +277,7 @@
       2
     ],
     [
-      "\"Emma Cheng\" <bdasst09@wwl.cn>",
-      2
-    ],
-    [
-      "<bkk.rie@wwl.sg>",
+      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
       2
     ]
   ],
@@ -1121,29 +1119,6 @@
     {
       "type": "cc_confirm",
       "priority": "medium",
-      "mbl": "CMDUCHN3116145",
-      "hbl": "WLC60213560",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-07",
-      "amount": "",
-      "assignee": "",
-      "carrier": "CMA-CGM",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
-      "source": "Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213560\r",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 09:05:00"
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
       "mbl": "CMDUCHN3095178",
       "hbl": "WLC60125060",
       "customer": "REACH INDUSTRY",
@@ -1395,19 +1370,22 @@
     }
   ],
   "action_summary": {
-    "total": 52,
+    "total": 51,
     "urgent": 17,
     "high": 15,
-    "medium": 20
+    "medium": 19
   },
   "bl_status": {
-    "no_tlx_mbl": [],
+    "no_tlx_mbl": [
+      "ONEYBKKG61472300",
+      "ONEYBKKG61453900"
+    ],
     "no_tlx_hbl": [
       "WLC60125637",
-      "WLC60309086",
       "WLC60216138",
-      "WLC50522982",
-      "WLC60307413"
+      "WLC60307413",
+      "WLC60309086",
+      "WLC50522982"
     ],
     "an_no_prealert": [],
     "hold_bl": [
@@ -1476,14 +1454,15 @@
     ]
   },
   "neural_network": {
-    "entities": 88,
-    "relationships": 30,
+    "entities": 89,
+    "relationships": 27,
     "contacts_new": 0,
-    "contacts_total": 372,
-    "daily_connections": 10,
+    "contacts_total": 373,
+    "daily_connections": 9,
     "new_domains": [
       "mercerlogistics.com",
       "elite-solar.com",
+      "biposervice.com",
       "containerport.com"
     ]
   },
@@ -1516,11 +1495,6 @@
     {
       "from": "ASTRONERGY (正泰新能)",
       "to": "Pioneer",
-      "type": "service"
-    },
-    {
-      "from": "TERRASOULSUPERFOODS",
-      "to": "FCC USA",
       "type": "service"
     },
     {
