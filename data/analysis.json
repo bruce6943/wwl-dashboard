@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T12:08:50.463176+08:00",
-  "total_emails": 158,
-  "business_emails": 124,
-  "pdf_count": 30,
+  "scan_time": "2026-03-31T12:27:16.744588+08:00",
+  "total_emails": 160,
+  "business_emails": 126,
+  "pdf_count": 34,
   "categories": {
     "charge_confirm": 12,
     "prealert": 24,
-    "other_biz": 67,
+    "other_biz": 69,
     "arrival": 7,
     "hold": 4,
     "booking": 4,
@@ -147,18 +147,21 @@
       ]
     },
     "DTC SA": {
-      "emails": 4,
-      "hbl_count": 4,
-      "mbl_count": 1,
+      "emails": 6,
+      "hbl_count": 6,
+      "mbl_count": 2,
       "active_days": 1,
       "hbls": [
         "WLC60310362",
         "WLC60310365",
         "WLC60314212",
-        "WLC60315792"
+        "WLC60314287",
+        "WLC60315792",
+        "WLC60319081"
       ],
       "mbls": [
-        "OOLU2167428510"
+        "OOLU2167428510",
+        "OOLU2167608500"
       ],
       "days": [
         "03/31"
@@ -169,15 +172,36 @@
     "ONE": 20,
     "MSC": 15,
     "COSCO": 2,
-    "OOCL": 7,
+    "OOCL": 8,
     "YML": 1,
     "CMA-CGM": 3,
     "ZIM": 4,
-    "Evergreen": 3
+    "Evergreen": 4
   },
-  "carrier_fees": {},
-  "hbl_total": 26,
-  "mbl_total": 23,
+  "carrier_fees": {
+    "ONE": {
+      "count": 9,
+      "total": 6.0,
+      "avg": 1.2
+    },
+    "MSC": {
+      "count": 8,
+      "total": 21580.0,
+      "avg": 1541.4285714285713
+    },
+    "COSCO": {
+      "count": 1,
+      "total": 0,
+      "avg": 0
+    },
+    "CMA-CGM": {
+      "count": 1,
+      "total": 31770.0,
+      "avg": 10590.0
+    }
+  },
+  "hbl_total": 29,
+  "mbl_total": 27,
   "all_hbls": [
     "WLC50522982",
     "WLC60123818",
@@ -202,9 +226,12 @@
     "WLC60309086",
     "WLC60310362",
     "WLC60310365",
+    "WLC60310469",
     "WLC60313618",
     "WLC60314212",
-    "WLC60315792"
+    "WLC60314287",
+    "WLC60315792",
+    "WLC60319081"
   ],
   "all_mbls": [
     "CMDUCHN3095178",
@@ -218,6 +245,7 @@
     "MEDURQ324903",
     "MEDURQ324929",
     "MEDUWG692272",
+    "MEDUWN372125",
     "MEDUYL960612",
     "ONEYBKKG38865600",
     "ONEYBKKG48500700",
@@ -225,15 +253,18 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00383600",
+    "ONEYBTMG00521700",
     "OOLU2166524280",
     "OOLU2167428510",
+    "OOLU2167608500",
     "OOLU2320126090",
     "ZIMUBKK80439660",
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 69
+    "2026-03-31": 71
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -271,15 +302,15 @@
       6
     ],
     [
+      "\"Henry Chen\" <sha.ops55@wwl.cn>",
+      6
+    ],
+    [
       "us038-importpickupnotification@msc.com",
       5
     ],
     [
       "JEREMY WONG <jeremyw@fccusa.net>",
-      4
-    ],
-    [
-      "\"Henry Chen\" <sha.ops55@wwl.cn>",
       4
     ],
     [
@@ -1550,12 +1581,12 @@
     "relationships": 30,
     "contacts_new": 0,
     "contacts_total": 373,
-    "daily_connections": 15,
+    "daily_connections": 17,
     "new_domains": [
-      "containerport.com",
-      "mercerlogistics.com",
+      "biposervice.com",
       "elite-solar.com",
-      "biposervice.com"
+      "containerport.com",
+      "mercerlogistics.com"
     ]
   },
   "daily_connections": [
@@ -1632,6 +1663,16 @@
     {
       "from": "DTC SA",
       "to": "Evergreen",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "Evergreen",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "OOCL",
       "type": "carrier"
     }
   ]
