@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T13:22:27.660413+08:00",
-  "total_emails": 163,
-  "business_emails": 128,
+  "scan_time": "2026-03-31T13:59:34.325034+08:00",
+  "total_emails": 169,
+  "business_emails": 134,
   "pdf_count": 34,
   "categories": {
-    "charge_confirm": 14,
-    "prealert": 24,
-    "other_biz": 69,
+    "charge_confirm": 15,
+    "prealert": 27,
+    "other_biz": 71,
     "arrival": 7,
     "hold": 4,
     "booking": 4,
@@ -170,20 +170,22 @@
   },
   "carriers": {
     "ONE": 22,
-    "MSC": 15,
+    "MSC": 16,
     "COSCO": 2,
     "OOCL": 8,
     "YML": 1,
-    "CMA-CGM": 3,
-    "ZIM": 4,
+    "CMA-CGM": 4,
+    "ZIM": 6,
     "Evergreen": 4
   },
   "carrier_fees": {},
-  "hbl_total": 30,
+  "hbl_total": 32,
   "mbl_total": 25,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
+    "WLC60117535",
+    "WLC60117536",
     "WLC60118671",
     "WLC60123818",
     "WLC60124859",
@@ -242,7 +244,7 @@
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 74
+    "2026-03-31": 80
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -268,12 +270,12 @@
       14
     ],
     [
-      "<horizonsolar001@gmail.com>",
-      9
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      12
     ],
     [
-      "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      8
+      "<horizonsolar001@gmail.com>",
+      9
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
@@ -615,6 +617,50 @@
       "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
       "from": "Brian Walsh - WFS Customs <brian.walsh@wfscustoms.",
       "date": "Tue, 31 Mar 2026 01:02:20"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60313618",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Maggie Wu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "RE: DTC PRE-ALERT HBL#WLC60313618 MBL# 035GX17123  TO NEW YO",
+      "source": "RE: DTC PRE-ALERT HBL#WLC60313618 MBL# 035GX17123  TO NEW YO",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 13:40:21"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60313618",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: dtc.zengcaihong@wwl.cn",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "Re: RE: DTC PRE-ALERT HBL#WLC60313618 MBL# 035GX17123  TO NE",
+      "source": "Re: RE: DTC PRE-ALERT HBL#WLC60313618 MBL# 035GX17123  TO NE",
+      "from": "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 13:45:15"
     },
     {
       "type": "inspection_broker",
@@ -1037,6 +1083,26 @@
       "date": "Mon, 30 Mar 2026 09:22:37"
     },
     {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "MEDUKE699088",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "内部: Maggie Wu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Lucie Pham (vn.luciepham@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "RE: 【PRE-ALERT】HBL#WLC60123818 - MBL#MEDUKE699088",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 13:36:41"
+    },
+    {
       "type": "cc_confirm",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -1359,6 +1425,29 @@
       "date": "Tue, 31 Mar 2026 12:29:08"
     },
     {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3095178",
+      "hbl": "WLC60125060",
+      "customer": "REACH INDUSTRY",
+      "eta": "2026-04-07",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "内部: dtc.chenai@wwl.cn",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3095178 金额:",
+      "source": "Re: 答复: Charge confirm request /MBL:CMDUCHN3095178 /HBL:WLC6",
+      "from": "\"dtc.chenai@wwl.cn\"<dtc.chenai@worldwide-logistics",
+      "date": "Tue, 31 Mar 2026 13:34:31"
+    },
+    {
       "type": "empty_return",
       "priority": "medium",
       "mbl": "ONEYBKKG61453900",
@@ -1520,10 +1609,10 @@
     }
   ],
   "action_summary": {
-    "total": 56,
-    "urgent": 17,
-    "high": 17,
-    "medium": 22
+    "total": 60,
+    "urgent": 19,
+    "high": 18,
+    "medium": 23
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -1608,9 +1697,9 @@
     "daily_connections": 17,
     "new_domains": [
       "containerport.com",
+      "elite-solar.com",
       "mercerlogistics.com",
-      "biposervice.com",
-      "elite-solar.com"
+      "biposervice.com"
     ]
   },
   "daily_connections": [
