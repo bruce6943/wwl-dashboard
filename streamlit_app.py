@@ -1791,21 +1791,69 @@ with tabs[7]:
                     custs_using.append(f"{cust}({carriers_map[name]})")
 
             email_vol = vol if isinstance(vol, (int, float)) else vol.get('emails', 0) if isinstance(vol, dict) else 0
+            score = vinfo.get("capability_score", 0) if vinfo else 0
+            fleet = vinfo.get("fleet_info", "") if vinfo else ""
+
+            # Concentration for this carrier
+            total_usage = sum(carriers_map.get(name, 0) for _, carriers_map in cc_network.items())
+
             c_rows.append({
-                "船公司": f"{name} ({vinfo.get('vendor_name_cn', '')})" if vinfo else name,
+                "排名": len(c_rows) + 1,
+                "船公司": name,
+                "中文": vinfo.get('vendor_name_cn', '') if vinfo else '',
                 "联盟": vinfo.get("alliance", "-") if vinfo else "-",
+                "船队": fleet,
                 "准班率": vinfo.get("schedule_reliability", "-") if vinfo else "-",
                 "邮件量": email_vol,
-                "评分": vinfo.get("capability_score", "-") if vinfo else "-",
-                "服务客户": ", ".join(custs_using[:3]) if custs_using else "-",
+                "评分": score if isinstance(score, (int,float)) else 0,
+                "客户": ", ".join(custs_using[:3]) if custs_using else "-",
             })
 
         c_df = pd.DataFrame(c_rows)
-        st.dataframe(c_df, use_container_width=True, hide_index=True, key="tbl_10",
-                     column_config={
-                         "邮件量": st.column_config.ProgressColumn(min_value=0, max_value=max(r["邮件量"] for r in c_rows) if c_rows else 100, format="%d"),
-                         "评分": st.column_config.ProgressColumn(min_value=0, max_value=100, format="%d"),
-                     })
+
+        # 用HTML渲染精美表格
+        html_rows = ""
+        for _, row in c_df.iterrows():
+            score = row["评分"]
+            score_color = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560" if score > 0 else "#666"
+            vol = row["邮件量"]
+            max_vol = c_df["邮件量"].max() if not c_df.empty else 1
+            vol_pct = min(vol * 100 // max(max_vol, 1), 100)
+
+            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
+                <td style="text-align:center;color:#666;width:30px;">{row["排名"]}</td>
+                <td style="font-weight:600;color:#fff;">{row["船公司"]}<br><span style="color:#888;font-size:11px;">{row["中文"]}</span></td>
+                <td style="font-size:12px;color:#a0a0c0;">{row["联盟"]}</td>
+                <td style="font-size:12px;color:#888;">{row["船队"]}</td>
+                <td style="text-align:center;"><span style="color:{score_color};font-weight:700;">{row["准班率"]}</span></td>
+                <td style="width:120px;">
+                    <div style="background:rgba(50,50,80,0.5);border-radius:4px;height:18px;overflow:hidden;">
+                        <div style="width:{vol_pct}%;height:100%;background:linear-gradient(90deg,#e94560,#ff6b6b);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:4px;">
+                            <span style="color:#fff;font-size:10px;font-weight:600;">{vol}</span>
+                        </div>
+                    </div>
+                </td>
+                <td style="text-align:center;">
+                    <span style="background:{score_color};color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600;">{score}</span>
+                </td>
+                <td style="font-size:11px;color:#a0a0c0;">{row["客户"]}</td>
+            </tr>'''
+
+        st.markdown(f'''<table style="width:100%;border-collapse:collapse;color:#e0e0e0;font-size:13px;">
+            <thead>
+                <tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
+                    <th style="padding:8px 4px;color:#e94560;text-align:center;width:30px;">#</th>
+                    <th style="padding:8px;color:#e94560;">船公司</th>
+                    <th style="padding:8px;color:#e94560;">联盟</th>
+                    <th style="padding:8px;color:#e94560;">船队</th>
+                    <th style="padding:8px;color:#e94560;text-align:center;">准班率</th>
+                    <th style="padding:8px;color:#e94560;width:120px;">邮件量</th>
+                    <th style="padding:8px;color:#e94560;text-align:center;">评分</th>
+                    <th style="padding:8px;color:#e94560;">服务客户</th>
+                </tr>
+            </thead>
+            <tbody>{html_rows}</tbody>
+        </table>''', unsafe_allow_html=True)
 
         # Market share pie chart
         _pie_values = [v if isinstance(v, (int,float)) else v.get('emails',0) if isinstance(v,dict) else 0 for v in carriers_30d.values()]
