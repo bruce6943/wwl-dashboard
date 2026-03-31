@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-03-31T22:47:56.614289+08:00",
-  "total_emails": 275,
-  "business_emails": 232,
-  "pdf_count": 111,
+  "scan_time": "2026-03-31T23:25:06.623811+08:00",
+  "total_emails": 268,
+  "business_emails": 223,
+  "pdf_count": 109,
   "categories": {
-    "booking": 13,
-    "other_biz": 115,
-    "hold": 3,
-    "arrival": 10,
+    "booking": 12,
+    "other_biz": 110,
+    "hold": 2,
     "prealert": 52,
+    "arrival": 8,
     "charge_confirm": 11,
     "delivery": 1,
     "invoice": 4,
@@ -17,19 +17,7 @@
   },
   "customers": {
     "FCC USA": {
-      "emails": 4,
-      "hbl_count": 0,
-      "mbl_count": 0,
-      "active_days": 2,
-      "hbls": [],
-      "mbls": [],
-      "days": [
-        "03/30",
-        "03/31"
-      ]
-    },
-    "HAILIANG (海亮)": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -41,7 +29,7 @@
       ]
     },
     "HORIZON SOLAR": {
-      "emails": 6,
+      "emails": 5,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -197,6 +185,17 @@
         "03/31"
       ]
     },
+    "HAILIANG (海亮)": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "03/31"
+      ]
+    },
     "HITHIUM": {
       "emails": 1,
       "hbl_count": 0,
@@ -210,9 +209,9 @@
     }
   },
   "carriers": {
-    "OOCL": 14,
-    "ONE": 28,
+    "OOCL": 13,
     "YML": 1,
+    "ONE": 26,
     "MSC": 20,
     "CMA-CGM": 6,
     "COSCO": 5,
@@ -329,8 +328,8 @@
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 68,
-    "2026-03-31": 201
+    "2026-03-30": 60,
+    "2026-03-31": 202
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -338,7 +337,7 @@
     "OOLU2166524280",
     "OOLU2320126090"
   ],
-  "hold_count": 3,
+  "hold_count": 2,
   "inspection_count": 4,
   "overdue_count": 19,
   "cancel_count": 0,
@@ -349,7 +348,7 @@
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      26
+      24
     ],
     [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
@@ -364,20 +363,16 @@
       12
     ],
     [
-      "Effy <us.effyhuo@wwl.sg>",
-      10
-    ],
-    [
-      "<horizonsolar001@gmail.com>",
-      9
-    ],
-    [
       "\"rita tang\" <rita.tang@wwl.cn>",
       9
     ],
     [
-      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
-      6
+      "<horizonsolar001@gmail.com>",
+      8
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      8
     ],
     [
       "\"Henry Chen\" <sha.ops55@wwl.cn>",
@@ -386,6 +381,10 @@
     [
       "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
       6
+    ],
+    [
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      5
     ],
     [
       "us038-importpickupnotification@msc.com",
@@ -425,28 +424,6 @@
     ]
   ],
   "action_items": [
-    {
-      "type": "hold",
-      "priority": "urgent",
-      "mbl": "OOLU2320126090",
-      "hbl": "WLC60203463",
-      "customer": "HORIZON SOLAR",
-      "hold_type": "customs",
-      "assignee": "",
-      "carrier": "OOCL",
-      "sender": "gmail.com",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
-      "detail": "Hold BL: OOLU2320126090",
-      "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
-      "from": "<horizonsolar001@gmail.com>",
-      "date": "Mon, 30 Mar 2026 10:35:57"
-    },
     {
       "type": "hold",
       "priority": "urgent",
@@ -803,54 +780,6 @@
       "source": "查验预警-OOLU2166524280",
       "from": "assistant@pltplt.com",
       "date": "Tue, 31 Mar 2026 08:00:20"
-    },
-    {
-      "type": "arrival_notice",
-      "priority": "high",
-      "mbl": "",
-      "hbl": "",
-      "customer": "",
-      "eta": "",
-      "port": "",
-      "free_days": 4,
-      "assignee": "",
-      "carrier": "",
-      "sender": "ONE",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
-      "detail": "到港  MBL: Free Time 4天",
-      "source": "Arrival Notice(BL#: BTMG00521700) Vessel/Voyage: ONE HARBOUR",
-      "from": "\"shipment.info@one-line.com\" <shipment.info@one-li",
-      "date": "Mon, 30 Mar 2026 17:51:04"
-    },
-    {
-      "type": "arrival_notice",
-      "priority": "high",
-      "mbl": "",
-      "hbl": "",
-      "customer": "",
-      "eta": "",
-      "port": "",
-      "free_days": 4,
-      "assignee": "",
-      "carrier": "",
-      "sender": "ONE",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
-      "detail": "到港  MBL: Free Time 4天",
-      "source": "Arrival Notice(BL#: BTMG00383600) Vessel/Voyage: ONE HARBOUR",
-      "from": "\"shipment.info@one-line.com\" <shipment.info@one-li",
-      "date": "Mon, 30 Mar 2026 17:51:44"
     },
     {
       "type": "arrival_notice",
@@ -1963,9 +1892,9 @@
     }
   ],
   "action_summary": {
-    "total": 82,
-    "urgent": 18,
-    "high": 40,
+    "total": 79,
+    "urgent": 17,
+    "high": 38,
     "medium": 24
   },
   "bl_status": {
@@ -2202,17 +2131,17 @@
   },
   "neural_network": {
     "entities": 91,
-    "relationships": 27,
+    "relationships": 24,
     "contacts_new": 0,
     "contacts_total": 375,
     "daily_connections": 22,
     "new_domains": [
-      "erdoganlarnakliyat.com",
+      "romesales.com",
       "mercerlogistics.com",
       "xiangyu.cn",
       "biposervice.com",
-      "immensitylogistics.com",
-      "romesales.com"
+      "erdoganlarnakliyat.com",
+      "immensitylogistics.com"
     ]
   },
   "daily_connections": [
