@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-03-31T10:55:54.428874+08:00",
-  "total_emails": 148,
-  "business_emails": 115,
-  "pdf_count": 22,
+  "scan_time": "2026-03-31T11:32:07.879413+08:00",
+  "total_emails": 153,
+  "business_emails": 119,
+  "pdf_count": 28,
   "categories": {
-    "charge_confirm": 12,
-    "prealert": 21,
-    "other_biz": 61,
+    "charge_confirm": 11,
+    "prealert": 23,
+    "other_biz": 64,
     "arrival": 7,
     "hold": 4,
     "booking": 4,
@@ -16,7 +16,7 @@
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
-      "emails": 8,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -28,7 +28,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 8,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -145,22 +145,41 @@
       "days": [
         "03/31"
       ]
+    },
+    "DTC SA": {
+      "emails": 3,
+      "hbl_count": 3,
+      "mbl_count": 1,
+      "active_days": 1,
+      "hbls": [
+        "WLC60310362",
+        "WLC60310365",
+        "WLC60314212"
+      ],
+      "mbls": [
+        "OOLU2167428510"
+      ],
+      "days": [
+        "03/31"
+      ]
     }
   },
   "carriers": {
     "ONE": 20,
-    "MSC": 13,
+    "MSC": 15,
     "COSCO": 2,
-    "OOCL": 6,
+    "OOCL": 7,
     "YML": 1,
-    "CMA-CGM": 3,
-    "ZIM": 4
+    "CMA-CGM": 2,
+    "ZIM": 4,
+    "Evergreen": 2
   },
   "carrier_fees": {},
-  "hbl_total": 20,
-  "mbl_total": 21,
+  "hbl_total": 23,
+  "mbl_total": 22,
   "all_hbls": [
     "WLC50522982",
+    "WLC60123818",
     "WLC60124859",
     "WLC60125060",
     "WLC60125637",
@@ -169,7 +188,6 @@
     "WLC60211035",
     "WLC60211379",
     "WLC60213409",
-    "WLC60213560",
     "WLC60215944",
     "WLC60216138",
     "WLC60216466",
@@ -179,14 +197,17 @@
     "WLC60305140",
     "WLC60305212",
     "WLC60307413",
-    "WLC60309086"
+    "WLC60309086",
+    "WLC60310362",
+    "WLC60310365",
+    "WLC60314212"
   ],
   "all_mbls": [
     "CMDUCHN3095178",
-    "CMDUCHN3116145",
     "CMDUTHD1466680",
     "COSU6444625540",
     "COSU9506295790",
+    "MEDUKE699088",
     "MEDURQ323962",
     "MEDURQ324234",
     "MEDURQ324903",
@@ -200,13 +221,14 @@
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
     "OOLU2166524280",
+    "OOLU2167428510",
     "OOLU2320126090",
     "ZIMUBKK80439660",
     "ZIMUBKK80440481"
   ],
   "daily_counts": {
-    "2026-03-30": 83,
-    "2026-03-31": 59
+    "2026-03-30": 81,
+    "2026-03-31": 66
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -221,14 +243,14 @@
   "top_senders": [
     [
       "assistant@pltplt.com",
-      16
-    ],
-    [
-      "Effy <us.effyhuo@wwl.sg>",
-      16
+      15
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      14
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
       14
     ],
     [
@@ -237,7 +259,7 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      7
+      8
     ],
     [
       "Adam Sum <us.adamsum@worldwide-logistics.cn>",
@@ -253,6 +275,10 @@
     ],
     [
       "<julian.tseng@dynastydfw.com>",
+      3
+    ],
+    [
+      "\"Henry Chen\" <sha.ops55@wwl.cn>",
       3
     ],
     [
@@ -293,10 +319,6 @@
     ],
     [
       "Ian Weiland <sales@jctransports.com>",
-      2
-    ],
-    [
-      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
       2
     ]
   ],
@@ -564,7 +586,7 @@
       "mbl": "OOLU2320126090",
       "hbl": "WLC60203463",
       "customer": "REACH INDUSTRY",
-      "hold_type": "freight",
+      "hold_type": "customs",
       "assignee": "",
       "carrier": "OOCL",
       "sender": "Brian Walsh - WFS Customs (wfscustoms.)",
@@ -574,7 +596,7 @@
       "internal_staff": "us.ops, Maggie Wu, Rita Tang",
       "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
       "wwl_branch": "WWL新加坡",
-      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
       "detail": "Hold BL: OOLU2320126090",
       "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
       "from": "Brian Walsh - WFS Customs <brian.walsh@wfscustoms.",
@@ -868,6 +890,19 @@
       "date": "Tue, 31 Mar 2026 10:29:25"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: RE：    目的港逾期detention未付警示 --- WWL-SZN （东莞）",
+      "source": "RE: RE：    目的港逾期detention未付警示 --- WWL-SZN （东莞）",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 10:57:00"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "ONEYBKKG61453900",
@@ -1151,29 +1186,6 @@
     {
       "type": "cc_confirm",
       "priority": "medium",
-      "mbl": "CMDUCHN3116145",
-      "hbl": "WLC60213560",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-07",
-      "amount": "",
-      "assignee": "",
-      "carrier": "CMA-CGM",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:CMDUCHN3116145 金额:",
-      "source": "Charge confirm request /MBL:CMDUCHN3116145 /HBL:WLC60213560\r",
-      "from": "assistant@pltplt.com",
-      "date": "Tue, 31 Mar 2026 09:05:00"
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
       "mbl": "CMDUCHN3095178",
       "hbl": "WLC60125060",
       "customer": "REACH INDUSTRY",
@@ -1427,8 +1439,8 @@
   "action_summary": {
     "total": 53,
     "urgent": 17,
-    "high": 16,
-    "medium": 20
+    "high": 17,
+    "medium": 19
   },
   "bl_status": {
     "no_tlx_mbl": [
@@ -1509,15 +1521,15 @@
   },
   "neural_network": {
     "entities": 89,
-    "relationships": 30,
+    "relationships": 27,
     "contacts_new": 0,
     "contacts_total": 373,
-    "daily_connections": 11,
+    "daily_connections": 13,
     "new_domains": [
+      "elite-solar.com",
       "biposervice.com",
-      "containerport.com",
       "mercerlogistics.com",
-      "elite-solar.com"
+      "containerport.com"
     ]
   },
   "daily_connections": [
@@ -1562,11 +1574,6 @@
       "type": "service"
     },
     {
-      "from": "TERRASOULSUPERFOODS",
-      "to": "FCC USA",
-      "type": "service"
-    },
-    {
       "from": "FCC USA",
       "to": "FCC USA",
       "type": "service"
@@ -1574,6 +1581,21 @@
     {
       "from": "REACH INDUSTRY",
       "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "Evergreen",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "Evergreen",
+      "type": "carrier"
+    },
+    {
+      "from": "DTC SA",
+      "to": "OOCL",
       "type": "carrier"
     }
   ]

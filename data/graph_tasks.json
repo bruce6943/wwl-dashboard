@@ -420,8 +420,8 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "ELITE SOLAR/REACH/MING HAO XIN",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
+      "customer": "REACH/MING HAO XIN/ELITE SOLAR",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
       "wwl_branch": "WWL新加坡",
       "action": "ONE 5票 — 预付 → Origin已垫付 → 确认金额入账",
       "progress_history": "提单: ONEYBTMG00383600, ONEYBTMG00521700, ONEYBKKG77381900",
@@ -585,7 +585,7 @@
   ],
   "summary": {
     "arrival_notices": 155,
-    "bl_releases": 101,
+    "bl_releases": 102,
     "billings": 112,
     "prealerts": 49
   },
