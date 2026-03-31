@@ -1,19 +1,19 @@
 {
-  "scan_time": "2026-03-31T15:31:13.306198+08:00",
-  "total_emails": 198,
-  "business_emails": 163,
-  "pdf_count": 55,
+  "scan_time": "2026-03-31T16:14:01.779890+08:00",
+  "total_emails": 226,
+  "business_emails": 190,
+  "pdf_count": 75,
   "categories": {
     "charge_confirm": 16,
-    "prealert": 30,
-    "other_biz": 88,
+    "prealert": 32,
+    "other_biz": 103,
     "arrival": 10,
     "hold": 4,
-    "booking": 4,
+    "booking": 5,
     "delivery": 1,
     "invoice": 2,
     "inspection": 4,
-    "overdue": 4
+    "overdue": 13
   },
   "customers": {
     "TERRASOULSUPERFOODS": {
@@ -180,7 +180,7 @@
       ]
     },
     "BTL INTERNATIONAL": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 1,
       "mbl_count": 0,
       "active_days": 1,
@@ -194,18 +194,21 @@
     }
   },
   "carriers": {
-    "ONE": 31,
-    "MSC": 19,
+    "ONE": 37,
+    "MSC": 21,
     "COSCO": 2,
     "OOCL": 11,
     "YML": 1,
     "CMA-CGM": 5,
     "ZIM": 7,
-    "Evergreen": 4
+    "Evergreen": 4,
+    "Hapag-Lloyd": 2,
+    "MAERSK": 2,
+    "WAN HAI": 2
   },
   "carrier_fees": {
     "ONE": {
-      "count": 12,
+      "count": 20,
       "total": 10.0,
       "avg": 1.25
     },
@@ -233,10 +236,15 @@
       "count": 2,
       "total": 211.04999999999998,
       "avg": 42.209999999999994
+    },
+    "Hapag-Lloyd": {
+      "count": 2,
+      "total": 0,
+      "avg": 0
     }
   },
-  "hbl_total": 40,
-  "mbl_total": 39,
+  "hbl_total": 44,
+  "mbl_total": 44,
   "all_hbls": [
     "WLC50522982",
     "WLC51220280",
@@ -255,6 +263,7 @@
     "WLC60213409",
     "WLC60213560",
     "WLC60215567",
+    "WLC60215570",
     "WLC60215944",
     "WLC60216138",
     "WLC60216156",
@@ -272,11 +281,14 @@
     "WLC60310365",
     "WLC60310469",
     "WLC60311659",
+    "WLC60312093",
     "WLC60313618",
     "WLC60314212",
     "WLC60314287",
     "WLC60314849",
     "WLC60315792",
+    "WLC60317401",
+    "WLC60317403",
     "WLC60319081"
   ],
   "all_mbls": [
@@ -287,6 +299,8 @@
     "CMDUTHD1466680",
     "COSU6444625540",
     "COSU9506295790",
+    "HLCUSHA2603BNWG4",
+    "HLCUSHA2603BNWQ4",
     "MEDUKE699088",
     "MEDURQ323962",
     "MEDURQ324234",
@@ -305,10 +319,12 @@
     "ONEYBKKG61472300",
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
+    "ONEYBTMG00382500",
     "ONEYBTMG00383600",
     "ONEYBTMG00485900",
     "ONEYBTMG00486300",
     "ONEYBTMG00521700",
+    "ONEYBTMG00583800",
     "OOLU2166524280",
     "OOLU2167428510",
     "OOLU2167574730",
@@ -316,13 +332,14 @@
     "OOLU2320126090",
     "OOLU2322301770",
     "OOLU2322439640",
+    "OOLU2323707040",
     "ZIMUBKK80439660",
     "ZIMUBKK80440481",
     "ZIMUNGB20218977"
   ],
   "daily_counts": {
     "2026-03-30": 83,
-    "2026-03-31": 109
+    "2026-03-31": 137
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -332,12 +349,12 @@
   ],
   "hold_count": 4,
   "inspection_count": 4,
-  "overdue_count": 4,
+  "overdue_count": 13,
   "cancel_count": 0,
   "top_senders": [
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      21
+      26
     ],
     [
       "assistant@pltplt.com",
@@ -350,6 +367,10 @@
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
       14
+    ],
+    [
+      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      11
     ],
     [
       "<horizonsolar001@gmail.com>",
@@ -372,7 +393,15 @@
       5
     ],
     [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      5
+    ],
+    [
       "JEREMY WONG <jeremyw@fccusa.net>",
+      4
+    ],
+    [
+      "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
       4
     ],
     [
@@ -380,7 +409,7 @@
       3
     ],
     [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      "张志鹏 <cgo.sales2@worldwide-logistics.cn>",
       3
     ],
     [
@@ -388,31 +417,19 @@
       3
     ],
     [
+      "\"sha.ops68\" <sha.ops68@wwl.cn>",
+      3
+    ],
+    [
       "PLEASE_DO_NOT_REPLY_LGB@OOCL.COM",
       3
     ],
     [
-      "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
       3
     ],
     [
       "Maggie Yin <maggie.yin@elite-solar.com>",
-      2
-    ],
-    [
-      "ADRIAN JUAREZ <adrianj@fccusa.net>",
-      2
-    ],
-    [
-      "FLORA WANG <floraw@fccusa.net>",
-      2
-    ],
-    [
-      "Matthew Stefanelli <mstefanelli@scotlynn.com>",
-      2
-    ],
-    [
-      "\"shipment.info@one-line.com\" <shipment.info@one-line.com>",
       2
     ]
   ],
@@ -739,6 +756,27 @@
       "source": "Re: RE: DTC PRE-ALERT HBL#WLC60313618 MBL# 035GX17123  TO NE",
       "from": "\"dtc.zengcaihong@wwl.cn\" <dtc.zengcaihong@wwl.cn>",
       "date": "Tue, 31 Mar 2026 13:45:15"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "",
+      "container": "",
+      "customer": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "China Qingdao ord logistics company (ord)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 ",
+      "source": "shipment from China",
+      "from": "\"China Qingdao ord logistics company\" <marksun@ord",
+      "date": "Tue, 31 Mar 2026 16:06:17"
     },
     {
       "type": "inspection_broker",
@@ -1176,6 +1214,162 @@
       "source": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
       "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
       "date": "Tue, 31 Mar 2026 15:10:13"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: 2nd REMINDER// Outstanding overdue payment for CSCL GLOB",
+      "source": "RE: 2nd REMINDER// Outstanding overdue payment for CSCL GLOB",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 15:33:04"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
+      "source": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
+      "from": "李丽丽 <sha.sales72@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 15:40:20"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "source": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 15:42:06"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: PRE ALERT / NBSP260217 / BATAM TO DALLAS via LA / ONE / ",
+      "source": "RE: PRE ALERT / NBSP260217 / BATAM TO DALLAS via LA / ONE / ",
+      "from": "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "date": "Tue, 31 Mar 2026 14:45:48"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG17801700",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG17801700",
+      "source": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 15:45:52"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG17801700",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG17801700",
+      "source": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 15:45:52"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
+      "source": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 15:46:25"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG17801700",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG17801700",
+      "source": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Tue, 31 Mar 2026 16:02:34"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG23204800",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG23204800",
+      "source": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 16:06:25"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "ONEYBKKG23204800",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:ONEYBKKG23204800",
+      "source": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "from": "\"linyaxin@xiangyu.cn\" <linyaxin@xiangyu.cn>",
+      "date": "Tue, 31 Mar 2026 16:06:25"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "PRE ALERT / 194GA00417 / NEW BOOKING / BATAM TO CHARLESTONE ",
+      "source": "PRE ALERT / 194GA00417 / NEW BOOKING / BATAM TO CHARLESTONE ",
+      "from": "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "date": "Tue, 31 Mar 2026 15:09:21"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "PRE ALERT / BATAM TO KANSAS CITY VIA LAX / 6X40 HC / 2323707",
+      "source": "PRE ALERT / BATAM TO KANSAS CITY VIA LAX / 6X40 HC / 2323707",
+      "from": "\"Alexander Jkt\" <jkt.alex@wwl.sg>",
+      "date": "Tue, 31 Mar 2026 15:11:51"
     },
     {
       "type": "post_clearance",
@@ -1947,9 +2141,9 @@
     }
   ],
   "action_summary": {
-    "total": 74,
-    "urgent": 19,
-    "high": 26,
+    "total": 87,
+    "urgent": 20,
+    "high": 38,
     "medium": 29
   },
   "bl_status": {
@@ -1998,7 +2192,26 @@
         "date": "Mon, 30 Mar 2026 09:34:19"
       }
     ],
-    "non_standard": [],
+    "non_standard": [
+      {
+        "subject": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
+        "from": "李丽丽 <sha.sales72@wwl.cn>",
+        "type": "向收货人收费",
+        "date": "Tue, 31 Mar 2026 15:40:20"
+      },
+      {
+        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+        "from": "\"linyaxin@xiangyu.cn\" <linyaxi",
+        "type": "向收货人收费",
+        "date": "Tue, 31 Mar 2026 15:45:52"
+      },
+      {
+        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+        "from": "\"linyaxin@xiangyu.cn\" <linyaxi",
+        "type": "向收货人收费",
+        "date": "Tue, 31 Mar 2026 15:45:52"
+      }
+    ],
     "stolen": [],
     "urgent": [
       {
@@ -2036,21 +2249,34 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Tue, 31 Mar 2026 14:37:25"
+      },
+      {
+        "subject": "RE: Pre-alert  Freehandle : MEDUWH661557 / WLC60314849 /  ME",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 15:46:51"
+      },
+      {
+        "subject": "RE: Pre-alert  Freehandle : MEDUWH597967  / WLC60311659 /  M",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Tue, 31 Mar 2026 15:47:02"
       }
     ]
   },
   "neural_network": {
-    "entities": 90,
+    "entities": 91,
     "relationships": 30,
     "contacts_new": 0,
-    "contacts_total": 373,
-    "daily_connections": 21,
+    "contacts_total": 374,
+    "daily_connections": 22,
     "new_domains": [
-      "containerport.com",
-      "elite-solar.com",
-      "biposervice.com",
       "romesales.com",
-      "mercerlogistics.com"
+      "xiangyu.cn",
+      "biposervice.com",
+      "containerport.com",
+      "mercerlogistics.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [
@@ -2152,6 +2378,11 @@
     {
       "from": "REACH INDUSTRY",
       "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "BTL INTERNATIONAL",
+      "to": "ONE",
       "type": "carrier"
     },
     {
