@@ -239,6 +239,28 @@
     "date": "Fri, 3 Apr 2026 14:11:04 "
   },
   {
+    "type": "hold",
+    "priority": "urgent",
+    "mbl": "",
+    "hbl": "WLC60309357",
+    "customer": "",
+    "hold_type": "customs",
+    "assignee": "",
+    "carrier": "",
+    "sender": "内部: Danny Ho",
+    "contact": "",
+    "consignee": "",
+    "shipper": "",
+    "internal_staff": "",
+    "wwl_sender": "",
+    "wwl_branch": "",
+    "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+    "detail": "RE: DTC ACCOUNT || [PRE-ALERT] - ATD MAR 18 - HBL#WLC6030935",
+    "source": "RE: DTC ACCOUNT || [PRE-ALERT] - ATD MAR 18 - HBL#WLC6030935",
+    "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+    "date": "Fri, 3 Apr 2026 14:13:17 "
+  },
+  {
     "type": "inspection_broker",
     "priority": "urgent",
     "mbl": "OOLU2320126090",
