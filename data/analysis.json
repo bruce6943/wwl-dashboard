@@ -2627,8 +2627,8 @@
       "internal_staff": "Maggie Wu",
       "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
       "wwl_branch": "WWL中国",
-      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
-      "detail": "到港  MBL:MEDUWG692272 Free Time 4天",
+      "action": "MSC铁路到货通知已收 → 确认报关完成 → 4天Free Time内安排提柜",
+      "detail": "铁路到货通知(Rail Arrival Notice): MBL:MEDUWG692272, ETA 3/31/2026, Free Time 4天",
       "source": "MSC USA - Rail Arrival Notice for BL: MEDUWG692272",
       "from": "us038-importpickupnotification@msc.com",
       "date": "2 Apr 2026 10:21:17 -0400"
