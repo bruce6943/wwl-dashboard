@@ -1,6 +1,6 @@
 {
-  "scan_time": "2026-04-02T17:02:47.529110+08:00",
-  "total_emails": 641,
+  "scan_time": "2026-04-02T17:48:58.668870+08:00",
+  "total_emails": 642,
   "business_emails": 592,
   "pdf_count": 587,
   "categories": {
@@ -325,14 +325,14 @@
     "MSC": 118,
     "COSCO": 65,
     "ONE": 26,
-    "Hapag-Lloyd": 13,
+    "Hapag-Lloyd": 12,
     "CMA-CGM": 3,
     "YML": 3,
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 256,
-  "mbl_total": 201,
+  "hbl_total": 255,
+  "mbl_total": 200,
   "all_hbls": [
     "WLC50618809",
     "WLC50625761",
@@ -383,7 +383,6 @@
     "WLC50906243",
     "WLC50906250",
     "WLC50906260",
-    "WLC50906313",
     "WLC50906323",
     "WLC50906326",
     "WLC50906495",
@@ -648,7 +647,6 @@
     "HLCUXM12508ATSE9",
     "HLCUXM12508AUAH5",
     "HLCUXM12508AUAI6",
-    "HLCUXM12509APCQ5",
     "MEDUKG193320",
     "MEDUKH457914",
     "MEDUKU073525",
@@ -814,7 +812,7 @@
     "2025-09-07": 2,
     "2025-09-09": 3,
     "2025-09-14": 4,
-    "2025-09-16": 2,
+    "2025-09-16": 1,
     "2025-09-17": 15,
     "2025-09-18": 1,
     "2025-09-23": 3,
@@ -865,7 +863,7 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 249,
+    "2026-04-02": 251,
     "2026-04-03": 9
   },
   "inspection_mbls": [
@@ -881,7 +879,7 @@
   "top_senders": [
     [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      175
+      174
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -1416,6 +1414,28 @@
       "source": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
       "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
       "date": "Thu, 2 Apr 2026 14:21:39 "
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ394716",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "Maggie Yin (elite-solar.com)",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ394716",
+      "source": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "Maggie Yin <maggie.yin@elite-solar.com>",
+      "date": "Thu, 02 Apr 2026 14:50:54"
     },
     {
       "type": "inspection_broker",
@@ -2951,32 +2971,12 @@
       "source": "Re: Re: 2026.3 HOUSTON-SHANGHAI// BKG# YCH26240124",
       "from": "ADRIAN JUAREZ <adrianj@fccusa.net>",
       "date": "Wed, 1 Apr 2026 11:18:19 "
-    },
-    {
-      "type": "post_clearance",
-      "priority": "high",
-      "mbl": "OOLU2320126090",
-      "customer": "",
-      "assignee": "",
-      "carrier": "OOCL",
-      "sender": "Brian Walsh - WFS Customs (wfscustoms.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
-      "detail": "清关完成 通知卡车+客户",
-      "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
-      "from": "Brian Walsh - WFS Customs <brian.walsh@wfscustoms.com>",
-      "date": "Wed, 1 Apr 2026 19:35:54 "
     }
   ],
   "action_summary": {
-    "total": 159,
-    "urgent": 25,
-    "high": 76,
+    "total": 161,
+    "urgent": 26,
+    "high": 77,
     "medium": 58
   },
   "bl_status": {
@@ -3355,6 +3355,12 @@
         "from": "<us.ops@wwl.sg>",
         "urgency": 3,
         "date": "Fri, 3 Apr 2026 04:57:22 "
+      },
+      {
+        "subject": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Thu, 02 Apr 2026 14:50:54"
       }
     ]
   },
@@ -3365,14 +3371,14 @@
     "contacts_total": 385,
     "daily_connections": 45,
     "new_domains": [
+      "romesales.com",
+      "xiangyu.cn",
+      "newl.ca",
       "jci-chemical.com",
       "elite-solar.com",
-      "linkedin.com",
-      "romesales.com",
       "biposervice.com",
       "containerport.com",
-      "newl.ca",
-      "xiangyu.cn"
+      "linkedin.com"
     ]
   },
   "daily_connections": [
