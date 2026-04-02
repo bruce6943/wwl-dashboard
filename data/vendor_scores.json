@@ -26,7 +26,7 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "MSC",
@@ -55,7 +55,36 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
+  },
+  {
+    "vendor_name": "ONE",
+    "vendor_name_cn": "海洋网联",
+    "vendor_category": "ship_carrier",
+    "capability_score": 51,
+    "capability_level": "B级普通供应商",
+    "risk_score": 10,
+    "risk_level": "低风险",
+    "risk_tags": [
+      "查验1票"
+    ],
+    "performance_metrics": {
+      "email_volume_7d": 21,
+      "active_days_7d": 1,
+      "pdf_count": 0,
+      "pdf_fee_total": 0,
+      "pdf_fee_avg": 0,
+      "hold_events_7d": 0,
+      "inspection_events_7d": 1
+    },
+    "scoring_components": {
+      "volume_reliability": 18,
+      "cost_efficiency": 15,
+      "problem_frequency": 12,
+      "responsiveness": 4,
+      "documentation_quality": 2
+    },
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "PACIFIC T&T",
@@ -84,36 +113,7 @@
       "responsiveness": 7,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
-  },
-  {
-    "vendor_name": "Hapag-Lloyd",
-    "vendor_name_cn": "赫伯罗特",
-    "vendor_category": "ship_carrier",
-    "capability_score": 47,
-    "capability_level": "C级关注供应商",
-    "risk_score": 0,
-    "risk_level": "无风险",
-    "risk_tags": [
-      "无"
-    ],
-    "performance_metrics": {
-      "email_volume_7d": 6,
-      "active_days_7d": 1,
-      "pdf_count": 0,
-      "pdf_fee_total": 0,
-      "pdf_fee_avg": 0,
-      "hold_events_7d": 0,
-      "inspection_events_7d": 0
-    },
-    "scoring_components": {
-      "volume_reliability": 6,
-      "cost_efficiency": 15,
-      "problem_frequency": 20,
-      "responsiveness": 4,
-      "documentation_quality": 2
-    },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "CMA-CGM",
@@ -142,13 +142,13 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
-    "vendor_name": "Evergreen",
-    "vendor_name_cn": "长荣海运",
+    "vendor_name": "Hapag-Lloyd",
+    "vendor_name_cn": "赫伯罗特",
     "vendor_category": "ship_carrier",
-    "capability_score": 43,
+    "capability_score": 47,
     "capability_level": "C级关注供应商",
     "risk_score": 0,
     "risk_level": "无风险",
@@ -156,7 +156,7 @@
       "无"
     ],
     "performance_metrics": {
-      "email_volume_7d": 1,
+      "email_volume_7d": 7,
       "active_days_7d": 1,
       "pdf_count": 0,
       "pdf_fee_total": 0,
@@ -165,13 +165,13 @@
       "inspection_events_7d": 0
     },
     "scoring_components": {
-      "volume_reliability": 2,
+      "volume_reliability": 6,
       "cost_efficiency": 15,
       "problem_frequency": 20,
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "COSCO",
@@ -200,7 +200,7 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "WAN HAI",
@@ -229,7 +229,36 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
+  },
+  {
+    "vendor_name": "Evergreen",
+    "vendor_name_cn": "长荣海运",
+    "vendor_category": "ship_carrier",
+    "capability_score": 43,
+    "capability_level": "C级关注供应商",
+    "risk_score": 0,
+    "risk_level": "无风险",
+    "risk_tags": [
+      "无"
+    ],
+    "performance_metrics": {
+      "email_volume_7d": 1,
+      "active_days_7d": 1,
+      "pdf_count": 0,
+      "pdf_fee_total": 0,
+      "pdf_fee_avg": 0,
+      "hold_events_7d": 0,
+      "inspection_events_7d": 0
+    },
+    "scoring_components": {
+      "volume_reliability": 2,
+      "cost_efficiency": 15,
+      "problem_frequency": 20,
+      "responsiveness": 4,
+      "documentation_quality": 2
+    },
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "YES CHB",
@@ -258,7 +287,7 @@
       "responsiveness": 7,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "RIM LOGISTICS",
@@ -287,36 +316,7 @@
       "responsiveness": 7,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
-  },
-  {
-    "vendor_name": "ONE",
-    "vendor_name_cn": "海洋网联",
-    "vendor_category": "ship_carrier",
-    "capability_score": 41,
-    "capability_level": "C级关注供应商",
-    "risk_score": 10,
-    "risk_level": "低风险",
-    "risk_tags": [
-      "查验1票"
-    ],
-    "performance_metrics": {
-      "email_volume_7d": 19,
-      "active_days_7d": 1,
-      "pdf_count": 0,
-      "pdf_fee_total": 0,
-      "pdf_fee_avg": 0,
-      "hold_events_7d": 0,
-      "inspection_events_7d": 1
-    },
-    "scoring_components": {
-      "volume_reliability": 12,
-      "cost_efficiency": 15,
-      "problem_frequency": 8,
-      "responsiveness": 4,
-      "documentation_quality": 2
-    },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "YML",
@@ -345,7 +345,7 @@
       "responsiveness": 0,
       "documentation_quality": 0
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "HMM",
@@ -374,7 +374,7 @@
       "responsiveness": 0,
       "documentation_quality": 0
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "MAERSK",
@@ -403,7 +403,7 @@
       "responsiveness": 0,
       "documentation_quality": 0
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "ROME TRANSPORT",
@@ -432,7 +432,7 @@
       "responsiveness": 0,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "FAST FREIGHTS",
@@ -461,7 +461,7 @@
       "responsiveness": 0,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "FCC USA",
@@ -490,7 +490,7 @@
       "responsiveness": 0,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "IDC INTERNATIONAL",
@@ -519,7 +519,7 @@
       "responsiveness": 0,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "ATC CARGO",
@@ -548,7 +548,7 @@
       "responsiveness": 0,
       "documentation_quality": 5
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   },
   {
     "vendor_name": "OOCL",
@@ -562,7 +562,7 @@
       "查验2票"
     ],
     "performance_metrics": {
-      "email_volume_7d": 3,
+      "email_volume_7d": 5,
       "active_days_7d": 1,
       "pdf_count": 0,
       "pdf_fee_total": 0,
@@ -577,6 +577,6 @@
       "responsiveness": 4,
       "documentation_quality": 2
     },
-    "last_updated": "2026-04-03T03:44:59.756497+08:00"
+    "last_updated": "2026-04-03T04:19:26.331715+08:00"
   }
 ]

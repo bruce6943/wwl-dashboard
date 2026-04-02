@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-04-03T04:19:26.331715+08:00",
-  "total_emails": 182,
-  "business_emails": 157,
-  "pdf_count": 76,
+  "scan_time": "2026-04-03T04:57:24.040867+08:00",
+  "total_emails": 194,
+  "business_emails": 169,
+  "pdf_count": 85,
   "categories": {
-    "other_biz": 95,
+    "other_biz": 102,
     "overdue": 2,
     "delivery": 3,
     "booking": 1,
     "charge_confirm": 16,
     "arrival": 4,
-    "prealert": 30,
+    "prealert": 35,
     "inspection": 3,
     "cancel": 3
   },
@@ -185,23 +185,24 @@
   },
   "carriers": {
     "ZIM": 24,
-    "MSC": 20,
+    "MSC": 22,
     "WAN HAI": 1,
-    "OOCL": 5,
-    "ONE": 21,
-    "CMA-CGM": 7,
+    "OOCL": 10,
+    "ONE": 23,
+    "CMA-CGM": 8,
     "Hapag-Lloyd": 7,
     "COSCO": 1,
     "Evergreen": 1
   },
   "carrier_fees": {},
-  "hbl_total": 43,
-  "mbl_total": 39,
+  "hbl_total": 47,
+  "mbl_total": 43,
   "all_hbls": [
     "WLC50520755",
     "WLC60122743",
     "WLC60124039",
     "WLC60124792",
+    "WLC60200080",
     "WLC60207645",
     "WLC60210191",
     "WLC60212589",
@@ -233,6 +234,8 @@
     "WLC60313539",
     "WLC60313813",
     "WLC60313816",
+    "WLC60315531",
+    "WLC60315532",
     "WLC60316622",
     "WLC60318533",
     "WLC60318535",
@@ -240,6 +243,7 @@
     "WLC60318672",
     "WLC60318898",
     "WLC60319230",
+    "WLC60401748",
     "WLC66031853"
   ],
   "all_mbls": [
@@ -249,6 +253,7 @@
     "HLCUSHA260283311",
     "HLCUSHA2603BTYW8",
     "MEDUEK846578",
+    "MEDUKG193320",
     "MEDURQ395473",
     "MEDUWG953468",
     "MEDUWI921190",
@@ -273,6 +278,9 @@
     "OOLU2166524280",
     "OOLU2167136193",
     "OOLU2167136194",
+    "OOLU2167546830",
+    "OOLU2167546890",
+    "OOLU2167677090",
     "OOLU2320126090",
     "OOLU2321477590",
     "ZIMUBKK80439627",
@@ -285,7 +293,7 @@
   ],
   "daily_counts": {
     "2026-04-02": 68,
-    "2026-04-03": 110
+    "2026-04-03": 122
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -307,15 +315,15 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      13
+      14
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      14
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
       10
-    ],
-    [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      9
     ],
     [
       "<us.ops@wwl.sg>",
@@ -370,11 +378,11 @@
       3
     ],
     [
-      "Ellen Jin <ellen@thornova-solar.com>",
-      2
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      3
     ],
     [
-      "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      "Ellen Jin <ellen@thornova-solar.com>",
       2
     ]
   ],
@@ -1546,7 +1554,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 293,
+    "tlx_confirmed_mbl": 297,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
@@ -1672,6 +1680,54 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Fri, 3 Apr 2026 16:11:17 "
+      },
+      {
+        "subject": "Pre-alert  Freehandle : OOLU2167546890  / WLC60315531 /  OOC",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 16:20:06 "
+      },
+      {
+        "subject": "Pre-alert  Freehandle : OOLU2167546830  / WLC60315532 /  OOC",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 16:29:05 "
+      },
+      {
+        "subject": "Pre-alert  Freehandle : OOLU2167677090  / WLC60401748  /  CS",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 16:36:49 "
+      },
+      {
+        "subject": "RE: DTC account - Pre-alert  Freehandle : OOLU2167136194  / ",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 16:42:18 "
+      },
+      {
+        "subject": "RE: DTC account - Pre-alert  Freehandle : OOLU2167136193 / W",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 16:43:51 "
+      },
+      {
+        "subject": "RE: MSC费用  MEDUEK846578   WLDPEN260100460   USD 1685 + USD 1",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:52:08 "
+      },
+      {
+        "subject": "RE: CMA付款  WLDSHA260400260  CMDUCHN3177029  USD59",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:54:16 "
+      },
+      {
+        "subject": "RE: ONE付款  WLDBKK260202870  ONEYBKKG38865600  USD452.3",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:56:03 "
       }
     ]
   },
@@ -1683,11 +1739,11 @@
     "daily_connections": 21,
     "new_domains": [
       "elite-solar.com",
-      "expresslinecorp.com",
       "jci-chemical.com",
-      "paycargo.com",
       "biposervice.com",
-      "newl.ca"
+      "paycargo.com",
+      "newl.ca",
+      "expresslinecorp.com"
     ]
   },
   "daily_connections": [
