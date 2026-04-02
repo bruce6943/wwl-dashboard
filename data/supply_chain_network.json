@@ -1,533 +1,2695 @@
 {
-  "customer_carrier": {
-    "REACH INDUSTRY": {
-      "CMA-CGM": 273,
-      "COSCO": 57,
-      "ONE": 68,
-      "OOCL": 47,
-      "ZIM": 357,
-      "Evergreen": 49,
-      "WAN HAI": 4
-    },
-    "MING HAO XIN": {
-      "CMA-CGM": 61,
-      "COSCO": 24,
-      "ONE": 19,
-      "OOCL": 32,
-      "MAERSK": 2,
-      "ZIM": 54,
-      "Evergreen": 4,
-      "WAN HAI": 1
-    },
-    "HAILIANG": {
-      "MSC": 61,
-      "ONE": 42,
-      "ZIM": 10,
-      "COSCO": 7,
-      "OOCL": 21,
-      "HMM": 7
-    },
+  "last_updated": "2026-04-02T22:09:04.433073+08:00",
+  "total_customers": 27,
+  "total_tickets": 1853,
+  "data_sources": [
+    "18173封邮件",
+    "3287个HBL PDF",
+    "SQLite mbl_records"
+  ],
+  "customers": {
     "HAIROBOT": {
-      "OOCL": 39,
-      "ZIM": 69,
-      "MSC": 44,
-      "Hapag-Lloyd": 16,
-      "WAN HAI": 2,
-      "ONE": 22
+      "tickets": 778,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 276
+        },
+        {
+          "name": "COSCO",
+          "count": 187
+        },
+        {
+          "name": "MSC",
+          "count": 122
+        },
+        {
+          "name": "ONE",
+          "count": 71
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 66
+        },
+        {
+          "name": "ZIM",
+          "count": 19
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 14
+        },
+        {
+          "name": "MAERSK",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "Renee Lin-WWLSZN",
+          "email": "szn.reneelin@wwl.cn"
+        },
+        {
+          "name": "Yate Li - WWG XMN",
+          "email": "xmn.cus3@wwl.cn"
+        },
+        {
+          "name": "Winnie Shen",
+          "email": "sha.ops4@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 37,
+          "consignee_notify": ""
+        },
+        {
+          "name": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "count": 19,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 7,
+          "consignee_notify": "Insert Name Address and Phone/Fax"
+        },
+        {
+          "name": "PT MEGA SOLAR INDONESIA",
+          "count": 7,
+          "consignee_notify": ""
+        },
+        {
+          "name": "TINH NHAT PHAM CO.,LTD",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN HONGMU LMPORT & EXPORT TRADE CO.,LTD.",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHANGHAI HAILIANG COPPER CO.,LTD",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT THORNOVA SOLAR INDONESIA ON BEHALF OF",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "ZHONG XIN YA TAI VIET NAM CO., LTD",
+          "count": 4,
+          "consignee_notify": ""
+        },
+        {
+          "name": "YOU SHENG JU FURNITURE CO.,LTD",
+          "count": 4,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SIGENERGY TECHNOLOGY (ZHUHAI HENGQIN) CO., LTD.",
+          "count": 3,
+          "consignee_notify": "FORWARDING AGENT-REFERENCES"
+        },
+        {
+          "name": "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD.",
+          "count": 3,
+          "consignee_notify": "Insert Name Address and Phone/Fax"
+        },
+        {
+          "name": "NINGBO DAN SEOI TRADING CO.,LTD.",
+          "count": 3,
+          "consignee_notify": ""
+        },
+        {
+          "name": "GRAND LEISURE OUTDOOR PRODUCTS (VIETNAM) COMPANY",
+          "count": 3,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN ZHONGXIN ENTERPRISE SERVICE CO., LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN JIAHANGHUI TECHNOLOGY CO., LTD",
+          "count": 2,
+          "consignee_notify": "BRIGHT RIDGE ALLIANCE INC"
+        },
+        {
+          "name": "PT XTONG TECH INDONESIA",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "NINGBO HANGDA SUPPLY CHAIN CO.,LTD",
+          "count": 2,
+          "consignee_notify": "BTL INTERNATIONAL INC."
+        },
+        {
+          "name": "NINGBO BE LEADING INTERNATIONAL TRADING CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HONG KONG HAILIANG METAL TRADING LIMITED",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HANGZHOU SKYTECH OUTDOOR CO.,LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "GUANGZHOU RUICHENGDA ELECTRONICS CO., LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "GLORY OCEANIC (VIETNAM) CO., LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "FUZHOU HONGMU IMPORT AND EXPORT CO.,",
+          "count": 2,
+          "consignee_notify": "BHOLA DECOR INC"
+        },
+        {
+          "name": "FUJIAN FONDLIVE HOUSEWARE CO.,LTD",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [
+        "YES报关行(Winkie Yu)"
+      ],
+      "truckers": [
+        "Evans Delivery",
+        "SCC车队",
+        "Rome Transportation"
+      ],
+      "consignee_contacts": [
+        "momo.li@hairobotics.com",
+        "ruili.he@hairobotics.com"
+      ],
+      "fee_mode": "Prepaid为主(262/107)",
+      "trade_relationships": {
+        "shippers": [
+          "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+          "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "PT MEGA SOLAR INDONESIA",
+          "YF TECHNOLOGY CORPORATION",
+          "SHANGHAI HAILIANG COPPER CO.,LTD",
+          "TINH NHAT PHAM CO.,LTD",
+          "GRAND LEISURE OUTDOOR PRODUCTS",
+          "SHENZHEN KHD TECHNOLOGY CO., LTD",
+          "YF TECHNOLOGY",
+          "YOU SHENG JU FURNITURE CO.,LTD",
+          "ZHONG XIN YA TAI VIET NAM CO., LTD",
+          "GUANGZHOU RUICHENGDA ELECTRONICS CO., LTD",
+          "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD",
+          "SIGENERGY TECHNOLOGY",
+          "CARGO LOCATION",
+          "CONSIGNEE NOTIF",
+          "FUZHOU HONGMU IMPORT AND EXPORT CO",
+          "GLORY OCEANIC",
+          "HANGZHOU SKYTECH OUTDOOR CO.,LTD",
+          "HAO PHONG I COMPANY LIMITED"
+        ],
+        "consignees": [
+          "ZOENOVA INC",
+          "MJKONE TRADING LTD",
+          "ACCESS FASTERNERS LLC",
+          "NINGLILY LIMITED",
+          "WANE ATLAN LLC",
+          "KHD GROUP INC",
+          "FITUEYES INC",
+          "FULLOVE INC",
+          "SHUNYOUNG LIMITED",
+          "YANQINIA INC",
+          "DURABASIC INC",
+          "BHOLA DECOR INC",
+          "SANTE DERIA LLC",
+          "DELROSARIO BLADE",
+          "SEANNAL INC",
+          "SUPGOOD INC",
+          "JOURNE BRANDS, INC",
+          "SAIGNON INC",
+          "WULIUGOOD INC",
+          "BRIGHT RIDGE ALLIANCE INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "",
+            "count": 13
+          },
+          {
+            "shipper": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+            "consignee": "ZOENOVA INC",
+            "count": 9
+          },
+          {
+            "shipper": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+            "consignee": "MJKONE TRADING LTD",
+            "count": 8
+          },
+          {
+            "shipper": "PT MEGA SOLAR INDONESIA",
+            "consignee": "",
+            "count": 8
+          },
+          {
+            "shipper": "YF TECHNOLOGY CORPORATION",
+            "consignee": "ACCESS FASTERNERS LLC",
+            "count": 7
+          },
+          {
+            "shipper": "SHANGHAI HAILIANG COPPER CO.,LTD",
+            "consignee": "",
+            "count": 6
+          },
+          {
+            "shipper": "TINH NHAT PHAM CO.,LTD",
+            "consignee": "",
+            "count": 6
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "NINGLILY LIMITED",
+            "count": 6
+          },
+          {
+            "shipper": "GRAND LEISURE OUTDOOR PRODUCTS",
+            "consignee": "WANE ATLAN LLC",
+            "count": 5
+          },
+          {
+            "shipper": "SHENZHEN KHD TECHNOLOGY CO., LTD",
+            "consignee": "KHD GROUP INC",
+            "count": 5
+          },
+          {
+            "shipper": "TINH NHAT PHAM CO.,LTD",
+            "consignee": "FITUEYES INC",
+            "count": 5
+          },
+          {
+            "shipper": "YF TECHNOLOGY",
+            "consignee": "ACCESS FASTERNERS LLC",
+            "count": 5
+          },
+          {
+            "shipper": "YOU SHENG JU FURNITURE CO.,LTD",
+            "consignee": "",
+            "count": 5
+          },
+          {
+            "shipper": "YOU SHENG JU FURNITURE CO.,LTD",
+            "consignee": "FULLOVE INC",
+            "count": 5
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "SHUNYOUNG LIMITED",
+            "count": 5
+          }
+        ]
+      }
     },
-    "ELITE EAGLE": {
-      "ONE": 2,
-      "COSCO": 1,
-      "MSC": 2
-    },
-    "JINGZHOU": {
-      "Hapag-Lloyd": 80
+    "REACH": {
+      "tickets": 218,
+      "carriers": [
+        {
+          "name": "ZIM",
+          "count": 49
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 47
+        },
+        {
+          "name": "COSCO",
+          "count": 38
+        },
+        {
+          "name": "OOCL",
+          "count": 21
+        },
+        {
+          "name": "ONE",
+          "count": 14
+        },
+        {
+          "name": "MSC",
+          "count": 13
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 13
+        },
+        {
+          "name": "MAERSK",
+          "count": 7
+        },
+        {
+          "name": "Evergreen",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "Bongkoch K.",
+          "email": "bkk.bong@wwl.sg"
+        },
+        {
+          "name": "tsn.ops5@wwl.cn",
+          "email": "tsn.ops5@wwl.cn"
+        },
+        {
+          "name": "Jerold Lin/ WWL TH",
+          "email": "bkk.jerold@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "REACH INDUSTRY (THAILAND) CO., LTD.",
+          "count": 25,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HUATAILI (THAILAND) CO., LTD.",
+          "count": 4,
+          "consignee_notify": ""
+        },
+        {
+          "name": "VOSSEN MANUFACTURE (THAILAND) CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HENGYUAN HOME FURNISHING (THAILAND) CO.,LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "鲸宝/jsjb-global(Amy Wei)"
+      ],
+      "fee_mode": "Prepaid为主(215/13)",
+      "trade_relationships": {
+        "shippers": [
+          "REACH INDUSTRY",
+          "MIDEA INTELLIGENT MANUFACTURING",
+          "HENGYUAN HOME FURNISHING",
+          "VOSSEN MANUFACTURE",
+          "EASTSEA INTERNATIONAL",
+          "NEW THAI WHEEL",
+          "NEW THAI WHEEL MANUFACTURING CO.,LTD",
+          "THAIHUAWEI BATTERY CO.,LTD",
+          "ALLOTEK CO., LTD",
+          "AQUA FAITH",
+          "AQUA FAITH COMPANY LIMITED",
+          "ARMSTRONG FLOORING",
+          "BILL NO.: COSU6441869620",
+          "CHUANGLI ELECTRICAL APPLIANCES",
+          "DEYEE INTERNATIONAL",
+          "DEYEE INTERNATIONAL COMPANY LIMITED",
+          "EIC SEMICONDUCTOR CO., LTD",
+          "JOINHANDS INJECTION SYSTEM",
+          "JST CABINETRY",
+          "JUSTLINK HVAC TECHNOLOGY"
+        ],
+        "consignees": [
+          "MING HAO XIN TRADING CO LTD",
+          "EXELON GLOBAL LLC",
+          "WW SUPPLY CHAIN LLC",
+          "CASEY CATON LOGISTICS",
+          "DRAVONEXIS INC",
+          "TAYLOR INTERNATIONAL INC",
+          "4X4 AUTO GROUP INC",
+          "HARRISON TRADING LLC",
+          "TVTAN BRVDGE INC",
+          "LUXORVANCE INC",
+          "MING HAO XIN TRANDING CO LTD",
+          "LONE STAR MACHINERY INC",
+          "BEUE HARBZR INC",
+          "CROSSLEY INTERNATIONAL TRADING LLC",
+          "ESQUISSE INTERNATIONAL LLC",
+          "HAUL N CRANCE INC",
+          "SOULACK INC",
+          "HONG FENG TRADING LLC",
+          "DISCOVERY COVE",
+          "NIKO'S IMPORT & EXPORT LLC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "REACH INDUSTRY",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 116
+          },
+          {
+            "shipper": "REACH INDUSTRY",
+            "consignee": "",
+            "count": 26
+          },
+          {
+            "shipper": "",
+            "consignee": "EXELON GLOBAL LLC",
+            "count": 7
+          },
+          {
+            "shipper": "MIDEA INTELLIGENT MANUFACTURING",
+            "consignee": "WW SUPPLY CHAIN LLC",
+            "count": 7
+          },
+          {
+            "shipper": "REACH INDUSTRY",
+            "consignee": "CASEY CATON LOGISTICS",
+            "count": 6
+          },
+          {
+            "shipper": "",
+            "consignee": "DRAVONEXIS INC",
+            "count": 3
+          },
+          {
+            "shipper": "HENGYUAN HOME FURNISHING",
+            "consignee": "",
+            "count": 3
+          },
+          {
+            "shipper": "VOSSEN MANUFACTURE",
+            "consignee": "",
+            "count": 3
+          },
+          {
+            "shipper": "VOSSEN MANUFACTURE",
+            "consignee": "TAYLOR INTERNATIONAL INC",
+            "count": 3
+          },
+          {
+            "shipper": "",
+            "consignee": "4X4 AUTO GROUP INC",
+            "count": 2
+          },
+          {
+            "shipper": "",
+            "consignee": "HARRISON TRADING LLC",
+            "count": 2
+          },
+          {
+            "shipper": "",
+            "consignee": "TAYLOR INTERNATIONAL INC",
+            "count": 2
+          },
+          {
+            "shipper": "",
+            "consignee": "TVTAN BRVDGE INC",
+            "count": 2
+          },
+          {
+            "shipper": "EASTSEA INTERNATIONAL",
+            "consignee": "DRAVONEXIS INC",
+            "count": 2
+          },
+          {
+            "shipper": "HENGYUAN HOME FURNISHING",
+            "consignee": "LUXORVANCE INC",
+            "count": 2
+          }
+        ]
+      }
     },
     "ELITE SOLAR": {
-      "OOCL": 6,
-      "WAN HAI": 5
-    },
-    "HITHIUM": {
-      "ONE": 17,
-      "OOCL": 38,
-      "ZIM": 68,
-      "MSC": 37
-    },
-    "MERSY CORP": {
-      "MSC": 41
-    },
-    "MAG SPECIALTIES": {
-      "ZIM": 1,
-      "Hapag-Lloyd": 4
-    },
-    "AVANTIX": {
-      "ONE": 66,
-      "WAN HAI": 57,
-      "COSCO": 13,
-      "ZIM": 15,
-      "MSC": 10
-    },
-    "HORIZON SOLAR": {
-      "OOCL": 127,
-      "MSC": 87
-    },
-    "HOUNEN SOLAR": {
-      "WAN HAI": 3,
-      "MSC": 13
-    },
-    "CLOU": {
-      "COSCO": 17,
-      "ZIM": 42
-    },
-    "VITA COCO": {
-      "ONE": 9
-    },
-    "PREVALON": {
-      "COSCO": 9,
-      "ZIM": 22
-    },
-    "DTC SA": {
-      "COSCO": 25,
-      "OOCL": 116,
-      "Evergreen": 124
-    },
-    "BTL INTERNATIONAL": {
-      "ONE": 91,
-      "MSC": 17
-    },
-    "PREVALON ENERGY": {
-      "ZIM": 95
-    },
-    "HAILIANG (海亮)": {
-      "ONE": 2,
-      "OOCL": 33
-    },
-    "HAIROBOT (海柔)": {
-      "Hapag-Lloyd": 4,
-      "ZIM": 180
-    },
-    "YES CHB": {
-      "ZIM": 147
-    },
-    "PTS INC": {
-      "Hapag-Lloyd": 16
-    },
-    "PACIFIC T&T": {
-      "Hapag-Lloyd": 16,
-      "ZIM": 10
-    },
-    "ROME TRANSPORT": {
-      "MSC": 1
-    },
-    "CLOU (科陆)": {
-      "ZIM": 10
-    },
-    "KELUO SHUANGYU (科陆双鱼)": {
-      "ZIM": 10
-    }
-  },
-  "customer_service": {
-    "HAIROBOT": {
-      "YES报关行": {
-        "count": 180,
-        "types": [
-          "卡车",
-          "清关"
+      "tickets": 216,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 106
+        },
+        {
+          "name": "OOCL",
+          "count": 34
+        },
+        {
+          "name": "WAN HAI",
+          "count": 29
+        },
+        {
+          "name": "Evergreen",
+          "count": 27
+        },
+        {
+          "name": "ONE",
+          "count": 15
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 5
+        }
+      ],
+      "origins": [
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Anggito Iqbal",
+          "email": "jkt.iqbal@wwl.sg"
+        },
+        {
+          "name": "Alexander Jkt",
+          "email": "jkt.alex@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "PT YISHENG PHOTOVOLTAIC NEW MATERIALS",
+          "count": 18,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT MEGA SOLAR INDONESIA",
+          "count": 12,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT MSUN SOLAR INDONESIA",
+          "count": 10,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT BLUE SKY SOLAR INDONESIA",
+          "count": 7,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT IDN SOLAR TECH",
+          "count": 3,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT. HARMONY TECHNOLOGY INDONESIA",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [
+        "Headwin(hanna.lax) + FCL Logistics CES(Adriana)"
+      ],
+      "truckers": [],
+      "consignee_contacts": [
+        "Maggie Yin(maggie.yin@elite-solar.com)",
+        "Nora Chang"
+      ],
+      "fee_mode": "Collect为主(280/35) — 催收压力高",
+      "trade_relationships": {
+        "shippers": [
+          "PT MEGA SOLAR INDONESIA",
+          "PT YISHENG PHOTOVOLTAIC NEW MATERIALS",
+          "PT MSUN SOLAR INDONESIA",
+          "PT BLUE SKY SOLAR INDONESIA",
+          "PT IDN SOLAR TECH",
+          "PT. HARMONY TECHNOLOGY INDONESIA",
+          "PT. MERAPI TCP TEKNOLOGI",
+          "PT BETTERIAL TECH INDONESIA",
+          "PT LINKSURE SOLUTIONS INDONESIA",
+          "PT SHENGYUE INDUSTRY INDONESIA",
+          "PT. HOVA INDUSTRI INDONESIA",
+          "PT. SHENGYUE INDUSTRY INDONESIA"
+        ],
+        "consignees": [
+          "ELITE SOLAR INC",
+          "WALSH CHB INC., DBA WFS CUSTOMS",
+          "HOUNEN SOLAR AMERICA INC",
+          "QUORVANTAP INC",
+          "KYNZIR TRADING LLC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "PT MEGA SOLAR INDONESIA",
+            "consignee": "",
+            "count": 13
+          },
+          {
+            "shipper": "PT YISHENG PHOTOVOLTAIC NEW MATERIALS",
+            "consignee": "",
+            "count": 13
+          },
+          {
+            "shipper": "PT MSUN SOLAR INDONESIA",
+            "consignee": "",
+            "count": 11
+          },
+          {
+            "shipper": "PT BLUE SKY SOLAR INDONESIA",
+            "consignee": "",
+            "count": 8
+          },
+          {
+            "shipper": "PT YISHENG PHOTOVOLTAIC NEW MATERIALS",
+            "consignee": "ELITE SOLAR INC",
+            "count": 6
+          },
+          {
+            "shipper": "PT IDN SOLAR TECH",
+            "consignee": "",
+            "count": 4
+          },
+          {
+            "shipper": "",
+            "consignee": "WALSH CHB INC., DBA WFS CUSTOMS",
+            "count": 3
+          },
+          {
+            "shipper": "PT. HARMONY TECHNOLOGY INDONESIA",
+            "consignee": "HOUNEN SOLAR AMERICA INC",
+            "count": 2
+          },
+          {
+            "shipper": "PT. MERAPI TCP TEKNOLOGI",
+            "consignee": "QUORVANTAP INC",
+            "count": 2
+          },
+          {
+            "shipper": "PT BETTERIAL TECH INDONESIA",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "PT LINKSURE SOLUTIONS INDONESIA",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "PT SHENGYUE INDUSTRY INDONESIA",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "PT. HARMONY TECHNOLOGY INDONESIA",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "PT. HOVA INDUSTRI INDONESIA",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "PT. MERAPI TCP TEKNOLOGI",
+            "consignee": "KYNZIR TRADING LLC",
+            "count": 1
+          }
         ]
       }
     },
     "HAILIANG": {
-      "FCC USA": {
-        "count": 6,
-        "types": []
-      },
-      "SCC Supply Chain": {
-        "count": 36,
-        "types": []
-      },
-      "Finwhale鲸运": {
-        "count": 20,
-        "types": []
-      }
-    },
-    "JINGZHOU": {
-      "PTS": {
-        "count": 141,
-        "types": [
-          "卡车"
+      "tickets": 95,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 52
+        },
+        {
+          "name": "OOCL",
+          "count": 17
+        },
+        {
+          "name": "COSCO",
+          "count": 8
+        },
+        {
+          "name": "ONE",
+          "count": 7
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 3
+        },
+        {
+          "name": "ZIM",
+          "count": 2
+        },
+        {
+          "name": "HMM",
+          "count": 2
+        },
+        {
+          "name": "Evergreen",
+          "count": 1
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Sienna",
+          "email": "sienna.ji@wwl.cn"
+        },
+        {
+          "name": "李丽丽",
+          "email": "sha.sales72@wwl.cn"
+        },
+        {
+          "name": "Lucie Pham",
+          "email": "vn.luciepham@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "HONG KONG HAILIANG METAL TRADING LIMITED",
+          "count": 2,
+          "consignee_notify": "Insert Name Address and Phone/Fax"
+        }
+      ],
+      "brokers": [],
+      "truckers": [
+        "SCC车队(Gloria Ni)",
+        "PTT",
+        "Automated Logistics(Eve Little)"
+      ],
+      "consignee_contacts": [
+        "Laufer Group/Chicago Import(chiimport@laufer.com, 630-757-6655)"
+      ],
+      "fee_mode": "Prepaid为主(7/2) + chassis由SCC车队付",
+      "trade_relationships": {
+        "shippers": [
+          "SUNIVERSE TECHNOLOGY SOLE CO.,LTD",
+          "HONG KONG HAILIANG METAL TRADING LIMITED",
+          "LOYAL HAILIANG COPPER",
+          "CONTINENT PACKAGING CORPORATION",
+          "HONGKONG HAILIANG METAL TRADING LIMITED",
+          "SHANGHAI HAILIANG COPPER CO.,LTD",
+          "THAI MEGACAB CO., LTD",
+          "VIET NAM CHEN HUI PACKING COMPANY LIMITED",
+          "ZHIXIN VN CO., LTD",
+          "ZILIN AUTO PARTS"
+        ],
+        "consignees": [
+          "HAILIANG COPPER TEXAS INC",
+          "CHAINVALUE US CO",
+          "SUNDIGO SOLAR MANUFACTURING INC",
+          "HAILIANG AMERICA CORPORATION",
+          "JOURNE BRANDS, INC",
+          "JMF COMPANY",
+          "ES FOUNDRY CORP",
+          "GOLDENHOME INTERNATIONAL INC",
+          "CUMMINS INC, FAURECIA EXHAUST SYSTEM INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "",
+            "consignee": "HAILIANG COPPER TEXAS INC",
+            "count": 11
+          },
+          {
+            "shipper": "SUNIVERSE TECHNOLOGY SOLE CO.,LTD",
+            "consignee": "CHAINVALUE US CO",
+            "count": 5
+          },
+          {
+            "shipper": "HONG KONG HAILIANG METAL TRADING LIMITED",
+            "consignee": "",
+            "count": 4
+          },
+          {
+            "shipper": "LOYAL HAILIANG COPPER",
+            "consignee": "HAILIANG COPPER TEXAS INC",
+            "count": 4
+          },
+          {
+            "shipper": "",
+            "consignee": "SUNDIGO SOLAR MANUFACTURING INC",
+            "count": 2
+          },
+          {
+            "shipper": "",
+            "consignee": "HAILIANG AMERICA CORPORATION",
+            "count": 1
+          },
+          {
+            "shipper": "CONTINENT PACKAGING CORPORATION",
+            "consignee": "JOURNE BRANDS, INC",
+            "count": 1
+          },
+          {
+            "shipper": "HONG KONG HAILIANG METAL TRADING LIMITED",
+            "consignee": "HAILIANG AMERICA CORPORATION",
+            "count": 1
+          },
+          {
+            "shipper": "HONGKONG HAILIANG METAL TRADING LIMITED",
+            "consignee": "JMF COMPANY",
+            "count": 1
+          },
+          {
+            "shipper": "SHANGHAI HAILIANG COPPER CO.,LTD",
+            "consignee": "",
+            "count": 1
+          },
+          {
+            "shipper": "SUNIVERSE TECHNOLOGY SOLE CO.,LTD",
+            "consignee": "ES FOUNDRY CORP",
+            "count": 1
+          },
+          {
+            "shipper": "THAI MEGACAB CO., LTD",
+            "consignee": "GOLDENHOME INTERNATIONAL INC",
+            "count": 1
+          },
+          {
+            "shipper": "VIET NAM CHEN HUI PACKING COMPANY LIMITED",
+            "consignee": "SUNDIGO SOLAR MANUFACTURING INC",
+            "count": 1
+          },
+          {
+            "shipper": "ZHIXIN VN CO., LTD",
+            "consignee": "SUNDIGO SOLAR MANUFACTURING INC",
+            "count": 1
+          },
+          {
+            "shipper": "ZILIN AUTO PARTS",
+            "consignee": "CUMMINS INC, FAURECIA EXHAUST SYSTEM INC",
+            "count": 1
+          }
         ]
       }
     },
-    "TERRA SOLAR": {
-      "KORNET": {
-        "count": 98,
-        "types": [
-          "卡车",
-          "清关"
-        ]
-      }
-    },
-    "HORIZON SOLAR": {
-      "WFS Customs": {
-        "count": 125,
-        "types": [
-          "报关"
-        ]
-      },
-      "Mercer CES": {
-        "count": 17,
-        "types": [
-          "CES查验"
+    "DTC": {
+      "tickets": 92,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 43
+        },
+        {
+          "name": "COSCO",
+          "count": 28
+        },
+        {
+          "name": "MSC",
+          "count": 11
+        },
+        {
+          "name": "ONE",
+          "count": 4
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 3
+        },
+        {
+          "name": "ZIM",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": " dtc.chenai@wwl.cn ",
+          "email": "dtc.chenai@wwl.cn"
+        },
+        {
+          "name": "Justin Jia - WWG XMN",
+          "email": "xmn.ops9@wwl.cn"
+        },
+        {
+          "name": "Henry Chen",
+          "email": "sha.ops55@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "count": 9,
+          "consignee_notify": ""
+        },
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 7,
+          "consignee_notify": "KALEFUA INC"
+        },
+        {
+          "name": "SHENZHEN LIMENG TECHNOLOGY CO., LTD",
+          "count": 4,
+          "consignee_notify": "HUAYE CO LTD"
+        },
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "JINJIANG HONGFILMS MANUFACTURING",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "内部事业部"
+      ],
+      "fee_mode": "Prepaid",
+      "trade_relationships": {
+        "shippers": [
+          "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "SHENZHEN LIMENG TECHNOLOGY CO., LTD",
+          "JINJIANG HONGFILMS MANUFACTURING",
+          "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD",
+          "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+          "NINGBO ZEERDA E-COMMERCE CO., LTD",
+          "STATES THAT",
+          "FUJIAN FONDLIVE HOUSEWARE CO.,LTD",
+          "GRAND LEISURE OUTDOOR PRODUCTS",
+          "GUANGZHOU RUICHENGDA ELECTRONICS CO., LTD",
+          "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD",
+          "OR ENTITLED TO THE POSSESSION OF THE GOODS OR OF THIS BILL OF LAD",
+          "SHENZHEN APEMAN SUPPLY CHAIN MANAGEMENT CO., LTD",
+          "SHENZHEN HONGMU LMPORT & EXPORT TRADE CO.,LTD",
+          "SHENZHEN ZHONGXIN ENTERPRISE SERVICE CO., LTD",
+          "XIANJU DIXIN INDUSTRY AND TRADE CO .,LTD",
+          "ZHANGZHOUSHI LONGWENQU DIANTAO E-COMMERCE"
+        ],
+        "consignees": [
+          "HUAYE CO LTD",
+          "KALEFUA INC",
+          "VALKYRA INC",
+          "YANQINIA INC",
+          "DELROSARIO BLADE",
+          "SEA RANGE TRADING CO INC",
+          "SPEEDY WHITE INTERNATIONAL INC",
+          "RITFIT LLC",
+          "FEITUO INTERNATIONAL LIMITED",
+          "CRIMSON OAK VENTURES INC",
+          "LUXION TRADING CO LTD",
+          "ZEDEK TRADE INC",
+          "CRIMSONIS INC",
+          "SUPGOOD INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+            "consignee": "",
+            "count": 10
+          },
+          {
+            "shipper": "SHENZHEN LIMENG TECHNOLOGY CO., LTD",
+            "consignee": "HUAYE CO LTD",
+            "count": 4
+          },
+          {
+            "shipper": "JINJIANG HONGFILMS MANUFACTURING",
+            "consignee": "",
+            "count": 3
+          },
+          {
+            "shipper": "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD",
+            "consignee": "",
+            "count": 3
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "",
+            "count": 3
+          },
+          {
+            "shipper": "NINGBO ZEERDA E-COMMERCE CO., LTD",
+            "consignee": "",
+            "count": 2
+          },
+          {
+            "shipper": "STATES THAT",
+            "consignee": "",
+            "count": 2
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "KALEFUA INC",
+            "count": 2
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "VALKYRA INC",
+            "count": 2
+          },
+          {
+            "shipper": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD",
+            "consignee": "YANQINIA INC",
+            "count": 2
+          },
+          {
+            "shipper": "FUJIAN FONDLIVE HOUSEWARE CO.,LTD",
+            "consignee": "DELROSARIO BLADE",
+            "count": 1
+          },
+          {
+            "shipper": "GRAND LEISURE OUTDOOR PRODUCTS",
+            "consignee": "SEA RANGE TRADING CO INC",
+            "count": 1
+          },
+          {
+            "shipper": "GUANGZHOU RUICHENGDA ELECTRONICS CO., LTD",
+            "consignee": "SPEEDY WHITE INTERNATIONAL INC",
+            "count": 1
+          },
+          {
+            "shipper": "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD",
+            "consignee": "RITFIT LLC",
+            "count": 1
+          },
+          {
+            "shipper": "OR ENTITLED TO THE POSSESSION OF THE GOODS OR OF THIS BILL OF LAD",
+            "consignee": "",
+            "count": 1
+          }
         ]
       }
     },
     "MAG SPECIALTIES": {
-      "Air Sea Chicago": {
-        "count": 15,
-        "types": []
-      }
-    },
-    "CLOU": {
-      "YES报关行": {
-        "count": 25,
-        "types": [
-          "卡车",
-          "清关"
-        ]
-      },
-      "PTT卡车": {
-        "count": 30,
-        "types": [
-          "卡车"
-        ]
-      }
-    },
-    "PREVALON": {
-      "YES报关行": {
-        "count": 3,
-        "types": [
-          "清关"
-        ]
-      }
-    },
-    "ASTRONERGY": {
-      "一海通": {
-        "count": 51,
-        "types": []
-      },
-      "Rome卡车": {
-        "count": 41,
-        "types": [
-          "询价"
-        ]
-      },
-      "Equator": {
-        "count": 7,
-        "types": [
-          "卡车"
-        ]
-      },
-      "Pioneer卡车": {
-        "count": 11,
-        "types": []
-      }
-    },
-    "BETTERBODYFOODS": {
-      "FCC USA": {
-        "count": 325,
-        "types": [
-          "卡车"
-        ]
-      }
-    },
-    "TERRASOULSUPERFOODS": {
-      "FCC USA": {
-        "count": 325,
-        "types": [
-          "卡车"
+      "tickets": 80,
+      "carriers": [
+        {
+          "name": "Hapag-Lloyd",
+          "count": 64
+        },
+        {
+          "name": "MSC",
+          "count": 11
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 4
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Shirley.Liu WWL TSN OPS",
+          "email": "tsn.ops14@wwl.cn"
+        },
+        {
+          "name": "dgu.sophielin@wwl.cn",
+          "email": "dgu.sophielin@wwl.cn"
+        },
+        {
+          "name": "dgu.jolingli@wwl.cn",
+          "email": "dgu.jolingli@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "Air Sea Chicago(Dongni Liu/Ryan Dunleavy, 847-640-6590)"
+      ],
+      "fee_mode": "混合",
+      "trade_relationships": {
+        "shippers": [],
+        "consignees": [
+          "MAG SPECIALTIES INC",
+          "SANTE DERIA LLC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "",
+            "consignee": "MAG SPECIALTIES INC",
+            "count": 41
+          },
+          {
+            "shipper": "",
+            "consignee": "SANTE DERIA LLC",
+            "count": 1
+          }
         ]
       }
     },
-    "HITHIUM": {
-      "PTT卡车": {
-        "count": 1,
-        "types": []
-      },
-      "Logistics Plus": {
-        "count": 15,
-        "types": [
-          "报关"
+    "GLOBAL OCEAN FORWARDING L": {
+      "tickets": 74,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 21
+        },
+        {
+          "name": "ONE",
+          "count": 13
+        },
+        {
+          "name": "ZIM",
+          "count": 12
+        },
+        {
+          "name": "COSCO",
+          "count": 11
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 10
+        },
+        {
+          "name": "MSC",
+          "count": 5
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "ngb.ops29@wwl.cn",
+          "email": "ngb.ops29@wwl.cn"
+        },
+        {
+          "name": "李丽丽",
+          "email": "sha.sales72@wwl.cn"
+        },
+        {
+          "name": "zhangdantong",
+          "email": "ada.zhang@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "NINGBO DINGSHANG INTERNATIONAL FREIGHT AGENCY",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "NINGBO DINGSHANG INTERNATIONAL FREIGHT AGENCY",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "SHENZHEN KHD TECHNOLOGY CO., LTD",
+          "SUNIVERSE TECHNOLOGY SOLE CO.,LTD",
+          "CHANGSHA HUASHENG TECHNOLOGY DEVELOPMENT CO., LTD"
+        ],
+        "consignees": [
+          "CHAINVALUE US CO",
+          "WIT TECHNOLOGY INNOVATION CO LTD"
+        ],
+        "top_routes": [
+          {
+            "shipper": "SHENZHEN KHD TECHNOLOGY CO., LTD",
+            "consignee": "",
+            "count": 5
+          },
+          {
+            "shipper": "SUNIVERSE TECHNOLOGY SOLE CO.,LTD",
+            "consignee": "CHAINVALUE US CO",
+            "count": 2
+          },
+          {
+            "shipper": "",
+            "consignee": "WIT TECHNOLOGY INNOVATION CO LTD",
+            "count": 1
+          },
+          {
+            "shipper": "CHANGSHA HUASHENG TECHNOLOGY DEVELOPMENT CO., LTD",
+            "consignee": "",
+            "count": 1
+          }
         ]
       }
     },
-    "PTS INC": {
-      "PTS": {
-        "count": 187,
-        "types": []
-      }
-    },
-    "FCC USA": {
-      "FCC USA": {
-        "count": 720,
-        "types": [
-          "卡车"
+    "JINGZHOU": {
+      "tickets": 39,
+      "carriers": [
+        {
+          "name": "MAERSK",
+          "count": 21
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 12
+        },
+        {
+          "name": "MSC",
+          "count": 3
+        },
+        {
+          "name": "COSCO",
+          "count": 3
+        }
+      ],
+      "origins": [
+        {
+          "name": "adamhuang",
+          "email": "adamhuang@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "PACIFIC TRANSIT SERVICES INC.(NYC)",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HUBEI JIANGHAN NEW MATERIALS CO.,LTD",
+          "count": 2,
+          "consignee_notify": "PACIFIC TRANSIT SERVICES INC."
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "PTS Inc(Andy Kim/Sam Kim)"
+      ],
+      "fee_mode": "混合",
+      "trade_relationships": {
+        "shippers": [
+          "HUBEI JIANGHAN NEW MATERIALS CO.,LTD",
+          "PACIFIC TRANSIT SERVICES INC"
+        ],
+        "consignees": [
+          "PACIFIC TRANSIT SERVICES INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "HUBEI JIANGHAN NEW MATERIALS CO.,LTD",
+            "consignee": "PACIFIC TRANSIT SERVICES INC",
+            "count": 3
+          },
+          {
+            "shipper": "PACIFIC TRANSIT SERVICES INC",
+            "consignee": "",
+            "count": 3
+          }
         ]
       }
     },
-    "PACIFIC T&T": {
-      "PTS": {
-        "count": 86,
-        "types": []
-      },
-      "PTT卡车": {
-        "count": 10,
-        "types": [
-          "卡车"
+    "AVANTIX": {
+      "tickets": 36,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 13
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 10
+        },
+        {
+          "name": "ZIM",
+          "count": 9
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 3
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "dgu.jolingli@wwl.cn",
+          "email": "dgu.jolingli@wwl.cn"
+        },
+        {
+          "name": "dgu.sophielin@wwl.cn",
+          "email": "dgu.sophielin@wwl.cn"
+        },
+        {
+          "name": "ngb.ops25@wwl.cn",
+          "email": "ngb.ops25@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "Kim Line(import@kimline.us)"
+      ],
+      "fee_mode": "混合",
+      "trade_relationships": {
+        "shippers": [
+          "M&T CO.,LIMITED"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "M&T CO.,LIMITED",
+            "consignee": "",
+            "count": 1
+          }
         ]
       }
     },
-    "ASTRONERGY (正泰新能)": {
-      "Pioneer": {
-        "count": 48,
-        "types": []
-      }
-    },
-    "CLOU (科陆)": {
-      "YES报关行": {
-        "count": 2,
-        "types": []
-      },
-      "PTT卡车": {
-        "count": 10,
-        "types": [
-          "卡车"
+    "BILLINDA REALTY INCORPORA": {
+      "tickets": 28,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 26
+        },
+        {
+          "name": "OOCL",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "sha.ops68",
+          "email": "sha.ops68@wwl.cn"
+        },
+        {
+          "name": "songwenwen@wwl.sg",
+          "email": "songwenwen@wwl.sg"
+        },
+        {
+          "name": "Wendy-Ding-wwlngb",
+          "email": "ngb.sales1@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "STATES THAT"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "STATES THAT",
+            "consignee": "",
+            "count": 1
+          }
         ]
       }
     },
-    "YES CHB": {
-      "YES报关行": {
-        "count": 149,
-        "types": [
-          "清关",
-          "卡车"
-        ]
-      }
-    },
-    "HAIROBOT (海柔)": {
-      "YES报关行": {
-        "count": 147,
-        "types": [
-          "清关",
-          "卡车"
-        ]
-      }
-    },
-    "HAILIANG (海亮)": {
-      "SCC Supply Chain": {
-        "count": 16,
-        "types": []
-      }
-    },
-    "ROME TRANSPORT": {
-      "Rome卡车": {
-        "count": 1,
-        "types": []
-      }
-    },
-    "KELUO SHUANGYU (科陆双鱼)": {
-      "PTT卡车": {
-        "count": 10,
-        "types": [
-          "卡车"
+    "TO ORDER OF SHIPPER": {
+      "tickets": 27,
+      "carriers": [
+        {
+          "name": "COSCO",
+          "count": 26
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Wang Jiong",
+          "email": "wangjiong@wwl.cn"
+        },
+        {
+          "name": "ngb.ops29@wwl.cn",
+          "email": "ngb.ops29@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "CUMMINS INC.500 JACKSON STM/C19608 COLUMBUS，INDIANA 47201 US"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "CUMMINS INC.500 JACKSON STM/C19608 COLUMBUS，INDIANA 47201 US",
+            "consignee": "",
+            "count": 1
+          }
         ]
       }
     },
     "NEXTERA": {
-      "Direct CHB": {
-        "count": 15,
-        "types": [
-          "报关"
-        ]
-      },
-      "Traffix": {
-        "count": 10,
-        "types": [
-          "卡车"
-        ]
-      },
-      "Dynasty DFW": {
-        "count": 8,
-        "types": [
-          "仓库"
-        ]
-      }
-    },
-    "ELITE SOLAR": {
-      "Headwin": {
-        "count": 5,
-        "types": [
-          "报关"
-        ]
-      },
-      "FCL Logistics": {
-        "count": 8,
-        "types": [
-          "CES查验"
-        ]
-      },
-      "Mercer CES": {
-        "count": 17,
-        "types": [
-          "CES查验"
-        ]
-      }
+      "tickets": 23,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 23
+        }
+      ],
+      "origins": [],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "THORNOVA SOLAR(Ellen Jin, ellen@thornova-solar.com)"
+      ],
+      "fee_mode": "混合"
     },
     "HOUNEN SOLAR": {
-      "Fura Freight": {
-        "count": 4,
-        "types": [
-          "报关"
-        ]
-      },
-      "Online Freight": {
-        "count": 12,
-        "types": [
-          "卡车"
-        ]
-      },
-      "CTS Global": {
-        "count": 1,
-        "types": [
-          "仓库"
+      "tickets": 22,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 21
+        },
+        {
+          "name": "ONE",
+          "count": 1
+        }
+      ],
+      "origins": [],
+      "shippers_from_pdf": [],
+      "brokers": [
+        "Fura Freight(Chris Henke)"
+      ],
+      "truckers": [
+        "Online Freight(Ryan Johnson)",
+        "Fura Freight"
+      ],
+      "consignee_contacts": [
+        "Monica Wang(monica@hounenus.com)"
+      ],
+      "fee_mode": "Collect为主"
+    },
+    "MING HAO XIN": {
+      "tickets": 21,
+      "carriers": [
+        {
+          "name": "CMA-CGM",
+          "count": 12
+        },
+        {
+          "name": "ONE",
+          "count": 5
+        },
+        {
+          "name": "MAERSK",
+          "count": 2
+        },
+        {
+          "name": "COSCO",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "Bongkoch Kongmanee",
+          "email": "bkk.bong@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "鲸宝(jsjb-global)"
+      ],
+      "fee_mode": "Prepaid(27/0)",
+      "trade_relationships": {
+        "shippers": [
+          "JOINHANDS INJECTION SYSTEM",
+          "MIDEA INTELLIGENT MANUFACTURING",
+          "QAP FILTER",
+          "JOINHANDS INJECTION"
+        ],
+        "consignees": [
+          "MING HAO XIN TRADING CO LTD"
+        ],
+        "top_routes": [
+          {
+            "shipper": "JOINHANDS INJECTION SYSTEM",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 17
+          },
+          {
+            "shipper": "",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 12
+          },
+          {
+            "shipper": "MIDEA INTELLIGENT MANUFACTURING",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 2
+          },
+          {
+            "shipper": "QAP FILTER",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 2
+          },
+          {
+            "shipper": "JOINHANDS INJECTION",
+            "consignee": "MING HAO XIN TRADING CO LTD",
+            "count": 1
+          }
         ]
       }
     },
-    "AVANTIX": {
-      "Kim Line": {
-        "count": 34,
-        "types": [
-          "报关",
-          "卡车"
+    "ASTRONERGY": {
+      "tickets": 20,
+      "carriers": [
+        {
+          "name": "COSCO",
+          "count": 11
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 4
+        },
+        {
+          "name": "OOCL",
+          "count": 3
+        },
+        {
+          "name": "MSC",
+          "count": 1
+        },
+        {
+          "name": "HMM",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Emily Huang",
+          "email": "pld.vip1@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [
+        "CPG Container Port Group(Kevin Hayes)"
+      ],
+      "truckers": [
+        "Rome Transportation(Hamed)",
+        "Pioneer Solutions(Jose Torres)",
+        "PTT"
+      ],
+      "consignee_contacts": [
+        "韩晨阳(astronergy.com)"
+      ],
+      "fee_mode": "Collect为主"
+    },
+    "HORIZON SOLAR": {
+      "tickets": 20,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 14
+        },
+        {
+          "name": "MSC",
+          "count": 6
+        }
+      ],
+      "origins": [
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Anggito Iqbal",
+          "email": "jkt.iqbal@wwl.sg"
+        },
+        {
+          "name": "Bene",
+          "email": "jkt.bene@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "PT THORNOVA SOLAR INDONESIA ON BEHALF OF",
+          "count": 14,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [
+        "WFS Customs(Brian Walsh, NY)"
+      ],
+      "truckers": [],
+      "consignee_contacts": [
+        "Elaine(horizonsolar001@gmail.com, 626-869-6266)"
+      ],
+      "fee_mode": "全Collect(89/0) — 催收压力极高!",
+      "trade_relationships": {
+        "shippers": [],
+        "consignees": [
+          "WALSH CHB INC., DBA WFS CUSTOMS"
+        ],
+        "top_routes": [
+          {
+            "shipper": "",
+            "consignee": "WALSH CHB INC., DBA WFS CUSTOMS",
+            "count": 1
+          }
         ]
       }
+    },
+    "SAMSUNG": {
+      "tickets": 14,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 11
+        },
+        {
+          "name": "ONE",
+          "count": 1
+        },
+        {
+          "name": "Hapag-Lloyd",
+          "count": 1
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Setlla -wwlngb",
+          "email": "ngb.cus1@wwl.cn"
+        },
+        {
+          "name": "Sienna",
+          "email": "sienna.ji@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [
+        "(30封,无主要联系人名)"
+      ],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY",
+            "consignee": "",
+            "count": 5
+          }
+        ]
+      }
+    },
+    "HITHIUM": {
+      "tickets": 11,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 3
+        },
+        {
+          "name": "MSC",
+          "count": 3
+        },
+        {
+          "name": "CMA-CGM",
+          "count": 3
+        },
+        {
+          "name": "ONE",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "Nancy - WWG XMN",
+          "email": "xmn.ops6@wwl.cn"
+        },
+        {
+          "name": "Yate Li - WWG XMN",
+          "email": "xmn.cus3@wwl.cn"
+        },
+        {
+          "name": "stevenpu@wwl.cn",
+          "email": "stevenpu@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [
+        "客户自行安排(Yancey: \"my trucker\")"
+      ],
+      "consignee_contacts": [
+        "Steven Harris(469-xxx)",
+        "Yancey Conry(Sr Manager, 303-260-xxx)",
+        "HsinPeng Tseng"
+      ],
+      "fee_mode": "全Collect(55/0) — CIF+Collect, 催收压力极高!",
+      "trade_relationships": {
+        "shippers": [
+          "XIAMEN HITHIUM ENERGY STORAGE TECHNOLOGY CO., LTD"
+        ],
+        "consignees": [
+          "HITHIUM TECH USA INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "XIAMEN HITHIUM ENERGY STORAGE TECHNOLOGY CO., LTD",
+            "consignee": "HITHIUM TECH USA INC",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "PREVALON": {
+      "tickets": 7,
+      "carriers": [
+        {
+          "name": "ZIM",
+          "count": 3
+        },
+        {
+          "name": "MSC",
+          "count": 2
+        },
+        {
+          "name": "OOCL",
+          "count": 1
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Judy Zhang",
+          "email": "sha.ops63@wwl.cn"
+        },
+        {
+          "name": "Vivi Huang",
+          "email": "sha.salessup25@wwl.cn"
+        },
+        {
+          "name": "Yancy Yu",
+          "email": "szn.yancyyu@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [
+        {
+          "name": "SHENZHEN CLOU ELECTRONICS CO.,LTD",
+          "count": 2,
+          "consignee_notify": "PREVALON ENERGY LLC"
+        }
+      ],
+      "brokers": [
+        "YES报关行(Winkie Yu)"
+      ],
+      "truckers": [
+        "PTT(Jack/Shaun)"
+      ],
+      "consignee_contacts": [
+        "Kelly Hiatt(kelly.hiatt@prevalonenergy.com, 407-465-7761)"
+      ],
+      "fee_mode": "Prepaid(3/0)",
+      "trade_relationships": {
+        "shippers": [
+          "SHENZHEN CLOU ELECTRONICS CO.,LTD"
+        ],
+        "consignees": [
+          "PREVALON ENERGY LLC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "SHENZHEN CLOU ELECTRONICS CO.,LTD",
+            "consignee": "PREVALON ENERGY LLC",
+            "count": 3
+          }
+        ]
+      }
+    },
+    "THORNOVA SOLAR": {
+      "tickets": 7,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 6
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "ruby.ruan",
+          "email": "ruby.ruan@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知"
+    },
+    "THE QUALITY THREAD & NOTI": {
+      "tickets": 6,
+      "carriers": [
+        {
+          "name": "ONE",
+          "count": 6
+        }
+      ],
+      "origins": [
+        {
+          "name": "Eart",
+          "email": "bkk.eart@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "ALPHA LASER TECH"
+        ],
+        "consignees": [
+          "HSG TECH INC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "ALPHA LASER TECH",
+            "consignee": "HSG TECH INC",
+            "count": 2
+          }
+        ]
+      }
+    },
+    "ELITE EAGLE": {
+      "tickets": 4,
+      "carriers": [
+        {
+          "name": "MSC",
+          "count": 2
+        },
+        {
+          "name": "ONE",
+          "count": 1
+        },
+        {
+          "name": "COSCO",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Lucie Pham",
+          "email": "vn.luciepham@wwl.sg"
+        },
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Bander Zhou",
+          "email": "sha.obd9@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "VIETNAM YONGXING ALUMINIUM INDUSTRY CO.,LTD"
+        ],
+        "consignees": [
+          "ELITE EAGLE GROUP LLC"
+        ],
+        "top_routes": [
+          {
+            "shipper": "VIETNAM YONGXING ALUMINIUM INDUSTRY CO.,LTD",
+            "consignee": "ELITE EAGLE GROUP LLC",
+            "count": 3
+          }
+        ]
+      }
+    },
+    "INNER MONGOLIA NORTH HAULER": {
+      "tickets": 4,
+      "carriers": [
+        {
+          "name": "OOCL",
+          "count": 3
+        }
+      ],
+      "origins": [],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知"
+    },
+    "TOUGHFIT": {
+      "tickets": 4,
+      "carriers": [
+        {
+          "name": "Evergreen",
+          "count": 4
+        }
+      ],
+      "origins": [],
+      "shippers_from_pdf": [
+        {
+          "name": "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD",
+          "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD",
+            "consignee": "",
+            "count": 4
+          },
+          {
+            "shipper": "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD",
+            "consignee": "",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "CLOU": {
+      "tickets": 3,
+      "carriers": [
+        {
+          "name": "COSCO",
+          "count": 2
+        },
+        {
+          "name": "MSC",
+          "count": 1
+        }
+      ],
+      "origins": [
+        {
+          "name": "Vivi Huang",
+          "email": "sha.salessup25@wwl.cn"
+        },
+        {
+          "name": "Judy Zhang",
+          "email": "sha.ops63@wwl.cn"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [
+        "YES报关行"
+      ],
+      "truckers": [
+        "PTT"
+      ],
+      "consignee_contacts": [
+        "马亚红(mayh114@szclou.com)"
+      ],
+      "fee_mode": "混合",
+      "trade_relationships": {
+        "shippers": [
+          "ALLISON NO. O",
+          "SHENZHEN CLOU ELECTRONICS CO.,LTD"
+        ],
+        "consignees": [
+          "TO ORDER KGS",
+          "SIGNATURE: PRINT"
+        ],
+        "top_routes": [
+          {
+            "shipper": "ALLISON NO. O",
+            "consignee": "TO ORDER KGS",
+            "count": 1
+          },
+          {
+            "shipper": "SHENZHEN CLOU ELECTRONICS CO.,LTD",
+            "consignee": "SIGNATURE: PRINT",
+            "count": 1
+          }
+        ]
+      }
+    },
+    "KINGSFIELD": {
+      "tickets": 2,
+      "carriers": [
+        {
+          "name": "Evergreen",
+          "count": 2
+        }
+      ],
+      "origins": [],
+      "shippers_from_pdf": [
+        {
+          "name": "KINGSFIELD CHINA INC",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知",
+      "trade_relationships": {
+        "shippers": [
+          "KINGSFIELD CHINA INC"
+        ],
+        "consignees": [],
+        "top_routes": [
+          {
+            "shipper": "KINGSFIELD CHINA INC",
+            "consignee": "",
+            "count": 3
+          }
+        ]
+      }
+    },
+    "MALT PRODUCTS": {
+      "tickets": 2,
+      "carriers": [
+        {
+          "name": "ZIM",
+          "count": 2
+        }
+      ],
+      "origins": [
+        {
+          "name": "bkk.un",
+          "email": "bkk.un@wwl.sg"
+        },
+        {
+          "name": "Teerada",
+          "email": "bkk.pang@wwl.sg"
+        },
+        {
+          "name": "Jerold Lin/ WWL TH",
+          "email": "bkk.jerold@wwl.sg"
+        }
+      ],
+      "shippers_from_pdf": [],
+      "brokers": [],
+      "truckers": [],
+      "consignee_contacts": [],
+      "fee_mode": "未知"
     }
   },
+  "trade_relationships_updated": "2026-04-02",
+  "trade_relationships_stats": {
+    "total_records": 775,
+    "unique_shippers": 144,
+    "unique_consignees": 113,
+    "sources": [
+      "sa_email",
+      "mbl_records",
+      "trade_relations_json",
+      "email_body"
+    ]
+  },
   "supply_chains": {
-    "TERRA SOLAR": {
-      "carriers": {},
+    "HAIROBOT": {
+      "carriers": {
+        "OOCL": 276,
+        "COSCO": 187,
+        "MSC": 122,
+        "ONE": 71,
+        "Hapag-Lloyd": 66,
+        "ZIM": 19,
+        "CMA-CGM": 14,
+        "MAERSK": 2
+      },
+      "brokers": {
+        "YES CHB": 180
+      },
+      "truckers": {
+        "Evans Delivery": 20,
+        "SCC Supply Chain": 10
+      },
+      "agents": {},
+      "top_carrier": "OOCL",
+      "concentration": "36%",
+      "chain_completeness": 1.0,
+      "shippers": [
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 37,
+          "consignee_notify": ""
+        },
+        {
+          "name": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "count": 19,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 7,
+          "consignee_notify": "Insert Name Address and Phone/Fax"
+        },
+        {
+          "name": "PT MEGA SOLAR INDONESIA",
+          "count": 7,
+          "consignee_notify": ""
+        },
+        {
+          "name": "TINH NHAT PHAM CO.,LTD",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN HONGMU LMPORT & EXPORT TRADE CO.,LTD.",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHANGHAI HAILIANG COPPER CO.,LTD",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT THORNOVA SOLAR INDONESIA ON BEHALF OF",
+          "count": 5,
+          "consignee_notify": ""
+        },
+        {
+          "name": "ZHONG XIN YA TAI VIET NAM CO., LTD",
+          "count": 4,
+          "consignee_notify": ""
+        },
+        {
+          "name": "YOU SHENG JU FURNITURE CO.,LTD",
+          "count": 4,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": "Renee Lin-WWLSZN",
+          "email": "szn.reneelin@wwl.cn"
+        },
+        {
+          "name": "Yate Li - WWG XMN",
+          "email": "xmn.cus3@wwl.cn"
+        },
+        {
+          "name": "Winnie Shen",
+          "email": "sha.ops4@wwl.cn"
+        }
+      ]
+    },
+    "REACH": {
+      "carriers": {
+        "ZIM": 49,
+        "CMA-CGM": 47,
+        "COSCO": 38,
+        "OOCL": 21,
+        "ONE": 14,
+        "MSC": 13,
+        "Hapag-Lloyd": 13,
+        "MAERSK": 7,
+        "Evergreen": 2
+      },
       "brokers": {},
       "truckers": {},
-      "agents": {
-        "KORNET": 98
+      "agents": {},
+      "top_carrier": "ZIM",
+      "concentration": "24%",
+      "chain_completeness": 0.33,
+      "shippers": [
+        {
+          "name": "REACH INDUSTRY (THAILAND) CO., LTD.",
+          "count": 25,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HUATAILI (THAILAND) CO., LTD.",
+          "count": 4,
+          "consignee_notify": ""
+        },
+        {
+          "name": "VOSSEN MANUFACTURE (THAILAND) CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HENGYUAN HOME FURNISHING (THAILAND) CO.,LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": "Bongkoch K.",
+          "email": "bkk.bong@wwl.sg"
+        },
+        {
+          "name": "tsn.ops5@wwl.cn",
+          "email": "tsn.ops5@wwl.cn"
+        },
+        {
+          "name": "Jerold Lin/ WWL TH",
+          "email": "bkk.jerold@wwl.sg"
+        }
+      ]
+    },
+    "ELITE SOLAR": {
+      "carriers": {
+        "MSC": 106,
+        "OOCL": 34,
+        "WAN HAI": 29,
+        "Evergreen": 27,
+        "ONE": 15,
+        "CMA-CGM": 5
       },
-      "top_carrier": "-",
-      "concentration": "0%",
-      "chain_completeness": 0.0
+      "brokers": {
+        "Headwin": 5
+      },
+      "truckers": {
+        "Mercer CES": 17
+      },
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "49%",
+      "chain_completeness": 1.0,
+      "shippers": [
+        {
+          "name": "PT YISHENG PHOTOVOLTAIC NEW MATERIALS",
+          "count": 18,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT MEGA SOLAR INDONESIA",
+          "count": 12,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT MSUN SOLAR INDONESIA",
+          "count": 10,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT BLUE SKY SOLAR INDONESIA",
+          "count": 7,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT IDN SOLAR TECH",
+          "count": 3,
+          "consignee_notify": ""
+        },
+        {
+          "name": "PT. HARMONY TECHNOLOGY INDONESIA",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Anggito Iqbal",
+          "email": "jkt.iqbal@wwl.sg"
+        },
+        {
+          "name": "Alexander Jkt",
+          "email": "jkt.alex@wwl.sg"
+        }
+      ]
     },
     "HAILIANG": {
       "carriers": {
-        "MSC": 61,
-        "ONE": 42,
-        "ZIM": 10,
-        "COSCO": 7,
-        "OOCL": 21,
-        "HMM": 7,
-        "Hapag-Lloyd": 3
+        "MSC": 52,
+        "OOCL": 17,
+        "COSCO": 8,
+        "ONE": 7,
+        "Hapag-Lloyd": 3,
+        "ZIM": 2,
+        "HMM": 2,
+        "Evergreen": 1,
+        "CMA-CGM": 1
       },
       "brokers": {
         "Laufer Group": 366
       },
       "truckers": {
         "SCC Supply Chain": 36,
-        "Finwhale": 20,
-        "Automated Logistics": 8
+        "Finwhale": 20
       },
-      "agents": {
-        "FCC USA": 6,
-        "SCC Supply Chain": 36,
-        "Finwhale鲸运": 20,
-        "象屿Xiangyu": 18
-      },
-      "top_carrier": "MSC",
-      "concentration": "60%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {
-        "Gloria Ni(SCC)": "operation.us@scc-supplychain.com",
-        "Laufer": "chiimport@laufer.com",
-        "Joanne(Finwhale)": "joanne@finwhalelogistics.com"
-      }
-    },
-    "PREVALON": {
-      "carriers": {
-        "COSCO": 9,
-        "ZIM": 22
-      },
-      "brokers": {
-        "YES报关行": 3
-      },
-      "truckers": {},
       "agents": {},
-      "top_carrier": "ZIM",
-      "concentration": "71%",
-      "chain_completeness": 66.66666666666666
+      "top_carrier": "MSC",
+      "concentration": "56%",
+      "chain_completeness": 1.0,
+      "shippers": [
+        {
+          "name": "HONG KONG HAILIANG METAL TRADING LIMITED",
+          "count": 2,
+          "consignee_notify": "Insert Name Address and Phone/Fax"
+        }
+      ],
+      "origins": [
+        {
+          "name": "Sienna",
+          "email": "sienna.ji@wwl.cn"
+        },
+        {
+          "name": "李丽丽",
+          "email": "sha.sales72@wwl.cn"
+        },
+        {
+          "name": "Lucie Pham",
+          "email": "vn.luciepham@wwl.sg"
+        }
+      ]
     },
-    "ASTRONERGY": {
-      "carriers": {},
-      "brokers": {},
-      "truckers": {
-        "Rome卡车": 41,
-        "Pioneer卡车": 11
-      },
-      "agents": {
-        "一海通": 51,
-        "Equator": 7
-      },
-      "top_carrier": "-",
-      "concentration": "0%",
-      "chain_completeness": 33.33333333333333
-    },
-    "MERSY CORP": {
+    "DTC": {
       "carriers": {
-        "MSC": 9
+        "OOCL": 43,
+        "COSCO": 28,
+        "MSC": 11,
+        "ONE": 4,
+        "CMA-CGM": 3,
+        "ZIM": 2
       },
       "brokers": {},
       "truckers": {},
       "agents": {},
-      "top_carrier": "MSC",
-      "concentration": "100%",
-      "chain_completeness": 33.33333333333333
+      "top_carrier": "OOCL",
+      "concentration": "47%",
+      "chain_completeness": 0.33,
+      "shippers": [
+        {
+          "name": "GUANGZHOU TIANBOCHANG TRADING CO., LTD",
+          "count": 9,
+          "consignee_notify": ""
+        },
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 7,
+          "consignee_notify": "KALEFUA INC"
+        },
+        {
+          "name": "SHENZHEN LIMENG TECHNOLOGY CO., LTD",
+          "count": 4,
+          "consignee_notify": "HUAYE CO LTD"
+        },
+        {
+          "name": "ZHENGZHOU AOJIE TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "TAIZHOU XIANGTAI SPORTS GOODS CO., LTD",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "JINJIANG HONGFILMS MANUFACTURING",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": " dtc.chenai@wwl.cn ",
+          "email": "dtc.chenai@wwl.cn"
+        },
+        {
+          "name": "Justin Jia - WWG XMN",
+          "email": "xmn.ops9@wwl.cn"
+        },
+        {
+          "name": "Henry Chen",
+          "email": "sha.ops55@wwl.cn"
+        }
+      ]
     },
     "MAG SPECIALTIES": {
       "carriers": {
-        "ZIM": 1,
-        "Hapag-Lloyd": 4
+        "Hapag-Lloyd": 64,
+        "MSC": 11,
+        "CMA-CGM": 4,
+        "COSCO": 1
       },
-      "brokers": {},
-      "truckers": {},
-      "agents": {
-        "Air Sea Chicago": 15
+      "brokers": {
+        "Air&Sea Chicago": 71
       },
+      "truckers": {
+        "Air&Sea Chicago": 71
+      },
+      "agents": {},
       "top_carrier": "Hapag-Lloyd",
       "concentration": "80%",
-      "chain_completeness": 33.33333333333333
+      "chain_completeness": 1.0,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Shirley.Liu WWL TSN OPS",
+          "email": "tsn.ops14@wwl.cn"
+        },
+        {
+          "name": "dgu.sophielin@wwl.cn",
+          "email": "dgu.sophielin@wwl.cn"
+        },
+        {
+          "name": "dgu.jolingli@wwl.cn",
+          "email": "dgu.jolingli@wwl.cn"
+        }
+      ]
     },
-    "ELITE EAGLE": {
+    "GLOBAL OCEAN FORWARDING L": {
       "carriers": {
-        "ONE": 2,
-        "COSCO": 1,
-        "MSC": 2
+        "OOCL": 21,
+        "ONE": 13,
+        "ZIM": 12,
+        "COSCO": 11,
+        "Hapag-Lloyd": 10,
+        "MSC": 5,
+        "CMA-CGM": 2
       },
       "brokers": {},
       "truckers": {},
       "agents": {},
-      "top_carrier": "ONE",
-      "concentration": "40%",
-      "chain_completeness": 33.33333333333333
+      "top_carrier": "OOCL",
+      "concentration": "28%",
+      "chain_completeness": 0.33,
+      "shippers": [
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "SHENZHEN KHD TECHNOLOGY CO., LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "NINGBO DINGSHANG INTERNATIONAL FREIGHT AGENCY",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "NINGBO DINGSHANG INTERNATIONAL FREIGHT AGENCY",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": "ngb.ops29@wwl.cn",
+          "email": "ngb.ops29@wwl.cn"
+        },
+        {
+          "name": "李丽丽",
+          "email": "sha.sales72@wwl.cn"
+        },
+        {
+          "name": "zhangdantong",
+          "email": "ada.zhang@wwl.cn"
+        }
+      ]
+    },
+    "JINGZHOU": {
+      "carriers": {
+        "MAERSK": 21,
+        "Hapag-Lloyd": 12,
+        "MSC": 3,
+        "COSCO": 3
+      },
+      "brokers": {},
+      "truckers": {
+        "PTS Inc": 56
+      },
+      "agents": {},
+      "top_carrier": "MAERSK",
+      "concentration": "54%",
+      "chain_completeness": 0.67,
+      "shippers": [
+        {
+          "name": "PACIFIC TRANSIT SERVICES INC.(NYC)",
+          "count": 2,
+          "consignee_notify": ""
+        },
+        {
+          "name": "HUBEI JIANGHAN NEW MATERIALS CO.,LTD",
+          "count": 2,
+          "consignee_notify": "PACIFIC TRANSIT SERVICES INC."
+        }
+      ],
+      "origins": [
+        {
+          "name": "adamhuang",
+          "email": "adamhuang@wwl.cn"
+        }
+      ]
+    },
+    "AVANTIX": {
+      "carriers": {
+        "MSC": 13,
+        "CMA-CGM": 10,
+        "ZIM": 9,
+        "Hapag-Lloyd": 3,
+        "COSCO": 1
+      },
+      "brokers": {
+        "Kim Line": 34
+      },
+      "truckers": {
+        "Kim Line": 34
+      },
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "36%",
+      "chain_completeness": 1.0,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "dgu.jolingli@wwl.cn",
+          "email": "dgu.jolingli@wwl.cn"
+        },
+        {
+          "name": "dgu.sophielin@wwl.cn",
+          "email": "dgu.sophielin@wwl.cn"
+        },
+        {
+          "name": "ngb.ops25@wwl.cn",
+          "email": "ngb.ops25@wwl.cn"
+        }
+      ]
+    },
+    "BILLINDA REALTY INCORPORA": {
+      "carriers": {
+        "MSC": 26,
+        "OOCL": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "93%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "sha.ops68",
+          "email": "sha.ops68@wwl.cn"
+        },
+        {
+          "name": "songwenwen@wwl.sg",
+          "email": "songwenwen@wwl.sg"
+        },
+        {
+          "name": "Wendy-Ding-wwlngb",
+          "email": "ngb.sales1@wwl.cn"
+        }
+      ]
+    },
+    "TO ORDER OF SHIPPER": {
+      "carriers": {
+        "COSCO": 26,
+        "Hapag-Lloyd": 1
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "COSCO",
+      "concentration": "96%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Wang Jiong",
+          "email": "wangjiong@wwl.cn"
+        },
+        {
+          "name": "ngb.ops29@wwl.cn",
+          "email": "ngb.ops29@wwl.cn"
+        }
+      ]
+    },
+    "NEXTERA": {
+      "carriers": {
+        "MSC": 23
+      },
+      "brokers": {
+        "Direct CHB": 15
+      },
+      "truckers": {
+        "Traffix": 10
+      },
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "100%",
+      "chain_completeness": 1.0,
+      "shippers": [],
+      "origins": []
     },
     "HOUNEN SOLAR": {
       "carriers": {
-        "WAN HAI": 3,
-        "MSC": 14,
+        "MSC": 21,
         "ONE": 1
       },
       "brokers": {
@@ -536,188 +2698,55 @@
       "truckers": {
         "Online Freight": 12
       },
-      "agents": {
-        "CTS Global Solutions": 1
-      },
-      "top_carrier": "MSC",
-      "concentration": "93%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {
-        "Monica Wang": "monica@hounenus.com",
-        "Chris Henke(Fura)": "chris.henke@fura.com",
-        "Ryan Johnson(Online)": "rjohnson@onlinefreight.com"
-      }
-    },
-    "CLOU": {
-      "carriers": {
-        "COSCO": 17,
-        "ZIM": 42
-      },
-      "brokers": {
-        "YES报关行": 25
-      },
-      "truckers": {
-        "PTT卡车": 30
-      },
-      "agents": {},
-      "top_carrier": "ZIM",
-      "concentration": "70%",
-      "chain_completeness": 100.0
-    },
-    "ELITE SOLAR": {
-      "carriers": {
-        "OOCL": 29,
-        "WAN HAI": 19,
-        "MSC": 81,
-        "ONE": 10
-      },
-      "brokers": {
-        "Headwin": 5
-      },
-      "truckers": {
-        "Mercer CES": 17,
-        "FCL Logistics": 8
-      },
       "agents": {},
       "top_carrier": "MSC",
-      "concentration": "58%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {
-        "Maggie Yin": "maggie.yin@elite-solar.com",
-        "Headwin": "hanna.lax@headwin.com",
-        "Adriana(FCL)": "adrianazambrano@fcllogistics.com"
-      }
-    },
-    "TERRASOULSUPERFOODS": {
-      "carriers": {},
-      "brokers": {},
-      "truckers": {},
-      "agents": {
-        "FCC USA": 14
-      },
-      "top_carrier": "-",
-      "concentration": "0%",
-      "chain_completeness": 0.0
-    },
-    "JINGZHOU": {
-      "carriers": {
-        "Hapag-Lloyd": 64
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {
-        "PTS": 71
-      },
-      "top_carrier": "Hapag-Lloyd",
-      "concentration": "100%",
-      "chain_completeness": 33.33333333333333
+      "concentration": "95%",
+      "chain_completeness": 1.0,
+      "shippers": [],
+      "origins": []
     },
     "MING HAO XIN": {
       "carriers": {
-        "CMA-CGM": 61,
-        "COSCO": 24,
-        "ONE": 19,
-        "OOCL": 32,
+        "CMA-CGM": 12,
+        "ONE": 5,
         "MAERSK": 2,
-        "ZIM": 54,
-        "Evergreen": 4,
-        "WAN HAI": 1
+        "COSCO": 2
       },
       "brokers": {},
       "truckers": {},
       "agents": {},
       "top_carrier": "CMA-CGM",
-      "concentration": "42%",
-      "chain_completeness": 33.33333333333333
+      "concentration": "57%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Bongkoch Kongmanee",
+          "email": "bkk.bong@wwl.sg"
+        }
+      ]
     },
-    "HITHIUM": {
+    "ASTRONERGY": {
       "carriers": {
-        "ONE": 17,
-        "OOCL": 6,
-        "ZIM": 54,
-        "MSC": 3,
-        "CMA-CGM": 3
-      },
-      "brokers": {
-        "Logistics Plus": 15
-      },
-      "truckers": {
-        "PTT卡车": 1,
-        "自行采购(Beri Tseng)": 5
-      },
-      "agents": {},
-      "top_carrier": "CMA-CGM/MSC",
-      "concentration": "30%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {
-        "Yancey Conry": "yancey.conry@hithium.com",
-        "Noelle Henderson(LP)": "noelle.henderson@logisticsplus.com",
-        "Beri Tseng": "beri.tseng@hithium.com"
-      }
-    },
-    "BETTERBODYFOODS": {
-      "carriers": {},
-      "brokers": {},
-      "truckers": {},
-      "agents": {
-        "FCC USA": 14
-      },
-      "top_carrier": "-",
-      "concentration": "0%",
-      "chain_completeness": 0.0
-    },
-    "REACH INDUSTRY": {
-      "carriers": {
-        "CMA-CGM": 150,
-        "COSCO": 57,
-        "ONE": 68,
-        "OOCL": 47,
-        "ZIM": 127,
-        "Evergreen": 49,
-        "WAN HAI": 4,
-        "MAERSK": 7
-      },
-      "brokers": {},
-      "truckers": {},
-      "agents": {
-        "鲸宝Kingbo": 50,
-        "Cargoee": 20,
-        "JSCM Global": 10
-      },
-      "top_carrier": "ZIM",
-      "concentration": "30%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {},
-      "note": "US端报关卡车由consignee(MING HAO XIN等)自行安排,不经过WWL"
-    },
-    "VITA COCO": {
-      "carriers": {
-        "ONE": 9
+        "COSCO": 11,
+        "Hapag-Lloyd": 4,
+        "OOCL": 3,
+        "MSC": 1,
+        "HMM": 1
       },
       "brokers": {},
       "truckers": {},
       "agents": {},
-      "top_carrier": "ONE",
-      "concentration": "100%",
-      "chain_completeness": 33.33333333333333
-    },
-    "HAIROBOT": {
-      "carriers": {
-        "OOCL": 39,
-        "ZIM": 69,
-        "MSC": 44,
-        "Hapag-Lloyd": 16,
-        "WAN HAI": 2,
-        "ONE": 22
-      },
-      "brokers": {
-        "YES报关行": 180
-      },
-      "truckers": {},
-      "agents": {},
-      "top_carrier": "ZIM",
-      "concentration": "46%",
-      "chain_completeness": 66.66666666666666
+      "top_carrier": "COSCO",
+      "concentration": "55%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Emily Huang",
+          "email": "pld.vip1@wwl.cn"
+        }
+      ]
     },
     "HORIZON SOLAR": {
       "carriers": {
@@ -733,73 +2762,573 @@
       "agents": {},
       "top_carrier": "OOCL",
       "concentration": "70%",
-      "chain_completeness": 66.66666666666666,
-      "contacts": {
-        "Elaine": "horizonsolar001@gmail.com",
-        "Brian Walsh(WFS)": "brian.walsh@wfscustoms.com"
-      }
+      "chain_completeness": 1.0,
+      "shippers": [
+        {
+          "name": "PT THORNOVA SOLAR INDONESIA ON BEHALF OF",
+          "count": 14,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": [
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Anggito Iqbal",
+          "email": "jkt.iqbal@wwl.sg"
+        },
+        {
+          "name": "Bene",
+          "email": "jkt.bene@wwl.sg"
+        }
+      ]
     },
-    "AVANTIX": {
+    "SAMSUNG": {
       "carriers": {
-        "ONE": 66,
-        "WAN HAI": 57,
-        "COSCO": 13,
-        "ZIM": 15,
-        "MSC": 13,
-        "CMA-CGM": 10,
-        "Hapag-Lloyd": 3
+        "MSC": 11,
+        "ONE": 1,
+        "Hapag-Lloyd": 1,
+        "COSCO": 1
       },
-      "brokers": {
-        "Kim Line": 34
-      },
-      "truckers": {
-        "Kim Line": 34
-      },
+      "brokers": {},
+      "truckers": {},
       "agents": {},
       "top_carrier": "MSC",
-      "concentration": "37%",
-      "chain_completeness": 33.33333333333333,
-      "contacts": {
-        "Kim Line": "import@kimline.us"
-      }
+      "concentration": "79%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Setlla -wwlngb",
+          "email": "ngb.cus1@wwl.cn"
+        },
+        {
+          "name": "Sienna",
+          "email": "sienna.ji@wwl.cn"
+        }
+      ]
     },
-    "NEXTERA": {
+    "HITHIUM": {
       "carriers": {
-        "MSC": 23
+        "OOCL": 3,
+        "MSC": 3,
+        "CMA-CGM": 3,
+        "ONE": 2
       },
       "brokers": {
-        "Direct CHB": 15
+        "Logistics Plus": 15
+      },
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "OOCL",
+      "concentration": "27%",
+      "chain_completeness": 0.67,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Nancy - WWG XMN",
+          "email": "xmn.ops6@wwl.cn"
+        },
+        {
+          "name": "Yate Li - WWG XMN",
+          "email": "xmn.cus3@wwl.cn"
+        },
+        {
+          "name": "stevenpu@wwl.cn",
+          "email": "stevenpu@wwl.cn"
+        }
+      ]
+    },
+    "PREVALON": {
+      "carriers": {
+        "ZIM": 3,
+        "MSC": 2,
+        "OOCL": 1,
+        "COSCO": 1
+      },
+      "brokers": {
+        "YES CHB": 20
       },
       "truckers": {
-        "Traffix": 10
+        "PTT": 7
       },
-      "agents": {
-        "Thornova Solar/GAEA": 45,
-        "HIH Logistics": 5,
-        "Dynasty DFW": 8
-      },
-      "top_carrier": "MSC",
-      "concentration": "100%",
+      "agents": {},
+      "top_carrier": "ZIM",
+      "concentration": "43%",
       "chain_completeness": 1.0,
-      "contacts": {
-        "Ellen Jin": "ellen@thornova-solar.com / ellen@gaea-newenergy.com",
-        "Monica Marquez(Direct CHB)": "monica.marquez@directchb.net",
-        "Jane Kim(Traffix)": "jakim@traffix.com"
-      }
+      "shippers": [
+        {
+          "name": "SHENZHEN CLOU ELECTRONICS CO.,LTD",
+          "count": 2,
+          "consignee_notify": "PREVALON ENERGY LLC"
+        }
+      ],
+      "origins": [
+        {
+          "name": "Judy Zhang",
+          "email": "sha.ops63@wwl.cn"
+        },
+        {
+          "name": "Vivi Huang",
+          "email": "sha.salessup25@wwl.cn"
+        },
+        {
+          "name": "Yancy Yu",
+          "email": "szn.yancyyu@wwl.cn"
+        }
+      ]
+    },
+    "THORNOVA SOLAR": {
+      "carriers": {
+        "MSC": 6,
+        "COSCO": 1
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "86%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "ruby.ruan",
+          "email": "ruby.ruan@wwl.sg"
+        }
+      ]
+    },
+    "THE QUALITY THREAD & NOTI": {
+      "carriers": {
+        "ONE": 6
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "ONE",
+      "concentration": "100%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Eart",
+          "email": "bkk.eart@wwl.sg"
+        }
+      ]
+    },
+    "ELITE EAGLE": {
+      "carriers": {
+        "MSC": 2,
+        "ONE": 1,
+        "COSCO": 1
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "MSC",
+      "concentration": "50%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Lucie Pham",
+          "email": "vn.luciepham@wwl.sg"
+        },
+        {
+          "name": "nathia",
+          "email": "jkt.nathia@wwl.sg"
+        },
+        {
+          "name": "Bander Zhou",
+          "email": "sha.obd9@wwl.cn"
+        }
+      ]
+    },
+    "INNER MONGOLIA NORTH HAULER": {
+      "carriers": {
+        "OOCL": 3
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "OOCL",
+      "concentration": "100%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": []
+    },
+    "TOUGHFIT": {
+      "carriers": {
+        "Evergreen": 4
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "Evergreen",
+      "concentration": "100%",
+      "chain_completeness": 0.33,
+      "shippers": [
+        {
+          "name": "NINGBO TOUGHFIT SPORTS TECHNOLOGY CO.,LTD.",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": []
+    },
+    "CLOU": {
+      "carriers": {
+        "COSCO": 2,
+        "MSC": 1
+      },
+      "brokers": {
+        "YES CHB": 11
+      },
+      "truckers": {
+        "PTT": 4
+      },
+      "agents": {},
+      "top_carrier": "COSCO",
+      "concentration": "67%",
+      "chain_completeness": 1.0,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "Vivi Huang",
+          "email": "sha.salessup25@wwl.cn"
+        },
+        {
+          "name": "Judy Zhang",
+          "email": "sha.ops63@wwl.cn"
+        }
+      ]
+    },
+    "KINGSFIELD": {
+      "carriers": {
+        "Evergreen": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "Evergreen",
+      "concentration": "100%",
+      "chain_completeness": 0.33,
+      "shippers": [
+        {
+          "name": "KINGSFIELD CHINA INC",
+          "count": 2,
+          "consignee_notify": ""
+        }
+      ],
+      "origins": []
+    },
+    "MALT PRODUCTS": {
+      "carriers": {
+        "ZIM": 2
+      },
+      "brokers": {},
+      "truckers": {},
+      "agents": {},
+      "top_carrier": "ZIM",
+      "concentration": "100%",
+      "chain_completeness": 0.33,
+      "shippers": [],
+      "origins": [
+        {
+          "name": "bkk.un",
+          "email": "bkk.un@wwl.sg"
+        },
+        {
+          "name": "Teerada",
+          "email": "bkk.pang@wwl.sg"
+        },
+        {
+          "name": "Jerold Lin/ WWL TH",
+          "email": "bkk.jerold@wwl.sg"
+        }
+      ]
     }
   },
-  "last_updated": "2026-03-29",
-  "data_source": "9,734封邮件全量",
-  "solar_cluster": {
-    "shared_phone": "+1 626-869-6266",
-    "entities": [
-      "Thornova Solar(Ellen Jin)",
-      "GAEA NEW ENERGY(Ellen Jin)",
-      "Horizon Solar(Elaine)",
-      "ELITE SOLAR",
-      "HOUNEN SOLAR",
-      "NEXTERA(consignee)"
-    ],
-    "note": "Ellen Jin和Horizon的Elaine共享电话号码,可能共享股权或管理层"
+  "customer_carrier": {
+    "HAIROBOT": {
+      "OOCL": 276,
+      "COSCO": 187,
+      "MSC": 122,
+      "ONE": 71,
+      "Hapag-Lloyd": 66,
+      "ZIM": 19,
+      "CMA-CGM": 14,
+      "MAERSK": 2
+    },
+    "REACH": {
+      "ZIM": 49,
+      "CMA-CGM": 47,
+      "COSCO": 38,
+      "OOCL": 21,
+      "ONE": 14,
+      "MSC": 13,
+      "Hapag-Lloyd": 13,
+      "MAERSK": 7,
+      "Evergreen": 2
+    },
+    "ELITE SOLAR": {
+      "MSC": 106,
+      "OOCL": 34,
+      "WAN HAI": 29,
+      "Evergreen": 27,
+      "ONE": 15,
+      "CMA-CGM": 5
+    },
+    "HAILIANG": {
+      "MSC": 52,
+      "OOCL": 17,
+      "COSCO": 8,
+      "ONE": 7,
+      "Hapag-Lloyd": 3,
+      "ZIM": 2,
+      "HMM": 2,
+      "Evergreen": 1,
+      "CMA-CGM": 1
+    },
+    "DTC": {
+      "OOCL": 43,
+      "COSCO": 28,
+      "MSC": 11,
+      "ONE": 4,
+      "CMA-CGM": 3,
+      "ZIM": 2
+    },
+    "MAG SPECIALTIES": {
+      "Hapag-Lloyd": 64,
+      "MSC": 11,
+      "CMA-CGM": 4,
+      "COSCO": 1
+    },
+    "GLOBAL OCEAN FORWARDING L": {
+      "OOCL": 21,
+      "ONE": 13,
+      "ZIM": 12,
+      "COSCO": 11,
+      "Hapag-Lloyd": 10,
+      "MSC": 5,
+      "CMA-CGM": 2
+    },
+    "JINGZHOU": {
+      "MAERSK": 21,
+      "Hapag-Lloyd": 13,
+      "MSC": 3,
+      "COSCO": 3
+    },
+    "AVANTIX": {
+      "MSC": 13,
+      "CMA-CGM": 10,
+      "ZIM": 9,
+      "Hapag-Lloyd": 3,
+      "COSCO": 1
+    },
+    "BILLINDA REALTY INCORPORA": {
+      "MSC": 26,
+      "OOCL": 2
+    },
+    "TO ORDER OF SHIPPER": {
+      "COSCO": 26,
+      "Hapag-Lloyd": 1
+    },
+    "NEXTERA": {
+      "MSC": 23
+    },
+    "HOUNEN SOLAR": {
+      "MSC": 21,
+      "ONE": 1
+    },
+    "MING HAO XIN": {
+      "CMA-CGM": 12,
+      "ONE": 5,
+      "MAERSK": 2,
+      "COSCO": 2
+    },
+    "ASTRONERGY": {
+      "COSCO": 11,
+      "Hapag-Lloyd": 4,
+      "OOCL": 3,
+      "MSC": 1,
+      "HMM": 1
+    },
+    "HORIZON SOLAR": {
+      "OOCL": 15,
+      "MSC": 11
+    },
+    "SAMSUNG": {
+      "MSC": 11,
+      "ONE": 1,
+      "Hapag-Lloyd": 1,
+      "COSCO": 1
+    },
+    "HITHIUM": {
+      "OOCL": 5,
+      "MSC": 3,
+      "CMA-CGM": 3,
+      "ONE": 2
+    },
+    "PREVALON": {
+      "ZIM": 3,
+      "MSC": 2,
+      "OOCL": 1,
+      "COSCO": 1
+    },
+    "THORNOVA SOLAR": {
+      "MSC": 6,
+      "COSCO": 1
+    },
+    "THE QUALITY THREAD & NOTI": {
+      "ONE": 6
+    },
+    "ELITE EAGLE": {
+      "MSC": 2,
+      "ONE": 1,
+      "COSCO": 1
+    },
+    "INNER MONGOLIA NORTH HAULER": {
+      "OOCL": 3
+    },
+    "TOUGHFIT": {
+      "Evergreen": 4
+    },
+    "CLOU": {
+      "COSCO": 2,
+      "MSC": 1
+    },
+    "KINGSFIELD": {
+      "Evergreen": 2
+    },
+    "MALT PRODUCTS": {
+      "ZIM": 2
+    },
+    "HAIROBOT (海柔)": {
+      "ZIM": 12
+    },
+    "YES CHB": {
+      "ZIM": 10
+    },
+    "HAILIANG (海亮)": {
+      "OOCL": 2
+    },
+    "PREVALON ENERGY": {
+      "ZIM": 7
+    },
+    "BTL INTERNATIONAL": {
+      "MSC": 1
+    },
+    "REACH INDUSTRY": {
+      "ZIM": 6,
+      "CMA-CGM": 1
+    },
+    "MERSY CORP": {
+      "MSC": 2
+    },
+    "PTS INC": {
+      "Hapag-Lloyd": 1
+    },
+    "PACIFIC T&T": {
+      "Hapag-Lloyd": 1,
+      "ZIM": 1
+    },
+    "CLOU (科陆)": {
+      "ZIM": 1
+    },
+    "KELUO SHUANGYU (科陆双鱼)": {
+      "ZIM": 1
+    }
+  },
+  "customer_service": {
+    "HAIROBOT (海柔)": {
+      "YES报关行": {
+        "count": 10,
+        "types": [
+          "卡车",
+          "清关"
+        ]
+      }
+    },
+    "YES CHB": {
+      "YES报关行": {
+        "count": 10,
+        "types": [
+          "卡车",
+          "清关"
+        ]
+      }
+    },
+    "FCC USA": {
+      "FCC USA": {
+        "count": 13,
+        "types": []
+      }
+    },
+    "TERRASOULSUPERFOODS": {
+      "FCC USA": {
+        "count": 4,
+        "types": []
+      }
+    },
+    "BETTERBODYFOODS": {
+      "FCC USA": {
+        "count": 4,
+        "types": []
+      }
+    },
+    "HORIZON SOLAR": {
+      "WFS Customs": {
+        "count": 1,
+        "types": []
+      }
+    },
+    "PTS INC": {
+      "PTS": {
+        "count": 6,
+        "types": []
+      }
+    },
+    "HAILIANG (海亮)": {
+      "SCC Supply Chain": {
+        "count": 1,
+        "types": []
+      }
+    },
+    "PACIFIC T&T": {
+      "PTS": {
+        "count": 3,
+        "types": []
+      },
+      "PTT卡车": {
+        "count": 1,
+        "types": [
+          "卡车"
+        ]
+      }
+    },
+    "JINGZHOU": {
+      "PTS": {
+        "count": 1,
+        "types": []
+      }
+    },
+    "CLOU (科陆)": {
+      "PTT卡车": {
+        "count": 1,
+        "types": [
+          "卡车"
+        ]
+      }
+    },
+    "KELUO SHUANGYU (科陆双鱼)": {
+      "PTT卡车": {
+        "count": 1,
+        "types": [
+          "卡车"
+        ]
+      }
+    }
   }
 }
