@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T04:57:24.040867+08:00",
+  "last_updated": "2026-04-03T05:34:49.461442+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3210,24 +3210,24 @@
       "ZIM": 2
     },
     "HAIROBOT (海柔)": {
-      "ZIM": 64
+      "ZIM": 66
     },
     "YES CHB": {
-      "ZIM": 56
+      "ZIM": 58
     },
     "HAILIANG (海亮)": {
       "OOCL": 8,
-      "MSC": 11
+      "MSC": 12
     },
     "PREVALON ENERGY": {
-      "ZIM": 76
+      "ZIM": 82
     },
     "BTL INTERNATIONAL": {
       "MSC": 4
     },
     "REACH INDUSTRY": {
       "ZIM": 24,
-      "CMA-CGM": 53
+      "CMA-CGM": 58
     },
     "MERSY CORP": {
       "MSC": 8
@@ -3237,52 +3237,52 @@
     },
     "PACIFIC T&T": {
       "Hapag-Lloyd": 4,
-      "ZIM": 12
+      "ZIM": 13
     },
     "CLOU (科陆)": {
-      "ZIM": 12
+      "ZIM": 13
     },
     "KELUO SHUANGYU (科陆双鱼)": {
-      "ZIM": 12
+      "ZIM": 13
     },
     "DTC SA": {
-      "COSCO": 1
+      "COSCO": 2
     }
   },
   "customer_service": {
     "HAIROBOT (海柔)": {
       "YES报关行": {
-        "count": 56,
+        "count": 58,
         "types": [
-          "卡车",
-          "清关"
+          "清关",
+          "卡车"
         ]
       }
     },
     "YES CHB": {
       "YES报关行": {
-        "count": 56,
+        "count": 58,
         "types": [
-          "卡车",
-          "清关"
+          "清关",
+          "卡车"
         ]
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 75,
+        "count": 78,
         "types": []
       }
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 32,
+        "count": 34,
         "types": []
       }
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 32,
+        "count": 34,
         "types": []
       }
     },
@@ -3294,7 +3294,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 79,
+        "count": 86,
         "types": []
       }
     },
@@ -3306,11 +3306,11 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 28,
+        "count": 30,
         "types": []
       },
       "PTT卡车": {
-        "count": 12,
+        "count": 13,
         "types": [
           "卡车"
         ]
@@ -3324,7 +3324,7 @@
     },
     "CLOU (科陆)": {
       "PTT卡车": {
-        "count": 12,
+        "count": 13,
         "types": [
           "卡车"
         ]
@@ -3332,7 +3332,7 @@
     },
     "KELUO SHUANGYU (科陆双鱼)": {
       "PTT卡车": {
-        "count": 12,
+        "count": 13,
         "types": [
           "卡车"
         ]

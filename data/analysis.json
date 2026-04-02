@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-04-03T05:34:49.461442+08:00",
-  "total_emails": 200,
-  "business_emails": 175,
-  "pdf_count": 96,
+  "scan_time": "2026-04-03T06:08:53.911375+08:00",
+  "total_emails": 209,
+  "business_emails": 184,
+  "pdf_count": 104,
   "categories": {
-    "other_biz": 107,
+    "other_biz": 114,
     "overdue": 2,
     "delivery": 3,
     "booking": 2,
     "charge_confirm": 16,
     "arrival": 4,
-    "prealert": 35,
+    "prealert": 37,
     "inspection": 3,
     "cancel": 3
   },
@@ -131,7 +131,7 @@
       ]
     },
     "TERRASOULSUPERFOODS": {
-      "emails": 4,
+      "emails": 5,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -143,7 +143,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 4,
+      "emails": 5,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -202,16 +202,16 @@
     "ZIM": 24,
     "MSC": 23,
     "WAN HAI": 1,
-    "OOCL": 10,
+    "OOCL": 15,
     "ONE": 24,
     "CMA-CGM": 8,
-    "Hapag-Lloyd": 7,
-    "COSCO": 4,
+    "Hapag-Lloyd": 8,
+    "COSCO": 5,
     "Evergreen": 1
   },
   "carrier_fees": {},
-  "hbl_total": 50,
-  "mbl_total": 46,
+  "hbl_total": 54,
+  "mbl_total": 51,
   "all_hbls": [
     "WLC50520755",
     "WLC60122743",
@@ -240,6 +240,8 @@
     "WLC60307157",
     "WLC60307989",
     "WLC60309357",
+    "WLC60310017",
+    "WLC60310022",
     "WLC60312656",
     "WLC60312658",
     "WLC60312665",
@@ -248,10 +250,12 @@
     "WLC60313262",
     "WLC60313348",
     "WLC60313539",
+    "WLC60313669",
     "WLC60313813",
     "WLC60313816",
     "WLC60315531",
     "WLC60315532",
+    "WLC60315854",
     "WLC60316622",
     "WLC60317998",
     "WLC60318533",
@@ -270,6 +274,7 @@
     "COSU6446602950",
     "COSU6447946510",
     "COSU6448000790",
+    "COSU9506556770",
     "HLCUNK2251220417",
     "HLCUSHA260283311",
     "HLCUSHA2603BTYW8",
@@ -304,6 +309,10 @@
     "OOLU2167677090",
     "OOLU2320126090",
     "OOLU2321477590",
+    "OOLU2322763260",
+    "OOLU2322763290",
+    "OOLU2322763620",
+    "OOLU2323362180",
     "ZIMUBKK80439627",
     "ZIMUBKK80439630",
     "ZIMUBKK80439631",
@@ -313,8 +322,8 @@
     "ZIMUSHH32077175"
   ],
   "daily_counts": {
-    "2026-04-02": 67,
-    "2026-04-03": 129
+    "2026-04-02": 68,
+    "2026-04-03": 137
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -344,14 +353,18 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      9
+      10
     ],
     [
       "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
-      7
+      8
     ],
     [
       "<us.ops@wwl.sg>",
+      6
+    ],
+    [
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       6
     ],
     [
@@ -372,6 +385,10 @@
     ],
     [
       "us038-arrival.notices@msc.com",
+      4
+    ],
+    [
+      "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
       4
     ],
     [
@@ -396,14 +413,6 @@
     ],
     [
       "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
-      3
-    ],
-    [
-      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
-      3
-    ],
-    [
-      "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
       3
     ]
   ],
@@ -1597,7 +1606,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 298,
+    "tlx_confirmed_mbl": 304,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
@@ -1793,12 +1802,12 @@
     "contacts_total": 386,
     "daily_connections": 22,
     "new_domains": [
+      "expresslinecorp.com",
+      "paycargo.com",
+      "jci-chemical.com",
       "biposervice.com",
       "elite-solar.com",
-      "paycargo.com",
-      "newl.ca",
-      "expresslinecorp.com",
-      "jci-chemical.com"
+      "newl.ca"
     ]
   },
   "daily_connections": [
