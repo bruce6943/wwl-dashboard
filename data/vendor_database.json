@@ -38,7 +38,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "683船/4M TEU",
       "schedule_reliability": "~65%"
@@ -65,7 +65,7 @@
         "高额费用$277,304"
       ],
       "performance_metrics": {
-        "email_volume_7d": 109,
+        "email_volume_7d": 112,
         "active_days_7d": 7,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -80,7 +80,7 @@
         "responsiveness": 15,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "独立(前2M)",
       "fleet_info": "980船/7.2M TEU",
       "schedule_reliability": "60-70%"
@@ -112,7 +112,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Gemini(与Maersk) 91%准班",
       "fleet_info": "301船/2.5M TEU",
       "schedule_reliability": "75-77%"
@@ -131,7 +131,7 @@
         "集中度18%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 109,
+        "email_volume_7d": 112,
         "active_days_7d": 7,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -146,7 +146,7 @@
         "responsiveness": 15,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "独立(被Hapag $4.2B收购中)",
       "fleet_info": "131船/776K TEU",
       "schedule_reliability": "低于平均"
@@ -178,7 +178,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Premier Alliance",
       "fleet_info": "98船/711K TEU",
       "schedule_reliability": "中等"
@@ -195,7 +195,7 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 1,
+        "email_volume_7d": 2,
         "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -210,7 +210,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "独立",
       "fleet_info": "142船/430K TEU",
       "schedule_reliability": "47.8%最低"
@@ -242,7 +242,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "239船/1.9M TEU",
       "schedule_reliability": "中等"
@@ -274,7 +274,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Premier Alliance",
       "fleet_info": "86船/850K TEU",
       "schedule_reliability": "中等"
@@ -306,7 +306,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Gemini(与Hapag) 91%准班",
       "fleet_info": "707船/4.3M TEU",
       "schedule_reliability": "76-78% #1"
@@ -323,7 +323,7 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 1,
+        "email_volume_7d": 2,
         "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
@@ -338,7 +338,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "ROME TRANSPORT",
@@ -367,7 +367,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "FAST FREIGHTS",
@@ -396,7 +396,7 @@
         "responsiveness": 8,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "YES CHB",
@@ -425,7 +425,7 @@
         "responsiveness": 20,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "FCC USA",
@@ -454,7 +454,7 @@
         "responsiveness": 20,
         "documentation_quality": 12
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "IDC INTERNATIONAL",
@@ -483,7 +483,7 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "RIM LOGISTICS",
@@ -512,7 +512,7 @@
         "responsiveness": 7,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "ATC CARGO",
@@ -541,7 +541,7 @@
         "responsiveness": 7,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00"
+      "last_updated": "2026-04-02T14:50:34.532012+08:00"
     },
     {
       "vendor_name": "OOCL",
@@ -582,7 +582,7 @@
         "responsiveness": 15,
         "documentation_quality": 8
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "59船",
       "schedule_reliability": "64%"
@@ -616,7 +616,7 @@
         "responsiveness": 12,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "542船/3.4M TEU",
       "schedule_reliability": "~60%"
@@ -661,7 +661,7 @@
         "responsiveness": 12,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-02T14:12:33.495191+08:00",
+      "last_updated": "2026-04-02T14:50:34.532012+08:00",
       "alliance": "Premier Alliance(5年)",
       "fleet_info": "260船/2M TEU",
       "schedule_reliability": "中等"

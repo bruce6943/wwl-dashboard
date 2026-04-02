@@ -401,44 +401,6 @@
       ]
     },
     {
-      "type": "hold_active",
-      "priority": "urgent",
-      "title": "Hold Active",
-      "mbl": "MEDURQ394716, MEDURQ394724, MEDURQ396802, MEDURQ396828, MEDURQ394773 +3",
-      "carrier": "MSC",
-      "customer": "ELITE SOLAR NEW ENERGY CO.",
-      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
-      "wwl_branch": "WWL印尼",
-      "action": "MSC 8票 — Maggie Yin来信→需确认并回复",
-      "detail_lines": [
-        "03-31 16:23 usa-freight.cas: Good day,\r Thank you for providing the payment details. If all references match,",
-        "03-31 16:54 Maggie Wu: Dear MSC Team\r \r  \r \r Kindly review remittance attached amount total USD 637921",
-        "04-02 11:13 Maggie Yin: Hi Team,\r \r \r \r For the below 2 BOLs:\r \r \r \r MEDURQ394773\t\r \r MEDURQ394807"
-      ],
-      "progress_history": "提单: MEDURQ394716, MEDURQ394724, MEDURQ396802",
-      "email_count": 108,
-      "last_seen": "2026-04-02"
-    },
-    {
-      "type": "hold_active",
-      "priority": "urgent",
-      "title": "Hold Active",
-      "mbl": "MEDURQ397321, MEDURQ397362",
-      "carrier": "MSC",
-      "customer": "ELITE SOLAR NEW ENERGY CO.",
-      "wwl_sender": "",
-      "wwl_branch": "未知",
-      "action": "MSC 2票 — Maggie Yin来信→需确认并回复",
-      "detail_lines": [
-        "03-31 16:23 usa-freight.cas: Good day,\r Thank you for providing the payment details. If all references match,",
-        "03-31 16:54 Maggie Wu: Dear MSC Team\r \r  \r \r Kindly review remittance attached amount total USD 637921",
-        "04-02 11:13 Maggie Yin: Hi Team,\r \r \r \r For the below 2 BOLs:\r \r \r \r MEDURQ394773\t\r \r MEDURQ394807"
-      ],
-      "progress_history": "提单: MEDURQ397321, MEDURQ397362",
-      "email_count": 15,
-      "last_seen": "2026-04-02"
-    },
-    {
       "type": "fee_pending",
       "priority": "high",
       "title": "Fee Pending",
@@ -502,7 +464,7 @@
       "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
       "carrier": "MSC",
       "customer": "PREVALON ENERGY INC.",
-      "wwl_sender": "林慧滢Renee (szn.reneelin@wwl.cn)",
+      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
       "action": "MSC 6票 — us038-impo来信→需确认并回复",
       "detail_lines": [
@@ -520,7 +482,7 @@
       "title": "Fee Confirmed",
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506444150, COSU9506319330 +1",
       "carrier": "COSCO",
-      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
       "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 6票 — 等Maggie Wu的上家回复",
@@ -538,7 +500,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG61453900, ONEYBKKG61472300, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./THE QUALITY THREAD & NOTI/MING HAO XIN TRADING CO., LTD.",
+      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD./THE QUALITY THREAD & NOTI",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 5票 — 等Eart的上家回复",
@@ -1016,14 +978,14 @@
     }
   ],
   "summary": {
-    "arrival_notices": 188,
-    "bl_releases": 113,
+    "arrival_notices": 189,
+    "bl_releases": 112,
     "billings": 126,
     "prealerts": 45
   },
   "stats": {
-    "total": 55,
-    "urgent": 22,
+    "total": 53,
+    "urgent": 20,
     "high": 32
   }
 }
