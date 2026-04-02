@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-04-02T14:50:34.532012+08:00",
-  "total_emails": 611,
-  "business_emails": 566,
-  "pdf_count": 578,
+  "scan_time": "2026-04-02T15:31:08.652647+08:00",
+  "total_emails": 626,
+  "business_emails": 578,
+  "pdf_count": 577,
   "categories": {
     "delivery": 13,
     "booking": 9,
-    "other_biz": 408,
+    "other_biz": 416,
     "hold": 6,
     "charge_confirm": 18,
-    "prealert": 17,
-    "arrival": 35,
+    "prealert": 20,
+    "arrival": 36,
     "inspection": 5,
     "cancel": 2,
     "overdue": 14,
@@ -218,7 +218,7 @@
       ]
     },
     "PTS INC": {
-      "emails": 1,
+      "emails": 3,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -233,7 +233,7 @@
       ]
     },
     "PACIFIC T&T": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 1,
       "mbl_count": 2,
       "active_days": 1,
@@ -322,8 +322,8 @@
     "ZIM": 112,
     "OOCL": 115,
     "WAN HAI": 2,
-    "MSC": 112,
-    "COSCO": 65,
+    "MSC": 116,
+    "COSCO": 63,
     "ONE": 26,
     "Hapag-Lloyd": 13,
     "CMA-CGM": 3,
@@ -331,8 +331,8 @@
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 256,
-  "mbl_total": 198,
+  "hbl_total": 253,
+  "mbl_total": 197,
   "all_hbls": [
     "WLC50618809",
     "WLC50625761",
@@ -424,7 +424,6 @@
     "WLC50922089",
     "WLC50922860",
     "WLC51000812",
-    "WLC51004411",
     "WLC51004419",
     "WLC51008148",
     "WLC51008164",
@@ -446,7 +445,6 @@
     "WLC51114380",
     "WLC51114384",
     "WLC51115966",
-    "WLC51118071",
     "WLC51119832",
     "WLC51122662",
     "WLC51212243",
@@ -469,7 +467,6 @@
     "WLC51225819",
     "WLC51225820",
     "WLC60103682",
-    "WLC60103684",
     "WLC60103688",
     "WLC60107567",
     "WLC60111380",
@@ -612,11 +609,9 @@
     "COSU6431504070",
     "COSU6431504580",
     "COSU6431505170",
-    "COSU6431923910",
     "COSU6432962000",
     "COSU6433045180",
     "COSU6436198680",
-    "COSU6436272490",
     "COSU6438476450",
     "COSU6439812500",
     "COSU6439812970",
@@ -691,6 +686,7 @@
     "MEDURQ397412",
     "MEDUWG692272",
     "MEDUWG953468",
+    "MEDUWI921190",
     "MEDUWQ205298",
     "MEDUWT188572",
     "MEDUYL886908",
@@ -826,7 +822,7 @@
     "2025-10-21": 1,
     "2025-10-22": 4,
     "2025-10-23": 1,
-    "2025-10-27": 5,
+    "2025-10-27": 4,
     "2025-10-30": 1,
     "2025-10-31": 2,
     "2025-11-01": 2,
@@ -835,7 +831,7 @@
     "2025-11-11": 1,
     "2025-11-12": 1,
     "2025-11-16": 1,
-    "2025-11-24": 5,
+    "2025-11-24": 4,
     "2025-11-26": 1,
     "2025-12-05": 1,
     "2025-12-09": 1,
@@ -844,7 +840,7 @@
     "2025-12-23": 1,
     "2026-01-04": 7,
     "2026-01-05": 4,
-    "2026-01-06": 4,
+    "2026-01-06": 3,
     "2026-01-10": 3,
     "2026-01-26": 6,
     "2026-02-01": 16,
@@ -862,8 +858,8 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 223,
-    "2026-04-03": 8
+    "2026-04-02": 238,
+    "2026-04-03": 10
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -878,11 +874,11 @@
   "top_senders": [
     [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      175
+      172
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      48
+      53
     ],
     [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
@@ -897,11 +893,11 @@
       23
     ],
     [
-      "US038-noreply@msc.com",
-      20
+      "us038-arrival.notices@msc.com",
+      21
     ],
     [
-      "us038-arrival.notices@msc.com",
+      "US038-noreply@msc.com",
       20
     ],
     [
@@ -915,6 +911,10 @@
     [
       "<us.ops@wwl.sg>",
       13
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      12
     ],
     [
       "\"Burce Xu - WWG XMN\" <xmn.ops2@wwl.cn>",
@@ -931,10 +931,6 @@
     [
       "<horizonsolar001@gmail.com>",
       8
-    ],
-    [
-      "Effy <us.effyhuo@wwl.sg>",
-      7
     ],
     [
       "Will Sun <willsun@wwl.cn>",
@@ -2752,6 +2748,43 @@
       "date": "2 Apr 2026 14:28:32 -0400"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 19:33:46 "
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUWI921190",
+      "hbl": "",
+      "customer": "HAILIANG",
+      "eta": "",
+      "port": "HOU",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "Maggie Wu",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港 HOU MBL:MEDUWI921190 Free Time 4天",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWI921190 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:35:52 -0400"
+    },
+    {
       "type": "supplier_reply",
       "priority": "high",
       "mbl": "",
@@ -2936,59 +2969,13 @@
       "source": "Charge confirm request /MBL:ZIMUBKK80439631 /HBL:WLC60216589",
       "from": "assistant@pltplt.com",
       "date": "Thu, 2 Apr 2026 07:00:58 "
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
-      "mbl": "ZIMUBKK80439627",
-      "hbl": "WLC60216592",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-28",
-      "amount": "",
-      "assignee": "",
-      "carrier": "ZIM",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:ZIMUBKK80439627 金额:",
-      "source": "Charge confirm request /MBL:ZIMUBKK80439627 /HBL:WLC60216592",
-      "from": "assistant@pltplt.com",
-      "date": "Thu, 2 Apr 2026 07:01:00 "
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
-      "mbl": "ZIMUBKK80439630",
-      "hbl": "WLC60216595",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-28",
-      "amount": "",
-      "assignee": "",
-      "carrier": "ZIM",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:ZIMUBKK80439630 金额:",
-      "source": "Charge confirm request /MBL:ZIMUBKK80439630 /HBL:WLC60216595",
-      "from": "assistant@pltplt.com",
-      "date": "Thu, 2 Apr 2026 08:01:15 "
     }
   ],
   "action_summary": {
-    "total": 151,
+    "total": 154,
     "urgent": 25,
-    "high": 71,
-    "medium": 55
+    "high": 73,
+    "medium": 56
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -3076,6 +3063,16 @@
         "subject": "Pls quote rate : Air Freight / EXW / Newark or Philadelphia ",
         "from": "<bkk.supadalad@worldwide-logis",
         "date": "Thu, 2 Apr 2026 21:53:49 "
+      },
+      {
+        "subject": "Air Freight / EXW / Newark or Philadelphia - BKK // WWL Thai",
+        "from": "Effy <us.effyhuo@wwl.sg>",
+        "date": "Thu, 2 Apr 2026 11:58:32 "
+      },
+      {
+        "subject": "Air Freight / EXW / Newark or Philadelphia - BKK // WWL Thai",
+        "from": "Effy <us.effyhuo@wwl.sg>",
+        "date": "Thu, 2 Apr 2026 11:59:16 "
       }
     ],
     "non_standard": [],
@@ -3355,18 +3352,18 @@
   },
   "neural_network": {
     "entities": 92,
-    "relationships": 41,
-    "contacts_new": 1,
+    "relationships": 46,
+    "contacts_new": 0,
     "contacts_total": 385,
-    "daily_connections": 43,
+    "daily_connections": 45,
     "new_domains": [
       "containerport.com",
-      "jci-chemical.com",
-      "xiangyu.cn",
       "newl.ca",
-      "romesales.com",
+      "linkedin.com",
       "elite-solar.com",
-      "linkedin.com"
+      "xiangyu.cn",
+      "romesales.com",
+      "jci-chemical.com"
     ]
   },
   "daily_connections": [
@@ -3583,6 +3580,16 @@
     {
       "from": "CLOU (科陆)",
       "to": "PTT卡车",
+      "type": "service"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
       "type": "service"
     }
   ]
