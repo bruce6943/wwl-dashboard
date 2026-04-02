@@ -404,57 +404,19 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "OOLU2167307120, OOLU2167175490, OOLU2167175510, OOLU2167574730, OOLU2166783970 +7",
-      "carrier": "OOCL",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "OOCL 12票 — 已发确认请求 → 需跟进对方回复",
-      "detail_lines": [
-        "费用已确认: 预付(Prepaid)",
-        "后续: 确认入账即结案",
-        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
-      "email_count": 15,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "ONEYSZPG57799501, ONEYSZPG57799500, ONEYSZPG68819700, ONEYSZPG68887500, ONEYSZPG69518400",
-      "carrier": "ONE",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "ONE 5票 — 已发确认请求 → 需跟进对方回复",
-      "detail_lines": [
-        "费用已确认: 预付(Prepaid)",
-        "后续: 确认入账即结案",
-        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Renee Lin-WWLSZN",
-      "email_count": 5,
-      "last_seen": "2026-04-03"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "HLCUSHA2603BNZF0, HLCUSHA2603BNZN8, HLCUSHA2603BJKC0, HLCUSHA2603BIYR0",
+      "mbl": "HLCUSHA260228529, HLCUSHA2603BNZF0, HLCUSHA2603BNZN8, HLCUSHA2603BJKC0, HLCUSHA2603BIYR0",
       "carrier": "Hapag-Lloyd",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "Hapag-Lloyd 4票 — 需找销售公司/客户确认费用承担方",
+      "action": "Hapag-Lloyd 5票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
         "费用已确认: 预付(Prepaid)",
         "后续: 确认入账即结案",
         "Origin(Winnie Shen)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
-      "email_count": 9,
+      "email_count": 12,
       "last_seen": "2026-03-27"
     },
     {
@@ -475,25 +437,6 @@
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
       "email_count": 8,
       "last_seen": "2026-03-30"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "MEDUYM571400, MEDUYL789706",
-      "carrier": "MSC",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "MSC 2票 — 需找销售公司/客户确认费用承担方",
-      "detail_lines": [
-        "费用已确认",
-        "后续: 确认费用承担方(collect/prepaid) → 走付款流程",
-        "需阅读正文确认具体业务需求"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
-      "email_count": 16,
-      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -520,7 +463,7 @@
       "title": "Fee Confirmed",
       "mbl": "COSU9506320440, COSU6448000790",
       "carrier": "COSCO",
-      "customer": "AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC.",
       "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 2票 — 需找销售公司/客户确认费用承担方",
@@ -529,66 +472,9 @@
         "后续: 确认入账即结案",
         "需阅读正文确认具体业务需求"
       ],
-      "progress_history": "客户: AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: ngb.ops25@wwl.cn",
+      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC. | Origin: ngb.ops25@wwl.cn",
       "email_count": 3,
       "last_seen": "2026-03-30"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "COSU6447268220, COSU6447269010",
-      "carrier": "COSCO",
-      "customer": "DTC FREIGHT (内部电商)",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "COSCO 2票 — 已发确认请求 → 需跟进对方回复",
-      "detail_lines": [
-        "费用已确认: 预付(Prepaid)",
-        "后续: 确认入账即结案",
-        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
-      ],
-      "progress_history": "客户: DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
-      "email_count": 2,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "MEDUYL960612",
-      "carrier": "MSC",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "Ann Gong (can.anngong@wwl.cn)",
-      "wwl_branch": "WWL广州",
-      "action": "需找销售公司/客户确认费用承担方",
-      "detail_lines": [
-        "费用已确认: 到付(Collect)",
-        "后续: Rita/Maggie催consignee付款 → Sven付船公司(PayCargo)",
-        "Origin(Nola LAI)来信 → 阅读正文确认业务需求"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Ann Gong",
-      "email_count": 16,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "ONEYBTMG00382500",
-      "carrier": "ONE",
-      "customer": "ELITE SOLAR NEW ENERGY CO.",
-      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
-      "wwl_branch": "WWL印尼",
-      "action": "已放行/电放 → 确认收货人提货",
-      "detail_lines": [
-        "费用已确认",
-        "后续: 确认费用承担方(collect/prepaid) → 走付款流程",
-        "Origin(Alexander Jk)来信 → 阅读正文确认业务需求"
-      ],
-      "progress_history": "客户: ELITE SOLAR NEW ENERGY CO. | Origin: Anggito Iqbal",
-      "email_count": 9,
-      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_pending",
@@ -625,25 +511,6 @@
         "Origin(yoyo)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: yoyo",
-      "email_count": 1,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "HLCUSHA2511GBW",
-      "carrier": "Hapag-Lloyd",
-      "customer": "HAILIANG (SINGAPORE) PTE. LTD. / 海亮",
-      "wwl_sender": "us.rogerzhang@worldwide-logistics.cn",
-      "wwl_branch": "WWL环世",
-      "action": "Evans Deli来信 → 阅读正文判断业务需求并回复",
-      "detail_lines": [
-        "费用待确认: 需找销售公司/客户确认由谁承担",
-        "后续: 确认collect→催收 / prepaid→确认入账",
-        "外部(Evans Delive)来信 → 阅读正文确认并回复"
-      ],
-      "progress_history": "客户: HAILIANG (SINGAPORE) PTE. LTD. / 海亮 | Origin: us.rogerzhang@worldwide-logistics.cn",
       "email_count": 1,
       "last_seen": "2026-03-30"
     },
@@ -772,8 +639,8 @@
     "prealerts": 45
   },
   "stats": {
-    "total": 41,
+    "total": 34,
     "urgent": 20,
-    "high": 20
+    "high": 13
   }
 }

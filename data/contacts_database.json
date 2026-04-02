@@ -6,7 +6,7 @@
     "total_companies": 83,
     "source": "15天邮件签名提取",
     "period": "2026-03-13 ~ 2026-03-28",
-    "last_updated": "2026-04-03T06:43:22.180436+08:00"
+    "last_updated": "2026-04-03T07:20:06.867396+08:00"
   },
   "contacts": [
     {
@@ -35,7 +35,7 @@
       ],
       "addresses": [],
       "websites": [],
-      "email_count": 676,
+      "email_count": 678,
       "first_seen": "12 Mar 2026 12:12:26 -040",
       "last_seen": "2 Apr 2026 15:50:10 -0400"
     },
@@ -1737,7 +1737,7 @@
         "http://www.basespa.com",
         "www.basespa.com"
       ],
-      "email_count": 29,
+      "email_count": 30,
       "first_seen": "Mon, 16 Mar 2026 10:50:34",
       "last_seen": "Fri, 3 Apr 2026 10:00:36 "
     },
@@ -2899,7 +2899,7 @@
       ],
       "addresses": [],
       "websites": [],
-      "email_count": 69,
+      "email_count": 71,
       "first_seen": "Wed, 18 Mar 2026 17:22:14",
       "last_seen": "Fri, 3 Apr 2026 11:56:11 "
     },
@@ -3815,7 +3815,7 @@
         "http://www.ptstfs.com",
         "www.ptstfs.com"
       ],
-      "email_count": 49,
+      "email_count": 50,
       "first_seen": "Tue, 24 Mar 2026 01:44:26",
       "last_seen": "Fri, 3 Apr 2026 00:52:39 "
     },
@@ -5151,7 +5151,7 @@
       "company": "CARGOEE",
       "title": "",
       "phones": [],
-      "email_count": 17,
+      "email_count": 19,
       "first_seen": "Wed, 7 Jan 2026 02:04:33 ",
       "last_seen": "Fri, 3 Apr 2026 14:47:03 "
     },
@@ -5164,7 +5164,7 @@
       "phones": [
         "6263422960"
       ],
-      "email_count": 21,
+      "email_count": 22,
       "first_seen": "Tue, 06 Jan 2026 18:24:39",
       "last_seen": "Thu, 02 Apr 2026 22:06:24"
     },
@@ -6274,7 +6274,7 @@
       "company": "",
       "title": "",
       "phones": [],
-      "email_count": 124,
+      "email_count": 125,
       "first_seen": "Mon, 30 Mar 2026 09:26:20",
       "last_seen": "Thu, 02 Apr 2026 14:50:54"
     },
@@ -6340,7 +6340,7 @@
       "company": "",
       "title": "",
       "phones": [],
-      "email_count": 62,
+      "email_count": 63,
       "first_seen": "Tue, 31 Mar 2026 01:53:55",
       "last_seen": "Thu, 2 Apr 2026 19:59:23 "
     },
@@ -6491,7 +6491,7 @@
       "phones": [
         "+019092674941"
       ],
-      "email_count": 38,
+      "email_count": 40,
       "first_seen": "Thu, 2 Apr 2026 23:06:52 ",
       "last_seen": "Thu, 2 Apr 2026 23:07:38 "
     }
