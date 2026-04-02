@@ -459,14 +459,14 @@
     },
     {
       "type": "fee_confirmed",
-      "priority": "high",
+      "priority": "normal",
       "title": "Fee Confirmed",
       "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
       "carrier": "MSC",
       "customer": "PREVALON ENERGY INC.",
       "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
-      "action": "MSC 6票 — us038-impo来信→需确认并回复",
+      "action": "MSC 6票 — chassis usage费用已确认: 目的港车队支付(Renee Lin已回复确认)",
       "detail_lines": [
         "03-31 12:07 us038-importpic: ",
         "03-31 12:31 us038-importpic: ",
@@ -647,34 +647,34 @@
       "last_seen": "2026-03-24"
     },
     {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
+      "type": "prealert_received",
+      "priority": "normal",
+      "title": "预报已收",
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
       "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
-      "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
+      "action": "预报已收(BKK): POD charge is prepaid，等待到港",
       "detail_lines": [
-        "03-25 10:13 bkk.nasmee: Dear All,\r \r  \r \r Please find the pre-alert and documents attached.\r \r POD charg"
+        "03-25 BKK发送预报: REACH INDUSTRY, POD charge prepaid"
       ],
       "progress_history": "提单: OOLU2322755420, OOLU2323329550",
       "email_count": 2,
       "last_seen": "2026-03-25"
     },
     {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
+      "type": "prealert_received",
+      "priority": "normal",
+      "title": "预报已收",
       "mbl": "COSU6447268220, COSU6447269010",
       "carrier": "COSCO",
       "customer": "",
       "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
-      "action": "COSCO 2票 — Renee Lin-已确认→Sven付款→跟进水单",
+      "action": "预报已收(Renee Lin): HBL电放(TLX) / MBL电放(SWB) / D/O fee prepaid",
       "detail_lines": [
-        "03-31 17:50 Renee Lin-WWLSZ: Dear Friends\r \r  \r \r Attached pre-alert for your ref，tks.\r \r  \r \r HBL STATUS"
+        "03-31 Renee Lin发送预报: HBL TELEX RELEASE, MBL SWB, D/O fee prepaid"
       ],
       "progress_history": "提单: COSU6447268220, COSU6447269010",
       "email_count": 2,
@@ -720,14 +720,14 @@
     },
     {
       "type": "fee_confirmed",
-      "priority": "high",
+      "priority": "low",
       "title": "Fee Confirmed",
       "mbl": "ONEYTSNG03788600",
       "carrier": "ONE",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
       "wwl_branch": "WWL天津",
-      "action": "等Shirley.Li的上家回复",
+      "action": "费用已确认: collect to cnee(3/24 Shirley确认), 已结",
       "detail_lines": [
         "03-10 20:53 Sven Gu: APLAX2603100012\r \r  \r \r Thanks & B.Regards,\r \r  \r \r * Our Bank details haven’t c",
         "03-24 10:00 Everlyn Shaw: Pls advise attached POD charge is prepaid or collect?",
@@ -739,14 +739,14 @@
     },
     {
       "type": "fee_confirmed",
-      "priority": "high",
+      "priority": "normal",
       "title": "Fee Confirmed",
       "mbl": "ONEYBTMG00485900",
       "carrier": "ONE",
       "customer": "ELITE SOLAR NEW ENERGY CO.",
       "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
       "wwl_branch": "WWL印尼",
-      "action": "等origin回复费用预付/到付",
+      "action": "预报已说明: MBL电放(SWB) / 费用预付(PREPAID)，无需再确认",
       "detail_lines": [
         "03-31 14:54 Alexander Jkt: Dear US Team,\r \r  \r \r Attached the HBL Telex,\r \r Thank you.",
         "03-31 14:57 Maggie Wu: Dear Alexander\r \r No, time too early to cancel IT as per ETA 4/14.\r \r  \r \r With",
@@ -844,15 +844,15 @@
       "last_seen": "2026-03-23"
     },
     {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
+      "type": "prealert_received",
+      "priority": "normal",
+      "title": "预报已收",
       "mbl": "ONEYSHAG81060500",
       "carrier": "ONE",
       "customer": "GLOBAL OCEAN",
       "wwl_sender": "Daniel Yan (sha.ops46@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "等Sienna的上家回复",
+      "action": "预报已收，等待到港",
       "detail_lines": [
         "03-30 16:18 Daniel Yan: Dear,\r \r  \r \r Pls kindly find attached S/A for our shpts \r \r  \r \r SHIPPING ADVIC",
         "03-30 16:20 Sienna: Adding 方\r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉，欢迎联系我司质量管理部门：\r <mailto:wwlqc@wwl.cn> wwl"
@@ -862,15 +862,15 @@
       "last_seen": "2026-03-30"
     },
     {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
+      "type": "prealert_received",
+      "priority": "normal",
+      "title": "预报已收",
       "mbl": "OOLU2167382790",
       "carrier": "OOCL",
       "customer": "",
       "wwl_sender": "Daniel Yan (sha.ops46@wwl.cn)",
       "wwl_branch": "WWL上海",
-      "action": "等Daniel Yan的上家回复",
+      "action": "预报已收，等待到港",
       "detail_lines": [
         "03-31 17:14 Daniel Yan: Dear,\r \r  \r \r Pls kindly find attached S/A for our shpts \r \r  \r \r SHIPPING ADVIC"
       ],
