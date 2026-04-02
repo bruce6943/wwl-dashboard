@@ -1,16 +1,16 @@
 {
-  "scan_time": "2026-04-03T03:11:59.708640+08:00",
-  "total_emails": 167,
-  "business_emails": 144,
-  "pdf_count": 62,
+  "scan_time": "2026-04-03T03:44:59.756497+08:00",
+  "total_emails": 170,
+  "business_emails": 148,
+  "pdf_count": 71,
   "categories": {
-    "other_biz": 88,
+    "other_biz": 89,
     "overdue": 2,
     "delivery": 3,
     "booking": 1,
     "charge_confirm": 16,
     "arrival": 4,
-    "prealert": 24,
+    "prealert": 27,
     "inspection": 3,
     "cancel": 3
   },
@@ -188,14 +188,15 @@
     "MSC": 20,
     "WAN HAI": 1,
     "OOCL": 3,
-    "ONE": 18,
+    "ONE": 19,
     "CMA-CGM": 7,
     "Hapag-Lloyd": 6,
-    "COSCO": 1
+    "COSCO": 1,
+    "Evergreen": 1
   },
   "carrier_fees": {},
-  "hbl_total": 39,
-  "mbl_total": 36,
+  "hbl_total": 41,
+  "mbl_total": 37,
   "all_hbls": [
     "WLC50520755",
     "WLC60122743",
@@ -221,6 +222,7 @@
     "WLC60307051",
     "WLC60307157",
     "WLC60307989",
+    "WLC60309357",
     "WLC60312656",
     "WLC60312658",
     "WLC60312665",
@@ -234,6 +236,7 @@
     "WLC60318535",
     "WLC60318537",
     "WLC60318672",
+    "WLC60318898",
     "WLC60319230",
     "WLC66031853"
   ],
@@ -263,6 +266,7 @@
     "ONEYSZPG57799501",
     "ONEYSZPG68819700",
     "ONEYSZPG68887500",
+    "ONEYSZPG69518400",
     "ONEYXMNG22293700",
     "OOLU2166524280",
     "OOLU2320126090",
@@ -276,8 +280,8 @@
     "ZIMUSHH32077175"
   ],
   "daily_counts": {
-    "2026-04-02": 68,
-    "2026-04-03": 95
+    "2026-04-02": 66,
+    "2026-04-03": 100
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -299,27 +303,27 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      10
+      9
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      8
+      9
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      7
     ],
     [
       "<us.ops@wwl.sg>",
       6
     ],
     [
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
+      6
+    ],
+    [
       "\"rita tang\" <rita.tang@wwl.cn>",
       6
-    ],
-    [
-      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
-      6
-    ],
-    [
-      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
-      5
     ],
     [
       "Johana Arcila <johana.arcila@newl.ca>",
@@ -331,6 +335,10 @@
     ],
     [
       "us038-arrival.notices@msc.com",
+      4
+    ],
+    [
+      "\"Danny Ho\" <vn.vietducho@wwl.sg>",
       4
     ],
     [
@@ -355,10 +363,6 @@
     ],
     [
       "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
-      3
-    ],
-    [
-      "\"Danny Ho\" <vn.vietducho@wwl.sg>",
       3
     ],
     [
@@ -609,6 +613,28 @@
       "source": "DTC ACCOUNT || [PRE-ALERT] - ATD APR 01 - HBL#WLC60318537 - ",
       "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
       "date": "Fri, 3 Apr 2026 14:11:04 "
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60309357",
+      "customer": "",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Danny Ho",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "RE: DTC ACCOUNT || [PRE-ALERT] - ATD MAR 18 - HBL#WLC6030935",
+      "source": "RE: DTC ACCOUNT || [PRE-ALERT] - ATD MAR 18 - HBL#WLC6030935",
+      "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 14:13:17 "
     },
     {
       "type": "inspection_broker",
@@ -1447,8 +1473,8 @@
     }
   ],
   "action_summary": {
-    "total": 54,
-    "urgent": 14,
+    "total": 55,
+    "urgent": 15,
     "high": 20,
     "medium": 20
   },
@@ -1516,7 +1542,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 288,
+    "tlx_confirmed_mbl": 293,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
@@ -1624,22 +1650,28 @@
         "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
         "urgency": 3,
         "date": "Fri, 3 Apr 2026 15:08:06 "
+      },
+      {
+        "subject": "DTC account - Pre-alert  Freehandle : ONEYSZPG69518400  / WL",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 15:11:40 "
       }
     ]
   },
   "neural_network": {
     "entities": 91,
-    "relationships": 23,
+    "relationships": 22,
     "contacts_new": 0,
     "contacts_total": 386,
     "daily_connections": 21,
     "new_domains": [
-      "newl.ca",
       "paycargo.com",
-      "expresslinecorp.com",
       "biposervice.com",
-      "elite-solar.com",
-      "jci-chemical.com"
+      "expresslinecorp.com",
+      "newl.ca",
+      "jci-chemical.com",
+      "elite-solar.com"
     ]
   },
   "daily_connections": [

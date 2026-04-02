@@ -440,18 +440,18 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "ONEYSZPG57799501, ONEYSZPG57799500, ONEYSZPG68819700, ONEYSZPG68887500",
+      "mbl": "ONEYSZPG57799501, ONEYSZPG57799500, ONEYSZPG68819700, ONEYSZPG68887500, ONEYSZPG69518400",
       "carrier": "ONE",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
-      "action": "ONE 4票 — 已发确认请求 → 需跟进对方回复",
+      "action": "ONE 5票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
         "预报(SA)已收 | HBL已电放 | 费用预付(Prepaid)",
         "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Renee Lin-WWLSZN",
-      "email_count": 4,
+      "email_count": 5,
       "last_seen": "2026-04-03"
     },
     {
@@ -770,7 +770,7 @@
   ],
   "summary": {
     "arrival_notices": 211,
-    "bl_releases": 110,
+    "bl_releases": 111,
     "billings": 110,
     "prealerts": 45
   },
