@@ -1,443 +1,1456 @@
 {
-  "scan_time": "2026-04-03T02:41:26.780514+08:00",
-  "total_emails": 1273,
-  "business_emails": 1234,
-  "pdf_count": 0,
+  "scan_time": "2026-04-03T03:11:59.708640+08:00",
+  "total_emails": 167,
+  "business_emails": 144,
+  "pdf_count": 62,
   "categories": {
-    "charge_confirm": 86,
-    "arrival_notice": 78,
-    "prealert": 135
+    "other_biz": 88,
+    "overdue": 2,
+    "delivery": 3,
+    "booking": 1,
+    "charge_confirm": 16,
+    "arrival": 4,
+    "prealert": 24,
+    "inspection": 3,
+    "cancel": 3
   },
   "customers": {
-    "HAIROBOT": {
-      "mbl_count": 69,
-      "email_count": 174
-    },
-    "ELITE SOLAR": {
-      "mbl_count": 64,
-      "email_count": 131
-    },
-    "REACH": {
-      "mbl_count": 28,
-      "email_count": 93
-    },
-    "DTC": {
-      "mbl_count": 25,
-      "email_count": 60
-    },
-    "HORIZON SOLAR": {
-      "mbl_count": 15,
-      "email_count": 37
-    },
-    "GLOBAL OCEAN FORWARDING L": {
-      "mbl_count": 17,
-      "email_count": 36
+    "RIM LOGISTICS": {
+      "emails": 2,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02"
+      ]
     },
     "MAG SPECIALTIES": {
-      "mbl_count": 15,
-      "email_count": 29
+      "emails": 2,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
     },
-    "HAILIANG": {
-      "mbl_count": 55,
-      "email_count": 29
-    },
-    "MING HAO XIN": {
-      "mbl_count": 4,
-      "email_count": 24
-    },
-    "PREVALON": {
-      "mbl_count": 3,
-      "email_count": 22
-    },
-    "HOUNEN SOLAR": {
-      "mbl_count": 20,
-      "email_count": 11
-    },
-    "JINGZHOU": {
-      "mbl_count": 4,
-      "email_count": 7
-    },
-    "THE QUALITY THREAD & NOTI": {
+    "PREVALON ENERGY": {
+      "emails": 6,
+      "hbl_count": 0,
       "mbl_count": 2,
-      "email_count": 6
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [
+        "ZIMUSHH32074171",
+        "ZIMUSHH32077175"
+      ],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
     },
-    "BILLINDA REALTY INCORPORA": {
+    "HAIROBOT (海柔)": {
+      "emails": 2,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
+    },
+    "YES CHB": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02"
+      ]
+    },
+    "CLOU (科陆)": {
+      "emails": 2,
+      "hbl_count": 0,
       "mbl_count": 2,
-      "email_count": 6
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [
+        "ZIMUSHH32074171",
+        "ZIMUSHH32077175"
+      ],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
     },
-    "HITHIUM": {
-      "mbl_count": 2,
-      "email_count": 5
-    },
-    "CLOU": {
+    "KELUO SHUANGYU (科陆双鱼)": {
+      "emails": 1,
+      "hbl_count": 0,
       "mbl_count": 1,
-      "email_count": 5
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [
+        "ZIMUSHH32074171"
+      ],
+      "days": [
+        "04/02"
+      ]
     },
-    "AVANTIX": {
-      "mbl_count": 29,
-      "email_count": 5
-    },
-    "MERSY CORP": {
+    "PACIFIC T&T": {
+      "emails": 3,
+      "hbl_count": 0,
       "mbl_count": 1,
-      "email_count": 4
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [
+        "ZIMUSHH32074171"
+      ],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
     },
-    "ASTRONERGY": {
-      "mbl_count": 2,
-      "email_count": 4
+    "PTS INC": {
+      "emails": 3,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
     },
-    "SAMSUNG": {
-      "mbl_count": 2,
-      "email_count": 3
+    "TERRASOULSUPERFOODS": {
+      "emails": 5,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
+    },
+    "BETTERBODYFOODS": {
+      "emails": 5,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
+    },
+    "REACH INDUSTRY": {
+      "emails": 5,
+      "hbl_count": 1,
+      "mbl_count": 1,
+      "active_days": 1,
+      "hbls": [
+        "WLC50520755"
+      ],
+      "mbls": [
+        "CMDUTHD1457294"
+      ],
+      "days": [
+        "04/03"
+      ]
+    },
+    "HAILIANG (海亮)": {
+      "emails": 1,
+      "hbl_count": 1,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [
+        "WLC60316622"
+      ],
+      "mbls": [],
+      "days": [
+        "04/03"
+      ]
     }
   },
   "carriers": {
-    "MSC": 466,
-    "OOCL": 456,
-    "COSCO": 335,
-    "Hapag-Lloyd": 185,
-    "ONE": 142,
-    "ZIM": 105,
-    "CMA-CGM": 103,
-    "Evergreen": 43,
-    "MAERSK": 35,
-    "WAN HAI": 29,
-    "HMM": 4,
-    "YML": 2
+    "ZIM": 24,
+    "MSC": 20,
+    "WAN HAI": 1,
+    "OOCL": 3,
+    "ONE": 18,
+    "CMA-CGM": 7,
+    "Hapag-Lloyd": 6,
+    "COSCO": 1
   },
   "carrier_fees": {},
-  "hbl_total": 3048,
-  "mbl_total": 1945,
+  "hbl_total": 39,
+  "mbl_total": 36,
   "all_hbls": [
-    "WLC26012007",
-    "WLC40407328",
-    "WLC40611750",
-    "WLC40906751",
-    "WLC41218534",
-    "WLC50109816",
-    "WLC50205757",
-    "WLC50304393",
-    "WLC50304781",
-    "WLC50305091",
-    "WLC50310408",
-    "WLC50312465",
-    "WLC50312949",
-    "WLC50312962",
-    "WLC50312969",
-    "WLC50312972",
-    "WLC50313725",
-    "WLC50313730",
-    "WLC50315963",
-    "WLC50400479",
-    "WLC50400481",
-    "WLC50403051",
-    "WLC50403125",
-    "WLC50403175",
-    "WLC50404224",
-    "WLC50404952",
-    "WLC50404988",
-    "WLC50411255",
-    "WLC50415075",
-    "WLC50421079",
-    "WLC50504212",
-    "WLC50504974",
-    "WLC50505096",
-    "WLC50505098",
-    "WLC50505161",
-    "WLC50505164",
-    "WLC50505210",
-    "WLC50505221",
-    "WLC50505235",
-    "WLC50507298",
-    "WLC50507724",
-    "WLC50512886",
-    "WLC50513266",
-    "WLC50514371",
-    "WLC50515143",
-    "WLC50516262",
-    "WLC50516935",
-    "WLC50517590",
-    "WLC50520321",
     "WLC50520755",
-    "WLC50522982",
-    "WLC50523156",
-    "WLC50600321",
-    "WLC50600407",
-    "WLC50601032",
-    "WLC50602129",
-    "WLC50603010",
-    "WLC50604705",
-    "WLC50605389",
-    "WLC50607429",
-    "WLC50607437",
-    "WLC50607469",
-    "WLC50611263",
-    "WLC50612177",
-    "WLC50615838",
-    "WLC50617584",
-    "WLC50617940",
-    "WLC50617944",
-    "WLC50617977",
-    "WLC50617980",
-    "WLC50617985",
-    "WLC50617990",
-    "WLC50618129",
-    "WLC50618131",
-    "WLC50618133",
-    "WLC50618135",
-    "WLC50618809",
-    "WLC50620745",
-    "WLC50622927",
-    "WLC50625026",
-    "WLC50625761",
-    "WLC50700253",
-    "WLC50700749",
-    "WLC50700783",
-    "WLC50700802",
-    "WLC50703121",
-    "WLC50704035",
-    "WLC50704475",
-    "WLC50704769",
-    "WLC50707810",
-    "WLC50708701",
-    "WLC50710039",
-    "WLC50710272",
-    "WLC50711780",
-    "WLC50714350",
-    "WLC50714544",
-    "WLC50715727",
-    "WLC50717190",
-    "WLC50717191",
-    "WLC50718487"
+    "WLC60122743",
+    "WLC60124039",
+    "WLC60124792",
+    "WLC60207645",
+    "WLC60210191",
+    "WLC60212589",
+    "WLC60213407",
+    "WLC60213807",
+    "WLC60213810",
+    "WLC60215280",
+    "WLC60216138",
+    "WLC60216589",
+    "WLC60216592",
+    "WLC60216595",
+    "WLC60301972",
+    "WLC60303246",
+    "WLC60304584",
+    "WLC60305140",
+    "WLC60305212",
+    "WLC60305781",
+    "WLC60307051",
+    "WLC60307157",
+    "WLC60307989",
+    "WLC60312656",
+    "WLC60312658",
+    "WLC60312665",
+    "WLC60312668",
+    "WLC60313221",
+    "WLC60313262",
+    "WLC60313348",
+    "WLC60313539",
+    "WLC60316622",
+    "WLC60318533",
+    "WLC60318535",
+    "WLC60318537",
+    "WLC60318672",
+    "WLC60319230",
+    "WLC66031853"
   ],
   "all_mbls": [
-    "CMDUAYN1303212",
-    "CMDUCHN2683387",
-    "CMDUCHN2683389",
-    "CMDUCHN2699890",
-    "CMDUCHN2745534",
-    "CMDUCHN2906074",
-    "CMDUCHN3087175",
-    "CMDUCHN3088870",
-    "CMDUCHN3088891",
-    "CMDUCHN3088925",
-    "CMDUCHN3095178",
-    "CMDUCHN3097470",
-    "CMDUCHN3097590",
-    "CMDUCHN3106797",
-    "CMDUCHN3116145",
     "CMDUCHN3177029",
-    "CMDUDJA1415700",
-    "CMDUDJA1417763",
-    "CMDUDJA1417805",
-    "CMDUDJA1417808",
-    "CMDUDJA1418502",
-    "CMDUDJA1429264",
-    "CMDUNGP2831743",
-    "CMDUNGP2833620",
-    "CMDUNGP3128529",
-    "CMDUQGD1873079",
-    "CMDUQGD2605605",
-    "CMDUQGD2605616",
-    "CMDUSEL1953074",
-    "CMDUSEL1953075",
-    "CMDUSEL1955317",
-    "CMDUSEL1955320",
-    "CMDUSEL1957667",
-    "CMDUSEL1957670",
-    "CMDUSEL1959942",
-    "CMDUSEL1959943",
-    "CMDUSEL1964857",
-    "CMDUSEL1975041",
-    "CMDUSEL1975453",
-    "CMDUSEL1975457",
-    "CMDUSEL1983182",
-    "CMDUSGN2874707",
-    "CMDUSGN2883079",
-    "CMDUSHZ7841038",
-    "CMDUTHD1419118",
-    "CMDUTHD1424156",
-    "CMDUTHD1429775",
-    "CMDUTHD1435952",
-    "CMDUTHD1436172",
-    "CMDUTHD1441846",
-    "CMDUTHD1441850",
-    "CMDUTHD1441855",
-    "CMDUTHD1445976",
-    "CMDUTHD1448853",
-    "CMDUTHD1448916",
-    "CMDUTHD1450539",
-    "CMDUTHD1450666",
-    "CMDUTHD1450684",
-    "CMDUTHD1452029",
-    "CMDUTHD1452040",
-    "CMDUTHD1452042",
-    "CMDUTHD1452047",
-    "CMDUTHD1452510",
-    "CMDUTHD1452645",
-    "CMDUTHD1452665",
-    "CMDUTHD1452666",
-    "CMDUTHD1452670",
-    "CMDUTHD1452684",
-    "CMDUTHD1454851",
-    "CMDUTHD1454859",
-    "CMDUTHD1454865",
-    "CMDUTHD1454986",
-    "CMDUTHD1455571",
-    "CMDUTHD1456072",
-    "CMDUTHD1456126",
-    "CMDUTHD1456127",
-    "CMDUTHD1457291",
-    "CMDUTHD1457292",
     "CMDUTHD1457294",
-    "CMDUTHD1457299",
-    "CMDUTHD1458397",
-    "CMDUTHD1460586",
-    "CMDUTHD1460598",
-    "CMDUTHD1460601",
-    "CMDUTHD1460604",
-    "CMDUTHD1460605",
-    "CMDUTHD1461926",
-    "CMDUTHD1462264",
-    "CMDUTHD1462268",
-    "CMDUTHD1462272",
-    "CMDUTHD1466136",
-    "CMDUTHD1466676",
-    "CMDUTHD1466680",
-    "CMDUTHD1467915",
-    "CMDUTHD1468012",
-    "CMDUTHD1470309",
-    "CMDUTHD1480016",
-    "CMDUTHD1483494",
-    "CMDUTHD1483914",
-    "CMDUTHD1483918"
+    "HLCUNK2251220417",
+    "HLCUSHA260283311",
+    "HLCUSHA2603BTYW8",
+    "MEDUEK846578",
+    "MEDURQ395473",
+    "MEDUWG953468",
+    "MEDUWI921190",
+    "MEDUWQ205298",
+    "MEDUWQ373252",
+    "MEDUWT188572",
+    "MEDUWV135456",
+    "MEDUYL958947",
+    "ONEYBKKG38865600",
+    "ONEYBKKG48500700",
+    "ONEYBKKG67192800",
+    "ONEYBKKG68481300",
+    "ONEYBTMG00312500",
+    "ONEYBTMG00315800",
+    "ONEYBTMG00485900",
+    "ONEYSZPG57799500",
+    "ONEYSZPG57799501",
+    "ONEYSZPG68819700",
+    "ONEYSZPG68887500",
+    "ONEYXMNG22293700",
+    "OOLU2166524280",
+    "OOLU2320126090",
+    "OOLU2321477590",
+    "ZIMUBKK80439627",
+    "ZIMUBKK80439630",
+    "ZIMUBKK80439631",
+    "ZIMUNGB20219967",
+    "ZIMUNGB20219968",
+    "ZIMUSHH32074171",
+    "ZIMUSHH32077175"
   ],
   "daily_counts": {
-    "2026-03-27": 242,
-    "2026-03-28": 49,
-    "2026-03-29": 53,
-    "2026-03-30": 328,
-    "2026-03-31": 238,
-    "2026-04-01": 75,
-    "2026-04-02": 237,
-    "2026-04-03": 51
+    "2026-04-02": 68,
+    "2026-04-03": 95
   },
   "inspection_mbls": [
-    "YMJAE490402433",
-    "COSU6440842610",
-    "OOLU2166524280"
+    "ONEYBKKG38865600",
+    "OOLU2166524280",
+    "OOLU2320126090"
   ],
-  "hold_count": 2,
+  "hold_count": 0,
   "inspection_count": 3,
-  "overdue_count": 38,
-  "cancel_count": 10,
+  "overdue_count": 2,
+  "cancel_count": 3,
   "top_senders": [
+    [
+      "assistant@pltplt.com",
+      19
+    ],
+    [
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      16
+    ],
+    [
+      "Effy <us.effyhuo@wwl.sg>",
+      10
+    ],
+    [
+      "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      8
+    ],
+    [
+      "<us.ops@wwl.sg>",
+      6
+    ],
+    [
+      "\"rita tang\" <rita.tang@wwl.cn>",
+      6
+    ],
+    [
+      "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
+      6
+    ],
+    [
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
+      5
+    ],
+    [
+      "Johana Arcila <johana.arcila@newl.ca>",
+      4
+    ],
+    [
+      "Kelly Hiatt <Kelly.Hiatt@prevalonenergy.com>",
+      4
+    ],
+    [
+      "us038-arrival.notices@msc.com",
+      4
+    ],
+    [
+      "Clayton Brunson <ClaytonBrunson@rimlogistics.com>",
+      3
+    ],
+    [
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      3
+    ],
+    [
+      "Maggie Yin <maggie.yin@elite-solar.com>",
+      3
+    ],
+    [
+      "\"MONA CAI\" <sha.ops112@wwl.cn>",
+      3
+    ],
+    [
+      "LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>",
+      3
+    ],
+    [
+      "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
+      3
+    ],
+    [
+      "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      3
+    ],
+    [
+      "Ellen Jin <ellen@thornova-solar.com>",
+      2
+    ],
+    [
+      "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      2
+    ]
+  ],
+  "action_items": [
     {
-      "name": "Everlyn Shaw",
-      "email": "us.ops2@wwl.sg",
-      "count": 140
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Bobc",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "USA Shipping News",
+      "source": "USA Shipping News",
+      "from": "\"Bobc\" <bobc@worldwide-logistics.cn>",
+      "date": "Thu, 2 Apr 2026 12:57:22 "
     },
     {
-      "name": "Maggie Wu",
-      "email": "maggiewu@wwl.cn",
-      "count": 91
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Everlyn Shaw",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "source": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      "date": "Thu, 2 Apr 2026 14:21:39 "
     },
     {
-      "name": "Effy",
-      "email": "us.effyhuo@wwl.sg",
-      "count": 56
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ394716",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "Maggie Yin (elite-solar.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ394716",
+      "source": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "Maggie Yin <maggie.yin@elite-solar.com>",
+      "date": "Thu, 02 Apr 2026 14:50:54"
     },
     {
-      "name": "us038-arrival.notices@msc.com",
-      "email": "us038-arrival.notices@msc.com",
-      "count": 47
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "container": "OOLU2320126090",
+      "customer": "HAIROBOT",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2320126090",
+      "source": "查验预警-OOLU2320126090",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:00 "
     },
     {
-      "name": "rita tang",
-      "email": "rita.tang@wwl.cn",
-      "count": 38
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "ONEYBKKG38865600",
+      "container": "BKKG38865600",
+      "customer": "HAIROBOT",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 BKKG38865600",
+      "source": "查验预警-ONEYBKKG38865600",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:04 "
     },
     {
-      "name": "us038-importpickupnotification@msc.com",
-      "email": "us038-importpickupnotification@msc.com",
-      "count": 37
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2166524280",
+      "container": "OOLU2166524280",
+      "customer": "HAIROBOT",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2166524280",
+      "source": "查验预警-OOLU2166524280",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:19 "
     },
     {
-      "name": "Renee Lin-WWLSZN",
-      "email": "szn.reneelin@wwl.cn",
-      "count": 30
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "ONEYBTMG00315800",
+      "hbl": "WLC60213807",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "KB中台 (cargoee.com)",
+      "contact": "",
+      "consignee": "ADDRESS NOTIFY ADDRESS",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: ONEYBTMG00315800",
+      "source": "Re: AN/ MBL#ONEYBTMG00315800 / HBL#WLC60213807 / Container#O",
+      "from": "\"KB中台\" <kb-centre@cargoee.com>",
+      "date": "Fri, 3 Apr 2026 14:46:41 "
     },
     {
-      "name": "us.ops@wwl.sg",
-      "email": "us.ops@wwl.sg",
-      "count": 27
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "ONEYBTMG00312500",
+      "hbl": "WLC60213810",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "KB中台 (cargoee.com)",
+      "contact": "",
+      "consignee": "ADDRESS NOTIFY ADDRESS",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: ONEYBTMG00312500",
+      "source": "Re: AN/ MBL#ONEYBTMG00312500 / HBL#WLC60213810 / Container#T",
+      "from": "\"KB中台\" <kb-centre@cargoee.com>",
+      "date": "Fri, 3 Apr 2026 14:47:03 "
     },
     {
-      "name": "us038-noreply@msc.com",
-      "email": "us038-noreply@msc.com",
-      "count": 22
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60313262",
+      "customer": "",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Danny Ho",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "DTC ACCOUNT || [PRE-ALERT] - ATD MAR 30- HBL#WLC60313262 - M",
+      "source": "DTC ACCOUNT || [PRE-ALERT] - ATD MAR 30- HBL#WLC60313262 - M",
+      "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 14:05:00 "
     },
     {
-      "name": "Alexander Jkt",
-      "email": "jkt.alex@wwl.sg",
-      "count": 21
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60319230",
+      "customer": "",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Danny Ho",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "[PRE-ALERT] - ATD APR 01 - HBL#WLC60319230 - MBL#039GX28887 ",
+      "source": "[PRE-ALERT] - ATD APR 01 - HBL#WLC60319230 - MBL#039GX28887 ",
+      "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 14:08:00 "
     },
     {
-      "name": "Winnie Shen",
-      "email": "sha.ops4@wwl.cn",
-      "count": 18
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "WLC60318537",
+      "customer": "",
+      "hold_type": "customs",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Danny Ho",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "CUSTOMS HOLD — 准备补充文件给CBP",
+      "detail": "DTC ACCOUNT || [PRE-ALERT] - ATD APR 01 - HBL#WLC60318537 - ",
+      "source": "DTC ACCOUNT || [PRE-ALERT] - ATD APR 01 - HBL#WLC60318537 - ",
+      "from": "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 14:11:04 "
     },
     {
-      "name": "Will Sun",
-      "email": "willsun@wwl.cn",
-      "count": 18
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "customer": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-OOLU2320126090",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:00 "
     },
     {
-      "name": "horizonsolar001@gmail.com",
-      "email": "horizonsolar001@gmail.com",
-      "count": 17
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "ONEYBKKG38865600",
+      "customer": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-ONEYBKKG38865600",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:04 "
     },
     {
-      "name": "ngb.ops29@wwl.cn",
-      "email": "ngb.ops29@wwl.cn",
-      "count": 17
+      "type": "inspection_broker",
+      "priority": "urgent",
+      "mbl": "OOLU2166524280",
+      "customer": "",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验 → 联系报关行确认文件 → 预估费用(X-Ray $150-250/全掏$1,000-2,500) → 通知客户延误+费用由进口商承担",
+      "detail": "查验报关行跟进 ",
+      "source": "查验预警-OOLU2166524280",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:19 "
     },
     {
-      "name": "Sven Gu",
-      "email": "sha.overseassup2@wwl.cn",
-      "count": 17
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: Re: ShippingAdviceNotice:WLCTAO260207658/LU1848/ZIMUQIN4",
+      "source": "回复: Re: ShippingAdviceNotice:WLCTAO260207658/LU1848/ZIMUQIN4",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 00:05:18 "
     },
     {
-      "name": "bkk.rie@wwl.sg",
-      "email": "bkk.rie@wwl.sg",
-      "count": 14
+      "type": "overdue",
+      "priority": "high",
+      "mbl": "",
+      "customer": "MAG SPECIALTIES",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "Dongni Liu (airseachicago.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "催收 → 确认T+X阶段 → T+7首催/T+15升级/T+30追偿函/T+45中信保",
+      "detail": "Overdue MAG SPECIALTIES ",
+      "source": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
+      "from": "Dongni Liu <dliu@airseachicago.com>",
+      "date": "Thu, 2 Apr 2026 16:50:05 "
     },
     {
-      "name": "Adam Sum",
-      "email": "us.adamsum@worldwide-logistics.cn",
-      "count": 14
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 17:20:41 "
     },
     {
-      "name": "Henry Chen",
-      "email": "sha.ops55@wwl.cn",
-      "count": 13
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 17:36:54 "
     },
     {
-      "name": "Emma Cheng",
-      "email": "bdasst09@wwl.cn",
-      "count": 11
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: ZIMUQIN4431617 pending customs clearance",
+      "source": "回复: ZIMUQIN4431617 pending customs clearance",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 01:47:56 "
     },
     {
-      "name": "Bene",
-      "email": "jkt.bene@wwl.sg",
-      "count": 11
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUYL958947",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "NY",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Siny Zhu (can.sinyzhu@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → NY票最贵$125-175/天必须快!",
+      "detail": "到港 NY MBL:MEDUYL958947 Free Time 4天",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUYL958947 on VALIANT/609E POD NEW ",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 14:28:32 -0400"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 19:33:46 "
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUWI921190",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "HOU",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港 HOU MBL:MEDUWI921190 Free Time 4天",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWI921190 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:35:52 -0400"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUWQ373252",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "HOU",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "WILL RESULT IN CONTAINERS BEING RETURNED TO LOAD PORT OR CAR",
+      "shipper": "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY",
+      "internal_staff": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港 HOU MBL:MEDUWQ373252 Free Time 4天",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWQ373252 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:43:56 -0400"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDUWV135456",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "HOU",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "WILL RESULT IN CONTAINERS BEING RETURNED TO LOAD PORT OR CAR",
+      "shipper": "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY",
+      "internal_staff": "",
+      "wwl_sender": "ngb.ops29@wwl.cn (ngb.ops29@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港 HOU MBL:MEDUWV135456 Free Time 4天",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWV135456 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:50:10 -0400"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+      "source": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 04:57:22 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "QA Special Client Approved                 Payment: Demurrag",
+      "source": "QA Special Client Approved                 Payment: Demurrag",
+      "from": "PayCargo <alert@paycargo.com>",
+      "date": "Thu, 02 Apr 2026 22:06:24"
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "$865",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: ShippingAdviceNotice:WLCTAO260206348/QGD2605616",
+      "source": "回复: ShippingAdviceNotice:WLCTAO260206348/QGD2605616",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 08:32:27 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1457294",
+      "customer": "REACH INDUSTRY",
+      "amount": "$1340",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D $1340 MBL:CMDUTHD1457294",
+      "source": "回复: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 08:33:15 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "Re:RE: **URGENT** ZIMUQIN4431617 - CUSTOMS RELEASE",
+      "source": "Re:RE: **URGENT** ZIMUQIN4431617 - CUSTOMS RELEASE",
+      "from": "\"BTL\" <btl@switchbl.com>",
+      "date": "Fri, 3 Apr 2026 09:20:30 "
+    },
+    {
+      "type": "overdue",
+      "priority": "high",
+      "mbl": "",
+      "customer": "MAG SPECIALTIES",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Maggie Wu",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "催收 → 确认T+X阶段 → T+7首催/T+15升级/T+30追偿函/T+45中信保",
+      "detail": "Overdue MAG SPECIALTIES ",
+      "source": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Fri, 3 Apr 2026 09:23:06 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1457294",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:CMDUTHD1457294",
+      "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+      "from": "\"Bongkoch Kongmanee\" <bkk.bong@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 09:51:04 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1457294",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:CMDUTHD1457294",
+      "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+      "date": "Fri, 3 Apr 2026 11:20:59 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1457294",
+      "customer": "REACH INDUSTRY",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D  MBL:CMDUTHD1457294",
+      "source": "Re: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+      "from": "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 10:23:53 "
+    },
+    {
+      "type": "post_clearance",
+      "priority": "high",
+      "mbl": "MEDURQ394716",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "Maggie Yin (elite-solar.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
+      "detail": "清关完成 通知卡车+客户",
+      "source": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "Maggie Yin <maggie.yin@elite-solar.com>",
+      "date": "Thu, 02 Apr 2026 14:50:54"
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUWG953468",
+      "hbl": "WLC60124792",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-09",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUWG953468 金额:",
+      "source": "Charge confirm request /MBL:MEDUWG953468 /HBL:WLC60124792\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 02:00:49 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ONEYBKKG67192800",
+      "hbl": "WLC60305212",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ONEYBKKG67192800 金额:",
+      "source": "Charge confirm request /MBL:ONEYBKKG67192800 /HBL:WLC6030521",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:00 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ONEYBKKG48500700",
+      "hbl": "WLC60305140",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.rie@wwl.sg (bkk.rie@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ONEYBKKG48500700 金额:",
+      "source": "Charge confirm request /MBL:ONEYBKKG48500700 /HBL:WLC6030514",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:01 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ONEYBKKG68481300",
+      "hbl": "WLC60304584",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ONEYBKKG68481300 金额:",
+      "source": "Charge confirm request /MBL:ONEYBKKG68481300 /HBL:WLC6030458",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:02 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60216138",
+      "customer": "",
+      "eta": "2026-04-01",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:MEDUR6661785 /HBL:WLC60216138\r\n ",
+      "source": "Charge confirm request /MBL:MEDUR6661785 /HBL:WLC60216138\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:05 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "HLCUSHA260283311",
+      "hbl": "WLC60213407",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "Hapag-Lloyd",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:HLCUSHA260283311 金额:",
+      "source": "Charge confirm request /MBL:HLCUSHA260283311 /HBL:WLC6021340",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:09 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "MEDUWT188572",
+      "hbl": "WLC60122743",
+      "customer": "HAIROBOT",
+      "eta": "2026-03-15",
+      "amount": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Everlyn Shaw (us.ops2@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:MEDUWT188572 金额:",
+      "source": "Charge confirm request /MBL:MEDUWT188572 /HBL:WLC60122743\r\n ",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:10 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60307157",
+      "customer": "",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:YMJAE237054931 /HBL:WLC60307157\r",
+      "source": "Charge confirm request /MBL:YMJAE237054931 /HBL:WLC60307157\r",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:13 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60303246",
+      "customer": "",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:YMJAE237054262 /HBL:WLC60303246\r",
+      "source": "Charge confirm request /MBL:YMJAE237054262 /HBL:WLC60303246\r",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:14 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60307051",
+      "customer": "",
+      "eta": "2026-04-08",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:YMJAE237054918 /HBL:WLC60307051\r",
+      "source": "Charge confirm request /MBL:YMJAE237054918 /HBL:WLC60307051\r",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:14 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "CMDUCHN3177029",
+      "hbl": "WLC60307989",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-09",
+      "amount": "",
+      "assignee": "",
+      "carrier": "CMA-CGM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:CMDUCHN3177029 金额:",
+      "source": "Charge confirm request /MBL:CMDUCHN3177029 /HBL:WLC60307989\r",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:16 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "",
+      "hbl": "WLC60124039",
+      "customer": "",
+      "eta": "2026-03-23",
+      "amount": "",
+      "assignee": "",
+      "carrier": "",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "确认费用承担方",
+      "detail": "Charge confirm request /MBL:ZIMUDAL878345 /HBL:WLC60124039\r\n",
+      "source": "Charge confirm request /MBL:ZIMUDAL878345 /HBL:WLC60124039\r\n",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:17 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80439631",
+      "hbl": "WLC60216589",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-28",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80439631 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80439631 /HBL:WLC60216589",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:20 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80439627",
+      "hbl": "WLC60216592",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-28",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80439627 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80439627 /HBL:WLC60216592",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:20 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ZIMUBKK80439630",
+      "hbl": "WLC60216595",
+      "customer": "HAIROBOT",
+      "eta": "2026-04-28",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ZIM",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.guide@wwl.sg (bkk.guide@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ZIMUBKK80439630 金额:",
+      "source": "Charge confirm request /MBL:ZIMUBKK80439630 /HBL:WLC60216595",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:05:21 "
+    },
+    {
+      "type": "cc_confirm",
+      "priority": "medium",
+      "mbl": "ONEYBKKG38865600",
+      "hbl": "WLC60212589",
+      "customer": "HAIROBOT",
+      "eta": "2026-03-17",
+      "amount": "",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "确认费用承担方",
+      "detail": "PLT CC确认 MBL:ONEYBKKG38865600 金额:",
+      "source": "Charge confirm request /MBL:ONEYBKKG38865600 /HBL:WLC6021258",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 09:59:24 "
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "MEDUYL958947",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "Siny Zhu (can.sinyzhu@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUYL958947 on VALIANT/609E POD NEW ",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 14:28:32 -0400"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "MEDUWI921190",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWI921190 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:35:52 -0400"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "MEDUWQ373252",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "WILL RESULT IN CONTAINERS BEING RETURNED TO LOAD PORT OR CAR",
+      "shipper": "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY",
+      "internal_staff": "",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWQ373252 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:43:56 -0400"
+    },
+    {
+      "type": "empty_return",
+      "priority": "medium",
+      "mbl": "MEDUWV135456",
+      "customer": "",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "WILL RESULT IN CONTAINERS BEING RETURNED TO LOAD PORT OR CAR",
+      "shipper": "DECLARES THAT ANY APPLICABLE WOOD PACKAGING MATERIALS COMPLY",
+      "internal_staff": "",
+      "wwl_sender": "ngb.ops29@wwl.cn (ngb.ops29@wwl.cn)",
+      "wwl_branch": "WWL中国",
+      "action": "提柜/签收后 → 跟进空柜归还(避免Per Diem) → 确认POD签收单已收到 → 通知Maggie可以出Debit Note",
+      "detail": "空柜归还+POD",
+      "source": "ARRIVAL NOTICE FOR BL# MEDUWV135456 on MSC TIANSHAN/609E POD",
+      "from": "us038-arrival.notices@msc.com",
+      "date": "2 Apr 2026 15:50:10 -0400"
     }
   ],
-  "action_items": [],
   "action_summary": {
-    "total": 0,
-    "urgent": 0,
-    "high": 0,
-    "medium": 0
+    "total": 54,
+    "urgent": 14,
+    "high": 20,
+    "medium": 20
   },
   "bl_status": {
     "no_tlx_mbl": [
@@ -471,6 +1484,8 @@
       "MEDURQ331288",
       "MEDURQ324267",
       "HLCUNK2251220417",
+      "ONEYBTMG00315800",
+      "ONEYBTMG00312500",
       "MEDURQ332211",
       "MEDURQ395473",
       "MEDURQ360121",
@@ -488,9 +1503,7 @@
       "ONEYBTMG00799300",
       "ONEYBTMG00801800",
       "OOLU4055100830",
-      "OOLU2323331320",
-      "WHLC194GA00385",
-      "EGLV142652690745"
+      "OOLU2323331320"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
@@ -503,437 +1516,237 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 285,
+    "tlx_confirmed_mbl": 288,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
   "anomalies": {
     "cancel_it": [
       {
-        "subject": "Re: Re:     need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "maoqiaoyu@cargoee.com",
-        "date": "2026-04-03 11:56:11"
+        "subject": "Re: Re:    need cancel IT NUMBER,request AN   ETA 3.24  MEDU",
+        "from": "\"Joey Mao\" <maoqiaoyu@cargoee.",
+        "date": "Fri, 3 Apr 2026 11:25:34 "
       },
       {
-        "subject": "Re:     need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "btl@switchbl.com",
-        "date": "2026-04-03 11:54:42"
+        "subject": "Re:     need cancel IT NUMBER,request AN   ETA 3.24  MEDUR66",
+        "from": "\"BTL\" <btl@switchbl.com>",
+        "date": "Fri, 3 Apr 2026 11:54:42 "
       },
       {
-        "subject": "Re: Re:    need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "maoqiaoyu@cargoee.com",
-        "date": "2026-04-03 11:25:34"
-      },
-      {
-        "subject": "Re:    need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "btl@switchbl.com",
-        "date": "2026-04-02 10:33:22"
-      },
-      {
-        "subject": "Re: Re:   need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "maoqiaoyu@cargoee.com",
-        "date": "2026-04-02 09:40:04"
-      },
-      {
-        "subject": "Re:RE:   need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "btl@switchbl.com",
-        "date": "2026-03-30 23:44:43"
-      },
-      {
-        "subject": "RE: Re:  need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-30 15:15:16"
-      },
-      {
-        "subject": "Re: Re:  need cancel IT NUMBER,request AN   ETA 3.24  MEDUR6622852",
-        "from": "maoqiaoyu@cargoee.com",
-        "date": "2026-03-30 15:06:19"
-      },
-      {
-        "subject": "RE: RE: Re[3]: cancel IT request for BL#MEDUWK419085",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 04:30:04"
-      },
-      {
-        "subject": "RE: RE: Re[3]: cancel IT request for BL#MEDUWK419085",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 04:20:50"
+        "subject": "Re: Re:     need cancel IT NUMBER,request AN   ETA 3.24  MED",
+        "from": "\"Joey Mao\" <maoqiaoyu@cargoee.",
+        "date": "Fri, 3 Apr 2026 11:56:11 "
       }
     ],
     "cod": [
       {
-        "subject": "RE: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-03 09:25:42"
+        "subject": "Air Freight / EXW / Newark or Philadelphia - BKK // WWL Thai",
+        "from": "Effy <us.effyhuo@wwl.sg>",
+        "date": "Thu, 2 Apr 2026 11:58:32 "
       },
       {
-        "subject": "Re: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "team3@yeschb.com",
-        "date": "2026-04-02 10:16:48"
-      },
-      {
-        "subject": "RE: 回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 10:04:31"
-      },
-      {
-        "subject": "RE: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 09:55:55"
-      },
-      {
-        "subject": "回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "us.ops@wwl.sg",
-        "date": "2026-04-02 00:19:14"
-      },
-      {
-        "subject": "回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "us.ops@wwl.sg",
-        "date": "2026-04-02 00:01:56"
-      },
-      {
-        "subject": "RE: 回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "us.doc.imp@zim.com",
-        "date": "2026-04-01 19:03:37"
-      },
-      {
-        "subject": "回复: AN/ MBL#MEDURQ323962 / HBL#WLC60206452 / Container#MSMU5419742 & MSMU8779193 & MEDU8778871 & CAAU5819989 & CAIU7807188 / ETA 03/25/2026 - FirmCode/Cargo Location Update",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-04-01 15:38:39"
-      },
-      {
-        "subject": "回复: AN/ MBL#MEDURQ323962 / HBL#WLC60206452 / Container#MSMU5419742 & MSMU8779193 & MEDU8778871 & CAAU5819989 & CAIU7807188 / ETA 03/25/2026 - FirmCode/Cargo Location Update",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-04-01 15:26:40"
-      },
-      {
-        "subject": "回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-04-01 13:05:41"
-      },
-      {
-        "subject": "FW: AN/ MBL#MEDURQ323962 / HBL#WLC60206452 / Container#MSMU5419742 & MSMU8779193 & MEDU8778871 & CAAU5819989 & CAIU7807188 / ETA 03/25/2026 - FirmCode/Cargo Location Update",
-        "from": "horizonsolar001@gmail.com",
-        "date": "2026-04-01 12:09:24"
-      },
-      {
-        "subject": "Re: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "team3@yeschb.com",
-        "date": "2026-04-01 09:44:42"
-      },
-      {
-        "subject": "Re: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-        "from": "team3@yeschb.com",
-        "date": "2026-04-01 09:11:46"
-      },
-      {
-        "subject": "回复： MEDUEK846578 Delivery + clearance//海柔",
-        "from": "sha.gaoyuan@wwl.cn",
-        "date": "2026-03-28 04:38:08"
-      },
-      {
-        "subject": "答复: 回复： MEDUEK846578 Delivery + clearance//海柔",
-        "from": "sha.gaoyuan@wwl.cn",
-        "date": "2026-03-27 22:35:55"
+        "subject": "Air Freight / EXW / Newark or Philadelphia - BKK // WWL Thai",
+        "from": "Effy <us.effyhuo@wwl.sg>",
+        "date": "Thu, 2 Apr 2026 11:59:16 "
       }
     ],
     "non_standard": [],
     "stolen": [],
     "urgent": [
       {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-03 09:23:06",
-        "urgency": 3
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Thu, 02 Apr 2026 11:13:34"
+      },
+      {
+        "subject": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg",
+        "urgency": 3,
+        "date": "Thu, 2 Apr 2026 14:21:39 "
+      },
+      {
+        "subject": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Thu, 02 Apr 2026 11:28:10"
+      },
+      {
+        "subject": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+        "from": "<us.ops@wwl.sg>",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 04:57:22 "
+      },
+      {
+        "subject": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Thu, 02 Apr 2026 14:50:54"
       },
       {
         "subject": "Re:RE: **URGENT** ZIMUQIN4431617 - CUSTOMS RELEASE",
-        "from": "btl@switchbl.com",
-        "date": "2026-04-03 09:20:30",
-        "urgency": 3
+        "from": "\"BTL\" <btl@switchbl.com>",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 09:20:30 "
       },
       {
-        "subject": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the train as soon as possible.",
-        "from": "us.ops@wwl.sg",
-        "date": "2026-04-03 04:57:22",
-        "urgency": 3
+        "subject": "DTC account - Pre-alert  Freehandle : ONEYSZPG57799501  / WL",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 14:58:54 "
       },
       {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
-        "from": "dliu@airseachicago.com",
-        "date": "2026-04-02 16:50:05",
-        "urgency": 3
+        "subject": "RE: Resend~RE: DTC account - Pre-alert  Freehandle : 025G577",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 14:59:30 "
       },
       {
-        "subject": "RE: Re: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 15:41:17",
-        "urgency": 3
+        "subject": "RE: Resend~RE: DTC account - Pre-alert  Freehandle : 025G577",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 15:00:02 "
       },
       {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 15:36:36",
-        "urgency": 3
+        "subject": "DTC account - Pre-alert  Freehandle : ONEYSZPG57799500 / WLC",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 15:02:56 "
       },
       {
-        "subject": "Re: Re: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-04-02 15:35:16",
-        "urgency": 3
+        "subject": "DTC account - Pre-alert  Freehandle : ONEYSZPG68819700  / WL",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 15:05:50 "
       },
       {
-        "subject": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-04-02 15:27:50",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 15:22:26",
-        "urgency": 3
-      },
-      {
-        "subject": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-04-02 15:00:42",
-        "urgency": 3
-      },
-      {
-        "subject": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "maggie.yin@elite-solar.com",
-        "date": "2026-04-02 14:50:54",
-        "urgency": 3
-      },
-      {
-        "subject": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-04-02 14:21:39",
-        "urgency": 3
-      },
-      {
-        "subject": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "maggie.yin@elite-solar.com",
-        "date": "2026-04-02 11:28:10",
-        "urgency": 3
-      },
-      {
-        "subject": "答复: 3rd reminder/OVERDUE  charges  ALERT  of  MERSY CORP SA DE CV / / MEDUKH457914",
-        "from": "fsh.jimwen@wwl.cn",
-        "date": "2026-04-02 11:15:52",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "maggie.yin@elite-solar.com",
-        "date": "2026-04-02 11:13:34",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: 3rd reminder/OVERDUE  charges  ALERT  of  MERSY CORP SA DE CV / / MEDUKH457914",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 11:08:53",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 10:57:01",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MACHINERY N.A.,LLC",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-04-02 10:45:00",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR ESPECIALISTAS EN COMERCO INTERNACIONAL DEL NORESTE SA DE CV",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 17:04:55",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 16:36:58",
-        "urgency": 3
-      },
-      {
-        "subject": "Re: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-03-31 16:28:02",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 16:25:07",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "sha.sales72@wwl.cn",
-        "date": "2026-03-31 16:14:44",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-03-31 16:06:25",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 16:02:34",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 15:46:25",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "linyaxin@xiangyu.cn",
-        "date": "2026-03-31 15:45:52",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 15:42:06",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
-        "from": "sha.sales72@wwl.cn",
-        "date": "2026-03-31 15:40:20",
-        "urgency": 3
-      },
-      {
-        "subject": "MISSING REMITTANCE // URGENT // EFT# 0900618254TC $637921 - TRANSFAR\r\n CHASSIS LINK LLC",
-        "from": "matthew.lara@msc.com",
-        "date": "2026-03-31 15:33:56",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: 2nd REMINDER// Outstanding overdue payment for CSCL GLOBAL LIMITED",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 15:33:04",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE Demurrage charge of CHAINVALUE US CO.",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 15:10:13",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: 2nd reminder//Overdue outstandinng payment for CAYEPORS",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 14:43:49",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: Overdue detention cost for CASEY CATON LOGISTICS",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 14:33:00",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: Reminder//Overdue outstanding payment for ARTISARY INC",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-31 14:27:09",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: MISSING REMITTANCE // URGENT // EFT# 0900618254TC $637921 - TRANSFAR CHASSIS LINK LLC",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-03-31 11:48:04",
-        "urgency": 3
-      },
-      {
-        "subject": "答复: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MACHINERY N.A.,LLC",
-        "from": "szn.yancyyu@wwl.cn",
-        "date": "2026-03-30 15:48:34",
-        "urgency": 3
-      },
-      {
-        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "us.ops2@wwl.sg",
-        "date": "2026-03-30 12:31:49",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: 回复：RE: OVERDUE OUTSTANDING PAYMENT FOR MING HAO XIN TRADING CO LTD",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-30 10:20:21",
-        "urgency": 3
-      },
-      {
-        "subject": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
-        "from": "maggie.yin@elite-solar.com",
-        "date": "2026-03-30 09:26:20",
-        "urgency": 3
-      },
-      {
-        "subject": "回复：RE: OVERDUE OUTSTANDING PAYMENT FOR MING HAO XIN TRADING CO LTD",
-        "from": "jsjbggyxyw@jsjb-global.com",
-        "date": "2026-03-28 02:07:58",
-        "urgency": 3
-      },
-      {
-        "subject": "Re: 3rd reminder/OVERDUE  charges  ALERT  of  MERSY CORP SA DE CV / / MEDUKH457914",
-        "from": "willsun@wwl.cn",
-        "date": "2026-03-27 11:16:58",
-        "urgency": 3
-      },
-      {
-        "subject": "答复: 3rd reminder/OVERDUE  charges  ALERT  of  MERSY CORP SA DE CV / / MEDUKH457914",
-        "from": "fsh.jimwen@wwl.cn",
-        "date": "2026-03-27 09:26:49",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR MING HAO XIN TRADING CO LTD",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 03:52:16",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 03:14:33",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: OVERDUE OUTSTANDING PAYMENT FOR LIUGONG CONSTRUCTION MACHINERY N.A.,LLC",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 03:08:34",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: RE: OVERDUE Demurrage charge of ES FOUNDRY CORP",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 02:56:00",
-        "urgency": 3
-      },
-      {
-        "subject": "RE: 2nd REMINDER// Outstanding overdue payment for CSCL GLOBAL LIMITED",
-        "from": "maggiewu@wwl.cn",
-        "date": "2026-03-27 02:25:54",
-        "urgency": 3
+        "subject": "DTC account - Pre-alert  Freehandle : ONEYSZPG68887500  / WL",
+        "from": "\"Renee Lin-WWLSZN\" <szn.reneel",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 15:08:06 "
       }
     ]
   },
   "neural_network": {
-    "entities": 52,
-    "relationships": 0,
-    "contacts_total": 0
+    "entities": 91,
+    "relationships": 23,
+    "contacts_new": 0,
+    "contacts_total": 386,
+    "daily_connections": 21,
+    "new_domains": [
+      "newl.ca",
+      "paycargo.com",
+      "expresslinecorp.com",
+      "biposervice.com",
+      "elite-solar.com",
+      "jci-chemical.com"
+    ]
   },
-  "daily_connections": []
+  "daily_connections": [
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "YES报关行",
+      "type": "service"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "CLOU (科陆)",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "CLOU (科陆)",
+      "to": "PTT卡车",
+      "type": "service"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "YES报关行",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
+      "type": "service"
+    },
+    {
+      "from": "HAILIANG (海亮)",
+      "to": "MSC",
+      "type": "carrier"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
+    }
+  ]
 }
