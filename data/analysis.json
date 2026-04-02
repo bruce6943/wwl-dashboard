@@ -1,17 +1,17 @@
 {
-  "scan_time": "2026-04-02T22:20:28.655880+08:00",
-  "total_emails": 1527,
-  "business_emails": 1481,
+  "scan_time": "2026-04-02T23:12:34.388594+08:00",
+  "total_emails": 1539,
+  "business_emails": 1493,
   "pdf_count": 0,
   "categories": {
     "charge_confirm": 99,
     "arrival_notice": 87,
-    "prealert": 158
+    "prealert": 160
   },
   "customers": {
     "HAIROBOT": {
       "mbl_count": 73,
-      "email_count": 198
+      "email_count": 201
     },
     "ELITE SOLAR": {
       "mbl_count": 66,
@@ -42,8 +42,8 @@
       "email_count": 33
     },
     "GLOBAL OCEAN FORWARDING L": {
-      "mbl_count": 13,
-      "email_count": 32
+      "mbl_count": 14,
+      "email_count": 33
     },
     "MING HAO XIN": {
       "mbl_count": 4,
@@ -94,9 +94,9 @@
     "MSC": 466,
     "OOCL": 456,
     "COSCO": 335,
-    "Hapag-Lloyd": 184,
+    "Hapag-Lloyd": 185,
     "ONE": 142,
-    "ZIM": 103,
+    "ZIM": 104,
     "CMA-CGM": 103,
     "Evergreen": 43,
     "MAERSK": 35,
@@ -105,8 +105,8 @@
     "YML": 2
   },
   "carrier_fees": {},
-  "hbl_total": 3043,
-  "mbl_total": 1942,
+  "hbl_total": 3045,
+  "mbl_total": 1944,
   "all_hbls": [
     "WLC26012007",
     "WLC40407328",
@@ -319,8 +319,8 @@
     "2026-03-30": 328,
     "2026-03-31": 238,
     "2026-04-01": 75,
-    "2026-04-02": 235,
-    "2026-04-03": 18
+    "2026-04-02": 237,
+    "2026-04-03": 28
   },
   "inspection_mbls": [
     "YMJAE490402433",
@@ -340,12 +340,12 @@
     {
       "name": "Maggie Wu",
       "email": "maggiewu@wwl.cn",
-      "count": 101
+      "count": 103
     },
     {
       "name": "Effy",
       "email": "us.effyhuo@wwl.sg",
-      "count": 66
+      "count": 68
     },
     {
       "name": "us.ops@wwl.sg",
@@ -365,7 +365,7 @@
     {
       "name": "rita tang",
       "email": "rita.tang@wwl.cn",
-      "count": 39
+      "count": 40
     },
     {
       "name": "Renee Lin-WWLSZN",
@@ -403,6 +403,16 @@
       "count": 17
     },
     {
+      "name": "ngb.ops29@wwl.cn",
+      "email": "ngb.ops29@wwl.cn",
+      "count": 16
+    },
+    {
+      "name": "bkk.rie@wwl.sg",
+      "email": "bkk.rie@wwl.sg",
+      "count": 15
+    },
+    {
       "name": "Adam Sum",
       "email": "us.adamsum@worldwide-logistics.cn",
       "count": 15
@@ -410,16 +420,6 @@
     {
       "name": "Emma Cheng",
       "email": "bdasst09@wwl.cn",
-      "count": 14
-    },
-    {
-      "name": "bkk.rie@wwl.sg",
-      "email": "bkk.rie@wwl.sg",
-      "count": 14
-    },
-    {
-      "name": "ngb.ops29@wwl.cn",
-      "email": "ngb.ops29@wwl.cn",
       "count": 14
     },
     {
@@ -504,7 +504,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 300,
+    "tlx_confirmed_mbl": 301,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },

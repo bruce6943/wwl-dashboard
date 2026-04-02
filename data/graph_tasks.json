@@ -406,7 +406,7 @@
       "title": "Fee Confirmed",
       "mbl": "OOLU2167307120, OOLU2167175490, OOLU2167175510, OOLU2167574730, OOLU2166783970 +2",
       "carrier": "OOCL",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
       "action": "OOCL 7票 — 已发确认请求 → 需跟进对方回复",
@@ -414,7 +414,7 @@
         "电放确认: MBL/HBL已电放(TLX/SWB/Surrendered)",
         "后续: 确认BTL平台已换单 → 等AN到港通知"
       ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
+      "progress_history": "客户: DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Renee Lin-WWLSZN",
       "email_count": 8,
       "last_seen": "2026-03-30"
     },
@@ -752,7 +752,7 @@
   ],
   "summary": {
     "arrival_notices": 209,
-    "bl_releases": 105,
+    "bl_releases": 107,
     "billings": 106,
     "prealerts": 47
   },
