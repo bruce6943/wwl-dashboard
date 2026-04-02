@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-04-02T16:16:31.954795+08:00",
-  "total_emails": 634,
-  "business_emails": 585,
-  "pdf_count": 586,
+  "scan_time": "2026-04-02T17:02:47.529110+08:00",
+  "total_emails": 641,
+  "business_emails": 592,
+  "pdf_count": 587,
   "categories": {
     "delivery": 13,
     "booking": 9,
-    "other_biz": 421,
+    "other_biz": 428,
     "hold": 6,
     "charge_confirm": 18,
     "prealert": 20,
@@ -319,7 +319,7 @@
     }
   },
   "carriers": {
-    "ZIM": 113,
+    "ZIM": 114,
     "OOCL": 115,
     "WAN HAI": 2,
     "MSC": 118,
@@ -865,8 +865,8 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 241,
-    "2026-04-03": 10
+    "2026-04-02": 249,
+    "2026-04-03": 9
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -885,7 +885,7 @@
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      54
+      59
     ],
     [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
@@ -917,7 +917,7 @@
     ],
     [
       "<us.ops@wwl.sg>",
-      13
+      14
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -2627,8 +2627,8 @@
       "internal_staff": "Maggie Wu",
       "wwl_sender": "Shirley.Liu WWL TSN OPS (tsn.ops14@wwl.cn)",
       "wwl_branch": "WWL中国",
-      "action": "MSC铁路到货通知已收 → 确认报关完成 → 4天Free Time内安排提柜",
-      "detail": "铁路到货通知(Rail Arrival Notice): MBL:MEDUWG692272, ETA 3/31/2026, Free Time 4天",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDUWG692272 Free Time 4天",
       "source": "MSC USA - Rail Arrival Notice for BL: MEDUWG692272",
       "from": "us038-importpickupnotification@msc.com",
       "date": "2 Apr 2026 10:21:17 -0400"
@@ -2840,6 +2840,19 @@
       "date": "2 Apr 2026 15:50:10 -0400"
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+      "source": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 04:57:22 "
+    },
+    {
       "type": "supplier_reply",
       "priority": "high",
       "mbl": "",
@@ -2958,32 +2971,12 @@
       "source": "RE: RE: RE: OOCL Regulatory Hold Notifications/ MBL#OOLU2320",
       "from": "Brian Walsh - WFS Customs <brian.walsh@wfscustoms.com>",
       "date": "Wed, 1 Apr 2026 19:35:54 "
-    },
-    {
-      "type": "supplier_reply",
-      "priority": "high",
-      "mbl": "HLCUNHN251022798",
-      "customer": "PTS INC",
-      "assignee": "",
-      "carrier": "Hapag-Lloyd",
-      "sender": "PTS",
-      "contact": "Andy Kim | PTS Inc <akim@ptstfs.com> / Sam Kim | PTS Inc <skim@ptstfs.com>",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "PTS等待我方回复 → 24h内必须响应 → 联系: Andy Kim akim@ptstfs.com",
-      "detail": "供应商等回复: PTS",
-      "source": "Round Trip inquiry JINGZHOU- Charleston - Shanghai / qingdao",
-      "from": "Andy Kim | PTS Inc <akim@ptstfs.com>",
-      "date": "Thu, 2 Apr 2026 14:41:16 "
     }
   ],
   "action_summary": {
-    "total": 158,
+    "total": 159,
     "urgent": 25,
-    "high": 75,
+    "high": 76,
     "medium": 58
   },
   "bl_status": {
@@ -3356,6 +3349,12 @@
         "from": "Maggie Yin <maggie.yin@elite-s",
         "urgency": 3,
         "date": "Thu, 02 Apr 2026 11:28:10"
+      },
+      {
+        "subject": "*URGENT** ZIMUQIN4431617 - Please arrange to load onto the t",
+        "from": "<us.ops@wwl.sg>",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 04:57:22 "
       }
     ]
   },
@@ -3366,14 +3365,14 @@
     "contacts_total": 385,
     "daily_connections": 45,
     "new_domains": [
-      "romesales.com",
-      "xiangyu.cn",
-      "containerport.com",
+      "jci-chemical.com",
       "elite-solar.com",
       "linkedin.com",
-      "jci-chemical.com",
+      "romesales.com",
+      "biposervice.com",
+      "containerport.com",
       "newl.ca",
-      "biposervice.com"
+      "xiangyu.cn"
     ]
   },
   "daily_connections": [
