@@ -454,7 +454,7 @@
         "03-24 15:35 operation.us@sc: Dear\r \r bank slip for \r MEDUWK300806  chassis-USD220\r MEDUWK300806  CHASSIS PER"
       ],
       "progress_history": "提单: MEDUWK300806, MEDUWK525337, MEDUWK869305",
-      "email_count": 49,
+      "email_count": 50,
       "last_seen": "2026-03-24"
     },
     {
@@ -464,7 +464,7 @@
       "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
       "carrier": "MSC",
       "customer": "PREVALON ENERGY INC.",
-      "wwl_sender": " (szn.ulaxie@wwl.cn)",
+      "wwl_sender": "林慧滢Renee (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
       "action": "MSC 6票 — us038-impo来信→需确认并回复",
       "detail_lines": [
@@ -483,7 +483,7 @@
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506444150, COSU9506319330 +1",
       "carrier": "COSCO",
       "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "wwl_sender": "ngb.ops18@wwl.cn (ngb.ops18@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 6票 — 等Maggie Wu的上家回复",
       "detail_lines": [
@@ -500,7 +500,7 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG61453900, ONEYBKKG61472300, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./THE QUALITY THREAD & NOTI/MING HAO XIN TRADING CO., LTD.",
+      "customer": "THE QUALITY THREAD & NOTI/REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": "Eart (bkk.eart@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 5票 — 等Eart的上家回复",
@@ -653,7 +653,7 @@
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.guide@wwl.sg)",
+      "wwl_sender": " (bkk.nasmee@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
       "detail_lines": [
@@ -996,9 +996,9 @@
     }
   ],
   "summary": {
-    "arrival_notices": 190,
-    "bl_releases": 112,
-    "billings": 126,
+    "arrival_notices": 192,
+    "bl_releases": 111,
+    "billings": 125,
     "prealerts": 45
   },
   "stats": {
