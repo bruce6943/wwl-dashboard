@@ -512,6 +512,24 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
+      "mbl": "COSU9506320440, COSU6448000790",
+      "carrier": "COSCO",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC.",
+      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "wwl_branch": "WWL宁波",
+      "action": "COSCO 2票 — 需找销售公司/客户确认费用承担方",
+      "detail_lines": [
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+      ],
+      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC. | Origin: ngb.ops25@wwl.cn",
+      "email_count": 3,
+      "last_seen": "2026-03-30"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
       "mbl": "COSU6447268220, COSU6447269010",
       "carrier": "COSCO",
       "customer": "DTC FREIGHT (内部电商)",
@@ -543,24 +561,6 @@
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Ann Gong",
       "email_count": 16,
       "last_seen": "2026-03-31"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "COSU9506320440",
-      "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
-      "wwl_branch": "WWL宁波",
-      "action": "需找销售公司/客户确认费用承担方",
-      "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: ngb.ops25@wwl.cn",
-      "email_count": 2,
-      "last_seen": "2026-03-30"
     },
     {
       "type": "fee_pending",
@@ -734,7 +734,7 @@
   ],
   "summary": {
     "arrival_notices": 211,
-    "bl_releases": 116,
+    "bl_releases": 119,
     "billings": 111,
     "prealerts": 45
   },
