@@ -10,10 +10,10 @@
       "customer": "NEXTERA ENERGY CONSTRUCTORS, LLC (US直操)",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$47,663 | 欠17天 | T+30 追偿函",
+      "action": "$47,663 [收货人自付] | 欠17天 | T+17 升级",
       "progress_history": "收货人自付$4,860 + 委托人承担$42,803 | 115条 80票",
       "email_count": 115,
-      "last_seen": "2026-03-16",
+      "last_seen": "2026-04-02",
       "amount": "$47,663",
       "days_overdue": 17,
       "detail_lines": [
@@ -30,10 +30,10 @@
       "customer": "AVANTIX INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$27,760 | 欠25天 | T+30 追偿函",
+      "action": "$27,760 [收货人自付] | 欠25天 | T+25 升级",
       "progress_history": "收货人自付$27,560 + 代收-收货人$200 | 5条 5票",
-      "email_count": 5,
-      "last_seen": "2026-03-08",
+      "email_count": 19,
+      "last_seen": "2026-04-02",
       "amount": "$27,760",
       "days_overdue": 25,
       "detail_lines": [
@@ -50,10 +50,10 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$9,620 | 欠8天 | T+15 升级",
+      "action": "$9,620 [收货人自付] | 欠8天 | T+8 首催",
       "progress_history": "收货人自付$9,620 | 14条 3票",
-      "email_count": 14,
-      "last_seen": "2026-03-25",
+      "email_count": 50,
+      "last_seen": "2026-04-02",
       "amount": "$9,620",
       "days_overdue": 8,
       "detail_lines": [
@@ -70,10 +70,10 @@
       "customer": "ALBATROSS AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$7,170 | 欠118天 | T+118 超中信保!",
+      "action": "$7,170 [收货人自付] | 欠118天 | T+118 超中信保!",
       "progress_history": "收货人自付$7,170 | 1条 1票",
       "email_count": 1,
-      "last_seen": "2025-12-05",
+      "last_seen": "2026-04-02",
       "amount": "$7,170",
       "days_overdue": 118,
       "detail_lines": [
@@ -90,10 +90,10 @@
       "customer": "HOUNEN SOLAR AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$6,490 | 欠74天 | T+74 超中信保!",
+      "action": "$6,490 [委托人承担] | 欠74天 | T+74 超中信保!",
       "progress_history": "委托人承担$6,490 | 14条 14票",
       "email_count": 14,
-      "last_seen": "2026-01-18",
+      "last_seen": "2026-04-02",
       "amount": "$6,490",
       "days_overdue": 74,
       "detail_lines": [
@@ -110,10 +110,10 @@
       "customer": "MERSY CORP SA DE CV",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,985 | 欠84天 | T+84 超中信保!",
+      "action": "$5,985 [收货人自付] | 欠84天 | T+84 超中信保!",
       "progress_history": "收货人自付$5,985 | 5条 1票",
-      "email_count": 5,
-      "last_seen": "2026-01-08",
+      "email_count": 25,
+      "last_seen": "2026-04-02",
       "amount": "$5,985",
       "days_overdue": 84,
       "detail_lines": [
@@ -130,10 +130,10 @@
       "customer": "MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,609 | 欠5天 | T+7 首催",
+      "action": "$5,609 [收货人自付] | 欠5天 | T+5 首催",
       "progress_history": "收货人自付$5,390 + 委托人承担$219 | 11条 8票",
-      "email_count": 11,
-      "last_seen": "2026-03-28",
+      "email_count": 21,
+      "last_seen": "2026-04-02",
       "amount": "$5,609",
       "days_overdue": 5,
       "detail_lines": [
@@ -150,10 +150,10 @@
       "customer": "HITHIUM TECH USA INC. / 海辰储能",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$4,200 | 欠4天 | T+7 首催",
+      "action": "$4,200 [委托人承担] | 欠4天 | T+4 首催",
       "progress_history": "委托人承担$4,100 + 代收-收货人$100 | 5条 4票",
-      "email_count": 5,
-      "last_seen": "2026-03-29",
+      "email_count": 23,
+      "last_seen": "2026-04-02",
       "amount": "$4,200",
       "days_overdue": 4,
       "detail_lines": [
@@ -170,10 +170,10 @@
       "customer": "ES FOUNDRY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,260 | 欠15天 | T+15 升级",
+      "action": "$3,260 [收货人自付] | 欠15天 | T+15 升级",
       "progress_history": "收货人自付$3,260 | 6条 2票",
-      "email_count": 6,
-      "last_seen": "2026-03-18",
+      "email_count": 45,
+      "last_seen": "2026-04-02",
       "amount": "$3,260",
       "days_overdue": 15,
       "detail_lines": [
@@ -190,10 +190,10 @@
       "customer": "ARTISARY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,100 | 欠71天 | T+71 超中信保!",
+      "action": "$3,100 [收货人自付] | 欠71天 | T+71 超中信保!",
       "progress_history": "收货人自付$3,100 | 2条 1票",
-      "email_count": 2,
-      "last_seen": "2026-01-21",
+      "email_count": 11,
+      "last_seen": "2026-04-02",
       "amount": "$3,100",
       "days_overdue": 71,
       "detail_lines": [
@@ -210,10 +210,10 @@
       "customer": "LIUGONG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,800 | 欠56天 | T+56 超中信保!",
+      "action": "$1,800 [收货人自付] | 欠56天 | T+56 追偿函",
       "progress_history": "收货人自付$1,800 | 1条 1票",
       "email_count": 1,
-      "last_seen": "2026-02-05",
+      "last_seen": "2026-04-02",
       "amount": "$1,800",
       "days_overdue": 56,
       "detail_lines": [
@@ -230,10 +230,10 @@
       "customer": "JST POWER",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,410 | 欠10天 | T+15 升级",
+      "action": "$1,410 [委托人承担] | 欠10天 | T+10 首催",
       "progress_history": "委托人承担$110 + 代收-收货人$1,300 | 14条 5票",
-      "email_count": 14,
-      "last_seen": "2026-03-23",
+      "email_count": 15,
+      "last_seen": "2026-04-02",
       "amount": "$1,410",
       "days_overdue": 10,
       "detail_lines": [
@@ -250,10 +250,10 @@
       "customer": "GLOBAL CROSSING",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,315 | 欠126天 | T+126 超中信保!",
+      "action": "$1,315 [委托人承担] | 欠126天 | T+126 超中信保!",
       "progress_history": "委托人承担$15 + 代收-收货人$1,300 | 14条 13票",
       "email_count": 14,
-      "last_seen": "2025-11-27",
+      "last_seen": "2026-04-02",
       "amount": "$1,315",
       "days_overdue": 126,
       "detail_lines": [
@@ -270,10 +270,10 @@
       "customer": "ROYAL FOOD",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,100 | 欠175天 | T+175 超中信保!",
+      "action": "$1,100 [收货人自付] | 欠175天 | T+175 超中信保!",
       "progress_history": "收货人自付$1,100 | 2条 1票",
-      "email_count": 2,
-      "last_seen": "2025-10-09",
+      "email_count": 201,
+      "last_seen": "2026-04-02",
       "amount": "$1,100",
       "days_overdue": 175,
       "detail_lines": [
@@ -290,10 +290,10 @@
       "customer": "KHD GROUP",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$955 | 欠63天 | T+63 超中信保!",
+      "action": "$955 [收货人自付] | 欠63天 | T+63 超中信保!",
       "progress_history": "收货人自付$850 + 委托人承担$105 | 3条 3票",
-      "email_count": 3,
-      "last_seen": "2026-01-29",
+      "email_count": 18,
+      "last_seen": "2026-04-02",
       "amount": "$955",
       "days_overdue": 63,
       "detail_lines": [
@@ -310,10 +310,10 @@
       "customer": "YUNCHENG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$940 | 欠28天 | T+30 追偿函",
+      "action": "$940 [收货人自付] | 欠28天 | T+28 升级",
       "progress_history": "收货人自付$720 + 委托人承担$220 | 4条 3票",
-      "email_count": 4,
-      "last_seen": "2026-03-05",
+      "email_count": 60,
+      "last_seen": "2026-04-02",
       "amount": "$940",
       "days_overdue": 28,
       "detail_lines": [
@@ -330,10 +330,10 @@
       "customer": "TALESUNERGY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$780 | 欠26天 | T+30 追偿函",
+      "action": "$780 [收货人自付] | 欠26天 | T+26 升级",
       "progress_history": "收货人自付$780 | 2条 2票",
       "email_count": 2,
-      "last_seen": "2026-03-07",
+      "last_seen": "2026-04-02",
       "amount": "$780",
       "days_overdue": 26,
       "detail_lines": [
@@ -350,10 +350,10 @@
       "customer": "CAYEPORS",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$750 | 欠7天 | T+7 首催",
+      "action": "$750 [收货人自付] | 欠7天 | T+7 首催",
       "progress_history": "收货人自付$750 | 2条 2票",
-      "email_count": 2,
-      "last_seen": "2026-03-26",
+      "email_count": 17,
+      "last_seen": "2026-04-02",
       "amount": "$750",
       "days_overdue": 7,
       "detail_lines": [
@@ -370,10 +370,10 @@
       "customer": "CSCL GLOBAL",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$610 | 欠91天 | T+91 超中信保!",
+      "action": "$610 [收货人自付] | 欠91天 | T+91 超中信保!",
       "progress_history": "收货人自付$610 | 2条 1票",
       "email_count": 2,
-      "last_seen": "2026-01-01",
+      "last_seen": "2026-04-02",
       "amount": "$610",
       "days_overdue": 91,
       "detail_lines": [
@@ -390,10 +390,10 @@
       "customer": "CASEY CATON",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$570 | 欠84天 | T+84 超中信保!",
+      "action": "$570 [收货人自付] | 欠84天 | T+84 超中信保!",
       "progress_history": "收货人自付$570 | 1条 1票",
-      "email_count": 1,
-      "last_seen": "2026-01-08",
+      "email_count": 20,
+      "last_seen": "2026-04-02",
       "amount": "$570",
       "days_overdue": 84,
       "detail_lines": [
@@ -436,7 +436,7 @@
       ],
       "progress_history": "提单: OOLU2166556440, OOLU2166120500, OOLU2167307120",
       "email_count": 13,
-      "last_seen": "2026-03-18"
+      "last_seen": "2026-03-30"
     },
     {
       "type": "fee_confirmed",
@@ -455,7 +455,7 @@
       ],
       "progress_history": "提单: MEDUWK300806, MEDUWK525337, MEDUWK869305",
       "email_count": 50,
-      "last_seen": "2026-03-24"
+      "last_seen": "2026-03-26"
     },
     {
       "type": "fee_confirmed",
@@ -530,7 +530,7 @@
       ],
       "progress_history": "提单: HLCUSHA260228529, HLCUSHA2603BNZF0, HLCUSHA2603BNZN8",
       "email_count": 12,
-      "last_seen": "2026-03-27"
+      "last_seen": "2026-03-30"
     },
     {
       "type": "fee_pending",
@@ -606,7 +606,7 @@
       ],
       "progress_history": "提单: OOLU2318729730, OOLU2322662920, OOLU2321476620",
       "email_count": 5,
-      "last_seen": "2026-03-18"
+      "last_seen": "2026-03-20"
     },
     {
       "type": "fee_confirmed",
@@ -644,7 +644,7 @@
       ],
       "progress_history": "提单: HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
       "email_count": 4,
-      "last_seen": "2026-03-24"
+      "last_seen": "2026-03-30"
     },
     {
       "type": "prealert_received",
@@ -999,11 +999,13 @@
     "arrival_notices": 192,
     "bl_releases": 110,
     "billings": 125,
-    "prealerts": 46
+    "prealerts": 46,
+    "last_updated": "2026-04-02"
   },
   "stats": {
     "total": 54,
     "urgent": 20,
-    "high": 33
+    "high": 33,
+    "last_updated": "2026-04-02"
   }
 }
