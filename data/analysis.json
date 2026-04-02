@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-04-02T13:37:06.060286+08:00",
-  "total_emails": 593,
-  "business_emails": 551,
+  "scan_time": "2026-04-02T14:12:33.495191+08:00",
+  "total_emails": 598,
+  "business_emails": 556,
   "pdf_count": 577,
   "categories": {
     "delivery": 12,
     "booking": 9,
-    "other_biz": 396,
+    "other_biz": 400,
     "hold": 6,
-    "charge_confirm": 17,
+    "charge_confirm": 18,
     "prealert": 17,
     "arrival": 34,
     "inspection": 5,
@@ -274,6 +274,21 @@
       ]
     },
     "PREVALON ENERGY": {
+      "emails": 4,
+      "hbl_count": 0,
+      "mbl_count": 2,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [
+        "ZIMUSHH32074171",
+        "ZIMUSHH32077175"
+      ],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
+    },
+    "CLOU (科陆)": {
       "emails": 1,
       "hbl_count": 0,
       "mbl_count": 2,
@@ -289,10 +304,10 @@
     }
   },
   "carriers": {
-    "ZIM": 105,
+    "ZIM": 109,
     "OOCL": 115,
     "WAN HAI": 1,
-    "MSC": 108,
+    "MSC": 109,
     "COSCO": 65,
     "ONE": 26,
     "Hapag-Lloyd": 13,
@@ -301,8 +316,8 @@
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 254,
-  "mbl_total": 196,
+  "hbl_total": 255,
+  "mbl_total": 197,
   "all_hbls": [
     "WLC50618809",
     "WLC50625761",
@@ -491,6 +506,7 @@
     "WLC60124039",
     "WLC60124354",
     "WLC60124476",
+    "WLC60124792",
     "WLC60124919",
     "WLC60125028",
     "WLC60125031",
@@ -658,6 +674,7 @@
     "MEDURQ397388",
     "MEDURQ397412",
     "MEDUWG692272",
+    "MEDUWG953468",
     "MEDUWT188572",
     "MEDUYL886908",
     "MEDUYL930060",
@@ -828,8 +845,8 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 211,
-    "2026-04-03": 3
+    "2026-04-02": 213,
+    "2026-04-03": 6
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -860,7 +877,7 @@
     ],
     [
       "assistant@pltplt.com",
-      22
+      23
     ],
     [
       "US038-noreply@msc.com",
@@ -880,7 +897,7 @@
     ],
     [
       "<us.ops@wwl.sg>",
-      12
+      13
     ],
     [
       "\"Burce Xu - WWG XMN\" <xmn.ops2@wwl.cn>",
@@ -919,8 +936,8 @@
       6
     ],
     [
-      "Team3 YES <team3@yeschb.com>",
-      4
+      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      5
     ]
   ],
   "action_items": [
@@ -2659,6 +2676,19 @@
       "date": "Thu, 2 Apr 2026 17:36:54 "
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: ZIMUQIN4431617 pending customs clearance",
+      "source": "回复: ZIMUQIN4431617 pending customs clearance",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 01:47:56 "
+    },
+    {
       "type": "supplier_reply",
       "priority": "high",
       "mbl": "",
@@ -2935,36 +2965,13 @@
       "source": "Charge confirm request /MBL:ONEYBKKG67192800 /HBL:WLC6030521",
       "from": "assistant@pltplt.com",
       "date": "Thu, 2 Apr 2026 09:05:03 "
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
-      "mbl": "ONEYBKKG48500700",
-      "hbl": "WLC60305140",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-08",
-      "amount": "",
-      "assignee": "",
-      "carrier": "ONE",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.rie@wwl.sg (bkk.rie@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:ONEYBKKG48500700 金额:",
-      "source": "Charge confirm request /MBL:ONEYBKKG48500700 /HBL:WLC6030514",
-      "from": "assistant@pltplt.com",
-      "date": "Thu, 2 Apr 2026 09:05:03 "
     }
   ],
   "action_summary": {
-    "total": 146,
+    "total": 148,
     "urgent": 24,
-    "high": 69,
-    "medium": 53
+    "high": 70,
+    "medium": 54
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -2983,6 +2990,76 @@
         "needs_docs": false,
         "subject": "回复: 3/13/2026\t22607275047\tTRANSFAR CHAS LI\t749.00",
         "from": "us.ops@wwl.sg"
+      },
+      {
+        "mbl": "MEDURQ394716",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ394724",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ396802",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ396828",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ394773",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ394807",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ394732",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ394757",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ397321",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
+      },
+      {
+        "mbl": "MEDURQ397362",
+        "type": "freight",
+        "needs_docs": false,
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "maggie.yin@elite-solar.com"
       }
     ],
     "tlx_confirmed_mbl": 1,
@@ -3316,13 +3393,13 @@
     "relationships": 38,
     "contacts_new": 0,
     "contacts_total": 384,
-    "daily_connections": 37,
+    "daily_connections": 39,
     "new_domains": [
-      "xiangyu.cn",
       "linkedin.com",
-      "romesales.com",
       "newl.ca",
-      "containerport.com"
+      "xiangyu.cn",
+      "containerport.com",
+      "romesales.com"
     ]
   },
   "daily_connections": [
@@ -3510,6 +3587,16 @@
       "from": "HAIROBOT (海柔)",
       "to": "YES报关行",
       "type": "service"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "PREVALON ENERGY",
+      "to": "ZIM",
+      "type": "carrier"
     }
   ]
 }
