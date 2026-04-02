@@ -10,12 +10,12 @@
       "customer": "NEXTERA ENERGY CONSTRUCTORS, LLC (US直操)",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$47,663 | 欠17天 | T+30 追偿函",
+      "action": "$47,663 | 欠18天 | T+30 追偿函",
       "progress_history": "收货人自付$4,860 + 委托人承担$42,803 | 115条 80票",
       "email_count": 115,
       "last_seen": "2026-03-16",
       "amount": "$47,663",
-      "days_overdue": 17,
+      "days_overdue": 18,
       "detail_lines": [
         "Amount Still Due:$20,444 / Chassis Usage Charge:$19,416 / Ocean Freight:$2,943"
       ]
@@ -30,12 +30,12 @@
       "customer": "AVANTIX INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$27,760 | 欠25天 | T+30 追偿函",
+      "action": "$27,760 | 欠26天 | T+30 追偿函",
       "progress_history": "收货人自付$27,560 + 代收-收货人$200 | 5条 5票",
       "email_count": 5,
       "last_seen": "2026-03-08",
       "amount": "$27,760",
-      "days_overdue": 25,
+      "days_overdue": 26,
       "detail_lines": [
         "Detention-HAMU4066417:$11,300 / Detention-CMAU7350643:$10,590 / CONTAINER PER DIEM IMP:$5,670"
       ]
@@ -50,12 +50,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$9,620 | 欠8天 | T+15 升级",
+      "action": "$9,620 | 欠9天 | T+15 升级",
       "progress_history": "收货人自付$9,620 | 14条 3票",
       "email_count": 14,
       "last_seen": "2026-03-25",
       "amount": "$9,620",
-      "days_overdue": 8,
+      "days_overdue": 9,
       "detail_lines": [
         "CONTAINER RAIL DETENTI:$1,685 / Detention-ONEU0748719:$1,480 / Demurrage-FANU3833394:$700"
       ]
@@ -70,12 +70,12 @@
       "customer": "ALBATROSS AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$7,170 | 欠118天 | T+118 超中信保!",
+      "action": "$7,170 | 欠119天 | T+119 超中信保!",
       "progress_history": "收货人自付$7,170 | 1条 1票",
       "email_count": 1,
       "last_seen": "2025-12-05",
       "amount": "$7,170",
-      "days_overdue": 118,
+      "days_overdue": 119,
       "detail_lines": [
         "CONTAINER PER DIEM IMP:$7,170"
       ]
@@ -90,12 +90,12 @@
       "customer": "HOUNEN SOLAR AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$6,490 | 欠74天 | T+74 超中信保!",
+      "action": "$6,490 | 欠75天 | T+75 超中信保!",
       "progress_history": "委托人承担$6,490 | 14条 14票",
       "email_count": 14,
       "last_seen": "2026-01-18",
       "amount": "$6,490",
-      "days_overdue": 74,
+      "days_overdue": 75,
       "detail_lines": [
         "Chassis Usage Charge:$6,490"
       ]
@@ -110,12 +110,12 @@
       "customer": "MERSY CORP SA DE CV",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,985 | 欠84天 | T+84 超中信保!",
+      "action": "$5,985 | 欠85天 | T+85 超中信保!",
       "progress_history": "收货人自付$5,985 | 5条 1票",
       "email_count": 5,
       "last_seen": "2026-01-08",
       "amount": "$5,985",
-      "days_overdue": 84,
+      "days_overdue": 85,
       "detail_lines": [
         "CONTAINER PER DIEM IMP:$2,670 / CONTAINER PER DIEM IMP:$2,420 / IMPORT CHASSIS PER DIE:$350"
       ]
@@ -130,12 +130,12 @@
       "customer": "MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,609 | 欠5天 | T+7 首催",
+      "action": "$5,609 | 欠6天 | T+7 首催",
       "progress_history": "收货人自付$5,390 + 委托人承担$219 | 11条 8票",
       "email_count": 11,
       "last_seen": "2026-03-28",
       "amount": "$5,609",
-      "days_overdue": 5,
+      "days_overdue": 6,
       "detail_lines": [
         "Detention-ECMU7363896:$1,840 / Detention-TGBU4825371:$1,590 / Detention-OOLU8781674:$900"
       ]
@@ -150,12 +150,12 @@
       "customer": "HITHIUM TECH USA INC. / 海辰储能",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$4,200 | 欠4天 | T+7 首催",
+      "action": "$4,200 | 欠5天 | T+7 首催",
       "progress_history": "委托人承担$4,100 + 代收-收货人$100 | 5条 4票",
       "email_count": 5,
       "last_seen": "2026-03-29",
       "amount": "$4,200",
-      "days_overdue": 4,
+      "days_overdue": 5,
       "detail_lines": [
         "Chassis Usage Charge:$4,070 / CARRIER D/O FEE:$100 / BANK CHARGE:$30"
       ]
@@ -170,12 +170,12 @@
       "customer": "ES FOUNDRY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,260 | 欠15天 | T+15 升级",
+      "action": "$3,260 | 欠16天 | T+30 追偿函",
       "progress_history": "收货人自付$3,260 | 6条 2票",
       "email_count": 6,
       "last_seen": "2026-03-18",
       "amount": "$3,260",
-      "days_overdue": 15,
+      "days_overdue": 16,
       "detail_lines": [
         "Demurrage-TCNU5934968:$825 / Demurrage-TCNU5264228:$825 / Demurrage-TCNU4113593:$825"
       ]
@@ -190,12 +190,12 @@
       "customer": "ARTISARY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,100 | 欠71天 | T+71 超中信保!",
+      "action": "$3,100 | 欠72天 | T+72 超中信保!",
       "progress_history": "收货人自付$3,100 | 2条 1票",
       "email_count": 2,
       "last_seen": "2026-01-21",
       "amount": "$3,100",
-      "days_overdue": 71,
+      "days_overdue": 72,
       "detail_lines": [
         "Detention-TLLU6897263:$1,550 / Detention-TCLU9446347:$1,550"
       ]
@@ -210,12 +210,12 @@
       "customer": "LIUGONG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,800 | 欠56天 | T+56 超中信保!",
+      "action": "$1,800 | 欠57天 | T+57 超中信保!",
       "progress_history": "收货人自付$1,800 | 1条 1票",
       "email_count": 1,
       "last_seen": "2026-02-05",
       "amount": "$1,800",
-      "days_overdue": 56,
+      "days_overdue": 57,
       "detail_lines": [
         "Detention-CXSU1078403:$1,800"
       ]
@@ -230,12 +230,12 @@
       "customer": "JST POWER",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,410 | 欠10天 | T+15 升级",
+      "action": "$1,410 | 欠11天 | T+15 升级",
       "progress_history": "委托人承担$110 + 代收-收货人$1,300 | 14条 5票",
       "email_count": 14,
       "last_seen": "2026-03-23",
       "amount": "$1,410",
-      "days_overdue": 10,
+      "days_overdue": 11,
       "detail_lines": [
         "CARRIER D/O FEE:$1,300 / Chassis Usage Charge:$110"
       ]
@@ -250,12 +250,12 @@
       "customer": "GLOBAL CROSSING",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,315 | 欠126天 | T+126 超中信保!",
+      "action": "$1,315 | 欠127天 | T+127 超中信保!",
       "progress_history": "委托人承担$15 + 代收-收货人$1,300 | 14条 13票",
       "email_count": 14,
       "last_seen": "2025-11-27",
       "amount": "$1,315",
-      "days_overdue": 126,
+      "days_overdue": 127,
       "detail_lines": [
         "CARRIER D/O FEE:$1,300 / CMD:$15"
       ]
@@ -270,12 +270,12 @@
       "customer": "ROYAL FOOD",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,100 | 欠175天 | T+175 超中信保!",
+      "action": "$1,100 | 欠176天 | T+176 超中信保!",
       "progress_history": "收货人自付$1,100 | 2条 1票",
       "email_count": 2,
       "last_seen": "2025-10-09",
       "amount": "$1,100",
-      "days_overdue": 175,
+      "days_overdue": 176,
       "detail_lines": [
         "Detention-CAAU6833370:$700 / Demurrage-CAAU6833370:$400"
       ]
@@ -290,12 +290,12 @@
       "customer": "KHD GROUP",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$955 | 欠63天 | T+63 超中信保!",
+      "action": "$955 | 欠64天 | T+64 超中信保!",
       "progress_history": "收货人自付$850 + 委托人承担$105 | 3条 3票",
       "email_count": 3,
       "last_seen": "2026-01-29",
       "amount": "$955",
-      "days_overdue": 63,
+      "days_overdue": 64,
       "detail_lines": [
         "Detention-JXLU4662319:$850 / CMD:$105"
       ]
@@ -310,12 +310,12 @@
       "customer": "YUNCHENG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$940 | 欠28天 | T+30 追偿函",
+      "action": "$940 | 欠29天 | T+30 追偿函",
       "progress_history": "收货人自付$720 + 委托人承担$220 | 4条 3票",
       "email_count": 4,
       "last_seen": "2026-03-05",
       "amount": "$940",
-      "days_overdue": 28,
+      "days_overdue": 29,
       "detail_lines": [
         "Detention-DRYU9521698:$360 / Detention-OOLU9330211:$360 / Chassis Usage Charge:$220"
       ]
@@ -330,12 +330,12 @@
       "customer": "TALESUNERGY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$780 | 欠26天 | T+30 追偿函",
+      "action": "$780 | 欠27天 | T+30 追偿函",
       "progress_history": "收货人自付$780 | 2条 2票",
       "email_count": 2,
       "last_seen": "2026-03-07",
       "amount": "$780",
-      "days_overdue": 26,
+      "days_overdue": 27,
       "detail_lines": [
         "Detention-APHU6732617:$390 / Detention-BSIU8340730:$390"
       ]
@@ -350,12 +350,12 @@
       "customer": "CAYEPORS",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$750 | 欠7天 | T+7 首催",
+      "action": "$750 | 欠8天 | T+15 升级",
       "progress_history": "收货人自付$750 | 2条 2票",
       "email_count": 2,
       "last_seen": "2026-03-26",
       "amount": "$750",
-      "days_overdue": 7,
+      "days_overdue": 8,
       "detail_lines": [
         "Detention-DRYU4546712:$570 / Detention-OOLU9073200:$180"
       ]
@@ -370,12 +370,12 @@
       "customer": "CSCL GLOBAL",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$610 | 欠91天 | T+91 超中信保!",
+      "action": "$610 | 欠92天 | T+92 超中信保!",
       "progress_history": "收货人自付$610 | 2条 1票",
       "email_count": 2,
       "last_seen": "2026-01-01",
       "amount": "$610",
-      "days_overdue": 91,
+      "days_overdue": 92,
       "detail_lines": [
         "IMPORT CHASSIS PER DIE:$500 / Chassis Usage Charge:$110"
       ]
@@ -390,12 +390,12 @@
       "customer": "CASEY CATON",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$570 | 欠84天 | T+84 超中信保!",
+      "action": "$570 | 欠85天 | T+85 超中信保!",
       "progress_history": "收货人自付$570 | 1条 1票",
       "email_count": 1,
       "last_seen": "2026-01-08",
       "amount": "$570",
-      "days_overdue": 84,
+      "days_overdue": 85,
       "detail_lines": [
         "Detention-CMAU9472403:$570"
       ]

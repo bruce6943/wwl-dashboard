@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-02T22:09:04.433073+08:00",
+  "last_updated": "2026-04-02T23:49:52.356182+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3116,7 +3116,7 @@
     },
     "JINGZHOU": {
       "MAERSK": 21,
-      "Hapag-Lloyd": 14,
+      "Hapag-Lloyd": 15,
       "MSC": 3,
       "COSCO": 3
     },
@@ -3156,8 +3156,8 @@
       "HMM": 1
     },
     "HORIZON SOLAR": {
-      "OOCL": 16,
-      "MSC": 16
+      "OOCL": 17,
+      "MSC": 21
     },
     "SAMSUNG": {
       "MSC": 11,
@@ -3166,7 +3166,7 @@
       "COSCO": 1
     },
     "HITHIUM": {
-      "OOCL": 7,
+      "OOCL": 9,
       "MSC": 3,
       "CMA-CGM": 3,
       "ONE": 2
@@ -3206,46 +3206,46 @@
       "ZIM": 2
     },
     "HAIROBOT (海柔)": {
-      "ZIM": 24
+      "ZIM": 36
     },
     "YES CHB": {
-      "ZIM": 20
+      "ZIM": 30
     },
     "HAILIANG (海亮)": {
-      "OOCL": 4,
-      "MSC": 1
-    },
-    "PREVALON ENERGY": {
-      "ZIM": 14
-    },
-    "BTL INTERNATIONAL": {
+      "OOCL": 6,
       "MSC": 2
     },
+    "PREVALON ENERGY": {
+      "ZIM": 21
+    },
+    "BTL INTERNATIONAL": {
+      "MSC": 3
+    },
     "REACH INDUSTRY": {
-      "ZIM": 12,
-      "CMA-CGM": 3
+      "ZIM": 18,
+      "CMA-CGM": 8
     },
     "MERSY CORP": {
-      "MSC": 4
+      "MSC": 6
     },
     "PTS INC": {
-      "Hapag-Lloyd": 2
+      "Hapag-Lloyd": 3
     },
     "PACIFIC T&T": {
-      "Hapag-Lloyd": 2,
-      "ZIM": 2
+      "Hapag-Lloyd": 3,
+      "ZIM": 3
     },
     "CLOU (科陆)": {
-      "ZIM": 2
+      "ZIM": 3
     },
     "KELUO SHUANGYU (科陆双鱼)": {
-      "ZIM": 2
+      "ZIM": 3
     }
   },
   "customer_service": {
     "HAIROBOT (海柔)": {
       "YES报关行": {
-        "count": 20,
+        "count": 30,
         "types": [
           "清关",
           "卡车"
@@ -3254,7 +3254,7 @@
     },
     "YES CHB": {
       "YES报关行": {
-        "count": 20,
+        "count": 30,
         "types": [
           "清关",
           "卡车"
@@ -3263,47 +3263,47 @@
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 26,
+        "count": 39,
         "types": []
       }
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 8,
+        "count": 12,
         "types": []
       }
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 8,
+        "count": 12,
         "types": []
       }
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 2,
+        "count": 3,
         "types": []
       }
     },
     "PTS INC": {
       "PTS": {
-        "count": 13,
+        "count": 20,
         "types": []
       }
     },
     "HAILIANG (海亮)": {
       "SCC Supply Chain": {
-        "count": 2,
+        "count": 3,
         "types": []
       }
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 6,
+        "count": 9,
         "types": []
       },
       "PTT卡车": {
-        "count": 2,
+        "count": 3,
         "types": [
           "卡车"
         ]
@@ -3311,13 +3311,13 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 2,
+        "count": 3,
         "types": []
       }
     },
     "CLOU (科陆)": {
       "PTT卡车": {
-        "count": 2,
+        "count": 3,
         "types": [
           "卡车"
         ]
@@ -3325,7 +3325,7 @@
     },
     "KELUO SHUANGYU (科陆双鱼)": {
       "PTT卡车": {
-        "count": 2,
+        "count": 3,
         "types": [
           "卡车"
         ]

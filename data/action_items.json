@@ -2049,6 +2049,45 @@
     "date": "Fri, 3 Apr 2026 09:23:06 "
   },
   {
+    "type": "dd_alert",
+    "priority": "high",
+    "mbl": "CMDUTHD1457294",
+    "customer": "REACH INDUSTRY",
+    "amount": "",
+    "assignee": "",
+    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+    "detail": "D&D  MBL:CMDUTHD1457294",
+    "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+    "from": "\"Bongkoch Kongmanee\" <bkk.bong@wwl.sg>",
+    "date": "Fri, 3 Apr 2026 09:51:04 "
+  },
+  {
+    "type": "dd_alert",
+    "priority": "high",
+    "mbl": "CMDUTHD1457294",
+    "customer": "REACH INDUSTRY",
+    "amount": "",
+    "assignee": "",
+    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+    "detail": "D&D  MBL:CMDUTHD1457294",
+    "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+    "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
+    "date": "Fri, 3 Apr 2026 11:20:59 "
+  },
+  {
+    "type": "dd_alert",
+    "priority": "high",
+    "mbl": "CMDUTHD1457294",
+    "customer": "REACH INDUSTRY",
+    "amount": "",
+    "assignee": "",
+    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+    "detail": "D&D  MBL:CMDUTHD1457294",
+    "source": "Re: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+    "from": "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
+    "date": "Fri, 3 Apr 2026 10:23:53 "
+  },
+  {
     "type": "supplier_reply",
     "priority": "high",
     "mbl": "",
