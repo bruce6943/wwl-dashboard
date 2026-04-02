@@ -1,32 +1,33 @@
 {
-  "scan_time": "2026-04-02T20:40:55.121211+08:00",
-  "total_emails": 657,
-  "business_emails": 604,
-  "pdf_count": 591,
+  "scan_time": "2026-04-02T21:23:00.113298+08:00",
+  "total_emails": 677,
+  "business_emails": 622,
+  "pdf_count": 593,
   "categories": {
-    "delivery": 13,
+    "delivery": 14,
     "booking": 9,
-    "other_biz": 436,
+    "other_biz": 437,
     "hold": 6,
-    "charge_confirm": 18,
-    "prealert": 21,
-    "arrival": 38,
+    "charge_confirm": 32,
+    "prealert": 23,
+    "arrival": 37,
     "inspection": 8,
     "cancel": 2,
-    "overdue": 14,
+    "overdue": 15,
     "invoice": 39
   },
   "customers": {
     "HAIROBOT (海柔)": {
-      "emails": 11,
+      "emails": 12,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 2,
+      "active_days": 3,
       "hbls": [],
       "mbls": [],
       "days": [
         "04/01",
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "YES CHB": {
@@ -69,27 +70,29 @@
       ]
     },
     "TERRASOULSUPERFOODS": {
-      "emails": 4,
+      "emails": 5,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 2,
+      "active_days": 3,
       "hbls": [],
       "mbls": [],
       "days": [
         "04/01",
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 4,
+      "emails": 5,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 2,
+      "active_days": 3,
       "hbls": [],
       "mbls": [],
       "days": [
         "04/01",
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "HORIZON SOLAR": {
@@ -170,14 +173,15 @@
       ]
     },
     "MAG SPECIALTIES": {
-      "emails": 2,
+      "emails": 3,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "MERSY CORP": {
@@ -223,10 +227,10 @@
       ]
     },
     "PTS INC": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 1,
       "mbl_count": 1,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [
         "WLC51010530"
       ],
@@ -234,14 +238,15 @@
         "HLCUNHN251022798"
       ],
       "days": [
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "PACIFIC T&T": {
-      "emails": 3,
+      "emails": 4,
       "hbl_count": 1,
       "mbl_count": 2,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [
         "WLC51010530"
       ],
@@ -250,7 +255,8 @@
         "ZIMUSHH32074171"
       ],
       "days": [
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "JINGZHOU": {
@@ -324,20 +330,20 @@
     }
   },
   "carriers": {
-    "ZIM": 114,
+    "ZIM": 120,
     "OOCL": 117,
     "WAN HAI": 2,
-    "MSC": 118,
+    "MSC": 120,
     "COSCO": 65,
-    "ONE": 27,
-    "Hapag-Lloyd": 13,
-    "CMA-CGM": 4,
+    "ONE": 30,
+    "Hapag-Lloyd": 14,
+    "CMA-CGM": 5,
     "YML": 3,
-    "Evergreen": 6
+    "Evergreen": 5
   },
   "carrier_fees": {},
-  "hbl_total": 258,
-  "mbl_total": 202,
+  "hbl_total": 256,
+  "mbl_total": 201,
   "all_hbls": [
     "WLC50520755",
     "WLC50618809",
@@ -572,7 +578,6 @@
     "WLC60215280",
     "WLC60215944",
     "WLC60216138",
-    "WLC60216156",
     "WLC60216589",
     "WLC60216592",
     "WLC60216595",
@@ -595,7 +600,6 @@
     "WLC60313783",
     "WLC60313797",
     "WLC60315007",
-    "WLC60316033",
     "WLC60317312"
   ],
   "all_mbls": [
@@ -718,7 +722,6 @@
     "ONEYBKKG67192800",
     "ONEYBKKG68481300",
     "ONEYBTMG00485900",
-    "ONEYBTMG00486300",
     "ONEYXMNF87764600",
     "ONEYXMNG22293700",
     "OOLU2166524280",
@@ -873,8 +876,8 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 259,
-    "2026-04-03": 15
+    "2026-04-02": 254,
+    "2026-04-03": 41
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -884,7 +887,7 @@
   ],
   "hold_count": 6,
   "inspection_count": 8,
-  "overdue_count": 14,
+  "overdue_count": 15,
   "cancel_count": 2,
   "top_senders": [
     [
@@ -893,23 +896,23 @@
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      59
+      54
+    ],
+    [
+      "assistant@pltplt.com",
+      40
     ],
     [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
-      32
+      33
     ],
     [
       "PLEASE_DO_NOT_REPLY_INTERNAL@oocl.com",
       30
     ],
     [
-      "assistant@pltplt.com",
-      26
-    ],
-    [
       "us038-arrival.notices@msc.com",
-      23
+      22
     ],
     [
       "US038-noreply@msc.com",
@@ -917,7 +920,7 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      17
+      19
     ],
     [
       "<us.ops@wwl.sg>",
@@ -2236,30 +2239,6 @@
     {
       "type": "arrival_notice",
       "priority": "high",
-      "mbl": "MEDURQ358927",
-      "hbl": "",
-      "customer": "HAILIANG",
-      "eta": "",
-      "port": "LB",
-      "free_days": 4,
-      "assignee": "",
-      "carrier": "MSC",
-      "sender": "MSC",
-      "contact": "wangqili@hailiang.com <wangqili@hailiang.com> / mary@hailiang.com <mary@hailiang.com>",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "Maggie Wu",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 注意PierPass费用",
-      "detail": "到港 LB MBL:MEDURQ358927 Free Time 4天",
-      "source": "ARRIVAL NOTICE FOR BL# MEDURQ358927 on MSC FREYA/610N POD LO",
-      "from": "us038-arrival.notices@msc.com",
-      "date": "2 Apr 2026 08:58:25 -0400"
-    },
-    {
-      "type": "arrival_notice",
-      "priority": "high",
       "mbl": "MEDURQ360014",
       "hbl": "",
       "customer": "HAILIANG",
@@ -2970,13 +2949,26 @@
       "source": "回复: ShippingAdviceNotice:WLCTAO260206348/QGD2605616",
       "from": "<us.ops@wwl.sg>",
       "date": "Fri, 3 Apr 2026 08:32:27 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "CMDUTHD1457294",
+      "customer": "REACH INDUSTRY",
+      "amount": "$1340",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "D&D $1340 MBL:CMDUTHD1457294",
+      "source": "回复: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 08:33:15 "
     }
   ],
   "action_summary": {
-    "total": 167,
+    "total": 181,
     "urgent": 29,
-    "high": 80,
-    "medium": 58
+    "high": 81,
+    "medium": 71
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -3360,26 +3352,32 @@
         "from": "Maggie Yin <maggie.yin@elite-s",
         "urgency": 3,
         "date": "Thu, 02 Apr 2026 14:50:54"
+      },
+      {
+        "subject": "Re:RE: **URGENT** ZIMUQIN4431617 - CUSTOMS RELEASE",
+        "from": "\"BTL\" <btl@switchbl.com>",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 09:20:30 "
       }
     ]
   },
   "neural_network": {
     "entities": 95,
-    "relationships": 49,
+    "relationships": 53,
     "contacts_new": 0,
     "contacts_total": 386,
-    "daily_connections": 47,
+    "daily_connections": 50,
     "new_domains": [
-      "linkedin.com",
-      "paycargo.com",
-      "expresslinecorp.com",
-      "newl.ca",
-      "jci-chemical.com",
-      "romesales.com",
       "elite-solar.com",
+      "romesales.com",
+      "biposervice.com",
+      "paycargo.com",
       "containerport.com",
+      "jci-chemical.com",
+      "expresslinecorp.com",
       "xiangyu.cn",
-      "biposervice.com"
+      "newl.ca",
+      "linkedin.com"
     ]
   },
   "daily_connections": [
@@ -3617,6 +3615,21 @@
       "from": "REACH INDUSTRY",
       "to": "CMA-CGM",
       "type": "carrier"
+    },
+    {
+      "from": "PTS INC",
+      "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "YES报关行",
+      "type": "service"
     }
   ]
 }

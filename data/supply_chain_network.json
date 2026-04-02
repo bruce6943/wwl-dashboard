@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 272,
+      "CMA-CGM": 273,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 351,
+      "ZIM": 357,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -41,7 +41,7 @@
       "MSC": 2
     },
     "JINGZHOU": {
-      "Hapag-Lloyd": 79
+      "Hapag-Lloyd": 80
     },
     "ELITE SOLAR": {
       "OOCL": 6,
@@ -49,12 +49,12 @@
     },
     "HITHIUM": {
       "ONE": 17,
-      "OOCL": 36,
+      "OOCL": 38,
       "ZIM": 68,
       "MSC": 37
     },
     "MERSY CORP": {
-      "MSC": 39
+      "MSC": 41
     },
     "MAG SPECIALTIES": {
       "ZIM": 1,
@@ -68,8 +68,8 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 126,
-      "MSC": 82
+      "OOCL": 127,
+      "MSC": 87
     },
     "HOUNEN SOLAR": {
       "WAN HAI": 3,
@@ -93,37 +93,37 @@
     },
     "BTL INTERNATIONAL": {
       "ONE": 91,
-      "MSC": 16
+      "MSC": 17
     },
     "PREVALON ENERGY": {
-      "ZIM": 88
+      "ZIM": 95
     },
     "HAILIANG (海亮)": {
       "ONE": 2,
-      "OOCL": 31
+      "OOCL": 33
     },
     "HAIROBOT (海柔)": {
       "Hapag-Lloyd": 4,
-      "ZIM": 168
+      "ZIM": 180
     },
     "YES CHB": {
-      "ZIM": 137
+      "ZIM": 147
     },
     "PTS INC": {
-      "Hapag-Lloyd": 15
+      "Hapag-Lloyd": 16
     },
     "PACIFIC T&T": {
-      "Hapag-Lloyd": 15,
-      "ZIM": 9
+      "Hapag-Lloyd": 16,
+      "ZIM": 10
     },
     "ROME TRANSPORT": {
       "MSC": 1
     },
     "CLOU (科陆)": {
-      "ZIM": 9
+      "ZIM": 10
     },
     "KELUO SHUANGYU (科陆双鱼)": {
-      "ZIM": 9
+      "ZIM": 10
     }
   },
   "customer_service": {
@@ -152,7 +152,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 140,
+        "count": 141,
         "types": [
           "卡车"
         ]
@@ -170,7 +170,15 @@
     "HORIZON SOLAR": {
       "WFS Customs": {
         "count": 125,
-        "types": []
+        "types": [
+          "报关"
+        ]
+      },
+      "Mercer CES": {
+        "count": 17,
+        "types": [
+          "CES查验"
+        ]
       }
     },
     "MAG SPECIALTIES": {
@@ -226,7 +234,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 322,
+        "count": 325,
         "types": [
           "卡车"
         ]
@@ -234,7 +242,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 322,
+        "count": 325,
         "types": [
           "卡车"
         ]
@@ -244,17 +252,23 @@
       "PTT卡车": {
         "count": 1,
         "types": []
+      },
+      "Logistics Plus": {
+        "count": 15,
+        "types": [
+          "报关"
+        ]
       }
     },
     "PTS INC": {
       "PTS": {
-        "count": 181,
+        "count": 187,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 708,
+        "count": 720,
         "types": [
           "卡车"
         ]
@@ -262,11 +276,11 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 83,
+        "count": 86,
         "types": []
       },
       "PTT卡车": {
-        "count": 9,
+        "count": 10,
         "types": [
           "卡车"
         ]
@@ -284,7 +298,7 @@
         "types": []
       },
       "PTT卡车": {
-        "count": 9,
+        "count": 10,
         "types": [
           "卡车"
         ]
@@ -292,25 +306,25 @@
     },
     "YES CHB": {
       "YES报关行": {
-        "count": 139,
+        "count": 149,
         "types": [
-          "卡车",
-          "清关"
+          "清关",
+          "卡车"
         ]
       }
     },
     "HAIROBOT (海柔)": {
       "YES报关行": {
-        "count": 137,
+        "count": 147,
         "types": [
-          "卡车",
-          "清关"
+          "清关",
+          "卡车"
         ]
       }
     },
     "HAILIANG (海亮)": {
       "SCC Supply Chain": {
-        "count": 15,
+        "count": 16,
         "types": []
       }
     },
@@ -322,8 +336,77 @@
     },
     "KELUO SHUANGYU (科陆双鱼)": {
       "PTT卡车": {
-        "count": 9,
+        "count": 10,
         "types": [
+          "卡车"
+        ]
+      }
+    },
+    "NEXTERA": {
+      "Direct CHB": {
+        "count": 15,
+        "types": [
+          "报关"
+        ]
+      },
+      "Traffix": {
+        "count": 10,
+        "types": [
+          "卡车"
+        ]
+      },
+      "Dynasty DFW": {
+        "count": 8,
+        "types": [
+          "仓库"
+        ]
+      }
+    },
+    "ELITE SOLAR": {
+      "Headwin": {
+        "count": 5,
+        "types": [
+          "报关"
+        ]
+      },
+      "FCL Logistics": {
+        "count": 8,
+        "types": [
+          "CES查验"
+        ]
+      },
+      "Mercer CES": {
+        "count": 17,
+        "types": [
+          "CES查验"
+        ]
+      }
+    },
+    "HOUNEN SOLAR": {
+      "Fura Freight": {
+        "count": 4,
+        "types": [
+          "报关"
+        ]
+      },
+      "Online Freight": {
+        "count": 12,
+        "types": [
+          "卡车"
+        ]
+      },
+      "CTS Global": {
+        "count": 1,
+        "types": [
+          "仓库"
+        ]
+      }
+    },
+    "AVANTIX": {
+      "Kim Line": {
+        "count": 34,
+        "types": [
+          "报关",
           "卡车"
         ]
       }
@@ -348,18 +431,31 @@
         "ZIM": 10,
         "COSCO": 7,
         "OOCL": 21,
-        "HMM": 7
+        "HMM": 7,
+        "Hapag-Lloyd": 3
       },
-      "brokers": {},
-      "truckers": {},
+      "brokers": {
+        "Laufer Group": 366
+      },
+      "truckers": {
+        "SCC Supply Chain": 36,
+        "Finwhale": 20,
+        "Automated Logistics": 8
+      },
       "agents": {
         "FCC USA": 6,
         "SCC Supply Chain": 36,
-        "Finwhale鲸运": 20
+        "Finwhale鲸运": 20,
+        "象屿Xiangyu": 18
       },
       "top_carrier": "MSC",
-      "concentration": "45%",
-      "chain_completeness": 33.33333333333333
+      "concentration": "60%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {
+        "Gloria Ni(SCC)": "operation.us@scc-supplychain.com",
+        "Laufer": "chiimport@laufer.com",
+        "Joanne(Finwhale)": "joanne@finwhalelogistics.com"
+      }
     },
     "PREVALON": {
       "carriers": {
@@ -431,14 +527,26 @@
     "HOUNEN SOLAR": {
       "carriers": {
         "WAN HAI": 3,
-        "MSC": 13
+        "MSC": 14,
+        "ONE": 1
       },
-      "brokers": {},
-      "truckers": {},
-      "agents": {},
+      "brokers": {
+        "Fura Freight": 4
+      },
+      "truckers": {
+        "Online Freight": 12
+      },
+      "agents": {
+        "CTS Global Solutions": 1
+      },
       "top_carrier": "MSC",
-      "concentration": "75%",
-      "chain_completeness": 33.33333333333333
+      "concentration": "93%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {
+        "Monica Wang": "monica@hounenus.com",
+        "Chris Henke(Fura)": "chris.henke@fura.com",
+        "Ryan Johnson(Online)": "rjohnson@onlinefreight.com"
+      }
     },
     "CLOU": {
       "carriers": {
@@ -458,15 +566,27 @@
     },
     "ELITE SOLAR": {
       "carriers": {
-        "OOCL": 6,
-        "WAN HAI": 5
+        "OOCL": 29,
+        "WAN HAI": 19,
+        "MSC": 81,
+        "ONE": 10
       },
-      "brokers": {},
-      "truckers": {},
+      "brokers": {
+        "Headwin": 5
+      },
+      "truckers": {
+        "Mercer CES": 17,
+        "FCL Logistics": 8
+      },
       "agents": {},
-      "top_carrier": "OOCL",
-      "concentration": "55%",
-      "chain_completeness": 33.33333333333333
+      "top_carrier": "MSC",
+      "concentration": "58%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {
+        "Maggie Yin": "maggie.yin@elite-solar.com",
+        "Headwin": "hanna.lax@headwin.com",
+        "Adriana(FCL)": "adrianazambrano@fcllogistics.com"
+      }
     },
     "TERRASOULSUPERFOODS": {
       "carriers": {},
@@ -515,16 +635,25 @@
         "ONE": 17,
         "OOCL": 6,
         "ZIM": 54,
-        "MSC": 3
+        "MSC": 3,
+        "CMA-CGM": 3
       },
-      "brokers": {},
+      "brokers": {
+        "Logistics Plus": 15
+      },
       "truckers": {
-        "PTT卡车": 1
+        "PTT卡车": 1,
+        "自行采购(Beri Tseng)": 5
       },
       "agents": {},
-      "top_carrier": "ZIM",
-      "concentration": "68%",
-      "chain_completeness": 33.33333333333333
+      "top_carrier": "CMA-CGM/MSC",
+      "concentration": "30%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {
+        "Yancey Conry": "yancey.conry@hithium.com",
+        "Noelle Henderson(LP)": "noelle.henderson@logisticsplus.com",
+        "Beri Tseng": "beri.tseng@hithium.com"
+      }
     },
     "BETTERBODYFOODS": {
       "carriers": {},
@@ -545,14 +674,21 @@
         "OOCL": 47,
         "ZIM": 127,
         "Evergreen": 49,
-        "WAN HAI": 4
+        "WAN HAI": 4,
+        "MAERSK": 7
       },
       "brokers": {},
       "truckers": {},
-      "agents": {},
-      "top_carrier": "CMA-CGM",
-      "concentration": "35%",
-      "chain_completeness": 33.33333333333333
+      "agents": {
+        "鲸宝Kingbo": 50,
+        "Cargoee": 20,
+        "JSCM Global": 10
+      },
+      "top_carrier": "ZIM",
+      "concentration": "30%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {},
+      "note": "US端报关卡车由consignee(MING HAO XIN等)自行安排,不经过WWL"
     },
     "VITA COCO": {
       "carriers": {
@@ -585,17 +721,23 @@
     },
     "HORIZON SOLAR": {
       "carriers": {
-        "OOCL": 8,
-        "MSC": 2
+        "OOCL": 14,
+        "MSC": 6
       },
       "brokers": {
-        "WFS Customs": 7
+        "WFS Customs": 124
       },
-      "truckers": {},
+      "truckers": {
+        "Mercer CES": 17
+      },
       "agents": {},
       "top_carrier": "OOCL",
-      "concentration": "80%",
-      "chain_completeness": 66.66666666666666
+      "concentration": "70%",
+      "chain_completeness": 66.66666666666666,
+      "contacts": {
+        "Elaine": "horizonsolar001@gmail.com",
+        "Brian Walsh(WFS)": "brian.walsh@wfscustoms.com"
+      }
     },
     "AVANTIX": {
       "carriers": {
@@ -603,16 +745,61 @@
         "WAN HAI": 57,
         "COSCO": 13,
         "ZIM": 15,
-        "MSC": 10
+        "MSC": 13,
+        "CMA-CGM": 10,
+        "Hapag-Lloyd": 3
       },
-      "brokers": {},
-      "truckers": {},
+      "brokers": {
+        "Kim Line": 34
+      },
+      "truckers": {
+        "Kim Line": 34
+      },
       "agents": {},
-      "top_carrier": "WAN HAI",
-      "concentration": "51%",
-      "chain_completeness": 33.33333333333333
+      "top_carrier": "MSC",
+      "concentration": "37%",
+      "chain_completeness": 33.33333333333333,
+      "contacts": {
+        "Kim Line": "import@kimline.us"
+      }
+    },
+    "NEXTERA": {
+      "carriers": {
+        "MSC": 23
+      },
+      "brokers": {
+        "Direct CHB": 15
+      },
+      "truckers": {
+        "Traffix": 10
+      },
+      "agents": {
+        "Thornova Solar/GAEA": 45,
+        "HIH Logistics": 5,
+        "Dynasty DFW": 8
+      },
+      "top_carrier": "MSC",
+      "concentration": "100%",
+      "chain_completeness": 1.0,
+      "contacts": {
+        "Ellen Jin": "ellen@thornova-solar.com / ellen@gaea-newenergy.com",
+        "Monica Marquez(Direct CHB)": "monica.marquez@directchb.net",
+        "Jane Kim(Traffix)": "jakim@traffix.com"
+      }
     }
   },
   "last_updated": "2026-03-29",
-  "data_source": "9,734封邮件全量"
+  "data_source": "9,734封邮件全量",
+  "solar_cluster": {
+    "shared_phone": "+1 626-869-6266",
+    "entities": [
+      "Thornova Solar(Ellen Jin)",
+      "GAEA NEW ENERGY(Ellen Jin)",
+      "Horizon Solar(Elaine)",
+      "ELITE SOLAR",
+      "HOUNEN SOLAR",
+      "NEXTERA(consignee)"
+    ],
+    "note": "Ellen Jin和Horizon的Elaine共享电话号码,可能共享股权或管理层"
+  }
 }
