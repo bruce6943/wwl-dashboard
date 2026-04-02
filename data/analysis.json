@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-04-02T17:48:58.668870+08:00",
-  "total_emails": 642,
-  "business_emails": 592,
-  "pdf_count": 587,
+  "scan_time": "2026-04-02T18:35:12.651818+08:00",
+  "total_emails": 645,
+  "business_emails": 594,
+  "pdf_count": 588,
   "categories": {
     "delivery": 13,
     "booking": 9,
-    "other_biz": 428,
+    "other_biz": 430,
     "hold": 6,
     "charge_confirm": 18,
     "prealert": 20,
@@ -325,14 +325,14 @@
     "MSC": 118,
     "COSCO": 65,
     "ONE": 26,
-    "Hapag-Lloyd": 12,
+    "Hapag-Lloyd": 13,
     "CMA-CGM": 3,
     "YML": 3,
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 255,
-  "mbl_total": 200,
+  "hbl_total": 256,
+  "mbl_total": 201,
   "all_hbls": [
     "WLC50618809",
     "WLC50625761",
@@ -383,6 +383,7 @@
     "WLC50906243",
     "WLC50906250",
     "WLC50906260",
+    "WLC50906313",
     "WLC50906323",
     "WLC50906326",
     "WLC50906495",
@@ -647,6 +648,7 @@
     "HLCUXM12508ATSE9",
     "HLCUXM12508AUAH5",
     "HLCUXM12508AUAI6",
+    "HLCUXM12509APCQ5",
     "MEDUKG193320",
     "MEDUKH457914",
     "MEDUKU073525",
@@ -812,7 +814,7 @@
     "2025-09-07": 2,
     "2025-09-09": 3,
     "2025-09-14": 4,
-    "2025-09-16": 1,
+    "2025-09-16": 2,
     "2025-09-17": 15,
     "2025-09-18": 1,
     "2025-09-23": 3,
@@ -863,7 +865,7 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 251,
+    "2026-04-02": 253,
     "2026-04-03": 9
   },
   "inspection_mbls": [
@@ -879,7 +881,7 @@
   "top_senders": [
     [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      174
+      175
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -2873,6 +2875,19 @@
       "date": "Fri, 3 Apr 2026 04:57:22 "
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "QA Special Client Approved                 Payment: Demurrag",
+      "source": "QA Special Client Approved                 Payment: Demurrag",
+      "from": "PayCargo <alert@paycargo.com>",
+      "date": "Thu, 02 Apr 2026 22:06:24"
+    },
+    {
       "type": "supplier_reply",
       "priority": "high",
       "mbl": "",
@@ -2951,32 +2966,12 @@
       "source": "回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
       "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
       "date": "Wed, 1 Apr 2026 13:05:41 "
-    },
-    {
-      "type": "supplier_reply",
-      "priority": "high",
-      "mbl": "",
-      "customer": "FCC USA",
-      "assignee": "",
-      "carrier": "",
-      "sender": "FCC USA",
-      "contact": "ADRIAN JUAREZ <adrianj@fccusa.net> / JEREMY WONG <jeremyw@fccusa.net>",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "FCC USA等待我方回复 → 24h内必须响应 → 联系: Adrian Juarez adrianj@fccusa.net",
-      "detail": "供应商等回复: FCC USA",
-      "source": "Re: Re: 2026.3 HOUSTON-SHANGHAI// BKG# YCH26240124",
-      "from": "ADRIAN JUAREZ <adrianj@fccusa.net>",
-      "date": "Wed, 1 Apr 2026 11:18:19 "
     }
   ],
   "action_summary": {
-    "total": 161,
+    "total": 162,
     "urgent": 26,
-    "high": 77,
+    "high": 78,
     "medium": 58
   },
   "bl_status": {
@@ -3365,20 +3360,21 @@
     ]
   },
   "neural_network": {
-    "entities": 93,
+    "entities": 94,
     "relationships": 46,
     "contacts_new": 0,
     "contacts_total": 385,
     "daily_connections": 45,
     "new_domains": [
       "romesales.com",
-      "xiangyu.cn",
-      "newl.ca",
-      "jci-chemical.com",
       "elite-solar.com",
-      "biposervice.com",
+      "linkedin.com",
+      "xiangyu.cn",
       "containerport.com",
-      "linkedin.com"
+      "paycargo.com",
+      "jci-chemical.com",
+      "newl.ca",
+      "biposervice.com"
     ]
   },
   "daily_connections": [
