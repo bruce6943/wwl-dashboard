@@ -10,12 +10,12 @@
       "customer": "NEXTERA ENERGY CONSTRUCTORS, LLC (US直操)",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$47,663 | 欠15天 | T+15 升级",
+      "action": "$47,663 | 欠17天 | T+30 追偿函",
       "progress_history": "收货人自付$4,860 + 委托人承担$42,803 | 115条 80票",
       "email_count": 115,
       "last_seen": "2026-03-16",
       "amount": "$47,663",
-      "days_overdue": 15,
+      "days_overdue": 17,
       "detail_lines": [
         "Amount Still Due:$20,444 / Chassis Usage Charge:$19,416 / Ocean Freight:$2,943"
       ]
@@ -30,12 +30,12 @@
       "customer": "AVANTIX INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$27,760 | 欠23天 | T+30 追偿函",
+      "action": "$27,760 | 欠25天 | T+30 追偿函",
       "progress_history": "收货人自付$27,560 + 代收-收货人$200 | 5条 5票",
       "email_count": 5,
       "last_seen": "2026-03-08",
       "amount": "$27,760",
-      "days_overdue": 23,
+      "days_overdue": 25,
       "detail_lines": [
         "Detention-HAMU4066417:$11,300 / Detention-CMAU7350643:$10,590 / CONTAINER PER DIEM IMP:$5,670"
       ]
@@ -50,12 +50,12 @@
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$9,620 | 欠6天 | T+7 首催",
+      "action": "$9,620 | 欠8天 | T+15 升级",
       "progress_history": "收货人自付$9,620 | 14条 3票",
       "email_count": 14,
       "last_seen": "2026-03-25",
       "amount": "$9,620",
-      "days_overdue": 6,
+      "days_overdue": 8,
       "detail_lines": [
         "CONTAINER RAIL DETENTI:$1,685 / Detention-ONEU0748719:$1,480 / Demurrage-FANU3833394:$700"
       ]
@@ -70,12 +70,12 @@
       "customer": "ALBATROSS AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$7,170 | 欠116天 | T+116 超中信保!",
+      "action": "$7,170 | 欠118天 | T+118 超中信保!",
       "progress_history": "收货人自付$7,170 | 1条 1票",
       "email_count": 1,
       "last_seen": "2025-12-05",
       "amount": "$7,170",
-      "days_overdue": 116,
+      "days_overdue": 118,
       "detail_lines": [
         "CONTAINER PER DIEM IMP:$7,170"
       ]
@@ -90,12 +90,12 @@
       "customer": "HOUNEN SOLAR AMERICA INC.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$6,490 | 欠72天 | T+72 超中信保!",
+      "action": "$6,490 | 欠74天 | T+74 超中信保!",
       "progress_history": "委托人承担$6,490 | 14条 14票",
       "email_count": 14,
       "last_seen": "2026-01-18",
       "amount": "$6,490",
-      "days_overdue": 72,
+      "days_overdue": 74,
       "detail_lines": [
         "Chassis Usage Charge:$6,490"
       ]
@@ -110,12 +110,12 @@
       "customer": "MERSY CORP SA DE CV",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,985 | 欠82天 | T+82 超中信保!",
+      "action": "$5,985 | 欠84天 | T+84 超中信保!",
       "progress_history": "收货人自付$5,985 | 5条 1票",
       "email_count": 5,
       "last_seen": "2026-01-08",
       "amount": "$5,985",
-      "days_overdue": 82,
+      "days_overdue": 84,
       "detail_lines": [
         "CONTAINER PER DIEM IMP:$2,670 / CONTAINER PER DIEM IMP:$2,420 / IMPORT CHASSIS PER DIE:$350"
       ]
@@ -130,12 +130,12 @@
       "customer": "MING HAO XIN TRADING CO., LTD.",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$5,609 | 欠3天 | T+7 首催",
+      "action": "$5,609 | 欠5天 | T+7 首催",
       "progress_history": "收货人自付$5,390 + 委托人承担$219 | 11条 8票",
       "email_count": 11,
       "last_seen": "2026-03-28",
       "amount": "$5,609",
-      "days_overdue": 3,
+      "days_overdue": 5,
       "detail_lines": [
         "Detention-ECMU7363896:$1,840 / Detention-TGBU4825371:$1,590 / Detention-OOLU8781674:$900"
       ]
@@ -150,12 +150,12 @@
       "customer": "HITHIUM TECH USA INC. / 海辰储能",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$4,200 | 欠2天 | T+7 首催",
+      "action": "$4,200 | 欠4天 | T+7 首催",
       "progress_history": "委托人承担$4,100 + 代收-收货人$100 | 5条 4票",
       "email_count": 5,
       "last_seen": "2026-03-29",
       "amount": "$4,200",
-      "days_overdue": 2,
+      "days_overdue": 4,
       "detail_lines": [
         "Chassis Usage Charge:$4,070 / CARRIER D/O FEE:$100 / BANK CHARGE:$30"
       ]
@@ -170,12 +170,12 @@
       "customer": "ES FOUNDRY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,260 | 欠13天 | T+15 升级",
+      "action": "$3,260 | 欠15天 | T+15 升级",
       "progress_history": "收货人自付$3,260 | 6条 2票",
       "email_count": 6,
       "last_seen": "2026-03-18",
       "amount": "$3,260",
-      "days_overdue": 13,
+      "days_overdue": 15,
       "detail_lines": [
         "Demurrage-TCNU5934968:$825 / Demurrage-TCNU5264228:$825 / Demurrage-TCNU4113593:$825"
       ]
@@ -190,12 +190,12 @@
       "customer": "ARTISARY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$3,100 | 欠69天 | T+69 超中信保!",
+      "action": "$3,100 | 欠71天 | T+71 超中信保!",
       "progress_history": "收货人自付$3,100 | 2条 1票",
       "email_count": 2,
       "last_seen": "2026-01-21",
       "amount": "$3,100",
-      "days_overdue": 69,
+      "days_overdue": 71,
       "detail_lines": [
         "Detention-TLLU6897263:$1,550 / Detention-TCLU9446347:$1,550"
       ]
@@ -210,12 +210,12 @@
       "customer": "LIUGONG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,800 | 欠54天 | T+54 超中信保!",
+      "action": "$1,800 | 欠56天 | T+56 超中信保!",
       "progress_history": "收货人自付$1,800 | 1条 1票",
       "email_count": 1,
       "last_seen": "2026-02-05",
       "amount": "$1,800",
-      "days_overdue": 54,
+      "days_overdue": 56,
       "detail_lines": [
         "Detention-CXSU1078403:$1,800"
       ]
@@ -230,12 +230,12 @@
       "customer": "JST POWER",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,410 | 欠8天 | T+15 升级",
+      "action": "$1,410 | 欠10天 | T+15 升级",
       "progress_history": "委托人承担$110 + 代收-收货人$1,300 | 14条 5票",
       "email_count": 14,
       "last_seen": "2026-03-23",
       "amount": "$1,410",
-      "days_overdue": 8,
+      "days_overdue": 10,
       "detail_lines": [
         "CARRIER D/O FEE:$1,300 / Chassis Usage Charge:$110"
       ]
@@ -250,12 +250,12 @@
       "customer": "GLOBAL CROSSING",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,315 | 欠124天 | T+124 超中信保!",
+      "action": "$1,315 | 欠126天 | T+126 超中信保!",
       "progress_history": "委托人承担$15 + 代收-收货人$1,300 | 14条 13票",
       "email_count": 14,
       "last_seen": "2025-11-27",
       "amount": "$1,315",
-      "days_overdue": 124,
+      "days_overdue": 126,
       "detail_lines": [
         "CARRIER D/O FEE:$1,300 / CMD:$15"
       ]
@@ -270,12 +270,12 @@
       "customer": "ROYAL FOOD",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$1,100 | 欠173天 | T+173 超中信保!",
+      "action": "$1,100 | 欠175天 | T+175 超中信保!",
       "progress_history": "收货人自付$1,100 | 2条 1票",
       "email_count": 2,
       "last_seen": "2025-10-09",
       "amount": "$1,100",
-      "days_overdue": 173,
+      "days_overdue": 175,
       "detail_lines": [
         "Detention-CAAU6833370:$700 / Demurrage-CAAU6833370:$400"
       ]
@@ -290,12 +290,12 @@
       "customer": "KHD GROUP",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$955 | 欠61天 | T+61 超中信保!",
+      "action": "$955 | 欠63天 | T+63 超中信保!",
       "progress_history": "收货人自付$850 + 委托人承担$105 | 3条 3票",
       "email_count": 3,
       "last_seen": "2026-01-29",
       "amount": "$955",
-      "days_overdue": 61,
+      "days_overdue": 63,
       "detail_lines": [
         "Detention-JXLU4662319:$850 / CMD:$105"
       ]
@@ -310,12 +310,12 @@
       "customer": "YUNCHENG",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$940 | 欠26天 | T+30 追偿函",
+      "action": "$940 | 欠28天 | T+30 追偿函",
       "progress_history": "收货人自付$720 + 委托人承担$220 | 4条 3票",
       "email_count": 4,
       "last_seen": "2026-03-05",
       "amount": "$940",
-      "days_overdue": 26,
+      "days_overdue": 28,
       "detail_lines": [
         "Detention-DRYU9521698:$360 / Detention-OOLU9330211:$360 / Chassis Usage Charge:$220"
       ]
@@ -330,12 +330,12 @@
       "customer": "TALESUNERGY",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$780 | 欠24天 | T+30 追偿函",
+      "action": "$780 | 欠26天 | T+30 追偿函",
       "progress_history": "收货人自付$780 | 2条 2票",
       "email_count": 2,
       "last_seen": "2026-03-07",
       "amount": "$780",
-      "days_overdue": 24,
+      "days_overdue": 26,
       "detail_lines": [
         "Detention-APHU6732617:$390 / Detention-BSIU8340730:$390"
       ]
@@ -350,12 +350,12 @@
       "customer": "CAYEPORS",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$750 | 欠5天 | T+7 首催",
+      "action": "$750 | 欠7天 | T+7 首催",
       "progress_history": "收货人自付$750 | 2条 2票",
       "email_count": 2,
       "last_seen": "2026-03-26",
       "amount": "$750",
-      "days_overdue": 5,
+      "days_overdue": 7,
       "detail_lines": [
         "Detention-DRYU4546712:$570 / Detention-OOLU9073200:$180"
       ]
@@ -370,12 +370,12 @@
       "customer": "CSCL GLOBAL",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$610 | 欠89天 | T+89 超中信保!",
+      "action": "$610 | 欠91天 | T+91 超中信保!",
       "progress_history": "收货人自付$610 | 2条 1票",
       "email_count": 2,
       "last_seen": "2026-01-01",
       "amount": "$610",
-      "days_overdue": 89,
+      "days_overdue": 91,
       "detail_lines": [
         "IMPORT CHASSIS PER DIE:$500 / Chassis Usage Charge:$110"
       ]
@@ -390,34 +390,15 @@
       "customer": "CASEY CATON",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "$570 | 欠82天 | T+82 超中信保!",
+      "action": "$570 | 欠84天 | T+84 超中信保!",
       "progress_history": "收货人自付$570 | 1条 1票",
       "email_count": 1,
       "last_seen": "2026-01-08",
       "amount": "$570",
-      "days_overdue": 82,
+      "days_overdue": 84,
       "detail_lines": [
         "Detention-CMAU9472403:$570"
       ]
-    },
-    {
-      "type": "inspection_active",
-      "priority": "urgent",
-      "title": "Inspection Active",
-      "mbl": "OOLU2320126090, OOLU2166524280",
-      "carrier": "OOCL",
-      "customer": "HORIZON SOLAR INC.",
-      "wwl_sender": "",
-      "wwl_branch": "未知",
-      "action": "OOCL 2票 — Brian Wals来信→需确认并回复",
-      "detail_lines": [
-        "03-30 21:04 Fife CES: Hello,\r \r I do not have record of these containers.\r \r SEKU4559135\r FFAU3079228",
-        "03-30 22:07 Seattle CES: Hello,\r \r We have no record of these three either.\r \r Thank you!\r \r [A black rec",
-        "03-31 01:02 Brian Walsh - W: Shipment is on a customs hold.\r I emailed customs this morning, but am still wai"
-      ],
-      "progress_history": "提单: OOLU2320126090, OOLU2166524280",
-      "email_count": 59,
-      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_pending",
@@ -437,6 +418,25 @@
       "progress_history": "提单: MEDUKU085016, MEDUKU084282, MEDUKU085123",
       "email_count": 178,
       "last_seen": "2026-03-19"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "OOLU2166556440, OOLU2166120500, OOLU2167307120, OOLU2167175490, OOLU2167175510 +4",
+      "carrier": "OOCL",
+      "customer": "",
+      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
+      "wwl_branch": "WWL深圳",
+      "action": "OOCL 9票 — Carinali已回复→检查是否需要下一步",
+      "detail_lines": [
+        "02-27 13:20 Renee Lin-WWLSZ: Dear Team\r \r  \r \r Please see the attached MBL/HBL OBD Bill of Lading.\r \r  \r \r MV",
+        "03-02 14:28 Renee Lin-WWLSZ: Dear all\r \r  \r \r HBL 可放，谢谢\r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r Atten",
+        "03-18 17:34 Carinali: Dear  client ,\r \r OOCL SUNFLOWER 008E 此水大船更新目前情况，请查收如下通知，谢谢。\r \r \r \r  \r \r  \r \r At"
+      ],
+      "progress_history": "提单: OOLU2166556440, OOLU2166120500, OOLU2167307120",
+      "email_count": 13,
+      "last_seen": "2026-03-18"
     },
     {
       "type": "fee_confirmed",
@@ -464,36 +464,17 @@
       "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
       "carrier": "MSC",
       "customer": "PREVALON ENERGY INC.",
-      "wwl_sender": " (szn.ulaxie@wwl.cn)",
+      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
       "action": "MSC 6票 — us038-impo来信→需确认并回复",
       "detail_lines": [
-        "03-31 09:14 us038-importpic: ",
         "03-31 12:07 us038-importpic: ",
-        "03-31 12:31 us038-importpic: "
+        "03-31 12:31 us038-importpic: ",
+        "04-02 10:28 us038-importpic: "
       ],
       "progress_history": "提单: MEDUYL886908, MEDUYL942321, MEDUYL789706",
-      "email_count": 32,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "OOLU2166556440, OOLU2166120500, OOLU2167307120, OOLU2167175490, OOLU2167175510 +1",
-      "carrier": "OOCL",
-      "customer": "",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "OOCL 6票 — Carinali已回复→检查是否需要下一步",
-      "detail_lines": [
-        "02-27 13:20 Renee Lin-WWLSZ: Dear Team\r \r  \r \r Please see the attached MBL/HBL OBD Bill of Lading.\r \r  \r \r MV",
-        "03-02 14:28 Renee Lin-WWLSZ: Dear all\r \r  \r \r HBL 可放，谢谢\r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r Atten",
-        "03-18 17:34 Carinali: Dear  client ,\r \r OOCL SUNFLOWER 008E 此水大船更新目前情况，请查收如下通知，谢谢。\r \r \r \r  \r \r  \r \r At"
-      ],
-      "progress_history": "提单: OOLU2166556440, OOLU2166120500, OOLU2167307120",
-      "email_count": 9,
-      "last_seen": "2026-03-18"
+      "email_count": 33,
+      "last_seen": "2026-04-02"
     },
     {
       "type": "fee_confirmed",
@@ -502,7 +483,7 @@
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506444150, COSU9506319330 +1",
       "carrier": "COSCO",
       "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "wwl_sender": "ngb.ops18@wwl.cn (ngb.ops18@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 6票 — 等Maggie Wu的上家回复",
       "detail_lines": [
@@ -512,6 +493,25 @@
       "progress_history": "提单: COSU9506320440, COSU6446832300, COSU9506319310",
       "email_count": 9,
       "last_seen": "2026-03-30"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "ONEYBKKG61453900, ONEYBKKG61472300, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
+      "carrier": "ONE",
+      "customer": "THE QUALITY THREAD & NOTI/REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD.",
+      "wwl_sender": "Eart (bkk.eart@wwl.sg)",
+      "wwl_branch": "WWL泰国",
+      "action": "ONE 5票 — 等Eart的上家回复",
+      "detail_lines": [
+        "03-24 11:10 Eart: Dear Maggie\r \r  \r \r Please see MBL & HBL surrendered as attached.",
+        "03-30 12:05 Everlyn Shaw: pls cfm attached POD charge is prepaid or collect?\r \r  \r \r  \r \r  \r \r Thank you!",
+        "03-31 09:11 Eart: Dear Everlyn,\r \r  \r \r Please collect\r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r  \r \r *กรณี"
+      ],
+      "progress_history": "提单: ONEYBKKG61453900, ONEYBKKG61472300, ONEYBKKG77381900",
+      "email_count": 25,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -612,23 +612,6 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
-      "carrier": "ONE",
-      "customer": "MING HAO XIN TRADING CO., LTD./REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
-      "wwl_branch": "WWL泰国",
-      "action": "ONE 3票 — 等bkk.nasmee的上家回复",
-      "detail_lines": [
-        "03-20 09:53 bkk.nasmee: Dear All,\r \r  \r \r Please find the pre-alert and documents attached.\r \r POD charg"
-      ],
-      "progress_history": "提单: ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
-      "email_count": 3,
-      "last_seen": "2026-03-20"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
       "mbl": "COSU6447544630, COSU6447544660, COSU6447551240",
       "carrier": "COSCO",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
@@ -662,25 +645,6 @@
       "progress_history": "提单: HLCUSHA2601CCLD3, HLCUSHA2603BLLR4",
       "email_count": 4,
       "last_seen": "2026-03-24"
-    },
-    {
-      "type": "fee_pending",
-      "priority": "high",
-      "title": "Fee Pending",
-      "mbl": "ONEYBTMG00383600, ONEYBTMG00521700",
-      "carrier": "ONE",
-      "customer": "ELITE SOLAR NEW ENERGY CO.",
-      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
-      "wwl_branch": "WWL印尼",
-      "action": "ONE 2票 — 等对方确认",
-      "detail_lines": [
-        "03-30 15:25 Anggito Iqbal: Dear Everlyn\r \r  \r \r Pls advise if IT already cancelled?\r \r  \r \r Thanks and Best",
-        "03-31 14:50 Alexander Jkt: Dear US Team,\r \r  \r \r Attached the HBL Telex,\r \r Thank you.",
-        "03-31 14:58 rita tang: Plz confirm the following fees\r  \r Rita Tang\r  \r Worldwide Logistics Co.,Ltd. Sh"
-      ],
-      "progress_history": "提单: ONEYBTMG00383600, ONEYBTMG00521700",
-      "email_count": 14,
-      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -739,6 +703,25 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
+      "mbl": "MEDUYL960612",
+      "carrier": "MSC",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Ann Gong (can.anngong@wwl.cn)",
+      "wwl_branch": "WWL广州",
+      "action": "等Nola LAI的上家回复",
+      "detail_lines": [
+        "03-30 11:38 us038-noreply: ",
+        "03-30 12:14 Everlyn Shaw: Pls cfm attached POD charge is prepaid or collect?\r \r  \r \r  \r \r  \r \r Thank you!",
+        "03-31 09:27 Nola LAI: Dear Everlyn Shaw\r \r Collect. Thank you\r \r  \r \r  \r \r  \r \r 如果阁下对我司提供的物流服务有任何意见或投诉"
+      ],
+      "progress_history": "",
+      "email_count": 16,
+      "last_seen": "2026-03-31"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
       "mbl": "ONEYTSNG03788600",
       "carrier": "ONE",
       "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
@@ -753,6 +736,25 @@
       "progress_history": "",
       "email_count": 15,
       "last_seen": "2026-03-25"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "ONEYBTMG00485900",
+      "carrier": "ONE",
+      "customer": "ELITE SOLAR NEW ENERGY CO.",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL印尼",
+      "action": "等origin回复费用预付/到付",
+      "detail_lines": [
+        "03-31 14:54 Alexander Jkt: Dear US Team,\r \r  \r \r Attached the HBL Telex,\r \r Thank you.",
+        "03-31 14:57 Maggie Wu: Dear Alexander\r \r No, time too early to cancel IT as per ETA 4/14.\r \r  \r \r With",
+        "04-02 08:16 Everlyn Shaw: IT# cancelled, pls cfm CMD charge is prepaid or collect?"
+      ],
+      "progress_history": "",
+      "email_count": 6,
+      "last_seen": "2026-04-02"
     },
     {
       "type": "fee_confirmed",
@@ -859,6 +861,52 @@
       "last_seen": "2026-03-31"
     },
     {
+      "type": "fee_pending",
+      "priority": "high",
+      "title": "Fee Pending",
+      "mbl": "CMDUCHN3177029",
+      "carrier": "CMA-CGM",
+      "customer": "",
+      "wwl_sender": "dtc.zengcaihong@wwl.cn (dtc.zengcaihong@wwl.cn)",
+      "wwl_branch": "WWL-DTC",
+      "action": "dtc.zengca已回复→检查是否需要下一步",
+      "detail_lines": [
+        "04-02 14:32 Will Sun: ",
+        "04-02 14:41 dtc.zengcaihong: Dear\r \r CMF+ ISPS   USD 59 \r 账单确认，请尽快安排垫付, 避免因为目的港费用未核销无法提柜，而产生额外费用，谢谢~\r \r \r \r 请"
+      ],
+      "progress_history": "",
+      "email_count": 3,
+      "last_seen": "2026-04-02"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: Direct CHB(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "Direct CHB(报关)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: Direct CHB-Monica Marquez 2026-04-01 22:36",
+      "email_count": 0,
+      "last_seen": "2026-04-01"
+    },
+    {
+      "type": "supplier_followup",
+      "priority": "high",
+      "title": "供应商跟进: FCC USA(报关)",
+      "mbl": "",
+      "carrier": "",
+      "customer": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FCC USA(报关)来信未回复 → 需尽快回复确认",
+      "progress_history": "最后联系: JEREMY WONG 2026-04-01 18:34",
+      "email_count": 0,
+      "last_seen": "2026-04-01"
+    },
+    {
       "type": "supplier_followup",
       "priority": "high",
       "title": "供应商跟进: Scotlynn(拖车)",
@@ -875,20 +923,6 @@
     {
       "type": "supplier_followup",
       "priority": "high",
-      "title": "供应商跟进: WFS Customs(报关)",
-      "mbl": "",
-      "carrier": "",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "WFS Customs(报关)来信未回复 → 需尽快回复确认",
-      "progress_history": "最后联系: Brian Walsh - WFS Customs 2026-03-31 01:02",
-      "email_count": 0,
-      "last_seen": "2026-03-31"
-    },
-    {
-      "type": "supplier_followup",
-      "priority": "high",
       "title": "供应商跟进: Mercer CES(查验站)",
       "mbl": "",
       "carrier": "",
@@ -897,20 +931,6 @@
       "wwl_branch": "",
       "action": "Mercer CES(查验站)来信未回复 → 需尽快回复确认",
       "progress_history": "最后联系: Seattle CES 2026-03-30 22:07",
-      "email_count": 0,
-      "last_seen": "2026-03-30"
-    },
-    {
-      "type": "supplier_followup",
-      "priority": "high",
-      "title": "供应商跟进: Direct CHB(报关)",
-      "mbl": "",
-      "carrier": "",
-      "customer": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "Direct CHB(报关)来信未回复 → 需尽快回复确认",
-      "progress_history": "最后联系: Direct CHB-Monica Marquez 2026-03-30 20:14",
       "email_count": 0,
       "last_seen": "2026-03-30"
     },
@@ -945,27 +965,27 @@
     {
       "type": "supplier_followup",
       "priority": "medium",
-      "title": "供应商跟进: FCC USA(报关)",
+      "title": "供应商跟进: WFS Customs(报关)",
       "mbl": "",
       "carrier": "",
       "customer": "",
       "wwl_sender": "",
       "wwl_branch": "",
-      "action": "FCC USA(报关)最后沟通: Re: Re: 40 HQ / unloading / Re → 检查是否需要跟进",
-      "progress_history": "最后联系: JEREMY WONG 2026-03-31 09:45",
+      "action": "WFS Customs(报关)确认完成 → 核实结果 → 关闭工单",
+      "progress_history": "最后联系: Brian Walsh - WFS Customs 2026-04-01 19:35",
       "email_count": 0,
-      "last_seen": "2026-03-31"
+      "last_seen": "2026-04-01"
     }
   ],
   "summary": {
-    "arrival_notices": 150,
-    "bl_releases": 106,
-    "billings": 141,
-    "prealerts": 47
+    "arrival_notices": 189,
+    "bl_releases": 112,
+    "billings": 136,
+    "prealerts": 46
   },
   "stats": {
-    "total": 52,
-    "urgent": 21,
-    "high": 30
+    "total": 53,
+    "urgent": 20,
+    "high": 32
   }
 }

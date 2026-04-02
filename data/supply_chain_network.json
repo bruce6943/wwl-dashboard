@@ -1,11 +1,11 @@
 {
   "customer_carrier": {
     "REACH INDUSTRY": {
-      "CMA-CGM": 263,
+      "CMA-CGM": 271,
       "COSCO": 57,
       "ONE": 68,
       "OOCL": 47,
-      "ZIM": 251,
+      "ZIM": 279,
       "Evergreen": 49,
       "WAN HAI": 4
     },
@@ -41,7 +41,7 @@
       "MSC": 2
     },
     "JINGZHOU": {
-      "Hapag-Lloyd": 64
+      "Hapag-Lloyd": 67
     },
     "ELITE SOLAR": {
       "OOCL": 6,
@@ -49,12 +49,12 @@
     },
     "HITHIUM": {
       "ONE": 17,
-      "OOCL": 6,
-      "ZIM": 63,
-      "MSC": 36
+      "OOCL": 12,
+      "ZIM": 68,
+      "MSC": 37
     },
     "MERSY CORP": {
-      "MSC": 9
+      "MSC": 15
     },
     "MAG SPECIALTIES": {
       "ZIM": 1,
@@ -68,8 +68,8 @@
       "MSC": 10
     },
     "HORIZON SOLAR": {
-      "OOCL": 104,
-      "MSC": 2
+      "OOCL": 114,
+      "MSC": 22
     },
     "HOUNEN SOLAR": {
       "WAN HAI": 3,
@@ -87,15 +87,33 @@
       "ZIM": 22
     },
     "DTC SA": {
-      "COSCO": 23,
-      "OOCL": 102,
-      "Evergreen": 113
+      "COSCO": 25,
+      "OOCL": 116,
+      "Evergreen": 124
     },
     "BTL INTERNATIONAL": {
-      "ONE": 83
+      "ONE": 91,
+      "MSC": 4
     },
     "PREVALON ENERGY": {
-      "ZIM": 2
+      "ZIM": 16
+    },
+    "HAILIANG (海亮)": {
+      "ONE": 2,
+      "OOCL": 7
+    },
+    "HAIROBOT (海柔)": {
+      "Hapag-Lloyd": 4,
+      "ZIM": 37
+    },
+    "YES CHB": {
+      "ZIM": 30
+    },
+    "PTS INC": {
+      "Hapag-Lloyd": 3
+    },
+    "PACIFIC T&T": {
+      "Hapag-Lloyd": 3
     }
   },
   "customer_service": {
@@ -124,7 +142,7 @@
     },
     "JINGZHOU": {
       "PTS": {
-        "count": 121,
+        "count": 128,
         "types": [
           "卡车"
         ]
@@ -141,7 +159,7 @@
     },
     "HORIZON SOLAR": {
       "WFS Customs": {
-        "count": 103,
+        "count": 113,
         "types": []
       }
     },
@@ -198,7 +216,7 @@
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 266,
+        "count": 295,
         "types": [
           "卡车"
         ]
@@ -206,7 +224,7 @@
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 266,
+        "count": 295,
         "types": [
           "卡车"
         ]
@@ -220,13 +238,13 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 118,
+        "count": 133,
         "types": []
       }
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 509,
+        "count": 578,
         "types": [
           "卡车"
         ]
@@ -234,13 +252,49 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 54,
+        "count": 63,
         "types": []
       }
     },
     "ASTRONERGY (正泰新能)": {
       "Pioneer": {
-        "count": 43,
+        "count": 48,
+        "types": []
+      }
+    },
+    "CLOU (科陆)": {
+      "YES报关行": {
+        "count": 2,
+        "types": []
+      }
+    },
+    "YES CHB": {
+      "YES报关行": {
+        "count": 32,
+        "types": [
+          "卡车",
+          "清关"
+        ]
+      }
+    },
+    "HAIROBOT (海柔)": {
+      "YES报关行": {
+        "count": 30,
+        "types": [
+          "卡车",
+          "清关"
+        ]
+      }
+    },
+    "HAILIANG (海亮)": {
+      "SCC Supply Chain": {
+        "count": 3,
+        "types": []
+      }
+    },
+    "ROME TRANSPORT": {
+      "Rome卡车": {
+        "count": 1,
         "types": []
       }
     }

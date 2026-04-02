@@ -19,14 +19,15 @@
         "集中度15%",
         "集中度17%",
         "高额费用$31,770",
-        "高额费用$32,638"
+        "高额费用$32,638",
+        "高额费用$33,156"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 12,
+        "active_days_7d": 1,
+        "pdf_count": 5,
+        "pdf_fee_total": 33156.0,
+        "pdf_fee_avg": 1578.86,
         "hold_events_7d": 0,
         "inspection_events_7d": 0
       },
@@ -37,7 +38,7 @@
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "683船/4M TEU",
       "schedule_reliability": "~65%"
@@ -46,7 +47,7 @@
       "vendor_name": "MSC",
       "vendor_name_cn": "地中海航运",
       "vendor_category": "ship_carrier",
-      "capability_score": 69,
+      "capability_score": 82,
       "capability_level": "C级关注供应商",
       "risk_score": 10,
       "risk_level": "低风险",
@@ -58,25 +59,28 @@
         "集中度20%",
         "高额费用$21,580",
         "集中度21%",
-        "集中度22%"
+        "集中度22%",
+        "高额费用$255,149",
+        "集中度18%",
+        "高额费用$277,304"
       ],
       "performance_metrics": {
-        "email_volume_7d": 7,
-        "active_days_7d": 1,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 155,
+        "active_days_7d": 7,
+        "pdf_count": 83,
+        "pdf_fee_total": 277304.0,
+        "pdf_fee_avg": 8665.75,
         "hold_events_7d": 0,
         "inspection_events_7d": 0
       },
       "scoring_components": {
-        "volume_reliability": 24,
+        "volume_reliability": 30,
         "cost_efficiency": 20,
         "problem_frequency": 20,
-        "responsiveness": 8,
+        "responsiveness": 15,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "独立(前2M)",
       "fleet_info": "980船/7.2M TEU",
       "schedule_reliability": "60-70%"
@@ -85,7 +89,7 @@
       "vendor_name": "Hapag-Lloyd",
       "vendor_name_cn": "赫伯罗特",
       "vendor_category": "ship_carrier",
-      "capability_score": 65,
+      "capability_score": 77,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -93,22 +97,22 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 33,
+        "active_days_7d": 2,
+        "pdf_count": 19,
+        "pdf_fee_total": 36.0,
+        "pdf_fee_avg": 1.5,
         "hold_events_7d": 0,
         "inspection_events_7d": 0
       },
       "scoring_components": {
-        "volume_reliability": 6,
+        "volume_reliability": 18,
         "cost_efficiency": 25,
         "problem_frequency": 20,
         "responsiveness": 4,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Gemini(与Maersk) 91%准班",
       "fleet_info": "301船/2.5M TEU",
       "schedule_reliability": "75-77%"
@@ -117,30 +121,31 @@
       "vendor_name": "ZIM",
       "vendor_name_cn": "齐姆航运",
       "vendor_category": "ship_carrier",
-      "capability_score": 63,
+      "capability_score": 95,
       "capability_level": "C级关注供应商",
       "risk_score": 0,
       "risk_level": "无风险",
       "risk_tags": [
-        "无"
+        "无",
+        "集中度17%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 2,
-        "active_days_7d": 1,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 125,
+        "active_days_7d": 7,
+        "pdf_count": 73,
+        "pdf_fee_total": 1982.01,
+        "pdf_fee_avg": 36.7,
         "hold_events_7d": 0,
         "inspection_events_7d": 0
       },
       "scoring_components": {
-        "volume_reliability": 12,
+        "volume_reliability": 30,
         "cost_efficiency": 25,
         "problem_frequency": 20,
-        "responsiveness": 4,
-        "documentation_quality": 8
+        "responsiveness": 15,
+        "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "独立(被Hapag $4.2B收购中)",
       "fleet_info": "131船/776K TEU",
       "schedule_reliability": "低于平均"
@@ -148,70 +153,6 @@
     {
       "vendor_name": "YML",
       "vendor_name_cn": "阳明海运",
-      "vendor_category": "ship_carrier",
-      "capability_score": 43,
-      "capability_level": "C级关注供应商",
-      "risk_score": 0,
-      "risk_level": "无风险",
-      "risk_tags": [
-        "无"
-      ],
-      "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
-      },
-      "scoring_components": {
-        "volume_reliability": 2,
-        "cost_efficiency": 15,
-        "problem_frequency": 20,
-        "responsiveness": 4,
-        "documentation_quality": 2
-      },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
-      "alliance": "Premier Alliance",
-      "fleet_info": "98船/711K TEU",
-      "schedule_reliability": "中等"
-    },
-    {
-      "vendor_name": "WAN HAI",
-      "vendor_name_cn": "万海航运",
-      "vendor_category": "ship_carrier",
-      "capability_score": 43,
-      "capability_level": "C级关注供应商",
-      "risk_score": 0,
-      "risk_level": "无风险",
-      "risk_tags": [
-        "无"
-      ],
-      "performance_metrics": {
-        "email_volume_7d": 1,
-        "active_days_7d": 1,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
-      },
-      "scoring_components": {
-        "volume_reliability": 2,
-        "cost_efficiency": 15,
-        "problem_frequency": 20,
-        "responsiveness": 4,
-        "documentation_quality": 2
-      },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
-      "alliance": "独立",
-      "fleet_info": "142船/430K TEU",
-      "schedule_reliability": "47.8%最低"
-    },
-    {
-      "vendor_name": "Evergreen",
-      "vendor_name_cn": "长荣海运",
       "vendor_category": "ship_carrier",
       "capability_score": 47,
       "capability_level": "C级关注供应商",
@@ -221,8 +162,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 5,
+        "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -236,7 +177,71 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
+      "alliance": "Premier Alliance",
+      "fleet_info": "98船/711K TEU",
+      "schedule_reliability": "中等"
+    },
+    {
+      "vendor_name": "WAN HAI",
+      "vendor_name_cn": "万海航运",
+      "vendor_category": "ship_carrier",
+      "capability_score": 47,
+      "capability_level": "C级关注供应商",
+      "risk_score": 0,
+      "risk_level": "无风险",
+      "risk_tags": [
+        "无"
+      ],
+      "performance_metrics": {
+        "email_volume_7d": 5,
+        "active_days_7d": 1,
+        "pdf_count": 0,
+        "pdf_fee_total": 0,
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
+      },
+      "scoring_components": {
+        "volume_reliability": 6,
+        "cost_efficiency": 15,
+        "problem_frequency": 20,
+        "responsiveness": 4,
+        "documentation_quality": 2
+      },
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
+      "alliance": "独立",
+      "fleet_info": "142船/430K TEU",
+      "schedule_reliability": "47.8%最低"
+    },
+    {
+      "vendor_name": "Evergreen",
+      "vendor_name_cn": "长荣海运",
+      "vendor_category": "ship_carrier",
+      "capability_score": 53,
+      "capability_level": "C级关注供应商",
+      "risk_score": 0,
+      "risk_level": "无风险",
+      "risk_tags": [
+        "无"
+      ],
+      "performance_metrics": {
+        "email_volume_7d": 12,
+        "active_days_7d": 1,
+        "pdf_count": 0,
+        "pdf_fee_total": 0,
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
+      },
+      "scoring_components": {
+        "volume_reliability": 12,
+        "cost_efficiency": 15,
+        "problem_frequency": 20,
+        "responsiveness": 4,
+        "documentation_quality": 2
+      },
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "239船/1.9M TEU",
       "schedule_reliability": "中等"
@@ -268,7 +273,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Premier Alliance",
       "fleet_info": "86船/850K TEU",
       "schedule_reliability": "中等"
@@ -285,8 +290,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 2,
+        "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -300,7 +305,7 @@
         "responsiveness": 4,
         "documentation_quality": 2
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Gemini(与Hapag) 91%准班",
       "fleet_info": "707船/4.3M TEU",
       "schedule_reliability": "76-78% #1"
@@ -317,8 +322,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 4,
+        "active_days_7d": 4,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -332,7 +337,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "ROME TRANSPORT",
@@ -346,8 +351,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 6,
+        "active_days_7d": 3,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -361,7 +366,7 @@
         "responsiveness": 14,
         "documentation_quality": 6
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "FAST FREIGHTS",
@@ -390,7 +395,7 @@
         "responsiveness": 8,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "YES CHB",
@@ -404,8 +409,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 5,
+        "active_days_7d": 2,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -419,7 +424,7 @@
         "responsiveness": 20,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "FCC USA",
@@ -433,8 +438,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 13,
+        "active_days_7d": 6,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -448,7 +453,7 @@
         "responsiveness": 20,
         "documentation_quality": 12
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "IDC INTERNATIONAL",
@@ -477,40 +482,11 @@
         "responsiveness": 0,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "RIM LOGISTICS",
       "vendor_name_cn": "RIM物流",
-      "vendor_category": "agent_partner",
-      "capability_score": 37,
-      "capability_level": "C级关注供应商",
-      "risk_score": 0,
-      "risk_level": "无风险",
-      "risk_tags": [
-        "无"
-      ],
-      "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
-        "hold_events_7d": 0,
-        "inspection_events_7d": 0
-      },
-      "scoring_components": {
-        "volume_reliability": 0,
-        "cost_efficiency": 12,
-        "problem_frequency": 20,
-        "responsiveness": 0,
-        "documentation_quality": 5
-      },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
-    },
-    {
-      "vendor_name": "ATC CARGO",
-      "vendor_name_cn": "ATC货运",
       "vendor_category": "agent_partner",
       "capability_score": 43,
       "capability_level": "C级关注供应商",
@@ -520,8 +496,8 @@
         "无"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
+        "email_volume_7d": 1,
+        "active_days_7d": 1,
         "pdf_count": 0,
         "pdf_fee_total": 0,
         "pdf_fee_avg": 0,
@@ -535,13 +511,42 @@
         "responsiveness": 7,
         "documentation_quality": 5
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00"
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
+    },
+    {
+      "vendor_name": "ATC CARGO",
+      "vendor_name_cn": "ATC货运",
+      "vendor_category": "agent_partner",
+      "capability_score": 43,
+      "capability_level": "C级关注供应商",
+      "risk_score": 0,
+      "risk_level": "无风险",
+      "risk_tags": [
+        "无"
+      ],
+      "performance_metrics": {
+        "email_volume_7d": 2,
+        "active_days_7d": 1,
+        "pdf_count": 0,
+        "pdf_fee_total": 0,
+        "pdf_fee_avg": 0,
+        "hold_events_7d": 0,
+        "inspection_events_7d": 0
+      },
+      "scoring_components": {
+        "volume_reliability": 3,
+        "cost_efficiency": 12,
+        "problem_frequency": 20,
+        "responsiveness": 7,
+        "documentation_quality": 5
+      },
+      "last_updated": "2026-04-02T12:30:35.104858+08:00"
     },
     {
       "vendor_name": "OOCL",
       "vendor_name_cn": "东方海外",
       "vendor_category": "ship_carrier",
-      "capability_score": 56,
+      "capability_score": 78,
       "capability_level": "C级关注供应商",
       "risk_score": 20,
       "risk_level": "低风险",
@@ -556,25 +561,27 @@
         "集中度15%",
         "集中度16%",
         "集中度17%",
-        "查验1票"
+        "查验1票",
+        "高额费用$298,864",
+        "高额费用$302,389"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 141,
+        "active_days_7d": 7,
+        "pdf_count": 46,
+        "pdf_fee_total": 302388.56,
+        "pdf_fee_avg": 3085.6,
         "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "inspection_events_7d": 2
       },
       "scoring_components": {
-        "volume_reliability": 18,
+        "volume_reliability": 30,
         "cost_efficiency": 25,
         "problem_frequency": 20,
-        "responsiveness": 4,
+        "responsiveness": 15,
         "documentation_quality": 8
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "59船",
       "schedule_reliability": "64%"
@@ -583,7 +590,7 @@
       "vendor_name": "COSCO",
       "vendor_name_cn": "中远海运",
       "vendor_category": "ship_carrier",
-      "capability_score": 61,
+      "capability_score": 65,
       "capability_level": "C级关注供应商",
       "risk_score": 10,
       "risk_level": "低风险",
@@ -593,22 +600,22 @@
         "集中度16%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 82,
+        "active_days_7d": 5,
+        "pdf_count": 3,
+        "pdf_fee_total": 3790.0,
+        "pdf_fee_avg": 758.0,
         "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "inspection_events_7d": 1
       },
       "scoring_components": {
-        "volume_reliability": 18,
+        "volume_reliability": 24,
         "cost_efficiency": 25,
         "problem_frequency": 20,
-        "responsiveness": 4,
+        "responsiveness": 12,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Ocean Alliance(至2032)",
       "fleet_info": "542船/3.4M TEU",
       "schedule_reliability": "~60%"
@@ -617,7 +624,7 @@
       "vendor_name": "ONE",
       "vendor_name_cn": "海洋网联",
       "vendor_category": "ship_carrier",
-      "capability_score": 71,
+      "capability_score": 87,
       "capability_level": "C级关注供应商",
       "risk_score": 10,
       "risk_level": "低风险",
@@ -638,22 +645,22 @@
         "集中度15%"
       ],
       "performance_metrics": {
-        "email_volume_7d": 0,
-        "active_days_7d": 0,
-        "pdf_count": 0,
-        "pdf_fee_total": 0,
-        "pdf_fee_avg": 0,
+        "email_volume_7d": 78,
+        "active_days_7d": 5,
+        "pdf_count": 125,
+        "pdf_fee_total": 13.0,
+        "pdf_fee_avg": 1.18,
         "hold_events_7d": 0,
-        "inspection_events_7d": 0
+        "inspection_events_7d": 1
       },
       "scoring_components": {
-        "volume_reliability": 18,
+        "volume_reliability": 24,
         "cost_efficiency": 25,
         "problem_frequency": 20,
-        "responsiveness": 4,
+        "responsiveness": 12,
         "documentation_quality": 10
       },
-      "last_updated": "2026-04-01T02:33:05.641881+08:00",
+      "last_updated": "2026-04-02T12:30:35.104858+08:00",
       "alliance": "Premier Alliance(5年)",
       "fleet_info": "260船/2M TEU",
       "schedule_reliability": "中等"
