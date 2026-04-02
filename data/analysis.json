@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-04-03T06:08:53.911375+08:00",
-  "total_emails": 209,
-  "business_emails": 184,
+  "scan_time": "2026-04-03T06:43:22.180436+08:00",
+  "total_emails": 210,
+  "business_emails": 185,
   "pdf_count": 104,
   "categories": {
-    "other_biz": 114,
+    "other_biz": 115,
     "overdue": 2,
     "delivery": 3,
     "booking": 2,
@@ -323,7 +323,7 @@
   ],
   "daily_counts": {
     "2026-04-02": 68,
-    "2026-04-03": 137
+    "2026-04-03": 138
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -1587,13 +1587,13 @@
       "MEDURQ369353",
       "OOLU2320917320",
       "COSU6446551540",
+      "OOLU2323362180",
       "COSU9506450910",
       "WHLC039GX08551",
       "WHLC194GA00386",
       "ONEYBTMG00799300",
       "ONEYBTMG00801800",
-      "OOLU4055100830",
-      "OOLU2323331320"
+      "OOLU4055100830"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
@@ -1802,12 +1802,12 @@
     "contacts_total": 386,
     "daily_connections": 22,
     "new_domains": [
-      "expresslinecorp.com",
       "paycargo.com",
-      "jci-chemical.com",
-      "biposervice.com",
+      "newl.ca",
       "elite-solar.com",
-      "newl.ca"
+      "biposervice.com",
+      "expresslinecorp.com",
+      "jci-chemical.com"
     ]
   },
   "daily_connections": [
