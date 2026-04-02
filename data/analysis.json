@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-04-02T18:35:12.651818+08:00",
-  "total_emails": 645,
-  "business_emails": 594,
-  "pdf_count": 588,
+  "scan_time": "2026-04-02T19:17:02.539067+08:00",
+  "total_emails": 647,
+  "business_emails": 595,
+  "pdf_count": 582,
   "categories": {
     "delivery": 13,
     "booking": 9,
-    "other_biz": 430,
+    "other_biz": 431,
     "hold": 6,
     "charge_confirm": 18,
     "prealert": 20,
@@ -69,25 +69,27 @@
       ]
     },
     "TERRASOULSUPERFOODS": {
-      "emails": 2,
+      "emails": 4,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "04/01"
+        "04/01",
+        "04/02"
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 2,
+      "emails": 4,
       "hbl_count": 0,
       "mbl_count": 0,
-      "active_days": 1,
+      "active_days": 2,
       "hbls": [],
       "mbls": [],
       "days": [
-        "04/01"
+        "04/01",
+        "04/02"
       ]
     },
     "HORIZON SOLAR": {
@@ -319,8 +321,8 @@
     }
   },
   "carriers": {
-    "ZIM": 114,
-    "OOCL": 115,
+    "ZIM": 113,
+    "OOCL": 113,
     "WAN HAI": 2,
     "MSC": 118,
     "COSCO": 65,
@@ -331,8 +333,8 @@
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 256,
-  "mbl_total": 201,
+  "hbl_total": 253,
+  "mbl_total": 199,
   "all_hbls": [
     "WLC50618809",
     "WLC50625761",
@@ -451,7 +453,6 @@
     "WLC51122662",
     "WLC51212243",
     "WLC51215166",
-    "WLC51215178",
     "WLC51218413",
     "WLC51218414",
     "WLC51218923",
@@ -475,7 +476,6 @@
     "WLC60111380",
     "WLC60111386",
     "WLC60111393",
-    "WLC60111398",
     "WLC60112684",
     "WLC60112696",
     "WLC60112698",
@@ -488,7 +488,6 @@
     "WLC60112796",
     "WLC60114832",
     "WLC60115534",
-    "WLC60115542",
     "WLC60115548",
     "WLC60115554",
     "WLC60115563",
@@ -751,7 +750,6 @@
     "OOLU2317463380",
     "OOLU2317463570",
     "OOLU2318044650",
-    "OOLU2318044690",
     "OOLU2318472410",
     "OOLU2319033080",
     "OOLU2319034050",
@@ -763,7 +761,6 @@
     "OOLU2319083390",
     "OOLU2319083590",
     "OOLU2319327570",
-    "OOLU2319383210",
     "OOLU2319383420",
     "OOLU2319383970",
     "OOLU2319384810",
@@ -843,16 +840,16 @@
     "2025-12-05": 1,
     "2025-12-09": 1,
     "2025-12-17": 1,
-    "2025-12-19": 2,
+    "2025-12-19": 1,
     "2025-12-23": 1,
     "2026-01-04": 7,
     "2026-01-05": 4,
     "2026-01-06": 4,
     "2026-01-10": 3,
-    "2026-01-26": 6,
+    "2026-01-26": 5,
     "2026-02-01": 16,
     "2026-02-05": 2,
-    "2026-02-09": 3,
+    "2026-02-09": 2,
     "2026-02-11": 8,
     "2026-02-13": 6,
     "2026-02-14": 5,
@@ -865,7 +862,7 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 253,
+    "2026-04-02": 258,
     "2026-04-03": 9
   },
   "inspection_mbls": [
@@ -881,7 +878,7 @@
   "top_senders": [
     [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      175
+      173
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -921,7 +918,7 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      12
+      14
     ],
     [
       "\"Burce Xu - WWG XMN\" <xmn.ops2@wwl.cn>",
@@ -3360,21 +3357,22 @@
     ]
   },
   "neural_network": {
-    "entities": 94,
-    "relationships": 46,
-    "contacts_new": 0,
-    "contacts_total": 385,
-    "daily_connections": 45,
+    "entities": 95,
+    "relationships": 49,
+    "contacts_new": 1,
+    "contacts_total": 386,
+    "daily_connections": 46,
     "new_domains": [
-      "romesales.com",
-      "elite-solar.com",
-      "linkedin.com",
-      "xiangyu.cn",
       "containerport.com",
+      "elite-solar.com",
       "paycargo.com",
-      "jci-chemical.com",
+      "linkedin.com",
+      "biposervice.com",
       "newl.ca",
-      "biposervice.com"
+      "xiangyu.cn",
+      "expresslinecorp.com",
+      "romesales.com",
+      "jci-chemical.com"
     ]
   },
   "daily_connections": [
@@ -3601,6 +3599,11 @@
     {
       "from": "PTS INC",
       "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
       "type": "service"
     }
   ]

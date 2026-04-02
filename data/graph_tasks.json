@@ -464,7 +464,7 @@
       "mbl": "MEDUYL886908, MEDUYL942321, MEDUYL789706, MEDUWH433411, MEDUWH661557 +1",
       "carrier": "MSC",
       "customer": "PREVALON ENERGY INC.",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
+      "wwl_sender": "林慧滢Renee (szn.reneelin@wwl.cn)",
       "wwl_branch": "WWL深圳",
       "action": "MSC 6票 — us038-impo来信→需确认并回复",
       "detail_lines": [
@@ -482,8 +482,8 @@
       "title": "Fee Confirmed",
       "mbl": "COSU9506320440, COSU6446832300, COSU9506319310, COSU9506444150, COSU9506319330 +1",
       "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
+      "customer": "DTC FREIGHT (内部电商)/HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "yoyo (ngb.ops4@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 6票 — 等Maggie Wu的上家回复",
       "detail_lines": [
@@ -500,8 +500,8 @@
       "title": "Fee Confirmed",
       "mbl": "ONEYBKKG61453900, ONEYBKKG61472300, ONEYBKKG77381900, ONEYBKKG77382300, ONEYBKKG70598500",
       "carrier": "ONE",
-      "customer": "MING HAO XIN TRADING CO., LTD./THE QUALITY THREAD & NOTI/REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
+      "customer": "REACH INDUSTRY (THAILAND) CO., LTD./MING HAO XIN TRADING CO., LTD./THE QUALITY THREAD & NOTI",
+      "wwl_sender": "Eart (bkk.eart@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "ONE 5票 — 等Eart的上家回复",
       "detail_lines": [
@@ -653,7 +653,7 @@
       "mbl": "OOLU2322755420, OOLU2323329550",
       "carrier": "OOCL",
       "customer": "REACH INDUSTRY (THAILAND) CO., LTD.",
-      "wwl_sender": " (bkk.nasmee@wwl.sg)",
+      "wwl_sender": " (bkk.guide@wwl.sg)",
       "wwl_branch": "WWL泰国",
       "action": "OOCL 2票 — 等bkk.nasmee的上家回复",
       "detail_lines": [

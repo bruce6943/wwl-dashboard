@@ -44,7 +44,7 @@
       "risk_tags": [
         "已知代理"
       ],
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "bcg_position": "观察",
       "email_activity": {
         "emails_15d": 1,
@@ -72,7 +72,7 @@
         "无",
         "美国代理/供应商(非客户)"
       ],
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "bcg_position": "内部/供应商",
       "email_activity": {
         "emails_15d": 33,
@@ -229,7 +229,7 @@
         "已知代理",
         "PLT换单平台(非客户)"
       ],
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "hbl_enrichment": {
         "hbl_count_15d": 16,
         "loading_ports": [
@@ -3648,7 +3648,7 @@
       "risk_tags": [
         "无"
       ],
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "bcg_position": "观察"
     },
     {
@@ -12869,7 +12869,7 @@
       "risk_tags": [
         "无"
       ],
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "bcg_position": "明星",
       "email_activity": {
         "emails_15d": 4,
@@ -16009,7 +16009,7 @@
         "w2": 143,
         "trend": "爆发"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 162,
@@ -16049,7 +16049,7 @@
         "trend": "增长",
         "note": "含科陆双鱼项目数据"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 54,
@@ -16087,7 +16087,7 @@
         "w2": 35,
         "trend": "增长"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 337,
@@ -16125,7 +16125,7 @@
         "w2": 35,
         "trend": "增长"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 38,
@@ -16163,7 +16163,7 @@
         "w2": 35,
         "trend": "增长"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)"
     },
     {
@@ -16224,7 +16224,7 @@
         "w2": 12,
         "trend": "增长"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "arrears_history": {
         "latest_total": 1125.0,
@@ -16270,7 +16270,7 @@
         "w2": 6,
         "trend": "稳定"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 11,
@@ -16286,7 +16286,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 31,
       "value_level": "C级低活客户",
-      "risk_score": 74,
+      "risk_score": 78,
       "risk_level": "低风险",
       "bcg_position": "观察",
       "physical_address": "",
@@ -16310,7 +16310,7 @@
         "w2": 6,
         "trend": "稳定"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "arrears_history": {
         "latest_total": 400.0,
@@ -16355,7 +16355,7 @@
         "w2": 5,
         "trend": "稳定"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "email_activity_60d": {
         "emails": 42,
@@ -16369,7 +16369,7 @@
     {
       "company_name": "HORIZON SOLAR INC.",
       "customer_category": "实际贸易收货人",
-      "value_score": 31,
+      "value_score": 32,
       "value_level": "C级低活客户",
       "risk_score": 0,
       "risk_level": "无风险",
@@ -16393,7 +16393,7 @@
         "w2": 0,
         "trend": "衰退"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "arrears_history": {
         "latest_total": 0,
@@ -16414,7 +16414,7 @@
       "customer_category": "实际贸易收货人",
       "value_score": 15,
       "value_level": "D级沉默客户",
-      "risk_score": 86,
+      "risk_score": 90,
       "risk_level": "中风险",
       "bcg_position": "瘦狗",
       "physical_address": "",
@@ -16439,7 +16439,7 @@
         "w2": 3,
         "trend": "稳定"
       },
-      "last_updated": "2026-04-02T18:35:12.651818+08:00",
+      "last_updated": "2026-04-02T19:17:02.539067+08:00",
       "source": "邮件扫描自动新建(2026-03-28)",
       "arrears_history": {
         "latest_total": 5985.0,
