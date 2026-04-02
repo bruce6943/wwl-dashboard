@@ -1,12 +1,12 @@
 {
-  "scan_time": "2026-04-02T13:00:53.302703+08:00",
-  "total_emails": 582,
-  "business_emails": 542,
-  "pdf_count": 575,
+  "scan_time": "2026-04-02T13:37:06.060286+08:00",
+  "total_emails": 593,
+  "business_emails": 551,
+  "pdf_count": 577,
   "categories": {
-    "delivery": 11,
-    "booking": 8,
-    "other_biz": 390,
+    "delivery": 12,
+    "booking": 9,
+    "other_biz": 396,
     "hold": 6,
     "charge_confirm": 17,
     "prealert": 17,
@@ -14,11 +14,11 @@
     "inspection": 5,
     "cancel": 2,
     "overdue": 14,
-    "invoice": 38
+    "invoice": 39
   },
   "customers": {
     "HAIROBOT (海柔)": {
-      "emails": 10,
+      "emails": 11,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -30,7 +30,7 @@
       ]
     },
     "YES CHB": {
-      "emails": 5,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -137,12 +137,10 @@
     "ASTRONERGY (正泰新能)": {
       "emails": 5,
       "hbl_count": 0,
-      "mbl_count": 1,
+      "mbl_count": 0,
       "active_days": 1,
       "hbls": [],
-      "mbls": [
-        "MEDUKU073525"
-      ],
+      "mbls": [],
       "days": [
         "04/02"
       ]
@@ -193,12 +191,10 @@
     "ROME TRANSPORT": {
       "emails": 3,
       "hbl_count": 0,
-      "mbl_count": 1,
+      "mbl_count": 0,
       "active_days": 1,
       "hbls": [],
-      "mbls": [
-        "MEDUKU073525"
-      ],
+      "mbls": [],
       "days": [
         "04/02"
       ]
@@ -293,10 +289,10 @@
     }
   },
   "carriers": {
-    "ZIM": 100,
+    "ZIM": 105,
     "OOCL": 115,
     "WAN HAI": 1,
-    "MSC": 107,
+    "MSC": 108,
     "COSCO": 65,
     "ONE": 26,
     "Hapag-Lloyd": 13,
@@ -828,13 +824,12 @@
     "2026-02-28": 10,
     "2026-03-03": 22,
     "2026-03-12": 4,
-    "2026-03-16": 2,
     "2026-03-25": 2,
     "2026-03-26": 2,
     "2026-03-27": 2,
-    "2026-04-01": 72,
-    "2026-04-02": 201,
-    "2026-04-03": 2
+    "2026-04-01": 74,
+    "2026-04-02": 211,
+    "2026-04-03": 3
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -853,7 +848,7 @@
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      45
+      46
     ],
     [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
@@ -885,7 +880,7 @@
     ],
     [
       "<us.ops@wwl.sg>",
-      11
+      12
     ],
     [
       "\"Burce Xu - WWG XMN\" <xmn.ops2@wwl.cn>",
@@ -921,10 +916,10 @@
     ],
     [
       "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
-      5
+      6
     ],
     [
-      "Adam Sum <us.adamsum@worldwide-logistics.cn>",
+      "Team3 YES <team3@yeschb.com>",
       4
     ]
   ],
@@ -2638,6 +2633,32 @@
       "date": "Thu, 2 Apr 2026 16:50:05 "
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 17:20:41 "
+    },
+    {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "RE: ZIMUQIN4431617 pending customs clearance",
+      "source": "RE: ZIMUQIN4431617 pending customs clearance",
+      "from": "Johana Arcila <johana.arcila@newl.ca>",
+      "date": "Thu, 2 Apr 2026 17:36:54 "
+    },
+    {
       "type": "supplier_reply",
       "priority": "high",
       "mbl": "",
@@ -2937,59 +2958,13 @@
       "source": "Charge confirm request /MBL:ONEYBKKG48500700 /HBL:WLC6030514",
       "from": "assistant@pltplt.com",
       "date": "Thu, 2 Apr 2026 09:05:03 "
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
-      "mbl": "ONEYBKKG68481300",
-      "hbl": "WLC60304584",
-      "customer": "REACH INDUSTRY",
-      "eta": "2026-04-08",
-      "amount": "",
-      "assignee": "",
-      "carrier": "ONE",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
-      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
-      "wwl_branch": "WWL新加坡",
-      "action": "确认费用承担方",
-      "detail": "PLT CC确认 MBL:ONEYBKKG68481300 金额:",
-      "source": "Charge confirm request /MBL:ONEYBKKG68481300 /HBL:WLC6030458",
-      "from": "assistant@pltplt.com",
-      "date": "Thu, 2 Apr 2026 09:05:04 "
-    },
-    {
-      "type": "cc_confirm",
-      "priority": "medium",
-      "mbl": "",
-      "hbl": "WLC60216138",
-      "customer": "",
-      "eta": "2026-04-01",
-      "amount": "",
-      "assignee": "",
-      "carrier": "",
-      "sender": "assistant@pltplt.com (pltplt.com)",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "确认费用承担方",
-      "detail": "Charge confirm request /MBL:MEDUR6661785 /HBL:WLC60216138\r\n ",
-      "source": "Charge confirm request /MBL:MEDUR6661785 /HBL:WLC60216138\r\n ",
-      "from": "assistant@pltplt.com",
-      "date": "Thu, 2 Apr 2026 09:05:07 "
     }
   ],
   "action_summary": {
-    "total": 145,
+    "total": 146,
     "urgent": 24,
-    "high": 67,
-    "medium": 54
+    "high": 69,
+    "medium": 53
   },
   "bl_status": {
     "no_tlx_mbl": [],
@@ -3321,21 +3296,32 @@
         "from": "\"Sven Gu\" <sha.overseassup2@ww",
         "urgency": 3,
         "date": "Thu, 2 Apr 2026 19:16:03 "
+      },
+      {
+        "subject": "RE: MSC  费用 WLDBTH251200818  USD110  MEDUKU073525",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Thu, 2 Apr 2026 19:16:41 "
+      },
+      {
+        "subject": "RE: ZIM付款  USD20.5+19.37+18.61",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Thu, 2 Apr 2026 19:18:31 "
       }
     ]
   },
   "neural_network": {
-    "entities": 91,
-    "relationships": 36,
+    "entities": 90,
+    "relationships": 38,
     "contacts_new": 0,
     "contacts_total": 384,
-    "daily_connections": 35,
+    "daily_connections": 37,
     "new_domains": [
-      "newl.ca",
       "xiangyu.cn",
       "linkedin.com",
-      "jolo.com",
       "romesales.com",
+      "newl.ca",
       "containerport.com"
     ]
   },
@@ -3513,6 +3499,16 @@
     {
       "from": "PTS INC",
       "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "ZIM",
+      "type": "carrier"
+    },
+    {
+      "from": "HAIROBOT (海柔)",
+      "to": "YES报关行",
       "type": "service"
     }
   ]
