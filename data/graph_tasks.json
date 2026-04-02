@@ -411,8 +411,8 @@
       "wwl_branch": "WWL深圳",
       "action": "OOCL 7票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "电放确认: MBL/HBL已电放",
-        "后续: 确认BTL/PLT平台已换单 → 等到港通知"
+        "电放确认: MBL/HBL已电放(TLX/SWB/Surrendered)",
+        "后续: 确认BTL平台已换单 → 等AN到港通知"
       ],
       "progress_history": "Origin: Renee Lin-WWLSZN",
       "email_count": 8,
@@ -429,9 +429,8 @@
       "wwl_branch": "WWL上海",
       "action": "Hapag-Lloyd 5票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "费用方式: 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "预报(SA)已收 | 费用预付(Prepaid)",
+        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
       "email_count": 12,
@@ -448,8 +447,8 @@
       "wwl_branch": "未知",
       "action": "CMA-CGM 4票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用通知: D&D/滞期费",
-        "后续: 需确认费用承担方(collect/prepaid)"
+        "D&D费用: Demurrage(滞箱)",
+        "后续: 核对19项OSRA要素 → 缺项则争议不付 → 合规则确认承担方 → Sven付款"
       ],
       "progress_history": "客户: ELITE SOLAR NEW ENERGY CO.",
       "email_count": 32,
@@ -467,7 +466,7 @@
       "action": "MSC 3票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
         "费用通知: Chassis Usage",
-        "后续: 需确认费用承担方(collect/prepaid)"
+        "后续: 确认费用承担方 → collect走催收 / prepaid确认入账"
       ],
       "progress_history": "Origin: Renee Lin-WWLSZN",
       "email_count": 11,
@@ -484,9 +483,8 @@
       "wwl_branch": "WWL上海",
       "action": "COSCO 3票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "费用方式: 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "预报(SA)已收 | 费用预付(Prepaid)",
+        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
       "email_count": 8,
@@ -503,8 +501,8 @@
       "wwl_branch": "WWL泰国",
       "action": "ONE 2票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: 需确认费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后回复origin"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: THE QUALITY THREAD & NOTI | Origin: Eart",
       "email_count": 22,
@@ -521,9 +519,8 @@
       "wwl_branch": "WWL深圳",
       "action": "COSCO 2票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "费用方式: 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "预报(SA)已收 | HBL已电放 | 费用预付(Prepaid)",
+        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
       ],
       "progress_history": "Origin: Renee Lin-WWLSZN",
       "email_count": 2,
@@ -540,8 +537,8 @@
       "wwl_branch": "WWL广州",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: 需确认费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后回复origin"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Ann Gong",
       "email_count": 16,
@@ -558,8 +555,8 @@
       "wwl_branch": "WWL印尼",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: 需确认费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后回复origin"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: ELITE SOLAR NEW ENERGY CO. | Origin: Anggito Iqbal",
       "email_count": 6,
@@ -576,8 +573,8 @@
       "wwl_branch": "WWL天津",
       "action": "已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "电放确认: MBL/HBL已电放",
-        "后续: 确认BTL/PLT平台已换单 → 等到港通知"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: MAG SPECIALTIES INC. | Origin: Shirley.Liu WWL TSN OPS",
       "email_count": 3,
@@ -594,9 +591,8 @@
       "wwl_branch": "WWL宁波",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "费用方式: 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "Origin: ngb.ops25@wwl.cn",
       "email_count": 2,
@@ -613,8 +609,8 @@
       "wwl_branch": "WWL上海",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: GLOBAL OCEAN | Origin: Daniel Yan",
       "email_count": 2,
@@ -631,9 +627,8 @@
       "wwl_branch": "WWL宁波",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "费用方式: 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: yoyo",
       "email_count": 1,
@@ -650,8 +645,8 @@
       "wwl_branch": "WWL上海",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报邮件: origin发SA通知MBL/HBL状态及附件",
-        "后续: 确认HBL/MBL/附件已识别, 等到港通知(AN)后跟进清关"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "Origin: Daniel Yan",
       "email_count": 1,
@@ -668,7 +663,8 @@
       "wwl_branch": "WWL-DTC",
       "action": "dtc.zengca已回复 → 阅读正文确认下一步动作",
       "detail_lines": [
-        "Origin(dtc.zengcaih)来信, 需阅读正文确认业务需求"
+        "费用确认请求: origin/Everlyn询问费用预付/到付",
+        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
       ],
       "progress_history": "Origin: dtc.zengcaihong@wwl.cn",
       "email_count": 3,
@@ -775,7 +771,7 @@
   ],
   "summary": {
     "arrival_notices": 209,
-    "bl_releases": 104,
+    "bl_releases": 105,
     "billings": 114,
     "prealerts": 46
   },

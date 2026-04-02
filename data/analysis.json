@@ -1,17 +1,17 @@
 {
-  "scan_time": "2026-04-02T19:17:02.539067+08:00",
-  "total_emails": 647,
-  "business_emails": 595,
-  "pdf_count": 582,
+  "scan_time": "2026-04-02T20:40:55.121211+08:00",
+  "total_emails": 657,
+  "business_emails": 604,
+  "pdf_count": 591,
   "categories": {
     "delivery": 13,
     "booking": 9,
-    "other_biz": 431,
+    "other_biz": 436,
     "hold": 6,
     "charge_confirm": 18,
-    "prealert": 20,
+    "prealert": 21,
     "arrival": 38,
-    "inspection": 5,
+    "inspection": 8,
     "cancel": 2,
     "overdue": 14,
     "invoice": 39
@@ -148,22 +148,25 @@
       ]
     },
     "REACH INDUSTRY": {
-      "emails": 6,
-      "hbl_count": 3,
-      "mbl_count": 3,
-      "active_days": 1,
+      "emails": 7,
+      "hbl_count": 4,
+      "mbl_count": 4,
+      "active_days": 2,
       "hbls": [
+        "WLC50520755",
         "WLC60216589",
         "WLC60216592",
         "WLC60216595"
       ],
       "mbls": [
+        "CMDUTHD1457294",
         "ZIMUBKK80439627",
         "ZIMUBKK80439630",
         "ZIMUBKK80439631"
       ],
       "days": [
-        "04/02"
+        "04/02",
+        "04/03"
       ]
     },
     "MAG SPECIALTIES": {
@@ -321,21 +324,22 @@
     }
   },
   "carriers": {
-    "ZIM": 113,
-    "OOCL": 113,
+    "ZIM": 114,
+    "OOCL": 117,
     "WAN HAI": 2,
     "MSC": 118,
     "COSCO": 65,
-    "ONE": 26,
+    "ONE": 27,
     "Hapag-Lloyd": 13,
-    "CMA-CGM": 3,
+    "CMA-CGM": 4,
     "YML": 3,
     "Evergreen": 6
   },
   "carrier_fees": {},
-  "hbl_total": 253,
-  "mbl_total": 199,
+  "hbl_total": 258,
+  "mbl_total": 202,
   "all_hbls": [
+    "WLC50520755",
     "WLC50618809",
     "WLC50625761",
     "WLC50707810",
@@ -453,6 +457,7 @@
     "WLC51122662",
     "WLC51212243",
     "WLC51215166",
+    "WLC51215178",
     "WLC51218413",
     "WLC51218414",
     "WLC51218923",
@@ -476,6 +481,7 @@
     "WLC60111380",
     "WLC60111386",
     "WLC60111393",
+    "WLC60111398",
     "WLC60112684",
     "WLC60112696",
     "WLC60112698",
@@ -488,6 +494,7 @@
     "WLC60112796",
     "WLC60114832",
     "WLC60115534",
+    "WLC60115542",
     "WLC60115548",
     "WLC60115554",
     "WLC60115563",
@@ -562,6 +569,7 @@
     "WLC60211379",
     "WLC60213407",
     "WLC60214772",
+    "WLC60215280",
     "WLC60215944",
     "WLC60216138",
     "WLC60216156",
@@ -592,6 +600,7 @@
   ],
   "all_mbls": [
     "CMDUCHN3177029",
+    "CMDUTHD1457294",
     "COSU6421512230",
     "COSU6423349460",
     "COSU6423659550",
@@ -750,6 +759,7 @@
     "OOLU2317463380",
     "OOLU2317463570",
     "OOLU2318044650",
+    "OOLU2318044690",
     "OOLU2318472410",
     "OOLU2319033080",
     "OOLU2319034050",
@@ -761,6 +771,7 @@
     "OOLU2319083390",
     "OOLU2319083590",
     "OOLU2319327570",
+    "OOLU2319383210",
     "OOLU2319383420",
     "OOLU2319383970",
     "OOLU2319384810",
@@ -840,16 +851,16 @@
     "2025-12-05": 1,
     "2025-12-09": 1,
     "2025-12-17": 1,
-    "2025-12-19": 1,
+    "2025-12-19": 2,
     "2025-12-23": 1,
     "2026-01-04": 7,
     "2026-01-05": 4,
     "2026-01-06": 4,
     "2026-01-10": 3,
-    "2026-01-26": 5,
+    "2026-01-26": 6,
     "2026-02-01": 16,
     "2026-02-05": 2,
-    "2026-02-09": 2,
+    "2026-02-09": 3,
     "2026-02-11": 8,
     "2026-02-13": 6,
     "2026-02-14": 5,
@@ -862,8 +873,8 @@
     "2026-03-26": 2,
     "2026-03-27": 2,
     "2026-04-01": 74,
-    "2026-04-02": 258,
-    "2026-04-03": 9
+    "2026-04-02": 259,
+    "2026-04-03": 15
   },
   "inspection_mbls": [
     "COSU6444625540",
@@ -872,13 +883,13 @@
     "OOLU2320126090"
   ],
   "hold_count": 6,
-  "inspection_count": 5,
+  "inspection_count": 8,
   "overdue_count": 14,
   "cancel_count": 2,
   "top_senders": [
     [
       "\"Yate Li - WWG XMN\" <xmn.cus3@wwl.cn>",
-      173
+      175
     ],
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
@@ -894,7 +905,7 @@
     ],
     [
       "assistant@pltplt.com",
-      23
+      26
     ],
     [
       "us038-arrival.notices@msc.com",
@@ -909,12 +920,12 @@
       17
     ],
     [
-      "us038-importpickupnotification@msc.com",
+      "<us.ops@wwl.sg>",
       16
     ],
     [
-      "<us.ops@wwl.sg>",
-      14
+      "us038-importpickupnotification@msc.com",
+      16
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
@@ -1435,6 +1446,69 @@
       "source": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
       "from": "Maggie Yin <maggie.yin@elite-solar.com>",
       "date": "Thu, 02 Apr 2026 14:50:54"
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2320126090",
+      "container": "OOLU2320126090",
+      "customer": "REACH INDUSTRY",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "us.ops@wwl.sg (us.ops@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2320126090",
+      "source": "查验预警-OOLU2320126090",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:00 "
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "ONEYBKKG38865600",
+      "container": "BKKG38865600",
+      "customer": "REACH INDUSTRY",
+      "assignee": "",
+      "carrier": "ONE",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "bkk.nasmee@wwl.sg (bkk.nasmee@wwl.sg)",
+      "wwl_branch": "WWL新加坡",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 BKKG38865600",
+      "source": "查验预警-ONEYBKKG38865600",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:04 "
+    },
+    {
+      "type": "inspection",
+      "priority": "urgent",
+      "mbl": "OOLU2166524280",
+      "container": "OOLU2166524280",
+      "customer": "REACH INDUSTRY",
+      "assignee": "",
+      "carrier": "OOCL",
+      "sender": "assistant@pltplt.com (pltplt.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "us.ops, Maggie Wu, Rita Tang",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "查验跟进: 确认查验类型(X-Ray/开门/全掏)→通知客户延迟2-5天→准备ISF/PI/PL文件",
+      "detail": "查验 OOLU2166524280",
+      "source": "查验预警-OOLU2166524280",
+      "from": "assistant@pltplt.com",
+      "date": "Fri, 3 Apr 2026 08:00:19 "
     },
     {
       "type": "inspection_broker",
@@ -2885,90 +2959,23 @@
       "date": "Thu, 02 Apr 2026 22:06:24"
     },
     {
-      "type": "supplier_reply",
+      "type": "dd_alert",
       "priority": "high",
       "mbl": "",
-      "customer": "FCC USA",
-      "assignee": "",
-      "carrier": "",
-      "sender": "内部: Everlyn Shaw",
-      "contact": "ADRIAN JUAREZ <adrianj@fccusa.net> / JEREMY WONG <jeremyw@fccusa.net>",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "FCC USA等待我方回复 → 24h内必须响应 → 联系: Adrian Juarez adrianj@fccusa.net",
-      "detail": "供应商等回复: FCC USA",
-      "source": "回复: Re: 2026.3 HOUSTON-SHANGHAI// BKG# YCH26240124",
-      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      "date": "Wed, 1 Apr 2026 12:06:48 "
-    },
-    {
-      "type": "post_clearance",
-      "priority": "high",
-      "mbl": "MEDUYL960604",
       "customer": "",
+      "amount": "$865",
       "assignee": "",
-      "carrier": "MSC",
-      "sender": "MSC",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
-      "detail": "清关完成 通知卡车+客户",
-      "source": "BL Number: MEDUYL960604 - Pending General Order Notice - Lon",
-      "from": "usa-import.customscompliance@msc.com",
-      "date": "1 Apr 2026 12:19:04 -0400"
-    },
-    {
-      "type": "post_clearance",
-      "priority": "high",
-      "mbl": "MEDUYL960620",
-      "customer": "",
-      "assignee": "",
-      "carrier": "MSC",
-      "sender": "MSC",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL中国",
-      "action": "清关放行 → 立即通知卡车安排提柜(Free Time在跑!) → 通知客户预计delivery时间 → 确认DO已拿到",
-      "detail": "清关完成 通知卡车+客户",
-      "source": "BL Number: MEDUYL960620 - Pending General Order Notice - Lon",
-      "from": "usa-import.customscompliance@msc.com",
-      "date": "1 Apr 2026 12:19:07 -0400"
-    },
-    {
-      "type": "supplier_reply",
-      "priority": "high",
-      "mbl": "",
-      "customer": "HAIROBOT (海柔)",
-      "assignee": "",
-      "carrier": "",
-      "sender": "内部: Everlyn Shaw",
-      "contact": "",
-      "consignee": "",
-      "shipper": "",
-      "internal_staff": "",
-      "wwl_sender": "",
-      "wwl_branch": "",
-      "action": "YES报关行等待我方回复 → 24h内必须响应 → 联系: Team3 YES team3@yeschb.com",
-      "detail": "供应商等回复: YES报关行",
-      "source": "回复: RE: ZIMUDAL878345 Delivery + clearance//海柔",
-      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      "date": "Wed, 1 Apr 2026 13:05:41 "
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: ShippingAdviceNotice:WLCTAO260206348/QGD2605616",
+      "source": "回复: ShippingAdviceNotice:WLCTAO260206348/QGD2605616",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 08:32:27 "
     }
   ],
   "action_summary": {
-    "total": 162,
-    "urgent": 26,
-    "high": 78,
+    "total": 167,
+    "urgent": 29,
+    "high": 80,
     "medium": 58
   },
   "bl_status": {
@@ -3359,20 +3366,20 @@
   "neural_network": {
     "entities": 95,
     "relationships": 49,
-    "contacts_new": 1,
+    "contacts_new": 0,
     "contacts_total": 386,
-    "daily_connections": 46,
+    "daily_connections": 47,
     "new_domains": [
-      "containerport.com",
-      "elite-solar.com",
-      "paycargo.com",
       "linkedin.com",
-      "biposervice.com",
-      "newl.ca",
-      "xiangyu.cn",
+      "paycargo.com",
       "expresslinecorp.com",
+      "newl.ca",
+      "jci-chemical.com",
       "romesales.com",
-      "jci-chemical.com"
+      "elite-solar.com",
+      "containerport.com",
+      "xiangyu.cn",
+      "biposervice.com"
     ]
   },
   "daily_connections": [
@@ -3605,6 +3612,11 @@
       "from": "TERRASOULSUPERFOODS",
       "to": "FCC USA",
       "type": "service"
+    },
+    {
+      "from": "REACH INDUSTRY",
+      "to": "CMA-CGM",
+      "type": "carrier"
     }
   ]
 }
