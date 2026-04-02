@@ -411,30 +411,13 @@
       "wwl_branch": "WWL深圳",
       "action": "OOCL 12票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "电放确认: MBL/HBL已电放(TLX/SWB/Surrendered)",
-        "后续: 确认BTL平台已换单 → 等AN到港通知"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
       "email_count": 15,
       "last_seen": "2026-03-30"
-    },
-    {
-      "type": "fee_confirmed",
-      "priority": "high",
-      "title": "Fee Confirmed",
-      "mbl": "HLCUSHA260228529, HLCUSHA2603BNZF0, HLCUSHA2603BNZN8, HLCUSHA2603BJKC0, HLCUSHA2603BIYR0",
-      "carrier": "Hapag-Lloyd",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
-      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
-      "wwl_branch": "WWL上海",
-      "action": "Hapag-Lloyd 5票 — 需找销售公司/客户确认费用承担方",
-      "detail_lines": [
-        "预报(SA)已收 | 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
-      ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
-      "email_count": 12,
-      "last_seen": "2026-03-27"
     },
     {
       "type": "fee_confirmed",
@@ -447,8 +430,9 @@
       "wwl_branch": "WWL深圳",
       "action": "ONE 5票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "预报(SA)已收 | HBL已电放 | 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Renee Lin-WWLSZN",
       "email_count": 5,
@@ -458,19 +442,20 @@
       "type": "fee_confirmed",
       "priority": "high",
       "title": "Fee Confirmed",
-      "mbl": "MEDUYL789706, MEDUWH661557, MEDUWH597967",
-      "carrier": "MSC",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
-      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
-      "wwl_branch": "WWL深圳",
-      "action": "MSC 3票 — 已发确认请求 → 需跟进对方回复",
+      "mbl": "HLCUSHA2603BNZF0, HLCUSHA2603BNZN8, HLCUSHA2603BJKC0, HLCUSHA2603BIYR0",
+      "carrier": "Hapag-Lloyd",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新",
+      "wwl_sender": "Winnie Shen (sha.ops4@wwl.cn)",
+      "wwl_branch": "WWL上海",
+      "action": "Hapag-Lloyd 4票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用通知: Chassis Usage",
-        "后续: 确认费用承担方 → collect走催收 / prepaid确认入账"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "Origin(Winnie Shen)来信 → 阅读正文确认业务需求"
       ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
-      "email_count": 11,
-      "last_seen": "2026-03-31"
+      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
+      "email_count": 9,
+      "last_seen": "2026-03-27"
     },
     {
       "type": "fee_confirmed",
@@ -483,12 +468,32 @@
       "wwl_branch": "WWL上海",
       "action": "COSCO 3票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "预报(SA)已收 | 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
+        "费用已确认",
+        "后续: 确认费用承担方(collect/prepaid) → 走付款流程",
+        "Origin(Winnie Shen)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Winnie Shen",
       "email_count": 8,
       "last_seen": "2026-03-30"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "MEDUYM571400, MEDUYL789706",
+      "carrier": "MSC",
+      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商)",
+      "wwl_sender": "Renee Lin-WWLSZN (szn.reneelin@wwl.cn)",
+      "wwl_branch": "WWL深圳",
+      "action": "MSC 2票 — 需找销售公司/客户确认费用承担方",
+      "detail_lines": [
+        "费用已确认",
+        "后续: 确认费用承担方(collect/prepaid) → 走付款流程",
+        "需阅读正文确认具体业务需求"
+      ],
+      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
+      "email_count": 16,
+      "last_seen": "2026-03-31"
     },
     {
       "type": "fee_confirmed",
@@ -501,8 +506,9 @@
       "wwl_branch": "WWL泰国",
       "action": "ONE 2票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用已确认: 到付(Collect)",
+        "后续: Rita/Maggie催consignee付款 → Sven付船公司(PayCargo)",
+        "Origin(Eart)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: THE QUALITY THREAD & NOTI | Origin: Eart",
       "email_count": 22,
@@ -514,15 +520,16 @@
       "title": "Fee Confirmed",
       "mbl": "COSU9506320440, COSU6448000790",
       "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC.",
+      "customer": "AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 2票 — 需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "需阅读正文确认具体业务需求"
       ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC. | Origin: ngb.ops25@wwl.cn",
+      "progress_history": "客户: AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: ngb.ops25@wwl.cn",
       "email_count": 3,
       "last_seen": "2026-03-30"
     },
@@ -537,8 +544,9 @@
       "wwl_branch": "WWL深圳",
       "action": "COSCO 2票 — 已发确认请求 → 需跟进对方回复",
       "detail_lines": [
-        "预报(SA)已收 | HBL已电放 | 费用预付(Prepaid)",
-        "后续: 确认HBL/MBL/附件已识别 → 等船公司AN后跟进清关"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "Origin(Renee Lin-WW)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: DTC FREIGHT (内部电商) | Origin: Renee Lin-WWLSZN",
       "email_count": 2,
@@ -555,11 +563,31 @@
       "wwl_branch": "WWL广州",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用已确认: 到付(Collect)",
+        "后续: Rita/Maggie催consignee付款 → Sven付船公司(PayCargo)",
+        "Origin(Nola LAI)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: Ann Gong",
       "email_count": 16,
+      "last_seen": "2026-03-31"
+    },
+    {
+      "type": "fee_confirmed",
+      "priority": "high",
+      "title": "Fee Confirmed",
+      "mbl": "ONEYBTMG00382500",
+      "carrier": "ONE",
+      "customer": "ELITE SOLAR NEW ENERGY CO.",
+      "wwl_sender": "Anggito Iqbal (jkt.iqbal@wwl.sg)",
+      "wwl_branch": "WWL印尼",
+      "action": "已放行/电放 → 确认收货人提货",
+      "detail_lines": [
+        "费用已确认",
+        "后续: 确认费用承担方(collect/prepaid) → 走付款流程",
+        "Origin(Alexander Jk)来信 → 阅读正文确认业务需求"
+      ],
+      "progress_history": "客户: ELITE SOLAR NEW ENERGY CO. | Origin: Anggito Iqbal",
+      "email_count": 9,
       "last_seen": "2026-03-31"
     },
     {
@@ -573,8 +601,9 @@
       "wwl_branch": "WWL上海",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用待确认: 需找销售公司/客户确认由谁承担",
+        "后续: 确认collect→催收 / prepaid→确认入账",
+        "Origin(Sienna)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: GLOBAL OCEAN | Origin: Daniel Yan",
       "email_count": 2,
@@ -591,8 +620,9 @@
       "wwl_branch": "WWL宁波",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用已确认: 预付(Prepaid)",
+        "后续: 确认入账即结案",
+        "Origin(yoyo)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: yoyo",
       "email_count": 1,
@@ -609,6 +639,8 @@
       "wwl_branch": "WWL环世",
       "action": "Evans Deli来信 → 阅读正文判断业务需求并回复",
       "detail_lines": [
+        "费用待确认: 需找销售公司/客户确认由谁承担",
+        "后续: 确认collect→催收 / prepaid→确认入账",
         "外部(Evans Delive)来信 → 阅读正文确认并回复"
       ],
       "progress_history": "客户: HAILIANG (SINGAPORE) PTE. LTD. / 海亮 | Origin: us.rogerzhang@worldwide-logistics.cn",
@@ -626,8 +658,9 @@
       "wwl_branch": "WWL上海",
       "action": "需找销售公司/客户确认费用承担方",
       "detail_lines": [
-        "费用确认请求: origin/Everlyn询问费用预付/到付",
-        "后续: 找销售公司/客户确认费用承担方 → 确认后Rita收集→Sven付款"
+        "费用待确认: 需找销售公司/客户确认由谁承担",
+        "后续: 确认collect→催收 / prepaid→确认入账",
+        "Origin(Daniel Yan)来信 → 阅读正文确认业务需求"
       ],
       "progress_history": "Origin: Daniel Yan",
       "email_count": 1,
@@ -739,8 +772,8 @@
     "prealerts": 45
   },
   "stats": {
-    "total": 40,
+    "total": 41,
     "urgent": 20,
-    "high": 19
+    "high": 20
   }
 }
