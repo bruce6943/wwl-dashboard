@@ -463,7 +463,7 @@
       "title": "Fee Confirmed",
       "mbl": "COSU9506320440, COSU6448000790",
       "carrier": "COSCO",
-      "customer": "HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC.",
+      "customer": "AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新",
       "wwl_sender": "ngb.ops25@wwl.cn (ngb.ops25@wwl.cn)",
       "wwl_branch": "WWL宁波",
       "action": "COSCO 2票 — 需找销售公司/客户确认费用承担方",
@@ -472,7 +472,7 @@
         "后续: 确认入账即结案",
         "需阅读正文确认具体业务需求"
       ],
-      "progress_history": "客户: HAI ROBOTICS U.S.A. INC / 海柔创新/AVANTIX INC. | Origin: ngb.ops25@wwl.cn",
+      "progress_history": "客户: AVANTIX INC./HAI ROBOTICS U.S.A. INC / 海柔创新 | Origin: ngb.ops25@wwl.cn",
       "email_count": 3,
       "last_seen": "2026-03-30"
     },

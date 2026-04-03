@@ -1,11 +1,11 @@
 {
-  "scan_time": "2026-04-03T11:22:12.174929+08:00",
-  "total_emails": 141,
-  "business_emails": 112,
+  "scan_time": "2026-04-03T11:54:02.184840+08:00",
+  "total_emails": 138,
+  "business_emails": 109,
   "pdf_count": 85,
   "categories": {
-    "prealert": 31,
-    "cancel": 3,
+    "prealert": 29,
+    "cancel": 2,
     "other_biz": 66,
     "booking": 1,
     "hold": 3,
@@ -14,7 +14,7 @@
   },
   "customers": {
     "REACH INDUSTRY": {
-      "emails": 3,
+      "emails": 1,
       "hbl_count": 1,
       "mbl_count": 1,
       "active_days": 1,
@@ -78,14 +78,14 @@
     }
   },
   "carriers": {
-    "CMA-CGM": 5,
-    "MSC": 17,
+    "CMA-CGM": 3,
+    "MSC": 16,
     "COSCO": 5,
     "OOCL": 15,
     "ONE": 16,
     "Hapag-Lloyd": 10,
     "Evergreen": 3,
-    "ZIM": 7
+    "ZIM": 8
   },
   "carrier_fees": {},
   "hbl_total": 35,
@@ -170,13 +170,13 @@
   ],
   "daily_counts": {
     "2026-04-02": 16,
-    "2026-04-03": 116
+    "2026-04-03": 113
   },
   "inspection_mbls": [],
   "hold_count": 3,
   "inspection_count": 0,
   "overdue_count": 0,
-  "cancel_count": 3,
+  "cancel_count": 2,
   "top_senders": [
     [
       "\"Renee Lin-WWLSZN\" <szn.reneelin@wwl.cn>",
@@ -188,7 +188,7 @@
     ],
     [
       "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      9
+      7
     ],
     [
       "us038-importpickupnotification@msc.com",
@@ -243,19 +243,19 @@
       2
     ],
     [
-      "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
-      2
-    ],
-    [
-      "\"Joey Mao\" <maoqiaoyu@cargoee.com>",
-      2
-    ],
-    [
       "Will Sun <willsun@wwl.cn>",
       2
     ],
     [
       "\"KB中台\" <kb-centre@cargoee.com>",
+      2
+    ],
+    [
+      "\"zhangliangliang\" <sha.zhangliangliang@wwl.cn>",
+      2
+    ],
+    [
+      "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
       2
     ]
   ],
@@ -571,32 +571,6 @@
     {
       "type": "dd_alert",
       "priority": "high",
-      "mbl": "CMDUTHD1457294",
-      "customer": "REACH INDUSTRY",
-      "amount": "",
-      "assignee": "",
-      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
-      "detail": "D&D  MBL:CMDUTHD1457294",
-      "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
-      "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
-      "date": "Fri, 3 Apr 2026 11:20:59 "
-    },
-    {
-      "type": "dd_alert",
-      "priority": "high",
-      "mbl": "CMDUTHD1457294",
-      "customer": "REACH INDUSTRY",
-      "amount": "",
-      "assignee": "",
-      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
-      "detail": "D&D  MBL:CMDUTHD1457294",
-      "source": "Re: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
-      "from": "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
-      "date": "Fri, 3 Apr 2026 10:23:53 "
-    },
-    {
-      "type": "dd_alert",
-      "priority": "high",
       "mbl": "",
       "customer": "",
       "amount": "",
@@ -817,6 +791,19 @@
       "date": "Fri, 3 Apr 2026 14:11:23 "
     },
     {
+      "type": "dd_alert",
+      "priority": "high",
+      "mbl": "",
+      "customer": "",
+      "amount": "",
+      "assignee": "",
+      "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+      "detail": "回复: ZIMUQIN4431617 pending customs clearance",
+      "source": "回复: ZIMUQIN4431617 pending customs clearance",
+      "from": "<us.ops@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 23:24:47 "
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "OOLU2167136193",
@@ -918,9 +905,9 @@
     }
   ],
   "action_summary": {
-    "total": 33,
+    "total": 32,
     "urgent": 14,
-    "high": 19,
+    "high": 18,
     "medium": 0
   },
   "bl_status": {
@@ -993,11 +980,6 @@
   },
   "anomalies": {
     "cancel_it": [
-      {
-        "subject": "Re: Re:    need cancel IT NUMBER,request AN   ETA 3.24  MEDU",
-        "from": "\"Joey Mao\" <maoqiaoyu@cargoee.",
-        "date": "Fri, 3 Apr 2026 11:25:34 "
-      },
       {
         "subject": "Re:     need cancel IT NUMBER,request AN   ETA 3.24  MEDUR66",
         "from": "\"BTL\" <btl@switchbl.com>",
@@ -1182,24 +1164,14 @@
     "relationships": 5,
     "contacts_new": 0,
     "contacts_total": 389,
-    "daily_connections": 6,
+    "daily_connections": 4,
     "new_domains": [
-      "expresslinecorp.com",
       "newl.ca",
+      "expresslinecorp.com",
       "service.hlag.com"
     ]
   },
   "daily_connections": [
-    {
-      "from": "REACH INDUSTRY",
-      "to": "CMA-CGM",
-      "type": "carrier"
-    },
-    {
-      "from": "REACH INDUSTRY",
-      "to": "CMA-CGM",
-      "type": "carrier"
-    },
     {
       "from": "REACH INDUSTRY",
       "to": "CMA-CGM",
