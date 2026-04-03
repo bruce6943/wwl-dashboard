@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-04-03T09:03:22.197212+08:00",
-  "total_emails": 170,
-  "business_emails": 143,
-  "pdf_count": 94,
+  "scan_time": "2026-04-03T09:41:06.463865+08:00",
+  "total_emails": 169,
+  "business_emails": 142,
+  "pdf_count": 96,
   "categories": {
-    "other_biz": 78,
+    "other_biz": 75,
     "inspection": 3,
     "prealert": 38,
     "charge_confirm": 15,
@@ -12,33 +12,10 @@
     "delivery": 1,
     "cancel": 3,
     "booking": 1,
-    "hold": 3
+    "hold": 3,
+    "arrival": 2
   },
   "customers": {
-    "TERRASOULSUPERFOODS": {
-      "emails": 5,
-      "hbl_count": 0,
-      "mbl_count": 0,
-      "active_days": 2,
-      "hbls": [],
-      "mbls": [],
-      "days": [
-        "04/02",
-        "04/03"
-      ]
-    },
-    "BETTERBODYFOODS": {
-      "emails": 5,
-      "hbl_count": 0,
-      "mbl_count": 0,
-      "active_days": 2,
-      "hbls": [],
-      "mbls": [],
-      "days": [
-        "04/02",
-        "04/03"
-      ]
-    },
     "REACH INDUSTRY": {
       "emails": 5,
       "hbl_count": 1,
@@ -73,6 +50,30 @@
       "hbls": [],
       "mbls": [],
       "days": [
+        "04/03"
+      ]
+    },
+    "TERRASOULSUPERFOODS": {
+      "emails": 3,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
+        "04/03"
+      ]
+    },
+    "BETTERBODYFOODS": {
+      "emails": 3,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 2,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/02",
         "04/03"
       ]
     },
@@ -125,13 +126,24 @@
       "days": [
         "04/03"
       ]
+    },
+    "RIM LOGISTICS": {
+      "emails": 1,
+      "hbl_count": 0,
+      "mbl_count": 0,
+      "active_days": 1,
+      "hbls": [],
+      "mbls": [],
+      "days": [
+        "04/03"
+      ]
     }
   },
   "carriers": {
     "OOCL": 17,
     "ONE": 24,
     "CMA-CGM": 8,
-    "MSC": 13,
+    "MSC": 15,
     "Hapag-Lloyd": 12,
     "ZIM": 11,
     "COSCO": 5,
@@ -139,7 +151,7 @@
   },
   "carrier_fees": {},
   "hbl_total": 52,
-  "mbl_total": 45,
+  "mbl_total": 47,
   "all_hbls": [
     "WLC50520755",
     "WLC60122743",
@@ -206,6 +218,8 @@
     "HLCUSHA2603BTYW8",
     "MEDUEK846578",
     "MEDUKG193320",
+    "MEDURQ331320",
+    "MEDURQ331379",
     "MEDUWG953468",
     "MEDUWQ205298",
     "MEDUWT188572",
@@ -242,8 +256,8 @@
     "ZIMUNGB20219968"
   ],
   "daily_counts": {
-    "2026-04-02": 22,
-    "2026-04-03": 147
+    "2026-04-02": 18,
+    "2026-04-03": 148
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -268,11 +282,11 @@
       14
     ],
     [
-      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
-      8
+      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      9
     ],
     [
-      "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
       8
     ],
     [
@@ -286,10 +300,6 @@
     [
       "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
       5
-    ],
-    [
-      "Effy <us.effyhuo@wwl.sg>",
-      4
     ],
     [
       "MengLu-WWLNKG <nkg.ops11@wwl.cn>",
@@ -328,11 +338,15 @@
       2
     ],
     [
-      "Alexander Lo <alexander.lo.lax@expresslinecorp.com>",
+      "<us.ops@wwl.sg>",
       2
     ],
     [
-      "<us.ops@wwl.sg>",
+      "\"Emma Cheng\" <bdasst09@wwl.cn>",
+      2
+    ],
+    [
+      "\"BTL\" <btl@switchbl.com>",
       2
     ]
   ],
@@ -828,6 +842,54 @@
       "date": "Fri, 3 Apr 2026 12:15:17 "
     },
     {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ331379",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ331379 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ331379",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "3 Apr 2026 09:39:33 -0400"
+    },
+    {
+      "type": "arrival_notice",
+      "priority": "high",
+      "mbl": "MEDURQ331320",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "eta": "",
+      "port": "",
+      "free_days": 4,
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "AN已收 → 确认报关完成 → 4天Free Time内安排提柜 → 正常跟进",
+      "detail": "到港  MBL:MEDURQ331320 Free Time 4天",
+      "source": "MSC USA - Rail Arrival Notice for BL: MEDURQ331320",
+      "from": "us038-importpickupnotification@msc.com",
+      "date": "3 Apr 2026 09:40:41 -0400"
+    },
+    {
       "type": "post_clearance",
       "priority": "high",
       "mbl": "OOLU2167136193",
@@ -1234,9 +1296,9 @@
     }
   ],
   "action_summary": {
-    "total": 44,
+    "total": 46,
     "urgent": 17,
-    "high": 12,
+    "high": 14,
     "medium": 15
   },
   "bl_status": {
@@ -1465,22 +1527,17 @@
   },
   "neural_network": {
     "entities": 88,
-    "relationships": 13,
-    "contacts_new": 2,
+    "relationships": 10,
+    "contacts_new": 0,
     "contacts_total": 389,
-    "daily_connections": 12,
+    "daily_connections": 11,
     "new_domains": [
-      "newl.ca",
+      "expresslinecorp.com",
       "service.hlag.com",
-      "expresslinecorp.com"
+      "newl.ca"
     ]
   },
   "daily_connections": [
-    {
-      "from": "TERRASOULSUPERFOODS",
-      "to": "FCC USA",
-      "type": "service"
-    },
     {
       "from": "REACH INDUSTRY",
       "to": "CMA-CGM",

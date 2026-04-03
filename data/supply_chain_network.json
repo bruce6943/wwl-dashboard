@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T08:26:39.482337+08:00",
+  "last_updated": "2026-04-03T09:03:22.197212+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3210,14 +3210,14 @@
       "ZIM": 2
     },
     "HAIROBOT (海柔)": {
-      "ZIM": 72
+      "ZIM": 73
     },
     "YES CHB": {
-      "ZIM": 64
+      "ZIM": 65
     },
     "HAILIANG (海亮)": {
       "OOCL": 8,
-      "MSC": 17
+      "MSC": 18
     },
     "PREVALON ENERGY": {
       "ZIM": 93
@@ -3227,7 +3227,7 @@
     },
     "REACH INDUSTRY": {
       "ZIM": 24,
-      "CMA-CGM": 83
+      "CMA-CGM": 88
     },
     "MERSY CORP": {
       "MSC": 8
@@ -3246,13 +3246,13 @@
       "ZIM": 15
     },
     "DTC SA": {
-      "COSCO": 7
+      "COSCO": 8
     }
   },
   "customer_service": {
     "HAIROBOT (海柔)": {
       "YES报关行": {
-        "count": 64,
+        "count": 65,
         "types": [
           "卡车",
           "清关"
@@ -3261,7 +3261,7 @@
     },
     "YES CHB": {
       "YES报关行": {
-        "count": 64,
+        "count": 65,
         "types": [
           "卡车",
           "清关"
@@ -3270,19 +3270,19 @@
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 90,
+        "count": 91,
         "types": []
       }
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 44,
+        "count": 45,
         "types": []
       }
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 44,
+        "count": 45,
         "types": []
       }
     },
@@ -3294,7 +3294,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 112,
+        "count": 116,
         "types": []
       }
     },
@@ -3306,7 +3306,7 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 37,
+        "count": 38,
         "types": []
       },
       "PTT卡车": {
