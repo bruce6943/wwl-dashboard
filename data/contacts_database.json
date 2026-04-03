@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "total_contacts": 386,
+    "total_contacts": 387,
     "internal_wwl": 105,
     "external": 122,
     "total_companies": 83,
     "source": "15天邮件签名提取",
     "period": "2026-03-13 ~ 2026-03-28",
-    "last_updated": "2026-04-03T07:20:06.867396+08:00"
+    "last_updated": "2026-04-03T08:26:39.482337+08:00"
   },
   "contacts": [
     {
@@ -1737,7 +1737,7 @@
         "http://www.basespa.com",
         "www.basespa.com"
       ],
-      "email_count": 30,
+      "email_count": 31,
       "first_seen": "Mon, 16 Mar 2026 10:50:34",
       "last_seen": "Fri, 3 Apr 2026 10:00:36 "
     },
@@ -2899,7 +2899,7 @@
       ],
       "addresses": [],
       "websites": [],
-      "email_count": 71,
+      "email_count": 73,
       "first_seen": "Wed, 18 Mar 2026 17:22:14",
       "last_seen": "Fri, 3 Apr 2026 11:56:11 "
     },
@@ -3815,7 +3815,7 @@
         "http://www.ptstfs.com",
         "www.ptstfs.com"
       ],
-      "email_count": 50,
+      "email_count": 51,
       "first_seen": "Tue, 24 Mar 2026 01:44:26",
       "last_seen": "Fri, 3 Apr 2026 00:52:39 "
     },
@@ -5151,7 +5151,7 @@
       "company": "CARGOEE",
       "title": "",
       "phones": [],
-      "email_count": 19,
+      "email_count": 21,
       "first_seen": "Wed, 7 Jan 2026 02:04:33 ",
       "last_seen": "Fri, 3 Apr 2026 14:47:03 "
     },
@@ -5164,7 +5164,7 @@
       "phones": [
         "6263422960"
       ],
-      "email_count": 22,
+      "email_count": 23,
       "first_seen": "Tue, 06 Jan 2026 18:24:39",
       "last_seen": "Thu, 02 Apr 2026 22:06:24"
     },
@@ -6410,9 +6410,9 @@
       "company": "ZIM",
       "title": "",
       "phones": [],
-      "email_count": 21,
+      "email_count": 22,
       "first_seen": "Wed, 1 Apr 2026 19:03:37 ",
-      "last_seen": "Wed, 1 Apr 2026 19:03:37 "
+      "last_seen": "Fri, 3 Apr 2026 12:15:17 "
     },
     {
       "email": "kevin.hayes@containerport.com",
@@ -6491,9 +6491,20 @@
       "phones": [
         "+019092674941"
       ],
-      "email_count": 40,
+      "email_count": 42,
       "first_seen": "Thu, 2 Apr 2026 23:06:52 ",
       "last_seen": "Thu, 2 Apr 2026 23:07:38 "
+    },
+    {
+      "email": "carolina.wilches@newl.ca",
+      "name": "Carolina Wilches",
+      "domain": "newl.ca",
+      "company": "",
+      "title": "",
+      "phones": [],
+      "email_count": 1,
+      "first_seen": "Fri, 3 Apr 2026 12:07:35 ",
+      "last_seen": "Fri, 3 Apr 2026 12:07:35 "
     }
   ],
   "domain_company_map": {
