@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-04-03T12:27:25.121026+08:00",
-  "total_emails": 257,
-  "business_emails": 228,
-  "pdf_count": 122,
+  "scan_time": "2026-04-03T13:04:38.627777+08:00",
+  "total_emails": 265,
+  "business_emails": 235,
+  "pdf_count": 126,
   "categories": {
-    "other_biz": 141,
+    "other_biz": 148,
     "overdue": 2,
     "delivery": 3,
     "booking": 2,
@@ -203,7 +203,7 @@
   },
   "carriers": {
     "ZIM": 32,
-    "MSC": 33,
+    "MSC": 37,
     "WAN HAI": 1,
     "OOCL": 17,
     "ONE": 24,
@@ -214,7 +214,7 @@
   },
   "carrier_fees": {},
   "hbl_total": 59,
-  "mbl_total": 61,
+  "mbl_total": 65,
   "all_hbls": [
     "WLC50520755",
     "WLC50805801",
@@ -295,6 +295,10 @@
     "MEDURQ331544",
     "MEDURQ331569",
     "MEDURQ331692",
+    "MEDURQ358646",
+    "MEDURQ358802",
+    "MEDURQ359065",
+    "MEDURQ359750",
     "MEDURQ395473",
     "MEDUWG953468",
     "MEDUWI921190",
@@ -341,7 +345,7 @@
   ],
   "daily_counts": {
     "2026-04-02": 68,
-    "2026-04-03": 176
+    "2026-04-03": 180
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -355,7 +359,7 @@
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      30
+      31
     ],
     [
       "assistant@pltplt.com",
@@ -382,6 +386,10 @@
       7
     ],
     [
+      "Maggie Yin <maggie.yin@elite-solar.com>",
+      6
+    ],
+    [
       "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       6
     ],
@@ -394,6 +402,10 @@
       6
     ],
     [
+      "usa-import.customscompliance@msc.com",
+      6
+    ],
+    [
       "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
       5
     ],
@@ -403,10 +415,6 @@
     ],
     [
       "Kelly Hiatt <Kelly.Hiatt@prevalonenergy.com>",
-      4
-    ],
-    [
-      "Maggie Yin <maggie.yin@elite-solar.com>",
       4
     ],
     [
@@ -427,10 +435,6 @@
     ],
     [
       "Clayton Brunson <ClaytonBrunson@rimlogistics.com>",
-      3
-    ],
-    [
-      "\"Bobc\" <bobc@worldwide-logistics.cn>",
       3
     ]
   ],
@@ -893,6 +897,138 @@
       "source": "Re:Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
       "from": "Maggie Yin <maggie.yin@elite-solar.com>",
       "date": "Fri, 03 Apr 2026 09:20:43"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Everlyn Shaw",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "source": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 12:27:47 "
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ358802",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ358802",
+      "source": "BL#: MEDURQ358802 - House/Master B/L Mismatch - Long Beach (",
+      "from": "usa-import.customscompliance@msc.com",
+      "date": "3 Apr 2026 12:44:43 -0400"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ359750",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ359750",
+      "source": "BL#: MEDURQ359750 - House/Master B/L Mismatch - Long Beach (",
+      "from": "usa-import.customscompliance@msc.com",
+      "date": "3 Apr 2026 12:44:45 -0400"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ359065",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ359065",
+      "source": "BL#: MEDURQ359065 - House/Master B/L Mismatch - Long Beach (",
+      "from": "usa-import.customscompliance@msc.com",
+      "date": "3 Apr 2026 12:44:44 -0400"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "MEDURQ358646",
+      "hbl": "",
+      "customer": "HAIROBOT",
+      "hold_type": "unknown",
+      "assignee": "",
+      "carrier": "MSC",
+      "sender": "MSC",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "UNKNOWN HOLD — 确认Hold类型并处理",
+      "detail": "Hold BL: MEDURQ358646",
+      "source": "BL#: MEDURQ358646 - House/Master B/L Mismatch - Long Beach (",
+      "from": "usa-import.customscompliance@msc.com",
+      "date": "3 Apr 2026 12:44:42 -0400"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "Maggie Yin (elite-solar.com)",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "source": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "Maggie Yin <maggie.yin@elite-solar.com>",
+      "date": "Fri, 03 Apr 2026 09:48:47"
     },
     {
       "type": "inspection_broker",
@@ -2066,8 +2202,8 @@
     }
   ],
   "action_summary": {
-    "total": 82,
-    "urgent": 24,
+    "total": 88,
+    "urgent": 30,
     "high": 38,
     "medium": 20
   },
@@ -2135,7 +2271,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 174,
+    "tlx_confirmed_mbl": 173,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
@@ -2375,6 +2511,24 @@
         "from": "Maggie Yin <maggie.yin@elite-s",
         "urgency": 3,
         "date": "Fri, 03 Apr 2026 09:20:43"
+      },
+      {
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 12:27:47 "
+      },
+      {
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Fri, 03 Apr 2026 09:33:32"
+      },
+      {
+        "subject": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "Maggie Yin <maggie.yin@elite-s",
+        "urgency": 3,
+        "date": "Fri, 03 Apr 2026 09:48:47"
       }
     ]
   },
@@ -2385,13 +2539,13 @@
     "contacts_total": 389,
     "daily_connections": 24,
     "new_domains": [
-      "biposervice.com",
-      "elite-solar.com",
-      "jci-chemical.com",
-      "newl.ca",
-      "service.hlag.com",
       "expresslinecorp.com",
-      "paycargo.com"
+      "jci-chemical.com",
+      "paycargo.com",
+      "service.hlag.com",
+      "elite-solar.com",
+      "biposervice.com",
+      "newl.ca"
     ]
   },
   "daily_connections": [
