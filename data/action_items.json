@@ -310,32 +310,6 @@
   {
     "type": "dd_alert",
     "priority": "high",
-    "mbl": "CMDUTHD1457294",
-    "customer": "REACH INDUSTRY",
-    "amount": "",
-    "assignee": "",
-    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
-    "detail": "D&D  MBL:CMDUTHD1457294",
-    "source": "RE: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
-    "from": "\"Maggie Wu\" <maggiewu@wwl.cn>",
-    "date": "Fri, 3 Apr 2026 11:20:59 "
-  },
-  {
-    "type": "dd_alert",
-    "priority": "high",
-    "mbl": "CMDUTHD1457294",
-    "customer": "REACH INDUSTRY",
-    "amount": "",
-    "assignee": "",
-    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
-    "detail": "D&D  MBL:CMDUTHD1457294",
-    "source": "Re: PRE-ALERT - MBL : CMDUTHD1457294 l HBL : WLC50520755 l L",
-    "from": "Jerold Lin/ WWL TH <bkk.jerold@wwl.sg>",
-    "date": "Fri, 3 Apr 2026 10:23:53 "
-  },
-  {
-    "type": "dd_alert",
-    "priority": "high",
     "mbl": "",
     "customer": "",
     "amount": "",
@@ -554,6 +528,19 @@
     "source": "RE: **URGENT** ZIMUQIN4431617 - CUSTOMS RELEASE",
     "from": "ZIM USA Documentation Import <us.doc.imp@zim.com>",
     "date": "Fri, 3 Apr 2026 14:11:23 "
+  },
+  {
+    "type": "dd_alert",
+    "priority": "high",
+    "mbl": "",
+    "customer": "",
+    "amount": "",
+    "assignee": "",
+    "action": "D&D费用 → 先核对19项要素合规性 → 缺项则争议不付 → 合规则按流程处理",
+    "detail": "回复: ZIMUQIN4431617 pending customs clearance",
+    "source": "回复: ZIMUQIN4431617 pending customs clearance",
+    "from": "<us.ops@wwl.sg>",
+    "date": "Fri, 3 Apr 2026 23:24:47 "
   },
   {
     "type": "post_clearance",
