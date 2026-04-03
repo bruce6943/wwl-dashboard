@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T09:41:06.463865+08:00",
+  "last_updated": "2026-04-03T10:16:40.845468+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3217,7 +3217,7 @@
     },
     "HAILIANG (海亮)": {
       "OOCL": 8,
-      "MSC": 19
+      "MSC": 20
     },
     "PREVALON ENERGY": {
       "ZIM": 93
@@ -3227,7 +3227,7 @@
     },
     "REACH INDUSTRY": {
       "ZIM": 24,
-      "CMA-CGM": 92
+      "CMA-CGM": 96
     },
     "MERSY CORP": {
       "MSC": 8
@@ -3246,7 +3246,7 @@
       "ZIM": 15
     },
     "DTC SA": {
-      "COSCO": 9
+      "COSCO": 10
     }
   },
   "customer_service": {
@@ -3294,7 +3294,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 119,
+        "count": 122,
         "types": []
       }
     },
