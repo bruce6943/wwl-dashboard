@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T09:03:22.197212+08:00",
+  "last_updated": "2026-04-03T09:41:06.463865+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3217,7 +3217,7 @@
     },
     "HAILIANG (海亮)": {
       "OOCL": 8,
-      "MSC": 18
+      "MSC": 19
     },
     "PREVALON ENERGY": {
       "ZIM": 93
@@ -3227,7 +3227,7 @@
     },
     "REACH INDUSTRY": {
       "ZIM": 24,
-      "CMA-CGM": 88
+      "CMA-CGM": 92
     },
     "MERSY CORP": {
       "MSC": 8
@@ -3246,7 +3246,7 @@
       "ZIM": 15
     },
     "DTC SA": {
-      "COSCO": 8
+      "COSCO": 9
     }
   },
   "customer_service": {
@@ -3270,19 +3270,19 @@
     },
     "FCC USA": {
       "FCC USA": {
-        "count": 91,
+        "count": 92,
         "types": []
       }
     },
     "TERRASOULSUPERFOODS": {
       "FCC USA": {
-        "count": 45,
+        "count": 46,
         "types": []
       }
     },
     "BETTERBODYFOODS": {
       "FCC USA": {
-        "count": 45,
+        "count": 46,
         "types": []
       }
     },
@@ -3294,7 +3294,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 116,
+        "count": 119,
         "types": []
       }
     },
