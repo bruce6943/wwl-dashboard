@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-04-03T13:37:06.925145+08:00",
-  "total_emails": 266,
-  "business_emails": 231,
-  "pdf_count": 124,
+  "scan_time": "2026-04-03T14:14:46.205919+08:00",
+  "total_emails": 283,
+  "business_emails": 245,
+  "pdf_count": 131,
   "categories": {
-    "other_biz": 144,
+    "other_biz": 158,
     "overdue": 2,
     "delivery": 3,
     "booking": 2,
@@ -203,18 +203,18 @@
   },
   "carriers": {
     "ZIM": 32,
-    "MSC": 36,
+    "MSC": 42,
     "WAN HAI": 1,
     "OOCL": 17,
-    "ONE": 22,
-    "CMA-CGM": 8,
+    "ONE": 24,
+    "CMA-CGM": 9,
     "Hapag-Lloyd": 15,
-    "COSCO": 4,
+    "COSCO": 5,
     "Evergreen": 3
   },
   "carrier_fees": {},
-  "hbl_total": 58,
-  "mbl_total": 64,
+  "hbl_total": 59,
+  "mbl_total": 70,
   "all_hbls": [
     "WLC50520755",
     "WLC50805801",
@@ -242,6 +242,7 @@
     "WLC60305140",
     "WLC60305212",
     "WLC60305781",
+    "WLC60306706",
     "WLC60307051",
     "WLC60307157",
     "WLC60307989",
@@ -278,6 +279,7 @@
   "all_mbls": [
     "CMDUCHN3177029",
     "CMDUTHD1457294",
+    "COSU6446602950",
     "COSU6447946510",
     "COSU6448000790",
     "COSU9506556770",
@@ -287,12 +289,17 @@
     "HLCUSHA2603BTYW8",
     "MEDUEK846578",
     "MEDUKG193320",
+    "MEDURQ331288",
     "MEDURQ331320",
     "MEDURQ331346",
     "MEDURQ331379",
+    "MEDURQ331429",
+    "MEDURQ331486",
     "MEDURQ331544",
     "MEDURQ331569",
+    "MEDURQ331668",
     "MEDURQ331692",
+    "MEDURQ332211",
     "MEDURQ358646",
     "MEDURQ358802",
     "MEDURQ359065",
@@ -343,7 +350,7 @@
   ],
   "daily_counts": {
     "2026-04-02": 68,
-    "2026-04-03": 177,
+    "2026-04-03": 189,
     "2026-04-04": 4
   },
   "inspection_mbls": [
@@ -358,7 +365,7 @@
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      32
+      35
     ],
     [
       "assistant@pltplt.com",
@@ -377,6 +384,10 @@
       11
     ],
     [
+      "us038-importpickupnotification@msc.com",
+      11
+    ],
+    [
       "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
       8
     ],
@@ -389,11 +400,11 @@
       6
     ],
     [
-      "\"rita tang\" <rita.tang@wwl.cn>",
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       6
     ],
     [
-      "us038-importpickupnotification@msc.com",
+      "\"rita tang\" <rita.tang@wwl.cn>",
       6
     ],
     [
@@ -401,8 +412,12 @@
       6
     ],
     [
-      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
+      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
       5
+    ],
+    [
+      "Ruby Tran - lax imp <rubytran@us.yangming.com>",
+      4
     ],
     [
       "Johana Arcila <johana.arcila@newl.ca>",
@@ -427,14 +442,6 @@
     [
       "\"Danny Ho\" <vn.vietducho@wwl.sg>",
       4
-    ],
-    [
-      "notice <notice@qiye.163.com>",
-      4
-    ],
-    [
-      "Clayton Brunson <ClaytonBrunson@rimlogistics.com>",
-      3
     ]
   ],
   "action_items": [
@@ -1028,6 +1035,28 @@
       "source": "回复: Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
       "from": "Maggie Yin <maggie.yin@elite-solar.com>",
       "date": "Fri, 03 Apr 2026 09:48:47"
+    },
+    {
+      "type": "hold",
+      "priority": "urgent",
+      "mbl": "",
+      "hbl": "",
+      "customer": "",
+      "hold_type": "freight",
+      "assignee": "",
+      "carrier": "",
+      "sender": "内部: Everlyn Shaw",
+      "contact": "",
+      "consignee": "",
+      "shipper": "",
+      "internal_staff": "",
+      "wwl_sender": "",
+      "wwl_branch": "",
+      "action": "FREIGHT HOLD — 联系origin催付运费",
+      "detail": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "source": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
+      "date": "Fri, 3 Apr 2026 14:11:33 "
     },
     {
       "type": "inspection_broker",
@@ -2201,8 +2230,8 @@
     }
   ],
   "action_summary": {
-    "total": 88,
-    "urgent": 30,
+    "total": 89,
+    "urgent": 31,
     "high": 38,
     "medium": 20
   },
@@ -2210,34 +2239,20 @@
     "no_tlx_mbl": [
       "COSU6421875990",
       "HLCUSHA2511GCAT8",
-      "MEDURQ323962",
-      "MEDURQ323772",
-      "MEDURQ324341",
       "MEDURQ331668",
       "MEDURQ331692",
-      "MEDURQ324903",
-      "MEDURQ325389",
       "MEDURQ331429",
       "MEDURQ331486",
-      "MEDURQ323913",
       "MEDURQ331320",
       "MEDURQ331544",
       "MEDURQ331346",
       "MEDURQ331569",
       "MEDURQ331379",
       "MEDURQ331288",
-      "MEDURQ324267",
       "ONEYBTMG00315800",
       "ONEYBTMG00312500",
       "MEDURQ332211",
       "MEDURQ395473",
-      "MEDURQ360121",
-      "MEDURQ360022",
-      "MEDURQ369312",
-      "MEDURQ358927",
-      "MEDURQ371995",
-      "MEDURQ360154",
-      "MEDURQ369353",
       "OOLU2320917320",
       "OOLU2323362180",
       "COSU9506450910",
@@ -2257,7 +2272,21 @@
       "WHLC194GA00409",
       "OOLU2322403750",
       "MSCU5232556",
-      "MEDURQ397412"
+      "MEDURQ397412",
+      "MSCU5485106",
+      "WHLC039GX15208",
+      "ONEYBTMG00802900",
+      "WHLC194GA00410",
+      "MEDURQ397305",
+      "MSCU5172539",
+      "MEDURQ397388",
+      "OOLU2323526060",
+      "OOLU2323525110",
+      "MEDURQ397289",
+      "OOLU2323525830",
+      "EGLV143659956714",
+      "OOLU2323525650",
+      "OOLU2323331810"
     ],
     "no_tlx_hbl": [],
     "an_no_prealert": [],
@@ -2270,7 +2299,7 @@
         "from": "us.ops@wwl.sg"
       }
     ],
-    "tlx_confirmed_mbl": 173,
+    "tlx_confirmed_mbl": 187,
     "tlx_confirmed_hbl": 0,
     "tlx_confirmed": {}
   },
@@ -2434,6 +2463,30 @@
         "date": "Fri, 3 Apr 2026 19:52:08 "
       },
       {
+        "subject": "RE: CMA付款  WLDSHA260400260  CMDUCHN3177029  USD59",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:54:16 "
+      },
+      {
+        "subject": "RE: ONE付款  WLDBKK260202870  ONEYBKKG38865600  USD452.3",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:56:03 "
+      },
+      {
+        "subject": "RE: MSC付款  USD34.8+50",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:57:53 "
+      },
+      {
+        "subject": "RE: ONE付款  WLDBKK260400770  ONEYBTMG00485900 USD15",
+        "from": "\"Sven Gu\" <sha.overseassup2@ww",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 19:58:00 "
+      },
+      {
         "subject": "RE: *URGENT** ZIMUQIN4431617 - Please arrange to load onto t",
         "from": "ZIM USA Documentation Import <",
         "urgency": 3,
@@ -2504,6 +2557,12 @@
         "from": "Maggie Yin <maggie.yin@elite-s",
         "urgency": 3,
         "date": "Fri, 03 Apr 2026 09:48:47"
+      },
+      {
+        "subject": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+        "from": "\"Everlyn Shaw\" <us.ops2@wwl.sg",
+        "urgency": 3,
+        "date": "Fri, 3 Apr 2026 14:11:33 "
       }
     ]
   },
@@ -2514,13 +2573,13 @@
     "contacts_total": 389,
     "daily_connections": 25,
     "new_domains": [
-      "service.hlag.com",
-      "elite-solar.com",
+      "newl.ca",
       "biposervice.com",
       "expresslinecorp.com",
+      "service.hlag.com",
+      "paycargo.com",
       "jci-chemical.com",
-      "newl.ca",
-      "paycargo.com"
+      "elite-solar.com"
     ]
   },
   "daily_connections": [

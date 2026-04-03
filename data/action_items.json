@@ -53,231 +53,7 @@
     "mbl": "COSU6421875990",
     "carrier": "COSCO",
     "customer": "AVANTIX",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ323962",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ323772",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ324341",
-    "carrier": "MSC",
-    "customer": "HORIZON SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331668",
-    "carrier": "MSC",
-    "customer": "HAIROBOT",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331692",
-    "carrier": "MSC",
-    "customer": "HAIROBOT",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ324903",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ325389",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331429",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331486",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ323913",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331320",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331544",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331346",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331569",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331379",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ331288",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ324267",
-    "carrier": "MSC",
-    "customer": "HORIZON SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "ONEYBTMG00315800",
-    "carrier": "ONE",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "ONEYBTMG00312500",
-    "carrier": "ONE",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ332211",
-    "carrier": "MSC",
-    "customer": "REACH",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ395473",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ360121",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ360022",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ369312",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ358927",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ371995",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ360154",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
-  },
-  {
-    "type": "arrival_notice",
-    "priority": "high",
-    "mbl": "MEDURQ369353",
-    "carrier": "MSC",
-    "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
+    "action": "AN已收,PU#未到→催船公司发PU#→拿到后立即安排提柜(Free Time在跑!)"
   },
   {
     "type": "arrival_notice",
@@ -285,7 +61,7 @@
     "mbl": "MEDURQ397412",
     "carrier": "MSC",
     "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
+    "action": "AN已收,PU#未到→催船公司发PU#→拿到后立即安排提柜(Free Time在跑!)"
   },
   {
     "type": "arrival_notice",
@@ -293,7 +69,7 @@
     "mbl": "MEDURQ397305",
     "carrier": "MSC",
     "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
+    "action": "AN已收,PU#未到→催船公司发PU#→拿到后立即安排提柜(Free Time在跑!)"
   },
   {
     "type": "arrival_notice",
@@ -301,7 +77,7 @@
     "mbl": "MEDURQ397388",
     "carrier": "MSC",
     "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
+    "action": "AN已收,PU#未到→催船公司发PU#→拿到后立即安排提柜(Free Time在跑!)"
   },
   {
     "type": "arrival_notice",
@@ -309,7 +85,7 @@
     "mbl": "MEDURQ397289",
     "carrier": "MSC",
     "customer": "ELITE SOLAR",
-    "action": "AN已收→确认清关完成→安排提柜(Free Time在跑!)"
+    "action": "AN已收,PU#未到→催船公司发PU#→拿到后立即安排提柜(Free Time在跑!)"
   },
   {
     "type": "cc_confirm",
