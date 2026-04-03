@@ -1,10 +1,10 @@
 {
-  "scan_time": "2026-04-03T13:04:38.627777+08:00",
-  "total_emails": 265,
-  "business_emails": 235,
-  "pdf_count": 126,
+  "scan_time": "2026-04-03T13:37:06.925145+08:00",
+  "total_emails": 266,
+  "business_emails": 231,
+  "pdf_count": 124,
   "categories": {
-    "other_biz": 148,
+    "other_biz": 144,
     "overdue": 2,
     "delivery": 3,
     "booking": 2,
@@ -134,7 +134,7 @@
       ]
     },
     "TERRASOULSUPERFOODS": {
-      "emails": 5,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -146,7 +146,7 @@
       ]
     },
     "BETTERBODYFOODS": {
-      "emails": 5,
+      "emails": 6,
       "hbl_count": 0,
       "mbl_count": 0,
       "active_days": 2,
@@ -203,18 +203,18 @@
   },
   "carriers": {
     "ZIM": 32,
-    "MSC": 37,
+    "MSC": 36,
     "WAN HAI": 1,
     "OOCL": 17,
-    "ONE": 24,
-    "CMA-CGM": 9,
+    "ONE": 22,
+    "CMA-CGM": 8,
     "Hapag-Lloyd": 15,
-    "COSCO": 5,
+    "COSCO": 4,
     "Evergreen": 3
   },
   "carrier_fees": {},
-  "hbl_total": 59,
-  "mbl_total": 65,
+  "hbl_total": 58,
+  "mbl_total": 64,
   "all_hbls": [
     "WLC50520755",
     "WLC50805801",
@@ -242,7 +242,6 @@
     "WLC60305140",
     "WLC60305212",
     "WLC60305781",
-    "WLC60306706",
     "WLC60307051",
     "WLC60307157",
     "WLC60307989",
@@ -279,7 +278,6 @@
   "all_mbls": [
     "CMDUCHN3177029",
     "CMDUTHD1457294",
-    "COSU6446602950",
     "COSU6447946510",
     "COSU6448000790",
     "COSU9506556770",
@@ -345,7 +343,8 @@
   ],
   "daily_counts": {
     "2026-04-02": 68,
-    "2026-04-03": 180
+    "2026-04-03": 177,
+    "2026-04-04": 4
   },
   "inspection_mbls": [
     "ONEYBKKG38865600",
@@ -359,7 +358,7 @@
   "top_senders": [
     [
       "\"Everlyn Shaw\" <us.ops2@wwl.sg>",
-      31
+      32
     ],
     [
       "assistant@pltplt.com",
@@ -375,7 +374,7 @@
     ],
     [
       "Effy <us.effyhuo@wwl.sg>",
-      10
+      11
     ],
     [
       "\"ngb.ops29@wwl.cn\" <ngb.ops29@wwl.cn>",
@@ -387,10 +386,6 @@
     ],
     [
       "Maggie Yin <maggie.yin@elite-solar.com>",
-      6
-    ],
-    [
-      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       6
     ],
     [
@@ -406,7 +401,7 @@
       6
     ],
     [
-      "\"Sven Gu\" <sha.overseassup2@wwl.cn>",
+      "\"Justin Jia - WWG XMN\" <xmn.ops9@wwl.cn>",
       5
     ],
     [
@@ -431,6 +426,10 @@
     ],
     [
       "\"Danny Ho\" <vn.vietducho@wwl.sg>",
+      4
+    ],
+    [
+      "notice <notice@qiye.163.com>",
       4
     ],
     [
@@ -2435,30 +2434,6 @@
         "date": "Fri, 3 Apr 2026 19:52:08 "
       },
       {
-        "subject": "RE: CMA付款  WLDSHA260400260  CMDUCHN3177029  USD59",
-        "from": "\"Sven Gu\" <sha.overseassup2@ww",
-        "urgency": 3,
-        "date": "Fri, 3 Apr 2026 19:54:16 "
-      },
-      {
-        "subject": "RE: ONE付款  WLDBKK260202870  ONEYBKKG38865600  USD452.3",
-        "from": "\"Sven Gu\" <sha.overseassup2@ww",
-        "urgency": 3,
-        "date": "Fri, 3 Apr 2026 19:56:03 "
-      },
-      {
-        "subject": "RE: MSC付款  USD34.8+50",
-        "from": "\"Sven Gu\" <sha.overseassup2@ww",
-        "urgency": 3,
-        "date": "Fri, 3 Apr 2026 19:57:53 "
-      },
-      {
-        "subject": "RE: ONE付款  WLDBKK260400770  ONEYBTMG00485900 USD15",
-        "from": "\"Sven Gu\" <sha.overseassup2@ww",
-        "urgency": 3,
-        "date": "Fri, 3 Apr 2026 19:58:00 "
-      },
-      {
         "subject": "RE: *URGENT** ZIMUQIN4431617 - Please arrange to load onto t",
         "from": "ZIM USA Documentation Import <",
         "urgency": 3,
@@ -2534,18 +2509,18 @@
   },
   "neural_network": {
     "entities": 92,
-    "relationships": 26,
+    "relationships": 29,
     "contacts_new": 0,
     "contacts_total": 389,
-    "daily_connections": 24,
+    "daily_connections": 25,
     "new_domains": [
-      "expresslinecorp.com",
-      "jci-chemical.com",
-      "paycargo.com",
       "service.hlag.com",
       "elite-solar.com",
       "biposervice.com",
-      "newl.ca"
+      "expresslinecorp.com",
+      "jci-chemical.com",
+      "newl.ca",
+      "paycargo.com"
     ]
   },
   "daily_connections": [
@@ -2667,6 +2642,11 @@
     {
       "from": "PTS INC",
       "to": "PTS",
+      "type": "service"
+    },
+    {
+      "from": "TERRASOULSUPERFOODS",
+      "to": "FCC USA",
       "type": "service"
     }
   ]
