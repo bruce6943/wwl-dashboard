@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T10:16:40.845468+08:00",
+  "last_updated": "2026-04-03T10:48:51.327305+08:00",
   "total_customers": 27,
   "total_tickets": 1853,
   "data_sources": [
@@ -3227,7 +3227,7 @@
     },
     "REACH INDUSTRY": {
       "ZIM": 24,
-      "CMA-CGM": 96
+      "CMA-CGM": 99
     },
     "MERSY CORP": {
       "MSC": 8
@@ -3246,7 +3246,7 @@
       "ZIM": 15
     },
     "DTC SA": {
-      "COSCO": 10
+      "COSCO": 11
     }
   },
   "customer_service": {
@@ -3294,7 +3294,7 @@
     },
     "PTS INC": {
       "PTS": {
-        "count": 122,
+        "count": 126,
         "types": []
       }
     },
@@ -3306,7 +3306,7 @@
     },
     "PACIFIC T&T": {
       "PTS": {
-        "count": 38,
+        "count": 39,
         "types": []
       },
       "PTT卡车": {
