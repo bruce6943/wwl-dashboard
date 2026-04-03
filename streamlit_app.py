@@ -14,8 +14,6 @@ from datetime import datetime, timedelta
 import re
 import random
 
-# v5.1 body-based progress: tasks → events → completed (2026-03-30 02:30)
-
 # ─── Page Config ───
 st.set_page_config(
     page_title="WWL运营指挥中心 v5.0",
@@ -24,37 +22,29 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+# ─── 登录验证 ───
+DASHBOARD_PASSWORD = "BRUCEWWL"
 
-# ─── Password Protection ───
-def check_password():
-    """Returns True if the user has entered the correct password."""
-    if "authenticated" not in st.session_state:
-        st.session_state.authenticated = False
-    
-    if st.session_state.authenticated:
-        return True
-    
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
     st.markdown("""
-    <div style="text-align:center; padding:60px 0;">
-        <h1 style="color:#e94560;">WWL 环世物流 运营指挥中心</h1>
-        <p style="color:#a0a0c0;">请输入访问密码</p>
+    <div style="text-align:center; padding:100px 0 30px 0;">
+        <h1 style="color:#fff; font-size:28px;">WWL 环世物流 运营指挥中心</h1>
+        <p style="color:#a0a0c0;">请输入密码访问</p>
     </div>
     """, unsafe_allow_html=True)
-    
-    password = st.text_input("密码", type="password", key="pwd_input")
-    if st.button("登录", key="login_btn"):
-        if password == "WWL2026!":
-            st.session_state.authenticated = True
-            st.rerun()
-        else:
-            st.error("密码错误")
-    
-    st.markdown("<p style='text-align:center;color:#666;font-size:12px;margin-top:40px;'>环世物流内部系统 · 仅授权人员访问</p>", unsafe_allow_html=True)
-    return False
-
-if not check_password():
+    col1, col2, col3 = st.columns([1, 1, 1])
+    with col2:
+        pwd = st.text_input("密码", type="password", key="login_pwd")
+        if st.button("登录", use_container_width=True):
+            if pwd == DASHBOARD_PASSWORD:
+                st.session_state.authenticated = True
+                st.rerun()
+            else:
+                st.error("密码错误")
     st.stop()
-
 
 # ─── Dark Gradient Theme CSS ───
 st.markdown("""
@@ -232,7 +222,7 @@ header {visibility: hidden;}
 
 
 # ─── Load Data ───
-@st.cache_data(ttl=30)
+@st.cache_data(ttl=300)
 def load_all_data():
     data = {}
     files = {
@@ -240,13 +230,14 @@ def load_all_data():
         "analysis_30d": "data/analysis_30d.json",
         "arrears": "data/arrears_analysis.json",
         "overdue_sop": "data/overdue_sop_status.json",
+        "action_items_file": "data/action_items.json",
+        "graph_tasks": "data/graph_tasks.json",
         "vendors": "data/vendor_database.json",
         "supply_chain": "data/supply_chain_network.json",
         "contacts": "data/contacts_database.json",
         "deep_insights": "data/deep_insights.json",
         "deep_patterns": "data/deep_patterns.json",
         "us_consignee": "data/us_consignee_database.json",
-        "graph_tasks": "data/graph_tasks.json",
     }
     for key, path in files.items():
         try:
@@ -255,200 +246,6 @@ def load_all_data():
         except Exception:
             data[key] = {}
     return data
-
-
-# ─── Task Board Persistence ───
-TASK_FILE = "data/task_board.json"
-
-def load_tasks():
-    try:
-        with open(TASK_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {"completed": {}, "tasks": []}
-
-def save_tasks(task_data):
-    import os
-    os.makedirs("data", exist_ok=True)
-    with open(TASK_FILE, "w", encoding="utf-8") as f:
-        json.dump(task_data, f, ensure_ascii=False, indent=2)
-
-def build_task_board(action_items, arrears_data, bl_status, overdue_sop, contacts_db, deep_insights, enhanced):
-    """从多个数据源构建完整任务清单，按客户维度聚合，包含联系人+提单号+金额明细"""
-    tasks = []
-    seen_keys = set()
-
-    # 内部销售负责人映射
-    staff_customers = {}
-    for staff_name, data in enhanced.get("staff_analysis", {}).items():
-        if isinstance(data, dict):
-            for cust in data.get("customers", []):
-                staff_customers.setdefault(cust, []).append(staff_name.split("(")[0].strip())
-
-    # 客户联系人映射
-    cust_contacts_map = deep_insights.get("customer_contacts", {})
-
-    # 联系人快速查找
-    all_contacts = contacts_db.get("contacts", []) if isinstance(contacts_db, dict) else []
-
-    def find_internal_staff(customer_name):
-        """查找负责该客户的内部销售"""
-        for alias, staffs in staff_customers.items():
-            if alias.upper() in customer_name.upper() or customer_name.upper() in alias.upper():
-                return ", ".join(staffs[:2])
-        return ""
-
-    def find_customer_contact(customer_name):
-        """查找客户方联系人"""
-        for cust_key, ppl in cust_contacts_map.items():
-            if cust_key.upper() in customer_name.upper() or customer_name.upper() in cust_key.upper():
-                if isinstance(ppl, dict):
-                    top = sorted(ppl.items(), key=lambda x: x[1].get("count",0) if isinstance(x[1],dict) else x[1], reverse=True)[:2]
-                    result = []
-                    for email, info in top:
-                        name = info.get("name", "") if isinstance(info, dict) else ""
-                        phone = info.get("phone", "") if isinstance(info, dict) else ""
-                        result.append(f"{name} {email}" + (f" {phone}" if phone else ""))
-                    return " / ".join(result)
-        return ""
-
-    # 1. 从引擎action_items(查验/Hold/CC/AN/D&D/Overdue)
-    for a in action_items:
-        key = f"{a.get('type','')}__{a.get('mbl','')}__{a.get('source','')[:30]}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-        cust = a.get("customer", "")
-        tasks.append({
-            "id": key, "category": a.get("type", "other"), "priority": a.get("priority", "medium"),
-            "title": a.get("type", "").upper(),
-            "action": a.get("action", ""),
-            "assignee": a.get("assignee", ""),
-            "mbl": a.get("mbl", ""), "hbl": a.get("hbl", ""),
-            "customer": cust, "amount": a.get("amount", ""),
-            "internal_staff": find_internal_staff(cust) if cust else "",
-            "customer_contact": find_customer_contact(cust) if cust else "",
-            "detail_lines": [],
-            "source": a.get("source", ""), "date": a.get("date", ""),
-        })
-
-    # 2. 欠费催收(按客户聚合，含提单明细)
-    for item in arrears_data.get("top20", [])[:20]:
-        name = item.get("name", "")
-        total = item.get("total", 0)
-        if total < 500: continue
-        key = f"arrears__{name}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-
-        # 提单明细
-        detail_lines = []
-        types = item.get("types", {})
-        for desc, amt in sorted(types.items(), key=lambda x: abs(x[1]) if isinstance(x[1],(int,float)) else 0, reverse=True)[:6]:
-            if isinstance(amt, (int, float)) and amt > 0:
-                detail_lines.append(f"{desc}: ${amt:,.0f}")
-
-        mbls = item.get("mbls", [])
-        hbls = item.get("hbls", [])
-        mbl_str = ", ".join(mbls[:3]) if isinstance(mbls, list) else ""
-        hbl_str = ", ".join(hbls[:3]) if isinstance(hbls, list) else ""
-
-        priority = "urgent" if total > 20000 else "high" if total > 5000 else "medium"
-        tasks.append({
-            "id": key, "category": "arrears", "priority": priority,
-            "title": "欠费催收",
-            "action": f"总欠费${total:,.0f} — 确认T+X阶段: T+7首催/T+15升级/T+30追偿函/T+45中信保",
-            "assignee": "",
-            "mbl": mbl_str, "hbl": hbl_str,
-            "customer": name[:30], "amount": f"${total:,.0f}",
-            "internal_staff": find_internal_staff(name),
-            "customer_contact": find_customer_contact(name),
-            "detail_lines": detail_lines,
-            "source": f"{item.get('records',0)}条记录", "date": item.get("latest", ""),
-        })
-
-    # 3. 未电放MBL
-    for mbl in bl_status.get("no_tlx_mbl", [])[:10]:
-        m = mbl if isinstance(mbl, str) else str(mbl)
-        key = f"no_tlx__{m}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-        # 从MBL前缀识别船公司
-        carrier = ""
-        for prefix, c in [("MEDU","MSC"),("COSU","COSCO"),("OOLU","OOCL"),("ONEY","ONE"),("ZIMU","ZIM"),("CMDU","CMA-CGM"),("HLCU","Hapag-Lloyd")]:
-            if m.startswith(prefix): carrier = c; break
-        tasks.append({
-            "id": key, "category": "bl_release", "priority": "high",
-            "title": "换单/电放",
-            "action": f"MBL未电放 — 联系origin确认TLX状态{f' ({carrier})' if carrier else ''} → 催促放单 → 确认后通知目的港",
-            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
-            "internal_staff": "", "customer_contact": "",
-            "detail_lines": [f"船公司: {carrier}"] if carrier else [],
-            "source": "bl_status", "date": "",
-        })
-
-    # 4. AN无预报(漏单预警)
-    for mbl in bl_status.get("an_no_prealert", [])[:10]:
-        m = mbl if isinstance(mbl, str) else str(mbl)
-        key = f"an_gap__{m}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-        tasks.append({
-            "id": key, "category": "prealert_gap", "priority": "urgent",
-            "title": "漏单预警",
-            "action": "AN已收但无PreAlert — 可能漏单! 立即核查是否有对应HBL，确认origin是否已发货",
-            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
-            "internal_staff": "", "customer_contact": "",
-            "detail_lines": [], "source": "bl_status", "date": "",
-        })
-
-    # 5. Hold提单
-    for h in bl_status.get("hold_bl", [])[:10]:
-        m = h.get("mbl", "") if isinstance(h, dict) else str(h)
-        htype = h.get("type", "?") if isinstance(h, dict) else "?"
-        key = f"hold__{m}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-        action_map = {
-            "freight": "Freight Hold — 联系origin确认运费支付状态 → 付款后通知船公司释放",
-            "customs": "Customs Hold — 联系报关行(YES/WFS)确认CBP要求 → 准备补充文件 → 跟进放行",
-            "do fee": "DO Fee Hold — 确认DO费用金额 → 安排付款 → 付款后拿DO",
-        }
-        tasks.append({
-            "id": key, "category": "hold", "priority": "urgent",
-            "title": f"HOLD ({htype})",
-            "action": action_map.get(htype, f"{htype.upper()} HOLD — 确认Hold类型并处理"),
-            "assignee": "", "mbl": m, "hbl": "", "customer": "", "amount": "",
-            "internal_staff": "", "customer_contact": "",
-            "detail_lines": [f"Hold来源: {h.get('from','?')}", f"邮件: {h.get('subject','')[:40]}"] if isinstance(h, dict) else [],
-            "source": "bl_status", "date": "",
-        })
-
-    # 6. SOP跟进 (overdue_sop is now dict: customer_name → info)
-    sop_dict = overdue_sop if isinstance(overdue_sop, dict) else {}
-    for cust_name, info in sorted(sop_dict.items(), key=lambda x: x[1].get('amount_num', 0) if isinstance(x[1], dict) else 0, reverse=True)[:10]:
-        if not isinstance(info, dict): continue
-        m = info.get("mbl", "")
-        key = f"sop__{cust_name}"
-        if key in seen_keys: continue
-        seen_keys.add(key)
-        amt_num = info.get("amount_num", 0)
-        days = info.get("days_overdue", 0)
-        tx = info.get("status", "按T+X时间线推进")
-        pri = "urgent" if days > 45 else "high"
-        tasks.append({
-            "id": key, "category": "sop", "priority": pri,
-            "title": f"催收跟进: {unify_customer_name(cust_name)}",
-            "action": f"{tx} — {info.get('amount', '')} 欠费{days}天",
-            "assignee": "", "mbl": m, "hbl": "", "customer": unify_customer_name(cust_name),
-            "amount": info.get("amount", ""),
-            "internal_staff": "", "customer_contact": "",
-            "detail_lines": [f"收款类型: {info.get('sheet_breakdown','')}", f"费用: {info.get('fee_detail','')[:50]}"],
-            "source": "overdue_sop", "date": "",
-        })
-
-    priority_order = {"urgent": 0, "high": 1, "medium": 2, "low": 3}
-    tasks.sort(key=lambda x: priority_order.get(x.get("priority", "low"), 3))
-    return tasks
 
 
 DATA = load_all_data()
@@ -462,76 +259,11 @@ CON = DATA.get("contacts", {})
 DI = DATA.get("deep_insights", {})
 DP = DATA.get("deep_patterns", {})
 USC = DATA.get("us_consignee", {})
-
-# ─── 统一客户名映射(全局强制执行) ───
-_CUSTOMER_UNIFIED = {}
-try:
-    with open("data/customer_unified.json", "r", encoding="utf-8") as _cuf:
-        _cu_data = json.load(_cuf)
-    _CUSTOMER_UNIFIED = _cu_data.get("mapping", {})
-    _ARREARS_BY_CUSTOMER = _cu_data.get("arrears_by_customer", {})
-except:
-    _ARREARS_BY_CUSTOMER = {}
-
-_CUSTOMER_FULL_NAMES = {}
-try:
-    with open("data/customer_full_names.json", "r", encoding="utf-8") as _fnf:
-        _CUSTOMER_FULL_NAMES = json.load(_fnf)
-except: pass
-
-# 供应商/内部公司(不是客户，从客户列表排除)
-_NOT_CUSTOMERS = {"PTS", "YES", "FCC USA", "PTT", "ROME", "SCC", "KORNET", "DTC",
-    "FCC USA(代理)", "PTS(代理)", "YES(报关行)", "PTS INC", "PACIFIC T&T",
-    "FAST FREIGHTS", "TERRASOULSUPERFOODS", "BETTERBODYFOODS",
-    "BASE SPA", "TPS", "BALENA", "PTT(卡车)", "ROME(卡车)",
-    "BASE SPA(意大利)", "TPS(希腊)", "BALENA(项目物流)", "DTC(内部电商)"}
-
-def _unify_single(name):
-    """单个客户名映射到标准名全称"""
-    if not name: return name
-    n = name.strip()
-    std = _CUSTOMER_UNIFIED.get(n.upper(), '')
-    if not std:
-        for k, v in _CUSTOMER_UNIFIED.items():
-            if len(n) >= 6 and len(k) >= 6 and (k[:6] in n.upper() or n.upper()[:6] in k):
-                std = v; break
-    if not std: std = n
-    full = _CUSTOMER_FULL_NAMES.get(std, '')
-    return full if full else std
-
-def unify_customer_name(name):
-    """将任何客户名变体映射到标准名的全称，支持'/'分隔的多客户"""
-    if not name: return name
-    if '/' in name:
-        parts = [_unify_single(p) for p in name.split('/')]
-        # 去重(同一客户不同写法映射到同一全称)
-        seen = set()
-        unique = []
-        for p in parts:
-            if p.upper() not in seen:
-                seen.add(p.upper())
-                unique.append(p)
-        return ' / '.join(unique)
-    return _unify_single(name)
-
-def is_real_customer(name):
-    """判断是否是真实客户(排除供应商和内部公司)"""
-    if not name: return False
-    for skip in _NOT_CUSTOMERS:
-        if skip.upper() in name.upper() or name.upper() in skip.upper():
-            return False
-    return True
-
-def get_customer_arrears(name):
-    """获取客户欠费金额"""
-    std = unify_customer_name(name)
-    amt = _ARREARS_BY_CUSTOMER.get(std, 0)
-    if not amt:
-        for arr_item in ARR.get("top20", []):
-            if std.upper()[:8] in arr_item.get("name", "").upper() or arr_item.get("name", "").upper()[:8] in std.upper():
-                return arr_item.get("total", 0)
-    return amt
-
+AIF = DATA.get("action_items_file", [])
+if isinstance(AIF, dict):
+    AIF = []
+GT = DATA.get("graph_tasks", {})
+GT_TASKS = GT.get("tasks", []) if isinstance(GT, dict) else []
 
 # ─── Derived data ───
 bl = A.get("bl_status", {})
@@ -553,12 +285,22 @@ inspection_mbls = A.get("inspection_mbls", [])
 hold_count = A.get("hold_count", 0)
 inspection_count = A.get("inspection_count", 0)
 
-# v3.0 行动项
-action_items = A.get("action_items", [])
-action_summary = A.get("action_summary", {})
-urgent_actions = [a for a in action_items if a.get("priority") == "urgent"]
-high_actions = [a for a in action_items if a.get("priority") == "high"]
-medium_actions = [a for a in action_items if a.get("priority") == "medium"]
+# ─── Action Items 分类提取 ───
+ai_holds = [x for x in AIF if x.get("type") == "hold"]
+ai_inspections = [x for x in AIF if x.get("type") in ("inspection", "inspection_broker")]
+ai_dd_alerts = [x for x in AIF if x.get("type") == "dd_alert"]
+ai_empty_returns = [x for x in AIF if x.get("type") == "empty_return"]
+ai_cc_confirms = [x for x in AIF if x.get("type") == "cc_confirm"]
+
+# ─── General Order 提取(从urgent中分离) ───
+general_order_items = []
+urgent_non_go = []
+for u in urgent:
+    subj = u.get("subject", "") if isinstance(u, dict) else str(u)
+    if "general order" in subj.lower() or "pending general order" in subj.lower():
+        general_order_items.append(u)
+    else:
+        urgent_non_go.append(u)
 
 # Compute efficiency score (平衡版 — 有挑战但不打击士气)
 total_7d = A.get("total_emails", 0)
@@ -570,12 +312,13 @@ cancel_count = A.get("cancel_count", 0)
 eff_score = 75
 
 # 扣分项(重大风险扣分重,一般事务扣分轻)
-risk_items = len(cancel_it) + len(stolen) + len(hold_bl) + hold_count + inspection_count
+risk_items = len(cancel_it) + len(stolen) + len(hold_bl) + hold_count + inspection_count + len(general_order_items)
 eff_score -= hold_count * 2              # Hold每个扣2分
 eff_score -= len(stolen) * 10            # 被盗扣10分(严重!)
 eff_score -= len(an_no_prealert) * 5     # 漏单扣5分(严重!)
 eff_score -= overdue_count               # Overdue每封扣1分
 eff_score -= cancel_count                # Cancel每个扣1分
+eff_score -= len(general_order_items) * 8  # GO每个扣8分(CBP没收风险!)
 # 未电放MBL: 只有超过50%未电放才扣分(12h窗口内大部分未电放是正常的)
 tlx_rate = 1 - (len(no_tlx_mbl) / max(len(no_tlx_mbl) + bl.get('tlx_confirmed_mbl',0), 1))
 if tlx_rate < 0.5: eff_score -= 5       # 电放率低于50%才扣5分
@@ -625,21 +368,6 @@ def clean_html(text):
 
 def alert_card(style, content):
     st.markdown(f'<div class="alert-{style}">{content}</div>', unsafe_allow_html=True)
-
-
-def safe_tab(tab_name):
-    """Decorator to wrap tab content in try/except and show full error details."""
-    import functools, traceback as tb_mod
-    def decorator(func):
-        @functools.wraps(func)
-        def wrapper(*args, **kwargs):
-            try:
-                return func(*args, **kwargs)
-            except Exception as e:
-                st.error(f"{tab_name} 加载出错: {type(e).__name__}: {e}")
-                st.code(tb_mod.format_exc(), language="text")
-        return wrapper
-    return decorator
 
 
 def parse_sender_name(raw):
@@ -701,343 +429,578 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 
-    # 教练总结紧跟效率评分
-    coach_box("教练总结: 风险管理 — 法规+实战", f"""
-        <b>当前状态:</b> Hold {hold_count}件 / 查验 {inspection_count}件 / 待办 {len(action_items)}项。
-        {'⚠️ 有Hold必须立即处理!' if hold_count > 0 else '✅ 无Hold。'}
-        {'⚠️ 有查验需跟进!' if inspection_count > 0 else ''}<br><br>
-        <b>FMC D&D新规:</b> 船公司D&D账单必须含19项要素, 缺一项=无需付款。收到账单先核对合规性。<br>
-        <b>UFLPA:</b> 太阳能/电池客户(正泰/科陆/海辰)每票确认溯源文件。77%中国货被扣后拒放。<br>
-        <b>周五规则:</b> 周五收到Hold必须当天行动, 不等周一(省3天D&D)。
-    """)
+    # ── General Order 置顶(CBP没收风险, 最高优先级) ──
+    import re as _re
+    if general_order_items:
+        section_header(f"General Order 警告: {len(general_order_items)}件 — CBP即将没收货物!")
+        _go_mbls_seen = set()
+        for item in general_order_items:
+            subj = item.get("subject", "") if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            dt = item.get("date", "") if isinstance(item, dict) else ""
+            _mbl_match = _re.search(r'(MEDU[A-Z0-9]+|COSU[0-9]+|OOLU[0-9]+|ONEY[A-Z0-9]+|ZIMU[A-Z0-9]+|CMDU[A-Z0-9]+|HLCU[A-Z0-9]+)', str(subj))
+            _go_mbl = _mbl_match.group(1) if _mbl_match else ""
+            if _go_mbl and _go_mbl in _go_mbls_seen:
+                continue
+            if _go_mbl:
+                _go_mbls_seen.add(_go_mbl)
+            # 从action_items中找到对应的客户和Hold信息
+            _go_customer = ""
+            _go_carrier = ""
+            for ai in ai_holds:
+                if ai.get("mbl") == _go_mbl:
+                    _go_customer = ai.get("customer", "")
+                    _go_carrier = ai.get("carrier", "")
+                    break
+            alert_card("red", f"""
+                <b style='font-size:16px;'>GENERAL ORDER 没收警告</b> [{_go_mbl}]<br>
+                客户: <b>{clean_html(_go_customer)}</b> | 船公司: <b>{clean_html(_go_carrier)}</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)} | 日期: {dt}<br><br>
+                <b>什么是General Order:</b> CBP通知货物超过15天未清关, 即将进入GO状态。
+                GO = 货物被美国海关接管, 转入政府监管仓库, 15天后可被拍卖或销毁。
+                一旦进入GO, 除了货值损失, 还有GO仓储费($75-150/天)、处理费($500-2,000)、
+                且会在CBP系统留下不良记录, 影响WWL作为NVOCC的合规评级。<br><br>
+                <b>紧急处理链(24h内必须行动):</b><br>
+                1) Everlyn立即确认该票当前清关状态 — 是否已提交7501? 报关行(YES/WFS)卡在哪一步?<br>
+                2) 如果是Customs Hold导致: 补齐CBP要求的文件(ISF/PI/PL/HS Code证明)<br>
+                3) 如果是Freight Hold导致: Sven立即通过PayCargo付清运费, 解除Hold拿到DO<br>
+                4) 如果是客户弃货: Bruce决策 — 是追偿客户还是安排退运(退运费$3,000-8,000)<br>
+                5) 同步通知origin和客户({clean_html(_go_customer)}), 邮件留痕记录所有行动<br>
+                <b>关键时效:</b> GO通知后15天内不处理 = 货物永久丧失。这不是警告, 是最后通牒。
+            """)
+        st.markdown("---")
 
-    # ─── 事件摘要(一行显示) ───
-    cc_count = A.get("categories", {}).get("charge_confirm", 0)
-    anomaly_total = len(cancel_it) + len(cod_list) + len(non_standard) + len(stolen) + len(urgent)
-    _summary = DATA.get("graph_tasks", {}).get("summary", {})
-    _sc1, _sc2, _sc3, _sc4, _sc5 = st.columns(5)
-    with _sc1: st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if hold_count else "#00c853"}">{hold_count}</h2><p>Hold</p></div>', unsafe_allow_html=True)
-    with _sc2: st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if inspection_count else "#00c853"}">{inspection_count}</h2><p>查验</p></div>', unsafe_allow_html=True)
-    with _sc3: st.markdown(f'<div class="metric-card"><h2 style="color:{"#ffa500" if cc_count else "#00c853"}">{cc_count}</h2><p>CC</p></div>', unsafe_allow_html=True)
-    with _sc4: st.markdown(f'<div class="metric-card"><h2 style="color:{"#e94560" if anomaly_total else "#00c853"}">{anomaly_total}</h2><p>异常</p></div>', unsafe_allow_html=True)
-    with _sc5: st.markdown(f'<div class="metric-card"><h2 style="color:#2196f3">{_summary.get("arrival_notices",0)}</h2><p>到港</p></div>', unsafe_allow_html=True)
+    # ═══ 预判预警(比人早一步) ═══
+    _pred_path = 'data/predictions.json'
+    try:
+        with open(_pred_path) as _pf:
+            _pred = json.load(_pf)
+        _pred_list = _pred.get('predictions', [])
+        _pred_critical = _pred.get('critical', 0)
+        _pred_urgent = _pred.get('urgent', 0)
+        _pred_total = _pred.get('total', 0)
+    except:
+        _pred_list = []
+        _pred_critical = _pred_urgent = _pred_total = 0
+
+    if _pred_list:
+        section_header(f"预判预警: {_pred_total}条 (危急{_pred_critical} 紧急{_pred_urgent})")
+        _shown = 0
+        for p in _pred_list:
+            if _shown >= 15:
+                break
+            sev = p.get('severity', '')
+            color = 'red' if sev == 'critical' else 'orange' if sev == 'urgent' else 'yellow'
+            sev_cn = '危急' if sev == 'critical' else '紧急' if sev == 'urgent' else '重要'
+            ptype = p.get('type', '')
+            type_cn = {
+                'eta_overdue': 'ETA已过期未电放', 'eta_approaching': 'ETA即将到港',
+                'eta_warning': 'ETA临近', 'freetime_expired': 'Free Time已超期',
+                'freetime_urgent': 'Free Time即将到期', 'collection_sinosure': '催收-中信保窗口',
+                'collection_legal': '催收-需追偿函', 'collection_escalate': '催收-需升级',
+                'hold_overdue': 'Hold超期', 'inspection_overdue': '查验超期',
+                'no_response': '48h未回复', 'invoice_overdue': '发票已过期',
+                'invoice_due_soon': '发票即将到期',
+            }.get(ptype, ptype)
+            alert_card(color, f"""
+                <b>[{sev_cn}] {type_cn}</b> | {p.get('mbl','')[:20]} | {p.get('customer','')[:15]} {p.get('carrier','')}<br>
+                {p.get('message','')}<br>
+                <b>行动:</b> {p.get('action','')}
+            """)
+            _shown += 1
+        if _pred_total > 15:
+            alert_card("yellow", f"还有 {_pred_total - 15} 条预警未展示")
 
     st.markdown("---")
 
-    # ═══ v4.0 任务工作台(从知识图谱) ═══
-    # 优先用graph_tasks(SQLite知识图谱推理), fallback到旧的build_task_board
-    GRAPH = DATA.get("graph_tasks", {})
-    graph_tasks_list = GRAPH.get("tasks", [])
+    # ═══ 对话追踪: 谁在等谁 ═══
+    _conv_path = 'data/conversation_status.json'
+    try:
+        with open(_conv_path) as _cf:
+            _conv = json.load(_cf)
+        _wu = _conv.get('waiting_us', [])
+        _wt = _conv.get('waiting_them', [])
+        _pp = _conv.get('ping_pong', [])
+        _cs = _conv.get('summary', {})
+    except:
+        _wu = _wt = _pp = []
+        _cs = {}
 
-    if graph_tasks_list:
-        # 从知识图谱生成的任务 — 不再补充build_task_board(消除重复)
-        all_tasks = []
-        for gt in graph_tasks_list:
-            cust_raw = gt.get("customer", "")
-            cust_display = unify_customer_name(cust_raw) if cust_raw else ""
-            task_id = f"{gt.get('type','')}__{cust_display}__{gt.get('mbl','')[:20]}"
-            # 修正branch映射
-            branch = gt.get("wwl_branch", "")
-            sender_email = gt.get("wwl_sender", "").lower()
-            if 'bkk.' in sender_email: branch = "WWL泰国"
-            elif 'jkt.' in sender_email: branch = "WWL印尼"
-            elif 'sha.' in sender_email or 'szn.' in sender_email or 'fsh.' in sender_email: branch = "WWL中国"
-            elif 'xmn.' in sender_email or 'can.' in sender_email: branch = "WWL中国"
-            elif 'hkg.' in sender_email: branch = "WWL香港"
-            all_tasks.append({
-                "id": task_id,
-                "category": gt.get("type", "other"),
-                "priority": gt.get("priority", "medium"),
-                "title": gt.get("title", ""),
-                "action": gt.get("action", ""),
-                "mbl": gt.get("mbl", ""),
-                "hbl": gt.get("hbl", ""),
-                "carrier": gt.get("carrier", ""),
-                "customer": cust_display,
-                "wwl_sender": gt.get("wwl_sender", ""),
-                "wwl_branch": branch,
-                "amount": gt.get("amount", ""),
-                "contact": "",
-                "consignee": "",
-                "shipper": "",
-                "internal_staff": "",
-                "customer_contact": "",
-                "detail_lines": ([gt.get('progress_history','')] if gt.get('progress_history') else []) + (gt.get('detail_lines',[]) if gt.get('detail_lines') else []),
-                "assignee": "",
-            })
+    if _wu or _pp:
+        section_header(f"对话追踪: 等我们{_cs.get('waiting_us',0)}条 | 等对方{_cs.get('waiting_them',0)}条 | 乒乓{_cs.get('ping_pong',0)}条")
+
+        # 等我们回复(最紧急! 影响服务质量)
+        if _wu:
+            for p in _wu[:5]:
+                hrs = p.get('hours_waiting', 0)
+                color = 'red' if hrs >= 48 else 'orange'
+                alert_card(color, f"""
+                    <b>等我们回复 {hrs}小时!</b> | {p.get('customer','')[:15]} | MBL: {p.get('mbl','')[:25]}<br>
+                    线程: {p.get('thread','')[:50]}<br>
+                    <b>{p.get('last_sender','')}</b>在等我们 → 立即回复
+                """)
+
+        # 乒乓球对话(>5轮没解决)
+        if _pp:
+            for p in _pp[:3]:
+                alert_card("yellow", f"""
+                    <b>乒乓对话 {p.get('rounds',0)}轮/{p.get('days',0)}天</b> | {p.get('customer','')[:15]} | MBL: {p.get('mbl','')[:25]}<br>
+                    线程: {p.get('thread','')[:50]}<br>
+                    {p.get('parties',0)}方参与,邮件往返多轮未解决 → 考虑电话会议直接沟通
+                """)
+
+    st.markdown("---")
+
+    # ── 四列概览: Hold / 查验 / CC待确认 / D&D ──
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        # 用action_items中的hold去重统计(比hold_count更准确)
+        _hold_mbls = set()
+        for h in ai_holds:
+            m = h.get("mbl", "")
+            if m:
+                _hold_mbls.add(m)
+        _real_hold_count = max(hold_count, len(_hold_mbls))
+        section_header(f"Hold事件: {_real_hold_count}件")
+        if ai_holds or hold_bl:
+            # 按MBL合并Hold详情(同一MBL可能多种Hold类型)
+            _hold_by_mbl = {}
+            for h in ai_holds:
+                m = h.get("mbl", "") or "未知MBL"
+                if m not in _hold_by_mbl:
+                    _hold_by_mbl[m] = {"types": [], "customer": h.get("customer", ""), "carrier": h.get("carrier", "")}
+                _hold_by_mbl[m]["types"].append(h.get("hold_type", "unknown"))
+            # 如果action_items为空, 回退到hold_bl
+            if not _hold_by_mbl:
+                for hb in hold_bl:
+                    m = hb.get("mbl", "") if isinstance(hb, dict) else ""
+                    _hold_by_mbl[m or "未知MBL"] = {"types": [hb.get("type", "unknown") if isinstance(hb, dict) else "unknown"], "customer": "", "carrier": ""}
+
+            hold_details = []
+            for m, info in _hold_by_mbl.items():
+                types_str = "+".join(sorted(set(info["types"])))
+                cust = info["customer"]
+                carr = info["carrier"]
+                label = f"[{m[:18]}]" if m != "未知MBL" else ""
+                cust_label = f" 客户:{cust}" if cust else ""
+                carr_label = f" {carr}" if carr else ""
+
+                if "customs" in types_str:
+                    hold_details.append(f"<b>Customs Hold{carr_label} {label}{cust_label}:</b> CBP扣留 → 确认7501状态 → 补文件(ISF/PI/PL) → 报关行YES/WFS跟进放行")
+                elif "freight" in types_str:
+                    hold_details.append(f"<b>Freight Hold{carr_label} {label}{cust_label}:</b> 运费未结 → 确认collect/prepaid → collect由Rita收集确认→Sven通过PayCargo当天付款; prepaid联系origin确认入账")
+                elif "regulatory" in types_str:
+                    hold_details.append(f"<b>Regulatory Hold{carr_label} {label}{cust_label}:</b> CBP监管扣留 → 联系报关行确认缺什么文件 → 补齐后3-5个工作日放行")
+                else:
+                    hold_details.append(f"<b>Hold{carr_label} {label}{cust_label}:</b> 类型待确认 → Everlyn联系船公司确认Hold原因")
+
+            hold_html = "<br>".join(hold_details)
+            alert_card("red", f"""
+                <b>当前Hold: {_real_hold_count}票 / {len(_hold_by_mbl)}个MBL</b><br>
+                {hold_html}<br><br>
+                <b>成本:</b> Hold每天Demurrage $150-300 + Per Diem $50-100, 3天=$600-1,200。
+                MSC系统通知延迟12-24h; OOCL Regulatory Hold最严格需全套文件。<br>
+                <b>处理链:</b> Everlyn确认Hold类型 → Rita收集费用确认 → Sven执行付款(PayCargo/APLAX) → Effy跟进放行
+            """)
+        else:
+            alert_card("green", "当前无Hold事件 - 状态良好")
+
+    with c2:
+        section_header(f"查验预警: {inspection_count}件")
+        if inspection_count > 0:
+            mbl_list = ", ".join(inspection_mbls[:5])
+            # 从action_items获取查验客户详情
+            _insp_customers = set()
+            for ai in ai_inspections:
+                c = ai.get("customer", "")
+                if c:
+                    _insp_customers.add(c)
+            _insp_cust_str = ", ".join(_insp_customers) if _insp_customers else "待确认"
+
+            # 检查Hold+查验双重风险
+            hold_mbl_set = set(hb.get("mbl","") for hb in hold_bl if isinstance(hb, dict))
+            hold_mbl_set.update(h.get("mbl","") for h in ai_holds if h.get("mbl"))
+            double_risk = [m for m in inspection_mbls if m in hold_mbl_set]
+            double_warn = f"<br><b style='color:#ff1744;'>双重风险! {', '.join(double_risk)} 同时Hold+查验, 延误+费用叠加!</b>" if double_risk else ""
+
+            # 客户集中度风险
+            cust_warn = ""
+            if len(_insp_customers) == 1:
+                cust_warn = f"<br><b style='color:#ffa500;'>集中度风险: {inspection_count}票查验全部来自{_insp_cust_str}, 需关注该客户商品是否被CBP列入重点名单</b>"
+
+            alert_card("orange", f"""
+                <b>被查验MBL:</b> {clean_html(mbl_list)}{double_warn}<br>
+                <b>涉及客户:</b> {clean_html(_insp_cust_str)}{cust_warn}<br>
+                <b>查验类型判断:</b> X-Ray($150-250, 1-2天) / 开门检查($500-1,500, 2-3天) / 全掏($1,000-2,500, 3-5天)<br>
+                <b>处理链:</b> Effy联系报关行(YES/WFS)确认查验类型 → 新能源产品需MSDS+电池报告 → 通知客户延迟和费用 → 每天跟进 → 放行后立即安排提柜
+            """)
+        else:
+            alert_card("green", "当前无查验事件 - 状态良好")
+
+    with c3:
+        cc_count = max(A.get("categories", {}).get("charge_confirm", 0), len(ai_cc_confirms))
+        section_header(f"CC待确认: {cc_count}件")
+        if cc_count > 0:
+            # 从action_items提取CC涉及的船公司和客户
+            _cc_carriers = set()
+            _cc_customers = set()
+            for cc in ai_cc_confirms:
+                cr = cc.get("carrier", "")
+                cu = cc.get("customer", "")
+                if cr:
+                    _cc_carriers.add(cr)
+                if cu:
+                    _cc_customers.add(cu)
+            _cc_carr_str = ", ".join(_cc_carriers) if _cc_carriers else ""
+            _cc_cust_str = ", ".join(_cc_customers) if _cc_customers else ""
+            alert_card("yellow", f"""
+                <b>费用确认待处理: {cc_count}件</b><br>
+                {f'涉及船公司: {clean_html(_cc_carr_str)}<br>' if _cc_carr_str else ''}
+                {f'涉及客户: {clean_html(_cc_cust_str)}<br>' if _cc_cust_str else ''}
+                <b>费用来源:</b> PLT平台(assistant@pltplt.com)自动推送 → Everlyn核实 → 确认承担方<br>
+                <b>三种费用处置:</b><br>
+                - <b>Collect(到付):</b> 收货人承担 → Rita向consignee催收 → Sven通过PayCargo付船公司 → APLAX号审计追踪<br>
+                - <b>Prepaid(预付):</b> 发货人已付origin → 确认入账即结案<br>
+                - <b>Advanced(垫付):</b> WWL先垫付 → Sven付款出APLAX → 后续向客户追偿<br>
+                <b>注意:</b> D/O fee(换单费$30-75)在SA中已指定CC/PP; 文件费一律不接受到付
+            """)
+        else:
+            alert_card("green", "当前无CC待确认")
+
+    with c4:
+        dd_count = len(ai_dd_alerts)
+        section_header(f"D&D费用预警: {dd_count}件")
+        if dd_count > 0:
+            # 从action_items提取D&D涉及的客户
+            _dd_customers = set()
+            _dd_carriers = set()
+            for dd in ai_dd_alerts:
+                c = dd.get("customer", "")
+                cr = dd.get("carrier", "")
+                if c:
+                    _dd_customers.add(c)
+                if cr:
+                    _dd_carriers.add(cr)
+            alert_card("orange", f"""
+                <b>D&D费用预警: {dd_count}件</b><br>
+                {f'涉及客户: {clean_html(", ".join(list(_dd_customers)[:5]))}<br>' if _dd_customers else ''}
+                {f'涉及船公司: {clean_html(", ".join(list(_dd_carriers)[:5]))}<br>' if _dd_carriers else ''}
+                <b>什么是D&D:</b> Demurrage(滞箱费, 码头未提柜) + Detention(滞期费, 提柜未还空柜)<br>
+                <b>费用量级:</b> Demurrage $150-300/天, Detention $75-200/天, Per Diem $50-100/天<br>
+                <b>OSRA 2022合规武器:</b> 船公司D&D账单必须包含19项要素(柜号/LFD/费率/计费天数等), 缺一项WWL有权争议不付<br>
+                <b>处理链:</b> Everlyn核对费用明细 → 缺要素则发争议函 → 合规则确认承担方 → Sven付款
+            """)
+        else:
+            alert_card("green", "当前无D&D费用预警")
+
+    st.markdown("---")
+
+    # ── 空柜归还跟踪(运营闭环) ──
+    if ai_empty_returns:
+        er_count = len(ai_empty_returns)
+        # 按客户分组统计
+        _er_by_customer = {}
+        for er in ai_empty_returns:
+            c = er.get("customer", "未知客户")
+            _er_by_customer[c] = _er_by_customer.get(c, 0) + 1
+        _er_summary = " | ".join([f"{c}: {n}柜" for c, n in sorted(_er_by_customer.items(), key=lambda x: -x[1])[:5]])
+
+        section_header(f"空柜归还跟踪: {er_count}柜待还")
+        alert_card("yellow", f"""
+            <b>待还空柜: {er_count}个</b><br>
+            <b>客户分布:</b> {clean_html(_er_summary)}<br>
+            <b>风险:</b> 空柜未按时归还 = Detention费持续累积($75-200/天/柜)。
+            归还前必须确认POD(签收单)已收到, 否则无法向客户出Debit Note结案。<br>
+            <b>处理链:</b> 提柜后跟踪签收 → 确认POD已收到 → 催促空柜归还 → 归还后通知Maggie出Debit Note → 该票结案
+        """)
+        st.markdown("---")
+
+    # ── 异常邮件预警 ──
+    section_header("异常邮件预警")
+
+    # Coach — 教练总结
+    coach_box("教练总结: 当前风险全景与业务影响", f"""
+        <b>General Order = 最高风险:</b> CBP通知货物即将被没收拍卖。{len(general_order_items)}票GO警告 =
+        必须在15天内完成清关, 否则货值全损+GO仓储费+合规黑记录。GO的根源通常是Customs Hold未解决导致清关超时。<br><br>
+        <b>Hold → 无DO → 无法提货 → 滞期费叠加:</b> Hold的本质是船公司扣住Delivery Order不放。
+        没有DO, 卡车到码头也提不了柜。每天Demurrage $150-300 + Per Diem $50-100,
+        3天=$600-1,200。Hold期间Free Time照样在跑, 双重叠加。
+        Customs Hold(CBP扣留)比Freight Hold(运费未结)更难解, 需要补文件+等待CBP审批。<br><br>
+        <b>查验的连锁反应:</b> CBP查验成本不只检查费$500-2,000。真正损失:
+        1) 仓库排期被打乱(DDP客户需重新预约delivery slot);
+        2) Free Time在查验期间不停表(除非申请extension);
+        3) 新能源产品(太阳能板/锂电池)是2026年CBP 5H类重点对象, 查验率比普通货高3倍;
+        4) 同一客户多票同时被查验 = CBP可能已将该供应商列入重点监控名单。<br><br>
+        <b>当前活跃风险概况:</b> {len(general_order_items)}票GO(最高!) + {inspection_count}票查验 +
+        {_real_hold_count}票Hold + {len(cancel_it)}个Cancel IT + {len(cod_list)}个COD + {dd_count}个D&D + {len(ai_empty_returns)}柜待还。
+        环世FMC注册NVOCC(ORG NO.019194), 每一票处理质量直接影响合规评级和续牌。
+    """)
+
+    # Cancel IT
+    if cancel_it:
+        section_header(f"Cancel IT请求: {len(cancel_it)}件")
+        _cancel_seen = set()
+        for item in cancel_it:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            _mbl_match = _re.search(r'(MEDU[A-Z0-9]+|COSU[0-9]+|OOLU[0-9]+|ONEY[A-Z0-9]+|ZIMU[A-Z0-9]+|CMDU[A-Z0-9]+|HLCU[A-Z0-9]+)', str(subj))
+            _cancel_mbl = _mbl_match.group(1) if _mbl_match else ""
+            if _cancel_mbl and _cancel_mbl in _cancel_seen:
+                continue
+            if _cancel_mbl:
+                _cancel_seen.add(_cancel_mbl)
+            alert_card("red", f"""
+                <b>Cancel IT 请求</b> {f'[{_cancel_mbl}]' if _cancel_mbl else ''}<br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>背景:</b> IT号(In-Transit, 内陆转关)已由BTL平台(switchbl.com)提交给CBP。
+                Cancel IT = 不走内陆转关, 改为在入境港直接清关。
+                如果IT已提交但不及时取消, 货到港后CBP系统显示该票应走转关,
+                会导致清关冲突, 可能触发CBP罚款或货物被扣。<br>
+                <b>处理链:</b> 1) Everlyn查BTL系统确认IT状态;
+                2) 已提交 → 报关行(YES/WFS)向CBP申请取消;
+                3) 通知origin确认取消原因(通常是客户改为港口直提);
+                4) 更新MBL进度, 确认后续清关路径<br>
+                <b>时效:</b> 必须在ETA前完成取消
+            """)
     else:
-        all_tasks = build_task_board([], ARR, {}, SOP, CON, DI, {})
+        alert_card("green", "无Cancel IT请求")
 
-    # 去重
-    seen_ids = set()
-    deduped = []
-    for t in all_tasks:
-        if t["id"] not in seen_ids:
-            seen_ids.add(t["id"])
-            deduped.append(t)
-    all_tasks = deduped
+    # COD
+    if cod_list:
+        # COD去重
+        _cod_seen = set()
+        _cod_unique = []
+        for item in cod_list:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            _mbl_match = _re.search(r'(MEDU[A-Z0-9]+|COSU[0-9]+|OOLU[0-9]+|ONEY[A-Z0-9]+|ZIMU[A-Z0-9]+|CMDU[A-Z0-9]+|HLCU[A-Z0-9]+)', str(subj))
+            _cod_key = _mbl_match.group(1) if _mbl_match else subj[:30]
+            if _cod_key not in _cod_seen:
+                _cod_seen.add(_cod_key)
+                _cod_unique.append(item)
+        section_header(f"COD改港请求: {len(_cod_unique)}件(去重后)")
+        for item in _cod_unique:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            alert_card("orange", f"""
+                <b>COD 改港/改目的地请求</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>背景:</b> Change of Destination需船公司批准, 费用$500-3,000。
+                不是所有航线都能改, 尤其转运港之后的改港可能被拒。<br>
+                <b>处理链:</b> 确认原因 → Everlyn联系船公司报价 → 客户书面确认费用(邮件留痕!) →
+                Sven付款 → 船公司执行 → 同步更新ISF(10+2申报跟着改)<br>
+                <b>风险:</b> 卸港后提出COD, 船公司可能拒绝或收全程二次运费
+            """)
+    else:
+        alert_card("green", "无COD改港请求")
 
-    # 过滤掉3月15日前的旧任务(已经过期的不再显示)
-    all_tasks = [t for t in all_tasks if not t.get("last_seen") or t.get("last_seen","9999") >= "2026-03-15"]
+    # Non-standard
+    if non_standard:
+        section_header(f"非标操作请求: {len(non_standard)}件")
+        for item in non_standard:
+            subj = item.get("subject", "") if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            typ = item.get("type", "") if isinstance(item, dict) else ""
+            alert_card("yellow", f"""
+                <b>非标操作请求</b> [{typ}]<br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>处理链:</b> Effy评估可行性+费用 → 客户书面确认 → Bruce/Will审批 → 全程邮件留痕(FMC合规)
+            """)
+    else:
+        alert_card("green", "无非标操作请求")
 
-    # 过滤掉wwl_sender是US团队的(这些不是源头)
-    US_TEAM_EMAILS = {
-        'us.ops2@wwl.sg', 'us.ops@wwl.sg', 'us.effyhuo@wwl.sg',
-        'maggiewu@wwl.cn', 'rita.tang@wwl.cn', 'willsun@wwl.cn',
-        'bruce@wwl.cn', 'bruce@wwl.sg',
-        'us.adamsum@worldwide-logistics.cn', 'bobc@worldwide-logistics.cn',
-        'us.docs@wwl.sg', 'sha.overseassup2@wwl.cn',
-        # 公共邮箱 — 不是具体联系人
-        'wwlusa.list@worldwide-logistics.cn', 'us.list@wwl.sg',
-    }
-    for t in all_tasks:
-        sender = t.get("wwl_sender", "")
-        # 从sender字符串中提取email
-        import re as _re
-        _em = _re.search(r'[\w.+-]+@[\w.-]+', sender.lower()) if sender else None
-        if _em and _em.group() in US_TEAM_EMAILS:
-            t["wwl_sender"] = ""  # 清除US团队，不是源头
-            t["wwl_branch"] = ""
+    # Stolen/lost
+    if stolen:
+        section_header(f"失窃/丢失: {len(stolen)}件")
+        for item in stolen:
+            subj = item.get("subject", item) if isinstance(item, dict) else str(item)
+            frm = item.get("from", "") if isinstance(item, dict) else ""
+            alert_card("red", f"""
+                <b>集装箱失窃/丢失</b><br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>
+                <b>紧急处理链(72h内必须启动):</b><br>
+                1) Bruce决策: 报警(当地警局+FBI IC3跨州案件);<br>
+                2) Effy启动保险索赔(BL原件/Invoice/PL/警方报告);<br>
+                3) 通知客户(不承诺赔偿金额);<br>
+                4) origin留存装箱证据(照片/封条号/GPS);<br>
+                5) 高价值新能源产品同步通知中信保<br>
+                <b>关键:</b> 72h是保险受理黄金窗口
+            """)
+    else:
+        alert_card("green", "无失窃/丢失报告")
 
-    task_data = load_tasks()
-    completed_ids = task_data.get("completed", {})
+    # Urgent(已剔除GO)
+    if urgent_non_go:
+        section_header(f"紧急邮件: {len(urgent_non_go)}封")
+        _sorted_urgent = sorted(urgent_non_go, key=lambda x: x.get("urgency", 0) if isinstance(x, dict) else 0, reverse=True)
+        for item in _sorted_urgent[:10]:
+            subj = item.get("subject", "")
+            frm = item.get("from", "")
+            urg_level = item.get("urgency", 0)
+            dt = item.get("date", "")
+            urg_label = "极高" if urg_level >= 4 else ("高" if urg_level >= 3 else "中")
+            urg_color = "red" if urg_level >= 4 else ("orange" if urg_level >= 3 else "yellow")
+            alert_card(urg_color, f"""
+                <b>紧急邮件</b> [紧急度: {urg_label} ({urg_level}/5)]<br>
+                主题: {clean_html(subj)}<br>来源: {clean_html(frm)}<br>日期: {dt}<br>
+                <b>处理原则:</b> 先读正文判断实际紧急程度(标题可能夸大) →
+                涉及Hold/查验→立即处理; 费用确认→24h内; 客户投诉→升级Bruce; 船公司通知→Everlyn归档
+            """)
+        if len(urgent_non_go) > 10:
+            alert_card("yellow", f"还有 {len(urgent_non_go) - 10} 封紧急邮件未展示")
+    else:
+        alert_card("green", "无紧急邮件")
 
-    # 分离: 欠费催收 vs 操作待办 (Bruce: 催收就是催收不分优先级，统一折叠)
-    pending = [t for t in all_tasks if t["id"] not in completed_ids]
-    done_today = [t for t in all_tasks if t["id"] in completed_ids]
+    # ── 重要操作跟踪(从graph_tasks动态生成) ──
+    gt_ops = [t for t in GT_TASKS if t.get("type") not in ("arrears", "supplier_followup")]
+    gt_suppliers = [t for t in GT_TASKS if t.get("type") == "supplier_followup"]
+    if gt_ops:
+        st.markdown("---")
+        section_header(f"重要操作跟踪: {len(gt_ops)}项")
 
-    # 按客户名去重欠费(同一客户只显示一次)
-    arrears_tasks = []
-    arrears_seen = set()
-    for t in pending:
-        if t.get("category") == "arrears":
-            ckey = t.get("customer", "").upper()[:15]
-            if ckey and ckey not in arrears_seen:
-                arrears_seen.add(ckey)
-                arrears_tasks.append(t)
-            elif not ckey:
-                arrears_tasks.append(t)
+        gt_rows = []
+        for t in gt_ops:
+            mbl = t.get("mbl", "")
+            carrier = t.get("carrier", "")
+            customer = t.get("customer", "")
+            action = t.get("action", "")
+            detail = t.get("detail_lines", [])
+            ctx = t.get("progress_history", "")
+            last = t.get("last_seen", "")
+            typ = t.get("type", "")
 
-    # 操作待办(非催收)
-    ops_tasks = [t for t in pending if t.get("category") != "arrears"]
+            # 类型中文名
+            type_map = {
+                "fee_pending": "费用待确认",
+                "fee_confirmed": "费用已确认",
+                "payment_requested": "已申请付款",
+                "hold_active": "Hold处理中",
+                "inspection_active": "查验处理中",
+            }
+            type_cn = type_map.get(typ, typ)
 
-    # 补充: bl_status中的未电放/Hold/AN漏单也作为操作待办
-    _bl_task_counter = 0
-    for m in no_tlx_mbl:
-        _bl_task_counter += 1
-        carrier = "MSC" if m.startswith("MEDU") else "CMA-CGM" if m.startswith("CMDU") else "COSCO" if m.startswith("COSU") else "ONE" if m.startswith("ONEY") else "OOCL" if m.startswith("OOLU") else "ZIM" if m.startswith("ZIMU") else "其他"
-        tid = f"bl_notlx__{m}"
-        if tid not in seen_ids:
-            ops_tasks.append({"id": tid, "category": "bl_release", "priority": "high",
-                "title": "MBL未电放", "action": f"联系origin确认TLX状态, 催促放单",
-                "mbl": m, "hbl": "", "carrier": carrier, "customer": "", "wwl_sender": "", "wwl_branch": "",
-                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
-                "internal_staff": "", "customer_contact": "", "assignee": ""})
-    for h in no_tlx_hbl:
-        _bl_task_counter += 1
-        tid = f"bl_hbl__{h}"
-        if tid not in seen_ids:
-            ops_tasks.append({"id": tid, "category": "bl_release", "priority": "high",
-                "title": "HBL未电放", "action": f"联系origin确认TLX, 确认客户是否已付款",
-                "mbl": "", "hbl": h, "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
-                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
-                "internal_staff": "", "customer_contact": "", "assignee": ""})
-    for h in hold_bl:
-        if not isinstance(h, dict): continue
-        m = h.get("mbl", "")
-        tid = f"bl_hold__{m}"
-        if tid not in seen_ids:
-            htype = h.get("type", "待确认")
-            ops_tasks.append({"id": tid, "category": "hold_active", "priority": "urgent",
-                "title": f"Hold/查验: {htype}", "action": f"{htype} → 确认具体要求 → 联系报关行/origin",
-                "mbl": m, "hbl": "", "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
-                "amount": "", "detail_lines": [h.get("subject", "")], "contact": "", "consignee": "", "shipper": "",
-                "internal_staff": "", "customer_contact": "", "assignee": ""})
-    for m in an_no_prealert:
-        tid = f"bl_an__{m}"
-        if tid not in seen_ids:
-            ops_tasks.append({"id": tid, "category": "prealert_gap", "priority": "urgent",
-                "title": "AN已收但无预报", "action": "可能漏单! 查找对应预报, 确认HBL, 联系origin",
-                "mbl": m, "hbl": "", "carrier": "", "customer": "", "wwl_sender": "", "wwl_branch": "",
-                "amount": "", "detail_lines": [], "contact": "", "consignee": "", "shipper": "",
-                "internal_staff": "", "customer_contact": "", "assignee": ""})
+            # 业务摘要(合并detail_lines)
+            summary = " | ".join(detail[:2]) if detail else ""
 
-    ops_urgent = [t for t in ops_tasks if t["priority"] == "urgent"]
-    ops_high = [t for t in ops_tasks if t["priority"] == "high"]
-    ops_medium = [t for t in ops_tasks if t["priority"] == "medium"]
+            gt_rows.append({
+                "类型": type_cn,
+                "MBL": mbl[:40],
+                "船公司": carrier,
+                "客户": customer[:20],
+                "当前动作": action[:60],
+                "业务摘要": summary[:80],
+                "关联方": ctx[:40],
+                "最后活跃": last,
+            })
 
-    section_header(f"任务工作台: 催收{len(arrears_tasks)}条 + 操作{len(ops_tasks)}条 / 已完成{len(done_today)}条")
+        gt_df = pd.DataFrame(gt_rows)
+        st.dataframe(gt_df, use_container_width=True, hide_index=True, key="tbl_gt_ops")
 
-    cat_labels = {"hold":"Hold扣货","inspection":"查验","cc_confirm":"CC费用","arrival_notice":"到港通知",
-                  "dd_alert":"D&D费用","overdue":"Overdue催收","arrears":"欠费催收","bl_release":"换单电放",
-                  "prealert_gap":"漏单预警","sop":"SOP跟进",
-                  "hold_active":"Hold扣货","inspection_active":"查验中","fee_confirmed":"费用已确认",
-                  "fee_pending":"费用待确认","payment_requested":"待付款","awaiting_reply":"等回复",
-                  "inspection_broker":"查验报关跟进","stale_arrival":"到港停滞",
-                  "supplier_followup":"供应商跟进"}
-    ops_cats = {}
-    for t in ops_tasks:
-        c = t.get("category", "other")
-        ops_cats[c] = ops_cats.get(c, 0) + 1
-    if ops_cats:
-        cat_display = " | ".join(f"{cat_labels.get(k,k)}:{v}" for k,v in sorted(ops_cats.items(), key=lambda x:x[1], reverse=True))
-        st.markdown(f"<p style='color:#a0a0c0;font-size:13px;margin:4px 0;'>操作类: {cat_display}</p>", unsafe_allow_html=True)
+    # 供应商跟进
+    if gt_suppliers:
+        section_header(f"供应商沟通跟进: {len(gt_suppliers)}家")
+        sup_rows = []
+        for t in gt_suppliers:
+            sup_rows.append({
+                "供应商": t.get("action", "").split("来信")[0].split("已报价")[0].split("确认完成")[0].strip(),
+                "状态": t.get("action", ""),
+                "最后联系": t.get("progress_history", ""),
+            })
+        sup_df = pd.DataFrame(sup_rows)
+        st.dataframe(sup_df, use_container_width=True, hide_index=True, key="tbl_gt_sup")
 
-    def render_task_card(t, pri_color, bg_alpha):
-        """渲染任务卡片 — 按客户维度展示，含提单/船公司/联系人/金额明细"""
-        cat_label = cat_labels.get(t["category"], t["category"])
-        cust = t.get("customer", "")
-        mbl = t.get("mbl", "")
-        hbl = t.get("hbl", "")
-        amount = t.get("amount", "")
-        carrier = t.get("carrier", "")
-        sender = t.get("sender", "")
-        contact = t.get("contact", "")
-        internal = t.get("internal_staff", "")
-        ext_contact = t.get("customer_contact", "")
-        details = t.get("detail_lines", [])
+    st.markdown("---")
 
-        consignee = t.get("consignee", "")
-        shipper = t.get("shipper", "")
-        lines = []
+    # ═══ 业务洞察 & 询报价追踪 ═══
+    section_header("业务洞察 & 商机追踪")
 
-        # 行1: 类别标签 + 客户 + 金额
-        h = f'<span style="background:{pri_color};color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:600;">{cat_label}</span>'
-        if cust:
-            h += f'&nbsp; <b style="color:#fff;font-size:15px;">{cust}</b>'
-        if amount:
-            h += f'&nbsp; <span style="color:#ffd700;font-weight:700;">{amount}</span>'
-        lines.append(h)
+    # 从DB实时提取询报价和业务机会(线上版无DB时跳过)
+    _biz_conn = None
+    try:
+        import sqlite3 as _sq
+        import os
+        if os.path.exists('data/wwl_email_graph.db'):
+            _biz_conn = _sq.connect('data/wwl_email_graph.db')
+    except:
+        pass
+    _d7 = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
 
-        # 行2: 收货人Consignee / 发货人Shipper (核心指向信息)
-        party_parts = []
-        if consignee:
-            party_parts.append(f'<span style="color:#4fc3f7;">收货人: {consignee[:50]}</span>')
-        if shipper and 'WORLDWIDE' not in shipper.upper():
-            party_parts.append(f'<span style="color:#81c784;">发货人: {shipper[:35]}</span>')
-        if party_parts:
-            lines.append(f'<div style="font-size:12px;margin:3px 0;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(party_parts)}</div>')
+    # 询报价统计
+    _rfq_categories = []
 
-        # 行3: 行动指引
-        lines.append(f'<div style="color:#c0c0d0;font-size:13px;margin:4px 0;">{t["action"]}</div>')
+    if not _biz_conn:
+        alert_card("yellow", "业务洞察需要数据库支持(线上版暂不可用,数据来自最近一次扫描)")
 
-        # 行4: 提单号 + 船公司
-        refs = []
-        if mbl:
-            ref = f'MBL: <span style="font-family:monospace;color:#a0a0e0;">{mbl}</span>'
-            if carrier:
-                ref += f' <span style="color:#888;">({carrier})</span>'
-            refs.append(ref)
-        if hbl:
-            refs.append(f'HBL: <span style="font-family:monospace;color:#a0a0e0;">{hbl}</span>')
-        if refs:
-            lines.append(f'<div style="font-size:12px;margin:2px 0;">{"&nbsp;&nbsp;|&nbsp;&nbsp;".join(refs)}</div>')
+    # Trucking fee
+    _tc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND subject LIKE '%Trucking fee%'").fetchone()[0] if _biz_conn else 0
+    if _tc > 0:
+        _samples = _biz_conn.execute(f"SELECT sender_name, subject, substr(body,1,300) FROM emails WHERE date_parsed>='{_d7}' AND subject LIKE '%Trucking fee%' ORDER BY date_parsed DESC LIMIT 3").fetchall()
+        _detail = []
+        for s in _samples:
+            body = (s[2] or '').replace('\r','').replace('\n',' ')[:120]
+            _detail.append(f"{s[0] or ''}: {body}")
+        _rfq_categories.append(('卡车报价', _tc, 'THORNOVA SOLAR(Ellen Jin)频繁询价多州DDP送货费 → 说明THORNOVA业务量在增长, 且依赖我们安排内陆运输。这是持续收入来源,建议锁定长期合约价。', _detail))
 
-        # 行5: 费用明细
-        if details:
-            detail_html = "&nbsp;/&nbsp;".join(d[:40] for d in details[:4])
-            if len(details) > 4:
-                detail_html += f" +{len(details)-4}项"
-            lines.append(f'<div style="color:#777;font-size:11px;">明细: {detail_html}</div>')
+    # Air freight
+    _ac = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%Air Freight%' OR subject LIKE '%air rate%')").fetchone()[0]
+    if _ac > 0:
+        _samples = _biz_conn.execute(f"SELECT sender_name, subject, substr(body,1,300) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%Air Freight%' OR subject LIKE '%air rate%') ORDER BY date_parsed DESC LIMIT 2").fetchall()
+        _detail = [f"{s[0] or ''}: {(s[2] or '').replace(chr(13),'').replace(chr(10),' ')[:120]}" for s in _samples]
+        _rfq_categories.append(('空运询价', _ac, '泰国线(BKK)有空运需求 → PTS(Sam Kim)提供中华航空JFK→TPE→BKK报价$2.75/KG。空运是高利润业务,如果能拿到稳定货量值得投入。关注客户是否因海运延误才转空运(一次性)还是常态需求。', _detail))
 
-        # 行6: 找谁(收货人联系方式 / 委托方WWL分公司 / origin操作人)
-        wwl_sender = t.get("wwl_sender", "")
-        wwl_branch = t.get("wwl_branch", "")
-        who_lines = []
+    # Transload/FTL
+    _tlc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%Transload%' OR subject LIKE '%FTL%' OR body LIKE '%transload%flatbed%')").fetchone()[0]
+    if _tlc > 0:
+        _samples = _biz_conn.execute(f"SELECT sender_name, subject, substr(body,1,300) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%Transload%' OR subject LIKE '%FTL%') AND sender_email NOT LIKE '%pltplt%' ORDER BY date_parsed DESC LIMIT 2").fetchall()
+        _detail = [f"{s[0] or ''}: {(s[2] or '').replace(chr(13),'').replace(chr(10),' ')[:120]}" for s in _samples]
+        _rfq_categories.append(('Transload拆箱+FTL', _tlc, 'Effy在找FCC USA(Flora Wang)报价LA仓库transload+flatbed到TX。Transload是增值服务(不只是换单),利润比纯换单高2-3倍。FCC USA是我们最核心的综合供应商(2555次互动),已有成熟合作基础。', _detail))
 
-        # A: 收货人/客户方联系人
-        if ext_contact:
-            who_lines.append(f'<span style="color:#00c853;font-weight:600;">收货人: {ext_contact[:60]}</span>')
-        elif contact:
-            who_lines.append(f'<span style="color:#00c853;font-weight:600;">客户方: {contact[:60]}</span>')
+    # BESS大件
+    _bc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (body LIKE '%BESS%' AND (subject LIKE '%Trucking%' OR body LIKE '%trucking%'))").fetchone()[0]
+    if _bc > 0:
+        _rfq_categories.append(('BESS储能大件', _bc, 'HITHIUM(海辰)BESS储能单元42T/台,需9轴特种车。这是新能源赛道高价值货物,单票利润远超普通集装箱。但客户自带trucker(Yancey: "my trucker"),我们目前只做清关+费用代收。机会:如果能拿下trucking也做,利润翻倍。', []))
 
-        # B: 委托方(WWL哪个分公司发给我们的)
-        if wwl_sender and wwl_branch.startswith("WWL"):
-            who_lines.append(f'<span style="color:#ff9800;font-weight:600;">找: {wwl_sender[:45]}</span> <span style="color:#cc7700;">[{wwl_branch}]</span>')
+    # EXW
+    _ec = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND subject LIKE '%EX WORK%'").fetchone()[0]
+    if _ec > 0:
+        _samples = _biz_conn.execute(f"SELECT sender_name, subject FROM emails WHERE date_parsed>='{_d7}' AND subject LIKE '%EX WORK%' ORDER BY date_parsed DESC LIMIT 2").fetchall()
+        _detail = [f"{s[0]}: {s[1][:60]}" for s in _samples]
+        _rfq_categories.append(('EXW工厂提货', _ec, 'Wang Jiong在催供应商报价,说明有客户需要从美国工厂直接提货的需求(EXW=Ex Works)。这类业务通常是出口或内陆调拨,如果频繁出现说明客户在扩大美国本地采购。', _detail))
 
-        # C: 如果A和B都没有，显示origin端操作人(最后的兜底)
-        if not who_lines and internal:
-            who_lines.append(f'<span style="color:#2196f3;">Origin操作: {internal}</span>')
+    # Export booking
+    _xc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%export%Mombasa%' OR subject LIKE '%出口%' OR (subject LIKE '%BKG%' AND body LIKE '%export%'))").fetchone()[0]
+    if _xc > 0:
+        _rfq_categories.append(('出口新航线', _xc, '昊能(HOUNEN SOLAR)询价3×40HQ出口到蒙巴萨(肯尼亚)。非洲太阳能市场是2026年增长最快的区域,如果昊能开拓非洲线,后续会有持续货量。建议:给出有竞争力的报价锁定这个新航线。', []))
 
-        for wl in who_lines:
-            lines.append(f'<div style="font-size:12px;margin:2px 0;">{wl}</div>')
+    # HAZMAT
+    _hc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (subject LIKE '%HAZMAT%' OR subject LIKE '%Class 9%')").fetchone()[0]
+    if _hc > 0:
+        _rfq_categories.append(('HAZMAT危险品清关', _hc, 'TQL(美国大型3PL)发来Class 9危险品CES查验清关RFQ。这是专业门槛高的业务,竞争少利润厚。如果拿下,打开HAZMAT清关新赛道。TQL作为大型3PL,后续可能有持续的HAZMAT货量。', []))
 
-        body = "".join(lines)
-        return f'<div style="background:rgba({bg_alpha});border-left:4px solid {pri_color};padding:10px 14px;border-radius:0 10px 10px 0;margin:5px 0;">{body}</div>'
+    # JEE Tesla
+    _jc = _biz_conn.execute(f"SELECT COUNT(*) FROM emails WHERE date_parsed>='{_d7}' AND (body LIKE '%JEE%' OR body LIKE '%devanning%Tesla%')").fetchone()[0]
+    if _jc > 0:
+        _rfq_categories.append(('JEE→Tesla拆箱配送', _jc, 'JEE的LA/LB→Texas Tesla工厂拆箱配送新一轮竞标。当前市场底价$1,800/柜。Will在评估是否继续报价。Tesla供应链是长期大客户,即使利润薄也值得维持关系。', []))
 
-    _chk_counter = [0]  # 用列表绕过scope限制
+    (_biz_conn.close() if _biz_conn else None)
 
-    def render_task_with_confirm(t, pri_color, bg_alpha):
-        """渲染任务卡片 + 两步确认"""
-        _chk_counter[0] += 1
-        n = _chk_counter[0]
-        st.markdown(render_task_card(t, pri_color, bg_alpha), unsafe_allow_html=True)
-        c1, c2, c3 = st.columns([0.15, 0.15, 0.7])
-        with c1:
-            checked = st.checkbox("完成", key=f"chk_{n}", label_visibility="visible")
-        with c2:
-            if checked:
-                if st.button("确认", key=f"cfm_{n}"):
-                    completed_ids[t["id"]] = {"time": datetime.now().isoformat(), "by": "team"}
-                    save_tasks({"completed": completed_ids, "tasks": all_tasks})
-                    st.rerun()
+    if _rfq_categories:
+        coach_box("业务洞察: 从邮件中发现的商机信号", f"""
+            <b>本周{sum(c[1] for c in _rfq_categories)}封询报价/业务机会邮件</b>,覆盖{len(_rfq_categories)}个业务方向。
+            每一封询报价都是客户在告诉我们"我有需求" — 响应速度和报价质量直接决定能否拿到业务。<br><br>
+            <b>关注重点:</b> 不是所有询价都值得全力投入。高利润(Transload/HAZMAT/BESS大件) > 持续性(DDP送货/出口新航线) > 一次性(EXW/空运)。
+            对高利润业务要快速响应;对持续性业务要锁定长期合约;对一次性业务评估ROI后再决定。
+        """)
 
-    # ─── 欠费催收(统一折叠, 不分优先级 — Bruce: 催收无论金额大小都要做) ───
-    if arrears_tasks:
-        total_arrears_amt = sum(
-            float(t.get("amount","0").replace("$","").replace(",",""))
-            for t in arrears_tasks if t.get("amount")
-        )
-        with st.expander(f"欠费催收 ({len(arrears_tasks)}家客户 | 总额${total_arrears_amt:,.0f})", expanded=True):
-            for t in arrears_tasks:
-                render_task_with_confirm(t, "#e94560", "233,69,96,0.10")
+        for cat_name, cnt, insight, details in _rfq_categories:
+            alert_card("yellow", f"""
+                <b>{cat_name}</b> — 本周{cnt}封<br><br>
+                <b>洞察:</b> {insight}<br>
+                {'<br><b>最新动态:</b><br>' + '<br>'.join(f'- {d[:150]}' for d in details[:2]) if details else ''}
+            """)
+    else:
+        alert_card("green", "本周无新询报价/业务机会")
 
-    # ─── 操作待办(hold/查验/费用/付款等) ───
-    if ops_urgent:
-        with st.expander(f"紧急操作 ({len(ops_urgent)})", expanded=True):
-            for t in ops_urgent:
-                render_task_with_confirm(t, "#ffa500", "255,165,0,0.08")
-
-    if ops_high:
-        with st.expander(f"重要操作 ({len(ops_high)})", expanded=len(ops_urgent) == 0):
-            for t in ops_high:
-                render_task_with_confirm(t, "#2196f3", "33,150,243,0.06")
-
-    if ops_medium:
-        with st.expander(f"常规操作 ({len(ops_medium)})"):
-            for t in ops_medium:
-                render_task_with_confirm(t, "#2196f3", "33,150,243,0.05")
-
-    # (Hold/查验/CC/异常已移到教练总结下方)
-
-    # ─── 今日已完成 ───
-    if done_today:
-        with st.expander(f"已完成 ({len(done_today)})"):
-            for t in done_today:
-                info = completed_ids.get(t["id"], {})
-                done_time = info.get("time", "")[:16] if isinstance(info, dict) else ""
-                st.markdown(f"""<div style="border-left:3px solid #00c853;padding:4px 12px;margin:2px 0;opacity:0.6;">
-                    <span style="color:#00c853;">✓</span> <s style="color:#888;">{t['title']}</s>
-                    <span style="color:#555;font-size:11px;"> 完成于 {done_time}</span>
-                </div>""", unsafe_allow_html=True)
-
-    # 清除过期完成记录(超过24h的)
-    now_ts = datetime.now()
-    stale_keys = []
-    for tid, info in completed_ids.items():
-        if isinstance(info, dict) and info.get("time"):
-            try:
-                done_dt = datetime.fromisoformat(info["time"])
-                if (now_ts - done_dt).total_seconds() > 86400:
-                    stale_keys.append(tid)
-            except:
-                pass
-    if stale_keys:
-        for k in stale_keys:
-            del completed_ids[k]
-        save_tasks({"completed": completed_ids, "tasks": all_tasks})
-
-    # (事件详情已移到常规待办后面)
+    st.markdown("---")
 
 # ══════════════════════════════════════════════════════════════════
 # TAB 2: 提单状态监控
@@ -1045,17 +1008,22 @@ with tabs[0]:
 with tabs[1]:
     section_header("提单状态总览")
 
-    coach_box("教练总结: 提单状态监控是换单操作的生命线", """
-        <b>MBL没有TLX = origin还没放单, 我们无法换单。</b> 每一个未电放的MBL都是一个潜在的延误风险。
-        如果货物已经到港但MBL未电放, 船公司不会释放DO(Delivery Order), 意味着我们无法安排提货,
-        滞期费每天都在累积。<br><br>
-        <b>AN已收但无预报 = 可能漏接了业务, 需要立即排查。</b> 这意味着船公司已经发了到港通知,
-        但我们系统里没有对应的预报(Pre-alert)记录。可能是origin忘了发预报, 也可能是我们漏处理了。
-        无论哪种情况, 都需要在24小时内查明并补录。<br><br>
-        <b>Hold提单需要根据类型采取不同行动:</b><br>
-        - <b>Freight Hold:</b> 运费未付, 联系origin催付, 通常1-2个工作日可解决<br>
-        - <b>Regulatory Hold:</b> 海关/监管hold, 需要补充ISF/PI/PL等文件, 可能需要3-5天<br>
-        - <b>DO Fee Hold:</b> 目的港费用未付, 联系财务确认并付款, 通常PayCargo当天可解决<br><br>
+    coach_box("教练总结: 提单生命周期 — 从预报到结案的完整链路", f"""
+        <b>MBL是索引, HBL才是核心。</b> 但MBL的TLX(Telex Release/电放)是整个换单流程的前提:
+        MBL未电放 → 无法在BTL/PLT平台换单 → 拿不到HBL → 无法清关 → 无法提货。
+        每一个未电放的MBL都是一个正在累积成本的定时炸弹。<br><br>
+        <b>换单流程:</b> Origin发SA(预报) → MBL电放(SWB/Surrendered) → BTL平台(switchbl.com)换出HBL →
+        HBL电放给consignee → 报关行(YES/WFS)用HBL清关 → 船公司发AN(到港通知) →
+        付费拿DO → 安排卡车提柜 → Delivery → 结案<br><br>
+        <b>两种MBL模式:</b><br>
+        - <b>BTL模式:</b> MBL consignee是BTL → 通过switchbl.com换单 → 大部分票走这个流程<br>
+        - <b>WWL USA直接模式:</b> MBL consignee是WWL USA → 我们直接操作, 不经过BTL<br><br>
+        <b>AN已收但无预报 = 最危险的漏单信号:</b> 船公司已通知到港, 但我们系统无记录。
+        两种可能: 1) origin忘发SA(催origin补发); 2) 我们漏处理了(查收件箱)。
+        漏单=客户的货在码头没人管, 滞期费从Day 1开始跑, 且可能影响WWL在船公司的信用评级。<br><br>
+        <b>当前状态:</b> {len(no_tlx_mbl)}个MBL未电放 / {len(no_tlx_hbl)}个HBL未电放 /
+        {len(an_no_prealert)}个AN无预报(漏单风险) / {len(hold_bl)}个Hold /
+        电放确认MBL:{tlx_mbl_confirmed} HBL:{tlx_hbl_confirmed}<br>
         <b>目标:</b> MBL电放率>95%, HBL电放率>90%, AN无预报=0, Hold提单24h内有行动方案。
     """)
 
@@ -1081,21 +1049,34 @@ with tabs[1]:
     # MBL not TLX
     section_header(f"MBL未电放列表 ({len(no_tlx_mbl)}个)")
     if no_tlx_mbl:
+        def _mbl_carrier(m):
+            if m.startswith("MEDU"): return "MSC"
+            if m.startswith("CMDU"): return "CMA-CGM"
+            if m.startswith("COSU"): return "COSCO"
+            if m.startswith("ONEY"): return "ONE"
+            if m.startswith("OOLU"): return "OOCL"
+            if m.startswith("ZIMU"): return "ZIM"
+            if m.startswith("HLCU"): return "Hapag-Lloyd"
+            if m.startswith("YMJA"): return "YML(阳明)"
+            if m.startswith("WHLC"): return "WHL(万海)"
+            if m.startswith("HDMU"): return "HMM(韩新)"
+            if m.startswith("MAEU"): return "Maersk"
+            return "其他"
+        def _mbl_action(m):
+            c = _mbl_carrier(m)
+            if c == "MSC": return "联系origin催TLX → MSC电放后通过BTL平台换单 → MSC系统通知常延迟12-24h"
+            if c == "CMA-CGM": return "联系origin催TLX → CMA通过BTL换单 → 注意CMA Hold释放需BTL平台确认"
+            if c == "COSCO": return "联系origin催TLX → COSCO电放后BTL换单 → COSCO系统相对稳定"
+            if c == "OOCL": return "联系origin催TLX → OOCL直接模式或BTL换单 → OOCL Regulatory Hold最严格"
+            if c == "ONE": return "联系origin催TLX → ONE通过BTL换单 → ONE系统响应较快"
+            if c == "ZIM": return "联系origin催TLX → ZIM通过BTL换单 → ZIM的AN通常在ETA前3天发"
+            if c == "Hapag-Lloyd": return "联系origin催TLX → HL通过BTL换单 → HL系统稳定但费用结构复杂"
+            return "联系origin确认TLX状态 → 确认换单路径(BTL/直接)"
         mbl_df = pd.DataFrame({
             "序号": range(1, len(no_tlx_mbl) + 1),
             "MBL号": no_tlx_mbl,
-            "船公司": [
-                "MSC" if m.startswith("MEDU") else
-                "CMA-CGM" if m.startswith("CMDU") else
-                "COSCO" if m.startswith("COSU") else
-                "ONE" if m.startswith("ONEY") else
-                "OOCL" if m.startswith("OOLU") else
-                "ZIM" if m.startswith("ZIMU") else
-                "其他"
-                for m in no_tlx_mbl
-            ],
-            "建议行动": ["联系origin确认TLX状态, 催促放单"] * len(no_tlx_mbl),
-            "状态": ["待跟进"] * len(no_tlx_mbl),
+            "船公司": [_mbl_carrier(m) for m in no_tlx_mbl],
+            "建议行动": [_mbl_action(m) for m in no_tlx_mbl],
         })
         st.dataframe(mbl_df, use_container_width=True, hide_index=True, key="tbl_1")
     else:
@@ -1107,8 +1088,9 @@ with tabs[1]:
         hbl_df = pd.DataFrame({
             "序号": range(1, len(no_tlx_hbl) + 1),
             "HBL号": no_tlx_hbl,
-            "建议行动": ["联系销售确认TLX, 确认客户是否已付款"] * len(no_tlx_hbl),
-            "状态": ["待跟进"] * len(no_tlx_hbl),
+            "建议行动": [
+                "确认对应MBL是否已电放 → MBL未放则先催MBL → MBL已放则通过BTL/PLT平台出HBL → HBL电放给consignee后报关行才能清关"
+            ] * len(no_tlx_hbl),
         })
         st.dataframe(hbl_df, use_container_width=True, hide_index=True, key="tbl_2")
     else:
@@ -1117,12 +1099,18 @@ with tabs[1]:
     # AN no prealert
     section_header(f"AN已收但无预报 - 可能漏单! ({len(an_no_prealert)}个)")
     if an_no_prealert:
+        def _an_action(m):
+            c = _mbl_carrier(m) if 'no_tlx_mbl' in dir() else ""
+            return (f"漏单风险! 1) 搜索收件箱查SA预报邮件; "
+                    f"2) 联系origin确认是否有对应HBL和SA; "
+                    f"3) 如确认有业务立即补录系统; "
+                    f"4) AN意味着船已到港, Free Time已开始倒计时!")
         an_df = pd.DataFrame({
             "序号": range(1, len(an_no_prealert) + 1),
             "MBL号": an_no_prealert,
-            "风险等级": ["极高-可能漏单"] * len(an_no_prealert),
-            "建议行动": ["可能漏单! 立即查找对应预报邮件, 确认是否有对应HBL, 联系origin核实"] * len(an_no_prealert),
-            "状态": ["待核查"] * len(an_no_prealert),
+            "船公司": [_mbl_carrier(m) for m in an_no_prealert],
+            "风险等级": ["极高-漏单"] * len(an_no_prealert),
+            "建议行动": [_an_action(m) for m in an_no_prealert],
         })
         st.dataframe(an_df, use_container_width=True, hide_index=True, key="tbl_3")
     else:
@@ -1133,21 +1121,23 @@ with tabs[1]:
     if hold_bl:
         hold_rows = []
         for h in hold_bl:
+            htype = str(h.get("type", "")).lower()
+            hmbl = h.get("mbl", "")
+            carrier = _mbl_carrier(hmbl)
+            if "freight" in htype:
+                action = f"Freight Hold → 确认费用是collect还是prepaid: collect由Sven通过PayCargo付款(当天解除); prepaid联系origin提供付款凭证给{carrier}"
+            elif "regulatory" in htype:
+                action = f"Regulatory Hold → 联系报关行确认CBP要求的具体文件 → 新能源产品需MSDS+电池报告 → {carrier}的Regulatory Hold通常需全套文件才放行(3-5天)"
+            elif "do" in htype or "fee" in htype:
+                action = f"DO Fee Hold → Sven通过PayCargo付目的港费用 → 付款确认后联系{carrier}释放DO → 通常当天可解决"
+            else:
+                action = f"Hold类型待确认 → Everlyn联系{carrier}确认具体Hold原因和所需文件"
             hold_rows.append({
-                "MBL": h.get("mbl", ""),
+                "MBL": hmbl,
+                "船公司": carrier,
                 "Hold类型": h.get("type", "Unknown"),
-                "需补资料": "是" if h.get("needs_docs") else "否",
-                "来源邮件主题": h.get("subject", ""),
                 "来源": h.get("from", ""),
-                "建议行动": (
-                    "Freight Hold: 联系origin催付运费"
-                    if "freight" in str(h.get("type", "")).lower()
-                    else "Regulatory Hold: 准备ISF/PI/PL补充文件"
-                    if "regulatory" in str(h.get("type", "")).lower()
-                    else "DO Fee Hold: 确认DO费用并安排付款"
-                    if "do" in str(h.get("type", "")).lower() or "fee" in str(h.get("type", "")).lower()
-                    else "检查Hold类型, 联系船公司确认具体要求"
-                ),
+                "建议行动": action,
             })
         hold_df = pd.DataFrame(hold_rows)
         st.dataframe(hold_df, use_container_width=True, hide_index=True, key="tbl_4")
@@ -1162,19 +1152,27 @@ with tabs[1]:
 with tabs[2]:
     section_header("欠费总览")
 
-    coach_box("教练总结: D&D费用审查 + 催收策略", """
-        <b>第一步: 审查D&D账单合规性(FMC 46 CFR 541.6):</b>
-        收到船公司D&D账单 → 核对19项必备要素(BL号/柜号/免费天数/起止日/费率/争议联系方式等)
-        → <em>缺任何一项=无需付款, 直接争议</em>。2020-2025年全美D&D总额$154亿, 很多账单不合规。<br><br>
-        <b>第二步: 区分费用类型:</b>
-        D&D($52K/60天) — 受FMC监管, 可争议不合理收费;
-        Chassis($1.7M!) — 不受FMC管, 需与DCLI/TRAC池运营商直接谈判。
-        <em>Chassis是我们最大单项费用, 远超D&D, 必须重视!</em><br><br>
-        <b>第三步: 催收时间线:</b>
-        T+7首次催收 → T+15三方协同群 → T+30正式追偿函 → T+45中信保窗口(超时=理赔失效!)。
-        Top欠费客户请查看待办事项栏(每周一更新)。<br><br>
-        <b>FMC争议权利:</b> 被计费方有30天争议期; FMC CADRS提供免费调解;
-        $50K以下走Small Claims快速通道; <em>OSRA禁止船公司因你投诉而报复拒舱</em>。
+    coach_box("教练总结: 催收 — WWL作为NVOCC的连带责任防线", """
+        <b>为什么催收不是可选项:</b> WWL作为FMC注册NVOCC(ORG NO.019194), 对所有目的港费用承担连带责任。
+        Consignee(收货人, 即客户的客户)不付费, 船公司直接向WWL追偿。
+        这就是为什么每一笔collect费用都必须及时催收 — 不是帮客户催, 是保护我们自己。<br><br>
+        <b>T+X催收时间线(铁律):</b><br>
+        - T+7: Rita首次催收(邮件+电话), 建立催收记录<br>
+        - T+15: Maggie升级催收, 建立三方协同群(origin+客户+我们), 发正式催款通知<br>
+        - T+30: 正式追偿函(Legal Letter), Will审批, 邮件留痕<br>
+        - T+45: 中信保理赔窗口! 超过此期限=理赔资格失效, 公司自行承担损失<br>
+        - T+60: 法律途径(如金额超过$5,000, 考虑Small Claims Court或委托律师)<br><br>
+        <b>中信保申请四件套(缺一不可):</b><br>
+        1) 服务协议(含费用承担条款 — 证明是谁该付钱);<br>
+        2) 书面费用通知(含7日默认认可条款 — 证明我们通知了);<br>
+        3) 完整催收记录(邮件链 — 证明我们尽力催了);<br>
+        4) 垫付凭证(APLAX付款号 — 证明我们确实垫了)<br><br>
+        <b>费用类型与催收路径:</b><br>
+        - <b>Collect到付:</b> Consignee承担 → Rita/Maggie催consignee → 确认后Sven付船公司(PayCargo)<br>
+        - <b>Prepaid预付:</b> Shipper已付origin → 确认入账即结案<br>
+        - <b>Advanced垫付:</b> WWL先付(Sven执行, APLAX号追踪) → 后续向客户追偿 → 这是最大风险点<br><br>
+        <b>2026行业动态:</b> FMC强化OSRA 2022执法, 船公司D&D账单必须包含19项要素(按46 CFR 541),
+        缺少任何要素我们有权在30天争议期内提出异议不付。所有记录保留5年供FMC审计。
     """)
 
     st.markdown("---")
@@ -1195,124 +1193,76 @@ with tabs[2]:
     with c4:
         st.markdown(metric_card(f"${collect_cnee:,.0f}", "代收-收货人", "#9c27b0"), unsafe_allow_html=True)
 
-    # 欠费构成饼图 + T+X阶段分布
-    _c_pie, _c_bar = st.columns(2)
-    with _c_pie:
-        if cnee_self or shipper_bear or collect_cnee:
-            _pie_data = []
-            if cnee_self: _pie_data.append({"类型": "收货人自付", "金额": cnee_self})
-            if shipper_bear: _pie_data.append({"类型": "委托人承担", "金额": shipper_bear})
-            if collect_cnee: _pie_data.append({"类型": "代收-收货人", "金额": collect_cnee})
-            _pie_df = pd.DataFrame(_pie_data)
-            fig_pie = px.pie(_pie_df, names="类型", values="金额",
-                             color_discrete_sequence=["#e94560","#2196f3","#9c27b0"],
-                             title="欠费构成")
-            fig_pie.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-                                  font_color="#e0e0e0", height=280, title_font_size=14)
-            st.plotly_chart(fig_pie, use_container_width=True, key="arr_pie")
-    with _c_bar:
-        if SOP and isinstance(SOP, dict):
-            _tx_counts = {"T+7 首催": 0, "T+15 升级": 0, "T+30 追偿函": 0, "超中信保": 0}
-            _tx_amts = {"T+7 首催": 0, "T+15 升级": 0, "T+30 追偿函": 0, "超中信保": 0}
-            for name, info in SOP.items():
-                if not isinstance(info, dict): continue
-                tx = info.get('status', '')
-                amt_num = info.get('amount_num', 0)
-                if '超中信保' in tx:
-                    _tx_counts["超中信保"] += 1; _tx_amts["超中信保"] += amt_num
-                elif '中信保' in tx or '追偿' in tx:
-                    _tx_counts["T+30 追偿函"] += 1; _tx_amts["T+30 追偿函"] += amt_num
-                elif '升级' in tx:
-                    _tx_counts["T+15 升级"] += 1; _tx_amts["T+15 升级"] += amt_num
-                else:
-                    _tx_counts["T+7 首催"] += 1; _tx_amts["T+7 首催"] += amt_num
-            _bar_data = [{"阶段": k, "客户数": v, "金额": _tx_amts[k]} for k, v in _tx_counts.items() if v > 0]
-            if _bar_data:
-                _bar_df = pd.DataFrame(_bar_data)
-                fig_bar = px.bar(_bar_df, x="阶段", y="金额", text="客户数",
-                                 color="阶段", color_discrete_map={"T+7 首催":"#2196f3","T+15 升级":"#ffa500","T+30 追偿函":"#ff6b35","超中信保":"#e94560"},
-                                 title="T+X阶段分布")
-                fig_bar.update_traces(texttemplate='%{text}家', textposition='outside')
-                fig_bar.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-                                      font_color="#e0e0e0", height=280, showlegend=False, title_font_size=14,
-                                      yaxis_title="金额($)", xaxis_title="")
-                st.plotly_chart(fig_bar, use_container_width=True, key="arr_bar")
+    st.markdown("---")
+
+    # Overdue SOP table
+    section_header("重点催收跟踪 (Overdue SOP)")
+    if SOP:
+        sop_rows = []
+        for name, info in SOP.items():
+            if isinstance(info, dict):
+                # Build the Rita/Maggie/Will action column by combining available info
+                actions_parts = []
+                if info.get("maggie_action"):
+                    actions_parts.append(info["maggie_action"])
+                if info.get("jim_action"):
+                    actions_parts.append(f"Jim: {info['jim_action']}")
+                if info.get("will_sun"):
+                    actions_parts.append(f"Will: {info['will_sun']}")
+                combined_action = " | ".join(actions_parts) if actions_parts else "-"
+
+                # Build suggested next action
+                next_action_parts = []
+                if info.get("sinosure_ready"):
+                    next_action_parts.append(info["sinosure_ready"])
+                if info.get("pending"):
+                    next_action_parts.append(info["pending"])
+                if info.get("resolution"):
+                    next_action_parts.append(info["resolution"])
+                if not next_action_parts:
+                    next_action_parts.append("持续跟进")
+                next_action = " | ".join(next_action_parts)
+
+                sop_rows.append({
+                    "客户": name,
+                    "提单": info.get("mbl", ""),
+                    "金额": info.get("amount", ""),
+                    "Rita/Maggie/Will行动": combined_action,
+                    "T+X状态": info.get("t_status", ""),
+                    "建议后续行动": next_action,
+                    "风险": info.get("risk", ""),
+                })
+        if sop_rows:
+            sop_df = pd.DataFrame(sop_rows)
+            st.dataframe(sop_df, use_container_width=True, hide_index=True, key="tbl_5")
 
     st.markdown("---")
 
-    # 催收跟踪 — 唯一数据源: arrears_analysis.json top20 (3.30 Excel权威数据)
-    section_header(f"欠费催收跟踪 ({ARR.get('total_consignees', len(ARR.get('top20',[])))  }家客户 | 数据: {ARR.get('snapshot_date','?')})")
-    _top20 = ARR.get("top20", [])
-    if _top20:
-        from datetime import datetime as _dt
-        _now = _dt.now()
-        _sop_html = ""
-        for i, item in enumerate(_top20):
-            name = item.get("name", "")
-            total = item.get("total", 0)
-            records = item.get("records", 0)
-            latest = item.get("latest", "")
-            sheets = item.get("sheets", {})
-            types = item.get("types", {})
-            mbls = item.get("mbls", [])
-
-            # 计算欠费天数和T+X
-            days = 0
-            if latest:
-                try: days = (_now - _dt.strptime(latest[:10], '%Y-%m-%d')).days
-                except: pass
-            if days <= 7: tx = "T+7 首催"
-            elif days <= 15: tx = "T+15 升级"
-            elif days <= 30: tx = "T+30 追偿函"
-            elif days <= 45: tx = f"T+{days} 中信保!"
-            else: tx = f"T+{days} 超中信保!"
-
-            # 收款类型
-            sheet_str = " + ".join(f"{k}${v:,.0f}" for k, v in sheets.items()) if isinstance(sheets, dict) else ""
-            # TOP 3费用类型
-            top_types = sorted(types.items(), key=lambda x: x[1], reverse=True)[:3] if isinstance(types, dict) else []
-            detail = " / ".join(f"{k[:20]}:${v:,.0f}" for k, v in top_types)
-
-            # 视觉指标
-            if days > 45: icon = "🔴"
-            elif days > 15: icon = "🟠"
-            elif days > 7: icon = "🟡"
-            else: icon = "🔵"
-
-            amt_color = "#e94560" if days > 45 else "#ffa500" if days > 15 else "#2196f3"
-            tx_color = "#e94560" if '超中信保' in tx else "#ffa500" if '中信保' in tx or '追偿' in tx or '升级' in tx else "#2196f3"
-            bar_pct = min(total / max(total_arrears, 1) * 100, 100)
-
-            _sop_html += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;width:25px;">{icon}</td>
-                <td><b style="color:#fff;">{unify_customer_name(name)}</b>
-                    <div style="background:rgba(50,50,80,0.5);border-radius:3px;height:4px;margin-top:3px;">
-                        <div style="background:{amt_color};width:{bar_pct:.0f}%;height:4px;border-radius:3px;"></div>
-                    </div>
-                </td>
-                <td style="text-align:center;color:{amt_color};font-weight:700;">${total:,.0f}</td>
-                <td style="text-align:center;color:#a0a0c0;">{days}天</td>
-                <td style="text-align:center;"><span style="background:{tx_color};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{tx}</span></td>
-                <td style="font-size:11px;color:#a0a0c0;">{sheet_str}</td>
-                <td style="font-size:11px;color:#888;">{detail}</td>
-                <td style="text-align:center;color:#666;">{records}条/{len(mbls)}票</td>
-            </tr>'''
-
-        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
-            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
-                <th style="padding:6px;color:#e94560;width:25px;"></th>
-                <th style="padding:6px;color:#e94560;">客户</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">欠费金额</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">天数</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">T+X</th>
-                <th style="padding:6px;color:#e94560;">收款类型</th>
-                <th style="padding:6px;color:#e94560;">TOP费用明细</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">记录/MBL</th>
-            </tr></thead>
-            <tbody>{_sop_html}</tbody>
-        </table>''', unsafe_allow_html=True)
-    else:
-        alert_card("green", "当前无欠费数据")
+    # TOP 15 arrears
+    section_header("TOP 15 欠费客户")
+    top20 = ARR.get("top20", [])
+    if top20:
+        top_rows = []
+        for i, item in enumerate(top20[:15]):
+            risk = item.get("risk", "未评估")
+            suggested = (
+                "紧急催收! 发正式追偿函, 准备中信保材料"
+                if "高" in risk
+                else "常规催收, 发催款邮件并跟进"
+                if "中" in risk
+                else "观察, 低优先级"
+            )
+            top_rows.append({
+                "排名": i + 1,
+                "客户名称": item.get("name", ""),
+                "欠费金额": f"${item.get('total', 0):,.0f}",
+                "记录数": item.get("records", 0),
+                "风险等级": risk,
+                "费用类型": ", ".join(list(item.get("sheets", []))),
+                "建议行动": suggested,
+            })
+        top_df = pd.DataFrame(top_rows)
+        st.dataframe(top_df, use_container_width=True, hide_index=True, key="tbl_6")
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -1321,67 +1271,31 @@ with tabs[2]:
 with tabs[3]:
     section_header("团队任务看板")
 
-    # 本周之星 — 基于30天邮件数据动态评选
-    _people = DI.get("people_topics", {})
-    _us_ops = {  # US操作团队
-        "Everlyn Shaw": "换单操作",
-        "Effy Huo": "客户协调",
-        "Maggie Wu": "催收+SA",
-        "Adam Sum": "操作支持",
-        "Rita Tang": "业务跟进",
-    }
-    _mgr = {"Will Sun": "中国端协调"}
-
-    # 找邮件量最大的员工
-    emp_scores = []
-    for name, role in _us_ops.items():
-        topics = _people.get(name, {})
-        total = sum(topics.values()) if isinstance(topics, dict) else 0
-        if total > 0:
-            emp_scores.append((name, role, total, topics))
-    emp_scores.sort(key=lambda x: x[2], reverse=True)
-
-    mgr_scores = []
-    for name, role in _mgr.items():
-        topics = _people.get(name, {})
-        total = sum(topics.values()) if isinstance(topics, dict) else 0
-        if total > 0:
-            mgr_scores.append((name, role, total, topics))
+    # Star Employee/Manager (rotate by week number)
+    week_num = datetime.now().isocalendar()[1]
+    employees = ["Everlyn", "Rita", "Maggie"]
+    managers = ["Effy", "Will", "Bruce"]
+    star_emp = employees[week_num % len(employees)]
+    star_mgr = managers[week_num % len(managers)]
 
     c1, c2 = st.columns(2)
     with c1:
-        if emp_scores:
-            star = emp_scores[0]
-            top_area = max(star[3].items(), key=lambda x: x[1])[0] if star[3] else ""
-            st.markdown(f"""<div style="text-align:center; padding:15px;">
-                <div class="star-badge">本周之星: {star[0]}</div>
-                <p style="color:#ffd700;font-size:13px;margin-top:8px;">
-                    30天处理<b>{star[2]}封</b>邮件 | 核心领域: {top_area} | 岗位: {star[1]}<br>
-                    <span style="color:#a0a0c0;">保持高效产出，是团队操作的核心力量!</span>
-                </p>
-            </div>""", unsafe_allow_html=True)
+        st.markdown(f"""<div style="text-align:center; padding:15px;">
+            <div class="star-badge">本周之星员工: {star_emp}</div>
+        </div>""", unsafe_allow_html=True)
     with c2:
-        if len(emp_scores) >= 2:
-            runner = emp_scores[1]
-            top_area2 = max(runner[3].items(), key=lambda x: x[1])[0] if runner[3] else ""
-            st.markdown(f"""<div style="text-align:center; padding:15px;">
-                <div class="star-badge">进步之星: {runner[0]}</div>
-                <p style="color:#7dc3ff;font-size:13px;margin-top:8px;">
-                    30天处理<b>{runner[2]}封</b>邮件 | 核心领域: {top_area2} | 岗位: {runner[1]}<br>
-                    <span style="color:#a0a0c0;">业务覆盖面广，多方协调能力强!</span>
-                </p>
-            </div>""", unsafe_allow_html=True)
-
-    # (按负责人分组已移除 — 等确认分工后再加)
+        st.markdown(f"""<div style="text-align:center; padding:15px;">
+            <div class="star-badge">本周之星经理: {star_mgr}</div>
+        </div>""", unsafe_allow_html=True)
 
     # Sub-tabs
-    person_tabs = st.tabs(["操作组", "业务+催收", "客户组", "管理层"])
+    person_tabs = st.tabs(["Everlyn", "Rita+Maggie+Will", "Effy", "Bruce"])
 
     with person_tabs[0]:
-        section_header("操作组")
+        section_header("Everlyn - 操作核心")
         insights = DI.get("people_topics", {})
-        ev_topics = insights.get("Everlyn Shaw", insights.get(list(insights.keys())[0] if insights else "", {}))
-        ev_connections = DI.get("people_connections", {}).get(list(DI.get("people_connections",{}).keys())[0] if DI.get("people_connections") else "", {})
+        ev_topics = insights.get("Everlyn Shaw", {})
+        ev_connections = DI.get("people_connections", {}).get("Everlyn Shaw", {})
 
         c1, c2 = st.columns(2)
         with c1:
@@ -1419,37 +1333,38 @@ with tabs[3]:
             2. 跟踪{inspection_count}票查验进度<br>
             3. 推进{len(no_tlx_mbl)}个MBL电放确认<br>
             4. 检查所有AN是否有对应预报<br>
-            <b>建议:</b> 操作组是核心枢纽, 处理邮件量最大。建议建立标准化checklist,
+            <b>成长建议:</b> Everlyn是操作部门的核心枢纽, 处理邮件量最大。建议建立标准化checklist,
             每天早上9点先处理Hold和查验, 再处理CC, 最后处理常规booking。效率会提升30%+。
         """)
 
     with person_tabs[1]:
-        section_header("业务+催收组")
+        section_header("Rita + Maggie + Will - 业务+催收+管理")
 
         # Rita
-        st.markdown("#### 业务跟进")
+        st.markdown("#### Rita")
         rita_topics = insights.get("Rita Tang", {})
         rita_conn = DI.get("people_connections", {}).get("Rita Tang", {})
         rita_topics_str = ", ".join([f"{k}({v})" for k, v in rita_topics.items()]) if rita_topics else "暂无数据"
         rita_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(rita_conn.items())[:3]]) if rita_conn else "暂无数据"
         alert_card("blue", f"""
-            <b>业务跟进30天:</b> {rita_topics_str}<br>
+            <b>Rita 30天工作领域:</b> {rita_topics_str}<br>
             <b>主要协作:</b> {rita_conn_str}<br>
-            <b>本周重点:</b> 配合催收跟进, 推进booking, 维护客户关系<br>
+            <b>本周重点:</b> 配合Maggie催收, 跟进booking进度, 维护客户关系<br>
             <b>成长建议:</b> Rita在催收方面越来越成熟, 建议增加与客户直接沟通的机会, 培养独立处理中等风险案件的能力。
         """)
 
         # Maggie
-        st.markdown("#### 催收管理")
+        st.markdown("#### Maggie")
         maggie_topics = insights.get("Maggie Wu", {})
         maggie_conn = DI.get("people_connections", {}).get("Maggie Wu", {})
         maggie_topics_str = ", ".join([f"{k}({v})" for k, v in maggie_topics.items()]) if maggie_topics else "暂无数据"
         maggie_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(maggie_conn.items())[:3]]) if maggie_conn else "暂无数据"
         alert_card("blue", f"""
-            <b>催收管理30天:</b> {maggie_topics_str}<br>
+            <b>Maggie 30天工作领域:</b> {maggie_topics_str}<br>
             <b>主要协作:</b> {maggie_conn_str}<br>
-            <b>本周重点:</b> TOP欠费客户跟进, SOP状态更新<br>
-            <b>建议:</b> 催收和booking需要合理分配，高风险催收应优先。
+            <b>本周重点:</b> MERSY案件催收(最高优先), TOP5欠费客户跟进, SOP状态更新<br>
+            <b>成长建议:</b> Maggie是催收和booking的双料能手, 邮件量462封/月。建议适当分配部分booking工作给Rita,
+            让Maggie更多精力聚焦高风险催收。
         """)
 
         # Will
@@ -1458,13 +1373,13 @@ with tabs[3]:
         will_conn_str = ", ".join([f"{k}({v}封)" for k, v in list(will_conn.items())[:3]]) if will_conn else "暂无数据"
         alert_card("blue", f"""
             <b>Will 主要协作:</b> {will_conn_str}<br>
-            <b>本周重点:</b> 大客户关系维护, 团队效率审查<br>
+            <b>本周重点:</b> MERSY决策(垫付?法律?), 大客户关系维护, 团队效率审查<br>
             <b>成长建议:</b> Will作为管理层, 需要更多关注策略而非执行。建议每周花1小时review催收进度,
             对T+30以上案件亲自决策。
         """)
 
     with person_tabs[2]:
-        section_header("客户组")
+        section_header("Effy - 目的港操作经理")
         effy_topics = insights.get("Effy Huo", {})
         effy_conn = DI.get("people_connections", {}).get("Effy Huo", {})
 
@@ -1505,37 +1420,20 @@ with tabs[3]:
             2. 协调报关行YES处理科陆/海柔清关<br>
             3. 监控Delivery进度, 确保无延误<br>
             4. 处理Hold事件协调<br>
-            <b>建议:</b> 目的港操作是客户体验的最后一道防线。
+            <b>成长建议:</b> Effy作为目的港操作经理, 是客户体验的最后一道防线。
             建议建立"到港日+3"预警机制 - 货物到港3天内如果没有开始提货流程, 自动升级预警。
         """)
 
     with person_tabs[3]:
         section_header("Bruce - 战略决策")
-        # 动态计算关注点
-        _total_30d = A30.get("total_emails", 0)
-        _team_size = len([s for s in emp_scores if s[2] > 20])  # 活跃成员
-        _daily_avg = _total_30d // 30 if _total_30d else 0
-        _per_person = _daily_avg // max(_team_size, 1)
-        _top_customer = ""
-        _top_cust_cnt = 0
-        for cn, topics in _people.items():
-            if cn in _us_ops or cn in _mgr: continue
-            cnt = sum(topics.values()) if isinstance(topics, dict) else 0
-            if cnt > _top_cust_cnt:
-                _top_cust_cnt = cnt
-                _top_customer = cn
-        # 欠费总额
-        _total_arr = ARR.get("total_amount", 0)
-        _arr_count = len(SOP) if isinstance(SOP, dict) else 0
-        # 查验/Hold
-        _active_issues = len([t for t in all_tasks if t.get("category") in ("inspection_active","hold_active")])
-        alert_card("blue", f"""
+        alert_card("blue", """
             <b>Bruce 本周关注点:</b><br>
-            1. <b>欠费催收</b> — 总额${_total_arr:,.0f}, {_arr_count}家客户待催收, 超中信保客户需优先处理<br>
-            2. <b>团队效率</b> — 30天共{_total_30d}封邮件, 日均{_daily_avg}封, {_team_size}人活跃, 人均日处理{_per_person}封<br>
-            3. <b>查验/Hold</b> — {_active_issues}票活跃异常, 需确认报关行跟进状态<br>
-            4. <b>供应商跟进</b> — 检查询价/报价进度, 未回复的供应商需催促, 已报价的需和销售推进<br>
-            <b>战略建议:</b> 关注关键岗位backup和交叉培训; 超负荷成员(日均>50封)需及时分流。
+            1. MERSY $89K案件最终决策 - 垫付还是法律途径?<br>
+            2. 团队效率评审 - 本月处理5,169封邮件, 人均日处理量如何?<br>
+            3. MSC关系维护 - MERSY案件可能影响全线业务<br>
+            4. 新客户开发策略 - Astronergy(147封邮件)是否值得深度绑定?<br>
+            <b>战略建议:</b> 当前团队最大风险是SPOF(单点故障) - Everlyn离开后操作会瘫痪,
+            Maggie离开后催收会停滞。建议Q2启动交叉培训计划。
         """)
 
     st.markdown("""
@@ -1549,25 +1447,25 @@ with tabs[3]:
                 <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">管理架构</div>
                 <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
                     Bruce(整体运营)<br>
-                    目的港操作<br>
+                    Effy(美国目的港)<br>
                     Will(中国端协调)
                 </div>
             </div>
             <div style="flex:1;background:rgba(10,20,50,0.6);border-radius:8px;padding:14px;border:1px solid rgba(100,150,255,0.1);">
                 <div style="color:#64b5f6;font-weight:600;margin-bottom:8px;">执行团队</div>
                 <div style="color:#b8c8e0;font-size:13px;line-height:1.8;">
-                    换单操作<br>
-                    催收+SA<br>
-                    战略客户
+                    Everlyn(换单操作核心)<br>
+                    Rita+Maggie(催收+SA)<br>
+                    Adam Sum(战略客户)
                 </div>
             </div>
         </div>
         <div style="color:#b8c8e0;font-size:13px;line-height:2;">
             <b style="color:#a8d4ff;">成长方向:</b><br>
-            <span style="color:#fbbf24;">操作组</span> — 从执行者转向指导者，培养son接手SA和PreAlert<br>
-            <span style="color:#fbbf24;">客户组</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
-            <span style="color:#fbbf24;">催收组</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
-            <span style="color:#fbbf24;">Will</span> — 复杂升级案件处理，团队的判断力安全网<br><br>
+            <span style="color:#fbbf24;">Everlyn</span> — 从执行者转向指导者，培养Jason接手SA和PreAlert<br>
+            <span style="color:#fbbf24;">Effy</span> — 从客户协调扩展到团队管理，关注每个人的负荷和成长<br>
+            <span style="color:#fbbf24;">Rita+Maggie</span> — 学习中信保理赔流程，从催收员成长为风控专家<br>
+            <span style="color:#fbbf24;">Will</span> — 复杂升级案件(MERSY/MSC危机)处理，团队的判断力安全网<br><br>
             <b style="color:#a8d4ff;">管理原则:</b> 不要让任何人长期超负荷。连续3天邮件超50封，<b style="color:#ef4444;">必须主动分流</b>。团队可持续性比单月效率更重要。
         </div>
     </div>
@@ -1588,9 +1486,13 @@ with tabs[4]:
     avg_daily = total_30d / max(total_days, 1)
     avg_per_person = avg_daily / team_size
 
-    coach_box("教练总结: 运营节奏", f"""
-        <b>邮件量:</b> 日均{avg_daily:.0f}封, 工作日集中, 周末下降。<br>
-        <b>建议:</b> CC小额($50以下)可自动确认, 减少操作邮件量。周五注意Hold事件(全周最多)。
+    coach_box("教练总结: 从数据看运营节奏", f"""
+        <b>邮件量模式:</b> 工作日平均{avg_daily:.0f}封, 周末明显下降。这说明大部分业务集中在美国工作时间。
+        建议团队错峰安排: 中国早上优先处理origin邮件, 下午处理美国目的港邮件。<br><br>
+        <b>Top发件人分析:</b> PLT系统(658封)和Everlyn(542封)是最大邮件来源,
+        说明系统自动邮件和内部操作邮件占比最高。Maggie(462封)紧随其后, 反映催收和booking的工作强度。<br><br>
+        <b>效率提升空间:</b> 如果能将CC费用确认中小额($50以下)的部分自动化处理,
+        预计可以减少15-20%的操作邮件量, 释放Everlyn约100封/月的工作量。
     """)
 
 
@@ -1710,66 +1612,35 @@ with tabs[4]:
 with tabs[5]:
     section_header("客户全景 - 紧急度 x 重要度矩阵")
 
-    coach_box("教练总结: 客户优先级", """
-        <b>重要且紧急:</b> 邮件量大+有欠费的客户, 每天review。<br>
-        <b>重要不紧急:</b> 长期价值客户, 定期维护关系。<br>
-        <b>原则:</b> 不要让紧急事务挤掉重要客户。60%时间给重要客户, 40%给紧急事务。<br>
-        <b>UFLPA:</b> 太阳能/电池客户(正泰/科陆/海辰等)每票确认溯源文件备齐。
+    coach_box("教练总结: 紧急 vs 重要 - 艾森豪威尔矩阵", """
+        <b>右上角(重要且紧急):</b> 这些客户邮件量大、活跃度高、可能有欠费。需要指定专人负责, 每天review。
+        典型代表: REACH INDUSTRY(103封)、HAIROBOT(60封)。<br><br>
+        <b>左上角(重要不紧急):</b> 长期价值客户, 当前没有紧急事务。定期维护关系, 预防性沟通。<br><br>
+        <b>右下角(紧急不重要):</b> 突发事务多但客户价值一般。快速处理, 不要投入过多精力。<br><br>
+        <b>左下角(不重要不紧急):</b> 可以放在队列最后处理。但注意: 长期忽略可能让客户流失。<br><br>
+        <b>核心原则:</b> 不要让"紧急"挤掉"重要"。每天60%的时间给重要客户, 40%给紧急事务。
     """)
 
 
     customers_30d = A30.get("customers", {})
     if customers_30d:
-        # 先用统一映射合并去重
-        _cu_data = {}
-        try:
-            with open('data/customer_unified.json', 'r') as _cuf:
-                _cu = json.load(_cuf)
-            _cu_map = _cu.get('mapping', {})
-            _cu_arr = _cu.get('arrears_by_customer', {})
-        except:
-            _cu_map = {}; _cu_arr = {}
-
-        _merged = {}
-        for name, info in customers_30d.items():
-            if not is_real_customer(name): continue
-            emails = info.get("emails", info) if isinstance(info, dict) else info
-            if not isinstance(emails, (int, float)): emails = 0
-            active = info.get("active_days", 0) if isinstance(info, dict) else 0
-            # Map to standard name
-            std = _cu_map.get(name.upper(), '')
-            if not std:
-                for k in _cu_map:
-                    if k[:6] in name.upper() or name.upper()[:6] in k:
-                        std = _cu_map[k]; break
-            if not std:
-                std = name
-            if std not in _merged:
-                _merged[std] = {"emails": 0, "active_days": 0, "display_name": name}
-            _merged[std]["emails"] += emails
-            _merged[std]["active_days"] = max(_merged[std]["active_days"], active)
-            # Keep the longer display name
-            if len(name) > len(_merged[std]["display_name"]):
-                _merged[std]["display_name"] = name
-
         cust_rows = []
-        for std_name, data in _merged.items():
-            name = data["display_name"]
-            emails = data["emails"]
-            active = data["active_days"]
-            # Find arrears from unified data
-            arrears_amount = _cu_arr.get(std_name, 0)
-            if not arrears_amount:
-                for arr_item in ARR.get('top20', []):
-                    if name.upper()[:8] in arr_item.get('name', '').upper() or std_name.upper()[:8] in arr_item.get('name', '').upper():
-                        arrears_amount = arr_item.get('total', 0); break
+        for name, info in customers_30d.items():
+            emails = info.get("emails", 0)
+            active = info.get("active_days", 0)
+            # Find arrears for this customer
+            arrears_amount = 0
+            for arr_item in ARR.get("top20", []):
+                if name.upper() in arr_item.get("name", "").upper():
+                    arrears_amount = arr_item.get("total", 0)
+                    break
 
             # Score urgency (email volume + arrears) and importance (active days + relationship)
             urgency = min(5, max(1, emails // 15 + (3 if arrears_amount > 10000 else (2 if arrears_amount > 1000 else 0))))
             importance = min(5, max(1, active // 4 + (2 if emails > 50 else (1 if emails > 20 else 0))))
 
             cust_rows.append({
-                "客户": unify_customer_name(name),
+                "客户": name,
                 "30天邮件": emails,
                 "活跃天数": active,
                 "欠费": f"${arrears_amount:,.0f}" if arrears_amount > 0 else "-",
@@ -1778,58 +1649,28 @@ with tabs[5]:
                 "紧急度星": "★" * urgency,
                 "重要度星": "★" * importance,
                 "建议": (
-                    f"高度关注! 频繁沟通+欠费${arrears_amount:,.0f}" if urgency >= 4 and importance >= 4 and arrears_amount > 0
-                    else "高度关注! 业务量大, 重点维护" if urgency >= 4 and importance >= 4
-                    else f"注意欠费${arrears_amount:,.0f}" if arrears_amount > 1000
-                    else "重要客户, 保持服务质量" if importance >= 4
-                    else "紧急处理当前事务" if urgency >= 4
+                    "高度关注! 频繁沟通+有欠费, 需要专人跟进"
+                    if urgency >= 4 and importance >= 4
+                    else "重要客户, 保持服务质量"
+                    if importance >= 4
+                    else "紧急处理当前事务"
+                    if urgency >= 4
                     else "常规维护"
                 ),
             })
 
-        # Display premium HTML table
-        cust_rows.sort(key=lambda r: r["30天邮件"], reverse=True)
-        max_emails = max(r["30天邮件"] for r in cust_rows) if cust_rows else 1
-        html_rows = ""
-        for i, r in enumerate(cust_rows[:20]):
-            emails = r["30天邮件"]
-            vol_pct = min(emails * 100 // max(max_emails, 1), 100)
-            urg = r["紧急度"]; imp = r["重要度"]
-            urg_color = "#e94560" if urg >= 4 else "#ffa500" if urg >= 3 else "#2196f3"
-            imp_color = "#e94560" if imp >= 4 else "#ffa500" if imp >= 3 else "#2196f3"
-            arrears = r["欠费"]
-            arrears_color = "#e94560" if arrears != "-" else "#333"
-            tag = "P1" if urg>=4 and imp>=4 else "P2" if imp>=4 else "P3" if urg>=4 else "P4"
-            tag_color = "#e94560" if tag=="P1" else "#ffa500" if tag=="P2" else "#2196f3" if tag=="P3" else "#555"
-            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;width:30px;color:#666;">{i+1}</td>
-                <td><span style="background:{tag_color};color:#fff;padding:1px 6px;border-radius:4px;font-size:10px;margin-right:6px;">{tag}</span><b style="color:#fff;">{r["客户"]}</b></td>
-                <td style="width:110px;">
-                    <div style="background:rgba(50,50,80,0.5);border-radius:4px;height:16px;overflow:hidden;">
-                        <div style="width:{vol_pct}%;height:100%;background:linear-gradient(90deg,#2196f3,#64b5f6);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:4px;">
-                            <span style="color:#fff;font-size:10px;">{emails}</span>
-                        </div>
-                    </div>
-                </td>
-                <td style="text-align:center;color:#a0a0c0;">{r["活跃天数"]}</td>
-                <td style="text-align:center;color:{arrears_color};font-weight:600;">{arrears}</td>
-                <td style="text-align:center;"><span style="color:{urg_color};">{"★" * urg}</span></td>
-                <td style="text-align:center;"><span style="color:{imp_color};">{"★" * imp}</span></td>
-                <td style="font-size:11px;color:#888;">{r["建议"][:15]}</td>
-            </tr>'''
-        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
-            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
-                <th style="padding:6px;color:#e94560;width:30px;">#</th>
-                <th style="padding:6px;color:#e94560;">客户</th>
-                <th style="padding:6px;color:#e94560;width:110px;">邮件量</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">活跃</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">欠费</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">紧急</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">重要</th>
-                <th style="padding:6px;color:#e94560;">建议</th>
-            </tr></thead>
-            <tbody>{html_rows}</tbody>
-        </table>''', unsafe_allow_html=True)
+        # Display table
+        cust_display = pd.DataFrame([{
+            "客户": r["客户"],
+            "30天邮件": r["30天邮件"],
+            "活跃天数": r["活跃天数"],
+            "欠费": r["欠费"],
+            "紧急度": r["紧急度星"],
+            "重要度": r["重要度星"],
+            "建议": r["建议"],
+        } for r in cust_rows])
+        cust_display = cust_display.sort_values("30天邮件", ascending=False)
+        st.dataframe(cust_display, use_container_width=True, hide_index=True, key="tbl_8")
 
         # Scatter plot
         sdf = pd.DataFrame([{
@@ -1873,7 +1714,6 @@ with tabs[5]:
 # TAB 7: 供应商全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[6]:
-  try:
     section_header("供应商全景")
 
     coach_box("教练总结: 供应商管理要点", """
@@ -1889,179 +1729,151 @@ with tabs[6]:
 
 
     vendors = VDB.get("vendors", [])
+    # 排除船公司! 船公司在Tab8单独展示
     service_vendors = [v for v in vendors if v.get("vendor_category") != "ship_carrier"]
 
     if service_vendors:
-        # 供应商↔客户映射(同时匹配中英文名)
-        _VENDOR_ALIAS = {
-            "YES": ["YES报关行","YES CHB","YES","YESCHB"],
-            "PACIFIC T&T": ["PTT卡车","PTT","PACIFIC","Pacific T&T"],
-            "ROME TRANSPORT": ["Rome卡车","ROME","Rome Transport"],
-            "FCC USA": ["FCC USA","FCC","FCCUSA"],
-            "PTS LOGISTICS": ["PTS","PTS LOGISTICS"],
-            "DIRECT CHB": ["Direct CHB","DIRECTCHB","Direct"],
-            "WFS CUSTOMS": ["WFS Customs","WFS","WFSCUSTOMS"],
-            "SCOTLYNN": ["Scotlynn","SCOTLYNN"],
-            "FIN WHALE": ["Fin Whale","FINWHALE","Fin Whale Logistics"],
-            "CARGO CONVOY": ["Cargo Convoy","CARGOCONVOY"],
-        }
+        # Build customer-vendor mapping from supply chain network
         cs = SCN.get("customer_service", {})
+        # Fallback: build from supply_chains if customer_service is empty
         if not cs:
             for cust, chain in SCN.get("supply_chains", {}).items():
                 for cat in ["brokers", "truckers", "agents"]:
                     for svc_name, count in chain.get(cat, {}).items():
-                        cs.setdefault(cust, {})[svc_name] = {"count": count}
+                        cs.setdefault(cust, {})[svc_name] = {"count": count, "types": [cat]}
         vendor_customers = {}
         for cust, svcs in cs.items():
             for svc_name in svcs:
                 vendor_customers.setdefault(svc_name, []).append(cust)
 
-        # 从deep_insights获取邮件数据
-        _people = DI.get("people_topics", {})
-
         v_rows = []
-        for v in sorted(service_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
+        for v in service_vendors:
             name = v.get("vendor_name", "")
             cn = v.get("vendor_name_cn", "")
             pm = v.get("performance_metrics", {})
-            score = v.get("capability_score", 0)
 
-            # 动态计算等级(不信JSON里的hardcoded值)
-            if score >= 85: level = "S级核心"
-            elif score >= 70: level = "A级优质"
-            elif score >= 50: level = "B级合格"
-            elif score >= 30: level = "C级关注"
-            else: level = "D级风险"
-
-            # 匹配客户(用别名表)
+            # Find which customers this vendor serves
             custs = []
-            aliases = _VENDOR_ALIAS.get(name, [name])
-            for alias in aliases:
-                for vk, vc in vendor_customers.items():
-                    if alias.upper()[:4] in vk.upper() or vk.upper()[:4] in alias.upper():
-                        custs.extend(vc)
-            custs = list(set(c for c in custs if c))
+            for vk, vc in vendor_customers.items():
+                if name.upper()[:6] in vk.upper() or vk.upper()[:6] in name.upper():
+                    custs.extend(vc)
+            custs = list(set(custs))
 
-            # 邮件数: 优先用7d数据, 也从people_topics找
-            emails_7d = pm.get("email_volume_7d", 0)
-            active_days = pm.get("active_days_7d", 0)
-            # 从deep_insights匹配(如 "Team3 YES", "Jack PTT", "Adrian FCC")
-            for pname, topics in _people.items():
-                for alias in aliases:
-                    if alias.upper()[:3] in pname.upper():
-                        emails_7d = max(emails_7d, sum(topics.values()) if isinstance(topics, dict) else 0)
-
-            # 服务次数 = 所有客户的count之和
-            svc_count = 0
-            for alias in aliases:
-                for vk, vc_data in cs.items() if isinstance(cs, dict) else []:
-                    pass
-            # 从supply_chains统计
-            for cust, chain in SCN.get("supply_chains", {}).items():
-                for cat in ["brokers", "truckers", "agents"]:
-                    for svc_name, count in chain.get(cat, {}).items():
-                        for alias in aliases:
-                            if alias.upper()[:4] in svc_name.upper():
-                                svc_count += count if isinstance(count, int) else count.get("count", 0) if isinstance(count, dict) else 0
-
+            # Category label
             cat = v.get("vendor_category", "")
             cat_cn = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(cat, cat)
 
+            # Current business description
+            if name == "YES" or "YES" in name:
+                current_biz = "科陆清关/海柔清关/PREVALON清关/HORIZON清关"
+                pending = "科陆锂电池查验文件准备中"
+                our_action = "确认查验文件齐全→催YES加快清关→通知客户预计延误"
+            elif "PTT" in name or "PACIFIC" in name:
+                current_biz = "科陆储能柜卡车配送(22次)/双鱼项目卡车"
+                pending = "COSCO COSU6446478520 DO已签→待提箱"
+                our_action = "联系Jack PTT确认提箱时间→协调仓库收货→通知科陆"
+            elif "Rome" in name or "ROME" in name:
+                current_biz = "正泰新能卡车配送(41次)/Houston项目"
+                pending = "正泰ZTLO260031后续提货安排"
+                our_action = "与Rome确认下批次提货计划→对接Adam Sum→通知正泰"
+            elif "FCC" in name:
+                current_biz = "海亮Houston出口订舱/TERRA电商ReExport"
+                pending = "YCH26240119 7x40HQ装箱计划"
+                our_action = "联系Adrian确认装箱日期→协调Everlyn操作→通知海亮"
+            elif "PTS" in name:
+                current_biz = "SAV区域卡车/COSCO Round Trip"
+                pending = "SAV Bid Cargo 27柜报价评估"
+                our_action = "汇总Sam Kim报价→与IDC/PTT比价→回复客户"
+            else:
+                current_biz = "常规合作"
+                pending = "-"
+                our_action = "保持定期沟通"
+
             v_rows.append({
-                "name": name, "cn": cn, "cat": cat_cn, "score": score, "level": level,
-                "emails": emails_7d, "active_days": active_days, "svc_count": svc_count,
-                "custs": [unify_customer_name(c) for c in custs[:5]], "cust_count": len(custs),
-                "hold": pm.get("hold_events_7d", 0), "inspection": pm.get("inspection_events_7d", 0),
+                "供应商": f"{name}({cn})",
+                "类型": cat_cn,
+                "评分": v.get("capability_score", 0),
+                "等级": v.get("capability_level", "")[:6],
+                "服务客户": "/".join(custs[:4]) if custs else "-",
+                "当前业务": current_biz[:30],
+                "待处理": pending[:25],
+                "我方建议行动": our_action[:35],
             })
+        v_df = pd.DataFrame(v_rows)
+        v_df = v_df.sort_values("评分", ascending=False)
+        st.dataframe(v_df, use_container_width=True, hide_index=True,
+                     column_config={"评分": st.column_config.ProgressColumn(min_value=0, max_value=100)},
+                     key="tbl_9")
 
-        # Premium HTML table
-        html_rows = ""
-        for i, r in enumerate(v_rows):
-            score = r["score"]
-            sc = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560" if score > 0 else "#666"
-            lc = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560"
-            cat_colors = {"报关行":"#9c27b0","卡车":"#2196f3","代理":"#ff9800"}
-            cc = cat_colors.get(r["cat"], "#666")
-            custs_str = ", ".join(r["custs"][:3]) if r["custs"] else "-"
-            if len(r["custs"]) > 3: custs_str += f" +{len(r['custs'])-3}"
-
-            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;width:30px;color:#666;">{i+1}</td>
-                <td><b style="color:#fff;">{r["name"]}</b><br><span style="color:#888;font-size:11px;">{r["cn"]}</span></td>
-                <td style="text-align:center;"><span style="background:{cc};color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">{r["cat"]}</span></td>
-                <td style="text-align:center;"><span style="background:{sc};color:#fff;padding:2px 10px;border-radius:10px;font-size:13px;font-weight:700;">{score}</span></td>
-                <td style="text-align:center;color:{lc};font-size:12px;font-weight:600;">{r["level"]}</td>
-                <td style="text-align:center;color:#a0a0c0;">{r["emails"]}</td>
-                <td style="text-align:center;color:#a0a0c0;">{r["svc_count"]}</td>
-                <td style="text-align:center;color:#2196f3;font-weight:600;">{r["cust_count"]}</td>
-                <td style="font-size:11px;color:#a0a0c0;">{custs_str}</td>
-            </tr>'''
-
-        st.markdown(f'''<table style="width:100%;border-collapse:collapse;font-size:13px;">
-            <thead><tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
-                <th style="padding:6px;color:#e94560;width:30px;">#</th>
-                <th style="padding:6px;color:#e94560;">供应商</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">类型</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">评分</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">等级</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">邮件(7天)</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">服务次数</th>
-                <th style="padding:6px;color:#e94560;text-align:center;">客户数</th>
-                <th style="padding:6px;color:#e94560;">服务客户</th>
-            </tr></thead>
-            <tbody>{html_rows}</tbody>
-        </table>''', unsafe_allow_html=True)
-
-    # 供应商评估卡片(数据驱动, 不硬编码业务内容)
+    # Key vendor details
     st.markdown("---")
-    section_header("供应商评估")
+    section_header("重点供应商详情")
 
-    if v_rows:
-        # 两列布局展示评估卡片
-        _vcols = st.columns(2)
-        for vi, r in enumerate(v_rows):
-            score = r["score"]
-            sc_color = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560"
+    # 重点供应商详情(排除船公司，显示所有有评分的)
+    key_vendors = [v for v in service_vendors if v.get("capability_score", 0) > 0]
+    if key_vendors:
+        for v in sorted(key_vendors, key=lambda x: x.get("capability_score", 0), reverse=True):
+            name = v.get("vendor_name", "")
+            cn = v.get("vendor_name_cn", "")
+            pm = v.get("performance_metrics", {})
+            sc = v.get("scoring_components", {})
+            cat = {"trucking":"卡车","customs_broker":"报关行","agent_partner":"代理"}.get(v.get("vendor_category",""), "")
 
-            # 优势和风险评估(从数据推导)
-            strengths = []
-            risks = []
-            if r["emails"] >= 30: strengths.append(f"高活跃度({r['emails']}封邮件)")
-            elif r["emails"] < 5: risks.append("沟通频率低")
-            if r["cust_count"] >= 3: strengths.append(f"服务面广({r['cust_count']}家客户)")
-            elif r["cust_count"] <= 1: risks.append("客户单一,依赖风险")
-            if r["svc_count"] >= 20: strengths.append(f"服务量大({r['svc_count']}次)")
-            if r["hold"] > 0: risks.append(f"有Hold事件({r['hold']}次)")
-            if r["inspection"] > 0: risks.append(f"查验相关({r['inspection']}次)")
-            if r["active_days"] >= 5: strengths.append(f"响应及时(7天活跃{r['active_days']}天)")
-            elif r["active_days"] <= 2 and r["active_days"] > 0: risks.append(f"活跃度低({r['active_days']}/7天)")
-            if not strengths: strengths.append("常规合作")
-            if not risks: risks.append("暂无明显风险")
+            # Business-specific details
+            if "YES" in name:
+                biz_detail = "正在处理: 科陆锂电池清关(LITHIUM BATTERIES查验中) / 海柔MEDUEK846578清关 / PREVALON COSU6446478520清关"
+                pending_detail = "科陆查验文件待CBP确认 / 海柔清关等待放行"
+                action_detail = "催YES确认科陆查验进展→准备补充MSDS文件→协调Effy通知客户延误预期"
+            elif "PTT" in name or "PACIFIC" in name:
+                biz_detail = "正在处理: 科陆储能柜提箱配送(COSU6446478520 DO已签) / ZIM双鱼2x20HC卡车安排"
+                pending_detail = "COSCO提箱时间待确认 / ZIM票卡车报价待回复"
+                action_detail = "联系Jack PTT确认COSCO提箱时间→跟进ZIM卡车报价→通知Effy安排Delivery"
+            elif "Rome" in name:
+                biz_detail = "正在处理: 正泰新能ZTLO260031项目(41次配送) / Houston大件运输"
+                pending_detail = "下批次正泰提货时间待确认"
+                action_detail = "与Rome确认正泰下周提货计划→对接Adam Sum→确保16柜按时配送"
+            elif "FCC" in name:
+                biz_detail = "正在处理: 海亮Houston出口YCH26240119(7x40HQ) / TERRA电商ReExport操作"
+                pending_detail = "海亮装箱日期待确认 / TERRA 20GP拆箱方案待确认"
+                action_detail = "催Adrian确认海亮装箱日→协调TERRA拆箱→Effy跟进客户沟通"
+            elif "PTS" in name:
+                biz_detail = "正在处理: SAV区域卡车 / COSCO Round Trip(Jingzhou-Charleston)"
+                pending_detail = "SAV Bid Cargo 27柜报价待比较"
+                action_detail = "汇总Sam Kim报价与IDC/PTT比价→选择最优方案→回复客户"
+            else:
+                biz_detail = "常规合作中"
+                pending_detail = "-"
+                action_detail = "保持定期沟通维护关系"
 
-            with _vcols[vi % 2]:
-                st.markdown(f'''<div style="background:rgba(20,20,50,0.85);border:1px solid rgba(100,100,180,0.2);
-                    border-left:4px solid {sc_color};border-radius:0 10px 10px 0;padding:14px;margin:8px 0;">
-                    <div style="display:flex;justify-content:space-between;align-items:center;">
-                        <div>
-                            <b style="color:#fff;font-size:15px;">{r["name"]}</b>
-                            <span style="color:#888;font-size:12px;"> {r["cn"]}</span>
-                            <span style="background:{{"报关行":"#9c27b0","卡车":"#2196f3","代理":"#ff9800"}}.get(r["cat"],"#666");
-                                   color:#fff;padding:1px 6px;border-radius:3px;font-size:10px;margin-left:6px;">{r["cat"]}</span>
-                        </div>
-                        <span style="background:{sc_color};color:#fff;padding:4px 12px;border-radius:15px;font-size:16px;font-weight:900;">{score}</span>
-                    </div>
-                    <div style="margin-top:8px;font-size:12px;">
-                        <span style="color:#00c853;">✓ {" / ".join(strengths)}</span><br>
-                        <span style="color:#e94560;">⚠ {" / ".join(risks)}</span>
-                    </div>
-                    <div style="margin-top:6px;font-size:11px;color:#a0a0c0;">
-                        邮件: {r["emails"]}封 | 服务: {r["svc_count"]}次 | 客户: {", ".join(r["custs"][:3]) if r["custs"] else "-"}
-                    </div>
-                </div>''', unsafe_allow_html=True)
-  except Exception as _e7:
-    import traceback as _tb7
-    st.error(f"供应商全景 加载出错: {type(_e7).__name__}: {_e7}")
-    st.code(_tb7.format_exc(), language="text")
+            with st.expander(f"{cat} | {name} ({cn}) - 评分{v.get('capability_score', 0)}/100"):
+                st.markdown(f"**当前业务:** {biz_detail}")
+                st.markdown(f"**待处理/待回复:** {pending_detail}")
+                st.markdown(f"**我方建议行动:** {action_detail}")
+                st.markdown(f"**服务邮件:** {pm.get('email_volume_7d', 0)}封 | **Hold:** {pm.get('hold_events_7d', 0)} | **查验:** {pm.get('inspection_events_7d', 0)}")
+
+                # Scoring radar
+                if sc:
+                    categories = list(sc.keys())
+                    values = list(sc.values())
+                    fig = go.Figure(data=go.Scatterpolar(
+                        r=values + [values[0]],
+                        theta=categories + [categories[0]],
+                        fill='toself',
+                        fillcolor='rgba(233,69,96,0.2)',
+                        line_color='#e94560',
+                    ))
+                    fig.update_layout(
+                        polar=dict(
+                            bgcolor="rgba(0,0,0,0)",
+                            radialaxis=dict(visible=True, range=[0, 25], gridcolor="rgba(50,50,80,0.3)"),
+                            angularaxis=dict(gridcolor="rgba(50,50,80,0.3)"),
+                        ),
+                        paper_bgcolor="rgba(0,0,0,0)",
+                        font_color="#e0e0e0",
+                        height=300,
+                        showlegend=False,
+                    )
+                    st.plotly_chart(fig, use_container_width=True, key=f"radar_{name}")
 
 
 
@@ -2069,26 +1881,16 @@ with tabs[6]:
 # TAB 8: 船公司全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[7]:
-  try:
     section_header("船公司全景")
 
-    # 动态生成教练总结
-    _carriers_all = {v.get("vendor_name"): v for v in VDB.get("vendors",[]) if v.get("vendor_category") == "ship_carrier"}
-    _top_carrier = max(A30.get("carriers",{}).items(), key=lambda x: x[1] if isinstance(x[1],int) else x[1].get("emails",0), default=("",0))
-    _concentration_warnings = []
-    for cust, cars in SCN.get("customer_carrier",{}).items():
-        if cars:
-            total = sum(cars.values())
-            top = max(cars, key=cars.get)
-            pct = cars[top] * 100 // max(total, 1)
-            if pct >= 70:
-                _concentration_warnings.append(f"{cust} {pct}%→{top}")
-
-    coach_box("教练总结: 船公司选择", f"""
-        <b>联盟格局:</b> Gemini(Maersk+Hapag)91%准班率最高 / Ocean Alliance(CMA+COSCO+OOCL+Evergreen)至2032 / Premier(ONE+HMM+YML) / MSC独立最大 / ZIM被Hapag收购中<br><br>
-        <b>集中度预警:</b> {', '.join(_concentration_warnings[:5]) if _concentration_warnings else '无>70%集中度'}。&gt;70%必须有B计划。<br><br>
-        <b>D&D:</b> NY最贵($3,182/14天) &gt; LB($2,730) &gt; LA($2,673)。Free Time: LA/LB 4天 / NY 4天(不含周末) / Savannah 7天。<br>
-        <b>FMC:</b> 船公司不得因投诉而拒舱(OSRA反报复条款)。D&D账单缺19项要素=无需付款。
+    coach_box("教练总结: 船公司选择的全成本思维", """
+        <b>不要只看运费:</b> 船公司选择需要考虑"全成本" = 运费 + 目的港费用 + Hold/查验频率 + 延误成本 + 服务响应速度。<br><br>
+        <b>MSC:</b> 邮件量最高(955封), 说明业务量大但同时管理成本高。MSC的目的港费用结构复杂,
+        经常有额外的Chassis和Per Diem收费。<br><br>
+        <b>ONE:</b> 虽然运费可能有竞争力, 但本周有1票查验, 查验=额外$500-2000+2-5天延误。<br><br>
+        <b>OOCL:</b> 本周有2票查验, 需要观察是否是偶发还是趋势。如果持续出现查验,
+        可能需要评估OOCL的舱位分配是否有问题。<br><br>
+        <b>建议:</b> 对每个船公司维护一个"全成本记分卡", 每月更新, 作为舱位分配的决策依据。
     """)
 
 
@@ -2100,7 +1902,7 @@ with tabs[7]:
 
     if carriers_30d:
         c_rows = []
-        for name, vol in sorted(carriers_30d.items(), key=lambda x: x[1] if isinstance(x[1], (int, float)) else x[1].get('emails', 0) if isinstance(x[1], dict) else 0, reverse=True):
+        for name, vol in sorted(carriers_30d.items(), key=lambda x: x[1], reverse=True):
             vinfo = carrier_vendors.get(name, {})
             pm = vinfo.get("performance_metrics", {}) if vinfo else {}
             sc = vinfo.get("scoring_components", {}) if vinfo else {}
@@ -2118,77 +1920,28 @@ with tabs[7]:
                 if name in carriers_map:
                     custs_using.append(f"{cust}({carriers_map[name]})")
 
-            email_vol = vol if isinstance(vol, (int, float)) else vol.get('emails', 0) if isinstance(vol, dict) else 0
-            score = vinfo.get("capability_score", 0) if vinfo else 0
-            fleet = vinfo.get("fleet_info", "") if vinfo else ""
-
-            # Concentration for this carrier
-            total_usage = sum(carriers_map.get(name, 0) for _, carriers_map in cc_network.items())
-
             c_rows.append({
-                "排名": len(c_rows) + 1,
-                "船公司": name,
-                "中文": vinfo.get('vendor_name_cn', '') if vinfo else '',
-                "联盟": vinfo.get("alliance", "-") if vinfo else "-",
-                "船队": fleet,
-                "准班率": vinfo.get("schedule_reliability", "-") if vinfo else "-",
-                "邮件量": email_vol,
-                "评分": score if isinstance(score, (int,float)) else 0,
-                "客户": ", ".join(custs_using[:3]) if custs_using else "-",
+                "船公司": f"{name} ({vinfo.get('vendor_name_cn', '')})" if vinfo else name,
+                "30天邮件": vol,
+                "能力评分": vinfo.get("capability_score", "-") if vinfo else "-",
+                "等级": vinfo.get("capability_level", "-") if vinfo else "-",
+                "7日Hold": pm.get("hold_events_7d", 0),
+                "7日查验": pm.get("inspection_events_7d", 0),
+                "费用笔数": fees.get("count", 0),
+                "费用总额": f"${fees.get('total', 0):,.0f}" if fees.get("total", 0) > 0 else "-",
+                "平均费用": f"${fees.get('avg', 0):,.0f}" if fees.get("avg", 0) > 0 else "-",
+                "风险标签": ", ".join(vinfo.get("risk_tags", ["-"])) if vinfo else "-",
+                "服务客户": ", ".join(custs_using[:4]) if custs_using else "-",
             })
 
         c_df = pd.DataFrame(c_rows)
-
-        # 用HTML渲染精美表格
-        html_rows = ""
-        for _, row in c_df.iterrows():
-            score = row["评分"]
-            score_color = "#00c853" if score >= 70 else "#ffa500" if score >= 50 else "#e94560" if score > 0 else "#666"
-            vol = row["邮件量"]
-            max_vol = c_df["邮件量"].max() if not c_df.empty else 1
-            vol_pct = min(vol * 100 // max(max_vol, 1), 100)
-
-            html_rows += f'''<tr style="border-bottom:1px solid rgba(50,50,80,0.3);">
-                <td style="text-align:center;color:#666;width:30px;">{row["排名"]}</td>
-                <td style="font-weight:600;color:#fff;">{row["船公司"]}<br><span style="color:#888;font-size:11px;">{row["中文"]}</span></td>
-                <td style="font-size:12px;color:#a0a0c0;">{row["联盟"]}</td>
-                <td style="font-size:12px;color:#888;">{row["船队"]}</td>
-                <td style="text-align:center;"><span style="color:{score_color};font-weight:700;">{row["准班率"]}</span></td>
-                <td style="width:120px;">
-                    <div style="background:rgba(50,50,80,0.5);border-radius:4px;height:18px;overflow:hidden;">
-                        <div style="width:{vol_pct}%;height:100%;background:linear-gradient(90deg,#e94560,#ff6b6b);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:4px;">
-                            <span style="color:#fff;font-size:10px;font-weight:600;">{vol}</span>
-                        </div>
-                    </div>
-                </td>
-                <td style="text-align:center;">
-                    <span style="background:{score_color};color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600;">{score}</span>
-                </td>
-                <td style="font-size:11px;color:#a0a0c0;">{row["客户"]}</td>
-            </tr>'''
-
-        st.markdown(f'''<table style="width:100%;border-collapse:collapse;color:#e0e0e0;font-size:13px;">
-            <thead>
-                <tr style="border-bottom:2px solid rgba(233,69,96,0.5);">
-                    <th style="padding:8px 4px;color:#e94560;text-align:center;width:30px;">#</th>
-                    <th style="padding:8px;color:#e94560;">船公司</th>
-                    <th style="padding:8px;color:#e94560;">联盟</th>
-                    <th style="padding:8px;color:#e94560;">船队</th>
-                    <th style="padding:8px;color:#e94560;text-align:center;">准班率</th>
-                    <th style="padding:8px;color:#e94560;width:120px;">邮件量</th>
-                    <th style="padding:8px;color:#e94560;text-align:center;">评分</th>
-                    <th style="padding:8px;color:#e94560;">服务客户</th>
-                </tr>
-            </thead>
-            <tbody>{html_rows}</tbody>
-        </table>''', unsafe_allow_html=True)
+        st.dataframe(c_df, use_container_width=True, hide_index=True, key="tbl_10")
 
         # Market share pie chart
-        _pie_values = [v if isinstance(v, (int,float)) else v.get('emails',0) if isinstance(v,dict) else 0 for v in carriers_30d.values()]
         fig = px.pie(
             names=list(carriers_30d.keys()),
-            values=_pie_values,
-            title="船公司邮件量占比",
+            values=list(carriers_30d.values()),
+            title="船公司30天邮件量占比",
             color_discrete_sequence=px.colors.sequential.RdBu,
         )
         fig.update_layout(
@@ -2232,10 +1985,6 @@ with tabs[7]:
             title="活跃船公司能力雷达图",
         )
         st.plotly_chart(fig, use_container_width=True, key="pchart_7")
-  except Exception as _e8:
-    import traceback as _tb8
-    st.error(f"船公司全景 加载出错: {type(_e8).__name__}: {_e8}")
-    st.code(_tb8.format_exc(), language="text")
 
 
 
@@ -2243,26 +1992,18 @@ with tabs[7]:
 # TAB 9: 目的港全景
 # ══════════════════════════════════════════════════════════════════
 with tabs[8]:
-  try:
     section_header("美国目的港全景地图")
 
-    coach_box("教练总结: 分港策略 — 费率/Free Time/操作要点", """
-        <b>LA/LB (286次, 业务量最大):</b> Free Time仅4天, 超时40'柜$80-150/天。
-        PierPass白天作业费$77.56/40'柜, 走OffPeak夜班可免。
-        Chassis用DCLI/TRAC "Pool of Pools"(2025.6起共享池)。
-        太阳能柜/电池柜(40,000+lbs)必须提前确认三轴chassis可用性!
-        <em>操作: 到港前48h完成报关+DO准备, Free Time第2天安排卡车。</em><br><br>
-        <b>NY/NJ (107次, D&D最贵!):</b> Free Time 4天(不含周末假日), 但D&D是全美最贵: $125-175/天,
-        14天累计$3,182! Maher/APM/GCT等多码头, 注意不同码头费率差异。
-        <em>NY票必须快进快出, Free Time第1天就安排卡车。</em><br><br>
-        <b>Houston (208次):</b> Bayport和Barbours Cut两个码头。IPI铁路(BNSF/UP到Chicago约3天)
-        是主力但Rail Detention $75-300/天。注意Rail Detention是Houston主要成本。
-        <em>IPI货提前7天通知收货人, 到达后48h内必须提柜。</em><br><br>
-        <b>Savannah (112次, Free Time最长):</b> GPA给7天Free Time(全美最慷慨), 超时$32-47/TEU/天。
-        REACH的主要目的港, 操作压力相对小。但出了Free Time后费用也会快速叠加。<br><br>
-        <b>Chassis关键提醒:</b> 我们Chassis费用$1.7M是最大单项成本(远超D&D的$52K)。
-        日租$20-35/天, 太阳能重柜需三轴chassis(费用更高, 供应有限)。
-        Drop-and-hook比Live Unload省钱省时, 建议有仓库的客户优先用。
+    coach_box("教练总结: 区域差异决定操作策略", """
+        <b>西海岸 (LA/LB):</b> 业务量最大, 但港口拥堵和底盘车紧缺是常态。Free Time通常只有4-5天,
+        超过后Demurrage高达$300+/天。建议: 到港前48小时就开始准备DO和报关文件。<br><br>
+        <b>德州 (Houston):</b> NEXTERA是最大客户, Rail Detention是主要成本。
+        从港口到内陆仓库的铁路转运经常延误, 每次延误产生$185/天的Rail Detention。
+        建议: 与铁路公司建立直接沟通渠道, 提前锁定铁路舱位。<br><br>
+        <b>东海岸 (NY/NJ):</b> 清关速度相对快, 但港口费用结构不同于西海岸。
+        需要特别注意NYCT(New York Container Terminal)的特殊收费。<br><br>
+        <b>内陆转运 (Chicago IPI):</b> Rail Detention是最大痛点。建议对所有IPI货物提前7天通知收货人,
+        确保到达后48小时内提柜。
     """)
 
 
@@ -2370,10 +2111,6 @@ with tabs[8]:
         ),
     } for p in port_data])
     st.dataframe(port_detail_df, use_container_width=True, hide_index=True, key="tbl_11")
-  except Exception as _e9:
-    import traceback as _tb9
-    st.error(f"目的港全景 加载出错: {type(_e9).__name__}: {_e9}")
-    st.code(_tb9.format_exc(), language="text")
 
 
 
@@ -2381,7 +2118,6 @@ with tabs[8]:
 # TAB 10: 联系人搜索
 # ══════════════════════════════════════════════════════════════════
 with tabs[9]:
-  try:
     section_header("联系人搜索")
 
     contacts = CON.get("contacts", [])
@@ -2436,10 +2172,6 @@ with tabs[9]:
             st.markdown(metric_card(meta.get("total_companies", 0), "关联公司", "#9c27b0"), unsafe_allow_html=True)
     else:
         st.info("联系人数据库为空或加载失败")
-  except Exception as _e10:
-    import traceback as _tb10
-    st.error(f"联系人搜索 加载出错: {type(_e10).__name__}: {_e10}")
-    st.code(_tb10.format_exc(), language="text")
 
 
 # ─── Footer ───

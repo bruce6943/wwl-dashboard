@@ -1,0 +1,628 @@
+{
+  "generated_at": "2026-04-03T14:44:46.917556+08:00",
+  "summary": {
+    "total_active_threads": 588,
+    "waiting_them": 294,
+    "waiting_us": 116,
+    "ping_pong": 18,
+    "multi_party_stuck": 16
+  },
+  "waiting_them": [
+    {
+      "thread": "SA /MEDUKG224521 /WLC60201357/ MSC LORENZA / FV604N /  XIAME",
+      "mbl": "MEDUKG224521",
+      "customer": "",
+      "last_sender": "nkg.ops12@wwl.c",
+      "hours_waiting": 341,
+      "severity": "critical",
+      "total_msgs": 3,
+      "parties": 1,
+      "action": "我们nkg.ops12@已发邮件341小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: PRE-ALERT - MBL : MEDUR6622852 l HBL : WLC60212549 l LCH",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "bkk.guide",
+      "hours_waiting": 341,
+      "severity": "critical",
+      "total_msgs": 10,
+      "parties": 1,
+      "action": "我们bkk.guide已发邮件341小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: 回复: SA /MEDUKG224521 /WLC60201357/ MSC LORENZA / FV604N ",
+      "mbl": "MEDUKG224521",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 340,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件340小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: S/A   DAP   COSCO BELGIUM/084E  COSU6446551540  SHANGHAI",
+      "mbl": "COSU6446551540",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 340,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件340小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "回复: AN/ MBL#MEDURQ324234 / HBL#WLC60207492 / Container#MSDU6",
+      "mbl": "MEDURQ324234",
+      "customer": "HORIZON SOLAR",
+      "last_sender": "Everlyn Shaw",
+      "hours_waiting": 338,
+      "severity": "critical",
+      "total_msgs": 4,
+      "parties": 2,
+      "action": "我们Everlyn Sh已发邮件338小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: 回复: ZIMUQIN4431851/NEW YORK,NY/20GP×1/1th,Mar,2026",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 336,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件336小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: PRE-ALERT - MBL : EBKG15823140  l HBL : WLC60216182 l LC",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 336,
+      "severity": "critical",
+      "total_msgs": 4,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件336小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: COSU6445290670/NEW YORK,NY/20GP×2/2026-03-07",
+      "mbl": "COSU6445290670",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 335,
+      "severity": "critical",
+      "total_msgs": 3,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件335小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: 答复: DTC ACCOUNT || [PRE-ALERT] - ATD FEB 19 - HBL#WLC602",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 334,
+      "severity": "critical",
+      "total_msgs": 4,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件334小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: 答复: DTC ACCOUNT || [PRE-ALERT] - ATD FEB 19 - HBL#WLC602",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 334,
+      "severity": "critical",
+      "total_msgs": 4,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件334小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: 回复: Pre-alert  Freehandle : OOLU2166266570 / WLC60122332",
+      "mbl": "OOLU2166266570",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 333,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件333小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: Re[3]: HUDSON EXPRESS/607E HLCUSHA2601BPKF6 NINGBO-LOS A",
+      "mbl": "HLCUSHA2601BPKF6",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 333,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件333小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "Re:  Documents // : OOLU4055058920 Dej Str. 1 Mai Nr 113, Cl",
+      "mbl": "OOLU4055058920",
+      "customer": "",
+      "last_sender": "张志鹏",
+      "hours_waiting": 332,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们张志鹏已发邮件332小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: RE: Pre-alert  Freehandle : OOLU2166266570 / WLC60122332",
+      "mbl": "OOLU2166266570",
+      "customer": "",
+      "last_sender": "Maggie Wu",
+      "hours_waiting": 332,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Maggie Wu已发邮件332小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: COSCO付款  WLDSHA260300938  COSU6444535360 USD80.49",
+      "mbl": "COSU6444535360",
+      "customer": "",
+      "last_sender": "Sven Gu",
+      "hours_waiting": 331,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Sven Gu已发邮件331小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: MSC付款  WLDBKK260300959  MEDUR6622852  USD110",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Sven Gu",
+      "hours_waiting": 331,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Sven Gu已发邮件331小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: CMA付款  WLDBKK260201568  CMDUTHD1462264  USD154",
+      "mbl": "CMDUTHD1462264",
+      "customer": "",
+      "last_sender": "Sven Gu",
+      "hours_waiting": 331,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Sven Gu已发邮件331小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "Re: Dej Str. 1 Mai Nr 113, Cluj County, ROMANIA. to QINGDAO ",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "张志鹏",
+      "hours_waiting": 329,
+      "severity": "critical",
+      "total_msgs": 3,
+      "parties": 2,
+      "action": "我们张志鹏已发邮件329小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "SA//WLCSHA260309289 SHANGHAI TO LONG BEACH,CA 40HC x 1 COSU6",
+      "mbl": "COSU6446960000",
+      "customer": "",
+      "last_sender": "Henry Chen",
+      "hours_waiting": 328,
+      "severity": "critical",
+      "total_msgs": 2,
+      "parties": 1,
+      "action": "我们Henry Chen已发邮件328小时, 对方未回复 → 建议电话跟进或升级"
+    },
+    {
+      "thread": "RE: OUTSTANDING PAYMENT TO HERCULES TRANSPORT Inc// Code : /",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Abiola Tunde-Be",
+      "hours_waiting": 279,
+      "severity": "critical",
+      "total_msgs": 3,
+      "parties": 1,
+      "action": "我们Abiola Tun已发邮件279小时, 对方未回复 → 建议电话跟进或升级"
+    }
+  ],
+  "waiting_us": [
+    {
+      "thread": "RE: RE: Statement of Account",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Krista Kingslan",
+      "hours_waiting": 337,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "Krista Kin已等337小时 → 立即回复"
+    },
+    {
+      "thread": "RE: Statement of Account",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Krista Kingslan",
+      "hours_waiting": 337,
+      "severity": "critical",
+      "total_msgs": 3,
+      "action": "Krista Kin已等337小时 → 立即回复"
+    },
+    {
+      "thread": "RE: REQ ADD IT# CLEAR @ DEST 12 BLs CRM:0000170000041920",
+      "mbl": "MEDURQ331288, MEDURQ331320, MEDURQ331346",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 335,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "usa-import已等335小时 → 立即回复"
+    },
+    {
+      "thread": "RE: 回复: REQ ADD IT# CLEAR @ DEST 12 BLs CRM:0000170000041920",
+      "mbl": "MEDURQ331288, MEDURQ331320, MEDURQ331346",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 334,
+      "severity": "critical",
+      "total_msgs": 4,
+      "action": "usa-import已等334小时 → 立即回复"
+    },
+    {
+      "thread": "RE: REQ RAIL FIRMS CODE FOR BL# MEDURQ324234 CRM:00002890000",
+      "mbl": "MEDURQ324234",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 334,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "usa-import已等334小时 → 立即回复"
+    },
+    {
+      "thread": "RE: 回复: 回复: REQ ADD IT# CLEAR @ DEST 12 BLs CRM:000017000004",
+      "mbl": "MEDURQ331288, MEDURQ331320, MEDURQ331346",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 333,
+      "severity": "critical",
+      "total_msgs": 3,
+      "action": "usa-import已等333小时 → 立即回复"
+    },
+    {
+      "thread": "RE: REQ RAIL FIRMS CODE FOR BL# MEDURQ323830 CRM:00001730000",
+      "mbl": "MEDURQ323830",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 333,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "usa-import已等333小时 → 立即回复"
+    },
+    {
+      "thread": "RE: 回复: 回复: 回复: 回复: REQ ADD IT# CLEAR @ DEST 12 BLs CRM:0000",
+      "mbl": "MEDURQ331288, MEDURQ331320, MEDURQ331346",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 331,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "usa-import已等331小时 → 立即回复"
+    },
+    {
+      "thread": "RE: 回复: 回复: 回复: REQ ADD IT# CLEAR @ DEST 12 BLs CRM:00001700",
+      "mbl": "MEDURQ331288, MEDURQ331320, MEDURQ331346",
+      "customer": "",
+      "last_sender": "usa-import.cust",
+      "hours_waiting": 331,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "usa-import已等331小时 → 立即回复"
+    },
+    {
+      "thread": "Shipping notification from Tmall store",
+      "mbl": "",
+      "customer": "",
+      "last_sender": " 张艳琪 ",
+      "hours_waiting": 315,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": " 张艳琪 已等315小时 → 立即回复"
+    },
+    {
+      "thread": "RE: RATE REQUEST // FENNO SCANDIA //  CANADA TO JEBEL ALI PO",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Lesa John - CSS",
+      "hours_waiting": 313,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "Lesa John 已等313小时 → 立即回复"
+    },
+    {
+      "thread": "回复:  Re: Re: Request for POA & Completed Account Opening For",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Yahong.Ma 马亚红",
+      "hours_waiting": 268,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "Yahong.Ma 已等268小时 → 立即回复"
+    },
+    {
+      "thread": "Re: 双鱼美国样机 Delivery COSU6446478520 20HC x 1 CIMU1525010--SOC",
+      "mbl": "COSU6446478520",
+      "customer": "CLOU",
+      "last_sender": "Jack PTT",
+      "hours_waiting": 267,
+      "severity": "critical",
+      "total_msgs": 3,
+      "action": "Jack PTT已等267小时 → 立即回复"
+    },
+    {
+      "thread": "Re: 科陆双鱼 Delivery ZIMUSHH32077175 1×40HC ZCSU7944173 ETA 3/2",
+      "mbl": "ZIMUSHH32077175",
+      "customer": "CLOU",
+      "last_sender": "Jack PTT",
+      "hours_waiting": 267,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "Jack PTT已等267小时 → 立即回复"
+    },
+    {
+      "thread": "RE: WIRE TO HMM 3/23 $630",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "DALFCIMPORT",
+      "hours_waiting": 265,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "DALFCIMPOR已等265小时 → 立即回复"
+    },
+    {
+      "thread": "Re: COSU6446478520 /",
+      "mbl": "COSU6446478520",
+      "customer": "CLOU",
+      "last_sender": "Kelly Hiatt",
+      "hours_waiting": 265,
+      "severity": "critical",
+      "total_msgs": 4,
+      "action": "Kelly Hiat已等265小时 → 立即回复"
+    },
+    {
+      "thread": "RE: RE: TR 6 container【CIF】ZIMUSNH1872861 ETA25-Feb-2026 / B",
+      "mbl": "",
+      "customer": "HITHIUM",
+      "last_sender": "Steven Harris",
+      "hours_waiting": 264,
+      "severity": "critical",
+      "total_msgs": 23,
+      "action": "Steven Har已等264小时 → 立即回复"
+    },
+    {
+      "thread": "Greetings & Visit Request from WWL",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "Dennis Hiatt",
+      "hours_waiting": 263,
+      "severity": "critical",
+      "total_msgs": 3,
+      "action": "Dennis Hia已等263小时 → 立即回复"
+    },
+    {
+      "thread": "回复: SE1-一海通释放",
+      "mbl": "",
+      "customer": "ASTRONERGY",
+      "last_sender": "韩晨阳",
+      "hours_waiting": 262,
+      "severity": "critical",
+      "total_msgs": 3,
+      "action": "韩晨阳已等262小时 → 立即回复"
+    },
+    {
+      "thread": "Delivery Arrangement Confirmation / 提货与派送安排确认",
+      "mbl": "",
+      "customer": "",
+      "last_sender": "becky@equatorca",
+      "hours_waiting": 260,
+      "severity": "critical",
+      "total_msgs": 2,
+      "action": "becky@equa已等260小时 → 立即回复"
+    }
+  ],
+  "ping_pong": [
+    {
+      "thread": "RE: OVERDUE OUTSTANDING PAYMENT FOR MAG SPECIALTIES INC.",
+      "mbl": "HLCUTS12511BCPC2, HLCUTS12511BCPM2, HLCUTS12512ARGG0",
+      "customer": "MAG SPECIALTIES",
+      "rounds": 23,
+      "parties": 2,
+      "days": 7,
+      "action": "已23轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "Re: Time Dispatch Agent Group - WWL115 - PAST DUE STATEMENT",
+      "mbl": "",
+      "customer": "",
+      "rounds": 22,
+      "parties": 3,
+      "days": 14,
+      "action": "已22轮邮件往返, 3方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "RE: Re: OVERDUE Demurrage charge of ES FOUNDRY CORP",
+      "mbl": "CMDUTHD1461926, ONEYBKKG01937300, ONEYBKKG17801700",
+      "customer": "",
+      "rounds": 17,
+      "parties": 2,
+      "days": 2,
+      "action": "已17轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "Urgent ETA 3.31/4.1 URP-527-202508P009 - WHL",
+      "mbl": "MEDURQ394716, MEDURQ394724, MEDURQ394732",
+      "customer": "ELITE SOLAR",
+      "rounds": 15,
+      "parties": 2,
+      "days": 4,
+      "action": "已15轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "RE: RE: ZIMUDAL878345 Delivery + clearance//海柔",
+      "mbl": "",
+      "customer": "HAIROBOT",
+      "rounds": 15,
+      "parties": 3,
+      "days": 2,
+      "action": "已15轮邮件往返, 3方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "Re: Project Delivery from Houston / WL2603171SA",
+      "mbl": "",
+      "customer": "",
+      "rounds": 15,
+      "parties": 2,
+      "days": 11,
+      "action": "已15轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "回复: ZIMUQIN4431617 pending customs clearance",
+      "mbl": "",
+      "customer": "",
+      "rounds": 11,
+      "parties": 2,
+      "days": 1,
+      "action": "已11轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "RE: Air Freight / EXW / Newark or Philadelphia - BKK // WWL ",
+      "mbl": "",
+      "customer": "HAIROBOT",
+      "rounds": 10,
+      "parties": 3,
+      "days": 1,
+      "action": "已10轮邮件往返, 3方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "Re: Re: 20 GP / unloading / ReExport loads / terrasoulsuperf",
+      "mbl": "",
+      "customer": "BETTERBODYFOODS",
+      "rounds": 7,
+      "parties": 2,
+      "days": 1,
+      "action": "已7轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    },
+    {
+      "thread": "EXPORT INQUIRY: From Charleston to Mombasa,Kenya / 3x40HC",
+      "mbl": "",
+      "customer": "",
+      "rounds": 7,
+      "parties": 2,
+      "days": 1,
+      "action": "已7轮邮件往返, 2方参与 → 考虑电话会议直接解决"
+    }
+  ],
+  "multi_party_stuck": [
+    {
+      "thread": "RE: Re: Inconsistent piece count-- OOLU2320917320",
+      "mbl": "OOLU2320917320",
+      "customer": "HAILIANG",
+      "parties": 3,
+      "last_sender": "Maggie Wu",
+      "hours_since": 24,
+      "total_msgs": 4,
+      "action": "3方协调中, 最后Maggie Wu发言, 已24h → 主动推进或召集各方"
+    },
+    {
+      "thread": "Re: Time Dispatch Agent Group - WWL115 - PAST DUE STATEMENT",
+      "mbl": "",
+      "customer": "",
+      "parties": 3,
+      "last_sender": "Will Sun",
+      "hours_since": 37,
+      "total_msgs": 22,
+      "action": "3方协调中, 最后Will Sun发言, 已37h → 主动推进或召集各方"
+    },
+    {
+      "thread": "RE: Air shiments -\r\n 618-48526391&618-48526450&189-01964911&",
+      "mbl": "",
+      "customer": "",
+      "parties": 5,
+      "last_sender": "Direct CHB-Moni",
+      "hours_since": 40,
+      "total_msgs": 29,
+      "action": "5方协调中, 最后Direct CHB发言, 已40h → 主动推进或召集各方"
+    },
+    {
+      "thread": "Re: Summary Billing Report for Worldwide Logistics USA LLC\r\n",
+      "mbl": "",
+      "customer": "",
+      "parties": 3,
+      "last_sender": "Maria Velasquez",
+      "hours_since": 40,
+      "total_msgs": 4,
+      "action": "3方协调中, 最后Maria Vela发言, 已40h → 主动推进或召集各方"
+    },
+    {
+      "thread": "Re: FW: AN/ MBL#MEDURQ323772 / HBL#WLC60206471 / Container#M",
+      "mbl": "MEDURQ323772",
+      "customer": "HORIZON SOLAR",
+      "parties": 3,
+      "last_sender": "Erica",
+      "hours_since": 43,
+      "total_msgs": 4,
+      "action": "3方协调中, 最后Erica发言, 已43h → 主动推进或召集各方"
+    },
+    {
+      "thread": "RE: FREIGHT HOLD WHLC194GA00162",
+      "mbl": "",
+      "customer": "",
+      "parties": 3,
+      "last_sender": "ZIM USA Cashier",
+      "hours_since": 45,
+      "total_msgs": 4,
+      "action": "3方协调中, 最后ZIM USA Ca发言, 已45h → 主动推进或召集各方"
+    },
+    {
+      "thread": "回复: No empty return appointments: URP-527-202508P009 - WHL",
+      "mbl": "MEDURQ394773, MEDURQ394807",
+      "customer": "ELITE SOLAR",
+      "parties": 3,
+      "last_sender": "Everlyn Shaw",
+      "hours_since": 74,
+      "total_msgs": 7,
+      "action": "3方协调中, 最后Everlyn Sh发言, 已74h → 主动推进或召集各方"
+    },
+    {
+      "thread": "RE: Project Delivery from Houston",
+      "mbl": "",
+      "customer": "",
+      "parties": 5,
+      "last_sender": "darron clay",
+      "hours_since": 87,
+      "total_msgs": 20,
+      "action": "5方协调中, 最后darron cla发言, 已87h → 主动推进或召集各方"
+    },
+    {
+      "thread": "RE: RE: Bonded trucking  / CA 90061",
+      "mbl": "",
+      "customer": "",
+      "parties": 3,
+      "last_sender": "Ian Weiland",
+      "hours_since": 89,
+      "total_msgs": 8,
+      "action": "3方协调中, 最后Ian Weilan发言, 已89h → 主动推进或召集各方"
+    },
+    {
+      "thread": "RE: CNC-E-033L // Terra Solar 12x40HC// import clearance doc",
+      "mbl": "",
+      "customer": "TERRA SOLAR",
+      "parties": 3,
+      "last_sender": "Abiola Tunde-Be",
+      "hours_since": 184,
+      "total_msgs": 5,
+      "action": "3方协调中, 最后Abiola Tun发言, 已184h → 主动推进或召集各方"
+    }
+  ]
+}

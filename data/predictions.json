@@ -1,0 +1,606 @@
+{
+  "generated_at": "2026-04-03T14:44:46.803437+08:00",
+  "total": 62,
+  "critical": 34,
+  "urgent": 28,
+  "high": 0,
+  "predictions": [
+    {
+      "type": "eta_overdue",
+      "severity": "critical",
+      "mbl": "MEDUKG306401",
+      "customer": "HAIROBOT",
+      "carrier": "MSC",
+      "message": "已到港但未电放! ETA已过30天, 滞期费正在累积",
+      "action": "立即联系origin催TLX → 确认HBL状态 → MSC每天Demurrage $150-300",
+      "eta": "03/05",
+      "days": -30
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "ONEYSZPG04549400",
+      "customer": "HAIROBOT",
+      "carrier": "ONE",
+      "message": "Free Time已超期27天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → ONE Free Time 4天已用完",
+      "days": -27
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "ONEYSZPG01627500",
+      "customer": "HAIROBOT",
+      "carrier": "ONE",
+      "message": "Free Time已超期26天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → ONE Free Time 4天已用完",
+      "days": -26
+    },
+    {
+      "type": "eta_overdue",
+      "severity": "critical",
+      "mbl": "MEDUKE627170",
+      "customer": "ELITE EAGLE",
+      "carrier": "MSC",
+      "message": "已到港但未电放! ETA已过20天, 滞期费正在累积",
+      "action": "立即联系origin催TLX → 确认HBL状态 → MSC每天Demurrage $150-300",
+      "eta": "03/15",
+      "days": -20
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDUWK803981",
+      "customer": "",
+      "carrier": "MSC",
+      "message": "Free Time已超期20天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -20
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDUWK825687",
+      "customer": "",
+      "carrier": "MSC",
+      "message": "Free Time已超期20天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -20
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDUEK961237",
+      "customer": "HAIROBOT",
+      "carrier": "MSC",
+      "message": "Free Time已超期14天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -14
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDUWI191612",
+      "customer": "SAMSUNG",
+      "carrier": "MSC",
+      "message": "Free Time已超期11天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -11
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262439297",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDURH049658",
+      "customer": "JINGZHOU",
+      "carrier": "MSC",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262580010",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU261848399",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262580250",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262743354",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262016445",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU261848052",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262466772",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262050445",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262371929",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU261847584",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262438815",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262239707",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262439565",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262132126",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262743566",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262580424",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDURH050649",
+      "customer": "JINGZHOU",
+      "carrier": "MSC",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262576994",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262057376",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262579731",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MAEU262276898",
+      "customer": "JINGZHOU",
+      "carrier": "MAERSK",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MAERSK Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDURH049468",
+      "customer": "JINGZHOU",
+      "carrier": "MSC",
+      "message": "Free Time已超期9天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -9
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDUYL850771",
+      "customer": "",
+      "carrier": "MSC",
+      "message": "Free Time已超期7天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -7
+    },
+    {
+      "type": "freetime_expired",
+      "severity": "critical",
+      "mbl": "MEDURQ332203",
+      "customer": "REACH",
+      "carrier": "MSC",
+      "message": "Free Time已超期5天! 每天Demurrage+Chassis费用累积中",
+      "action": "立即确认是否已拿PU# → 安排卡车提柜 → MSC Free Time 4天已用完",
+      "days": -5
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU9180868",
+      "carrier": "COSCO",
+      "message": "COSCO demurrage发票已过期24天! $1715",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": -24
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU9180868",
+      "carrier": "COSCO",
+      "message": "COSCO demurrage发票已过期24天! $1715",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": -24
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU9180868",
+      "carrier": "COSCO",
+      "message": "COSCO demurrage发票已过期24天! $1715",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": -24
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU9180868",
+      "carrier": "COSCO",
+      "message": "COSCO demurrage发票已过期24天! $1715",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": -24
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU9180868",
+      "carrier": "COSCO",
+      "message": "COSCO demurrage发票已过期24天! $1715",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": -24
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU6996400",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU6996400",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU6996400",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU6996400",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "OOLU6996400",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "invoice_overdue",
+      "severity": "urgent",
+      "mbl": "",
+      "carrier": "OOCL",
+      "message": "OOCL demurrage发票已过期0天! $63",
+      "action": "立即安排付款(Sven/PayCargo) → 逾期可能产生滞纳金或影响后续放货",
+      "days": 0
+    },
+    {
+      "type": "freetime_urgent",
+      "severity": "urgent",
+      "mbl": "COSU6421875990",
+      "customer": "AVANTIX",
+      "carrier": "COSCO",
+      "message": "Free Time还剩1天! AN收到3天,COSCO免费期4天",
+      "action": "今天必须确认PU#+安排提柜 → 超期后每天$150-300 Demurrage + $50-100 Chassis",
+      "days": 1
+    },
+    {
+      "type": "inspection_overdue",
+      "severity": "urgent",
+      "mbl": "YMJAE490402433",
+      "customer": "HAIROBOT",
+      "carrier": "",
+      "message": "查验已20天! 超出正常3-5天周期",
+      "action": "联系报关行确认CBP进度 → 是否需要补充文件 → 通知客户最新延迟预期",
+      "days": 20
+    },
+    {
+      "type": "inspection_overdue",
+      "severity": "urgent",
+      "mbl": "COSU6440842610",
+      "customer": "",
+      "carrier": "COSCO",
+      "message": "查验已46天! 超出正常3-5天周期",
+      "action": "联系报关行确认CBP进度 → 是否需要补充文件 → 通知客户最新延迟预期",
+      "days": 46
+    }
+  ]
+}
